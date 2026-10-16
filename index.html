@@ -19,6 +19,7 @@
   <ul class="facts" id="facts">
     <li id="bornli">Born May 21, 1996</li><li>6'5", 237 lb</li><li>Wyoming</li><li>2018 NFL Draft: Round 1, Pick 7</li><li>2024 NFL MVP</li><li id="seasonli">2018 NFL Draft class</li>
   </ul>
+  <p class="follow" id="follow"></p>
 </div></header>
 <main id="josh-view">
   <div class="tiles" id="tiles"></div>
@@ -206,6 +207,9 @@ fillText();
     if(!img){img=document.createElement('img');img.width=208;img.height=208;img.decoding='async';pic.insertBefore(img,pic.firstChild);}
     pic.classList.remove('empty'); img.alt=alt; img.src=src;
   }
+  var FOLLOW={josh:[['Follow Josh','Instagram','https://www.instagram.com/joshallenqb'],['','X','https://twitter.com/JoshAllenQB'],['Bills','Instagram','https://www.instagram.com/buffalobills/'],['','X','https://twitter.com/buffalobills']],
+    hailee:[['Follow Hailee','Instagram','https://www.instagram.com/haileesteinfeld/'],['','X','https://twitter.com/HaileeSteinfeld'],['','YouTube','https://www.youtube.com/channel/UCWfytcGFwPSMwvP5HYuXGqw'],['','Facebook','https://www.facebook.com/haileesteinfeld']]};
+  function follow(h){var L=FOLLOW[h?'hailee':'josh'],o='';L.forEach(function(x,i){if(i===0)o+='<span>'+x[0]+':</span> ';else if(x[0])o+='<span class="sp">'+x[0]+':</span> ';o+='<a href="'+x[2]+'" target="_blank" rel="noopener noreferrer">'+x[1]+'</a> ';});el('follow').innerHTML=o;}
   function age(){var b=new Date(1996,11,11),n=new Date(),a=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))a--;return a;}
   function factsHtml(d){return ['Age '+age()].concat(d.facts).map(function(f){return '<li>'+esc(f)+'</li>';}).join('');}
   function render(d){
@@ -219,13 +223,14 @@ fillText();
     el('h-notes').textContent=d.notes.sales+' '+d.notes.check+' Updated '+d.updated+'.';
     if(mode==='hailee'){el('facts').innerHTML=factsHtml(d);}
   }
+  follow(false);
   function setMode(m){
     mode=m; var h=(m==='hailee'), T=h?HAI:JOSH;
     document.body.classList.toggle('hailee',h);
     el('josh-view').hidden=h; el('hailee-view').hidden=!h; el('nav').hidden=h;
     document.title=T.title; el('h1').textContent=T.h1; el('sub1').textContent=T.sub; el('tag').textContent=T.tag; el('meta').innerHTML=T.meta;
     el('facts').innerHTML=h?(data?factsHtml(data):''):JOSH.facts;
-    setImg(T.src,T.alt); btn.textContent=T.label; btn.setAttribute('aria-pressed',h?'true':'false');
+    follow(h); setImg(T.src,T.alt); btn.textContent=T.label; btn.setAttribute('aria-pressed',h?'true':'false');
     if(h){el('foot').textContent=HAI.foot;} else {fillText();}
     try{history.replaceState(null,'',h?'#hailee':location.pathname+location.search);}catch(e){}
     if(h&&!data){

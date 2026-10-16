@@ -107,3 +107,7 @@ body.hailee .tile b{color:var(--blue)}
 .cmpbar u.l{background:var(--cl,var(--blue));border-radius:6px 0 0 6px}
 .cmpbar u.r{background:var(--cr,var(--red));border-radius:0 6px 6px 0}
 .cmpbar u.adv{opacity:1}
+
+.follow{margin:10px 0 0;font-size:.82rem;opacity:.95}
+.follow a{color:#fff;text-decoration:underline;text-underline-offset:3px;margin-right:8px}
+.follow .sp{margin-left:6px}
