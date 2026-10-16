@@ -18,8 +18,10 @@
   <div class="card" id="vsAllen"></div>
   <h2 class="sec">Team comparison, 2026</h2>
   <div class="card" id="cmp"></div>
-  <h2 class="sec">This season</h2>
+  <h2 class="sec" id="billsSeasonHead">Buffalo this season</h2>
   <div class="scroll"><table id="season"></table></div>
+  <h2 class="sec" id="oppSeasonHead">Las Vegas this season</h2>
+  <div class="scroll"><table id="oppSeason"></table></div>
   <h2 class="sec" id="boxHead">Past meetings</h2>
   <div id="boxes"></div>
   <h2 class="sec">Series and injuries</h2>
@@ -48,6 +50,11 @@ Promise.all([load('data/matchup.json'),load('data/allen-2026.json')]).then(funct
     return '<div class="cmprow"><div class="cmplab">'+esc(c.label)+'</div><div class="cmpnums"><span class="'+(lw?'adv':'')+'"><b>'+l.v.toFixed(c.dec)+'</b> <i>#'+l.rank+'</i></span><span class="'+(rw?'adv':'')+'"><i>#'+r.rank+'</i> <b>'+r.v.toFixed(c.dec)+'</b></span></div>'
      +'<div class="cmpbar" role="img" aria-label="'+esc(c.label)+': '+(lw?esc(L.name)+' has the edge':rw?esc(R.name)+' has the edge':'even')+'"><u class="l'+(lw?' adv':'')+'" style="width:'+p+'%"></u><u class="r'+(rw?' adv':'')+'" style="width:'+(100-p)+'%"></u></div></div>';
   }).join('')+'<p class="note">'+esc(T.note)+' As of '+esc(T.asOf)+'. The longer bar marks the team with the better league rank.</p>';
+  document.documentElement.style.setProperty('--cl',(m.home?m.colors.opp:m.colors.bills));
+  document.documentElement.style.setProperty('--cr',(m.home?m.colors.bills:m.colors.opp));
+  document.getElementById('billsSeasonHead').textContent='Buffalo this season (Allen\'s game log)';
+  document.getElementById('oppSeasonHead').textContent=m.opp.name.replace(/ \S+$/,'')+' this season';
+  document.getElementById('oppSeason').innerHTML='<thead><tr><th>Wk</th><th>Opp</th><th>Result</th></tr></thead><tbody>'+m.oppSeason.map(function(g){var w=/^W/.test(g.result);return '<tr>'+td(g.week)+td((g.home?'':'@ ')+g.opp)+td('<span class="res '+(w?'w':'l')+'">'+g.result+'</span>')+'</tr>';}).join('')+'</tbody>';
   var v=m.allenVs;
   document.getElementById('vsAllen').innerHTML='<div class="head"><h2>Allen against the '+esc(m.opp.name)+'</h2><div class="chips"><span class="chip hold">'+v.wins+'-'+v.losses+' as a starter</span></div></div>'
    +'<div class="stats">'+stat(v.games,'Games')+stat(v.cmp+'-'+v.att,'Cmp-Att')+stat(fmt(v.yds),'Pass yards')+stat(v.td,'Pass TD')+stat(v.int,'INT')+stat(v.rating.toFixed(1),'Passer rating')+stat(v.rushAtt+' / '+v.rushYds,'Rush att / yds')+stat(v.rushTD,'Rush TD')+'</div>'

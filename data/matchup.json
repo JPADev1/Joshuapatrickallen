@@ -133,141 +133,177 @@
    "source": "Pro-Football-Reference"
   }
  ],
- "sources": "Schedule and series history: Buffalo Bills and Las Vegas Raiders team sites. Records and injuries: Sports Illustrated (Oct. 13). Allen's career line against the Raiders: StatMuse. Box scores: Pro-Football-Reference. Team totals (yards, first downs, time of possession) were not available for these two games. Team stats: Pro-Football-Reference standings and NFL.com team statistics, as of Oct. 16.",
+ "sources": "Schedule and series history: Buffalo Bills and Las Vegas Raiders team sites. Records and injuries: Sports Illustrated (Oct. 13). Allen's career line against the Raiders: StatMuse. Box scores: Pro-Football-Reference. Team totals (yards, first downs, time of possession) were not available for these two games. Team stats: Pro-Football-Reference standings and NFL.com team statistics, as of Oct. 16. Raiders results: Pro-Football-Reference.",
  "teamStats": {
   "asOf": "Oct. 16, 2026",
-  "note": "2026 regular season, per game. Rank is out of 32 NFL teams (1 = best). For points allowed, yards allowed, sacks allowed and interceptions thrown, a lower number is better. Games played differ by team (Chiefs and Panthers 4, Broncos and Seahawks 6, most others 5).",
+  "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since games played differ (Chiefs and Panthers 4, Broncos and Seahawks 6, most others 5). For points allowed, yards allowed, sacks allowed and interceptions thrown, lower is better.",
   "cats": [
    {
-    "label": "Points scored per game",
+    "label": "Points scored, per game",
     "better": "high",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 32.8,
+     "v": 33,
      "rank": 1
     },
     "opp": {
-     "v": 26.4,
+     "v": 26,
      "rank": 8
     }
    },
    {
-    "label": "Points allowed per game",
+    "label": "Points allowed, per game",
     "better": "low",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 28.2,
+     "v": 28,
      "rank": 28
     },
     "opp": {
-     "v": 25.8,
+     "v": 26,
      "rank": 22
     }
    },
    {
-    "label": "Passing yards per game",
+    "label": "Passing yards, per game",
     "better": "high",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 249.8,
+     "v": 250,
      "rank": 12
     },
     "opp": {
-     "v": 263.4,
+     "v": 263,
      "rank": 8
     }
    },
    {
-    "label": "Passing yards allowed per game",
+    "label": "Passing yards allowed, per game",
     "better": "low",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 295.8,
+     "v": 296,
      "rank": 31
     },
     "opp": {
-     "v": 253.2,
+     "v": 253,
      "rank": 25
     }
    },
    {
-    "label": "Rushing yards per game",
+    "label": "Rushing yards, per game",
     "better": "high",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 158.0,
+     "v": 158,
      "rank": 5
     },
     "opp": {
-     "v": 82.0,
+     "v": 82,
      "rank": 27
     }
    },
    {
-    "label": "Rushing yards allowed per game",
+    "label": "Rushing yards allowed, per game",
     "better": "low",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 108.2,
+     "v": 108,
      "rank": 15
     },
     "opp": {
-     "v": 140.6,
+     "v": 141,
      "rank": 29
     }
    },
    {
-    "label": "Sacks allowed per game",
+    "label": "Sacks allowed, season",
     "better": "low",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 2.0,
+     "v": 10,
      "rank": 10
     },
     "opp": {
-     "v": 1.6,
+     "v": 8,
      "rank": 6
     }
    },
    {
-    "label": "Sacks per game (defense)",
+    "label": "Sacks, season",
     "better": "high",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 2.2,
+     "v": 11,
      "rank": 11
     },
     "opp": {
-     "v": 2.6,
+     "v": 13,
      "rank": 8
     }
    },
    {
-    "label": "Interceptions thrown per game",
+    "label": "Interceptions thrown, season",
     "better": "low",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 0.8,
+     "v": 4,
      "rank": 18
     },
     "opp": {
-     "v": 0.8,
+     "v": 4,
      "rank": 18
     }
    },
    {
-    "label": "Interceptions per game (defense)",
+    "label": "Interceptions, season",
     "better": "high",
-    "dec": 1,
+    "dec": 0,
     "bills": {
-     "v": 0.4,
+     "v": 2,
      "rank": 25
     },
     "opp": {
-     "v": 0.8,
+     "v": 4,
      "rank": 9
     }
    }
   ]
- }
+ },
+ "colors": {
+  "bills": "#00338d",
+  "opp": "#a5acaf"
+ },
+ "oppSeason": [
+  {
+   "week": 1,
+   "opp": "Dolphins",
+   "home": true,
+   "result": "W 27-13"
+  },
+  {
+   "week": 2,
+   "opp": "Chargers",
+   "home": false,
+   "result": "W 26-14"
+  },
+  {
+   "week": 3,
+   "opp": "Saints",
+   "home": false,
+   "result": "W 35-27"
+  },
+  {
+   "week": 4,
+   "opp": "Chiefs",
+   "home": true,
+   "result": "L 27-30"
+  },
+  {
+   "week": 5,
+   "opp": "Patriots",
+   "home": false,
+   "result": "L 17-45"
+  }
+ ]
 }
