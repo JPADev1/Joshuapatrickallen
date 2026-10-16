@@ -78,7 +78,8 @@ footer{max-width:900px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-
 /* ---- Hailee mode ---- */
 .picrow{position:relative;--d:88px;--pic:min(208px,calc(100vw - 2*(32px + var(--d) + 8px)))}
 .picrow .pic{width:var(--pic);height:var(--pic)}
-.swap{position:absolute;left:clamp(0px,calc((100vw - 900px)/2),16px);bottom:0;width:var(--d);height:var(--d);border-radius:50%;font:inherit;font-size:.7rem;font-weight:800;line-height:1.15;color:#fff;background:#c60c30;border:2px solid rgba(255,255,255,.85);padding:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.swapwrap{position:absolute;left:clamp(0px,calc((100vw - 900px)/2),16px);bottom:0;width:var(--d);height:var(--d)}
+.swap{position:relative;z-index:1;width:var(--d);height:var(--d);border-radius:50%;font:inherit;font-size:.7rem;font-weight:800;line-height:1.15;color:#fff;background:#c60c30;border:2px solid rgba(255,255,255,.85);padding:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 .swap:hover,.swap:focus-visible{filter:brightness(1.15)}
 body.hailee .swap{background:#00338d}
 body.hailee{--blue:#b3122f;--head:#7a0f24}
@@ -117,3 +118,13 @@ body.hailee .tile b{color:var(--blue)}
 .tile .rk{margin-top:auto}
 .tile span{margin-bottom:10px}
 .tile .rk{align-self:flex-start}
+
+.swapwrap .rays{position:absolute;left:50%;top:50%;width:calc(var(--d) + 32px);height:calc(var(--d) + 32px);transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;color:#fff;opacity:.75;
+  background:repeating-conic-gradient(from 7.5deg,currentColor 0 1.2deg,transparent 1.2deg 15deg);
+  -webkit-mask:radial-gradient(circle,transparent calc(var(--d)/2 + 4px),#000 calc(var(--d)/2 + 5px));mask:radial-gradient(circle,transparent calc(var(--d)/2 + 4px),#000 calc(var(--d)/2 + 5px))}
+.swapwrap .pm{position:absolute;left:50%;transform:translateX(-50%);font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.9;pointer-events:none;white-space:nowrap}
+.swapwrap .pm.up{bottom:calc(100% + 18px)}
+.swapwrap .pm.dn{top:calc(100% + 18px)}
+.picrow{margin-bottom:34px}
+.swapwrap .pm.dn{top:calc(100% + 19px)}
+.swapwrap .pm.up{bottom:calc(100% + 19px)}
