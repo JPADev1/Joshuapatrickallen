@@ -128,3 +128,19 @@ body.hailee .tile b{color:var(--blue)}
 .picrow{margin-bottom:34px}
 .swapwrap .pm.dn{top:calc(100% + 19px)}
 .swapwrap .pm.up{bottom:calc(100% + 19px)}
+
+/* 3D dome button */
+.swap{--bl:#ff6b84;--bm:#d4153b;--bd:#7d0620;
+  background:radial-gradient(circle at 34% 26%,var(--bl) 0,var(--bm) 42%,var(--bd) 100%);
+  border:2px solid rgba(255,255,255,.55);
+  text-shadow:0 1px 2px rgba(0,0,0,.55);
+  box-shadow:inset 0 3px 5px rgba(255,255,255,.45),inset 0 -7px 10px rgba(0,0,0,.35),0 7px 0 var(--bd),0 11px 16px rgba(0,0,0,.45);
+  transition:transform .08s ease,box-shadow .08s ease,background .08s ease;
+  -webkit-tap-highlight-color:transparent}
+body.hailee .swap{--bl:#6f9bff;--bm:#1646b8;--bd:#061d57;background:radial-gradient(circle at 34% 26%,var(--bl) 0,var(--bm) 42%,var(--bd) 100%)}
+.swap:hover,.swap:focus-visible{filter:none}
+.swap:active,.swap.down{transform:translateY(6px);
+  background:radial-gradient(circle at 62% 78%,var(--bl) 0,var(--bm) 40%,var(--bd) 100%);
+  box-shadow:inset 0 6px 11px rgba(0,0,0,.6),inset 0 -2px 4px rgba(255,255,255,.3),0 1px 0 var(--bd),0 3px 6px rgba(0,0,0,.4)}
+.swapwrap .pm.dn{top:calc(100% + 24px)}
+@media (prefers-reduced-motion:reduce){.swap{transition:none}}
