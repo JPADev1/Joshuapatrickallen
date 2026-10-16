@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
 <meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=12">
+<link rel="stylesheet" href="css/site.css?v=13">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -222,7 +222,7 @@ fillText();
     hailee:[['Follow Hailee','Instagram','https://www.instagram.com/haileesteinfeld/'],['','X','https://twitter.com/HaileeSteinfeld'],['','YouTube','https://www.youtube.com/channel/UCWfytcGFwPSMwvP5HYuXGqw'],['','Facebook','https://www.facebook.com/haileesteinfeld']]};
   function follow(h){var L=FOLLOW[h?'hailee':'josh'],o='';L.forEach(function(x,i){if(i===0)o+='<span>'+x[0]+':</span> ';else if(x[0])o+='<span class="sp">'+x[0]+':</span> ';o+='<a href="'+x[2]+'" target="_blank" rel="noopener noreferrer">'+x[1]+'</a> ';});el('follow').innerHTML=o;}
   function age(){var b=new Date(1996,11,11),n=new Date(),a=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))a--;return a;}
-  function factsHtml(d){return ['Age '+age()].concat(d.facts).map(function(f){return '<li>'+esc(f)+'</li>';}).join('');}
+  function factsHtml(d){return d.facts.map(function(f){return '<li>'+esc(/^Born /.test(f)?f+' (age '+age()+')':f)+'</li>';}).join('');}
   function render(d){
     el('h-tiles').innerHTML=d.tiles.map(function(t){return '<div class="tile"><b>'+esc(t[0])+'</b><span>'+esc(t[1])+'<br>'+esc(t[2])+'</span></div>';}).join('');
     var dash=function(x){return x?esc(x):'&mdash;';};
