@@ -102,32 +102,33 @@ var SEASONS = [
  [2024,17,17,307,483,3731,28,6,14,101.4, 102,531,12,5,2],
  [2025,17,17,319,460,3668,25,10,40,102.2, 112,579,14,7,3]
 ];
-// 2026 so far: passing through Week 4, rushing TDs through Week 5.
-var NOW = {label:"2026*", g:4, gs:4, cmp:79, att:119, yds:1039, td:6, int:3, rate:100.1, rushTD:8};
+// 2026 so far: all through Week 5 (Oct. 12 at the Rams).
+var NOW = {label:"2026*", g:5, gs:5, cmp:91, att:138, yds:1249, td:7, int:4, rate:99.6, rushAtt:43, rushYds:239, rushTD:8};
+var THRU = "Week 5 (Oct. 12)";;
 // Headline tiles
 var TILES = [
- ["31,141","Career passing yards","through Week 4 of 2026"],
- ["226","Career passing touchdowns","through Week 4 of 2026"],
+ ["31,351","Career passing yards","through Week 5 of 2026"],
+ ["227","Career passing touchdowns","through Week 5 of 2026"],
  ["87","Career rushing touchdowns","Bills record, through Week 5"],
- ["315","Career total touchdowns","passing + rushing + receiving"]
+ ["316","Career total touchdowns","passing + rushing + receiving"]
 ];
 var RECORDS = [
- {cat:"Career", title:"Passing yards", status:"verified", entries:[["Jim Kelly",35467],["Josh Allen",31141]],
-  note:"Allen: 30,102 through 2025 plus 1,039 in Weeks 1-4 of 2026."},
- {cat:"Career", title:"Passing touchdowns", status:"verified", entries:[["Jim Kelly",237],["Josh Allen",226]],
-  note:"Allen: 220 through 2025 plus 6 in Weeks 1-4 of 2026."},
- {cat:"Career", title:"Pass completions", status:"verified", entries:[["Jim Kelly",2874],["Josh Allen",2694]],
-  note:"Allen: 2,615 through 2025 plus 79 in Weeks 1-4 of 2026."},
+ {cat:"Career", title:"Passing yards", status:"verified", entries:[["Jim Kelly",35467],["Josh Allen",31351]],
+  note:"Allen: 30,102 through 2025 plus 1,249 in Weeks 1-5 of 2026."},
+ {cat:"Career", title:"Passing touchdowns", status:"verified", entries:[["Jim Kelly",237],["Josh Allen",227]],
+  note:"Allen: 220 through 2025 plus 7 in Weeks 1-5 of 2026."},
+ {cat:"Career", title:"Pass completions", status:"verified", entries:[["Jim Kelly",2874],["Josh Allen",2706]],
+  note:"Allen: 2,615 through 2025 plus 91 in Weeks 1-5 of 2026."},
  {cat:"Career", title:"Rushing touchdowns", status:"verified", entries:[["Josh Allen",87],["Thurman Thomas",65]],
   note:"Allen passed Thomas in 2025; 87 through Week 5 of 2026."},
  {cat:"Career", title:"Touchdowns scored (rushing + receiving)", status:"verified", entries:[["Josh Allen",89],["Andre Reed",87],["Thurman Thomas",87]],
   note:"Allen: 87 rushing + 2 receiving. He passed Reed and Thomas in Week 4."},
- {cat:"Career", title:"Total touchdowns (passing + rushing + receiving)", status:"verified", entries:[["Josh Allen",315],["Jim Kelly (passing TDs only)",237]],
-  note:"Allen: 226 passing + 87 rushing + 2 receiving. Passing is through Week 4. The Bills media guide lists him as the franchise's all-time leader in total touchdowns. Kelly's rushing and receiving scores are not included in his bar."},
- {cat:"Career", title:"Rushing yards", status:"check", entries:[["Thurman Thomas",11938],["Josh Allen",4721]],
-  note:"Allen's figure is his total entering 2026 (5,000 minus the 279 yards he needed). 2026 yards not yet added."},
- {cat:"Career", title:"Games played as quarterback", status:"check", entries:[["Jim Kelly",160],["Josh Allen",132]],
-  note:"Games, not starts. Allen: 128 through 2025 plus 4 in 2026. Starts are being researched."},
+ {cat:"Career", title:"Total touchdowns (passing + rushing + receiving)", status:"verified", entries:[["Josh Allen",316],["Jim Kelly (passing TDs only)",237]],
+  note:"Allen: 227 passing + 87 rushing + 2 receiving, all through Week 5. The Bills media guide lists him as the franchise's all-time leader in total touchdowns. Kelly's rushing and receiving scores are not included in his bar."},
+ {cat:"Career", title:"Rushing yards", status:"check", entries:[["Thurman Thomas",11938],["Josh Allen",4960]],
+  note:"Allen: 4,721 entering 2026 plus 239 in Weeks 1-5 of 2026 (43 carries). He is about 6,978 yards behind Thomas."},
+ {cat:"Career", title:"Games played as quarterback", status:"check", entries:[["Jim Kelly",160],["Josh Allen",133]],
+  note:"Games, not starts. Allen: 128 through 2025 plus 5 in 2026. Starts are being researched."},
  {cat:"Single season", title:"Passing yards", status:"check", entries:[["Josh Allen (2020)",4544],["Drew Bledsoe (2002)",4359]],
   note:"Allen holds the top four seasons through 2023 per the Bills media guide. 2024 and 2025 not yet confirmed."},
  {cat:"Single season", title:"Passing touchdowns", status:"check", entries:[["Josh Allen (2020)",37],["Jim Kelly (1991)",33]],
@@ -144,6 +145,37 @@ var RECORDS = [
   note:"Allen: 122 entering 2026 plus 5 starts through Week 5. The streak began Nov. 25, 2018, after he missed four games as a rookie. Including playoffs it was 135 as of the 2025 finale. Favre's 297 is from my own knowledge and needs confirming. The Bills' own franchise record for consecutive starts has not been found yet."}
 ];
 var QUEUE = ["Career starts (requested)","Who holds the Bills' overall consecutive-starts record (any position)","Career wins as a starter (Kelly: 101)","Career rushing yards, third place and up","300-yard and 400-yard passing games","Single-season rushing touchdowns by a quarterback","Passer rating, completion percentage, and yards per game"];
+
+// Career base through the end of 2025 (static). Everything shown for 2026 is added on top from data/allen-2026.json.
+var FOOT = "Stats updated through {THRU}. Sources: NFL.com, FootballDB, Buffalo Bills media guide and record-holder pages, Pro Football Hall of Fame, ESPN, and 2026 game coverage. \"Needs a second check\" means a figure came from one source or from an earlier date. Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen...unless that is you want to maybe hang out Josh, we could chill talk about football, maybe golf...I'm an 8 handicap...but whatever... your call.";
+function fillText(){ document.getElementById('foot').textContent = FOOT.replace('{THRU}', THRU); }
+var BASE = {passYds:30102, passTD:220, cmp:2615, rushYds:4721, rushTD:79, recTD:2, games:128, starts:122};
+function setRec(cat,title,val,note){
+  RECORDS.forEach(function(r){
+    if(r.cat===cat && r.title===title){
+      r.entries.forEach(function(e){ if(e[0].indexOf(ME)===0){ e[1]=val; } });
+      r.note = note;
+    }
+  });
+}
+function applyNow(){
+  var wk = "Weeks 1-" + NOW.g + " of 2026", th = THRU.split(" (")[0];
+  var py = BASE.passYds + NOW.yds, pt = BASE.passTD + NOW.td, rt = BASE.rushTD + NOW.rushTD;
+  var tot = pt + rt + BASE.recTD;
+  TILES[0] = [fmt(py), "Career passing yards", "through " + th + " of 2026"];
+  TILES[1] = [String(pt), "Career passing touchdowns", "through " + th + " of 2026"];
+  TILES[2] = [String(rt), "Career rushing touchdowns", "Bills record, through " + th];
+  TILES[3] = [String(tot), "Career total touchdowns", "passing + rushing + receiving"];
+  setRec("Career","Passing yards",py,"Allen: "+fmt(BASE.passYds)+" through 2025 plus "+fmt(NOW.yds)+" in "+wk+".");
+  setRec("Career","Passing touchdowns",pt,"Allen: "+BASE.passTD+" through 2025 plus "+NOW.td+" in "+wk+".");
+  setRec("Career","Pass completions",BASE.cmp+NOW.cmp,"Allen: "+fmt(BASE.cmp)+" through 2025 plus "+NOW.cmp+" in "+wk+".");
+  setRec("Career","Rushing touchdowns",rt,"Allen passed Thomas in 2025; "+rt+" through "+th+" of 2026.");
+  setRec("Career","Total touchdowns (passing + rushing + receiving)",tot,"Allen: "+pt+" passing + "+rt+" rushing + "+BASE.recTD+" receiving, all through "+th+". The Bills media guide lists him as the franchise's all-time leader in total touchdowns. Kelly's rushing and receiving scores are not included in his bar.");
+  setRec("Career","Touchdowns scored (rushing + receiving)",rt+BASE.recTD,"Allen: "+rt+" rushing + "+BASE.recTD+" receiving. He passed Reed and Thomas in Week 4.");
+  setRec("Streaks","Consecutive regular-season starts (quarterback)",BASE.starts+NOW.gs,"Allen: "+BASE.starts+" entering 2026 plus "+NOW.gs+" starts through "+th+". The streak began Nov. 25, 2018, after he missed four games as a rookie. Including playoffs it was 135 as of the 2025 finale. Favre's 297 is from my own knowledge and needs confirming. The Bills' own franchise record for consecutive starts has not been found yet.");
+  setRec("Career","Rushing yards",BASE.rushYds+NOW.rushYds,"Allen: "+fmt(BASE.rushYds)+" entering 2026 plus "+NOW.rushYds+" in "+wk+" ("+NOW.rushAtt+" carries). He is about "+fmt(11938-BASE.rushYds-NOW.rushYds)+" yards behind Thomas.");
+  setRec("Career","Games played as quarterback",BASE.games+NOW.g,"Games, not starts. Allen: "+BASE.games+" through 2025 plus "+NOW.g+" in 2026. Starts are being researched.");
+}
 var ME = "Josh Allen", cat = "All";
 function fmt(n){return n.toLocaleString('en-US');}
 function rating(c,a,y,t,i){function k(x){return Math.max(0,Math.min(2.375,x));}return (k((c/a-.3)*5)+k((y/a-3)*.25)+k(t/a*20)+k(2.375-i/a*25))/6*100;}
@@ -159,11 +191,11 @@ function build(){
   });
   pr += '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.gs)+td(NOW.cmp)+td(NOW.att)+td((NOW.cmp/NOW.att*100).toFixed(1))+td(fmt(NOW.yds))+td((NOW.yds/NOW.att).toFixed(1))+td(NOW.td)+td(NOW.int)+td('&mdash;')+td(NOW.rate.toFixed(1))+'</tr>';
   pr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(T.gs)+td(fmt(T.c))+td(fmt(T.a))+td((T.c/T.a*100).toFixed(1))+td(fmt(T.y))+td((T.y/T.a).toFixed(1))+td(T.t)+td(T.i)+td(T.s)+td(rating(T.c,T.a,T.y,T.t,T.i).toFixed(1))+'</tr>';
-  rr += '<tr class="part">'+td(NOW.label)+td(5)+td('&mdash;')+td('&mdash;')+td('&mdash;')+td(NOW.rushTD)+td('&mdash;')+td('&mdash;')+'</tr>';
+  rr += '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.rushAtt)+td(fmt(NOW.rushYds))+td((NOW.rushYds/NOW.rushAtt).toFixed(1))+td(NOW.rushTD)+td('&mdash;')+td('&mdash;')+'</tr>';
   rr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(fmt(T.ra))+td(fmt(T.ry))+td((T.ry/T.ra).toFixed(1))+td(T.rt)+td(T.rf)+td(T.rl)+'</tr>';
   document.getElementById('pass').innerHTML = tbl(['Season','G','GS','Cmp','Att','Cmp%','Yds','Y/A','TD','INT','Sck','Rate'],pr);
   document.getElementById('rush').innerHTML = tbl(['Season','G','Att','Yds','Avg','TD','Fum','Lost'],rr);
-  document.getElementById('statnote').textContent = "Season lines from NFL.com. 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: passing through Week 4, rushing touchdowns through Week 5; rushing attempts and yards for 2026 are not yet added.";
+  document.getElementById('statnote').textContent = "Season lines from NFL.com. 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ". Sacks and fumbles for 2026 are not yet added.";
 }
 function isMe(n){return n.indexOf(ME)===0;}
 function render(){
@@ -183,8 +215,13 @@ function render(){
   }).join('');
   document.getElementById('queue').innerHTML = QUEUE.map(function(q){return '<li>' + q + '</li>';}).join('');
 }
-build(); render();
-document.getElementById('foot').textContent = "Stats updated through early October 2026. Sources: NFL.com, FootballDB, Buffalo Bills media guide and record-holder pages, Pro Football Hall of Fame, ESPN, and 2026 game coverage. \"Needs a second check\" means a figure came from one source or from an earlier date. Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen...unless that is you want to maybe hang out Josh, we could chill talk about football, maybe golf...I'm an 8 handicap...but whatever... your call.";
+function init(){ applyNow(); build(); render(); fillText(); }
+init();
+// Live numbers: a scheduled GitHub job refreshes this file; if it can't be read, the numbers above stay.
+fetch('data/allen-2026.json', {cache:'no-cache'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
+  if(d && d.now && d.now.g >= NOW.g){ NOW = d.now; THRU = d.thru || THRU; init(); }
+}).catch(function(){});
+fillText();
 </script>
 </body>
 </html>
