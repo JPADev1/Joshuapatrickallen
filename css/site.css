@@ -91,3 +91,18 @@ body.hailee .tile b{color:var(--blue)}
 #hailee-view th,#hailee-view td{text-align:left;vertical-align:top}
 #hailee-view th:first-child,#hailee-view td:first-child{white-space:nowrap}
 #h-singles th:first-child,#h-singles td:first-child,#h-eps th:first-child,#h-eps td:first-child{white-space:normal;min-width:110px}
+
+/* team comparison */
+.cmphead{display:flex;justify-content:space-between;font-size:1rem;margin-bottom:6px}
+.cmprow{padding:8px 0;border-top:1px solid var(--line)}
+.cmprow:first-of-type{border-top:0}
+.cmplab{text-align:center;font-size:.78rem;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.cmpnums{display:flex;justify-content:space-between;margin:2px 0 4px;color:var(--mute)}
+.cmpnums b{font-size:1.05rem;color:var(--ink)}
+.cmpnums i{font-style:normal;font-size:.78rem}
+.cmpnums .adv b{color:var(--blue)}
+.cmpbar{display:flex;gap:3px;height:12px}
+.cmpbar u{display:block;height:100%;text-decoration:none;opacity:.35;transition:width .3s}
+.cmpbar u.l{background:var(--blue);border-radius:6px 0 0 6px}
+.cmpbar u.r{background:var(--red);border-radius:0 6px 6px 0}
+.cmpbar u.adv{opacity:1}
