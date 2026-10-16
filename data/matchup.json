@@ -1,0 +1,45 @@
+{
+  "updated": "2026-10-16",
+  "week": 6,
+  "bills": {"name": "Buffalo Bills", "record": "4-1"},
+  "opp": {"name": "Las Vegas Raiders", "abbr": "LV", "record": "3-2"},
+  "home": false,
+  "date": "Sunday, Oct. 18, 2026",
+  "time": "4:25 p.m. ET",
+  "venue": "Allegiant Stadium, Las Vegas",
+  "tv": "CBS",
+  "series": {
+    "summary": "Raiders lead the regular-season series 21-20.",
+    "last": "Last meeting: Sept. 17, 2023, Bills 38, Raiders 10."
+  },
+  "injuries": {
+    "asOf": "Oct. 13",
+    "bills": ["Spencer Brown (OT)", "Landon Jackson (DE)", "Dee Alford (CB)", "Joshua Palmer (WR)"],
+    "opp": ["Tonka Hemingway (DT)", "Jalen Nailor (WR)", "Trey Zuhn III (C)", "Patrick Johnson (DE)"],
+    "note": "All listed as questionable as of Oct. 13. Dont'e Thornton Jr. (WR) is on injured reserve for the Raiders. Check the official injury report for the latest."
+  },
+  "allenVs": {
+    "wins": 2, "losses": 0, "games": 2,
+    "cmp": 55, "att": 71, "yds": 562, "td": 5, "int": 0, "sacks": 3,
+    "rushAtt": 6, "rushYds": 6, "rushTD": 1, "rating": 123.1
+  },
+  "boxscores": [
+    {
+      "date": "Sept. 17, 2023", "site": "Highmark Stadium, Orchard Park", "week": "Week 2",
+      "teams": ["Raiders", "Bills"], "line": [[7, 3, 0, 0, 10], [7, 14, 7, 10, 38]],
+      "allen": "31-37, 274 yds, 3 TD, 0 INT, 2 sacks, 124.5 rating. 3 carries, 7 yds.",
+      "bills": ["James Cook: 17 carries, 123 yds", "Damien Harris: 7 carries, 33 yds, 1 TD", "Latavius Murray: 6 carries, 22 yds, 1 TD", "Gabe Davis: 6 rec, 92 yds, 1 TD", "Stefon Diggs: 7 rec, 66 yds", "Dalton Kincaid: 5 rec, 43 yds"],
+      "opp": ["Jimmy Garoppolo: 16-24, 185 yds, 1 TD, 2 INT", "Davante Adams: 6 rec, 84 yds, 1 TD", "Josh Jacobs: 9 carries, -2 yds; 5 rec, 51 yds", "Tre Tucker: 1 carry, 34 yds"],
+      "source": "Pro-Football-Reference"
+    },
+    {
+      "date": "Oct. 4, 2020", "site": "Allegiant Stadium, Las Vegas", "week": "Week 4",
+      "teams": ["Bills", "Raiders"], "line": [[7, 10, 0, 13, 30], [3, 10, 3, 7, 23]],
+      "allen": "24-34, 288 yds, 2 TD, 0 INT, 1 sack, 115.8 rating. 3 carries, -1 yd, 1 TD.",
+      "bills": ["Devin Singletary: 18 carries, 56 yds, 1 TD", "Stefon Diggs: 6 rec, 115 yds", "John Brown: 4 rec, 42 yds", "Cole Beasley: 3 rec, 32 yds, 1 TD", "Gabe Davis: 1 rec, 26 yds, 1 TD"],
+      "opp": ["Derek Carr: 32-44, 311 yds, 2 TD, 0 INT", "Darren Waller: 9 rec, 88 yds", "Josh Jacobs: 15 carries, 48 yds", "Nelson Agholor: 4 rec, 44 yds, 1 TD"],
+      "source": "Pro-Football-Reference"
+    }
+  ],
+  "sources": "Schedule and series history: Buffalo Bills and Las Vegas Raiders team sites. Records and injuries: Sports Illustrated (Oct. 13). Allen's career line against the Raiders: StatMuse. Box scores: Pro-Football-Reference. Team totals (yards, first downs, time of possession) were not available for these two games."
+}
