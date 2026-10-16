@@ -12,12 +12,12 @@
   <nav class="nav" id="nav"><a href="/" aria-current="page">Stats &amp; records</a><a href="matchup.html">Next game</a></nav>
   <h1 id="h1">Joshua Patrick Allen</h1>
   <p class="sub1" id="sub1">Full Name...Full Story</p>
-  <div class="picrow"><button type="button" class="swap" id="swap" aria-pressed="false">I'm just here for Hailee</button>
+  <div class="picrow"><button type="button" class="swap" id="swap" aria-pressed="false">Just Here For Hailee</button>
   <div class="pic" id="pic"><img src="images/josh.webp" width="208" height="208" decoding="async" alt="Illustrated portrait in a Buffalo Bills jersey" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph">#17</span></div></div>
   <p class="tag" id="tag">Your #1 place for Josh Allen stat tracking.</p>
   <p class="meta" id="meta">Quarterback &middot; Buffalo Bills &middot; #17</p>
   <ul class="facts" id="facts">
-    <li>Born May 21, 1996</li><li>6'5", 237 lb</li><li>Wyoming</li><li>2018 NFL Draft: Round 1, Pick 7</li><li>2024 NFL MVP</li>
+    <li id="bornli">Born May 21, 1996</li><li>6'5", 237 lb</li><li>Wyoming</li><li>2018 NFL Draft: Round 1, Pick 7</li><li>2024 NFL MVP</li><li id="seasonli">2018 NFL Draft class</li>
   </ul>
 </div></header>
 <main id="josh-view">
@@ -37,7 +37,7 @@
 </main>
 <main id="hailee-view" hidden>
   <div class="tiles" id="h-tiles"></div>
-  <h2 class="sec">Film</h2>
+  <h2 class="sec">Filmography</h2>
   <div class="scroll"><table id="h-film"></table></div>
   <h2 class="sec">Television</h2>
   <div class="scroll"><table id="h-tv"></table></div>
@@ -192,8 +192,12 @@ fillText();
   function td(v){return '<td>'+v+'</td>';}
   function table(id,head,rows){el(id).innerHTML='<thead><tr>'+head.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr>'+r.map(td).join('')+'</tr>';}).join('')+'</tbody>';}
   var btn=el('swap'), pic=el('pic'), data=null, mode='josh';
+  (function(){var n=new Date(),a=n.getFullYear()-1996-((n.getMonth()<4||(n.getMonth()===4&&n.getDate()<21))?1:0);
+    document.getElementById('bornli').textContent='Born May 21, 1996 (age '+a+')';
+    var y=n.getMonth()>=7?n.getFullYear():n.getFullYear()-1, k=y-2017, s=['th','st','nd','rd'], v=k%100, suf=(v>=11&&v<=13)?'th':(s[k%10]||'th');
+    document.getElementById('seasonli').textContent=k+suf+' NFL season ('+y+')';})();
   var JOSH={title:document.title, h1:el('h1').textContent, sub:el('sub1').textContent, tag:el('tag').textContent, meta:el('meta').innerHTML, facts:el('facts').innerHTML,
-            src:(pic.querySelector('img')||{getAttribute:function(){return 'images/josh.webp';}}).getAttribute('src'), alt:'Illustrated portrait in a Buffalo Bills jersey', label:btn.textContent};
+            src:(pic.querySelector('img')||{getAttribute:function(){return 'images/josh.webp';}}).getAttribute('src'), alt:'Illustrated portrait in a Buffalo Bills jersey', label:'Just Here For Hailee'};
   var HAI={title:'Hailee Steinfeld | Fan bio', h1:'Hailee Steinfeld', sub:'Full Name...Full Story', tag:'Film, TV, music and awards: the fan bio.', meta:'Actress &middot; Singer',
            src:'images/hailee.webp', alt:'Illustrated portrait of Hailee Steinfeld', label:'Back to Josh',
            foot:'Unofficial fan page; not affiliated with Hailee Steinfeld, Josh Allen, the Buffalo Bills or the NFL. Facts are compiled from public sources, and the note above says which ones.'};
@@ -202,6 +206,8 @@ fillText();
     if(!img){img=document.createElement('img');img.width=208;img.height=208;img.decoding='async';pic.insertBefore(img,pic.firstChild);}
     pic.classList.remove('empty'); img.alt=alt; img.src=src;
   }
+  function age(){var b=new Date(1996,11,11),n=new Date(),a=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))a--;return a;}
+  function factsHtml(d){return ['Age '+age()].concat(d.facts).map(function(f){return '<li>'+esc(f)+'</li>';}).join('');}
   function render(d){
     el('h-tiles').innerHTML=d.tiles.map(function(t){return '<div class="tile"><b>'+esc(t[0])+'</b><span>'+esc(t[1])+'<br>'+esc(t[2])+'</span></div>';}).join('');
     var dash=function(x){return x?esc(x):'&mdash;';};
@@ -211,14 +217,14 @@ fillText();
     table('h-singles',['Single','Year','Peak','Certification'],d.singles.map(function(f){return [esc(f[0]),f[1],esc(f[2]),esc(f[3])];}));
     table('h-awards',['Year','Award','Category / work','Result'],d.awards.map(function(a){return [a[0],esc(a[1]),esc(a[2]),'<span class="chip '+(a[3]==='Won'?'win':'nom')+'">'+esc(a[3])+'</span>'];}));
     el('h-notes').textContent=d.notes.sales+' '+d.notes.check+' Updated '+d.updated+'.';
-    if(mode==='hailee'){el('facts').innerHTML=d.facts.map(function(f){return '<li>'+esc(f)+'</li>';}).join('');}
+    if(mode==='hailee'){el('facts').innerHTML=factsHtml(d);}
   }
   function setMode(m){
     mode=m; var h=(m==='hailee'), T=h?HAI:JOSH;
     document.body.classList.toggle('hailee',h);
     el('josh-view').hidden=h; el('hailee-view').hidden=!h; el('nav').hidden=h;
     document.title=T.title; el('h1').textContent=T.h1; el('sub1').textContent=T.sub; el('tag').textContent=T.tag; el('meta').innerHTML=T.meta;
-    el('facts').innerHTML=h?(data?data.facts.map(function(f){return '<li>'+esc(f)+'</li>';}).join(''):''):JOSH.facts;
+    el('facts').innerHTML=h?(data?factsHtml(data):''):JOSH.facts;
     setImg(T.src,T.alt); btn.textContent=T.label; btn.setAttribute('aria-pressed',h?'true':'false');
     if(h){el('foot').textContent=HAI.foot;} else {fillText();}
     try{history.replaceState(null,'',h?'#hailee':location.pathname+location.search);}catch(e){}
