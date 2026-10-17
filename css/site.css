@@ -144,3 +144,6 @@ body.hailee .swap{--bl:#6f9bff;--bm:#1646b8;--bd:#061d57;background:radial-gradi
   box-shadow:inset 0 6px 11px rgba(0,0,0,.6),inset 0 -2px 4px rgba(255,255,255,.3),0 1px 0 var(--bd),0 3px 6px rgba(0,0,0,.4)}
 .swapwrap .pm.dn{top:calc(100% + 24px)}
 @media (prefers-reduced-motion:reduce){.swap{transition:none}}
+.facts li.mvp{background:#c9a227;color:#1b1b1b;font-weight:800}
+.mvpline{display:inline-block;margin:2px 0 10px;padding:5px 14px;border-radius:99px;background:linear-gradient(90deg,#e8c547,#c9a227);color:#1b1b1b;font-weight:800;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+.mvpline[hidden]{display:none}
