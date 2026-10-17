@@ -29,83 +29,76 @@
     "name": "DJ Moore",
     "pos": "WR",
     "injury": "Shoulder",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Ed Oliver",
-    "pos": "DE",
-    "injury": "Knee",
-    "status": "DNP",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "Dee Alford",
     "pos": "CB",
     "injury": "Ankle",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Ed Oliver",
+    "pos": "DE",
+    "injury": "Knee",
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "Josh Palmer",
     "pos": "WR",
     "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Spencer Brown",
-    "pos": "T",
-    "injury": "Back",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "T.J. Sanders",
     "pos": "DE",
     "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
-    "name": "Ty Johnson",
-    "pos": "RB",
-    "injury": "Hamstring",
+    "name": "Terrel Bernard",
+    "pos": "LB",
+    "injury": "Knee",
     "status": "Limited",
     "game": false
    }
   ],
   "opp": [
    {
-    "name": "Tonka Hemingway",
-    "pos": "DT",
-    "injury": "Concussion",
-    "status": "DNP",
-    "game": false
-   },
-   {
     "name": "Carter Runyon",
     "pos": "TE",
     "injury": "Foot",
-    "status": "Limited",
-    "game": false
+    "status": "Out",
+    "game": true
    },
    {
-    "name": "Jalen Nailor",
+    "name": "Dont'e Thornton Jr.",
     "pos": "WR",
+    "injury": "Hamstring",
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Tonka Hemingway",
+    "pos": "DT",
     "injury": "Concussion",
-    "status": "Limited",
-    "game": false
+    "status": "Out",
+    "game": true
    },
    {
     "name": "Trey Zuhn III",
     "pos": "C",
     "injury": "Knee",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    }
   ],
-  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
+  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed."
  },
  "allenVs": {
   "wins": 2,
