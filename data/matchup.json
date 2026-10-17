@@ -1,6 +1,8 @@
 {
  "updated": "2026-10-16",
+ "gameId": "2026_06_BUF_LV",
  "week": 6,
+ "label": "Week 6",
  "bills": {
   "name": "Buffalo Bills",
   "record": "4-1"
@@ -8,6 +10,7 @@
  "opp": {
   "name": "Las Vegas Raiders",
   "abbr": "LV",
+  "nick": "Raiders",
   "record": "3-2"
  },
  "home": false,
@@ -20,20 +23,89 @@
   "last": "Last meeting: Sept. 17, 2023, Bills 38, Raiders 10."
  },
  "injuries": {
-  "asOf": "Oct. 13",
+  "week": 6,
   "bills": [
-   "Spencer Brown (OT)",
-   "Landon Jackson (DE)",
-   "Dee Alford (CB)",
-   "Joshua Palmer (WR)"
+   {
+    "name": "DJ Moore",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Ed Oliver",
+    "pos": "DE",
+    "injury": "Knee",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Dee Alford",
+    "pos": "CB",
+    "injury": "Ankle",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Josh Palmer",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Spencer Brown",
+    "pos": "T",
+    "injury": "Back",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "T.J. Sanders",
+    "pos": "DE",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Ty Johnson",
+    "pos": "RB",
+    "injury": "Hamstring",
+    "status": "Limited",
+    "game": false
+   }
   ],
   "opp": [
-   "Tonka Hemingway (DT)",
-   "Jalen Nailor (WR)",
-   "Trey Zuhn III (C)",
-   "Patrick Johnson (DE)"
+   {
+    "name": "Tonka Hemingway",
+    "pos": "DT",
+    "injury": "Concussion",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Carter Runyon",
+    "pos": "TE",
+    "injury": "Foot",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Jalen Nailor",
+    "pos": "WR",
+    "injury": "Concussion",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Trey Zuhn III",
+    "pos": "C",
+    "injury": "Knee",
+    "status": "Limited",
+    "game": false
+   }
   ],
-  "note": "All listed as questionable as of Oct. 13. Dont'e Thornton Jr. (WR) is on injured reserve for the Raiders. Check the official injury report for the latest."
+  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
  },
  "allenVs": {
   "wins": 2,
@@ -52,8 +124,9 @@
  },
  "boxscores": [
   {
+   "gameId": "2023_02_LV_BUF",
    "date": "Sept. 17, 2023",
-   "site": "Highmark Stadium, Orchard Park",
+   "site": "New Era Field, Orchard Park",
    "week": "Week 2",
    "teams": [
     "Raiders",
@@ -79,20 +152,21 @@
    "bills": [
     "James Cook: 17 carries, 123 yds",
     "Damien Harris: 7 carries, 33 yds, 1 TD",
-    "Latavius Murray: 6 carries, 22 yds, 1 TD",
     "Gabe Davis: 6 rec, 92 yds, 1 TD",
     "Stefon Diggs: 7 rec, 66 yds",
     "Dalton Kincaid: 5 rec, 43 yds"
    ],
    "opp": [
     "Jimmy Garoppolo: 16-24, 185 yds, 1 TD, 2 INT",
+    "Zamir White: 4 carries, 22 yds",
     "Davante Adams: 6 rec, 84 yds, 1 TD",
-    "Josh Jacobs: 9 carries, -2 yds; 5 rec, 51 yds",
-    "Tre Tucker: 1 carry, 34 yds"
+    "Josh Jacobs: 5 rec, 51 yds",
+    "Hunter Renfrow: 1 rec, 23 yds"
    ],
-   "source": "Pro-Football-Reference"
+   "source": "nflverse"
   },
   {
+   "gameId": "2020_04_BUF_LV",
    "date": "Oct. 4, 2020",
    "site": "Allegiant Stadium, Las Vegas",
    "week": "Week 4",
@@ -121,22 +195,62 @@
     "Devin Singletary: 18 carries, 56 yds, 1 TD",
     "Stefon Diggs: 6 rec, 115 yds",
     "John Brown: 4 rec, 42 yds",
-    "Cole Beasley: 3 rec, 32 yds, 1 TD",
-    "Gabe Davis: 1 rec, 26 yds, 1 TD"
+    "Cole Beasley: 3 rec, 32 yds, 1 TD"
    ],
    "opp": [
     "Derek Carr: 32-44, 311 yds, 2 TD, 0 INT",
-    "Darren Waller: 9 rec, 88 yds",
     "Josh Jacobs: 15 carries, 48 yds",
+    "Darren Waller: 9 rec, 88 yds",
+    "Hunter Renfrow: 5 rec, 57 yds",
     "Nelson Agholor: 4 rec, 44 yds, 1 TD"
    ],
-   "source": "Pro-Football-Reference"
+   "source": "nflverse"
   }
  ],
- "sources": "Schedule and series history: Buffalo Bills and Las Vegas Raiders team sites. Records and injuries: Sports Illustrated (Oct. 13). Allen's career line against the Raiders: StatMuse. Box scores: Pro-Football-Reference. Team totals (yards, first downs, time of possession) were not available for these two games. Team stats: Pro-Football-Reference standings and NFL.com team statistics, as of Oct. 16. Raiders results: Pro-Football-Reference.",
+ "history": {
+  "rows": [
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2020_04_BUF_LV",
+    "team": "BUF",
+    "completions": "24",
+    "attempts": "34",
+    "passing_yards": "288",
+    "passing_tds": "2",
+    "passing_interceptions": "0",
+    "sacks_suffered": "1",
+    "carries": "3",
+    "rushing_yards": "-1",
+    "rushing_tds": "1",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2023_02_LV_BUF",
+    "team": "BUF",
+    "completions": "31",
+    "attempts": "37",
+    "passing_yards": "274",
+    "passing_tds": "3",
+    "passing_interceptions": "0",
+    "sacks_suffered": "2",
+    "carries": "3",
+    "rushing_yards": "7",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   }
+  ]
+ },
+ "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
   "asOf": "Oct. 16, 2026",
-  "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since games played differ (Chiefs and Panthers 4, Broncos and Seahawks 6, most others 5). For points allowed, yards allowed, sacks allowed and interceptions thrown, lower is better.",
+  "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
     "label": "Points scored, per game",
@@ -200,7 +314,7 @@
     },
     "opp": {
      "v": 82,
-     "rank": 27
+     "rank": 28
     }
    },
    {
@@ -222,7 +336,7 @@
     "dec": 0,
     "bills": {
      "v": 10,
-     "rank": 10
+     "rank": 9
     },
     "opp": {
      "v": 8,
@@ -235,11 +349,11 @@
     "dec": 0,
     "bills": {
      "v": 11,
-     "rank": 11
+     "rank": 12
     },
     "opp": {
      "v": 13,
-     "rank": 8
+     "rank": 10
     }
    },
    {
@@ -271,8 +385,8 @@
   ]
  },
  "colors": {
-  "bills": "#00338d",
-  "opp": "#a5acaf"
+  "bills": "#00338D",
+  "opp": "#A5ACAF"
  },
  "oppSeason": [
   {
