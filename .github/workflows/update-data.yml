@@ -1,30 +1,51 @@
 name: Update stats data
 
+# Refreshes Allen's stats, the Next game page and NFL ranks from free nflverse data.
+# Results go to the "stats-data" branch, which the site reads directly from GitHub.
+# Nothing is committed to main, so Netlify never redeploys (and never spends credits) for a data update.
+
 on:
   schedule:
-    - cron: "0 10 * * *"        # every day, 6:00 a.m. Eastern
-    - cron: "0 14 * * 1,2,5"    # Mon/Tue/Fri, 10:00 a.m. Eastern (after game nights)
+    - cron: "23 * * * *"        # every hour; files are only saved when a number actually changed
   workflow_dispatch: {}          # lets you press "Run workflow" by hand
 
 permissions:
   contents: write
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - name: Get the site code (main)
+        uses: actions/checkout@v4
+
+      - name: Get the current data (stats-data branch)
+        uses: actions/checkout@v4
+        with:
+          ref: stats-data
+          path: out
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Pull latest stats
-        run: python scripts/update_data.py
+        run: python scripts/update_data.py out
+
       - name: Save changes
+        working-directory: out
         run: |
-          if [ -n "$(git status --porcelain data)" ]; then
+          if [ -n "$(git status --porcelain)" ]; then
             git config user.name "stats-bot"
             git config user.email "stats-bot@users.noreply.github.com"
-            git add data
+            git add -A
             git commit -m "Update stats data"
             git push
+          else
+            echo "Nothing changed."
           fi

@@ -35,14 +35,16 @@ function td(v){return '<td>'+v+'</td>';}
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
 function li(a){return a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('');}
 function stat(v,l){return '<div><b>'+v+'</b><span>'+l+'</span></div>';}
-function load(url){return fetch(url,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();});}
-Promise.all([load('data/matchup.json'),load('data/allen-2026.json')]).then(function(res){
+// Live data comes from the stats-data branch on GitHub (refreshed hourly, no Netlify redeploy needed); the copy in /data is the fallback.
+var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
+function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
+Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   var m=res[0], a=res[1];
-  document.getElementById('title').textContent='Week '+m.week+': '+(m.home?'vs':'at')+' the '+m.opp.name;
+  document.getElementById('title').textContent=(m.label||('Week '+m.week))+': '+(m.home?'vs':'at')+' the '+m.opp.name;
   var b='<div class="team"><b>'+esc(m.bills.name)+'</b><span>'+esc(m.bills.record)+'</span></div>';
   var o='<div class="team"><b>'+esc(m.opp.name)+'</b><span>'+esc(m.opp.record)+'</span></div>';
   document.getElementById('vs').innerHTML = (m.home ? o+'<div class="at">at</div>'+b : b+'<div class="at">at</div>'+o);
-  document.getElementById('when').textContent=m.date+' · '+m.time+' · '+m.venue+' · '+m.tv;
+  document.getElementById('when').textContent=[m.date,m.time,m.venue,m.tv].filter(Boolean).join(' · ');
   var T=m.teamStats, L=m.home?m.opp:m.bills, R=m.home?m.bills:m.opp, lk=m.home?'opp':'bills', rk=m.home?'bills':'opp';
   document.getElementById('cmp').innerHTML='<div class="cmphead"><b>'+esc(L.name)+'</b><b>'+esc(R.name)+'</b></div>'+T.cats.map(function(c){
     var l=c[lk], r=c[rk], ls=33-l.rank, rs=33-r.rank, p=Math.round(100*ls/(ls+rs));
@@ -66,18 +68,24 @@ Promise.all([load('data/matchup.json'),load('data/allen-2026.json')]).then(funct
   });
   document.getElementById('season').innerHTML='<thead><tr><th>Wk</th><th>Opp</th><th>Result</th><th>Cmp-Att</th><th>Yds</th><th>TD</th><th>INT</th><th>Rush</th><th>Yds</th><th>TD</th></tr></thead><tbody>'+rows+'</tbody>';
   document.getElementById('boxes').innerHTML=m.boxscores.map(function(x){
-    var ls='<thead><tr><th>Team</th><th>1</th><th>2</th><th>3</th><th>4</th><th>Final</th></tr></thead><tbody>'+x.teams.map(function(t,i){return '<tr>'+td(t)+x.line[i].map(function(n,j){return j===4?'<td><b>'+n+'</b></td>':td(n);}).join('')+'</tr>';}).join('')+'</tbody>';
+    var n=x.line[0].length, hd=n===1?['Final']:n===6?['1','2','3','4','OT','Final']:['1','2','3','4','Final'];
+    var ls='<thead><tr><th>Team</th>'+hd.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr></thead><tbody>'+x.teams.map(function(t,i){return '<tr>'+td(t)+x.line[i].map(function(v,j){return j===n-1?'<td><b>'+v+'</b></td>':td(v);}).join('')+'</tr>';}).join('')+'</tbody>';
     return '<div class="card"><div class="head"><h2>'+esc(x.date)+' ('+esc(x.week)+')</h2><div class="chips"><span class="chip">'+esc(x.site)+'</span></div></div>'
      +'<div class="scroll" style="margin:10px 0"><table>'+ls+'</table></div>'
-     +'<p style="margin:6px 0"><b>Josh Allen:</b> '+esc(x.allen)+'</p>'
-     +'<div class="lines"><div><h3>Bills</h3><ul>'+li(x.bills)+'</ul></div><div><h3>Raiders</h3><ul>'+li(x.opp)+'</ul></div></div>'
+     +(x.allen?'<p style="margin:6px 0"><b>Josh Allen:</b> '+esc(x.allen)+'</p>':'')
+     +'<div class="lines"><div><h3>Bills</h3><ul>'+li(x.bills)+'</ul></div><div><h3>'+esc(m.opp.nick||m.opp.name)+'</h3><ul>'+li(x.opp)+'</ul></div></div>'
      +'<p class="note">Source: '+esc(x.source)+'</p></div>';
   }).join('');
-  var inj=m.injuries;
+  var inj=m.injuries, nick=m.opp.nick||m.opp.name;
+  function pills(L){
+    if(!L.length)return '<p class="note" style="margin:4px 0">No one listed yet.</p>';
+    return L.map(function(x){ if(typeof x==='string')return '<span class="pill">'+esc(x)+'</span>';
+      return '<span class="pill">'+esc(x.name)+' ('+esc(x.pos)+')'+(x.injury?', '+esc(x.injury):'')+': <b>'+esc(x.status)+'</b></span>';}).join('');}
+  var asof=inj.asOf?' ('+esc(inj.asOf)+')':(inj.week?' (Week '+inj.week+' report)':'');
   document.getElementById('extra').innerHTML='<p style="margin:0 0 6px"><b>'+esc(m.series.summary)+'</b> '+esc(m.series.last)+'</p>'
-   +'<div class="lines"><div><h3>Bills injuries ('+esc(inj.asOf)+')</h3>'+inj.bills.map(function(x){return '<span class="pill">'+esc(x)+'</span>';}).join('')+'</div><div><h3>Raiders injuries ('+esc(inj.asOf)+')</h3>'+inj.opp.map(function(x){return '<span class="pill">'+esc(x)+'</span>';}).join('')+'</div></div>'
-   +'<p class="note">'+esc(inj.note)+'</p>';
-  document.getElementById('srcnote').textContent=m.sources+' Updated '+m.updated+'.';
+   +'<div class="lines"><div><h3>Bills injuries'+asof+'</h3>'+pills(inj.bills)+'</div><div><h3>'+esc(nick)+' injuries'+asof+'</h3>'+pills(inj.opp)+'</div></div>'
+   +'<p class="note">'+esc(inj.note)+' DNP = did not practice.</p>';
+  document.getElementById('srcnote').textContent=m.sources+' Last updated '+m.updated+'.';
 }).catch(function(){
   document.getElementById('title').textContent='Next game';
   document.getElementById('when').textContent='The matchup data could not be loaded. Please refresh.';

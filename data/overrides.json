@@ -1,0 +1,9 @@
+{
+ "_how": "Hand-entered facts that have no free data feed. The update script reads this file. 'series' = all-time regular-season record vs a team through the end of the 'thru' season (games after that are added automatically). 'games' = extras for one game, keyed by nflverse game id (e.g. TV network).",
+ "series": {
+  "LV": {"w": 20, "l": 21, "t": 0, "thru": 2025}
+ },
+ "games": {
+  "2026_06_BUF_LV": {"tv": "CBS"}
+ }
+}

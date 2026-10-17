@@ -67,7 +67,8 @@ var SEASONS = [
 ];
 // 2026 so far: all through Week 5 (Oct. 12 at the Rams).
 var NOW = {label:"2026*", g:5, gs:5, cmp:91, att:138, yds:1249, td:7, int:4, rate:99.6, rushAtt:43, rushYds:239, rushTD:8};
-var THRU = "Week 5 (Oct. 12)";;
+var THRU = "Week 5 (Oct. 12)";
+var POST = null; // career playoff totals, filled in from the live data file
 // Headline tiles
 var TILES = [
  ["31,351","Career passing yards","through Week 5 of 2026"],
@@ -124,7 +125,7 @@ function setRec(cat,title,val,note){
 function applyNow(){
   var wk = "Weeks 1-" + NOW.g + " of 2026", th = THRU.split(" (")[0];
   var py = BASE.passYds + NOW.yds, pt = BASE.passTD + NOW.td, rt = BASE.rushTD + NOW.rushTD;
-  var tot = pt + rt + BASE.recTD;
+  var rec = BASE.recTD + (NOW.recTD||0), tot = pt + rt + rec;
   TILES[0] = [fmt(py), "Career passing yards", "through " + th + " of 2026"];
   TILES[1] = [String(pt), "Career passing touchdowns", "through " + th + " of 2026"];
   TILES[2] = [String(rt), "Career rushing touchdowns", "through " + th + " of 2026"];
@@ -133,8 +134,12 @@ function applyNow(){
   setRec("Career","Passing touchdowns",pt,"Allen: "+BASE.passTD+" through 2025 plus "+NOW.td+" in "+wk+".");
   setRec("Career","Pass completions",BASE.cmp+NOW.cmp,"Allen: "+fmt(BASE.cmp)+" through 2025 plus "+NOW.cmp+" in "+wk+".");
   setRec("Career","Rushing touchdowns",rt,"Allen passed Thomas in 2025; "+rt+" through "+th+" of 2026.");
-  setRec("Career","Total touchdowns (passing + rushing + receiving)",tot,"Allen: "+pt+" passing + "+rt+" rushing + "+BASE.recTD+" receiving, all through "+th+". The Bills media guide lists him as the franchise's all-time leader in total touchdowns. Kelly's rushing and receiving scores are not included in his bar.");
-  setRec("Career","Touchdowns scored (rushing + receiving)",rt+BASE.recTD,"Allen: "+rt+" rushing + "+BASE.recTD+" receiving. He passed Reed and Thomas in Week 4.");
+  setRec("Career","Total touchdowns (passing + rushing + receiving)",tot,"Allen: "+pt+" passing + "+rt+" rushing + "+rec+" receiving, all through "+th+". The Bills media guide lists him as the franchise's all-time leader in total touchdowns. Kelly's rushing and receiving scores are not included in his bar.");
+  setRec("Career","Touchdowns scored (rushing + receiving)",rt+rec,"Allen: "+rt+" rushing + "+rec+" receiving. He passed Reed and Thomas in Week 4 of 2026.");
+  if(POST){
+    setRec("Postseason","Passing touchdowns",POST.td,"Allen: "+POST.td+" in "+POST.games+" playoff games, from nflverse game logs, updated automatically.");
+    setRec("Postseason","Passing yards",POST.yds,"Allen: "+fmt(POST.yds)+" in "+POST.games+" playoff games, from nflverse game logs, updated automatically. Kelly's 3,863 is his career playoff total.");
+  }
   setRec("Streaks","Consecutive regular-season starts (quarterback)",BASE.starts+NOW.gs,"Allen: "+BASE.starts+" entering 2026 plus "+NOW.gs+" starts through "+th+". The streak began Nov. 25, 2018, after he missed four games as a rookie. Including playoffs it was 135 as of the 2025 finale. Favre's 297 is from my own knowledge and needs confirming. The Bills' own franchise record for consecutive starts has not been found yet.");
   setRec("Career","Rushing yards",BASE.rushYds+NOW.rushYds,"Allen: "+fmt(BASE.rushYds)+" entering 2026 plus "+NOW.rushYds+" in "+wk+" ("+NOW.rushAtt+" carries). He is about "+fmt(11938-BASE.rushYds-NOW.rushYds)+" yards behind Thomas.");
   setRec("Career","Games played as quarterback",BASE.games+NOW.g,"Games, not starts. Allen: "+BASE.games+" through 2025 plus "+NOW.g+" in 2026. Starts are being researched.");
@@ -144,8 +149,9 @@ function fmt(n){return n.toLocaleString('en-US');}
 function rating(c,a,y,t,i){function k(x){return Math.max(0,Math.min(2.375,x));}return (k((c/a-.3)*5)+k((y/a-3)*.25)+k(t/a*20)+k(2.375-i/a*25))/6*100;}
 function td(v,cls){return '<td'+(cls?' class="'+cls+'"':'')+'>'+v+'</td>';}
 function tbl(head,rows){return '<thead><tr>'+head.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr></thead><tbody>'+rows+'</tbody>';}
+var RANKS=null; // live NFL all-time lists (nfl-ranks.json): {asOf, 'Career passing yards':[...], ...}
 function build(){
-  var NFL={asOf:"Oct. 16, 2026",
+  var NFL=RANKS||{asOf:"Oct. 16, 2026",
     "Career passing yards":[89214,80358,71940,71838,67508,66088,64088,63984,62792,61361,57023,51475,49325,48176,47003,46966,46247,46233,45969,44611,43040,41245,41107,40922,40551,40239,39793,38147,37920,37370,37276,36976,36638,35650,35467,35133,34990,34881,34837,34665,34241,34183,33503,33462,33124,33070,32942,32838,32382,32344,32224,32072,31548,31304,30797,29979,29817,29745,29444],
     "Career passing touchdowns":[649,571,539,537,508,432,425,420,418,381,366,353,342,310,300,294,291,290,276,275,273,272,268,261,257,255,254,254,252,251,248,247,244,242,239,237,236,234,232,227,223,216],
     "Career rushing touchdowns":[164,145,129,123,120,110,106,104,100,100,99,91,91,90,90,86,85,83,82,81,81,80],
@@ -154,7 +160,7 @@ function build(){
     var me=0; TILES.forEach(function(t){if(t[1]===title)me=parseInt(String(t[0]).replace(/,/g,''),10);});
     var above=L.filter(function(v){return v>me;}).length, tie=L.filter(function(v){return v===me;}).length>0;
     return '<em class="rk">'+(tie?'T-':'#')+(above+1)+' in NFL history</em>';}
-  document.getElementById('rknote').textContent='NFL all-time ranks are regular season only, from Pro-Football-Reference career leader lists as of '+NFL.asOf+'. Active players keep adding to their totals, so these ranks can shift. The NFL keeps no official list for total touchdowns, so that rank is our count of players whose passing + rushing + receiving touchdowns exceed Allen\'s.';
+  document.getElementById('rknote').textContent='NFL all-time ranks are regular season only. Retired players come from Pro-Football-Reference career leader lists; active players\' totals are kept current from nflverse (as of '+NFL.asOf+'). The NFL keeps no official list for total touchdowns, so that rank is our count of players whose passing + rushing + receiving touchdowns exceed Allen\'s.';
   document.getElementById('tiles').innerHTML = TILES.map(function(t){return '<div class="tile"><b>'+t[0]+'</b><span>'+t[1]+'<br>'+t[2]+'</span>'+rk(t[1])+'</div>';}).join('');
   var T = {g:0,gs:0,c:0,a:0,y:0,t:0,i:0,s:0,ra:0,ry:0,rt:0,rf:0,rl:0}, pr='', rr='';
   SEASONS.forEach(function(s){
@@ -162,13 +168,13 @@ function build(){
     pr += '<tr>'+td(s[0])+td(s[1])+td(s[2])+td(s[3])+td(s[4])+td((s[3]/s[4]*100).toFixed(1))+td(fmt(s[5]))+td((s[5]/s[4]).toFixed(1))+td(s[6])+td(s[7])+td(s[8])+td(s[9].toFixed(1))+'</tr>';
     rr += '<tr>'+td(s[0])+td(s[1])+td(s[10])+td(fmt(s[11]))+td((s[11]/s[10]).toFixed(1))+td(s[12])+td(s[13])+td(s[14])+'</tr>';
   });
-  pr += '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.gs)+td(NOW.cmp)+td(NOW.att)+td((NOW.cmp/NOW.att*100).toFixed(1))+td(fmt(NOW.yds))+td((NOW.yds/NOW.att).toFixed(1))+td(NOW.td)+td(NOW.int)+td('&mdash;')+td(NOW.rate.toFixed(1))+'</tr>';
+  pr += '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.gs)+td(NOW.cmp)+td(NOW.att)+td((NOW.cmp/NOW.att*100).toFixed(1))+td(fmt(NOW.yds))+td((NOW.yds/NOW.att).toFixed(1))+td(NOW.td)+td(NOW.int)+td(NOW.sk!=null?NOW.sk:'&mdash;')+td(NOW.rate.toFixed(1))+'</tr>';
   pr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(T.gs)+td(fmt(T.c))+td(fmt(T.a))+td((T.c/T.a*100).toFixed(1))+td(fmt(T.y))+td((T.y/T.a).toFixed(1))+td(T.t)+td(T.i)+td(T.s)+td(rating(T.c,T.a,T.y,T.t,T.i).toFixed(1))+'</tr>';
-  rr += '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.rushAtt)+td(fmt(NOW.rushYds))+td((NOW.rushYds/NOW.rushAtt).toFixed(1))+td(NOW.rushTD)+td('&mdash;')+td('&mdash;')+'</tr>';
+  rr += '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.rushAtt)+td(fmt(NOW.rushYds))+td((NOW.rushYds/NOW.rushAtt).toFixed(1))+td(NOW.rushTD)+td(NOW.fum!=null?NOW.fum:'&mdash;')+td(NOW.fumLost!=null?NOW.fumLost:'&mdash;')+'</tr>';
   rr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(fmt(T.ra))+td(fmt(T.ry))+td((T.ry/T.ra).toFixed(1))+td(T.rt)+td(T.rf)+td(T.rl)+'</tr>';
   document.getElementById('pass').innerHTML = tbl(['Season','G','GS','Cmp','Att','Cmp%','Yds','Y/A','TD','INT','Sck','Rate'],pr);
   document.getElementById('rush').innerHTML = tbl(['Season','G','Att','Yds','Avg','TD','Fum','Lost'],rr);
-  document.getElementById('statnote').textContent = "Season lines from NFL.com. 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ". Sacks and fumbles for 2026 are not yet added.";
+  document.getElementById('statnote').textContent = "Season lines from NFL.com. 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ", from nflverse game logs, refreshed automatically.";
 }
 function isMe(n){return n.indexOf(ME)===0;}
 function render(){
@@ -190,9 +196,15 @@ function render(){
 }
 function init(){ applyNow(); build(); render(); fillText(); }
 init();
-// Live numbers: a scheduled GitHub job refreshes this file; if it can't be read, the numbers above stay.
-fetch('data/allen-2026.json', {cache:'no-cache'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(d){
-  if(d && d.now && d.now.g >= NOW.g){ NOW = d.now; THRU = d.thru || THRU; init(); }
+// Live numbers: a GitHub job refreshes these files hourly on the stats-data branch (no Netlify redeploy needed).
+// If GitHub can't be reached, the copies shipped in /data are used; if those fail too, the numbers above stay.
+var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
+function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
+load('allen-2026.json').then(function(d){
+  if(d && d.now && d.now.g >= NOW.g){ NOW = d.now; THRU = d.thru || THRU; POST = d.post || null; init(); }
+}).catch(function(){});
+load('nfl-ranks.json').then(function(d){
+  if(d && d.lists){ RANKS = {asOf:d.asOf}; for(var k in d.lists){ RANKS[k]=d.lists[k]; } build(); }
 }).catch(function(){});
 fillText();
 </script>
