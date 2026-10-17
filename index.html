@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
 <meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=15">
+<link rel="stylesheet" href="css/site.css?v=16">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -54,7 +54,7 @@
 <footer id="foot"></footer>
 <script>
 // ===== DATA (edit here after each game) =====
-// Season rows from NFL.com career stats (2018-2025).
+// Season rows (2018-2025): nflverse regular-season totals, matching official totals except 2018 passing, which uses the official 2,074 yards.
 // passing: [season, G, GS, cmp, att, yds, TD, INT, sacks, rating] / rushing: [att, yds, TD, fum, fumLost]
 var SEASONS = [
  [2018,12,11,169,320,2074,10,12,28,67.9, 89,631,8,8,2],
@@ -114,7 +114,7 @@ var RECORDS = [
 var QUEUE = ["Career starts (requested)","Who holds the Bills' overall consecutive-starts record (any position)","Career wins as a starter (Kelly: 101)","Career rushing yards, third place and up","300-yard and 400-yard passing games","Single-season rushing touchdowns by a quarterback","Passer rating, completion percentage, and yards per game"];
 
 // Career base through the end of 2025 (static). Everything shown for 2026 is added on top from data/allen-2026.json.
-var FOOT = "Stats updated through {THRU}. Sources: NFL.com, FootballDB, Buffalo Bills media guide and record-holder pages, Pro Football Hall of Fame, ESPN, and 2026 game coverage. \"Needs a second check\" means a figure came from one source or from an earlier date. Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen...unless that is you want to maybe hang out Josh, we could chill talk about football, maybe golf...I'm an 8 handicap...but whatever... your call.";
+var FOOT = "Stats updated through {THRU}. Sources: nflverse (CC BY 4.0) for player, team and schedule data; Pro-Football-Reference, FootballDB, ESPN, the Buffalo Bills media guide and record-holder pages, and the Pro Football Hall of Fame for career records; and 2026 game coverage. \"Needs a second check\" means a figure came from one source or from an earlier date. Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen...unless that is you want to maybe hang out Josh, we could chill talk about football, maybe golf...I'm an 8 handicap...but whatever... your call.";
 function fillText(){ if(document.body.classList.contains('hailee')){return;} document.getElementById('foot').textContent = FOOT.replace('{THRU}', THRU); }
 var BASE = {passYds:30102, passTD:220, cmp:2615, rushYds:4721, rushTD:79, recTD:2, games:128, starts:122};
 function setRec(cat,title,val,note){
@@ -177,7 +177,7 @@ function build(){
   rr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(fmt(T.ra))+td(fmt(T.ry))+td((T.ry/T.ra).toFixed(1))+td(T.rt)+td(T.rf)+td(T.rl)+'</tr>';
   document.getElementById('pass').innerHTML = tbl(['Season','G','GS','Cmp','Att','Cmp%','Yds','Y/A','TD','INT','Sck','Rate'],pr);
   document.getElementById('rush').innerHTML = tbl(['Season','G','Att','Yds','Avg','TD','Fum','Lost'],rr);
-  document.getElementById('statnote').textContent = "Season lines from NFL.com. 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ", from nflverse game logs, refreshed automatically.";
+  document.getElementById('statnote').textContent = "Season lines from nflverse, checked against official totals (2018 uses the official 2,074 passing yards). 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ", from nflverse game logs, refreshed automatically.";
 }
 function isMe(n){return n.indexOf(ME)===0;}
 function render(){
