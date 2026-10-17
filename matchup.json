@@ -1,0 +1,423 @@
+{
+ "updated": "2026-10-16",
+ "gameId": "2026_06_BUF_LV",
+ "week": 6,
+ "label": "Week 6",
+ "bills": {
+  "name": "Buffalo Bills",
+  "record": "4-1"
+ },
+ "opp": {
+  "name": "Las Vegas Raiders",
+  "abbr": "LV",
+  "nick": "Raiders",
+  "record": "3-2"
+ },
+ "home": false,
+ "date": "Sunday, Oct. 18, 2026",
+ "time": "4:25 p.m. ET",
+ "venue": "Allegiant Stadium, Las Vegas",
+ "tv": "CBS",
+ "series": {
+  "summary": "Raiders lead the regular-season series 21-20.",
+  "last": "Last meeting: Sept. 17, 2023, Bills 38, Raiders 10."
+ },
+ "injuries": {
+  "week": 6,
+  "bills": [
+   {
+    "name": "DJ Moore",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Ed Oliver",
+    "pos": "DE",
+    "injury": "Knee",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Dee Alford",
+    "pos": "CB",
+    "injury": "Ankle",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Josh Palmer",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Spencer Brown",
+    "pos": "T",
+    "injury": "Back",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "T.J. Sanders",
+    "pos": "DE",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Ty Johnson",
+    "pos": "RB",
+    "injury": "Hamstring",
+    "status": "Limited",
+    "game": false
+   }
+  ],
+  "opp": [
+   {
+    "name": "Tonka Hemingway",
+    "pos": "DT",
+    "injury": "Concussion",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Carter Runyon",
+    "pos": "TE",
+    "injury": "Foot",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Jalen Nailor",
+    "pos": "WR",
+    "injury": "Concussion",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Trey Zuhn III",
+    "pos": "C",
+    "injury": "Knee",
+    "status": "Limited",
+    "game": false
+   }
+  ],
+  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
+ },
+ "allenVs": {
+  "wins": 2,
+  "losses": 0,
+  "games": 2,
+  "cmp": 55,
+  "att": 71,
+  "yds": 562,
+  "td": 5,
+  "int": 0,
+  "sacks": 3,
+  "rushAtt": 6,
+  "rushYds": 6,
+  "rushTD": 1,
+  "rating": 123.1
+ },
+ "boxscores": [
+  {
+   "gameId": "2023_02_LV_BUF",
+   "date": "Sept. 17, 2023",
+   "site": "New Era Field, Orchard Park",
+   "week": "Week 2",
+   "teams": [
+    "Raiders",
+    "Bills"
+   ],
+   "line": [
+    [
+     7,
+     3,
+     0,
+     0,
+     10
+    ],
+    [
+     7,
+     14,
+     7,
+     10,
+     38
+    ]
+   ],
+   "allen": "31-37, 274 yds, 3 TD, 0 INT, 2 sacks, 124.5 rating. 3 carries, 7 yds.",
+   "bills": [
+    "James Cook: 17 carries, 123 yds",
+    "Damien Harris: 7 carries, 33 yds, 1 TD",
+    "Gabe Davis: 6 rec, 92 yds, 1 TD",
+    "Stefon Diggs: 7 rec, 66 yds",
+    "Dalton Kincaid: 5 rec, 43 yds"
+   ],
+   "opp": [
+    "Jimmy Garoppolo: 16-24, 185 yds, 1 TD, 2 INT",
+    "Zamir White: 4 carries, 22 yds",
+    "Davante Adams: 6 rec, 84 yds, 1 TD",
+    "Josh Jacobs: 5 rec, 51 yds",
+    "Hunter Renfrow: 1 rec, 23 yds"
+   ],
+   "source": "nflverse"
+  },
+  {
+   "gameId": "2020_04_BUF_LV",
+   "date": "Oct. 4, 2020",
+   "site": "Allegiant Stadium, Las Vegas",
+   "week": "Week 4",
+   "teams": [
+    "Bills",
+    "Raiders"
+   ],
+   "line": [
+    [
+     7,
+     10,
+     0,
+     13,
+     30
+    ],
+    [
+     3,
+     10,
+     3,
+     7,
+     23
+    ]
+   ],
+   "allen": "24-34, 288 yds, 2 TD, 0 INT, 1 sack, 115.8 rating. 3 carries, -1 yd, 1 TD.",
+   "bills": [
+    "Devin Singletary: 18 carries, 56 yds, 1 TD",
+    "Stefon Diggs: 6 rec, 115 yds",
+    "John Brown: 4 rec, 42 yds",
+    "Cole Beasley: 3 rec, 32 yds, 1 TD"
+   ],
+   "opp": [
+    "Derek Carr: 32-44, 311 yds, 2 TD, 0 INT",
+    "Josh Jacobs: 15 carries, 48 yds",
+    "Darren Waller: 9 rec, 88 yds",
+    "Hunter Renfrow: 5 rec, 57 yds",
+    "Nelson Agholor: 4 rec, 44 yds, 1 TD"
+   ],
+   "source": "nflverse"
+  }
+ ],
+ "history": {
+  "rows": [
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2020_04_BUF_LV",
+    "team": "BUF",
+    "completions": "24",
+    "attempts": "34",
+    "passing_yards": "288",
+    "passing_tds": "2",
+    "passing_interceptions": "0",
+    "sacks_suffered": "1",
+    "carries": "3",
+    "rushing_yards": "-1",
+    "rushing_tds": "1",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2023_02_LV_BUF",
+    "team": "BUF",
+    "completions": "31",
+    "attempts": "37",
+    "passing_yards": "274",
+    "passing_tds": "3",
+    "passing_interceptions": "0",
+    "sacks_suffered": "2",
+    "carries": "3",
+    "rushing_yards": "7",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   }
+  ]
+ },
+ "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
+ "teamStats": {
+  "asOf": "Oct. 16, 2026",
+  "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
+  "cats": [
+   {
+    "label": "Points scored, per game",
+    "better": "high",
+    "dec": 0,
+    "bills": {
+     "v": 33,
+     "rank": 1
+    },
+    "opp": {
+     "v": 26,
+     "rank": 8
+    }
+   },
+   {
+    "label": "Points allowed, per game",
+    "better": "low",
+    "dec": 0,
+    "bills": {
+     "v": 28,
+     "rank": 28
+    },
+    "opp": {
+     "v": 26,
+     "rank": 22
+    }
+   },
+   {
+    "label": "Passing yards, per game",
+    "better": "high",
+    "dec": 0,
+    "bills": {
+     "v": 250,
+     "rank": 12
+    },
+    "opp": {
+     "v": 263,
+     "rank": 8
+    }
+   },
+   {
+    "label": "Passing yards allowed, per game",
+    "better": "low",
+    "dec": 0,
+    "bills": {
+     "v": 296,
+     "rank": 31
+    },
+    "opp": {
+     "v": 253,
+     "rank": 25
+    }
+   },
+   {
+    "label": "Rushing yards, per game",
+    "better": "high",
+    "dec": 0,
+    "bills": {
+     "v": 158,
+     "rank": 5
+    },
+    "opp": {
+     "v": 82,
+     "rank": 28
+    }
+   },
+   {
+    "label": "Rushing yards allowed, per game",
+    "better": "low",
+    "dec": 0,
+    "bills": {
+     "v": 108,
+     "rank": 15
+    },
+    "opp": {
+     "v": 141,
+     "rank": 29
+    }
+   },
+   {
+    "label": "Sacks allowed, season",
+    "better": "low",
+    "dec": 0,
+    "bills": {
+     "v": 10,
+     "rank": 9
+    },
+    "opp": {
+     "v": 8,
+     "rank": 6
+    }
+   },
+   {
+    "label": "Sacks, season",
+    "better": "high",
+    "dec": 0,
+    "bills": {
+     "v": 11,
+     "rank": 12
+    },
+    "opp": {
+     "v": 13,
+     "rank": 10
+    }
+   },
+   {
+    "label": "Interceptions thrown, season",
+    "better": "low",
+    "dec": 0,
+    "bills": {
+     "v": 4,
+     "rank": 18
+    },
+    "opp": {
+     "v": 4,
+     "rank": 18
+    }
+   },
+   {
+    "label": "Interceptions, season",
+    "better": "high",
+    "dec": 0,
+    "bills": {
+     "v": 2,
+     "rank": 25
+    },
+    "opp": {
+     "v": 4,
+     "rank": 9
+    }
+   }
+  ]
+ },
+ "colors": {
+  "bills": "#00338D",
+  "opp": "#A5ACAF"
+ },
+ "oppSeason": [
+  {
+   "week": 1,
+   "opp": "Dolphins",
+   "home": true,
+   "result": "W 27-13"
+  },
+  {
+   "week": 2,
+   "opp": "Chargers",
+   "home": false,
+   "result": "W 26-14"
+  },
+  {
+   "week": 3,
+   "opp": "Saints",
+   "home": false,
+   "result": "W 35-27"
+  },
+  {
+   "week": 4,
+   "opp": "Chiefs",
+   "home": true,
+   "result": "L 27-30"
+  },
+  {
+   "week": 5,
+   "opp": "Patriots",
+   "home": false,
+   "result": "L 17-45"
+  }
+ ]
+}
