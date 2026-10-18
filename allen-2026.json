@@ -1,7 +1,7 @@
 {
  "updated": "2026-10-16",
  "source": "nflverse weekly player stats (play-by-play based)",
- "thru": "Week 5 (Oct. 12, 2026)",
+ "thru": "Week 6 (2 passing TDs added by hand; full Week 6 stats coming from nflverse)",
  "now": {
   "label": "2026*",
   "g": 5,
@@ -9,7 +9,7 @@
   "cmp": 91,
   "att": 138,
   "yds": 1249,
-  "td": 7,
+  "td": 9,
   "int": 4,
   "sk": 10,
   "rushAtt": 43,
@@ -127,5 +127,6 @@
    "fum": 0,
    "fumLost": 0
   }
- ]
+ ],
+ "manual": "Week 6: +2 passing TDs entered by hand on Oct. 18, 2026. Replaced automatically when nflverse posts the game."
 }
