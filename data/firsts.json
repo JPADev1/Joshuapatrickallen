@@ -1,0 +1,133 @@
+{
+ "_how": "NFL firsts shown on the stats page, newest first. The live copy is on the stats-data branch (edit there to add one without a Netlify deploy); this copy on main is the fallback.",
+ "items": [
+  {
+   "date": "2026-10-12",
+   "game": "Week 5 at Rams (W 37-34, OT)",
+   "text": "First player in NFL history to pass for 200+ yards on fewer than 20 attempts and run for 100+ yards on 10 or fewer carries in the same game.",
+   "line": "12 of 19, 210 yds · 10 carries, 121 yds",
+   "source": "SweetwaterNOW",
+   "url": "https://www.sweetwaternow.com/pokes-in-the-pros-allen-earns-another-nfl-first/"
+  },
+  {
+   "date": "2026-10-12",
+   "game": "Week 5 at Rams (W 37-34, OT)",
+   "text": "First quarterback in NFL history with a rushing touchdown in each of his team's first five games of a season.",
+   "line": "8 rushing TDs in Weeks 1-5",
+   "source": "Heavy (via Bills PR)",
+   "url": "https://heavy.com/sports/nfl/buffalo-bills/josh-allen-history-rushing-touchdown/"
+  },
+  {
+   "date": "2026-09-27",
+   "game": "Week 3 vs. Chargers (W 24-16)",
+   "text": "First quarterback in NFL history to run for two touchdowns in each of the first three games of a season.",
+   "line": "2 + 2 + 2 rushing TDs, Weeks 1-3",
+   "source": "Yahoo Sports / Democrat and Chronicle",
+   "url": "https://sports.yahoo.com/articles/josh-allen-doing-something-no-070100837.html"
+  },
+  {
+   "date": "2026-01-11",
+   "game": "Wild Card at Jaguars (W 27-24)",
+   "text": "First quarterback in NFL history to complete 80% of his passes and run for multiple touchdowns in a playoff game.",
+   "line": "28 of 35 (80%) · 2 rushing TDs",
+   "source": "Yahoo Sports (OptaSTATS)",
+   "url": "https://sports.yahoo.com/articles/bills-star-josh-allen-playoff-225556434.html"
+  },
+  {
+   "date": "2025-12-14",
+   "game": "Week 15 at Patriots, 2025 season",
+   "text": "Only player in NFL history with a season of 25+ passing TDs and 12+ rushing TDs, and he has done it three times.",
+   "line": "",
+   "source": "NFL.com",
+   "url": "https://www.nfl.com/news/nfl-stats-and-records-week-15-bills-josh-allen-joins-elite-company-with-sixth-season-of-35-plus-offensive-tds"
+  },
+  {
+   "date": "2025-11-30",
+   "game": "Week 13 at Steelers",
+   "text": "Became the NFL's all-time leader in rushing touchdowns by a quarterback, passing Cam Newton's 75.",
+   "line": "Career rushing TD No. 76",
+   "source": "Sports Illustrated",
+   "url": "https://www.si.com/nfl/josh-allen-makes-history-breaks-nfl-all-time-rushing-touchdown-record-qb"
+  },
+  {
+   "date": "2025-11-16",
+   "game": "Week 11 vs. Buccaneers (W 44-32)",
+   "text": "Only player in NFL history with more than one game of 3+ passing TDs and 3+ rushing TDs.",
+   "line": "317 yds, 3 passing TDs · 3 rushing TDs",
+   "source": "AP photo caption",
+   "url": "https://www.pdclarion.com/news/national/buffalos-josh-allen-became-the-only-player-in-nfl-history-with-multiple-games-of-three/image_30daa9de-d38a-57fa-9198-02424359ce7a.html"
+  },
+  {
+   "date": "2025-09-07",
+   "game": "Week 1 vs. Ravens (W 41-40)",
+   "text": "First player in NFL history with 250+ passing yards and 2+ rushing TDs in a single quarter.",
+   "line": "Fourth-quarter comeback from 15 down",
+   "source": "Buffalo Bills",
+   "url": "https://www.buffalobills.com/news/bills-qb-josh-allen-named-afc-offensive-player-of-the-week-week-1-2025"
+  },
+  {
+   "date": "2024-12-29",
+   "game": "Week 17 vs. Jets (W 40-14)",
+   "text": "First player in NFL history with five straight seasons of 40+ total touchdowns (2020-24).",
+   "line": "",
+   "source": "Buffalo Bills",
+   "url": "https://www.buffalobills.com/news/josh-allen-rewrote-the-nfl-history-books-during-mvp-worthy-2024-season"
+  },
+  {
+   "date": "2024-12-15",
+   "game": "Week 15 at Lions (W 48-42)",
+   "text": "First quarterback in NFL history with 350+ passing yards, 60+ rushing yards, 2+ passing TDs and 2+ rushing TDs in one game (playoffs included).",
+   "line": "362 yds, 2 passing TDs · 68 rushing yds, 2 rushing TDs",
+   "source": "Buffalo Bills",
+   "url": "https://www.buffalobills.com/news/bills-qb-josh-allen-wins-first-career-ap-nfl-most-valuable-player-award"
+  },
+  {
+   "date": "2024-12-15",
+   "game": "Week 15 at Lions (W 48-42)",
+   "text": "First player in NFL history with 2+ passing TDs and 2+ rushing TDs in back-to-back games, and later the first with three such games in one season.",
+   "line": "Rams (Dec. 8) and Lions (Dec. 15)",
+   "source": "Buffalo Bills",
+   "url": "https://www.buffalobills.com/news/bills-qb-josh-allen-wins-first-career-ap-nfl-most-valuable-player-award"
+  },
+  {
+   "date": "2024-12-08",
+   "game": "Week 14 at Rams (L 44-42)",
+   "text": "First player in NFL history with three passing TDs and three rushing TDs in a regular-season game.",
+   "line": "342 yds, 3 passing TDs · 82 rushing yds, 3 rushing TDs",
+   "source": "Yahoo Sports",
+   "url": "https://sports.yahoo.com/nfl-history-bills-josh-allen-010451904.html"
+  },
+  {
+   "date": "2024-12-01",
+   "game": "Week 13 vs. 49ers (W 35-10)",
+   "text": "First quarterback in NFL history with a passing, rushing and receiving touchdown in the same game.",
+   "line": "2 passing TDs · 1 rushing TD · 1 receiving TD",
+   "source": "Buffalo Bills",
+   "url": "https://www.buffalobills.com/news/josh-allen-rewrote-the-nfl-history-books-during-mvp-worthy-2024-season"
+  },
+  {
+   "date": "2024",
+   "game": "2024 season",
+   "text": "First quarterback in NFL history with 6+ rushing TDs in seven straight seasons (2018-24).",
+   "line": "",
+   "source": "Buffalo Bills",
+   "url": "https://www.buffalobills.com/news/josh-allen-rewrote-the-nfl-history-books-during-mvp-worthy-2024-season"
+  },
+  {
+   "date": "2022-01-15",
+   "game": "Wild Card vs. Patriots (W 47-17)",
+   "text": "First quarterback in NFL history with 300 passing yards, 60 rushing yards and five passing TDs in a playoff game.",
+   "line": "21 of 25, 308 yds, 5 TDs · 66 rushing yds",
+   "source": "CBS Sports",
+   "url": "https://www.cbssports.com/nfl/news/josh-allen-becomes-first-quarterback-in-nfl-history-to-reach-this-impressive-playoff-feat-in-bills-blowout-win"
+  },
+  {
+   "date": "2022-01-09",
+   "game": "Week 18 vs. Jets, end of 2021 season",
+   "text": "First player in NFL history to throw for 4,000 yards and run for 750 in the same season.",
+   "line": "4,407 passing yds · 763 rushing yds",
+   "source": "CBS Sports",
+   "url": "https://www.cbssports.com/nfl/news/josh-allen-becomes-first-player-in-nfl-history-to-put-up-this-unique-statistic-for-quarterbacks"
+  }
+ ]
+}

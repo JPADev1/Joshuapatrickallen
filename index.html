@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
 <meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=16">
+<link rel="stylesheet" href="css/site.css?v=17">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -25,6 +25,11 @@
 <main id="josh-view">
   <div class="tiles" id="tiles"></div>
   <p class="note" id="rknote"></p>
+
+  <h2 class="sec" id="firsts-h">NFL firsts</h2>
+  <p class="note" style="margin:-4px 0 12px" id="firsts-sub">Every time Allen did something no player or quarterback had done before, newest first.</p>
+  <ol class="firsts" id="firsts"></ol>
+  <button type="button" class="more" id="firsts-more" hidden></button>
 
   <h2 class="sec">Passing, season by season</h2>
   <div class="scroll"><table id="pass"></table></div>
@@ -215,6 +220,24 @@ function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{
 load('allen-2026.json').then(function(d){
   if(d && d.now && d.now.g >= NOW.g){ NOW = d.now; THRU = d.thru || THRU; POST = d.post || null; init(); }
 }).catch(function(){});
+// NFL firsts: newest first, the first 5 shown until "Show all" is pressed.
+(function(){
+  var M=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'], open=false, items=[];
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function when(d){if(/^\d{4}$/.test(d))return d+' season';var p=d.split('-');return M[+p[1]-1]+' '+(+p[2])+', '+p[0];}
+  function draw(){
+    var L=open?items:items.slice(0,5);
+    document.getElementById('firsts').innerHTML=L.map(function(f){
+      return '<li><div class="fwhen">'+esc(when(f.date))+'</div><div class="fbody"><b>'+esc(f.text)+'</b>'
+        +(f.line?'<span class="fline">'+esc(f.line)+'</span>':'')
+        +'<span class="fmeta">'+esc(f.game)+(f.url?' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener noreferrer">'+esc(f.source)+'</a>':'')+'</span></div></li>';}).join('');
+    var b=document.getElementById('firsts-more');
+    b.hidden=items.length<=5; b.textContent=open?'Show fewer':'Show all '+items.length+' firsts';
+  }
+  document.getElementById('firsts-more').onclick=function(){open=!open;draw();};
+  load('firsts.json').then(function(d){ if(d&&d.items&&d.items.length){items=d.items;draw();} })
+    .catch(function(){ ['firsts-h','firsts-sub','firsts','firsts-more'].forEach(function(i){document.getElementById(i).hidden=true;}); });
+})();
 load('nfl-ranks.json').then(function(d){
   if(d && d.lists){ RANKS = {asOf:d.asOf}; for(var k in d.lists){ RANKS[k]=d.lists[k]; } build(); }
 }).catch(function(){});
