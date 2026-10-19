@@ -106,6 +106,8 @@ var RECORDS = [
   note:"Allen's total is as of January 2025. Later playoff games not yet added."},
  {cat:"Postseason", title:"Passing yards", status:"check", entries:[["Jim Kelly",3863],["Josh Allen",2995]],
   note:"Allen's total is as of January 2025. Later playoff games not yet added."},
+ {cat:"Postseason", title:"Rushing touchdowns", status:"check", entries:[["Thurman Thomas",16],["Josh Allen",9]],
+  note:"Allen ranks second in Bills playoff history, behind Hall of Famer Thurman Thomas (16 in 21 playoff games)."},
  {cat:"Honors", title:"NFL Most Valuable Player (AP)", status:"verified", chip:"2024 NFL MVP", entries:[["Josh Allen (2024)",1],["Thurman Thomas (1991)",1],["O.J. Simpson (1973)",1]],
   note:"Allen won the 2024 AP NFL MVP, the third Bills player to win it, after O.J. Simpson (1973) and Thurman Thomas (1991)."},
  {cat:"Honors", title:"AFC Offensive Player of the Week awards", status:"verified", entries:[["Josh Allen",19]],
@@ -143,6 +145,8 @@ function applyNow(){
   setRec("Career","Rushing touchdowns",rt,"Allen passed Thomas in 2025; "+rt+" through "+th+" of 2026.");
   setRec("Career","Total touchdowns (passing + rushing + receiving)",tot,"Allen: "+pt+" passing + "+rt+" rushing + "+rec+" receiving, all through "+th+". The Bills media guide lists him as the franchise's all-time leader in total touchdowns. Kelly's rushing and receiving scores are not included in his bar.");
   setRec("Career","Touchdowns scored (rushing + receiving)",rt+rec,"Allen: "+rt+" rushing + "+rec+" receiving. He passed Reed and Thomas in Week 4 of 2026.");
+  var prt = POST ? POST.rushTD : 9, pg = POST ? POST.games : 15;
+  setRec("Postseason","Rushing touchdowns",prt,"Allen: "+prt+" in "+pg+" playoff games, "+(prt>16?"the most in Bills playoff history, ahead of Hall of Famer Thurman Thomas (16).":prt===16?"tied with Hall of Famer Thurman Thomas (16) for the most in Bills playoff history.":"second in Bills playoff history, behind Hall of Famer Thurman Thomas (16 in 21 playoff games)."));
   if(POST){
     setRec("Postseason","Passing touchdowns",POST.td,"Allen: "+POST.td+" in "+POST.games+" playoff games, from nflverse game logs, updated automatically.");
     setRec("Postseason","Passing yards",POST.yds,"Allen: "+fmt(POST.yds)+" in "+POST.games+" playoff games, from nflverse game logs, updated automatically. Kelly's 3,863 is his career playoff total.");
@@ -196,7 +200,8 @@ function render(){
     var top = Math.max(me,best);
     var chip = r.chip ? '<span class="chip hold">' + r.chip + '</span>' : me > best ? '<span class="chip hold">Allen holds the record</span>' : me === best ? '<span class="chip hold">Tied for the record</span><span class="chip">1 to break</span>' : '<span class="chip">' + fmt(best-me) + ' to tie, ' + fmt(best-me+1) + ' to break</span>';
     var st = r.status==="verified" ? '<span class="chip ok">Verified</span>' : '<span class="chip chk">Needs a second check</span>';
-    var rows = r.entries.map(function(e){return '<div class="row' + (isMe(e[0])?' me':'') + '"><span>' + e[0] + '</span><span class="bar"><u style="width:' + (e[1]/top*100) + '%"></u></span><b>' + fmt(e[1]) + '</b></div>';}).join('');
+    // Highest value on top, so the record holder (Allen included) always leads; ties keep their listed order.
+    var rows = r.entries.slice().sort(function(a,b){return b[1]-a[1];}).map(function(e){return '<div class="row' + (isMe(e[0])?' me':'') + '"><span>' + e[0] + '</span><span class="bar"><u style="width:' + (e[1]/top*100) + '%"></u></span><b>' + fmt(e[1]) + '</b></div>';}).join('');
     return '<div class="card"><div class="head"><h2>' + r.cat + ': ' + r.title + '</h2><div class="chips">' + chip + st + '</div></div>' + rows + '<p class="note">' + r.note + '</p></div>';
   }).join('');
   document.getElementById('queue').innerHTML = QUEUE.map(function(q){return '<li>' + q + '</li>';}).join('');
