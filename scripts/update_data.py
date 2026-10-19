@@ -494,6 +494,9 @@ def build_ranks(week26, sched):
     lists["Career wins"] = sorted(wb["regular"] + [v for q, v in reg.items() if q != ALLEN], reverse=True)
     lists["Playoff wins"] = sorted(wb["post"] + [v for q, v in post.items() if q != ALLEN], reverse=True)
     lists["Games with a passing & rushing TD"] = list(wb["bothGamesFixed"])
+    W = json.load(open(os.path.join(HERE, "watch_base.json")))["qbRushYds"]
+    lists["QB rushing yards"] = sorted([q["v"] for q in W["fixed"]] + [int(a["base"] + sum(num(r, "rushing_yards") for r in week26
+                                        if r["player_id"] == a["id"] and r["season_type"] == "REG")) for a in W["active"]], reverse=True)
     both = 50 + sum(1 for r in week26 if r["player_id"] == ALLEN and r["season_type"] == "REG"
                     and num(r, "passing_tds") >= 1 and num(r, "rushing_tds") >= 1)
     allen = {"wins": reg[ALLEN], "postWins": post[ALLEN], "both": both,
