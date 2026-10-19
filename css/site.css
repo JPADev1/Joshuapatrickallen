@@ -194,3 +194,7 @@ body.hailee .swap{--bl:#6f9bff;--bm:#1646b8;--bd:#061d57;background:radial-gradi
 .favnote b{color:#e8c547;font-size:1.05rem}
 .favnote[hidden]{display:none}
 @keyframes favin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+/* Hide content that scripts fill in until it is drawn, so nothing jumps while loading (layout shift). */
+html.loading main,html.loading footer,html.loading .facts,html.loading .follow,html.loading .hero.slim h1,html.loading .hero.slim .vs,html.loading .hero.slim .when{visibility:hidden}
+html.loading .hero.slim .vs{min-height:64px}
+.follow{min-height:36px}

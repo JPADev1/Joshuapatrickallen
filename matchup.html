@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="loading">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=22">
+<link rel="stylesheet" href="css/site.css?v=23">
+<script>setTimeout(function(){document.documentElement.classList.remove('loading');},3000);</script>
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -40,6 +41,8 @@ function stat(v,l){return '<div><b>'+v+'</b><span>'+l+'</span></div>';}
 // Live data comes from the stats-data branch on GitHub (refreshed hourly, no Netlify redeploy needed); the copy in /data is the fallback.
 var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
 function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
+function ready(){document.documentElement.classList.remove('loading');}
+setTimeout(ready,4000);
 Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   var m=res[0], a=res[1];
   document.getElementById('title').textContent=(m.label||('Week '+m.week))+': '+(m.home?'vs':'at')+' the '+m.opp.name;
@@ -93,9 +96,11 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
    +'<div class="lines"><div><h3>Bills injuries'+asof+'</h3>'+pills(inj.bills)+'</div><div><h3>'+esc(nick)+' injuries'+asof+'</h3>'+pills(inj.opp)+'</div></div>'
    +'<p class="note">'+esc(inj.note)+' DNP = did not practice.</p>';
   document.getElementById('srcnote').textContent=m.sources+' Last updated '+m.updated+'.';
+  ready();
 }).catch(function(){
   document.getElementById('title').textContent='Next game';
   document.getElementById('when').textContent='The matchup data could not be loaded. Please refresh.';
+  ready();
 });
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fe7d153f0dc349558991cb3f797b5fca"}'></script><!-- End Cloudflare Web Analytics -->

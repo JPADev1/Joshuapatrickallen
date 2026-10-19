@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="loading">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
 <meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=22">
+<link rel="preload" as="image" href="images/josh.webp" fetchpriority="high">
+<link rel="stylesheet" href="css/site.css?v=23">
+<script>setTimeout(function(){document.documentElement.classList.remove('loading');},3000);</script>
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -13,7 +15,7 @@
   <h1 id="h1">Joshua Patrick Allen</h1>
   <p class="sub1" id="sub1">Full Name...Full Story</p>
   <div class="picrow"><div class="swapwrap"><i class="rays" aria-hidden="true"></i><span class="pm up" aria-hidden="true">press</span><button type="button" class="swap" id="swap" aria-pressed="false">Just Here For Hailee</button><span class="pm dn" aria-hidden="true">me</span></div>
-  <div class="pic" id="pic"><img src="images/josh.webp" width="208" height="208" decoding="async" alt="Illustrated portrait in a Buffalo Bills jersey" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph">#17</span></div></div>
+  <div class="pic" id="pic"><img src="images/josh.webp" width="208" height="208" fetchpriority="high" alt="Illustrated portrait in a Buffalo Bills jersey" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="ph">#17</span></div></div>
   <p class="tag" id="tag">Your #1 place for Josh Allen stat tracking.</p>
   <p class="mvpline" id="mvpline">2024 NFL Most Valuable Player</p>
   <p class="meta" id="meta">Quarterback &middot; Buffalo Bills &middot; #17</p>
@@ -330,6 +332,7 @@ fillText();
   }
   btn.addEventListener('click',function(){setMode(mode==='josh'?'hailee':'josh');});
   if(location.hash==='#hailee'){setMode('hailee');}
+  document.documentElement.classList.remove('loading'); // everything drawn: show it
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fe7d153f0dc349558991cb3f797b5fca"}'></script><!-- End Cloudflare Web Analytics -->
