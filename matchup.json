@@ -463,5 +463,41 @@
    "home": false,
    "result": "L 10-13"
   }
- ]
+ ],
+ "watch": {
+  "asOf": "Oct. 19, 2026",
+  "highs": {
+   "passYds": 424,
+   "passTD": 5,
+   "rushYds": 135,
+   "rushTD": 3,
+   "totalTD": 6
+  },
+  "items": [
+   {
+    "title": "Bills record: passing TDs, regular season + playoffs",
+    "detail": "Needs 1 passing TD (career high in a game: 5). He has 258; Jim Kelly has 258."
+   },
+   {
+    "title": "5,000 career rushing yards",
+    "detail": "Needs 39 rushing yards (career high in a game: 135). He'd be the 5th QB ever to reach it, joining Lamar Jackson, Michael Vick, Cam Newton and Russell Wilson."
+   },
+   {
+    "title": "NFL record: games with a passing TD and a rushing TD",
+    "detail": "Needs at least one of each to extend his record to 55 (regular season). Next closest: Cam Newton, 45."
+   },
+   {
+    "title": "Record against the Ravens",
+    "detail": "A win makes him 3-2 as a starter against them in the regular season."
+   },
+   {
+    "title": "NFL career passing touchdowns",
+    "detail": "Needs 3 passing TDs (career high in a game: 5). Ties Steve Young (232) for No. 39; 4 passes him."
+   },
+   {
+    "title": "NFL career rushing touchdowns",
+    "detail": "Needs 3 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14."
+   }
+  ]
+ }
 }
