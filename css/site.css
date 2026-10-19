@@ -109,9 +109,18 @@ body.hailee .tile b{color:var(--blue)}
 .cmpbar u.r{background:var(--cr,var(--red));border-radius:0 6px 6px 0}
 .cmpbar u.adv{opacity:1}
 
-.follow{margin:10px 0 0;font-size:.82rem;opacity:.95}
-.follow a{color:#fff;text-decoration:underline;text-underline-offset:3px;margin-right:8px}
-.follow .sp{margin-left:6px}
+.follow{margin:14px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px}
+.fgroup{display:inline-flex;align-items:center;gap:8px}
+.flabel{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-right:2px}
+.soc{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.85),0 2px 6px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease,box-shadow .15s ease}
+.soc svg{width:18px;height:18px;fill:currentColor}
+.soc:hover,.soc:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 2px #fff,0 6px 12px rgba(0,0,0,.3)}
+.soc:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.soc-instagram{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.soc-x{background:#000}
+.soc-youtube{background:#ff0000}
+.soc-facebook{background:#0866ff}
+@media (prefers-reduced-motion:reduce){.soc{transition:none}.soc:hover,.soc:focus-visible{transform:none}}
 
 .tile .rk{display:table;margin-top:10px;font-style:normal;font-size:.74rem;font-weight:800;color:var(--blue);border:1px solid var(--blue);border-radius:99px;padding:2px 10px}
 .tile{display:flex;flex-direction:column}
