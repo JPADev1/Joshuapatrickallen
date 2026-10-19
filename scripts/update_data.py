@@ -461,7 +461,7 @@ def reg26_for(reg26, team):
 
 
 # ---------- 3. NFL all-time ranks ----------
-def build_ranks(week26):
+def build_ranks(week26, sched):
     """Retired players' totals stay fixed; active players add their 2026 numbers as they happen."""
     cfg = json.load(open(os.path.join(HERE, "nfl_ranks_base.json")))
     add = defaultdict(Counter)
@@ -478,7 +478,27 @@ def build_ranks(week26):
         for a in spec["active"]:
             vals.append(int(a["base"] + pick[title](add[a["id"]])))
         lists[title] = sorted(vals, reverse=True)
-    return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists}
+
+    # QB wins as the starter: retired QBs fixed, anyone who started since 2025 counted live from results.
+    wb = json.load(open(os.path.join(HERE, "wins_base.json")))
+    active = {g[s + "_qb_id"] for g in sched if int(g["season"]) >= 2025 for s in ("home", "away") if g[s + "_qb_id"]}
+    reg, post = Counter(), Counter()
+    for g in sched:
+        if g["home_score"] == "":
+            continue
+        hs, as_ = int(g["home_score"]), int(g["away_score"])
+        for side, me, op in (("home", hs, as_), ("away", as_, hs)):
+            q = g[side + "_qb_id"]
+            if q in active and me > op:
+                (reg if g["game_type"] == "REG" else post)[q] += 1
+    lists["Career wins"] = sorted(wb["regular"] + [v for q, v in reg.items() if q != ALLEN], reverse=True)
+    lists["Playoff wins"] = sorted(wb["post"] + [v for q, v in post.items() if q != ALLEN], reverse=True)
+    lists["Games with a passing & rushing TD"] = list(wb["bothGamesFixed"])
+    both = 50 + sum(1 for r in week26 if r["player_id"] == ALLEN and r["season_type"] == "REG"
+                    and num(r, "passing_tds") >= 1 and num(r, "rushing_tds") >= 1)
+    allen = {"wins": reg[ALLEN], "postWins": post[ALLEN], "both": both,
+             "afcEast": wb["afcEast"]}
+    return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists, "allen": allen}
 
 
 # ---------- 4. Records watch (Next game page) ----------
@@ -541,6 +561,8 @@ def build_watch(allen, ranks, week26, m):
     keymap = {"Career passing touchdowns": "passTD", "Career rushing touchdowns": "rushTD",
               "Career passing yards": "passYds", "Career total touchdowns": "totalTD"}
     for title, L in ranks["lists"].items():
+        if title not in keymap:
+            continue
         k = keymap[title]; me = cur[k]
         above = sorted({v for v in L if v > me})
         if not above:
@@ -576,7 +598,7 @@ def main():
     except FileNotFoundError:
         overrides = {}
     allen = build_allen(week26, sched)
-    ranks = build_ranks(week26)
+    ranks = build_ranks(week26, sched)
     save("allen-2026.json", allen)
     save("nfl-ranks.json", ranks)
     team_rows = get(f"stats_team/stats_team_week_{SEASON}.csv")
