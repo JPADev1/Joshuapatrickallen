@@ -97,6 +97,23 @@ def short_date(d, weekday=False):
     return (d.strftime("%A") + ", " + s) if weekday else s
 
 
+# nflverse keeps some stadiums under old names. Correct name by stadium and game date (YYYY-MM-DD).
+RENAMES = {
+    "BUF00": [("2020-08-01", "New Era Field"), ("2021-03-30", "Bills Stadium"), ("9999", "Highmark Stadium")],
+    "HOU00": [("9999", "NRG Stadium")],
+    "NOR00": [("2021-07-29", "Mercedes-Benz Superdome"), ("9999", "Caesars Superdome")],
+    "CLE00": [("2023-01-01", "FirstEnergy Stadium"), ("2024-01-01", "Cleveland Browns Stadium"), ("9999", "Huntington Bank Field")],
+    "JAX00": [("2023-03-01", "TIAA Bank Field"), ("9999", "EverBank Stadium")],
+}
+
+
+def stadium(g):
+    for until, name in RENAMES.get(g.get("stadium_id", ""), []):
+        if g["gameday"] < until:
+            return name
+    return g["stadium"]
+
+
 def kickoff(t):
     h, m = map(int, t.split(":"))
     ap = "a.m." if h < 12 else "p.m."
@@ -354,7 +371,7 @@ def build_matchup(sched, team_rows, week26, inj, T, overrides):
         hostg = T.get(g["home_team"], {})
         boxes.append({
             "gameId": g["game_id"], "date": short_date(d),
-            "site": g["stadium"] + ("" if g["location"] == "Neutral" else ", " + CITY.get(g["home_team"], hostg.get("name", "").replace(" " + hostg.get("nick", ""), ""))),
+            "site": stadium(g) + ("" if g["location"] == "Neutral" else ", " + CITY.get(g["home_team"], hostg.get("name", "").replace(" " + hostg.get("nick", ""), ""))),
             "week": f"Week {g['week']}" if g["game_type"] == "REG" else "Playoffs",
             "teams": [T.get(canon(t), {}).get("nick", t) if canon(t) == opp else "Bills" for t in order],
             "line": line,
@@ -419,7 +436,7 @@ def build_matchup(sched, team_rows, week26, inj, T, overrides):
         "bills": {"name": T[BILLS]["name"], "record": record(reg26_for(reg26, BILLS), BILLS)},
         "opp": {"name": T[opp]["name"], "abbr": opp, "nick": nick, "record": record(reg26_for(reg26, opp), opp)},
         "home": home, "date": short_date(when, weekday=True), "time": kickoff(nxt["gametime"]),
-        "venue": nxt["stadium"] + (f", {city}" if city else ""), "tv": ov.get("tv", ""),
+        "venue": stadium(nxt) + (f", {city}" if city else ""), "tv": ov.get("tv", ""),
         "series": {"summary": summary, "last": last_txt},
         "injuries": {"week": wk, "bills": bi, "opp": oi,
                      "note": ("Game status (Out, Doubtful, Questionable) is from the final injury report. " if any_game else
