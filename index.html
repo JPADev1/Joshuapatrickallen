@@ -82,6 +82,8 @@ var RECORDS = [
   note:"Allen: 30,102 through 2025 plus 1,249 in Weeks 1-5 of 2026."},
  {cat:"Career", title:"Passing touchdowns", status:"verified", entries:[["Jim Kelly",237],["Josh Allen",227]],
   note:"Allen: 220 through 2025 plus 7 in Weeks 1-5 of 2026."},
+ {cat:"Career", title:"Passing touchdowns, regular season + playoffs", status:"verified", entries:[["Jim Kelly",258],["Josh Allen",256]],
+  note:"Kelly: 237 regular season + 21 playoffs."},
  {cat:"Career", title:"Pass completions", status:"verified", entries:[["Jim Kelly",2874],["Josh Allen",2706]],
   note:"Allen: 2,615 through 2025 plus 91 in Weeks 1-5 of 2026."},
  {cat:"Career", title:"Rushing touchdowns", status:"verified", entries:[["Josh Allen",87],["Thurman Thomas",65]],
@@ -134,6 +136,8 @@ function applyNow(){
   TILES[2] = [String(rt), "Career rushing touchdowns", "through " + th + " of 2026"];
   TILES[3] = [String(tot), "Career total touchdowns", "passing + rushing + receiving"];
   setRec("Career","Passing yards",py,"Allen: "+fmt(BASE.passYds)+" through 2025 plus "+fmt(NOW.yds)+" in "+wk+".");
+  var ppt = POST ? POST.td : 29;
+  setRec("Career","Passing touchdowns, regular season + playoffs",pt+ppt,"Allen: "+pt+" regular season + "+ppt+" playoffs. Kelly: 237 regular season + 21 playoffs. Allen tied Kelly on Oct. 18, 2026, at Las Vegas.");
   setRec("Career","Passing touchdowns",pt,"Allen: "+BASE.passTD+" through 2025 plus "+NOW.td+" in "+wk+".");
   setRec("Career","Pass completions",BASE.cmp+NOW.cmp,"Allen: "+fmt(BASE.cmp)+" through 2025 plus "+NOW.cmp+" in "+wk+".");
   setRec("Career","Rushing touchdowns",rt,"Allen passed Thomas in 2025; "+rt+" through "+th+" of 2026.");
@@ -190,7 +194,7 @@ function render(){
     var others = r.entries.filter(function(e){return !isMe(e[0]);});
     var best = others.reduce(function(m,e){return Math.max(m,e[1]);},0);
     var top = Math.max(me,best);
-    var chip = r.chip ? '<span class="chip hold">' + r.chip + '</span>' : me > best ? '<span class="chip hold">Allen holds the record</span>' : '<span class="chip">' + fmt(best-me) + ' to tie, ' + fmt(best-me+1) + ' to break</span>';
+    var chip = r.chip ? '<span class="chip hold">' + r.chip + '</span>' : me > best ? '<span class="chip hold">Allen holds the record</span>' : me === best ? '<span class="chip hold">Tied for the record</span><span class="chip">1 to break</span>' : '<span class="chip">' + fmt(best-me) + ' to tie, ' + fmt(best-me+1) + ' to break</span>';
     var st = r.status==="verified" ? '<span class="chip ok">Verified</span>' : '<span class="chip chk">Needs a second check</span>';
     var rows = r.entries.map(function(e){return '<div class="row' + (isMe(e[0])?' me':'') + '"><span>' + e[0] + '</span><span class="bar"><u style="width:' + (e[1]/top*100) + '%"></u></span><b>' + fmt(e[1]) + '</b></div>';}).join('');
     return '<div class="card"><div class="head"><h2>' + r.cat + ': ' + r.title + '</h2><div class="chips">' + chip + st + '</div></div>' + rows + '<p class="note">' + r.note + '</p></div>';
