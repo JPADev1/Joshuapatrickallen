@@ -464,6 +464,92 @@ def build_ranks(week26):
     return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists}
 
 
+# ---------- 4. Records watch (Next game page) ----------
+def ordinal(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+def build_watch(allen, ranks, week26, m):
+    """Records Allen can realistically reach in the next game: only marks within his best single game."""
+    W = json.load(open(os.path.join(HERE, "watch_base.json")))
+    A, now, post = W["allen"], allen["now"], allen.get("post", {})
+    hi = dict(A["highs"])
+    for g in allen["games"]:  # a new career high widens the range
+        hi["passYds"] = max(hi["passYds"], g["yds"]); hi["passTD"] = max(hi["passTD"], g["td"])
+        hi["rushYds"] = max(hi["rushYds"], g["rushYds"]); hi["rushTD"] = max(hi["rushTD"], g["rushTD"])
+        hi["totalTD"] = max(hi["totalTD"], g["td"] + g["rushTD"] + g.get("recTD", 0))
+    cur = {"passYds": A["passYds"] + now["yds"], "passTD": A["passTD"] + now["td"], "rushTD": A["rushTD"] + now["rushTD"],
+           "rushYds": A["rushYds"] + now["rushYds"]}
+    cur["totalTD"] = cur["passTD"] + cur["rushTD"] + A["recTD"] + now.get("recTD", 0)
+    nick = m["opp"]["nick"]
+    items = []  # (difficulty 0-1, title, detail)
+    unit = {"passYds": ("passing yard", "passing yards"), "passTD": ("passing TD", "passing TDs"),
+            "rushYds": ("rushing yard", "rushing yards"), "rushTD": ("rushing TD", "rushing TDs"), "totalTD": ("total TD", "total TDs")}
+    def needs(k, n):
+        return f"Needs {n:,} {unit[k][0] if n == 1 else unit[k][1]} (career high in a game: {hi[k]:,})."
+
+    # Bills record: passing TDs, regular season + playoffs
+    combo = cur["passTD"] + post.get("td", 0)
+    kelly = W["bills"]["comboPassTD"]
+    if combo <= kelly["v"]:
+        n = kelly["v"] + 1 - combo
+        if n <= hi["passTD"]:
+            items.append((n / hi["passTD"], "Bills record: passing TDs, regular season + playoffs",
+                          f"{needs('passTD', n)} He has {combo}; {kelly['name']} has {kelly['v']}."))
+
+    # QB rushing yards: next 1,000-yard milestone and the next QB ahead
+    qbs = list(W["qbRushYds"]["fixed"])
+    for a in W["qbRushYds"]["active"]:
+        qbs.append({"name": a["name"], "v": int(a["base"] + sum(num(r, "rushing_yards") for r in week26
+                                                         if r["player_id"] == a["id"] and r["season_type"] == "REG"))})
+    mile = (cur["rushYds"] // 1000 + 1) * 1000
+    n = mile - cur["rushYds"]
+    if n <= hi["rushYds"]:
+        club = sorted([q for q in qbs if q["v"] >= mile], key=lambda q: -q["v"])
+        names = ", ".join(q["name"] for q in club[:-1]) + (" and " if len(club) > 1 else "") + (club[-1]["name"] if club else "")
+        items.append((n / hi["rushYds"], f"{mile:,} career rushing yards",
+                      f"{needs('rushYds', n)} He'd be the {ordinal(len(club) + 1)} QB ever to reach it" + (f", joining {names}." if club else ".")))
+    ahead = sorted([q for q in qbs if q["v"] > cur["rushYds"]], key=lambda q: q["v"])
+    if ahead and ahead[0]["v"] + 1 - cur["rushYds"] <= hi["rushYds"]:
+        q = ahead[0]; n = q["v"] + 1 - cur["rushYds"]
+        items.append((n / hi["rushYds"], "NFL career rushing yards by a QB", f"{needs('rushYds', n)} Passes {q['name']} ({q['v']:,})."))
+
+    # His NFL record: games with a passing TD and a rushing TD
+    both = A["bothGamesReg"] + sum(1 for g in allen["games"] if g["td"] >= 1 and g["rushTD"] >= 1)
+    nx = W["bothGamesNext"]
+    items.append((0.34, "NFL record: games with a passing TD and a rushing TD",
+                  f"Needs at least one of each to extend his record to {both + 1} (regular season). Next closest: {nx['name']}, {nx['v']}."))
+
+    # NFL all-time leader lists
+    keymap = {"Career passing touchdowns": "passTD", "Career rushing touchdowns": "rushTD",
+              "Career passing yards": "passYds", "Career total touchdowns": "totalTD"}
+    for title, L in ranks["lists"].items():
+        k = keymap[title]; me = cur[k]
+        above = sorted({v for v in L if v > me})
+        if not above:
+            continue
+        v = above[0]; tie = v - me
+        if tie > hi[k]:
+            continue
+        spot = 1 + sum(1 for x in L if x > v)
+        who = W["names"].get(title, {}).get(str(v))
+        tied = sum(1 for x in L if x == v)
+        label = f"{who} ({v:,})" if who else f"{v:,}"
+        detail = f"{needs(k, tie)} Ties {label} for No. {spot}"
+        if tie + 1 <= hi[k]:
+            detail += f"; {tie + 1:,} passes {'them' if tied > 1 else ('him' if who else 'that mark')}"
+        items.append((tie / hi[k], f"NFL career {title.split('Career ')[1]}", detail + "."))
+
+    # Record against this opponent
+    v = m.get("allenVs", {})
+    if v.get("games"):
+        items.append((0.5, f"Record against the {nick}", f"A win makes him {v['wins'] + 1}-{v['losses']} as a starter against them in the regular season."))
+
+    items.sort(key=lambda x: x[0])
+    return {"asOf": short_date(date.today()), "highs": hi,
+            "items": [{"title": t, "detail": d} for _, t, d in items]}
+
+
 def main():
     T = team_table()
     sched = [g for g in get("schedules/games.csv") if int(g["season"]) >= 1999]
@@ -472,8 +558,10 @@ def main():
         overrides = json.load(open(os.path.join(REPO, "data", "overrides.json")))
     except FileNotFoundError:
         overrides = {}
-    save("allen-2026.json", build_allen(week26, sched))
-    save("nfl-ranks.json", build_ranks(week26))
+    allen = build_allen(week26, sched)
+    ranks = build_ranks(week26)
+    save("allen-2026.json", allen)
+    save("nfl-ranks.json", ranks)
     team_rows = get(f"stats_team/stats_team_week_{SEASON}.csv")
     try:
         inj = get(f"injuries/injuries_{SEASON}.csv")
@@ -481,6 +569,10 @@ def main():
         print(e); inj = []
     m = build_matchup(sched, team_rows, week26, inj, T, overrides)
     if m:
+        try:
+            m["watch"] = build_watch(allen, ranks, week26, m)
+        except Exception as e:  # never let the watch list block the rest of the page
+            print("records watch skipped:", e)
         save("matchup.json", m)
 
 

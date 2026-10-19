@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=18">
+<link rel="stylesheet" href="css/site.css?v=19">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -15,6 +15,8 @@
   <p class="when" id="when"></p>
 </div></header>
 <main class="panel">
+  <h2 class="sec" id="watchHead" hidden>Records watch</h2>
+  <div class="card watch" id="watch" hidden></div>
   <div class="card" id="vsAllen"></div>
   <h2 class="sec">Team comparison, 2026</h2>
   <div class="card" id="cmp"></div>
@@ -57,6 +59,11 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   document.getElementById('billsSeasonHead').textContent='Buffalo this season (Allen\'s game log)';
   document.getElementById('oppSeasonHead').textContent=m.opp.name.replace(/ \S+$/,'')+' this season';
   document.getElementById('oppSeason').innerHTML='<thead><tr><th>Wk</th><th>Opp</th><th>Result</th></tr></thead><tbody>'+m.oppSeason.map(function(g){var w=/^W/.test(g.result);return '<tr>'+td(g.week)+td((g.home?'':'@ ')+g.opp)+td('<span class="res '+(w?'w':'l')+'">'+g.result+'</span>')+'</tr>';}).join('')+'</tbody>';
+  if(m.watch&&m.watch.items&&m.watch.items.length){
+    document.getElementById('watchHead').hidden=false; var W=document.getElementById('watch'); W.hidden=false;
+    W.innerHTML='<ol class="wlist">'+m.watch.items.map(function(x){return '<li><b>'+esc(x.title)+'</b><span>'+esc(x.detail)+'</span></li>';}).join('')+'</ol>'
+      +'<p class="note">Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated '+esc(m.watch.asOf)+'.</p>';
+  }
   var v=m.allenVs;
   document.getElementById('vsAllen').innerHTML='<div class="head"><h2>Allen against the '+esc(m.opp.name)+'</h2><div class="chips"><span class="chip hold">'+v.wins+'-'+v.losses+' regular season</span>'+((v.postWins||v.postLosses)?'<span class="chip hold">'+v.postWins+'-'+v.postLosses+' playoffs</span>':'')+'</div></div>'
    +'<div class="stats">'+stat(v.games,'Games')+stat(v.cmp+'-'+v.att,'Cmp-Att')+stat(fmt(v.yds),'Pass yards')+stat(v.td,'Pass TD')+stat(v.int,'INT')+stat(v.rating.toFixed(1),'Passer rating')+stat(v.rushAtt+' / '+v.rushYds,'Rush att / yds')+stat(v.rushTD,'Rush TD')+'</div>'

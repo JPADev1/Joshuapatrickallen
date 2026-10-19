@@ -1,0 +1,15 @@
+{
+ "_how": "Fixed inputs for the Next game page's Records watch. Allen's totals here run through the 2025 season; the update script adds 2026 games on top. 'names' labels retired players' totals on the NFL leader lists (from Pro-Football-Reference).",
+ "allen": {"passYds": 30102, "passTD": 220, "rushTD": 79, "recTD": 2, "rushYds": 4721,
+           "bothGamesReg": 50, "bothGamesPost": 4,
+           "highs": {"passYds": 424, "passTD": 5, "rushYds": 135, "rushTD": 3, "totalTD": 6}},
+ "bills": {"comboPassTD": {"name": "Jim Kelly", "v": 258}},
+ "bothGamesNext": {"name": "Cam Newton", "v": 45},
+ "qbRushYds": {"fixed": [{"name": "Michael Vick", "v": 6109}, {"name": "Cam Newton", "v": 5628}, {"name": "Randall Cunningham", "v": 4928}, {"name": "Steve Young", "v": 4239}],
+               "active": [{"id": "00-0034796", "name": "Lamar Jackson", "base": 6522}, {"id": "00-0029263", "name": "Russell Wilson", "base": 5568}]},
+ "names": {
+  "Career passing touchdowns": {"232": "Steve Young", "234": "Donovan McNabb", "237": "Jim Kelly"},
+  "Career rushing touchdowns": {"90": "Curtis Martin and Eric Dickerson", "91": "Franco Harris and Jerome Bettis"},
+  "Career passing yards": {"32072": "Mark Brunell", "32224": "Sonny Jurgensen", "32344": "Kurt Warner", "32382": "Cam Newton"}
+ }
+}
