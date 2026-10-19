@@ -190,3 +190,7 @@ body.hailee .swap{--bl:#6f9bff;--bm:#1646b8;--bd:#061d57;background:radial-gradi
 .cd::after{content:"";position:absolute;inset:27px;border-radius:50%;background:var(--head,#0b2a6b)}
 .cd+.cd{margin-left:-14px;transform:rotate(25deg)}
 @media (prefers-reduced-motion:reduce){.fv{transition:none}}
+.favnote{max-width:340px;margin:2px auto 14px;font-size:.85rem;line-height:1.4;animation:favin .3s ease}
+.favnote b{color:#e8c547;font-size:1.05rem}
+.favnote[hidden]{display:none}
+@keyframes favin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
