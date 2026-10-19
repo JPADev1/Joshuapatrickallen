@@ -189,9 +189,12 @@ function build(){
     rr = '<tr>'+td(s[0])+td(s[1])+td(s[10])+td(fmt(s[11]))+td((s[11]/s[10]).toFixed(1))+td(s[12])+td(s[13])+td(s[14])+'</tr>' + rr;
   });
   pr = '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.gs)+td(NOW.cmp)+td(NOW.att)+td((NOW.cmp/NOW.att*100).toFixed(1))+td(fmt(NOW.yds))+td((NOW.yds/NOW.att).toFixed(1))+td(NOW.td)+td(NOW.int)+td(NOW.sk!=null?NOW.sk:'&mdash;')+td(NOW.rate.toFixed(1))+'</tr>' + pr;
-  pr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(T.gs)+td(fmt(T.c))+td(fmt(T.a))+td((T.c/T.a*100).toFixed(1))+td(fmt(T.y))+td((T.y/T.a).toFixed(1))+td(T.t)+td(T.i)+td(T.s)+td(rating(T.c,T.a,T.y,T.t,T.i).toFixed(1))+'</tr>';
+  // Career totals include the current season's games so far.
+  T.g+=NOW.g;T.gs+=NOW.gs;T.c+=NOW.cmp;T.a+=NOW.att;T.y+=NOW.yds;T.t+=NOW.td;T.i+=NOW.int;T.s+=(NOW.sk||0);T.ra+=NOW.rushAtt;T.ry+=NOW.rushYds;T.rt+=NOW.rushTD;T.rf+=(NOW.fum||0);T.rl+=(NOW.fumLost||0);
+  var CT='Career through '+THRU.split(' (')[0]+' of '+(NOW.label||'').replace('*','');
+  pr += '<tr class="tot">'+td(CT)+td(T.g)+td(T.gs)+td(fmt(T.c))+td(fmt(T.a))+td((T.c/T.a*100).toFixed(1))+td(fmt(T.y))+td((T.y/T.a).toFixed(1))+td(T.t)+td(T.i)+td(T.s)+td(rating(T.c,T.a,T.y,T.t,T.i).toFixed(1))+'</tr>';
   rr = '<tr class="part">'+td(NOW.label)+td(NOW.g)+td(NOW.rushAtt)+td(fmt(NOW.rushYds))+td((NOW.rushYds/NOW.rushAtt).toFixed(1))+td(NOW.rushTD)+td(NOW.fum!=null?NOW.fum:'&mdash;')+td(NOW.fumLost!=null?NOW.fumLost:'&mdash;')+'</tr>' + rr;
-  rr += '<tr class="tot">'+td('Career through 2025')+td(T.g)+td(fmt(T.ra))+td(fmt(T.ry))+td((T.ry/T.ra).toFixed(1))+td(T.rt)+td(T.rf)+td(T.rl)+'</tr>';
+  rr += '<tr class="tot">'+td(CT)+td(T.g)+td(fmt(T.ra))+td(fmt(T.ry))+td((T.ry/T.ra).toFixed(1))+td(T.rt)+td(T.rf)+td(T.rl)+'</tr>';
   document.getElementById('pass').innerHTML = tbl(['Season','G','GS','Cmp','Att','Cmp%','Yds','Y/A','TD','INT','Sck','Rate'],pr);
   document.getElementById('rush').innerHTML = tbl(['Season','G','Att','Yds','Avg','TD','Fum','Lost'],rr);
   document.getElementById('statnote').textContent = "Season lines from NFL.com. 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ", from nflverse game logs, refreshed automatically.";
