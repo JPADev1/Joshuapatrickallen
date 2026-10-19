@@ -327,6 +327,9 @@ def build_matchup(sched, team_rows, week26, inj, T, overrides):
                 "yds": s("passing_yards"), "td": s("passing_tds"), "int": s("passing_interceptions"), "sacks": s("sacks_suffered"),
                 "rushAtt": s("carries"), "rushYds": s("rushing_yards"), "rushTD": s("rushing_tds"),
                 "rating": round(rating(s("completions"), s("attempts"), s("passing_yards"), s("passing_tds"), s("passing_interceptions")), 1)}
+    post = [g for g in vs_games if g["game_type"] != "REG"]
+    allen_vs["postWins"] = sum(1 for g in post if result_for(g, BILLS)[0] == "W")
+    allen_vs["postLosses"] = sum(1 for g in post if result_for(g, BILLS)[0] == "L")
 
     # Box scores of the three most recent meetings (Allen starts, regular season or playoffs)
     recent = sorted(vs_games, key=lambda g: g["gameday"], reverse=True)[:3]

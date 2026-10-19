@@ -58,9 +58,9 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   document.getElementById('oppSeasonHead').textContent=m.opp.name.replace(/ \S+$/,'')+' this season';
   document.getElementById('oppSeason').innerHTML='<thead><tr><th>Wk</th><th>Opp</th><th>Result</th></tr></thead><tbody>'+m.oppSeason.map(function(g){var w=/^W/.test(g.result);return '<tr>'+td(g.week)+td((g.home?'':'@ ')+g.opp)+td('<span class="res '+(w?'w':'l')+'">'+g.result+'</span>')+'</tr>';}).join('')+'</tbody>';
   var v=m.allenVs;
-  document.getElementById('vsAllen').innerHTML='<div class="head"><h2>Allen against the '+esc(m.opp.name)+'</h2><div class="chips"><span class="chip hold">'+v.wins+'-'+v.losses+' as a starter</span></div></div>'
+  document.getElementById('vsAllen').innerHTML='<div class="head"><h2>Allen against the '+esc(m.opp.name)+'</h2><div class="chips"><span class="chip hold">'+v.wins+'-'+v.losses+' regular season</span>'+((v.postWins||v.postLosses)?'<span class="chip hold">'+v.postWins+'-'+v.postLosses+' playoffs</span>':'')+'</div></div>'
    +'<div class="stats">'+stat(v.games,'Games')+stat(v.cmp+'-'+v.att,'Cmp-Att')+stat(fmt(v.yds),'Pass yards')+stat(v.td,'Pass TD')+stat(v.int,'INT')+stat(v.rating.toFixed(1),'Passer rating')+stat(v.rushAtt+' / '+v.rushYds,'Rush att / yds')+stat(v.rushTD,'Rush TD')+'</div>'
-   +'<p class="note">Regular season only. Career totals against this opponent.</p>';
+   +'<p class="note">Records are Allen\'s games as the starting quarterback. Stats above are regular season only, career totals against this opponent.</p>';
   var rows='';
   a.games.forEach(function(g){
     var w=/^W/.test(g.result||''), res=g.result?'<span class="res '+(w?'w':'l')+'">'+g.result+'</span>':'&mdash;';
