@@ -26,7 +26,7 @@ function geo(){
  var fb=facts.getBoundingClientRect().bottom-w.top,cx=(tgr.left+tgr.right)/2-w.left,clear=true,edge=0;
  ['meta','mvpline'].forEach(function(id){var e=document.getElementById(id);if(!e||e.hidden)return;var r2=document.createRange();r2.selectNodeContents(e);var q=r2.getBoundingClientRect();if(q.width&&q.bottom>tgr.top-110&&q.top<tgr.top){if(q.right-w.left>cx-TW/2-10&&q.left-w.left<cx+TW/2+10)clear=false;edge=Math.max(edge,q.right-w.left);}});
  o.above=clear;o.edge=edge;
- if(clear){o.tx=cx;o.tab=tgr.top-w.top-6;}
+ if(clear){o.tx=cx;o.tab=tgr.top-w.top-15;}
  else{o.tx=w.width/2;o.tab=fb+TH+10;o.lt=o.tab+8;}
  return o;
 }
