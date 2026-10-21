@@ -204,7 +204,8 @@ body.hailee .swap{--bl:#6f9bff;--bm:#1646b8;--bd:#061d57;background:radial-gradi
 .mglabel:hover span,.mglabel:focus-visible span{text-decoration:underline}
 @keyframes mgbob{50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.mglabel svg{animation:none}}
-body:not(.hailee) .hero .wrap.mgon .facts{margin-bottom:56px}
-@media (max-width:620px){body:not(.hailee) .hero .wrap.mgon .facts{margin-bottom:104px}}
+body:not(.hailee) .hero .wrap.mgbelow .facts{margin-bottom:104px}
+.mglabel.above{flex-direction:column-reverse}
+.mglabel.above svg{rotate:180deg}
 body.hailee .mgov{display:none}
 .hero .wrap{position:relative}
