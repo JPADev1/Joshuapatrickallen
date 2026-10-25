@@ -11,7 +11,7 @@
   "name": "Baltimore Ravens",
   "abbr": "BAL",
   "nick": "Ravens",
-  "record": "4-2"
+  "record": "4-3"
  },
  "home": true,
  "date": "Sunday, Nov. 1, 2026",
@@ -299,8 +299,8 @@
      "rank": 1
     },
     "opp": {
-     "v": 26,
-     "rank": 8
+     "v": 28,
+     "rank": 7
     }
    },
    {
@@ -309,11 +309,11 @@
     "dec": 0,
     "bills": {
      "v": 28,
-     "rank": 28
+     "rank": 24
     },
     "opp": {
-     "v": 22,
-     "rank": 14
+     "v": 28,
+     "rank": 22
     }
    },
    {
@@ -462,6 +462,12 @@
    "opp": "Browns",
    "home": false,
    "result": "L 10-13"
+  },
+  {
+   "week": 7,
+   "opp": "Bengals",
+   "home": true,
+   "result": "L 13-35"
   }
  ],
  "watch": {
