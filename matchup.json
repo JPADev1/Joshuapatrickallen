@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "gameId": "2026_08_BAL_BUF",
  "week": 8,
  "label": "Week 8",
@@ -287,7 +287,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Oct. 25, 2026",
+  "asOf": "Oct. 26, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -296,7 +296,7 @@
     "dec": 0,
     "bills": {
      "v": 33,
-     "rank": 2
+     "rank": 1
     },
     "opp": {
      "v": 24,
@@ -309,11 +309,11 @@
     "dec": 0,
     "bills": {
      "v": 28,
-     "rank": 28
+     "rank": 30
     },
     "opp": {
      "v": 24,
-     "rank": 17
+     "rank": 19
     }
    },
    {
@@ -339,7 +339,7 @@
     },
     "opp": {
      "v": 235,
-     "rank": 16
+     "rank": 15
     }
    },
    {
@@ -361,7 +361,7 @@
     "dec": 0,
     "bills": {
      "v": 101,
-     "rank": 14
+     "rank": 15
     },
     "opp": {
      "v": 97,
@@ -391,7 +391,7 @@
     },
     "opp": {
      "v": 16,
-     "rank": 17
+     "rank": 15
     }
    },
    {
@@ -417,7 +417,7 @@
     },
     "opp": {
      "v": 3,
-     "rank": 26
+     "rank": 25
     }
    }
   ]
@@ -471,7 +471,7 @@
   }
  ],
  "watch": {
-  "asOf": "Oct. 25, 2026",
+  "asOf": "Oct. 26, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
