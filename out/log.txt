@@ -1,0 +1,21 @@
+List of National Football League career passing touchdowns leaders: 97 links
+List of National Football League career rushing touchdowns leaders: 58 links
+List of National Football League career receiving touchdowns leaders: 71 links
+List of National Football League annual passing touchdowns leaders: 152 links
+List of National Football League annual rushing touchdowns leaders: 167 links
+List of National Football League annual receiving touchdowns leaders: 157 links
+List of dual-threat quarterback records: 311 links
+List of NFL individual records: 0 links
+Traceback (most recent call last):
+  File "/home/runner/work/Joshuapatrickallen/Joshuapatrickallen/scripts/build_history.py", line 335, in <module>
+    main()
+  File "/home/runner/work/Joshuapatrickallen/Joshuapatrickallen/scripts/build_history.py", line 300, in main
+    res = take(t)
+          ^^^^^^^
+  File "/home/runner/work/Joshuapatrickallen/Joshuapatrickallen/scripts/build_history.py", line 284, in take
+    pl, err = player(t)
+              ^^^^^^^^^
+  File "/home/runner/work/Joshuapatrickallen/Joshuapatrickallen/scripts/build_history.py", line 235, in player
+    return {"title": d["title"], "pos": ib.get("pos", ""), "first": min(seasons), "last": max(seasons),
+                                                                    ^^^^^^^^^^^^
+ValueError: min() iterable argument is empty
