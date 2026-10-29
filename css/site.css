@@ -277,3 +277,43 @@ a.tile:hover,a.tile:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20
 .pill-m small{font-size:.66rem;font-weight:600;color:var(--mute)}
 .pill-m.me small{color:#fff;opacity:.85}
 @media (max-width:520px){.mtn-ticks span:nth-child(even):not(:last-child){visibility:visible}.mtn-slide{gap:8px}}
+/* full screen mountain */
+.mtn-max{position:absolute;top:8px;right:8px;z-index:5;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.15);padding:0}
+.mtn-max svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.mtn-max .i-close{display:none}
+.mtn-card.max .mtn-max .i-open{display:none}
+.mtn-card.max .mtn-max .i-close{display:inline}
+.mtn-max:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+html.mtn-lock,html.mtn-lock body{overflow:hidden}
+.mtn-card.max{position:fixed;inset:0;z-index:100;margin:0;border:0;border-radius:0;display:flex;flex-direction:column;
+  padding:calc(10px + env(safe-area-inset-top,0px)) calc(10px + env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) calc(10px + env(safe-area-inset-left,0px));
+  height:100vh;height:100dvh;background:var(--card);overflow:hidden}
+.mtn-card.max .mtn{flex:1 1 auto;min-height:0;height:auto}
+.mtn-card.max .mtn-head{min-height:0;margin:6px 0}
+.mtn-card.max .mtn-slide{margin-top:8px}
+.mtn-card:fullscreen{width:100%;height:100%}
+@media (max-height:520px){
+  .mtn-card.max .mtn-ctl{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .mtn-card.max .mtn-ctl .tabs button{padding:4px 10px;font-size:.76rem}
+  .mtn-card.max .mtn-head{font-size:.82rem}
+  .mtn-card.max .mtn-sm{display:none}
+  .mtn-card.max .mtn-slide{margin-top:4px}
+  .mtn-card.max .mtn-ticks{display:none}
+}
+.mtn.short .pill-m{font-size:.64rem;padding:2px 7px 2px 2px}
+.mtn.short .pill-m i{min-width:18px;padding:2px 3px;font-size:.6rem;margin-right:4px}
+.mtn.short .pill-m.me{font-size:.7rem}
+.mtn.short .mtn-base{display:none}
+.mtn-knote{position:absolute;left:8px;top:6px;margin:0;font-size:.68rem;color:var(--mute);background:var(--card);border-radius:6px;padding:2px 6px;z-index:4}
+.mtn-knote[hidden]{display:none}
+.mtn-max{right:auto;left:8px}
+.mtn-knote{left:54px;top:14px}
+.mtn-card.max .mtn-sm{display:none}
+.mtn-knote{position:static;margin:0 0 6px;padding:0;background:none;font-size:.72rem;color:var(--mute)}
+@media (max-height:520px){
+  .mtn-card.max .mtn-head{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:4px 0}
+  .mtn-card.max .mtn-knote{margin:0 0 4px}
+  .mtn-card.max .mtn-play{width:38px;height:38px}
+  .mtn-card.max .mtn-range label{font-size:.82rem}
+  .mtn-card.max{padding-top:calc(6px + env(safe-area-inset-top,0px));padding-bottom:calc(4px + env(safe-area-inset-bottom,0px))}
+}
