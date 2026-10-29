@@ -6,7 +6,7 @@ List of National Football League annual rushing touchdowns leaders: 167 links
 List of National Football League annual receiving touchdowns leaders: 157 links
 List of dual-threat quarterback records: 311 links
 List of NFL individual records: 0 links
-429 players with pre-1999 seasons; 21 need a look
+428 players with pre-1999 seasons; 21 need a look
 
 check	Arnie Herber	infobox rush 3 != table 2
 check	Bart Starr	career row rush 15 != season sum 19
@@ -31,9 +31,10 @@ check	Terry Allen (running back)	career row rec 6 != season sum 7
 check	Tommy Maddox	infobox rush 5 != table 1
 draft-miss	Marion Butts	Leroy Thompson (running back): not the same player? rec 8 vs draft data 1 / LaDainian Tomlinson: not the same player? pass 7 vs draft data 0 / Bobby Jackson (American football coach): no NFL stats table
 draft-miss	Reggie Cobb	Reggie Bush: not the same player? rec 18 vs draft data 2 / List of NFL players with chronic traumatic encephalopathy: no NFL stats table / 2014–15 NFL playoffs: no NFL stats table
-late-miss	Albert Connell	Al Harris (cornerback): table has no TD columns / 2000 Washington Redskins season: no NFL stats table / Piper High School (Florida): no NFL stats table
-late-miss	Alex Van Pelt	Brad Van Pelt: no NFL stats table / Tom Brady: not the same player? pass 1999+ 649 vs nflverse 12 / Josh Allen: not the same player? pass 1999+ 229 vs nflverse 12
+late-miss	Albert Connell	1973 NFL draft: no NFL stats table / Al Harris (cornerback): table has no TD columns / 2000 Washington Redskins season: no NFL stats table
+late-miss	Alex Van Pelt	Brad Van Pelt: no NFL stats table / Josh Allen: not the same player? pass 1999+ 229 vs nflverse 12 / Tom Brady: not the same player? pass 1999+ 649 vs nflverse 12
 late-miss	Bobby Shaw	David Shaw (American football): no NFL stats table / Ahmad Rashad: not the same player? rec 1999+ 0 vs nflverse 14 / 2024 NFL season: no NFL stats table
 late-miss	Christian Fauria	Joseph Fauria: no NFL stats table / Carlester Crumpler: no NFL stats table / Super Bowl XXXVIII: no NFL stats table
 late-miss	Damon Huard	Brock Huard: not the same player? pass 1999+ 4 vs nflverse 33 / Luke Huard: no NFL stats table / Sam Huard: no NFL stats table
-late-miss	Dave Moore	2026 NFL season: no NFL stats table / Sam LaPorta: not the same player? rec 1999+ 23 vs nflverse 16 / Colston Loveland: not the same player? rec 1999+ 8 vs nflver
+late-miss	Dave Moore	Sam LaPorta: not the same player? rec 1999+ 23 vs nflverse 16 / 2026 NFL season: no NFL stats table / Colston Loveland: not the same player? rec 1999+ 8 vs nflverse 16
+late-mi

@@ -432,9 +432,7 @@
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ],
-"career": {
-"rec": 49
-}
+"career": {}
 },
 {
 "name": "Amani Toomer",
@@ -4928,10 +4926,7 @@
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ],
-"career": {
-"rush": 27,
-"rec": 12
-}
+"career": {}
 },
 {
 "name": "Chris Burford",
@@ -9102,9 +9097,7 @@
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948]"
 ],
-"career": {
-"rec": 60
-}
+"career": {}
 },
 {
 "name": "Elvis Grbac",
@@ -10573,10 +10566,7 @@
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ],
-"career": {
-"pass": 0,
-"rush": 27
-}
+"career": {}
 },
 {
 "name": "Fred Barnett",
@@ -13172,97 +13162,6 @@
 "notes": [],
 "kinds": [
 "pass",
-"rush"
-],
-"missing": [],
-"info": [],
-"career": {}
-},
-{
-"name": "Jackie Parker",
-"wiki": "Jackie Parker",
-"pos": "Quarterback , running back , defensive back , kicker",
-"first": 1954,
-"last": 1965,
-"infobox": {},
-"seasons": [
-[
-1954,
-2,
-10,
-3
-],
-[
-1955,
-6,
-7,
-0
-],
-[
-1956,
-11,
-10,
-0
-],
-[
-1957,
-3,
-11,
-5
-],
-[
-1958,
-8,
-8,
-0
-],
-[
-1959,
-8,
-4,
-3
-],
-[
-1960,
-6,
-8,
-2
-],
-[
-1961,
-11,
-3,
-1
-],
-[
-1962,
-15,
-3,
-0
-],
-[
-1963,
-7,
-0,
-2
-],
-[
-1964,
-18,
-2,
-3
-],
-[
-1965,
-1,
-0,
-0
-]
-],
-"notes": [],
-"kinds": [
-"pass",
-"rec",
 "rush"
 ],
 "missing": [],
@@ -16141,10 +16040,7 @@
 "info": [
 "AAFC seasons left out: [1948, 1949]"
 ],
-"career": {
-"rush": 71,
-"rec": 12
-}
+"career": {}
 },
 {
 "name": "Joey Galloway",
@@ -20187,10 +20083,7 @@
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ],
-"career": {
-"rush": 31,
-"rec": 7
-}
+"career": {}
 },
 {
 "name": "Mark Bavaro",
@@ -20832,79 +20725,13 @@
 "name": "Matt Dunigan",
 "wiki": "Matt Dunigan",
 "pos": "Quarterback",
-"first": 1983,
-"last": 1996,
+"first": 1995,
+"last": 1995,
 "infobox": {},
 "seasons": [
 [
-1983,
-1,
-0,
-0
-],
-[
-1984,
-21,
-0,
-0
-],
-[
-1985,
-19,
-0,
-0
-],
-[
-1986,
-25,
-0,
-0
-],
-[
-1987,
-21,
-0,
-0
-],
-[
-1990,
-17,
-0,
-0
-],
-[
-1991,
-16,
-0,
-0
-],
-[
-1992,
-17,
-0,
-0
-],
-[
-1993,
-36,
-0,
-0
-],
-[
-1994,
-31,
-0,
-0
-],
-[
 1995,
 34,
-0,
-0
-],
-[
-1996,
-12,
 0,
 0
 ]
@@ -22799,10 +22626,7 @@
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ],
-"career": {
-"pass": 174,
-"rush": 44
-}
+"career": {}
 },
 {
 "name": "Paul Hornung",
@@ -30974,10 +30798,7 @@
 "info": [
 "AAFC seasons left out: [1948, 1949]"
 ],
-"career": {
-"pass": 242,
-"rush": 39
-}
+"career": {}
 },
 {
 "name": "Yancey Thigpen",
