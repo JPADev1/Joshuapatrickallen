@@ -419,7 +419,9 @@
 "kinds": [
 "rec"
 ],
-"missing": [],
+"missing": [
+"rec"
+],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
@@ -1985,7 +1987,9 @@
 "kinds": [
 "rec"
 ],
-"missing": [],
+"missing": [
+"rec"
+],
 "info": []
 },
 {
@@ -2930,7 +2934,10 @@
 "pass",
 "rush"
 ],
-"missing": [],
+"missing": [
+"pass",
+"rush"
+],
 "info": []
 },
 {
@@ -4599,7 +4606,10 @@
 "rec",
 "rush"
 ],
-"missing": [],
+"missing": [
+"rush",
+"rec"
+],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
@@ -5096,7 +5106,8 @@
 "rec"
 ],
 "missing": [
-"rush"
+"rush",
+"rec"
 ],
 "info": [
 "table has no rush columns; career rush 24"
@@ -5368,7 +5379,9 @@
 "rec",
 "rush"
 ],
-"missing": [],
+"missing": [
+"rec"
+],
 "info": []
 },
 {
@@ -8521,7 +8534,9 @@
 "rec",
 "rush"
 ],
-"missing": [],
+"missing": [
+"rec"
+],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948]"
 ]
@@ -9874,7 +9889,10 @@
 "pass",
 "rush"
 ],
-"missing": [],
+"missing": [
+"pass",
+"rush"
+],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
@@ -14951,7 +14969,10 @@
 "rec",
 "rush"
 ],
-"missing": [],
+"missing": [
+"rush",
+"rec"
+],
 "info": [
 "AAFC seasons left out: [1948, 1949]"
 ]
@@ -14998,7 +15019,9 @@
 "kinds": [
 "rec"
 ],
-"missing": [],
+"missing": [
+"rec"
+],
 "info": []
 },
 {
@@ -17605,7 +17628,8 @@
 "pass"
 ],
 "missing": [
-"rush"
+"rush",
+"pass"
 ],
 "info": [
 "table has no rush columns"
@@ -18622,7 +18646,10 @@
 "rec",
 "rush"
 ],
-"missing": [],
+"missing": [
+"rush",
+"rec"
+],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
@@ -20882,7 +20909,10 @@
 "pass",
 "rush"
 ],
-"missing": [],
+"missing": [
+"pass",
+"rush"
+],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
@@ -26453,7 +26483,9 @@
 "pass",
 "rush"
 ],
-"missing": [],
+"missing": [
+"rush"
+],
 "info": []
 },
 {
@@ -28470,7 +28502,10 @@
 "pass",
 "rush"
 ],
-"missing": [],
+"missing": [
+"pass",
+"rush"
+],
 "info": [
 "AAFC seasons left out: [1948, 1949]"
 ]

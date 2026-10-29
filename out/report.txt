@@ -18,91 +18,25 @@ check	Ottis Anderson	career row rush 81 != season sum 82; infobox rush 81 != tab
 check	Steve McNair	infobox rush 38 != table 37
 check	Terry Allen (running back)	career row rec 6 != season sum 7
 check	Tommy Maddox	infobox rush 5 != table 1
-draft-miss	Andre Reed	fetch failed: The page you specified doesn't exist.
-draft-miss	Andre Rison	fetch failed: The page you specified doesn't exist.
 draft-miss	Anthony Miller	no NFL stats table
-draft-miss	Antonio Freeman	fetch failed: The page you specified doesn't exist.
-draft-miss	Art Monk	fetch failed: The page you specified doesn't exist.
 draft-miss	Barry Foster	fetch failed: The page you specified doesn't exist.
-draft-miss	Barry Sanders	fetch failed: The page you specified doesn't exist.
 draft-miss	Billy Joe Tolliver	fetch failed: The page you specified doesn't exist.
-draft-miss	Billy Sims	fetch failed: The page you specified doesn't exist.
-draft-miss	Boomer Esiason	fetch failed: The page you specified doesn't exist.
-draft-miss	Brett Favre	fetch failed: The page you specified doesn't exist.
-draft-miss	Carl Pickens	fetch failed: The page you specified doesn't exist.
-draft-miss	Charlie Batch	fetch failed: The page you specified doesn't exist.
 draft-miss	Chris Warren	fetch failed: The page you specified doesn't exist.
 draft-miss	Christian Okoye	fetch failed: The page you specified doesn't exist.
-draft-miss	Corey Dillon	fetch failed: The page you specified doesn't exist.
 draft-miss	Craig Erickson	fetch failed: The page you specified doesn't exist.
-draft-miss	Curt Warner	fetch failed: The page you specified doesn't exist.
-draft-miss	Curtis Martin	fetch failed: The page you specified doesn't exist.
-draft-miss	Dan Marino	fetch failed: The page you specified doesn't exist.
-draft-miss	Daryl Turner	fetch failed: The page you specified doesn't exist.
-draft-miss	Derrick Fenner	fetch failed: The page you specified doesn't exist.
-draft-miss	Doug Flutie	fetch failed: The page you specified doesn't exist.
-draft-miss	Drew Bledsoe	fetch failed: The page you specified doesn't exist.
-draft-miss	Emmitt Smith	fetch failed: The page you specified doesn't exist.
 draft-miss	Eric Green	no NFL stats table
 draft-miss	Frank Reich	fetch failed: The page you specified doesn't exist.
-draft-miss	George Rogers	fetch failed: The page you specified doesn't exist.
 draft-miss	Greg Bell	no NFL stats table
-draft-miss	Herman Moore	fetch failed: The page you specified doesn't exist.
-draft-miss	Hines Ward	fetch failed: The page you specified doesn't exist.
-draft-miss	Irving Fryar	fetch failed: The page you specified doesn't exist.
-draft-miss	Isaac Bruce	fetch failed: The page you specified doesn't exist.
-draft-miss	Jake Plummer	fetch failed: The page you specified doesn't exist.
 draft-miss	Jamal Anderson	fetch failed: The page you specified doesn't exist.
 draft-miss	James Brooks	not the same player? rec 49 vs draft data 30
 draft-miss	James Jones	fetch failed: The page you specified doesn't exist.
 draft-miss	James Stewart	no NFL stats table
 draft-miss	James Wilder	fetch failed: The page you specified doesn't exist.
-draft-miss	Jeff George	fetch failed: The page you specified doesn't exist.
-draft-miss	Jerome Bettis	fetch failed: The page you specified doesn't exist.
-draft-miss	Jerry Rice	fetch failed: The page you specified doesn't exist.
-draft-miss	Jim Everett	fetch failed: The page you specified doesn't exist.
-draft-miss	Jim Harbaugh	fetch failed: The page you specified doesn't exist.
-draft-miss	Joe Morris	fetch failed: The page you specified doesn't exist.
-draft-miss	Joey Galloway	fetch failed: The page you specified doesn't exist.
-draft-miss	John Elway	fetch failed: The page you specified doesn't exist.
-draft-miss	Johnny Hector	fetch failed: The page you specified doesn't exist.
-draft-miss	Keith Byars	fetch failed: The page you specified doesn't exist.
-draft-miss	Kerry Collins	fetch failed: The page you specified doesn't exist.
-draft-miss	Kordell Stewart	fetch failed: The page you specified doesn't exist.
 draft-miss	Leonard Russell	fetch failed: The page you specified doesn't exist.
-draft-miss	Marcus Allen	fetch failed: The page you specified doesn't exist.
 draft-miss	Marion Butts	fetch failed: The page you specified doesn't exist.
-draft-miss	Mark Brunell	fetch failed: The page you specified doesn't exist.
-draft-miss	Mark Clayton	no NFL stats table
-draft-miss	Mark Duper	fetch failed: The page you specified doesn't exist.
-draft-miss	Marshall Faulk	fetch failed: The page you specified doesn't exist.
-draft-miss	Marvin Harrison	fetch failed: The page you specified doesn't exist.
-draft-miss	Matt Hasselbeck	fetch failed: The page you specified doesn't exist.
-draft-miss	Michael Irvin	fetch failed: The page you specified doesn't exist.
 draft-miss	Michael Pittman	fetch failed: The page you specified doesn't exist.
-draft-miss	Muhsin Muhammad	fetch failed: The page you specified doesn't exist.
-draft-miss	Natrone Means	fetch failed: The page you specified doesn't exist.
-draft-miss	Neil Lomax	fetch failed: The page you specified doesn't exist.
-draft-miss	Peyton Manning	fetch failed: The page you specified doesn't exist.
 draft-miss	Qadry Ismail	fetch failed: The page you specified doesn't exist.
-draft-miss	Randall Cunningham	fetch failed: The page you specified doesn't exist.
-draft-miss	Randy Moss	fetch failed: The page you specified doesn't exist.
 draft-miss	Reggie Cobb	fetch failed: The page you specified doesn't exist.
-draft-miss	Rich Gannon	fetch failed: The page you specified doesn't exist.
-draft-miss	Rick Mirer	fetch failed: The page you specified doesn't exist.
-draft-miss	Ricky Watters	fetch failed: The page you specified doesn't exist.
-draft-miss	Roger Craig	fetch failed: The page you specified doesn't exist.
-draft-miss	Stephen Davis	fetch failed: The page you specified doesn't exist.
-draft-miss	Sterling Sharpe	fetch failed: The page you specified doesn't exist.
-draft-miss	Steve Beuerlein	fetch failed: The page you specified doesn't exist.
-draft-miss	Steve McNair	fetch failed: The page you specified doesn't exist.
-draft-miss	Terrell Davis	fetch failed: The page you specified doesn't exist.
-draft-miss	Terrell Owens	fetch failed: The page you specified doesn't exist.
-draft-miss	Thurman Thomas	fetch failed: The page you specified doesn't exist.
-draft-miss	Tony Martin	fetch failed: The page you specified doesn't exist.
-draft-miss	Trent Green	fetch failed: The page you specified doesn't exist.
-draft-miss	Troy Aikman	fetch failed: The page you specified doesn't exist.
-draft-miss	Vinny Testaverde	fetch failed: The page you specified doesn't exist.
 skip	Aaron Jones (running back)	career began 1999 or later (nflverse covers it)
 skip	Aaron Rodgers	career began 1999 or later (nflverse covers it)
 skip	Adrian Burk	no NFL stats table
