@@ -60,7 +60,7 @@ DRAFT_URL = "https://github.com/nflverse/nflverse-data/releases/download/draft_p
 EXCLUDE_HEAD = re.compile(r"\b(cfl|usfl|college|xfl|arena|wfl|ufl|aaf|canadian|high school|postseason|playoffs|super bowl)\b", re.I)
 AAFC = re.compile(r"\b(aafc|dons|yankees|rockets|hornets|seahawks|dodgers)\b", re.I)
 CFL = re.compile(r"argonauts|alouettes|tiger.?cats|blue bombers|roughriders|rough riders|eskimos|\belks\b|stampeders|"
-                 r"renegades|\bbc lions|british columbia|\bcfl\b|stallions|posse|barracudas|mad dogs|gold miners|imperials|dutchmen|orfu", re.I)
+                 r"renegades|\bbc lions|british columbia|\bcfl\b|stallions|posse|barracudas|mad dogs|gold miners|imperials|dutchmen|orfu|edmonton|toronto|montreal|hamilton|winnipeg|saskatchewan|calgary|ottawa|regina|vancouver", re.I)
 CFL_CODES = {"TOR", "MTL", "HAM", "WPG", "SSK", "SAS", "EDM", "CGY", "OTT", "BC", "SHR", "BIR", "MEM"}
 AAFC_CODES = {"CLE", "SF", "SFO", "BAL", "BUF", "NYY", "LAD", "CHR", "CHH", "MIA", "BKN", "BRK", "BKD"}
 
@@ -385,7 +385,9 @@ def main():
                     "first": pl["first"], "last": pl["last"], "infobox": pl["infobox"],
                     "seasons": [[y, v["pass"], v["rush"], v["rec"]] for y, v in s.items()], "notes": pl["notes"],
                     "kinds": pl["kinds"], "missing": pl["missing"], "info": pl["info"],
-                    "career": {k: pl["infobox"][k] for k in pl["missing"] if k in pl["infobox"]}})
+                    # infobox career totals include AAFC seasons, so they can't stand in once those are left out
+                    "career": {} if any(i.startswith("AAFC") for i in pl["info"]) else
+                              {k: pl["infobox"][k] for k in pl["missing"] if k in pl["infobox"]}})
         if pl["notes"]:
             report.append(f"check\t{pl['title']}\t" + "; ".join(pl["notes"]))
             dump(pl["title"], "; ".join(pl["notes"]))
