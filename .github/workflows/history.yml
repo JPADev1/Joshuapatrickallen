@@ -22,6 +22,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Reuse Wikipedia pages fetched by earlier runs
+        uses: actions/cache@v4
+        with:
+          path: out/pages
+          key: wiki-pages-${{ github.run_id }}
+          restore-keys: wiki-pages-
       - name: Run
         run: bash run.sh
       - name: Save results to this branch
