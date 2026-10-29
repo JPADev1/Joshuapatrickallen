@@ -264,3 +264,16 @@ a.tile:hover,a.tile:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20
 .mtn-ridge{stroke:rgba(10,30,70,.35)}
 .lead{stroke:var(--mute);stroke-width:1;opacity:.55}
 .lead-me{stroke:var(--red);opacity:.9;stroke-width:1.5}
+.mtn-row{display:flex;align-items:center;gap:8px}
+.mtn-track{flex:1;min-width:0;position:relative}
+.mtn-track input{width:100%;margin:6px 0 0}
+.mtn-step{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--blue);font-size:.8rem;cursor:pointer}
+.mtn-step:disabled{opacity:.35;cursor:default}
+.mtn-step:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.mtn-ticks{position:relative;height:16px;display:block;padding:0}
+.mtn-ticks span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.mtn-ticks span:first-child{transform:none}
+.mtn-ticks span:last-child{transform:translateX(-100%);font-weight:700}
+.pill-m small{font-size:.66rem;font-weight:600;color:var(--mute)}
+.pill-m.me small{color:#fff;opacity:.85}
+@media (max-width:520px){.mtn-ticks span:nth-child(even):not(:last-child){visibility:visible}.mtn-slide{gap:8px}}

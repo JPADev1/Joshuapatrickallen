@@ -28,8 +28,12 @@
       <button type="button" class="mtn-play" id="play" aria-label="Play Allen's climb season by season">&#9654;</button>
       <div class="mtn-range">
         <label for="slider" id="sliderLabel">Career</label>
-        <input type="range" id="slider" min="1" max="10" step="1" value="10">
-        <div class="mtn-ticks" id="ticks" aria-hidden="true"></div>
+        <div class="mtn-row">
+          <button type="button" class="mtn-step" id="prev" aria-label="One season back">&#9664;</button>
+          <div class="mtn-track"><input type="range" id="slider" min="1" max="24" step="1" value="24">
+          <div class="mtn-ticks" id="ticks" aria-hidden="true"></div></div>
+          <button type="button" class="mtn-step" id="next" aria-label="One season forward">&#9654;</button>
+        </div>
       </div>
     </div>
   </div>
@@ -47,7 +51,7 @@ var KINDS=[['tot','Total TDs'],['pass','Passing'],['rush','Rushing'],['rec','Rec
 var KIND_WORD={tot:'total touchdowns',pass:'passing touchdowns',rush:'rushing touchdowns',rec:'receiving touchdowns'};
 var POS_WORD={ALL:'all players',QB:'quarterbacks',RB:'running backs'};
 var S={pos:'ALL',kind:'tot',n:0}; // n = 0 means career
-var P=[], ME=null, MAXN=9, CUR=2026, playing=null;
+var P=[], ME=null, MAXN=23, AN=9, CUR=2026, playing=null; // MAXN: Tom Brady's 23 seasons; AN: Allen's seasons so far
 
 function el(id){return document.getElementById(id);}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
@@ -117,12 +121,17 @@ function drawMountain(){
 
 // ---------- pills ----------
 var pillEls={};
-function label(x){var nm=x.p.id===ALLEN?'Josh Allen':(G.narrow?last(x.p.name):x.p.name);
-  return '<i>'+(x.tie?'T-':'')+x.rank+'</i>'+esc(nm)+' <b>'+x.v+'</b>';}
+var DUP={};
+function short(n){var a=n.split(' '), l=last(n); return DUP[l]?a[0].charAt(0)+'. '+l:l;}
+function played(p){return (p.last||CUR)-p.first+1;}
+function label(x){var nm=x.p.id===ALLEN?'Josh Allen':(G.narrow?short(x.p.name):x.p.name);
+  var yrs=S.n&&played(x.p)<S.n?' <small>('+played(x.p)+')</small>':''; // careers shorter than the slider
+  return '<i>'+(x.tie?'T-':'')+x.rank+'</i>'+esc(nm)+yrs+' <b>'+x.v+'</b>';}
 function placeAll(rows){
   var top=rows.slice(0,K), meRow=rows.filter(function(x){return x.p.id===ALLEN;})[0];
   var show=top.slice(); if(meRow&&meRow.rank>K&&top.indexOf(meRow)<0)show.push(meRow);
-  var seen={}, dots='';
+  var seen={}, dots='', cnt={}; DUP={};
+  show.forEach(function(x){var l=last(x.p.name); cnt[l]=(cnt[l]||0)+1; if(cnt[l]>1)DUP[l]=1;});
   // evenly spaced ridge spots by position in the list (ties still get their own spot)
   var boxes=[];
   show.forEach(function(x,i){
@@ -130,7 +139,7 @@ function placeAll(rows){
     if(!d){d=document.createElement('div');d.className='pill-m'+(id===ALLEN?' me':'');d.style.opacity='0';el('pills').appendChild(d);pillEls[id]=d;
       d.style.transform='translate('+(G.w*0.04)+'px,'+(G.h-20)+'px)';}
     d.innerHTML=label(x); seen[id]=1;
-    d.title=x.p.name+(x.p.pos?' ('+x.p.pos+')':'')+': '+x.v+' '+KIND_WORD[S.kind];
+    d.title=x.p.name+(x.p.pos?' ('+x.p.pos+')':'')+': '+x.v+' '+KIND_WORD[S.kind]+(S.n&&played(x.p)<S.n?' in '+played(x.p)+' seasons':'');
     var base=x.rank>K||i>=K, a=base?null:anchor(i+1), pw=d.offsetWidth||120, ph=d.offsetHeight||22, px, py;
     if(base){px=Math.min(G.w-pw-4,G.x0+96);py=G.h-ph-2;d.classList.add('basecamp');}
     else{d.classList.remove('basecamp');
@@ -160,16 +169,17 @@ function placeAll(rows){
 }
 
 // ---------- text ----------
-function seasonText(n){if(!n)return 'Career';var y=ME.first+n-1;return 'Through season '+n+' ('+y+(y===CUR?', in progress':'')+')';}
+function seasonText(n){if(!n)return 'Career';var y=ME.first+n-1;
+  return 'Through season '+n+(n<=AN?' ('+y+(y===CUR?', in progress':'')+')':' (Allen has played '+AN+')');}
 function headline(rows){
   var me=rows.filter(function(x){return x.p.id===ALLEN;})[0]; if(!me)return;
-  var when=S.n?'through his first '+(S.n===1?'season':S.n+' seasons'):'in his career';
+  var when=!S.n?'in his career':S.n<=AN?'through his first '+(S.n===1?'season':S.n+' seasons'):'in his '+AN+' seasons so far, against everyone else’s first '+S.n;
   var among=S.pos==='ALL'?'all-time':'among '+POS_WORD[S.pos]+' all-time';
   var txt='<b>'+(me.tie?'Tied for ':'')+ord(me.rank)+' '+among+'</b>: Allen’s '+me.v+' '+(me.v===1?KIND_WORD[S.kind].replace(/s$/,''):KIND_WORD[S.kind])+' '+when+'. ';
   var above=rows.filter(function(x){return x.v>me.v;});
   if(!above.length)txt+='Nobody has more. He’s on the summit.';
   else{var nx=above[above.length-1]; txt+='Next up: '+esc(nx.p.name)+' with '+nx.v+' ('+(nx.v-me.v)+' more).';}
-  if(S.n){var cut=rows.filter(function(x){return x.p.id!==ALLEN;}).length; txt+=' <span class="mtn-sm">Compared with each player’s first '+(S.n===1?'season':S.n+' seasons')+'.</span>';}
+  if(S.n)txt+=' <span class="mtn-sm">Compared with each player’s first '+(S.n===1?'season':S.n+' seasons')+'; numbers in parentheses are careers shorter than that.</span>';
   el('headline').innerHTML=txt;
   el('sub').textContent=S.pos==='ALL'&&S.kind==='tot'&&!S.n?'Where Josh Allen stands among the NFL’s all-time touchdown leaders.':'Josh Allen vs '+(S.pos==='ALL'?'everyone':'all-time '+POS_WORD[S.pos])+': '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+'.';
 }
@@ -179,7 +189,7 @@ function list(rows){
   el('listHead').textContent='The top 20: '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
   el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>Seasons</th></tr></thead><tbody>'+show.map(function(x){
     var p=x.p, endY=S.n?Math.min(p.first+S.n-1,p.last||CUR):(p.last||CUR);
-    return '<tr'+(p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(p.name)+'</td><td><b>'+x.v+'</b></td><td>'+esc(p.pos)+'</td><td>'+p.first+'–'+endY+'</td></tr>';
+    return '<tr'+(p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(p.name)+(S.n&&played(p)<S.n?' ('+played(p)+')':'')+'</td><td><b>'+x.v+'</b></td><td>'+esc(p.pos)+'</td><td>'+p.first+'–'+endY+'</td></tr>';
   }).join('')+'</tbody>';
 }
 
@@ -190,7 +200,9 @@ function buttons(){
     return '<button type="button" data-kind="'+o[0]+'" aria-pressed="'+(S.kind===o[0])+'"'+(off?' disabled':'')+'>'+o[1]+'</button>';}).join('');
   var sl=el('slider'); sl.max=MAXN+1; sl.value=S.n||MAXN+1;
   el('sliderLabel').textContent=seasonText(S.n);
-  el('ticks').innerHTML=Array.apply(null,{length:MAXN+1}).map(function(_,i){return '<span>'+(i<MAXN?i+1:'Career')+'</span>';}).join('');
+  var marks=[1,5,10,15,20].filter(function(v){return v<=MAXN;}).concat([MAXN+1]);
+  el('ticks').innerHTML=marks.map(function(v){return '<span style="left:'+((v-1)/MAXN*100)+'%">'+(v>MAXN?'Career':v)+'</span>';}).join('');
+  el('prev').disabled=S.n===1; el('next').disabled=!S.n;
 }
 function render(){
   buttons(); var rows=ranking(); placeAll(rows); headline(rows); list(rows); hash();
@@ -201,16 +213,21 @@ function readHash(){location.hash.slice(1).split('&').forEach(function(kv){var a
   if(a[0]==='pos'&&/^(ALL|QB|RB)$/.test(a[1]))S.pos=a[1]; if(a[0]==='td'&&/^(tot|pass|rush|rec)$/.test(a[1]))S.kind=a[1];
   if(a[0]==='n'){var n=parseInt(a[1],10); if(n>=1&&n<=MAXN)S.n=n;}});
   if(S.pos==='RB'&&S.kind==='pass')S.kind='rush';}
-function stop(){if(playing){clearInterval(playing);playing=null;el('play').innerHTML='&#9654;';el('play').setAttribute('aria-label','Play Allen’s climb season by season');}}
+function stop(){if(playing){clearInterval(playing);playing=null;}el('play').innerHTML='&#9654;';el('play').setAttribute('aria-label','Play Allen’s climb season by season');}
+function step(d){ // n: 1..MAXN, then 0 = Career
+  var v=S.n||MAXN+1; v=Math.max(1,Math.min(MAXN+1,v+d)); S.n=v>MAXN?0:v; render();}
+function play(){
+  if(!S.n){S.n=1;render();}           // at Career: start over from season 1; otherwise resume from here
+  el('play').innerHTML='&#10074;&#10074;'; el('play').setAttribute('aria-label','Pause');
+  playing=setInterval(function(){step(1); if(!S.n)stop();},1100);
+}
 document.addEventListener('click',function(e){
-  var b=e.target.closest('button'); if(!b)return;
-  if(b.dataset.pos){stop();S.pos=b.dataset.pos; if(S.pos==='RB'&&S.kind==='pass')S.kind='rush'; render();}
-  else if(b.dataset.kind){stop();S.kind=b.dataset.kind;render();}
-  else if(b.id==='play'){
-    if(playing){stop();return;}
-    S.n=1; render(); b.innerHTML='&#10074;&#10074;'; b.setAttribute('aria-label','Pause');
-    playing=setInterval(function(){ if(S.n&&S.n<MAXN){S.n++;} else if(S.n===MAXN){S.n=0;} else {stop();return;} render(); if(!S.n)stop(); },1500);
-  }
+  var b=e.target.closest('button'); if(!b||b.disabled)return;
+  if(b.dataset.pos){S.pos=b.dataset.pos; if(S.pos==='RB'&&S.kind==='pass')S.kind='rush'; render();}
+  else if(b.dataset.kind){S.kind=b.dataset.kind;render();}
+  else if(b.id==='play'){if(playing)stop(); else play();}
+  else if(b.id==='prev'){stop();step(-1);}
+  else if(b.id==='next'){stop();step(1);}
 });
 el('slider').addEventListener('input',function(){stop();var v=+this.value;S.n=v>MAXN?0:v;render();});
 var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var w=G.w;geom();if(G.w!==w){drawMountain();render();}},150);});
@@ -235,7 +252,8 @@ Promise.all([fetch('data/td-mountain.json').then(function(r){if(!r.ok)throw 0;re
   // Allen's own current season straight from his live stat line (always the freshest number)
   if(ME&&allen&&allen.now&&!(live&&live.season===CUR)){var n=allen.now;
     ME.seasons=ME.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,n.td||0,n.rushTD||0,n.recTD||0]]); ME.last=CUR;}
-  MAXN=CUR-ME.first+1;
+  AN=CUR-ME.first+1;
+  var brady=P.filter(function(p){return p.name==='Tom Brady';})[0]; MAXN=brady?played(brady):23;
   readHash(); geom(); drawMountain(); render();
 }).catch(function(){el('headline').textContent='The touchdown data could not be loaded. Please refresh.';});
 })();
