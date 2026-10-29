@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Touchdown Mountain | Joshua Patrick Allen</title>
+<meta name="description" content="Josh Allen's climb up the all-time touchdown mountain: see where he ranks against the NFL's top 20, career or through any number of seasons.">
+<link rel="stylesheet" href="css/site.css?v=24">
+</head>
+<body>
+<header class="hero slim"><div class="wrap">
+  <nav class="nav"><a href="/">Stats &amp; records</a><a href="matchup.html">Next game</a></nav>
+  <h1>Touchdown Mountain</h1>
+  <p class="when" id="sub">Where Josh Allen stands among the NFL's all-time touchdown leaders.</p>
+</div></header>
+<main class="panel">
+  <div class="card mtn-card">
+    <div class="mtn-ctl">
+      <div class="tabs" id="posBtns" role="group" aria-label="Compare against"></div>
+      <div class="tabs" id="kindBtns" role="group" aria-label="Touchdown type"></div>
+    </div>
+    <p class="mtn-head" id="headline" aria-live="polite"></p>
+    <div class="mtn" id="mtn" role="img" aria-describedby="headline">
+      <svg id="mtnSvg" aria-hidden="true"></svg>
+      <div id="pills"></div>
+    </div>
+    <div class="mtn-slide">
+      <button type="button" class="mtn-play" id="play" aria-label="Play Allen's climb season by season">&#9654;</button>
+      <div class="mtn-range">
+        <label for="slider" id="sliderLabel">Career</label>
+        <input type="range" id="slider" min="1" max="10" step="1" value="10">
+        <div class="mtn-ticks" id="ticks" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="sec" id="listHead">The top 20</h2>
+  <div class="scroll"><table id="list"></table></div>
+  <p class="note" id="srcnote">Regular season only. &ldquo;Through N seasons&rdquo; counts each player's first N seasons in the league, with his rookie year as season 1, whether or not he played much that year. Total touchdowns are passing + rushing + receiving. Positions are each player's main position. 1999 to the present: nflverse (free, open NFL data, CC BY 4.0). Before 1999: Wikipedia player pages (CC BY-SA 4.0), checked against each player's career totals; players whose careers began before 1999 are included if they appear on Wikipedia's career or season touchdown leader lists or had a notable touchdown total. When an older player's Wikipedia page gives a category (often a quarterback's rushing) only as a career total, he appears in that category only in views that cover his whole career. AAFC (1946&ndash;49) statistics are not NFL statistics and are left out, as in the NFL record book.</p>
+</main>
+<footer>Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
+<script>
+(function(){
+var ALLEN='00-0034857', K=20;
+var POS=[['ALL','All players'],['QB','Quarterbacks'],['RB','Running backs']];
+var KINDS=[['tot','Total TDs'],['pass','Passing'],['rush','Rushing'],['rec','Receiving']];
+var KIND_WORD={tot:'total touchdowns',pass:'passing touchdowns',rush:'rushing touchdowns',rec:'receiving touchdowns'};
+var POS_WORD={ALL:'all players',QB:'quarterbacks',RB:'running backs'};
+var S={pos:'ALL',kind:'tot',n:0}; // n = 0 means career
+var P=[], ME=null, MAXN=9, CUR=2026, playing=null;
+
+function el(id){return document.getElementById(id);}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function last(n){var a=n.split(' ');return a.length>1&&/^(Jr\.?|Sr\.?|II|III|IV)$/.test(a[a.length-1])?a[a.length-2]:a[a.length-1];}
+function ord(n){var s=['th','st','nd','rd'],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
+
+// ---------- totals ----------
+var PARTS={tot:[1,2,3],pass:[1],rush:[2],rec:[3]}, KEYS={1:'pass',2:'rush',3:'rec'};
+// A category an older player's Wikipedia table doesn't split by season (p.miss) only counts through his
+// career total (p.car), so only in the career view or a view that covers his whole career; otherwise null.
+function total(p,kind,n){
+  var cap=n?p.first+n-1:9999, whole=!n||cap>=(p.last||9999), t=0, parts=PARTS[kind];
+  for(var j=0;j<parts.length;j++){var c=parts[j], k=KEYS[c];
+    if(p.miss&&p.miss.indexOf(k)>=0){ if(!whole||!p.car||p.car[k]==null)return null; t+=p.car[k]; continue; }
+    for(var i=0;i<p.seasons.length;i++){var s=p.seasons[i]; if(s[0]>cap)break; t+=s[c];}
+  }
+  return t;
+}
+function ranking(){
+  var rows=[];
+  P.forEach(function(p){
+    if(p.id!==ALLEN&&S.pos!=='ALL'&&p.pos!==S.pos)return;
+    // through N seasons only compares players who have actually reached season N (or are Allen)
+    if(S.n&&p.id!==ALLEN&&p.first+S.n-1>CUR)return;
+    var v=total(p,S.kind,S.n); if(v===null)return; if(v>0||p.id===ALLEN)rows.push({p:p,v:v});
+  });
+  rows.sort(function(a,b){return b.v-a.v||(a.p.id===ALLEN?-1:b.p.id===ALLEN?1:a.p.name<b.p.name?-1:1);});
+  var r=0,prev=null; rows.forEach(function(x,i){if(x.v!==prev){r=i+1;prev=x.v;} x.rank=r;});
+  rows.forEach(function(x){x.tie=rows.filter(function(y){return y.rank===x.rank;}).length>1;});
+  return rows;
+}
+
+// ---------- the mountain ----------
+var G={};
+function geom(){
+  var w=el('mtn').clientWidth, narrow=w<560, h=narrow?Math.max(560,Math.round(w*1.6)):Math.round(Math.min(560,Math.max(440,w*0.62)));
+  var x0=w*0.02, xp=w*(narrow?0.8:0.79), yb=h-34, yp=narrow?92:96, xr=w*0.995;
+  G={w:w,h:h,narrow:narrow,x0:x0,xp:xp,yb:yb,yp:yp,xr:xr};
+  el('mtn').style.height=h+'px';
+}
+function ridgeY(x){var t=Math.max(0,Math.min(1,(x-G.x0)/(G.xp-G.x0)));return G.yb-(G.yb-G.yp)*Math.pow(t,1.35);}
+function anchor(rank){ // rank 1 at the summit, rank K near the bottom left
+  var t=1-(rank-1)/(K-1)*0.93, x=G.x0+(G.xp-G.x0)*t; return {x:x,y:ridgeY(x)};
+}
+function drawMountain(){
+  var w=G.w,h=G.h, pts=[], jag=function(i){return [0,-5,3,-2,6,-4,1,-6,4,-1][i%10];};
+  for(var i=0;i<=40;i++){var x=G.x0+(G.xp-G.x0)*i/40;pts.push([x,ridgeY(x)+(i%40?jag(i)*(1-i/40)*0.9:0)]);}
+  var right=[[G.xp+(G.xr-G.xp)*0.18,G.yp+(G.yb-G.yp)*0.22],[G.xp+(G.xr-G.xp)*0.35,G.yp+(G.yb-G.yp)*0.3],[G.xp+(G.xr-G.xp)*0.55,G.yp+(G.yb-G.yp)*0.55],[G.xp+(G.xr-G.xp)*0.72,G.yp+(G.yb-G.yp)*0.64],[G.xr,G.yb]];
+  var ridge='M'+pts.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1);}).join(' L')+' L'+right.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1);}).join(' L');
+  var body=ridge+' L'+G.xr+','+h+' L'+G.x0+','+h+' Z';
+  // snow cap: top ~16% of the climb
+  var sy=G.yp+(G.yb-G.yp)*0.17, cap=pts.filter(function(p){return p[1]<=sy+2;});
+  var snow='M'+cap.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1);}).join(' L')+' L'+(G.xp+(G.xr-G.xp)*0.16).toFixed(1)+','+(sy-4).toFixed(1)
+    +' L'+(G.xp+4).toFixed(1)+','+(sy+10).toFixed(1)+' L'+(G.xp-(G.xp-G.x0)*0.05).toFixed(1)+','+(sy-2).toFixed(1)+' L'+(cap[0]?cap[0][0].toFixed(1):G.xp)+','+(sy+6).toFixed(1)+' Z';
+  var back='M'+(w*0.3)+','+h+' L'+(w*0.52)+','+(G.yp+(G.yb-G.yp)*0.38)+' L'+(w*0.6)+','+(G.yp+(G.yb-G.yp)*0.45)+' L'+(w*0.68)+','+(G.yp+(G.yb-G.yp)*0.33)+' L'+(w*0.98)+','+h+' Z';
+  var flagX=G.xp, flagY=G.yp-2;
+  el('mtnSvg').setAttribute('viewBox','0 0 '+w+' '+h);
+  el('mtnSvg').innerHTML='<defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--mtn-top)"/><stop offset="1" stop-color="var(--mtn-bot)"/></linearGradient></defs>'
+    +'<path d="'+back+'" class="mtn-back"/>'
+    +'<path d="'+body+'" fill="url(#mg)"/><path d="'+snow+'" class="mtn-snow"/>'
+    +'<path d="'+ridge+'" class="mtn-ridge"/>'
+    +'<rect x="0" y="'+(h-22)+'" width="'+w+'" height="22" class="mtn-ground"/>'
+    +'<line x1="'+flagX+'" y1="'+flagY+'" x2="'+flagX+'" y2="'+(flagY-30)+'" class="mtn-pole"/><path d="M'+flagX+','+(flagY-30)+' l20,6 l-20,6 Z" class="mtn-flag"/>'
+    +'<text x="'+(G.x0+6)+'" y="'+(h-7)+'" class="mtn-base">BASE CAMP</text>'
+    +'<g id="dots"></g>';
+}
+
+// ---------- pills ----------
+var pillEls={};
+function label(x){var nm=x.p.id===ALLEN?'Josh Allen':(G.narrow?last(x.p.name):x.p.name);
+  return '<i>'+(x.tie?'T-':'')+x.rank+'</i>'+esc(nm)+' <b>'+x.v+'</b>';}
+function placeAll(rows){
+  var top=rows.slice(0,K), meRow=rows.filter(function(x){return x.p.id===ALLEN;})[0];
+  var show=top.slice(); if(meRow&&meRow.rank>K&&top.indexOf(meRow)<0)show.push(meRow);
+  var seen={}, dots='';
+  // evenly spaced ridge spots by position in the list (ties still get their own spot)
+  var boxes=[];
+  show.forEach(function(x,i){
+    var id=x.p.id, d=pillEls[id];
+    if(!d){d=document.createElement('div');d.className='pill-m'+(id===ALLEN?' me':'');d.style.opacity='0';el('pills').appendChild(d);pillEls[id]=d;
+      d.style.transform='translate('+(G.w*0.04)+'px,'+(G.h-20)+'px)';}
+    d.innerHTML=label(x); seen[id]=1;
+    d.title=x.p.name+(x.p.pos?' ('+x.p.pos+')':'')+': '+x.v+' '+KIND_WORD[S.kind];
+    var base=x.rank>K||i>=K, a=base?null:anchor(i+1), pw=d.offsetWidth||120, ph=d.offsetHeight||22, px, py;
+    if(base){px=Math.min(G.w-pw-4,G.x0+96);py=G.h-ph-2;d.classList.add('basecamp');}
+    else{d.classList.remove('basecamp');
+      if(i===0){px=a.x-pw/2;py=a.y-ph-38;}                      // summit: above the flag
+      else if(i%2===1){px=a.x-pw-12;py=a.y-ph-6;}               // sky side, up and to the left
+      else{px=a.x+12;py=a.y+6;}                                  // mountain face, down and to the right
+      px=Math.max(4,Math.min(G.w-pw-4,px));}
+    boxes.push({d:d,a:a,x:px,y:py,w:pw,h:ph,fixed:base||i===0,me:id===ALLEN});
+  });
+  // nudge overlapping pills apart vertically (keeps them near their spot on the ridge)
+  for(var it=0;it<80;it++){var moved=false;
+    for(var i=0;i<boxes.length;i++)for(var j=i+1;j<boxes.length;j++){var A=boxes[i],Bx=boxes[j];
+      if(A.x<Bx.x+Bx.w+4&&Bx.x<A.x+A.w+4&&A.y<Bx.y+Bx.h+3&&Bx.y<A.y+A.h+3){
+        var over=Math.min(A.y+A.h+3-Bx.y,Bx.y+Bx.h+3-A.y)/2+0.5, up=A.y<Bx.y?A:Bx, dn=up===A?Bx:A;
+        if(!up.fixed)up.y-=over; else dn.y+=over; if(!dn.fixed)dn.y+=over; else up.y-=over; moved=true;}}
+    boxes.forEach(function(b){b.y=Math.max(2,Math.min(G.h-b.h-24,b.y));}); if(!moved)break;}
+  boxes.forEach(function(b){
+    b.d.style.transform='translate('+b.x.toFixed(1)+'px,'+b.y.toFixed(1)+'px)'; b.d.style.opacity='1';
+    if(!b.a)return;
+    var ex=Math.max(b.x,Math.min(b.x+b.w,b.a.x)), ey=b.y+b.h/2; if(ex===b.a.x)ey=b.a.y<b.y?b.y:b.y+b.h;
+    dots+='<line x1="'+b.a.x.toFixed(1)+'" y1="'+b.a.y.toFixed(1)+'" x2="'+ex.toFixed(1)+'" y2="'+ey.toFixed(1)+'" class="lead'+(b.me?' lead-me':'')+'"/>';
+  });
+  boxes.forEach(function(b){if(b.a)dots+='<circle cx="'+b.a.x.toFixed(1)+'" cy="'+b.a.y.toFixed(1)+'" r="'+(b.me?6:3.5)+'" class="'+(b.me?'dot-me':'dot')+'"/>';});
+  Object.keys(pillEls).forEach(function(id){if(!seen[id]){var d=pillEls[id];d.style.opacity='0';d.style.transform+=' translateY(14px)';
+    setTimeout(function(){if(d.style.opacity==='0'&&d.parentNode){d.parentNode.removeChild(d);delete pillEls[id];}},650);}});
+  var g=el('dots'); if(g)g.innerHTML=dots;
+}
+
+// ---------- text ----------
+function seasonText(n){if(!n)return 'Career';var y=ME.first+n-1;return 'Through season '+n+' ('+y+(y===CUR?', in progress':'')+')';}
+function headline(rows){
+  var me=rows.filter(function(x){return x.p.id===ALLEN;})[0]; if(!me)return;
+  var when=S.n?'through his first '+(S.n===1?'season':S.n+' seasons'):'in his career';
+  var among=S.pos==='ALL'?'all-time':'among '+POS_WORD[S.pos]+' all-time';
+  var txt='<b>'+(me.tie?'Tied for ':'')+ord(me.rank)+' '+among+'</b>: Allen’s '+me.v+' '+(me.v===1?KIND_WORD[S.kind].replace(/s$/,''):KIND_WORD[S.kind])+' '+when+'. ';
+  var above=rows.filter(function(x){return x.v>me.v;});
+  if(!above.length)txt+='Nobody has more. He’s on the summit.';
+  else{var nx=above[above.length-1]; txt+='Next up: '+esc(nx.p.name)+' with '+nx.v+' ('+(nx.v-me.v)+' more).';}
+  if(S.n){var cut=rows.filter(function(x){return x.p.id!==ALLEN;}).length; txt+=' <span class="mtn-sm">Compared with each player’s first '+(S.n===1?'season':S.n+' seasons')+'.</span>';}
+  el('headline').innerHTML=txt;
+  el('sub').textContent=S.pos==='ALL'&&S.kind==='tot'&&!S.n?'Where Josh Allen stands among the NFL’s all-time touchdown leaders.':'Josh Allen vs '+(S.pos==='ALL'?'everyone':'all-time '+POS_WORD[S.pos])+': '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+'.';
+}
+function list(rows){
+  var show=rows.slice(0,K), me=rows.filter(function(x){return x.p.id===ALLEN;})[0];
+  if(me&&me.rank>K)show.push(me);
+  el('listHead').textContent='The top 20: '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
+  el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>Seasons</th></tr></thead><tbody>'+show.map(function(x){
+    var p=x.p, endY=S.n?Math.min(p.first+S.n-1,p.last||CUR):(p.last||CUR);
+    return '<tr'+(p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(p.name)+'</td><td><b>'+x.v+'</b></td><td>'+esc(p.pos)+'</td><td>'+p.first+'–'+endY+'</td></tr>';
+  }).join('')+'</tbody>';
+}
+
+// ---------- controls ----------
+function buttons(){
+  el('posBtns').innerHTML=POS.map(function(o){return '<button type="button" data-pos="'+o[0]+'" aria-pressed="'+(S.pos===o[0])+'">'+o[1]+'</button>';}).join('');
+  el('kindBtns').innerHTML=KINDS.map(function(o){var off=S.pos==='RB'&&o[0]==='pass';
+    return '<button type="button" data-kind="'+o[0]+'" aria-pressed="'+(S.kind===o[0])+'"'+(off?' disabled':'')+'>'+o[1]+'</button>';}).join('');
+  var sl=el('slider'); sl.max=MAXN+1; sl.value=S.n||MAXN+1;
+  el('sliderLabel').textContent=seasonText(S.n);
+  el('ticks').innerHTML=Array.apply(null,{length:MAXN+1}).map(function(_,i){return '<span>'+(i<MAXN?i+1:'Career')+'</span>';}).join('');
+}
+function render(){
+  buttons(); var rows=ranking(); placeAll(rows); headline(rows); list(rows); hash();
+}
+function hash(){var p=[]; if(S.pos!=='ALL')p.push('pos='+S.pos); if(S.kind!=='tot')p.push('td='+S.kind); if(S.n)p.push('n='+S.n);
+  var h=p.length?'#'+p.join('&'):''; if(location.hash!==h)history.replaceState(null,'',h||location.pathname);}
+function readHash(){location.hash.slice(1).split('&').forEach(function(kv){var a=kv.split('=');
+  if(a[0]==='pos'&&/^(ALL|QB|RB)$/.test(a[1]))S.pos=a[1]; if(a[0]==='td'&&/^(tot|pass|rush|rec)$/.test(a[1]))S.kind=a[1];
+  if(a[0]==='n'){var n=parseInt(a[1],10); if(n>=1&&n<=MAXN)S.n=n;}});
+  if(S.pos==='RB'&&S.kind==='pass')S.kind='rush';}
+function stop(){if(playing){clearInterval(playing);playing=null;el('play').innerHTML='&#9654;';el('play').setAttribute('aria-label','Play Allen’s climb season by season');}}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b)return;
+  if(b.dataset.pos){stop();S.pos=b.dataset.pos; if(S.pos==='RB'&&S.kind==='pass')S.kind='rush'; render();}
+  else if(b.dataset.kind){stop();S.kind=b.dataset.kind;render();}
+  else if(b.id==='play'){
+    if(playing){stop();return;}
+    S.n=1; render(); b.innerHTML='&#10074;&#10074;'; b.setAttribute('aria-label','Pause');
+    playing=setInterval(function(){ if(S.n&&S.n<MAXN){S.n++;} else if(S.n===MAXN){S.n=0;} else {stop();return;} render(); if(!S.n)stop(); },1500);
+  }
+});
+el('slider').addEventListener('input',function(){stop();var v=+this.value;S.n=v>MAXN?0:v;render();});
+var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var w=G.w;geom();if(G.w!==w){drawMountain();render();}},150);});
+
+// ---------- data ----------
+// History is a static file; the current season comes from the hourly stats job on GitHub (no redeploys).
+var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
+function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
+Promise.all([fetch('data/td-mountain.json').then(function(r){if(!r.ok)throw 0;return r.json();}),
+             load('td-mountain-2026.json').catch(function(){return null;}),
+             load('allen-2026.json').catch(function(){return null;})]).then(function(res){
+  var base=res[0], live=res[1], allen=res[2], byId={};
+  P=base.players; P.forEach(function(p){byId[p.id]=p;});
+  CUR=base.through+1;
+  if(live&&live.season===CUR){
+    (live.players||[]).forEach(function(q){var p=byId[q.id];
+      if(!p){p={id:q.id,name:q.name,pos:q.pos,first:q.first,last:CUR,seasons:[]};P.push(p);byId[q.id]=p;}
+      p.last=CUR;
+      p.seasons=p.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,q.td[0],q.td[1],q.td[2]]]);});
+  }
+  ME=byId[ALLEN];
+  // Allen's own current season straight from his live stat line (always the freshest number)
+  if(ME&&allen&&allen.now&&!(live&&live.season===CUR)){var n=allen.now;
+    ME.seasons=ME.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,n.td||0,n.rushTD||0,n.recTD||0]]); ME.last=CUR;}
+  MAXN=CUR-ME.first+1;
+  readHash(); geom(); drawMountain(); render();
+}).catch(function(){el('headline').textContent='The touchdown data could not be loaded. Please refresh.';});
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fe7d153f0dc349558991cb3f797b5fca"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

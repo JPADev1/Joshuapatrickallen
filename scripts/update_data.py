@@ -592,6 +592,38 @@ def build_watch(allen, ranks, week26, m):
             "items": [{"title": t, "detail": d} for _, t, d in items]}
 
 
+def build_mountain_live(week26):
+    """Current-season touchdowns for the Touchdown Mountain page (td-mountain-<season>.json).
+    Everyone already on the page, plus anyone new with 3+ TDs this season (usually rookies)."""
+    try:
+        base = {p["id"]: p for p in json.load(open(os.path.join(REPO, "data", "td-mountain.json")))["players"]}
+    except FileNotFoundError:
+        return
+    tot, meta = defaultdict(lambda: [0, 0, 0]), {}
+    for r in week26:
+        if r.get("season_type") != "REG":
+            continue
+        t = tot[r["player_id"]]
+        t[0] += int(num(r, "passing_tds")); t[1] += int(num(r, "rushing_tds")); t[2] += int(num(r, "receiving_tds"))
+        meta[r["player_id"]] = (r.get("player_display_name") or r["player_id"], r.get("position", ""))
+    old = load(f"td-mountain-{SEASON}.json") or {}
+    first = dict(old.get("first", {}))  # rookie season of newcomers, so the player list is only downloaded once each
+    new = [pid for pid, t in tot.items() if pid not in base and sum(t) >= 3 and pid not in first]
+    if new:
+        for p in get("players/players.csv"):
+            if p["gsis_id"] in new:
+                first[p["gsis_id"]] = int(p.get("rookie_season") or SEASON)
+    out = []
+    for pid, t in sorted(tot.items()):
+        if not any(t) or (pid not in base and (sum(t) < 3 or pid not in first)):
+            continue
+        b = base.get(pid)
+        out.append({"id": pid, "name": b["name"] if b else meta[pid][0], "pos": b["pos"] if b else meta[pid][1],
+                    "first": b["first"] if b else first[pid], "td": t})
+    save(f"td-mountain-{SEASON}.json", {"updated": date.today().isoformat(), "season": SEASON,
+                                        "first": {k: v for k, v in first.items() if k in tot}, "players": out})
+
+
 def main():
     T = team_table()
     sched = [g for g in get("schedules/games.csv") if int(g["season"]) >= 1999]
@@ -604,6 +636,10 @@ def main():
     ranks = build_ranks(week26, sched)
     save("allen-2026.json", allen)
     save("nfl-ranks.json", ranks)
+    try:
+        build_mountain_live(week26)
+    except Exception as e:  # never let the mountain page block the rest of the update
+        print("touchdown mountain skipped:", e)
     team_rows = get(f"stats_team/stats_team_week_{SEASON}.csv")
     try:
         inj = get(f"injuries/injuries_{SEASON}.csv")

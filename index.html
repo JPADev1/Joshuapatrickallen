@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
 <meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=23">
+<link rel="stylesheet" href="css/site.css?v=24">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -193,7 +193,9 @@ function build(){
     var above=L.filter(function(v){return v>me;}).length, tie=L.filter(function(v){return v===me;}).length>0;
     return '<em class="rk">'+(tie?'T-':'#')+(above+1)+' in NFL history</em>';}
   document.getElementById('rknote').textContent='NFL all-time ranks are regular season unless the tile says playoffs. Retired players come from Pro-Football-Reference career leader lists and, for wins, Wikipedia\'s list of career quarterback wins leaders; active players\' totals are kept current from nflverse (as of '+NFL.asOf+'). Wins count games as the starting quarterback. The NFL keeps no official list for total touchdowns, so that rank is our count of players whose passing + rushing + receiving touchdowns exceed Allen\'s. Career rushing yards are ranked among quarterbacks. AFC East titles are ranked among Bills quarterbacks (Jim Kelly won 6).';
-  document.getElementById('tiles').innerHTML = TILES.map(function(t){return '<div class="tile"><b>'+t[0]+'</b><span>'+t[1]+'<br>'+t[2]+'</span>'+rk(t[1],t[3])+'</div>';}).join('');
+  var LINK={"Career total touchdowns":["touchdown-mountain.html","See his climb &rarr;"]};  // tiles that open their own page
+  document.getElementById('tiles').innerHTML = TILES.map(function(t){var inner='<b>'+t[0]+'</b><span>'+t[1]+'<br>'+t[2]+'</span>'+rk(t[1],t[3]), L=LINK[t[1]];
+    return L?'<a class="tile" href="'+L[0]+'">'+inner+'<span class="go">'+L[1]+'</span></a>':'<div class="tile">'+inner+'</div>';}).join('');
   var T = {g:0,gs:0,c:0,a:0,y:0,t:0,i:0,s:0,ra:0,ry:0,rt:0,rf:0,rl:0}, pr='', rr='';
   SEASONS.forEach(function(s){
     T.g+=s[1];T.gs+=s[2];T.c+=s[3];T.a+=s[4];T.y+=s[5];T.t+=s[6];T.i+=s[7];T.s+=s[8];T.ra+=s[10];T.ry+=s[11];T.rt+=s[12];T.rf+=s[13];T.rl+=s[14];

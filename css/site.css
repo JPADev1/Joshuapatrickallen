@@ -209,3 +209,58 @@ body:not(.hailee) .hero .wrap.mgbelow .facts{margin-bottom:104px}
 .mglabel.above svg{rotate:180deg}
 body.hailee .mgov{display:none}
 .hero .wrap{position:relative}
+
+/* ---- touchdown mountain ---- */
+:root{--mtn-top:#5b7bb8;--mtn-bot:#22396b;--mtn-back:#c9d4ea;--mtn-sky:#eaf0fb}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--mtn-top:#3a5899;--mtn-bot:#16264a;--mtn-back:#1d2b52;--mtn-sky:#0f1a36}}
+:root[data-theme="dark"]{--mtn-top:#3a5899;--mtn-bot:#16264a;--mtn-back:#1d2b52;--mtn-sky:#0f1a36}
+.mtn-card{padding:14px}
+.mtn-ctl{display:flex;flex-direction:column;gap:8px;margin-bottom:6px}
+.mtn-ctl .tabs{margin:0;gap:6px}
+.mtn-ctl .tabs button{font-size:.82rem;padding:5px 13px}
+.mtn-ctl .tabs button:disabled{opacity:.35;cursor:not-allowed}
+.mtn-head{margin:8px 0 10px;font-size:.95rem;line-height:1.4;min-height:2.8em}
+.mtn-head b{color:var(--blue)}
+.mtn-sm{display:block;color:var(--mute);font-size:.78rem;margin-top:2px}
+.mtn{position:relative;width:100%;height:480px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,var(--mtn-sky),var(--card))}
+.mtn svg{position:absolute;inset:0;width:100%;height:100%}
+.mtn-back{fill:var(--mtn-back);opacity:.7}
+.mtn-snow{fill:#fff;opacity:.92}
+.mtn-ridge{fill:none;stroke:rgba(255,255,255,.55);stroke-width:1.5;stroke-linejoin:round}
+.mtn-ground{fill:var(--mtn-bot);opacity:.9}
+.mtn-pole{stroke:var(--ink);stroke-width:2}
+.mtn-flag{fill:var(--red)}
+.mtn-base{fill:#fff;font-size:10px;font-weight:800;letter-spacing:.12em;opacity:.8}
+.dot{fill:#fff;stroke:var(--mtn-bot);stroke-width:1.5}
+.dot-me{fill:var(--red);stroke:#fff;stroke-width:2}
+.pill-m{position:absolute;left:0;top:0;white-space:nowrap;font-size:.76rem;line-height:1;padding:4px 9px 4px 4px;border-radius:99px;
+  background:var(--card);color:var(--ink);border:1px solid var(--line);box-shadow:0 2px 6px rgba(0,0,0,.18);
+  transition:transform .7s cubic-bezier(.4,.1,.2,1),opacity .4s ease;will-change:transform}
+.pill-m i{font-style:normal;font-weight:800;font-size:.68rem;display:inline-block;min-width:22px;text-align:center;margin-right:5px;
+  padding:3px 4px;border-radius:99px;background:var(--bg);color:var(--mute)}
+.pill-m b{color:var(--blue)}
+.pill-m.me{background:var(--red);color:#fff;border-color:#fff;font-weight:800;font-size:.84rem;z-index:2;box-shadow:0 3px 12px rgba(198,12,48,.45)}
+.pill-m.me i{background:rgba(255,255,255,.25);color:#fff}
+.pill-m.me b{color:#fff}
+.pill-m.basecamp{border-style:dashed}
+.mtn-slide{display:flex;gap:12px;align-items:flex-start;margin-top:14px}
+.mtn-play{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--blue);color:#fff;font-size:1rem;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.mtn-play:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.mtn-range{flex:1;min-width:0}
+.mtn-range label{display:block;font-weight:800;font-size:.92rem;margin-bottom:2px}
+.mtn-range input{width:100%;accent-color:var(--red)}
+.mtn-ticks{display:flex;justify-content:space-between;font-size:.68rem;color:var(--mute);padding:0 2px}
+.mtn-ticks span:last-child{font-weight:700}
+#list tr.me-row td{background:var(--chip);font-weight:700}
+#list td:nth-child(2),#list th:nth-child(2){text-align:left}
+@media (prefers-reduced-motion:reduce){.pill-m{transition:opacity .2s}}
+@media (max-width:520px){.pill-m{font-size:.7rem}.pill-m.me{font-size:.78rem}.mtn-ticks span:nth-child(even):not(:last-child){visibility:hidden}}
+a.tile{text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+a.tile:hover,a.tile:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.tile .go{margin-top:auto;font-size:.74rem;font-weight:800;color:var(--blue)}
+.tile .rk+.go{margin-top:8px}
+@media (prefers-reduced-motion:reduce){a.tile{transition:none}a.tile:hover{transform:none}}
+.mtn-snow{fill:#f4f8ff;stroke:rgba(0,40,110,.28);stroke-width:1}
+.mtn-ridge{stroke:rgba(10,30,70,.35)}
+.lead{stroke:var(--mute);stroke-width:1;opacity:.55}
+.lead-me{stroke:var(--red);opacity:.9;stroke-width:1.5}
