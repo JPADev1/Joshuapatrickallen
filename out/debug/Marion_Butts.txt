@@ -1,4 +1,4 @@
-# Marion Butts: fetch failed: The page you specified doesn't exist.
+# Marion Butts: Leroy Thompson (running back): not the same player? rec 8 vs draft data 1 / LaDainian Tomlinson: not the same player? pass 7 vs draft data 0 / Bobby Jackson (American football coach): no NFL stats table
 ## headings: NFL career statistics | Professional career
   Year ; Team ; GP ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
   1989 ; SD ; 15 ; 170 ; 683 ; 4.0 ; 50 ; 9 ; 7 ; 21 ; 3.0 ; 8 ; 0

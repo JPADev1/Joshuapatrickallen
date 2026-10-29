@@ -3872,6 +3872,31 @@
 "career": {}
 },
 {
+"name": "Brian Griese",
+"wiki": "Brian Griese",
+"pos": "",
+"first": 1998,
+"last": 2008,
+"infobox": {
+"pass": 119
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Brian Sipe",
 "wiki": "Brian Sipe",
 "pos": "Quarterback",
@@ -5695,6 +5720,31 @@
 }
 },
 {
+"name": "Corey Bradford",
+"wiki": "Corey Bradford",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2006,
+"infobox": {
+"rec": 25
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Corey Dillon",
 "wiki": "Corey Dillon",
 "pos": "Running back",
@@ -5726,6 +5776,60 @@
 "missing": [],
 "info": [],
 "career": {}
+},
+{
+"name": "Cory Schlesinger",
+"wiki": "Cory Schlesinger",
+"pos": "Fullback",
+"first": 1995,
+"last": 2006,
+"infobox": {
+"rush": 5,
+"rec": 9
+},
+"seasons": [
+[
+1995,
+0,
+1,
+2
+],
+[
+1996,
+0,
+0,
+0
+],
+[
+1997,
+0,
+0,
+1
+],
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [
+"career row rec 9 != season sum 11",
+"infobox rec 9 != table 11",
+"career row rush 5 != season sum 6",
+"infobox rush 5 != table 6"
+],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [
+"rec"
+],
+"info": [],
+"career": {
+"rec": 9
+}
 },
 {
 "name": "Cotton Davidson",
@@ -12436,6 +12540,31 @@
 "career": {}
 },
 {
+"name": "Hines Ward",
+"wiki": "Hines Ward",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2011,
+"infobox": {
+"rec": 85
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Homer Jones",
 "wiki": "Homer Jones (American football)",
 "pos": "Wide receiver",
@@ -13141,6 +13270,38 @@
 "career": {}
 },
 {
+"name": "Jake Delhomme",
+"wiki": "Jake Delhomme",
+"pos": "Quarterback",
+"first": 1997,
+"last": 2011,
+"infobox": {
+"pass": 126
+},
+"seasons": [
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Jake Plummer",
 "wiki": "Jake Plummer",
 "pos": "Quarterback",
@@ -13475,6 +13636,38 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Jay Fiedler",
+"wiki": "Jay Fiedler",
+"pos": "Quarterback",
+"first": 1995,
+"last": 2005,
+"infobox": {
+"pass": 69
+},
+"seasons": [
+[
+1995,
+0,
+0,
+0
+],
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
 ],
 "missing": [],
 "info": [],
@@ -15519,6 +15712,31 @@
 0,
 0,
 1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Joe Jurevicius",
+"wiki": "Joe Jurevicius",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2007,
+"infobox": {
+"rec": 29
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
 ]
 ],
 "notes": [],
@@ -18244,6 +18462,32 @@
 "career": {}
 },
 {
+"name": "Kurt Warner",
+"wiki": "Kurt Warner",
+"pos": "Quarterback",
+"first": 1998,
+"last": 2009,
+"infobox": {
+"pass": 208
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Kyle Brady",
 "wiki": "Kyle Brady",
 "pos": "Tight end",
@@ -20169,6 +20413,91 @@
 "career": {}
 },
 {
+"name": "Mark Clayton",
+"wiki": "Mark Clayton (American football, born 1961)",
+"pos": "Wide receiver",
+"first": 1983,
+"last": 1993,
+"infobox": {
+"rec": 84
+},
+"seasons": [
+[
+1983,
+0,
+0,
+1
+],
+[
+1984,
+0,
+0,
+18
+],
+[
+1985,
+0,
+0,
+4
+],
+[
+1986,
+0,
+0,
+10
+],
+[
+1987,
+0,
+0,
+7
+],
+[
+1988,
+0,
+0,
+14
+],
+[
+1989,
+0,
+0,
+9
+],
+[
+1990,
+0,
+0,
+3
+],
+[
+1991,
+0,
+0,
+12
+],
+[
+1992,
+0,
+0,
+3
+],
+[
+1993,
+0,
+0,
+3
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Mark Duper",
 "wiki": "Mark Duper",
 "pos": "Wide receiver",
@@ -20593,6 +20922,32 @@
 "career": {}
 },
 {
+"name": "Matt Hasselbeck",
+"wiki": "Matt Hasselbeck",
+"pos": "Quarterback",
+"first": 1998,
+"last": 2015,
+"infobox": {
+"pass": 212
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Mel Gray",
 "wiki": "Mel Gray (wide receiver)",
 "pos": "Wide receiver",
@@ -20980,6 +21335,33 @@
 "career": {}
 },
 {
+"name": "Michael Pittman Sr.",
+"wiki": "Michael Pittman Sr.",
+"pos": "Running back",
+"first": 1998,
+"last": 2008,
+"infobox": {
+"rush": 25,
+"rec": 8
+},
+"seasons": [
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Michael Westbrook",
 "wiki": "Michael Westbrook",
 "pos": "Wide receiver",
@@ -21015,6 +21397,48 @@
 ]
 ],
 "notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Mike Alstott",
+"wiki": "Mike Alstott",
+"pos": "Fullback",
+"first": 1996,
+"last": 2006,
+"infobox": {
+"rush": 58,
+"rec": 13
+},
+"seasons": [
+[
+1996,
+0,
+3,
+3
+],
+[
+1997,
+0,
+7,
+3
+],
+[
+1998,
+0,
+8,
+1
+]
+],
+"notes": [
+"career row rush 58 != season sum 59",
+"infobox rush 58 != table 59"
+],
 "kinds": [
 "rec",
 "rush"
@@ -21289,6 +21713,35 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Mike Vrabel",
+"wiki": "Mike Vrabel",
+"pos": "Linebacker",
+"first": 1997,
+"last": 2010,
+"infobox": {},
+"seasons": [
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
 ],
 "missing": [],
 "info": [],
@@ -28870,6 +29323,51 @@
 0,
 0,
 6
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Tony Richardson",
+"wiki": "Tony Richardson (American football)",
+"pos": "Fullback",
+"first": 1995,
+"last": 2010,
+"infobox": {
+"rush": 15,
+"rec": 9
+},
+"seasons": [
+[
+1995,
+0,
+0,
+0
+],
+[
+1996,
+0,
+0,
+1
+],
+[
+1997,
+0,
+0,
+3
+],
+[
+1998,
+0,
+2,
+0
 ]
 ],
 "notes": [],
