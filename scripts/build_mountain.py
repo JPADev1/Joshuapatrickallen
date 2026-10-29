@@ -140,8 +140,6 @@ def main():
             for n in list(range(1, MAX_N + 1)) + [None]:
                 score = []
                 for p in group:
-                    if n is not None and p["first"] + n - 1 > U.SEASON - 1:
-                        continue
                     v = total(p, kind, n)
                     if v:
                         score.append((v, p["id"]))

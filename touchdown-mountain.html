@@ -74,8 +74,7 @@ function ranking(){
   var rows=[];
   P.forEach(function(p){
     if(p.id!==ALLEN&&S.pos!=='ALL'&&p.pos!==S.pos)return;
-    // through N seasons only compares players who have actually reached season N (or are Allen)
-    if(S.n&&p.id!==ALLEN&&p.first+S.n-1>CUR)return;
+    // everyone counts with what he has so far; shorter careers (finished or still going) show their seasons in parentheses
     var v=total(p,S.kind,S.n); if(v===null)return; if(v>0||p.id===ALLEN)rows.push({p:p,v:v});
   });
   rows.sort(function(a,b){return b.v-a.v||(a.p.id===ALLEN?-1:b.p.id===ALLEN?1:a.p.name<b.p.name?-1:1);});
