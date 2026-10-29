@@ -1,4 +1,4 @@
-381 players with pre-1999 seasons; 18 need a look
+385 players with pre-1999 seasons; 17 need a look
 
 check	Arnie Herber	infobox rush 3 != table 2
 check	Bart Starr	career row rush 15 != season sum 19
@@ -13,30 +13,10 @@ check	Herschel Walker	career row rec 21 != season sum 22; infobox rec 21 != tabl
 check	Joey Galloway	career row rec 77 != season sum 79; infobox rec 77 != table 79
 check	Larry Csonka	career row rec 5 != season sum 4
 check	Len Dawson	career row pass 239 != season sum 232; infobox pass 239 != table 232
-check	Mike Alstott	career row rush 58 != season sum 59; infobox rush 58 != table 59
 check	Ottis Anderson	career row rush 81 != season sum 82; infobox rush 81 != table 82
 check	Steve McNair	infobox rush 38 != table 37
 check	Terry Allen (running back)	career row rec 6 != season sum 7
 check	Tommy Maddox	infobox rush 5 != table 1
-draft-miss	Anthony Miller	no NFL stats table
-draft-miss	Barry Foster	fetch failed: The page you specified doesn't exist.
-draft-miss	Billy Joe Tolliver	fetch failed: The page you specified doesn't exist.
-draft-miss	Chris Warren	fetch failed: The page you specified doesn't exist.
-draft-miss	Christian Okoye	fetch failed: The page you specified doesn't exist.
-draft-miss	Craig Erickson	fetch failed: The page you specified doesn't exist.
-draft-miss	Eric Green	no NFL stats table
-draft-miss	Frank Reich	fetch failed: The page you specified doesn't exist.
-draft-miss	Greg Bell	no NFL stats table
-draft-miss	Jamal Anderson	fetch failed: The page you specified doesn't exist.
-draft-miss	James Brooks	not the same player? rec 49 vs draft data 30
-draft-miss	James Jones	fetch failed: The page you specified doesn't exist.
-draft-miss	James Stewart	no NFL stats table
-draft-miss	James Wilder	fetch failed: The page you specified doesn't exist.
-draft-miss	Leonard Russell	fetch failed: The page you specified doesn't exist.
-draft-miss	Marion Butts	fetch failed: The page you specified doesn't exist.
-draft-miss	Michael Pittman	fetch failed: The page you specified doesn't exist.
-draft-miss	Qadry Ismail	fetch failed: The page you specified doesn't exist.
-draft-miss	Reggie Cobb	fetch failed: The page you specified doesn't exist.
 skip	Aaron Jones (running back)	career began 1999 or later (nflverse covers it)
 skip	Aaron Rodgers	career began 1999 or later (nflverse covers it)
 skip	Adrian Burk	no NFL stats table

@@ -36,7 +36,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Abner Haynes",
@@ -104,7 +105,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ahman Green",
@@ -130,7 +132,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Al Denson",
@@ -196,7 +199,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Al Toon",
@@ -262,7 +266,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Alan Ameche",
@@ -318,7 +323,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Alfred Jenkins",
@@ -390,7 +396,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Alyn Beals",
@@ -424,7 +431,10 @@
 ],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
-]
+],
+"career": {
+"rec": 49
+}
 },
 {
 "name": "Amani Toomer",
@@ -461,7 +471,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Andre Reed",
@@ -564,7 +575,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Andre Rison",
@@ -642,7 +654,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Andy Farkas",
@@ -710,7 +723,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Anthony Carter",
@@ -794,7 +808,88 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
+},
+{
+"name": "Anthony Miller",
+"wiki": "Anthony Miller (wide receiver, born 1965)",
+"pos": "Wide receiver",
+"first": 1988,
+"last": 1997,
+"infobox": {
+"rec": 63
+},
+"seasons": [
+[
+1988,
+0,
+0,
+3
+],
+[
+1989,
+0,
+0,
+10
+],
+[
+1990,
+0,
+0,
+7
+],
+[
+1991,
+0,
+0,
+3
+],
+[
+1992,
+0,
+0,
+7
+],
+[
+1993,
+0,
+0,
+7
+],
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+14
+],
+[
+1996,
+0,
+1,
+3
+],
+[
+1997,
+0,
+0,
+4
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
 },
 {
 "name": "Antonio Freeman",
@@ -836,7 +931,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Antowain Smith",
@@ -868,7 +964,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Archie Manning",
@@ -975,7 +1072,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 18"
-]
+],
+"career": {
+"rush": 18
+}
 },
 {
 "name": "Arnie Herber",
@@ -1075,7 +1175,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Art Monk",
@@ -1189,7 +1290,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Babe Parilli",
@@ -1298,7 +1400,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bam Morris",
@@ -1345,7 +1448,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Barry Sanders",
@@ -1425,7 +1529,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bart Starr",
@@ -1542,7 +1647,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ben Coates",
@@ -1608,7 +1714,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Benny Friedman",
@@ -1676,7 +1783,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bernie Kosar",
@@ -1768,7 +1876,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Bert Jones",
@@ -1847,7 +1956,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bill Brooks",
@@ -1931,7 +2041,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bill Groman",
@@ -1990,7 +2101,10 @@
 "missing": [
 "rec"
 ],
-"info": []
+"info": [],
+"career": {
+"rec": 36
+}
 },
 {
 "name": "Bill Nelsen",
@@ -2069,7 +2183,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bill Paschal",
@@ -2122,7 +2237,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Billy Dewell",
@@ -2182,7 +2298,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Billy Howton",
@@ -2272,7 +2389,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Billy Kilmer",
@@ -2387,7 +2505,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Billy Sims",
@@ -2437,7 +2556,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Billy Wilson",
@@ -2515,7 +2635,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bob Griese",
@@ -2618,7 +2739,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bob Hayes",
@@ -2703,7 +2825,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bobby Douglass",
@@ -2783,7 +2906,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bobby Engram",
@@ -2820,7 +2944,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bobby Layne",
@@ -2938,7 +3063,11 @@
 "pass",
 "rush"
 ],
-"info": []
+"info": [],
+"career": {
+"pass": 196,
+"rush": 25
+}
 },
 {
 "name": "Bobby Mitchell",
@@ -3021,7 +3150,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bobby Thomason",
@@ -3088,7 +3218,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Boomer Esiason",
@@ -3194,7 +3325,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Brad Baxter",
@@ -3255,7 +3387,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Brad Johnson",
@@ -3304,7 +3437,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Brent Jones",
@@ -3388,7 +3522,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Brett Favre",
@@ -3455,7 +3590,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Brett Perriman",
@@ -3533,7 +3669,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Brian Blades",
@@ -3617,7 +3754,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Brian Sipe",
@@ -3699,7 +3837,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Bronko Nagurski",
@@ -3772,7 +3911,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Bubby Brister",
@@ -3864,7 +4004,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Calvin Williams",
@@ -3924,7 +4065,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Carl Pickens",
@@ -3985,7 +4127,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Carlos Carson",
@@ -4063,7 +4206,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cecil Isbell",
@@ -4117,7 +4261,8 @@
 ],
 "info": [
 "table has no rec columns"
-]
+],
+"career": {}
 },
 {
 "name": "Charles White",
@@ -4185,7 +4330,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Charley Johnson",
@@ -4295,7 +4441,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Charley Taylor",
@@ -4399,7 +4546,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Charlie Batch",
@@ -4425,7 +4573,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Charlie Conerly",
@@ -4531,7 +4680,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Charlie Garner",
@@ -4581,7 +4731,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Chet Mutryn",
@@ -4612,7 +4763,11 @@
 ],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
-]
+],
+"career": {
+"rush": 27,
+"rec": 12
+}
 },
 {
 "name": "Chris Burford",
@@ -4678,7 +4833,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Chris Calloway",
@@ -4749,7 +4905,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Chris Chandler",
@@ -4834,7 +4991,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Chris Miller",
@@ -4907,7 +5065,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Chuck Foreman",
@@ -4975,7 +5134,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Chuck Muncie",
@@ -5049,7 +5209,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cleveland Gary",
@@ -5111,7 +5272,11 @@
 ],
 "info": [
 "table has no rush columns; career rush 24"
-]
+],
+"career": {
+"rush": 24,
+"rec": 5
+}
 },
 {
 "name": "Cliff Battles",
@@ -5168,7 +5333,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cliff Branch",
@@ -5270,7 +5436,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cloyce Box",
@@ -5322,7 +5489,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Cookie Gilchrist",
@@ -5382,7 +5550,10 @@
 "missing": [
 "rec"
 ],
-"info": []
+"info": [],
+"career": {
+"rec": 6
+}
 },
 {
 "name": "Corey Dillon",
@@ -5414,7 +5585,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cotton Davidson",
@@ -5493,7 +5665,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Craig Heyward",
@@ -5579,7 +5752,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Craig Morton",
@@ -5707,7 +5881,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cris Carter",
@@ -5797,7 +5972,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Cris Collinsworth",
@@ -5864,7 +6040,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Curt Warner",
@@ -5929,7 +6106,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Curtis Conway",
@@ -5983,7 +6161,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Curtis Dickey",
@@ -6045,7 +6224,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Curtis Martin",
@@ -6089,7 +6269,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Curtis McClinton",
@@ -6154,7 +6335,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dalton Hilliard",
@@ -6219,7 +6401,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dan Fouts",
@@ -6329,7 +6512,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dan Marino",
@@ -6444,7 +6628,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dan Towler",
@@ -6497,7 +6682,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Danny White",
@@ -6594,7 +6780,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Darnay Scott",
@@ -6642,7 +6829,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Daryl Turner",
@@ -6684,7 +6872,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Daryle Lamonica",
@@ -6776,7 +6965,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dave Krieg",
@@ -6912,7 +7102,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Dave Parks",
@@ -6990,7 +7181,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "David Sims",
@@ -7027,7 +7219,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "David Woodley",
@@ -7082,7 +7275,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Derrick Alexander",
@@ -7130,7 +7324,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Derrick Fenner",
@@ -7203,7 +7398,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Derrick Mason",
@@ -7233,7 +7429,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dick Gordon",
@@ -7311,7 +7508,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Don Hutson",
@@ -7396,7 +7594,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Don Majkowski",
@@ -7476,7 +7675,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Don Maynard",
@@ -7584,7 +7784,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Don Meredith",
@@ -7657,7 +7858,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Dorsey Levens",
@@ -7707,7 +7909,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Doug Flutie",
@@ -7757,7 +7960,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Drew Bledsoe",
@@ -7812,7 +8016,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Duane Thomas",
@@ -7853,7 +8058,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Earl Campbell",
@@ -7920,7 +8126,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Earl Morrall",
@@ -8065,7 +8272,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Earnest Byner",
@@ -8168,7 +8376,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ed Brown",
@@ -8262,7 +8471,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Ed McCaffrey",
@@ -8328,7 +8538,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eddie Brown",
@@ -8388,7 +8599,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eddie George",
@@ -8426,7 +8638,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eddie Kennison",
@@ -8462,7 +8675,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Elroy Hirsch",
@@ -8539,7 +8753,10 @@
 ],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948]"
-]
+],
+"career": {
+"rec": 60
+}
 },
 {
 "name": "Elvis Grbac",
@@ -8591,7 +8808,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Emerson Boozer",
@@ -8670,7 +8888,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Emmitt Smith",
@@ -8744,7 +8963,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eric Dickerson",
@@ -8830,7 +9050,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eric Hipple",
@@ -8913,7 +9134,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 13"
-]
+],
+"career": {
+"rush": 13
+}
 },
 {
 "name": "Eric Martin",
@@ -8991,7 +9215,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eric Metcalf",
@@ -9068,7 +9293,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Eric Moulds",
@@ -9104,7 +9330,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ernest Givins",
@@ -9182,7 +9409,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Errict Rhett",
@@ -9229,7 +9457,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Floyd Little",
@@ -9303,7 +9532,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Floyd Turner",
@@ -9375,7 +9605,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Fran Tarkenton",
@@ -9503,7 +9734,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Franco Harris",
@@ -9601,7 +9833,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Frank Clarke",
@@ -9685,7 +9918,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Frank Ryan",
@@ -9782,7 +10016,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Frank Tripucka",
@@ -9850,7 +10085,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Frankie Albert",
@@ -9895,7 +10131,11 @@
 ],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
-]
+],
+"career": {
+"pass": 0,
+"rush": 27
+}
 },
 {
 "name": "Fred Barnett",
@@ -9961,7 +10201,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Fred Biletnikoff",
@@ -10063,7 +10304,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Fred Taylor",
@@ -10089,7 +10331,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Freeman McNeil",
@@ -10180,7 +10423,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gale Sayers",
@@ -10243,7 +10487,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Garrison Hearst",
@@ -10301,7 +10546,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gary Collins",
@@ -10379,7 +10625,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gary Famiglietti",
@@ -10450,7 +10697,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gary Hogeboom",
@@ -10529,7 +10777,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "George Blanda",
@@ -10710,7 +10959,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "George Rogers",
@@ -10771,7 +11021,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gerald Riggs",
@@ -10850,7 +11101,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gerry Ellis",
@@ -10911,7 +11163,70 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
+},
+{
+"name": "Greg Bell",
+"wiki": "Greg Bell (running back, born 1962)",
+"pos": "Running back",
+"first": 1984,
+"last": 1990,
+"infobox": {
+"rush": 51
+},
+"seasons": [
+[
+1984,
+0,
+7,
+1
+],
+[
+1985,
+0,
+8,
+1
+],
+[
+1986,
+0,
+4,
+2
+],
+[
+1987,
+0,
+0,
+1
+],
+[
+1988,
+0,
+16,
+2
+],
+[
+1989,
+0,
+15,
+0
+],
+[
+1990,
+0,
+1,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
 },
 {
 "name": "Greg Landry",
@@ -11020,7 +11335,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Gus Frerotte",
@@ -11072,7 +11388,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Harlon Hill",
@@ -11144,7 +11461,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Harold Carmichael",
@@ -11246,7 +11564,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Harold Jackson",
@@ -11361,7 +11680,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Haywood Jeffires",
@@ -11439,7 +11759,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Henry Ellard",
@@ -11554,7 +11875,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Herman Moore",
@@ -11620,7 +11942,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Herschel Walker",
@@ -11715,7 +12038,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Homer Jones",
@@ -11775,7 +12099,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Hugh Gallarneau",
@@ -11822,7 +12147,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Hugh Taylor",
@@ -11888,7 +12214,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ickey Woods",
@@ -11931,7 +12258,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ike Hilliard",
@@ -11961,7 +12289,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Irving Fryar",
@@ -12069,7 +12398,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Isaac Bruce",
@@ -12119,7 +12449,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "J. J. Stokes",
@@ -12161,7 +12492,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jack Kemp",
@@ -12240,7 +12572,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jack Trudeau",
@@ -12319,7 +12652,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jackie Parker",
@@ -12409,7 +12743,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jake Plummer",
@@ -12440,7 +12775,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jake Reed",
@@ -12506,7 +12842,134 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
+},
+{
+"name": "James \"Little Man\" Stewart",
+"wiki": "James \"Little Man\" Stewart",
+"pos": "Running back",
+"first": 1995,
+"last": 2002,
+"infobox": {
+"rush": 48,
+"rec": 9
+},
+"seasons": [
+[
+1995,
+0,
+2,
+1
+],
+[
+1996,
+0,
+8,
+2
+],
+[
+1997,
+0,
+8,
+1
+],
+[
+1998,
+0,
+2,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "James Jones",
+"wiki": "James Jones (running back, born 1961)",
+"pos": "Fullback",
+"first": 1983,
+"last": 1992,
+"infobox": {
+"rush": 26,
+"rec": 10
+},
+"seasons": [
+[
+1983,
+0,
+6,
+1
+],
+[
+1984,
+0,
+3,
+5
+],
+[
+1985,
+0,
+6,
+3
+],
+[
+1986,
+0,
+8,
+1
+],
+[
+1987,
+0,
+0,
+0
+],
+[
+1988,
+0,
+0,
+0
+],
+[
+1989,
+0,
+0,
+0
+],
+[
+1990,
+0,
+0,
+0
+],
+[
+1991,
+0,
+3,
+0
+],
+[
+1992,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
 },
 {
 "name": "James Lofton",
@@ -12620,7 +13083,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jay Novacek",
@@ -12704,7 +13168,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jay Schroeder",
@@ -12784,7 +13249,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jeff Blake",
@@ -12840,7 +13306,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jeff George",
@@ -12917,7 +13384,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 2"
-]
+],
+"career": {
+"rush": 2
+}
 },
 {
 "name": "Jeff Graham",
@@ -12983,7 +13453,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jeff Hostetler",
@@ -13074,7 +13545,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jerome Bettis",
@@ -13130,7 +13602,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jerry Rice",
@@ -13233,7 +13706,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Benton",
@@ -13305,7 +13779,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Brown",
@@ -13379,7 +13854,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Everett",
@@ -13473,7 +13949,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Jim Harbaugh",
@@ -13565,7 +14042,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Hart",
@@ -13701,7 +14179,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Jim Kelly",
@@ -13786,7 +14265,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Kiick",
@@ -13857,7 +14337,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim McMahon",
@@ -13970,7 +14451,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 16"
-]
+],
+"career": {
+"rush": 16
+}
 },
 {
 "name": "Jim Mutscheller",
@@ -14036,7 +14520,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Nance",
@@ -14103,7 +14588,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jim Plunkett",
@@ -14216,7 +14702,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 14"
-]
+],
+"career": {
+"rush": 14
+}
 },
 {
 "name": "Jim Taylor",
@@ -14296,7 +14785,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jimmy Smith",
@@ -14350,7 +14840,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Joe Cribbs",
@@ -14423,7 +14914,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Joe Ferguson",
@@ -14547,7 +15039,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Joe Horn",
@@ -14583,7 +15076,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Joe Montana",
@@ -14699,7 +15193,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Joe Morris",
@@ -14766,7 +15261,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Joe Namath",
@@ -14866,7 +15362,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Joe Perry",
@@ -14975,7 +15472,11 @@
 ],
 "info": [
 "AAFC seasons left out: [1948, 1949]"
-]
+],
+"career": {
+"rush": 71,
+"rec": 12
+}
 },
 {
 "name": "Joey Galloway",
@@ -15022,7 +15523,10 @@
 "missing": [
 "rec"
 ],
-"info": []
+"info": [],
+"career": {
+"rec": 77
+}
 },
 {
 "name": "John Brodie",
@@ -15143,7 +15647,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "John Elway",
@@ -15259,7 +15764,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "John Friesz",
@@ -15335,7 +15841,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "John Hadl",
@@ -15451,7 +15958,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "John Jefferson",
@@ -15517,7 +16025,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "John Riggins",
@@ -15627,7 +16136,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "John Stallworth",
@@ -15729,7 +16239,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "John Taylor",
@@ -15801,7 +16312,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Johnnie Morton",
@@ -15849,7 +16361,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Johnny Drake",
@@ -15896,7 +16409,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Johnny Hector",
@@ -15975,7 +16489,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Johnny Lujack",
@@ -16022,7 +16537,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 21"
-]
+],
+"career": {
+"rush": 21
+}
 },
 {
 "name": "Johnny Morris",
@@ -16102,7 +16620,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Johnny Unitas",
@@ -16230,7 +16749,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Jon Kitna",
@@ -16261,7 +16781,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Keenan McCardell",
@@ -16327,7 +16848,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Keith Byars",
@@ -16425,7 +16947,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Keith Jackson",
@@ -16497,7 +17020,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ken Anderson",
@@ -16615,7 +17139,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Ken Kavanaugh",
@@ -16681,7 +17206,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ken O'Brien",
@@ -16763,7 +17289,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Ken Stabler",
@@ -16872,7 +17399,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Kenneth Davis",
@@ -16943,7 +17471,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Kerry Collins",
@@ -16986,7 +17515,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Kevin House",
@@ -17052,7 +17582,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Keyshawn Johnson",
@@ -17088,7 +17619,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Kordell Stewart",
@@ -17133,7 +17665,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Lamar Smith",
@@ -17182,7 +17715,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Lance Alworth",
@@ -17267,7 +17801,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Lance Rentzel",
@@ -17344,7 +17879,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Larry Csonka",
@@ -17432,7 +17968,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Larry Kinnebrew",
@@ -17493,7 +18030,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Len Dawson",
@@ -17633,7 +18171,10 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {
+"pass": 239
+}
 },
 {
 "name": "Lenny Moore",
@@ -17725,7 +18266,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Leroy Hoard",
@@ -17796,7 +18338,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Leroy Kelly",
@@ -17873,7 +18416,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Lorenzo White",
@@ -17941,7 +18485,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Louis Lipps",
@@ -18013,7 +18558,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Lynn Dickey",
@@ -18125,7 +18671,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Lynn Swann",
@@ -18197,7 +18744,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "MacArthur Lane",
@@ -18280,7 +18828,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Malcolm Kutner",
@@ -18328,7 +18877,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Marc Wilson",
@@ -18408,7 +18958,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Marcus Allen",
@@ -18524,7 +19075,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Marcus Robinson",
@@ -18548,7 +19100,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mario Bates",
@@ -18597,7 +19150,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Marion Motley",
@@ -18652,7 +19206,11 @@
 ],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
-]
+],
+"career": {
+"rush": 31,
+"rec": 7
+}
 },
 {
 "name": "Mark Bavaro",
@@ -18724,7 +19282,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mark Brunell",
@@ -18779,7 +19338,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mark Carrier",
@@ -18869,7 +19429,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mark Duper",
@@ -18953,7 +19514,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mark Malone",
@@ -19026,7 +19588,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mark Rypien",
@@ -19108,7 +19671,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Marshall Faulk",
@@ -19158,7 +19722,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Marvin Harrison",
@@ -19195,7 +19760,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Matt Dunigan",
@@ -19287,7 +19853,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Mel Gray",
@@ -19375,7 +19942,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mercury Morris",
@@ -19440,7 +20008,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Michael Haynes",
@@ -19518,7 +20087,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Michael Irvin",
@@ -19603,7 +20173,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Michael Jackson",
@@ -19669,48 +20240,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
-},
-{
-"name": "Mike Alstott",
-"wiki": "Mike Alstott",
-"pos": "Fullback",
-"first": 1996,
-"last": 2006,
-"infobox": {
-"rush": 58,
-"rec": 13
-},
-"seasons": [
-[
-1996,
-0,
-3,
-3
-],
-[
-1997,
-0,
-7,
-3
-],
-[
-1998,
-0,
-8,
-1
-]
-],
-"notes": [
-"career row rush 58 != season sum 59",
-"infobox rush 58 != table 59"
-],
-"kinds": [
-"rec",
-"rush"
-],
-"missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mike Pagel",
@@ -19802,7 +20333,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Mike Quick",
@@ -19874,7 +20406,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Milt Plum",
@@ -19971,7 +20504,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Muhsin Muhammad",
@@ -20008,7 +20542,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Nat Moore",
@@ -20104,7 +20639,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Natrone Means",
@@ -20159,7 +20695,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Neal Anderson",
@@ -20224,7 +20761,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Neil Lomax",
@@ -20298,7 +20836,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Neil O'Donnell",
@@ -20368,7 +20907,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Norm Snead",
@@ -20483,7 +21023,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Norm Van Brocklin",
@@ -20577,7 +21118,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "O. J. Simpson",
@@ -20663,7 +21205,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Otis Taylor",
@@ -20747,7 +21290,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ottis Anderson",
@@ -20854,7 +21398,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Otto Graham",
@@ -20915,7 +21460,11 @@
 ],
 "info": [
 "AAFC seasons left out: [1946, 1947, 1948, 1949]"
-]
+],
+"career": {
+"pass": 174,
+"rush": 44
+}
 },
 {
 "name": "Paul Hornung",
@@ -20995,7 +21544,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Paul Lowe",
@@ -21075,7 +21625,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Paul Robinson",
@@ -21128,7 +21679,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Paul Warfield",
@@ -21231,7 +21783,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Pete Banaszak",
@@ -21328,7 +21881,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Pete Pihos",
@@ -21400,7 +21954,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Peyton Manning",
@@ -21425,7 +21980,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Phil Simms",
@@ -21531,7 +22087,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Priest Holmes",
@@ -21563,7 +22120,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Quinn Early",
@@ -21647,7 +22205,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Randall Cunningham",
@@ -21745,7 +22304,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Randy Moss",
@@ -21771,7 +22331,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ray Butler",
@@ -21841,7 +22402,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Raymond Berry",
@@ -21937,7 +22499,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Rich Gannon",
@@ -22026,7 +22589,10 @@
 ],
 "info": [
 "table has no rush columns; career rush 21"
-]
+],
+"career": {
+"rush": 21
+}
 },
 {
 "name": "Rick Casares",
@@ -22115,7 +22681,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Rick Mirer",
@@ -22170,7 +22737,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Rickey Dudley",
@@ -22206,7 +22774,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ricky Proehl",
@@ -22278,7 +22847,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ricky Watters",
@@ -22340,7 +22910,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Rob Goode",
@@ -22387,7 +22958,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Robert Brooks",
@@ -22447,7 +23019,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Robert Smith",
@@ -22503,7 +23076,63 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
+},
+{
+"name": "Rocket Ismail",
+"wiki": "Rocket Ismail",
+"pos": "Wide receiver",
+"first": 1993,
+"last": 2001,
+"infobox": {
+"rec": 28
+},
+"seasons": [
+[
+1993,
+0,
+0,
+1
+],
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+3
+],
+[
+1996,
+0,
+0,
+0
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+8
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
 },
 {
 "name": "Rodney Hampton",
@@ -22568,7 +23197,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Rodney Holman",
@@ -22670,7 +23300,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Rodney Peete",
@@ -22749,7 +23380,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Roger Craig",
@@ -22832,7 +23464,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Roger Staubach",
@@ -22918,7 +23551,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Roman Gabriel",
@@ -23034,7 +23668,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ron Jaworski",
@@ -23155,7 +23790,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Roy Green",
@@ -23257,7 +23893,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ryan Leaf",
@@ -23282,7 +23919,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Sammy Baugh",
@@ -23400,7 +24038,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Sammy Winder",
@@ -23473,7 +24112,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Scott Mitchell",
@@ -23537,7 +24177,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Shannon Sharpe",
@@ -23609,7 +24250,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Sid Luckman",
@@ -23703,7 +24345,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Sonny Jurgensen",
@@ -23833,7 +24476,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Sonny Randle",
@@ -23911,7 +24555,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Stan Humphries",
@@ -23978,7 +24623,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Stanley Morgan",
@@ -24081,7 +24727,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Stephen Davis",
@@ -24122,7 +24769,10 @@
 ],
 "info": [
 "table has no rec columns; career rec 4"
-]
+],
+"career": {
+"rec": 4
+}
 },
 {
 "name": "Sterling Sharpe",
@@ -24183,7 +24833,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve Bartkowski",
@@ -24277,7 +24928,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Steve Beuerlein",
@@ -24368,7 +25020,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve Bono",
@@ -24474,7 +25127,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Steve DeBerg",
@@ -24598,7 +25252,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Steve Grogan",
@@ -24714,7 +25369,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve Largent",
@@ -24816,7 +25472,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve McNair",
@@ -24862,7 +25519,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve Van Buren",
@@ -24930,7 +25588,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve Watson",
@@ -25002,7 +25661,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Steve Young",
@@ -25106,7 +25766,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Stump Mitchell",
@@ -25177,7 +25838,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Ted Fritsch",
@@ -25248,7 +25910,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terance Mathis",
@@ -25320,7 +25983,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terrell Davis",
@@ -25363,7 +26027,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terrell Owens",
@@ -25400,7 +26065,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terry Allen",
@@ -25467,7 +26133,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terry Barr",
@@ -25543,7 +26210,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Terry Bradshaw",
@@ -25647,7 +26315,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terry Glenn",
@@ -25683,7 +26352,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Terry Kirby",
@@ -25736,7 +26406,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Thurman Thomas",
@@ -25822,7 +26493,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tiki Barber",
@@ -25854,7 +26526,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tim Brown",
@@ -25939,7 +26612,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tobin Rote",
@@ -26037,7 +26711,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tom Fears",
@@ -26109,7 +26784,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tom Matte",
@@ -26198,7 +26874,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tom Rathman",
@@ -26271,7 +26948,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tom Sullivan",
@@ -26332,7 +27010,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tommy Kramer",
@@ -26438,7 +27117,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Tommy Maddox",
@@ -26486,7 +27166,10 @@
 "missing": [
 "rush"
 ],
-"info": []
+"info": [],
+"career": {
+"rush": 5
+}
 },
 {
 "name": "Tommy McDonald",
@@ -26576,7 +27259,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tommy Thompson",
@@ -26649,7 +27333,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tony Banks",
@@ -26686,7 +27371,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tony Collins",
@@ -26754,7 +27440,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tony Dorsett",
@@ -26846,7 +27533,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tony Eason",
@@ -26916,7 +27604,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Tony Gonzalez",
@@ -26946,7 +27635,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tony Martin",
@@ -27017,7 +27707,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Torrance Small",
@@ -27077,7 +27768,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Trent Dilfer",
@@ -27126,7 +27818,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Trent Green",
@@ -27157,7 +27850,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Troy Aikman",
@@ -27236,7 +27930,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Troy Brown",
@@ -27290,7 +27985,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Tyrone Wheatley",
@@ -27331,7 +28027,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Vance Johnson",
@@ -27409,7 +28106,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Vinny Testaverde",
@@ -27501,7 +28199,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Wade Wilson",
@@ -27631,7 +28330,8 @@
 ],
 "info": [
 "table has no rush columns"
-]
+],
+"career": {}
 },
 {
 "name": "Walter Payton",
@@ -27730,7 +28430,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Warren Moon",
@@ -27840,7 +28541,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Warren Wells",
@@ -27888,7 +28590,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Warrick Dunn",
@@ -27920,7 +28623,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Webster Slaughter",
@@ -28010,7 +28714,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Wes Chandler",
@@ -28094,7 +28799,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Wesley Walls",
@@ -28172,7 +28878,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Wilbert Montgomery",
@@ -28246,7 +28953,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Willie Gault",
@@ -28328,7 +29036,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Wray Carlton",
@@ -28393,7 +29102,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Y. A. Tittle",
@@ -28508,7 +29218,11 @@
 ],
 "info": [
 "AAFC seasons left out: [1948, 1949]"
-]
+],
+"career": {
+"pass": 242,
+"rush": 39
+}
 },
 {
 "name": "Yancey Thigpen",
@@ -28574,7 +29288,8 @@
 "rec"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 },
 {
 "name": "Zack Crockett",
@@ -28618,7 +29333,8 @@
 "rush"
 ],
 "missing": [],
-"info": []
+"info": [],
+"career": {}
 }
 ]
 }
