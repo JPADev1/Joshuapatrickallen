@@ -1,0 +1,69 @@
+# Neil Lomax: fetch failed: The page you specified doesn't exist.
+## headings: 
+  No. 15
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1959-02-17 ) February 17, 1959 (age 67) Portland, Oregon , U.S.
+  Listed height ; 6 ft 3 in (1.91 m)
+  Listed weight ; 215 lb (98 kg)
+  Career information
+  High school ; Lake Oswego ( Lake Oswego, Oregon ) [ 1 ]
+  College ; Portland State
+  NFL draft ; 1981 : 2nd round, 33rd overall pick
+  Career history
+  Playing
+  St. Louis/Phoenix Cardinals ( 1981 – 1989 )
+  Coaching
+  Lake Oswego HS (OR) (1998–2005) Assistant coach Tigard HS (OR) (2006) Offensive coordinator Roosevelt HS (OR) (2008–2014) Assistant head coach & offensive coordinator Century HS (OR) (2017) Assistant coach Fort Vancouver HS (WA) (2018–2020) Head coach Cleveland HS (OR) (2021) Assistant coach George Fox (2021–2024) Quarterbacks coach
+  
+  Awards and highlights
+  2× Pro Bowl ( 1984 , 1987 ) NFL passing yards leader (1987) PFWA All-Rookie Team ( 1981 ) First-team I-AA All-American (1980) Portland State Vikings No. 11 retired
+  
+  Career NFL statistics
+  Passing attempts 3,153 Passing completions 1,817 Completion percentage 57.6% TD – INT 136–90 Passing yards 22,771 Passer rating 82.7 Rushing yards 969 Rushing touchdowns 10 Stats at Pro Football Reference ; Passing attempts ; 3,153 ; Passing completions ; 1,817 ; Completion percentage ; 57.6% ; TD – INT ; 136–90 ; Passing yards ; 22,771 ; Passer rating ; 82.7 ; Rushing yards ; 969 ; Rushing touchdowns ; 10 ; Stats at Pro Football Reference
+  Passing attempts ; 3,153
+  Passing completions ; 1,817
+  Completion percentage ; 57.6%
+  TD – INT ; 136–90
+  Passing yards ; 22,771
+  Passer rating ; 82.7
+  Rushing yards ; 969
+  Rushing touchdowns ; 10
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 3,153
+  Passing completions ; 1,817
+  Completion percentage ; 57.6%
+  TD – INT ; 136–90
+  Passing yards ; 22,771
+  Passer rating ; 82.7
+  Rushing yards ; 969
+  Rushing touchdowns ; 10
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg ; Att ; Yds ; Avg ; Lng ; TD
+  1981 ; STL ; 14 ; 7 ; 4–3 ; 119 ; 236 ; 50.4 ; 1,575 ; 6.7 ; 4 ; 10 ; 75 ; 59.9 ; 19 ; 104 ; 5.5 ; 22 ; 2
+  1982 ; STL ; 9 ; 9 ; 5–4 ; 109 ; 205 ; 53.2 ; 1,367 ; 6.7 ; 5 ; 6 ; 42 ; 70.1 ; 28 ; 119 ; 4.3 ; 19 ; 1
+  1983 ; STL ; 13 ; 13 ; 7–5–1 ; 209 ; 354 ; 59.0 ; 2,636 ; 7.4 ; 24 ; 11 ; 71 ; 92.0 ; 27 ; 127 ; 4.7 ; 35 ; 2
+  1984 ; STL ; 16 ; 16 ; 9–7 ; 345 ; 560 ; 61.6 ; 4,614 ; 8.2 ; 28 ; 16 ; 83 ; 92.5 ; 35 ; 184 ; 5.3 ; 20 ; 3
+  1985 ; STL ; 16 ; 16 ; 5–11 ; 265 ; 471 ; 56.3 ; 3,214 ; 6.8 ; 18 ; 12 ; 47 ; 79.5 ; 32 ; 125 ; 3.9 ; 23 ; 0
+  1986 ; STL ; 14 ; 14 ; 4–9–1 ; 240 ; 421 ; 57.0 ; 2,583 ; 6.1 ; 13 ; 12 ; 48 ; 73.6 ; 35 ; 148 ; 4.2 ; 18 ; 1
+  1987 ; STL ; 12 ; 12 ; 6–6 ; 275 ; 463 ; 59.4 ; 3,387 ; 7.3 ; 24 ; 12 ; 57 ; 88.5 ; 29 ; 107 ; 3.7 ; 19 ; 0
+  1988 ; PHX ; 14 ; 14 ; 7–7 ; 255 ; 443 ; 57.6 ; 3,395 ; 7.7 ; 20 ; 11 ; 93 ; 86.7 ; 17 ; 55 ; 3.2 ; 13 ; 1
+  1989 ; PHX ; Did not play due to injury
+  Career ; 108 ; 101 ; 47–52–2 ; 1,817 ; 3,153 ; 57.6 ; 22,771 ; 7.2 ; 136 ; 90 ; 93 ; 82.7 ; 222 ; 969 ; 4.4 ; 35 ; 10
+## headings: Postseason | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg ; Att ; Yds ; Avg ; Lng ; TD
+  1982 ; STL ; 1 ; 1 ; 0–1 ; 32 ; 51 ; 62.7 ; 385 ; 7.5 ; 2 ; 2 ; 36 ; 82.6 ; 4 ; 9 ; 2.3 ; 6 ; 0
+  Career ; 1 ; 1 ; 0–1 ; 32 ; 51 ; 62.7 ; 385 ; 7.5 ; 2 ; 2 ; 36 ; 82.6 ; 4 ; 9 ; 2.3 ; 6 ; 0
+## headings: College | Postseason | Regular season
+  Season ; Team ; Passing
+  Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int
+  1977 ; Portland State ; 102 ; 181 ; 56.4 ; 1,670 ; 9.2 ; 18 ; 5
+  1978 ; Portland State ; 241 ; 436 ; 55.3 ; 3,506 ; 8.0 ; 26 ; 22
+  1979 ; Portland State ; 299 ; 516 ; 58.0 ; 3,950 ; 7.7 ; 26 ; 16
+  1980 ; Portland State ; 296 ; 473 ; 62.6 ; 4,094 ; 8.7 ; 37 ; 12
+  Career ; 938 ; 1,606 ; 58.4 ; 13,220 ; 8.2 ; 107 ; 55

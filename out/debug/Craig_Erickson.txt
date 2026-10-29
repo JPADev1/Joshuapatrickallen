@@ -1,4 +1,4 @@
-# Craig Erickson: table has no TD columns
+# Craig Erickson: fetch failed: The page you specified doesn't exist.
 ## headings: 
   No. 7
   Position ; Quarterback

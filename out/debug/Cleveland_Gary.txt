@@ -1,0 +1,10 @@
+# Cleveland Gary: infobox rec 5 != table 24
+## headings: NFL career statistics | Professional career | College career
+  Year ; Team ; GP ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1989 ; LAR ; 10 ; 37 ; 163 ; 4.4 ; 18 ; 1 ; 2 ; 13 ; 6.5 ; 8 ; 0
+  1990 ; LAR ; 15 ; 204 ; 808 ; 4.0 ; 48 ; 14 ; 30 ; 150 ; 5.0 ; 22 ; 1
+  1991 ; LAR ; 10 ; 68 ; 245 ; 3.6 ; 14 ; 1 ; 13 ; 110 ; 8.5 ; 22 ; 0
+  1992 ; LAR ; 16 ; 279 ; 1,125 ; 4.0 ; 63 ; 7 ; 52 ; 293 ; 5.6 ; 22 ; 3
+  1993 ; LAR ; 15 ; 79 ; 293 ; 3.7 ; 15 ; 1 ; 36 ; 289 ; 8.0 ; 60 ; 1
+  1994 ; MIA ; 2 ; 7 ; 11 ; 1.6 ; 4 ; 0 ; 2 ; 19 ; 9.5 ; 11 ; 0
+  Career ; 68 ; 674 ; 2,645 ; 3.9 ; 63 ; 24 ; 135 ; 874 ; 6.5 ; 60 ; 5

@@ -1,0 +1,59 @@
+# Trent Green: fetch failed: The page you specified doesn't exist.
+## headings: 
+  No. 7, 10, 12
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1970-07-09 ) July 9, 1970 (age 56) Cedar Rapids, Iowa , U.S.
+  Listed height ; 6 ft 3 in (1.91 m)
+  Listed weight ; 208 lb (94 kg)
+  Career information
+  High school ; Vianney ( Kirkwood, Missouri )
+  College ; Indiana (1988–1992)
+  NFL draft ; 1993 : 8th round, 222nd overall pick
+  Career history
+  San Diego Chargers ( 1993 ) BC Lions ( 1994 ) Washington Redskins ( 1995 – 1998 ) St. Louis Rams ( 1999 – 2000 ) Kansas City Chiefs ( 2001 – 2006 ) Miami Dolphins ( 2007 ) St. Louis Rams ( 2008 )
+  
+  Awards and highlights
+  Super Bowl champion ( XXXIV ) 2× Pro Bowl ( 2003 , 2005 ) NFL record Longest touchdown pass: 99 yards (tied)
+  
+  Career NFL statistics
+  Passing attempts 3,740 Passing completions 2,266 Completion percentage 60.6% TD – INT 162–114 Passing yards 28,475 Passer rating 86 Stats at Pro Football Reference ; Passing attempts ; 3,740 ; Passing completions ; 2,266 ; Completion percentage ; 60.6% ; TD – INT ; 162–114 ; Passing yards ; 28,475 ; Passer rating ; 86 ; Stats at Pro Football Reference
+  Passing attempts ; 3,740
+  Passing completions ; 2,266
+  Completion percentage ; 60.6%
+  TD – INT ; 162–114
+  Passing yards ; 28,475
+  Passer rating ; 86
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 3,740
+  Passing completions ; 2,266
+  Completion percentage ; 60.6%
+  TD – INT ; 162–114
+  Passing yards ; 28,475
+  Passer rating ; 86
+  Stats at Pro Football Reference
+## headings: Regular season | NFL career statistics | Retirement
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; Lng ; TD ; Sck ; SckY ; Fum ; Lost
+  1997 ; WAS ; 1 ; 0 ; — ; 0 ; 1 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 39.6 ; — ; — ; — ; — ; — ; 0 ; 0 ; 0 ; 0
+  1998 ; WAS ; 15 ; 14 ; 6–8 ; 278 ; 509 ; 54.6 ; 3,441 ; 6.8 ; 75 ; 23 ; 11 ; 81.8 ; 42 ; 117 ; 2.8 ; 13 ; 2 ; 49 ; 338 ; 14 ; 7
+  1999 ; STL ; 0 ; 0 ; – ; Did not play due to injury
+  2000 ; STL ; 8 ; 5 ; 2–3 ; 145 ; 240 ; 60.4 ; 2,063 ; 8.6 ; 64 ; 16 ; 5 ; 101.8 ; 20 ; 69 ; 3.5 ; 18 ; 1 ; 24 ; 145 ; 3 ; 2
+  2001 ; KC ; 16 ; 16 ; 6–10 ; 296 ; 523 ; 56.6 ; 3,783 ; 7.2 ; 67 ; 17 ; 24 ; 71.1 ; 35 ; 158 ; 4.5 ; 16 ; 0 ; 39 ; 198 ; 11 ; 4
+  2002 ; KC ; 16 ; 16 ; 8–8 ; 287 ; 470 ; 61.1 ; 3,690 ; 7.9 ; 99 ; 26 ; 13 ; 92.6 ; 31 ; 225 ; 7.3 ; 24 ; 1 ; 26 ; 141 ; 1 ; 0
+  2003 ; KC ; 16 ; 16 ; 13–3 ; 330 ; 523 ; 63.1 ; 4,039 ; 7.7 ; 67 ; 24 ; 12 ; 92.6 ; 26 ; 83 ; 3.2 ; 14 ; 2 ; 20 ; 130 ; 5 ; 1
+  2004 ; KC ; 16 ; 16 ; 7–9 ; 369 ; 556 ; 66.4 ; 4,591 ; 8.3 ; 70 ; 27 ; 17 ; 95.2 ; 25 ; 85 ; 3.4 ; 13 ; 0 ; 32 ; 227 ; 11 ; 4
+  2005 ; KC ; 16 ; 16 ; 10–6 ; 317 ; 507 ; 62.5 ; 4,014 ; 7.9 ; 60 ; 17 ; 10 ; 90.1 ; 35 ; 82 ; 2.3 ; 13 ; 0 ; 32 ; 204 ; 8 ; 4
+  2006 ; KC ; 8 ; 8 ; 4–4 ; 121 ; 198 ; 61.1 ; 1,342 ; 6.8 ; 39 ; 7 ; 9 ; 74.1 ; 19 ; 59 ; 3.1 ; 10 ; 0 ; 24 ; 127 ; 5 ; 3
+  2007 ; MIA ; 5 ; 5 ; 0–5 ; 85 ; 141 ; 60.3 ; 987 ; 7.0 ; 43 ; 5 ; 7 ; 72.6 ; 7 ; 32 ; 4.6 ; 23 ; 0 ; 7 ; 53 ; 2 ; 0
+  2008 ; STL ; 3 ; 1 ; 0–1 ; 38 ; 72 ; 52.8 ; 525 ; 7.3 ; 53 ; 0 ; 6 ; 41.7 ; 3 ; 4 ; 1.3 ; 3 ; 0 ; 6 ; 58 ; 0 ; 0
+  Career ; 120 ; 113 ; 56–57 ; 2,266 ; 3,740 ; 60.6 ; 28,475 ; 7.6 ; 99 ; 162 ; 114 ; 86.0 ; 243 ; 914 ; 3.8 ; 24 ; 6 ; 259 ; 1,621 ; 60 ; 25
+## headings: Postseason | Regular season | NFL career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; Lng ; TD ; Sck ; SckY ; Fum ; Lost
+  1999 ; STL ; 0 ; 0 ; – ; Did not play
+  2000 ; STL ; 0 ; 0 ; –
+  2003 ; KC ; 1 ; 1 ; 0–1 ; 18 ; 30 ; 60.0 ; 212 ; 7.1 ; 25 ; 1 ; 0 ; 92.6 ; 3 ; 18 ; 6.0 ; 9 ; 0 ; 0 ; 0 ; 0 ; 0
+  2006 ; KC ; 1 ; 1 ; 0–1 ; 14 ; 24 ; 58.3 ; 107 ; 4.5 ; 24 ; 1 ; 2 ; 48.4 ; 1 ; -3 ; -3.0 ; -3 ; 0 ; 4 ; 25 ; 2 ; 1
+  Career ; 2 ; 2 ; 0–2 ; 32 ; 54 ; 59.3 ; 319 ; 5.9 ; 25 ; 2 ; 2 ; 73.0 ; 4 ; 15 ; 3.8 ; 9 ; 0 ; 4 ; 25 ; 2 ; 1

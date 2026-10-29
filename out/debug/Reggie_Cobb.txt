@@ -1,4 +1,4 @@
-# Reggie Cobb: table has no TD columns
+# Reggie Cobb: fetch failed: The page you specified doesn't exist.
 ## headings: NFL career statistics | Professional career | College
   Year ; Team ; GP ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
   1990 ; TB ; 16 ; 151 ; 480 ; 3.2 ; 17 ; 2 ; 39 ; 299 ; 7.7 ; 17 ; 0

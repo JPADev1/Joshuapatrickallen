@@ -1,1 +1,1 @@
-# Michael Pittman: no NFL stats table
+# Michael Pittman: fetch failed: The page you specified doesn't exist.

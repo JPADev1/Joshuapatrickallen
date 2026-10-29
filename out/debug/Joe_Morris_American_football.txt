@@ -1,4 +1,4 @@
-# Joe Morris (American football): no NFL stats table
+# Joe Morris (American football): fetch failed: The page you specified doesn't exist.
 ## headings: NFL career statistics | New York Giants franchise records | Professional career
   Year ; Team ; Games ; Rushing ; Receiving ; Fumbles
   GP ; GS ; Att ; Yds ; Avg ; Y/G ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD ; Fum ; FR

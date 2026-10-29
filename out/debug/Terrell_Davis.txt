@@ -1,0 +1,29 @@
+# Terrell Davis: fetch failed: The page you specified doesn't exist.
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Rushing ; Receiving ; Fumbles
+  GP ; GS ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD ; Fum ; Lost
+  1995 ; DEN ; 14 ; 14 ; 237 ; 1,117 ; 4.7 ; 60 ; 7 ; 49 ; 367 ; 7.5 ; 31 ; 1 ; 5 ; 2
+  1996 ; DEN ; 16 ; 16 ; 345 ; 1,538 ; 4.5 ; 71 ; 13 ; 36 ; 310 ; 8.6 ; 23 ; 2 ; 5 ; 3
+  1997 ; DEN ; 15 ; 15 ; 369 ; 1,750 ; 4.7 ; 50 ; 15 ; 42 ; 287 ; 6.8 ; 25 ; 0 ; 4 ; 0
+  1998 ; DEN ; 16 ; 16 ; 392 ; 2,008 ; 5.1 ; 70 ; 21 ; 25 ; 217 ; 8.7 ; 35 ; 2 ; 2 ; 2
+  1999 ; DEN ; 4 ; 4 ; 67 ; 211 ; 3.1 ; 26 ; 2 ; 3 ; 26 ; 8.7 ; 10 ; 0 ; 1 ; 1
+  2000 ; DEN ; 5 ; 5 ; 78 ; 282 ; 3.6 ; 24 ; 2 ; 2 ; 4 ; 2.0 ; 5 ; 0 ; 1 ; 0
+  2001 ; DEN ; 8 ; 8 ; 167 ; 701 ; 4.2 ; 57 ; 0 ; 12 ; 69 ; 5.8 ; 16 ; 0 ; 2 ; 0
+  Career ; 78 ; 78 ; 1,655 ; 7,607 ; 4.6 ; 71 ; 60 ; 169 ; 1,280 ; 7.6 ; 35 ; 5 ; 20 ; 8
+## headings: Postseason | Regular season | NFL
+  Year ; Team ; Games ; Rushing ; Receiving ; Fumbles
+  GP ; GS ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD ; Fum ; Lost
+  1996 ; DEN ; 1 ; 1 ; 14 ; 91 ; 6.5 ; 47 ; 1 ; 7 ; 27 ; 3.4 ; 6 ; 0 ; 0 ; 0
+  1997 ; DEN ; 4 ; 4 ; 112 ; 581 ; 5.2 ; 59 ; 8 ; 8 ; 38 ; 4.8 ; 17 ; 0 ; 4 ; 2
+  1998 ; DEN ; 3 ; 3 ; 78 ; 468 ; 6.0 ; 62 ; 3 ; 4 ; 69 ; 17.2 ; 39 ; 0 ; 0 ; 0
+  2000 ; DEN ; Did not play due to injury
+  Career ; 8 ; 8 ; 204 ; 1,140 ; 5.6 ; 62 ; 12 ; 19 ; 134 ; 7.1 ; 39 ; 0 ; 4 ; 2
+## headings: College | Postseason | Regular season
+  Season ; Team ; Rushing ; Receiving
+  Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1990 ; Long Beach State ; Redshirted
+  1991 ; Long Beach State ; 55 ; 262 ; 4.8 ; 48 ; 2 ; 4 ; 92 ; 23.0 ; 75 ; 1
+  1992 ; Georgia ; 53 ; 388 ; 7.3 ; 61 ; 3 ; 3 ; 38 ; 12.7 ; 23 ; 1
+  1993 ; Georgia ; 167 ; 824 ; 4.9 ; 42 ; 5 ; 12 ; 161 ; 13.4 ; 57 ; 3
+  1994 ; Georgia ; 97 ; 445 ; 4.6 ; 25 ; 6 ; 31 ; 330 ; 10.6 ; 46 ; 0
+  Career ; 372 ; 1,919 ; 5.4 ; 61 ; 16 ; 50 ; 621 ; 14.9 ; 75 ; 5

@@ -1,0 +1,78 @@
+# Charlie Batch: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Batch in 2021
+  No. 10, 16
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1974-12-05 ) December 5, 1974 (age 51) Homestead, Pennsylvania , U.S.
+  Listed height ; 6 ft 2 in (1.88 m)
+  Listed weight ; 216 lb (98 kg)
+  Career information
+  High school ; Steel Valley ( Munhall, Pennsylvania )
+  College ; Eastern Michigan (1993–1997)
+  NFL draft ; 1998 : 2nd round, 60th overall pick
+  Career history
+  Detroit Lions ( 1998 – 2001 ) Pittsburgh Steelers ( 2002 – 2012 )
+  
+  Awards and highlights
+  2× Super Bowl champion ( XL , XLIII ) First-team All- MAC (1995) Byron "Whizzer" White NFL Man of the Year (2012) NFL record Highest single game total quarterback rating [ 1 ]
+  
+  Career NFL statistics
+  Passing attempts 1,604 Passing completions 908 Completion percentage 56.6% TD – INT 61–52 Passing yards 11,085 Passer rating 77.2 Rushing yards 637 Rushing touchdowns 6 Stats at Pro Football Reference ; Passing attempts ; 1,604 ; Passing completions ; 908 ; Completion percentage ; 56.6% ; TD – INT ; 61–52 ; Passing yards ; 11,085 ; Passer rating ; 77.2 ; Rushing yards ; 637 ; Rushing touchdowns ; 6 ; Stats at Pro Football Reference
+  Passing attempts ; 1,604
+  Passing completions ; 908
+  Completion percentage ; 56.6%
+  TD – INT ; 61–52
+  Passing yards ; 11,085
+  Passer rating ; 77.2
+  Rushing yards ; 637
+  Rushing touchdowns ; 6
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 1,604
+  Passing completions ; 908
+  Completion percentage ; 56.6%
+  TD – INT ; 61–52
+  Passing yards ; 11,085
+  Passer rating ; 77.2
+  Rushing yards ; 637
+  Rushing touchdowns ; 6
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles [ a ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1998 ; DET ; 12 ; 12 ; 5–7 ; 173 ; 303 ; 57.1 ; 2,178 ; 7.2 ; 11 ; 6 ; 83.5 ; 41 ; 229 ; 5.6 ; 1 ; 37 ; 222 ; 2 ; 2
+  1999 ; DET ; 11 ; 10 ; 6–4 ; 151 ; 270 ; 55.9 ; 1,957 ; 7.2 ; 13 ; 7 ; 84.1 ; 28 ; 87 ; 3.1 ; 2 ; 36 ; 186 ; 4 ; 1
+  2000 ; DET ; 15 ; 15 ; 8–7 ; 221 ; 412 ; 53.6 ; 2,489 ; 6.0 ; 13 ; 15 ; 67.3 ; 44 ; 199 ; 4.5 ; 2 ; 41 ; 242 ; 6 ; 3
+  2001 ; DET ; 10 ; 9 ; 0–9 ; 198 ; 341 ; 58.1 ; 2,392 ; 7.0 ; 12 ; 12 ; 76.8 ; 12 ; 45 ; 3.8 ; 0 ; 33 ; 176 ; 6 ; 4
+  2002 ; PIT ; 0 ; 0 ; DNP
+  2003 ; PIT ; 4 ; 0 ; – ; 4 ; 8 ; 50.0 ; 47 ; 5.9 ; 0 ; 0 ; 68.2 ; 1 ; 11 ; 11.0 ; 0 ; 1 ; 2 ; 1 ; 1
+  2004 ; PIT ; 0 ; 0 ; DNP
+  2005 ; PIT ; 4 ; 2 ; 2–0 ; 23 ; 36 ; 63.9 ; 246 ; 6.8 ; 1 ; 1 ; 81.5 ; 11 ; 30 ; 2.7 ; 1 ; 1 ; 6 ; 1 ; 0
+  2006 ; PIT ; 8 ; 1 ; 1–0 ; 31 ; 53 ; 58.5 ; 492 ; 9.3 ; 5 ; 0 ; 121.0 ; 13 ; 15 ; 1.2 ; 0 ; 3 ; 13 ; 1 ; 1
+  2007 ; PIT ; 7 ; 1 ; 0–1 ; 17 ; 36 ; 47.2 ; 232 ; 6.4 ; 2 ; 3 ; 52.1 ; 12 ; -7 ; -0.6 ; 0 ; 0 ; 0 ; 0 ; 0
+  2008 ; PIT ; 0 ; 0 ; DNP
+  2009 ; PIT ; 1 ; 0 ; – ; 1 ; 2 ; 50.0 ; 17 ; 8.5 ; 0 ; 0 ; 79.2 ; 0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  2010 ; PIT ; 3 ; 2 ; 1–1 ; 29 ; 49 ; 59.2 ; 352 ; 7.2 ; 3 ; 3 ; 76.2 ; 7 ; 30 ; 4.3 ; 0 ; 4 ; 21 ; 2 ; 0
+  2011 ; PIT ; 4 ; 1 ; 1–0 ; 15 ; 24 ; 62.5 ; 208 ; 8.7 ; 0 ; 1 ; 72.9 ; 3 ; -2 ; -0.7 ; 0 ; 2 ; 10 ; 0 ; 0
+  2012 ; PIT ; 2 ; 2 ; 1–1 ; 45 ; 70 ; 64.3 ; 475 ; 6.8 ; 1 ; 4 ; 64.9 ; 0 ; 0 ; 0.0 ; 0 ; 3 ; 12 ; 1 ; 0
+  Career ; 81 ; 55 ; 25–30 ; 908 ; 1,604 ; 56.6 ; 11,085 ; 6.9 ; 61 ; 52 ; 77.2 ; 172 ; 637 ; 3.7 ; 6 ; 161 ; 890 ; 24 ; 12
+## headings: Playoffs | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1999 ; DET ; 0 ; 0 ; DNP
+  2002 ; PIT ; 0 ; 0
+  2004 ; PIT ; 0 ; 0
+  2005 ; PIT ; 0 ; 0
+  2007 ; PIT ; 0 ; 0
+  2008 ; PIT ; 0 ; 0
+  2010 ; PIT ; 0 ; 0
+  2011 ; PIT ; 0 ; 0
+## headings: College | Playoffs | Regular season
+  Season ; Team ; Passing ; Rushing
+  Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1994 ; Eastern Michigan ; 49 ; 78 ; 62.8 ; 617 ; 7.9 ; 7 ; 1 ; 156.3 ; 23 ; 0 ; 0.0 ; 1
+  1995 ; Eastern Michigan ; 244 ; 421 ; 58.0 ; 3,177 ; 7.5 ; 21 ; 17 ; 129.7 ; 61 ; 52 ; 0.9 ; 3
+  1996 ; Eastern Michigan ; 39 ; 65 ; 60.0 ; 518 ; 8.0 ; 2 ; 2 ; 130.9 ; 12 ; -39 ; -3.3 ; 0
+  1997 ; Eastern Michigan ; 247 ; 434 ; 56.9 ; 3,280 ; 7.6 ; 23 ; 11 ; 132.8 ; 85 ; 110 ; 1.3 ; 1
+  Career [ 20 ] ; 579 ; 998 ; 58.0 ; 7,592 ; 7.6 ; 53 ; 31 ; 133.2 ; 181 ; 123 ; 0.7 ; 5

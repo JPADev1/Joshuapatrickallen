@@ -1,4 +1,4 @@
-# Frank Reich: no NFL stats table
+# Frank Reich: fetch failed: The page you specified doesn't exist.
 ## headings: 
   Reich with the Indianapolis Colts in 2021
   New York Jets

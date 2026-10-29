@@ -1,4 +1,4 @@
-# Qadry Ismail: not the same player? rec 5 vs draft data 33
+# Qadry Ismail: fetch failed: The page you specified doesn't exist.
 ## headings: Career statistics | College career | Early life
   Year ; Team ; GP ; Receiving ; Rushing ; Kick returns
   Rec ; Yds ; Avg ; TD ; Att ; Yds ; Avg ; TD ; Ret ; Yds ; Avg ; TD

@@ -1,0 +1,61 @@
+# Jake Plummer: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Plummer at Luke Air Force Base in 1998
+  No. 16
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1974-12-19 ) December 19, 1974 (age 51) Boise, Idaho , U.S.
+  Listed height ; 6 ft 2 in (1.88 m)
+  Listed weight ; 212 lb (96 kg)
+  Career information
+  High school ; Capital (Boise)
+  College ; Arizona State (1993–1996)
+  NFL draft ; 1997 : 2nd round, 42nd overall pick
+  Career history
+  Arizona Cardinals ( 1997 – 2002 ) Denver Broncos ( 2003 – 2006 ) Tampa Bay Buccaneers ( 2007 )*
+  * Offseason or practice squad member only
+  
+  Awards and highlights
+  Pro Bowl ( 2005 ) PFWA All-Rookie Team (1997) First-team All-American ( 1996 ) Pac-10 Offensive Player of the Year (1996) Pop Warner Trophy (1996) 2× First-team All-Pac-10 ( 1995 , 1996 )
+  
+  Career NFL statistics
+  Passing attempts 4,350 Passing completions 2,484 Completion percentage 57.1% TD – INT 161–161 Passing yards 29,253 Passer rating 74.6 Stats at Pro Football Reference ; Passing attempts ; 4,350 ; Passing completions ; 2,484 ; Completion percentage ; 57.1% ; TD – INT ; 161–161 ; Passing yards ; 29,253 ; Passer rating ; 74.6 ; Stats at Pro Football Reference
+  Passing attempts ; 4,350
+  Passing completions ; 2,484
+  Completion percentage ; 57.1%
+  TD – INT ; 161–161
+  Passing yards ; 29,253
+  Passer rating ; 74.6
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 4,350
+  Passing completions ; 2,484
+  Completion percentage ; 57.1%
+  TD – INT ; 161–161
+  Passing yards ; 29,253
+  Passer rating ; 74.6
+  Stats at Pro Football Reference
+## headings: NFL | Career statistics | Tampa Bay Buccaneers (2007)
+  Year ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1997 ; ARI ; 10 ; 9 ; 3–6 ; 157 ; 296 ; 53.0 ; 2,203 ; 7.4 ; 15 ; 15 ; 73.1 ; 39 ; 216 ; 5.5 ; 2
+  1998 ; ARI ; 16 ; 16 ; 9–7 ; 324 ; 547 ; 59.2 ; 3,737 ; 6.8 ; 17 ; 20 ; 75.0 ; 51 ; 217 ; 4.3 ; 4
+  1999 ; ARI ; 12 ; 11 ; 3–8 ; 201 ; 381 ; 52.8 ; 2,111 ; 5.5 ; 9 ; 24 ; 50.8 ; 39 ; 121 ; 3.1 ; 2
+  2000 ; ARI ; 14 ; 14 ; 3–11 ; 270 ; 475 ; 56.8 ; 2,946 ; 6.2 ; 13 ; 21 ; 66.0 ; 37 ; 183 ; 4.9 ; 0
+  2001 ; ARI ; 16 ; 16 ; 7–9 ; 304 ; 525 ; 57.9 ; 3,653 ; 7.0 ; 18 ; 14 ; 79.6 ; 35 ; 163 ; 4.7 ; 0
+  2002 ; ARI ; 16 ; 16 ; 5–11 ; 284 ; 530 ; 53.6 ; 2,972 ; 5.6 ; 18 ; 20 ; 65.7 ; 46 ; 283 ; 6.2 ; 2
+  2003 ; DEN ; 11 ; 11 ; 9–2 ; 189 ; 302 ; 62.6 ; 2,182 ; 7.2 ; 15 ; 7 ; 91.2 ; 37 ; 205 ; 5.5 ; 3
+  2004 ; DEN ; 16 ; 16 ; 10–6 ; 303 ; 521 ; 58.2 ; 4,089 ; 7.8 ; 27 ; 20 ; 84.5 ; 62 ; 202 ; 3.3 ; 1
+  2005 ; DEN ; 16 ; 16 ; 13–3 ; 277 ; 456 ; 60.7 ; 3,366 ; 7.4 ; 18 ; 7 ; 90.2 ; 46 ; 151 ; 3.3 ; 2
+  2006 ; DEN ; 16 ; 11 ; 7–4 ; 175 ; 317 ; 55.2 ; 1,994 ; 6.3 ; 11 ; 13 ; 68.8 ; 36 ; 112 ; 3.1 ; 1
+  Total [ 27 ] ; 143 ; 136 ; 69–67 ; 2,484 ; 4,350 ; 57.1 ; 29,253 ; 6.7 ; 161 ; 161 ; 74.6 ; 428 ; 1,853 ; 4.3 ; 17
+## headings: College | NFL | Career statistics
+  Season ; Team ; GP ; Passing
+  Cmp ; Att ; Pct ; Yds ; TD ; Int ; Rtg
+  1993 ; Arizona State ; 9 ; 102 ; 199 ; 51.3 ; 1,650 ; 9 ; 7 ; 128.8
+  1994 ; Arizona State ; 11 ; 159 ; 294 ; 54.1 ; 2,179 ; 15 ; 9 ; 127.1
+  1995 ; Arizona State ; 11 ; 173 ; 301 ; 57.5 ; 2,222 ; 17 ; 9 ; 132.1
+  1996 ; Arizona State ; 11 ; 179 ; 313 ; 57.2 ; 2,575 ; 23 ; 9 ; 144.8
+  College career ; 42 ; 613 ; 1,107 ; 55.4 ; 8,626 ; 64 ; 34 ; 133.8
+  School rank [ 28 ] ; — ; 4th ; 3rd ; — ; 3rd ; 4th ; —

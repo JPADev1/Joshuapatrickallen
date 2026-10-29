@@ -1,4 +1,4 @@
-# Tony Martin (American football): no NFL stats table
+# Tony Martin (American football): fetch failed: The page you specified doesn't exist.
 ## headings: NFL career statistics | Professional career
   Year ; Team ; GP ; Rec ; Yards ; Avg ; Lng ; TD ; FD ; Fum ; Lost
   1990 ; MIA ; 16 ; 29 ; 388 ; 13.4 ; 45 ; 2 ; 0 ; 0 ; 0

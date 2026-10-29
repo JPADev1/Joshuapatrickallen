@@ -1,4 +1,4 @@
-# Frankie Albert: infobox pass 0 != table 115
+# Frankie Albert: infobox pass 0 != table 27
 ## headings: 
   Albert in 1949
   No. 63, 13

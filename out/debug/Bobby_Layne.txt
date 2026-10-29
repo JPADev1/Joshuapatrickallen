@@ -1,4 +1,4 @@
-# Bobby Layne: career row pass 196 != season sum 210; career row rush 25 != season sum 28; infobox pass 196 != table 210; infobox rush 25 != table 28
+# Bobby Layne: career row pass 196 != season sum 210; infobox pass 196 != table 210; career row rush 25 != season sum 28; infobox rush 25 != table 28
 ## headings: 
   Layne with the Pittsburgh Steelers in 1961
   No. 22

@@ -1,0 +1,19 @@
+# Billy Sims: fetch failed: The page you specified doesn't exist.
+## headings: NFL | Career statistics | Comeback attempt
+  Year ; Team ; GP ; Rushing ; Receiving
+  Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1980 ; DET ; 16 ; 313 ; 1,303 ; 4.2 ; 52 ; 13 ; 51 ; 621 ; 12.2 ; 87 ; 3
+  1981 ; DET ; 14 ; 296 ; 1,437 ; 4.9 ; 51 ; 13 ; 28 ; 451 ; 16.1 ; 81 ; 2
+  1982 ; DET ; 9 ; 172 ; 639 ; 3.7 ; 29 ; 4 ; 34 ; 342 ; 10.1 ; 52 ; 0
+  1983 ; DET ; 13 ; 220 ; 1,040 ; 4.7 ; 41 ; 7 ; 42 ; 419 ; 10.0 ; 54 ; 0
+  1984 ; DET ; 8 ; 130 ; 687 ; 5.3 ; 81 ; 5 ; 31 ; 239 ; 7.7 ; 20 ; 0
+  Career ; 60 ; 1,131 ; 5,106 ; 4.5 ; 81 ; 42 ; 186 ; 2,072 ; 11.1 ; 87 ; 5
+## headings: College | NFL | Career statistics
+  Season ; Team ; GP ; Rushing ; Receiving
+  Att ; Yds ; Avg ; TD ; Rec ; Yds ; Avg ; TD
+  1975 ; Oklahoma ; 1 ; 15 ; 95 ; 6.3 ; 0 ; — ; — ; — ; —
+  1976 ; Oklahoma ; 11 ; 3 ; 44 ; 14.7 ; 0 ; — ; — ; — ; —
+  1977 ; Oklahoma ; 12 ; 71 ; 413 ; 5.8 ; 6 ; — ; — ; — ; —
+  1978 ; Oklahoma ; 11 ; 231 ; 1,762 ; 7.6 ; 20 ; 1 ; 35 ; 35.0 ; 0
+  1979 ; Oklahoma ; 11 ; 224 ; 1,506 ; 6.7 ; 22 ; 1 ; 42 ; 42.0 ; 0
+  Career [ 17 ] ; 56 ; 544 ; 3,820 ; 7.0 ; 48 ; 2 ; 77 ; 38.5 ; 0

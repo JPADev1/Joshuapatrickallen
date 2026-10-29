@@ -1,1 +1,1 @@
-# Leonard Russell: no NFL stats table
+# Leonard Russell: fetch failed: The page you specified doesn't exist.

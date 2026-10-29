@@ -1,1 +1,1 @@
-# James Wilder (American football): no NFL stats table
+# James Wilder (American football): fetch failed: The page you specified doesn't exist.

@@ -1,0 +1,54 @@
+# Boomer Esiason: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Esiason in 2007
+  No. 7
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1961-04-17 ) April 17, 1961 (age 65) East Islip, New York , U.S.
+  Listed height ; 6 ft 5 in (1.96 m)
+  Listed weight ; 224 lb (102 kg)
+  Career information
+  High school ; East Islip
+  College ; Maryland (1979–1983)
+  NFL draft ; 1984 : 2nd round, 38th overall pick
+  Career history
+  Cincinnati Bengals ( 1984 – 1992 ) New York Jets ( 1993 – 1995 ) Arizona Cardinals ( 1996 ) Cincinnati Bengals ( 1997 )
+  
+  Awards and highlights
+  NFL Most Valuable Player (1988) NFL Man of the Year (1995) NFL Player of the Year (1988) [ 1 ] First-team All-Pro ( 1988 ) 4× Pro Bowl ( 1986 , 1988 , 1989 , 1993 ) NFL passer rating leader (1988) Cincinnati Bengals Ring of Honor Cincinnati Bengals 50th Anniversary Team
+  
+  Career NFL statistics
+  Passing attempts 5,205 Passing completions 2,969 Completion percentage 57.0% TD – INT 247–184 Passing yards 37,920 Passer rating 81.1 Stats at Pro Football Reference ; Passing attempts ; 5,205 ; Passing completions ; 2,969 ; Completion percentage ; 57.0% ; TD – INT ; 247–184 ; Passing yards ; 37,920 ; Passer rating ; 81.1 ; Stats at Pro Football Reference
+  Passing attempts ; 5,205
+  Passing completions ; 2,969
+  Completion percentage ; 57.0%
+  TD – INT ; 247–184
+  Passing yards ; 37,920
+  Passer rating ; 81.1
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 5,205
+  Passing completions ; 2,969
+  Completion percentage ; 57.0%
+  TD – INT ; 247–184
+  Passing yards ; 37,920
+  Passer rating ; 81.1
+  Stats at Pro Football Reference
+## headings: NFL career statistics | Cincinnati Bengals (second stint) | Arizona Cardinals
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg
+  1984 ; CIN ; 10 ; 4 ; 3–1 ; 51 ; 102 ; 50.0 ; 530 ; 5.2 ; 3 ; 3 ; 6 ; 62.9
+  1985 ; CIN ; 15 ; 14 ; 7–7 ; 251 ; 431 ; 58.2 ; 3,443 ; 9.0 ; 27 ; 12 ; 68 ; 93.2
+  1986 ; CIN ; 16 ; 16 ; 10–6 ; 273 ; 469 ; 58.2 ; 3,959 ; 8.4 ; 24 ; 17 ; 57 ; 87.7
+  1987 ; CIN ; 12 ; 12 ; 3–9 ; 240 ; 440 ; 54.5 ; 3,321 ; 7.5 ; 16 ; 19 ; 61 ; 73.1
+  1988 ; CIN ; 16 ; 16 ; 12–4 ; 223 ; 388 ; 57.5 ; 3,572 ; 9.2 ; 28 ; 14 ; 86 ; 97.4
+  1989 ; CIN ; 16 ; 15 ; 7–8 ; 258 ; 455 ; 56.7 ; 3,525 ; 7.8 ; 28 ; 11 ; 74 ; 92.1
+  1990 ; CIN ; 16 ; 16 ; 9–7 ; 224 ; 402 ; 55.7 ; 3,031 ; 7.5 ; 24 ; 22 ; 53 ; 77.0
+  1991 ; CIN ; 14 ; 14 ; 3–11 ; 233 ; 413 ; 56.4 ; 2,883 ; 7.0 ; 13 ; 16 ; 53 ; 72.5
+  1992 ; CIN ; 12 ; 11 ; 4–7 ; 144 ; 278 ; 51.8 ; 1,407 ; 5.1 ; 11 ; 15 ; 38 ; 57.0
+  1993 ; NYJ ; 16 ; 16 ; 8–8 ; 288 ; 473 ; 60.9 ; 3,421 ; 7.2 ; 16 ; 11 ; 77 ; 84.5
+  1994 ; NYJ ; 15 ; 14 ; 5–9 ; 255 ; 440 ; 58.0 ; 2,782 ; 6.3 ; 17 ; 13 ; 69 ; 77.3
+  1995 ; NYJ ; 12 ; 12 ; 2–10 ; 221 ; 389 ; 56.8 ; 2,275 ; 5.8 ; 16 ; 15 ; 43 ; 71.4
+  1996 ; ARI ; 10 ; 8 ; 3–5 ; 190 ; 339 ; 56.0 ; 2,293 ; 6.8 ; 11 ; 14 ; 64 ; 70.6
+  1997 ; CIN ; 7 ; 5 ; 4–1 ; 118 ; 186 ; 63.4 ; 1,478 ; 8.0 ; 13 ; 2 ; 77 ; 106.9
+  Career [ 23 ] ; 187 ; 173 ; 80–93 ; 2,969 ; 5,205 ; 57.0 ; 37,920 ; 7.3 ; 247 ; 184 ; 86 ; 81.1

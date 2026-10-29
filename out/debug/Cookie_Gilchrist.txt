@@ -1,4 +1,4 @@
-# Cookie Gilchrist: infobox rush 37 != table 52; infobox rec 6 != table 18
+# Cookie Gilchrist: infobox rec 6 != table 15
 ## headings: Career regular season statistics | Career
   General ; Rushing ; Receiving ; Field goals & converts ; Interceptions
   Year ; Team ; GP ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD ; FGA ; FGM ; Avg ; S ; XPA ; XPM ; Int ; Yds ; Avg ; Lng ; TD

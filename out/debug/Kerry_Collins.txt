@@ -1,0 +1,76 @@
+# Kerry Collins: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Collins with the Tennessee Titans in 2008
+  No. 12, 13, 5
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1972-12-30 ) December 30, 1972 (age 53) Lebanon, Pennsylvania , U.S.
+  Listed height ; 6 ft 5 in (1.96 m)
+  Listed weight ; 247 lb (112 kg)
+  Career information
+  High school ; Wilson ( West Lawn, Pennsylvania )
+  College ; Penn State (1991–1994)
+  NFL draft ; 1995 : 1st round, 5th overall pick
+  Career history
+  Carolina Panthers ( 1995 – 1998 ) New Orleans Saints ( 1998 ) New York Giants ( 1999 – 2003 ) Oakland Raiders ( 2004 – 2005 ) Tennessee Titans ( 2006 – 2010 ) Indianapolis Colts ( 2011 )
+  
+  Awards and highlights
+  2× Pro Bowl ( 1996 , 2008 ) PFWA All-Rookie Team ( 1995 ) George Halas Award (2001) 83rd greatest New York Giant of all-time Maxwell Award (1994) Davey O'Brien Award (1994) Sammy Baugh Trophy (1994) Quarterback of the Year (1994) Consensus All-American ( 1994 ) Big Ten Most Valuable Player (1994) Big Ten Offensive Player of the Year (1994) First-team All-Big Ten ( 1994 )
+  
+  Career NFL statistics
+  Passing attempts 6,261 Passing completions 3,487 Completion percentage 55.7% TD – INT 208–196 Passing yards 40,922 Passer rating 73.8 Stats at Pro Football Reference ; Passing attempts ; 6,261 ; Passing completions ; 3,487 ; Completion percentage ; 55.7% ; TD – INT ; 208–196 ; Passing yards ; 40,922 ; Passer rating ; 73.8 ; Stats at Pro Football Reference
+  Passing attempts ; 6,261
+  Passing completions ; 3,487
+  Completion percentage ; 55.7%
+  TD – INT ; 208–196
+  Passing yards ; 40,922
+  Passer rating ; 73.8
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 6,261
+  Passing completions ; 3,487
+  Completion percentage ; 55.7%
+  TD – INT ; 208–196
+  Passing yards ; 40,922
+  Passer rating ; 73.8
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1995 ; CAR ; 15 ; 13 ; 7–6 ; 214 ; 432 ; 49.5 ; 2,717 ; 6.3 ; 14 ; 19 ; 61.9 ; 42 ; 74 ; 1.8 ; 3
+  1996 ; CAR ; 13 ; 12 ; 9–3 ; 204 ; 364 ; 56.0 ; 2,454 ; 6.7 ; 14 ; 9 ; 79.4 ; 32 ; 38 ; 1.2 ; 0
+  1997 ; CAR ; 13 ; 13 ; 6–7 ; 200 ; 381 ; 52.5 ; 2,124 ; 5.6 ; 11 ; 21 ; 55.7 ; 26 ; 65 ; 2.5 ; 1
+  1998 ; CAR ; 4 ; 4 ; 0–4 ; 76 ; 162 ; 46.9 ; 1,011 ; 6.2 ; 8 ; 5 ; 70.8 ; 7 ; 40 ; 5.7 ; 0
+  NO ; 7 ; 7 ; 2–5 ; 94 ; 191 ; 49.2 ; 1,202 ; 6.3 ; 4 ; 10 ; 54.5 ; 23 ; 113 ; 4.9 ; 1
+  1999 ; NYG ; 10 ; 7 ; 2–5 ; 191 ; 332 ; 57.5 ; 2,316 ; 7.0 ; 8 ; 11 ; 73.3 ; 19 ; 36 ; 1.9 ; 2
+  2000 ; NYG ; 16 ; 16 ; 12–4 ; 311 ; 529 ; 58.8 ; 3,610 ; 6.8 ; 22 ; 13 ; 83.1 ; 41 ; 65 ; 1.6 ; 1
+  2001 ; NYG ; 16 ; 16 ; 7–9 ; 327 ; 568 ; 57.6 ; 3,764 ; 6.6 ; 19 ; 16 ; 77.1 ; 39 ; 73 ; 1.9 ; 0
+  2002 ; NYG ; 16 ; 16 ; 10–6 ; 335 ; 545 ; 61.5 ; 4,073 ; 7.5 ; 19 ; 14 ; 85.4 ; 44 ; -3 ; -0.1 ; 0
+  2003 ; NYG ; 13 ; 13 ; 4–9 ; 284 ; 500 ; 56.8 ; 3,110 ; 6.2 ; 13 ; 16 ; 70.7 ; 17 ; 49 ; 2.9 ; 0
+  2004 ; OAK ; 14 ; 13 ; 3–10 ; 289 ; 513 ; 56.3 ; 3,495 ; 6.8 ; 21 ; 20 ; 74.8 ; 16 ; 36 ; 2.3 ; 0
+  2005 ; OAK ; 15 ; 15 ; 4–11 ; 302 ; 565 ; 53.5 ; 3,759 ; 6.7 ; 20 ; 12 ; 77.3 ; 17 ; 39 ; 2.3 ; 1
+  2006 ; TEN ; 4 ; 3 ; 0–3 ; 42 ; 90 ; 46.7 ; 549 ; 6.1 ; 1 ; 6 ; 42.3 ; 0 ; 0 ; 0.0 ; 0
+  2007 ; TEN ; 6 ; 1 ; 1–0 ; 50 ; 82 ; 61.0 ; 531 ; 6.5 ; 0 ; 0 ; 79.9 ; 3 ; -3 ; -1.0 ; 0
+  2008 ; TEN ; 16 ; 15 ; 12–3 ; 242 ; 415 ; 58.3 ; 2,676 ; 6.4 ; 12 ; 7 ; 80.2 ; 25 ; 49 ; 2.0 ; 0
+  2009 ; TEN ; 7 ; 6 ; 0–6 ; 119 ; 216 ; 55.1 ; 1,225 ; 5.7 ; 6 ; 8 ; 65.5 ; 11 ; 15 ; 1.4 ; 1
+  2010 ; TEN ; 10 ; 7 ; 2–5 ; 160 ; 278 ; 57.6 ; 1,823 ; 6.6 ; 14 ; 8 ; 82.2 ; 10 ; 1 ; 0.1 ; 0
+  2011 ; IND ; 3 ; 3 ; 0–3 ; 48 ; 98 ; 49.0 ; 481 ; 4.9 ; 2 ; 1 ; 65.9 ; 2 ; -1 ; -0.5 ; 0
+  Career ; 198 ; 190 ; 81–99 ; 3,487 ; 6,261 ; 55.7 ; 40,922 ; 6.5 ; 208 ; 196 ; 73.8 ; 374 ; 686 ; 1.8 ; 10
+## headings: Postseason | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1996 ; CAR ; 2 ; 2 ; 1–1 ; 31 ; 59 ; 52.5 ; 315 ; 5.3 ; 3 ; 3 ; 63.9 ; 7 ; 4 ; 0.6 ; 0
+  2000 ; NYG ; 3 ; 3 ; 2–1 ; 55 ; 97 ; 56.7 ; 618 ; 6.4 ; 5 ; 6 ; 67.3 ; 11 ; 29 ; 2.6 ; 0
+  2002 ; NYG ; 1 ; 1 ; 0–1 ; 29 ; 43 ; 67.4 ; 342 ; 8.0 ; 4 ; 1 ; 112.7 ; 0 ; 0 ; 0.0 ; 0
+  2007 ; TEN ; 0 ; 0 ; Did not play
+  2008 ; TEN ; 1 ; 1 ; 0–1 ; 26 ; 42 ; 61.9 ; 281 ; 6.7 ; 0 ; 1 ; 71.6 ; 1 ; 0 ; 0.0 ; 0
+  Career ; 7 ; 7 ; 3–4 ; 141 ; 241 ; 58.5 ; 1,556 ; 6.5 ; 12 ; 11 ; 75.3 ; 19 ; 33 ; 1.7 ; 0
+## headings: College | Postseason | Regular season
+  Year ; Team ; Passing
+  Cmp ; Att ; Pct ; Yds ; TD ; Int ; Rtg
+  1991 ; Penn State ; 3 ; 6 ; 50.0 ; 95 ; 1 ; 1 ; 204.7
+  1992 ; Penn State ; 64 ; 137 ; 46.7 ; 925 ; 4 ; 2 ; 110.1
+  1993 ; Penn State ; 127 ; 250 ; 50.8 ; 1,605 ; 13 ; 11 ; 113.1
+  1994 ; Penn State ; 176 ; 264 ; 66.7 ; 2,679 ; 21 ; 7 ; 172.9
+  Career ; 370 ; 657 ; 56.3 ; 5,304 ; 39 ; 21 ; 137.3

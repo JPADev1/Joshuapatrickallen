@@ -1,4 +1,4 @@
-# Mike Alstott: table has no TD columns
+# Mike Alstott: career row rush 58 != season sum 59; infobox rush 58 != table 59
 ## headings: NFL career statistics | Professional career | College career
   Year ; Team ; GP ; GS ; Att ; Yards ; Avg ; Lng ; TD ; FD ; Fum ; Lost
   1996 ; TB ; 16 ; 16 ; 96 ; 377 ; 3.9 ; 39 ; 3 ; 21 ; 2 ; 1

@@ -6,60 +6,46 @@ List of National Football League annual rushing touchdowns leaders: 167 links
 List of National Football League annual receiving touchdowns leaders: 157 links
 List of dual-threat quarterback records: 311 links
 List of NFL individual records: 0 links
-353 players with pre-1999 seasons; 24 need a look
+381 players with pre-1999 seasons; 18 need a look
 
-check	Archie Manning	infobox rush 18 != table 0
 check	Arnie Herber	infobox rush 3 != table 2
 check	Bart Starr	career row rush 15 != season sum 19
 check	Bill Groman	career row rec 36 != season sum 39; infobox rec 36 != table 39
-check	Bobby Layne	career row pass 196 != season sum 210; career row rush 25 != season sum 28; infobox pass 196 != table 210; infobox rush 25 != table 28
-check	Chet Mutryn	infobox rush 27 != table 25; infobox rec 12 != table 10
-check	Cookie Gilchrist	infobox rush 37 != table 52; infobox rec 6 != table 18
-check	Eric Hipple	infobox rush 13 != table 0
-check	Frankie Albert	infobox pass 0 != table 115
+check	Bobby Layne	career row pass 196 != season sum 210; infobox pass 196 != table 210; career row rush 25 != season sum 28; infobox rush 25 != table 28
+check	Cleveland Gary	infobox rec 5 != table 24
+check	Cookie Gilchrist	infobox rec 6 != table 15
+check	Frankie Albert	infobox pass 0 != table 27
 check	Garrison Hearst	career row rec 0 != season sum 9
 check	George Blanda	career row pass 236 != season sum 237; infobox pass 236 != table 237
 check	Herschel Walker	career row rec 21 != season sum 22; infobox rec 21 != table 22
-check	Jeff George	infobox rush 2 != table 0
-check	Jim McMahon	infobox rush 16 != table 0
-check	Jim Plunkett	infobox rush 14 != table 0
 check	Joey Galloway	career row rec 77 != season sum 79; infobox rec 77 != table 79
 check	Larry Csonka	career row rec 5 != season sum 4
 check	Len Dawson	career row pass 239 != season sum 232; infobox pass 239 != table 232
+check	Mike Alstott	career row rush 58 != season sum 59; infobox rush 58 != table 59
 check	Ottis Anderson	career row rush 81 != season sum 82; infobox rush 81 != table 82
-check	Rich Gannon	infobox rush 21 != table 0
-check	Stephen Davis (American football)	infobox rec 4 != table 0
 check	Steve McNair	infobox rush 38 != table 37
 check	Terry Allen (running back)	career row rec 6 != season sum 7
 check	Tommy Maddox	infobox rush 5 != table 1
-draft-miss	Ahman Green	table has no TD columns
+draft-miss	Andre Reed	fetch failed: The page you specified doesn't exist.
+draft-miss	Andre Rison	fetch failed: The page you specified doesn't exist.
 draft-miss	Anthony Miller	no NFL stats table
-draft-miss	Barry Foster	no NFL stats table
-draft-miss	Bill Brooks	no NFL stats table
-draft-miss	Billy Joe Tolliver	no NFL stats table
-draft-miss	Chris Miller	no NFL stats table
-draft-miss	Chris Warren	no NFL stats table
-draft-miss	Christian Okoye	table has no TD columns
-draft-miss	Craig Erickson	table has no TD columns
-draft-miss	Curtis Conway	table has no TD columns
-draft-miss	Darnay Scott	table has no TD columns
-draft-miss	Derrick Alexander	no NFL stats table
-draft-miss	Dorsey Levens	table has no TD columns
-draft-miss	Eddie Brown	no NFL stats table
-draft-miss	Eddie Kennison	table has no TD columns
-draft-miss	Eric Green	no NFL stats table
-draft-miss	Eric Martin	no NFL stats table
-draft-miss	Eric Metcalf	table has no TD columns
-draft-miss	Frank Reich	no NFL stats table
-draft-miss	Fred Taylor	no NFL stats table
-draft-miss	George Rogers	no NFL stats table
-draft-miss	Greg Bell	no NFL stats table
-draft-miss	Jamal Anderson	no NFL stats table
-draft-miss	James Brooks	no NFL stats table
-draft-miss	James Jones	no NFL stats table
-draft-miss	James Stewart	no NFL stats table
-draft-miss	James Wilder	no NFL stats table
-draft-miss	Jimmy Smith	no NFL stats table
-draft-miss	Joe Morris	no NFL stats table
-draft-miss	John Friesz	table has no TD columns
-draft-miss	Keith Jackson	no NFL stats t
+draft-miss	Antonio Freeman	fetch failed: The page you specified doesn't exist.
+draft-miss	Art Monk	fetch failed: The page you specified doesn't exist.
+draft-miss	Barry Foster	fetch failed: The page you specified doesn't exist.
+draft-miss	Barry Sanders	fetch failed: The page you specified doesn't exist.
+draft-miss	Billy Joe Tolliver	fetch failed: The page you specified doesn't exist.
+draft-miss	Billy Sims	fetch failed: The page you specified doesn't exist.
+draft-miss	Boomer Esiason	fetch failed: The page you specified doesn't exist.
+draft-miss	Brett Favre	fetch failed: The page you specified doesn't exist.
+draft-miss	Carl Pickens	fetch failed: The page you specified doesn't exist.
+draft-miss	Charlie Batch	fetch failed: The page you specified doesn't exist.
+draft-miss	Chris Warren	fetch failed: The page you specified doesn't exist.
+draft-miss	Christian Okoye	fetch failed: The page you specified doesn't exist.
+draft-miss	Corey Dillon	fetch failed: The page you specified doesn't exist.
+draft-miss	Craig Erickson	fetch failed: The page you specified doesn't exist.
+draft-miss	Curt Warner	fetch failed: The page you specified doesn't exist.
+draft-miss	Curtis Martin	fetch failed: The page you specified doesn't exist.
+draft-miss	Dan Marino	fetch failed: The page you specified doesn't exist.
+draft-miss	Daryl Turner	fetch failed: The page you specified doesn't exist.
+draft-miss	Derrick Fenner	fetch failed: The page you specified doesn't exist.
+draft-miss	Doug Flutie	fetch failed: The page 

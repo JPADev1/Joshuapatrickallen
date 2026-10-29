@@ -1,0 +1,81 @@
+# Matt Hasselbeck: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Hasselbeck in 2026
+  No. 11, 8
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1975-09-25 ) September 25, 1975 (age 51) Boulder, Colorado , U.S.
+  Listed height ; 6 ft 4 in (1.93 m)
+  Listed weight ; 235 lb (107 kg)
+  Career information
+  High school ; Xaverian Brothers ( Westwood, Massachusetts )
+  College ; Boston College (1994–1997)
+  NFL draft ; 1998 : 6th round, 187th overall pick
+  Career history
+  Playing
+  Green Bay Packers ( 1998 – 2000 ) Seattle Seahawks ( 2001 – 2010 ) Tennessee Titans ( 2011 – 2012 ) Indianapolis Colts ( 2013 – 2015 )
+  Coaching
+  Ensworth High School (2024–present) Offensive Coordinator
+  
+  Awards and highlights
+  3× Pro Bowl ( 2003 , 2005 , 2007 ) Seattle Seahawks 35th Anniversary team Seattle Seahawks Top 50 players Seattle Seahawks Ring of Honor
+  
+  Career NFL statistics
+  Passing attempts 5,330 Passing completions 3,222 Completion percentage 60.5% TD – INT 212–153 Passing yards 36,638 Passer rating 82.4 Stats at Pro Football Reference ; Passing attempts ; 5,330 ; Passing completions ; 3,222 ; Completion percentage ; 60.5% ; TD – INT ; 212–153 ; Passing yards ; 36,638 ; Passer rating ; 82.4 ; Stats at Pro Football Reference
+  Passing attempts ; 5,330
+  Passing completions ; 3,222
+  Completion percentage ; 60.5%
+  TD – INT ; 212–153
+  Passing yards ; 36,638
+  Passer rating ; 82.4
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 5,330
+  Passing completions ; 3,222
+  Completion percentage ; 60.5%
+  TD – INT ; 212–153
+  Passing yards ; 36,638
+  Passer rating ; 82.4
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1998 ; GB ; 0 ; 0 ; Did not play
+  1999 ; GB ; 16 ; 0 ; — ; 3 ; 10 ; 30.0 ; 41 ; 4.1 ; 1 ; 0 ; 77.5 ; 6 ; 15 ; 2.5 ; 0 ; 1 ; 9 ; 1 ; 0
+  2000 ; GB ; 16 ; 0 ; — ; 10 ; 19 ; 52.6 ; 104 ; 5.5 ; 1 ; 0 ; 86.3 ; 4 ; −5 ; −1.3 ; 0 ; 1 ; 2 ; 0 ; 0
+  2001 ; SEA ; 13 ; 12 ; 5–7 ; 176 ; 321 ; 54.8 ; 2,023 ; 6.3 ; 7 ; 8 ; 70.9 ; 40 ; 141 ; 3.5 ; 0 ; 38 ; 251 ; 6 ; 2
+  2002 ; SEA ; 16 ; 10 ; 5–5 ; 267 ; 419 ; 63.7 ; 3,075 ; 7.3 ; 15 ; 10 ; 87.8 ; 40 ; 202 ; 5.1 ; 1 ; 26 ; 143 ; 5 ; 4
+  2003 ; SEA ; 16 ; 16 ; 10–6 ; 313 ; 513 ; 61.0 ; 3,841 ; 7.5 ; 26 ; 15 ; 88.8 ; 36 ; 125 ; 3.5 ; 2 ; 42 ; 246 ; 4 ; 1
+  2004 ; SEA ; 14 ; 14 ; 7–7 ; 279 ; 474 ; 58.9 ; 3,382 ; 7.1 ; 22 ; 15 ; 83.1 ; 27 ; 90 ; 3.3 ; 1 ; 30 ; 155 ; 5 ; 1
+  2005 ; SEA ; 16 ; 16 ; 13–3 ; 294 ; 449 ; 65.5 ; 3,459 ; 7.7 ; 24 ; 9 ; 98.2 ; 36 ; 124 ; 3.4 ; 1 ; 24 ; 154 ; 4 ; 2
+  2006 ; SEA ; 12 ; 12 ; 7–5 ; 210 ; 371 ; 56.6 ; 2,442 ; 6.6 ; 18 ; 15 ; 76.0 ; 18 ; 110 ; 6.1 ; 0 ; 34 ; 229 ; 3 ; 2
+  2007 ; SEA ; 16 ; 16 ; 10–6 ; 352 ; 562 ; 62.6 ; 3,966 ; 7.1 ; 28 ; 12 ; 91.4 ; 39 ; 89 ; 2.3 ; 0 ; 33 ; 204 ; 9 ; 5
+  2008 ; SEA ; 7 ; 7 ; 1–6 ; 109 ; 209 ; 52.2 ; 1,216 ; 5.8 ; 5 ; 10 ; 57.8 ; 11 ; 69 ; 6.3 ; 0 ; 19 ; 119 ; 1 ; 0
+  2009 ; SEA ; 14 ; 14 ; 5–9 ; 293 ; 488 ; 60.0 ; 3,029 ; 6.2 ; 17 ; 17 ; 75.1 ; 26 ; 119 ; 4.6 ; 0 ; 32 ; 209 ; 11 ; 3
+  2010 ; SEA ; 14 ; 14 ; 6–8 ; 266 ; 444 ; 59.9 ; 3,001 ; 6.8 ; 12 ; 17 ; 73.2 ; 23 ; 60 ; 2.6 ; 3 ; 29 ; 175 ; 7 ; 5
+  2011 ; TEN ; 16 ; 16 ; 9–7 ; 319 ; 518 ; 61.6 ; 3,571 ; 6.9 ; 18 ; 14 ; 82.4 ; 20 ; 52 ; 2.6 ; 0 ; 19 ; 153 ; 4 ; 1
+  2012 ; TEN ; 8 ; 5 ; 2–3 ; 138 ; 221 ; 62.4 ; 1,367 ; 6.2 ; 7 ; 5 ; 81.0 ; 13 ; 38 ; 2.9 ; 0 ; 14 ; 103 ; 3 ; 1
+  2013 ; IND ; 3 ; 0 ; — ; 7 ; 12 ; 58.3 ; 130 ; 10.8 ; 0 ; 1 ; 61.1 ; 2 ; −2 ; −1.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  2014 ; IND ; 4 ; 0 ; — ; 30 ; 44 ; 68.2 ; 301 ; 6.8 ; 2 ; 0 ; 102.6 ; 8 ; −11 ; −1.4 ; 0 ; 2 ; 7 ; 1 ; 1
+  2015 ; IND ; 8 ; 8 ; 5–3 ; 156 ; 256 ; 60.9 ; 1,690 ; 6.6 ; 9 ; 5 ; 84.0 ; 16 ; 15 ; 0.9 ; 0 ; 16 ; 101 ; 3 ; 2
+  Career ; 209 ; 160 ; 85–75 ; 3,222 ; 5,330 ; 60.5 ; 36,638 ; 6.9 ; 212 ; 153 ; 82.4 ; 365 ; 1,231 ; 3.4 ; 8 ; 360 ; 2,260 ; 67 ; 30
+## headings: Playoffs | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  2003 ; SEA ; 1 ; 1 ; 0–1 ; 25 ; 45 ; 55.6 ; 305 ; 6.8 ; 0 ; 1 ; 67.4 ; 0 ; 0 ; 0.0 ; 0 ; 2 ; 14 ; 1 ; 0
+  2004 ; SEA ; 1 ; 1 ; 0–1 ; 27 ; 43 ; 62.8 ; 341 ; 7.9 ; 2 ; 1 ; 93.3 ; 2 ; 26 ; 13.0 ; 0 ; 3 ; 9 ; 0 ; 0
+  2005 ; SEA ; 3 ; 3 ; 2–1 ; 62 ; 103 ; 60.2 ; 707 ; 6.9 ; 4 ; 1 ; 89.7 ; 15 ; 83 ; 5.5 ; 1 ; 5 ; 30 ; 0 ; 0
+  2006 ; SEA ; 2 ; 2 ; 1–1 ; 36 ; 69 ; 52.2 ; 435 ; 6.3 ; 3 ; 3 ; 68.2 ; 3 ; 11 ; 3.7 ; 0 ; 3 ; 16 ; 0 ; 0
+  2007 ; SEA ; 2 ; 2 ; 1–1 ; 39 ; 65 ; 60.0 ; 423 ; 6.5 ; 2 ; 2 ; 76.6 ; 3 ; 0 ; 0.0 ; 0 ; 3 ; 24 ; 2 ; 0
+  2010 ; SEA ; 2 ; 2 ; 1–1 ; 47 ; 81 ; 59.3 ; 530 ; 6.5 ; 7 ; 1 ; 102.4 ; 2 ; −1 ; −0.5 ; 0 ; 3 ; 22 ; 1 ; 0
+  2013 ; IND ; 0 ; 0 ; Did not play
+  2014 ; IND ; 3 ; 0 ; — ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0
+  Career ; 14 ; 11 ; 5–6 ; 236 ; 406 ; 58.4 ; 2,741 ; 6.8 ; 18 ; 9 ; 84.4 ; 25 ; 51 ; 2.0 ; 1 ; 19 ; 115 ; 4 ; 0
+## headings: College | Playoffs | Regular season
+  Season ; Team ; GP ; Passing
+  Cmp ; Att ; Pct ; Yds ; TD ; Int ; Rtg
+  1994 ; Boston College ; 5 ; 4 ; 6 ; 66.7 ; 39 ; 0 ; 0 ; 121.3
+  1995 ; Boston College ; 11 ; 27 ; 60 ; 45.0 ; 280 ; 2 ; 7 ; 71.9
+  1996 ; Boston College ; 11 ; 171 ; 330 ; 51.8 ; 1,990 ; 9 ; 9 ; 106.0
+  1997 ; Boston College ; 11 ; 188 ; 305 ; 61.6 ; 2,239 ; 11 ; 10 ; 128.6
+  Totals [ 6 ] ; 37 ; 390 ; 701 ; 55.6 ; 4,548 ; 22 ; 26 ; 113.1

@@ -34,7 +34,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Abner Haynes",
@@ -100,7 +102,35 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Ahman Green",
+"wiki": "Ahman Green",
+"pos": "Running back",
+"first": 1998,
+"last": 2009,
+"infobox": {
+"rush": 60,
+"rec": 14
+},
+"seasons": [
+[
+1998,
+0,
+1,
+0
 ]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Al Denson",
@@ -164,7 +194,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Al Toon",
@@ -228,7 +260,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Alan Ameche",
@@ -282,7 +316,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Alfred Jenkins",
@@ -352,42 +388,20 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Alyn Beals",
 "wiki": "Alyn Beals",
 "pos": "End",
-"first": 1946,
+"first": 1950,
 "last": 1951,
 "infobox": {
 "rec": 49
 },
 "seasons": [
-[
-1946,
-0,
-0,
-10
-],
-[
-1947,
-0,
-0,
-10
-],
-[
-1948,
-0,
-0,
-14
-],
-[
-1949,
-0,
-0,
-12
-],
 [
 1950,
 0,
@@ -404,6 +418,10 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
 },
 {
@@ -439,7 +457,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Andre Reed",
@@ -540,7 +560,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Andre Rison",
@@ -616,7 +638,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Andy Farkas",
@@ -682,7 +706,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Anthony Carter",
@@ -764,7 +790,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Antonio Freeman",
@@ -804,7 +832,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Antowain Smith",
@@ -834,7 +864,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Archie Manning",
@@ -932,11 +964,15 @@
 0
 ]
 ],
-"notes": [
-"infobox rush 18 != table 0"
-],
+"notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 18"
 ]
 },
 {
@@ -1035,7 +1071,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Art Monk",
@@ -1147,7 +1185,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Babe Parilli",
@@ -1254,7 +1294,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bam Morris",
@@ -1299,7 +1341,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Barry Sanders",
@@ -1377,7 +1421,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bart Starr",
@@ -1492,7 +1538,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ben Coates",
@@ -1556,7 +1604,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Benny Friedman",
@@ -1622,7 +1672,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bernie Kosar",
@@ -1708,6 +1760,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -1785,7 +1843,93 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Bill Brooks",
+"wiki": "Bill Brooks (wide receiver)",
+"pos": "Wide receiver",
+"first": 1986,
+"last": 1996,
+"infobox": {
+"rec": 46
+},
+"seasons": [
+[
+1986,
+0,
+0,
+8
+],
+[
+1987,
+0,
+0,
+3
+],
+[
+1988,
+0,
+0,
+3
+],
+[
+1989,
+0,
+0,
+4
+],
+[
+1990,
+0,
+0,
+5
+],
+[
+1991,
+0,
+0,
+4
+],
+[
+1992,
+0,
+0,
+1
+],
+[
+1993,
+0,
+0,
+5
+],
+[
+1994,
+0,
+0,
+2
+],
+[
+1995,
+0,
+0,
+11
+],
+[
+1996,
+0,
+0,
+0
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bill Groman",
@@ -1840,7 +1984,9 @@
 ],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bill Nelsen",
@@ -1917,7 +2063,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bill Paschal",
@@ -1968,7 +2116,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Billy Dewell",
@@ -2026,7 +2176,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Billy Howton",
@@ -2114,7 +2266,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Billy Kilmer",
@@ -2227,7 +2381,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Billy Sims",
@@ -2275,7 +2431,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Billy Wilson",
@@ -2351,7 +2509,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bob Griese",
@@ -2452,7 +2612,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bob Hayes",
@@ -2535,7 +2697,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bobby Douglass",
@@ -2613,7 +2777,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bobby Engram",
@@ -2648,7 +2814,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bobby Layne",
@@ -2754,14 +2922,16 @@
 ],
 "notes": [
 "career row pass 196 != season sum 210",
-"career row rush 25 != season sum 28",
 "infobox pass 196 != table 210",
+"career row rush 25 != season sum 28",
 "infobox rush 25 != table 28"
 ],
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bobby Mitchell",
@@ -2842,7 +3012,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bobby Thomason",
@@ -2907,7 +3079,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Boomer Esiason",
@@ -3007,6 +3181,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -3066,7 +3246,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Brad Johnson",
@@ -3113,7 +3295,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Brent Jones",
@@ -3195,7 +3379,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Brett Favre",
@@ -3260,7 +3446,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Brett Perriman",
@@ -3336,7 +3524,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Brian Blades",
@@ -3418,7 +3608,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Brian Sipe",
@@ -3494,6 +3686,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -3565,7 +3763,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Bubby Brister",
@@ -3655,7 +3855,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Calvin Williams",
@@ -3713,7 +3915,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Carl Pickens",
@@ -3772,7 +3976,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Carlos Carson",
@@ -3848,7 +4054,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Cecil Isbell",
@@ -3896,6 +4104,12 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [
+"rec"
+],
+"info": [
+"table has no rec columns"
 ]
 },
 {
@@ -3962,7 +4176,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Charley Johnson",
@@ -4070,7 +4286,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Charley Taylor",
@@ -4172,7 +4390,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Charlie Batch",
@@ -4196,7 +4416,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Charlie Conerly",
@@ -4296,6 +4518,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -4344,51 +4572,36 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Chet Mutryn",
 "wiki": "Chet Mutryn",
 "pos": "Halfback Return specialist Defensive back",
-"first": 1946,
-"last": 1949,
+"first": 1950,
+"last": 1950,
 "infobox": {
 "rush": 27,
 "rec": 12
 },
 "seasons": [
 [
-1946,
+1950,
 0,
-1,
-3
-],
-[
-1947,
-0,
-9,
+2,
 2
-],
-[
-1948,
-0,
-10,
-5
-],
-[
-1949,
-0,
-5,
-0
 ]
 ],
-"notes": [
-"infobox rush 27 != table 25",
-"infobox rec 12 != table 10"
-],
+"notes": [],
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
 },
 {
@@ -4453,7 +4666,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Chris Calloway",
@@ -4522,7 +4737,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Chris Chandler",
@@ -4605,7 +4822,82 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Chris Miller",
+"wiki": "Chris Miller (quarterback)",
+"pos": "Quarterback",
+"first": 1987,
+"last": 1999,
+"infobox": {
+"pass": 123
+},
+"seasons": [
+[
+1987,
+1,
+0,
+0
+],
+[
+1988,
+11,
+1,
+0
+],
+[
+1989,
+16,
+0,
+0
+],
+[
+1990,
+17,
+1,
+0
+],
+[
+1991,
+26,
+0,
+0
+],
+[
+1992,
+15,
+0,
+0
+],
+[
+1993,
+1,
+0,
+0
+],
+[
+1994,
+16,
+0,
+0
+],
+[
+1995,
+18,
+0,
+0
 ]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Chuck Foreman",
@@ -4671,7 +4963,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Chuck Muncie",
@@ -4743,6 +5037,69 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Cleveland Gary",
+"wiki": "Cleveland Gary",
+"pos": "Running back",
+"first": 1989,
+"last": 1994,
+"infobox": {
+"rush": 24,
+"rec": 5
+},
+"seasons": [
+[
+1989,
+0,
+0,
+1
+],
+[
+1990,
+0,
+0,
+14
+],
+[
+1991,
+0,
+0,
+1
+],
+[
+1992,
+0,
+0,
+7
+],
+[
+1993,
+0,
+0,
+1
+],
+[
+1994,
+0,
+0,
+0
+]
+],
+"notes": [
+"infobox rec 5 != table 24"
+],
+"kinds": [
+"rec"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 24"
 ]
 },
 {
@@ -4798,7 +5155,9 @@
 "pass",
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Cliff Branch",
@@ -4898,7 +5257,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Cloyce Box",
@@ -4944,31 +5305,25 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
 "name": "Cookie Gilchrist",
 "wiki": "Cookie Gilchrist",
 "pos": "Fullback",
-"first": 1954,
+"first": 1962,
 "last": 1967,
 "infobox": {
 "rush": 37,
 "rec": 6
 },
 "seasons": [
-[
-1954,
-0,
-5,
-3
-],
-[
-1955,
-0,
-10,
-0
-],
 [
 1962,
 0,
@@ -5007,13 +5362,14 @@
 ]
 ],
 "notes": [
-"infobox rush 37 != table 52",
-"infobox rec 6 != table 18"
+"infobox rec 6 != table 15"
 ],
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Corey Dillon",
@@ -5043,7 +5399,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Cotton Davidson",
@@ -5120,7 +5478,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Craig Heyward",
@@ -5204,7 +5564,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Craig Morton",
@@ -5330,7 +5692,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Cris Carter",
@@ -5418,7 +5782,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Cris Collinsworth",
@@ -5483,7 +5849,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Curt Warner",
@@ -5546,7 +5914,63 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Curtis Conway",
+"wiki": "Curtis Conway",
+"pos": "Wide receiver",
+"first": 1993,
+"last": 2004,
+"infobox": {
+"rec": 52
+},
+"seasons": [
+[
+1993,
+0,
+0,
+2
+],
+[
+1994,
+0,
+0,
+2
+],
+[
+1995,
+0,
+0,
+12
+],
+[
+1996,
+0,
+0,
+7
+],
+[
+1997,
+0,
+0,
+1
+],
+[
+1998,
+0,
+0,
+3
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Curtis Dickey",
@@ -5606,7 +6030,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Curtis Martin",
@@ -5648,7 +6074,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Curtis McClinton",
@@ -5711,7 +6139,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Dalton Hilliard",
@@ -5774,7 +6204,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Dan Fouts",
@@ -5882,7 +6314,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Dan Marino",
@@ -5995,7 +6429,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Dan Towler",
@@ -6046,7 +6482,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Danny White",
@@ -6141,7 +6579,57 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Darnay Scott",
+"wiki": "Darnay Scott",
+"pos": "Wide receiver",
+"first": 1994,
+"last": 2002,
+"infobox": {
+"rec": 37
+},
+"seasons": [
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+5
+],
+[
+1996,
+0,
+0,
+5
+],
+[
+1997,
+0,
+0,
+5
+],
+[
+1998,
+0,
+0,
+7
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Daryl Turner",
@@ -6181,7 +6669,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Daryle Lamonica",
@@ -6271,7 +6761,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Dave Krieg",
@@ -6401,6 +6893,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -6477,7 +6975,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "David Sims",
@@ -6512,7 +7012,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "David Woodley",
@@ -6565,7 +7067,57 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Derrick Alexander",
+"wiki": "Derrick Alexander (wide receiver)",
+"pos": "",
+"first": 1994,
+"last": 2002,
+"infobox": {
+"rec": 40
+},
+"seasons": [
+[
+1994,
+0,
+0,
+2
+],
+[
+1995,
+0,
+0,
+0
+],
+[
+1996,
+0,
+0,
+9
+],
+[
+1997,
+0,
+0,
+9
+],
+[
+1998,
+0,
+0,
+4
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Derrick Fenner",
@@ -6636,7 +7188,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Derrick Mason",
@@ -6664,7 +7218,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Dick Gordon",
@@ -6740,7 +7296,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Don Hutson",
@@ -6823,7 +7381,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Don Majkowski",
@@ -6901,7 +7461,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Don Maynard",
@@ -7007,7 +7569,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Don Meredith",
@@ -7078,7 +7642,59 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Dorsey Levens",
+"wiki": "Dorsey Levens",
+"pos": "Running back",
+"first": 1994,
+"last": 2004,
+"infobox": {
+"rush": 36,
+"rec": 17
+},
+"seasons": [
+[
+1994,
+0,
+0,
+0
+],
+[
+1995,
+0,
+3,
+4
+],
+[
+1996,
+0,
+5,
+5
+],
+[
+1997,
+0,
+7,
+5
+],
+[
+1998,
+0,
+1,
+0
 ]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Doug Flutie",
@@ -7126,7 +7742,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Drew Bledsoe",
@@ -7179,7 +7797,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Duane Thomas",
@@ -7218,7 +7838,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Earl Campbell",
@@ -7283,7 +7905,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Earl Morrall",
@@ -7426,7 +8050,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Earnest Byner",
@@ -7527,7 +8153,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ed Brown",
@@ -7615,6 +8243,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -7679,7 +8313,69 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Eddie Brown",
+"wiki": "Eddie Brown (wide receiver)",
+"pos": "Wide receiver",
+"first": 1985,
+"last": 1991,
+"infobox": {
+"rec": 41
+},
+"seasons": [
+[
+1985,
+0,
+0,
+8
+],
+[
+1986,
+0,
+0,
+4
+],
+[
+1987,
+0,
+0,
+3
+],
+[
+1988,
+0,
+0,
+9
+],
+[
+1989,
+0,
+0,
+6
+],
+[
+1990,
+0,
+0,
+9
+],
+[
+1991,
+0,
+0,
+2
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Eddie George",
@@ -7715,36 +8411,56 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Eddie Kennison",
+"wiki": "Eddie Kennison",
+"pos": "Wide receiver",
+"first": 1996,
+"last": 2008,
+"infobox": {
+"rec": 42
+},
+"seasons": [
+[
+1996,
+0,
+0,
+9
+],
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+0,
+0,
+1
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Elroy Hirsch",
 "wiki": "Elroy Hirsch",
 "pos": "Halfback , end , flanker",
-"first": 1946,
+"first": 1949,
 "last": 1957,
 "infobox": {
 "rec": 60
 },
 "seasons": [
-[
-1946,
-0,
-1,
-3
-],
-[
-1947,
-0,
-1,
-3
-],
-[
-1948,
-0,
-0,
-1
-],
 [
 1949,
 0,
@@ -7804,6 +8520,10 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1946, 1947, 1948]"
 ]
 },
 {
@@ -7850,6 +8570,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -7927,7 +8653,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Emmitt Smith",
@@ -7999,7 +8727,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Eric Dickerson",
@@ -8083,7 +8813,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Eric Hipple",
@@ -8157,12 +8889,171 @@
 0
 ]
 ],
-"notes": [
-"infobox rush 13 != table 0"
-],
+"notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 13"
 ]
+},
+{
+"name": "Eric Martin",
+"wiki": "Eric Martin (wide receiver)",
+"pos": "Wide receiver",
+"first": 1985,
+"last": 1994,
+"infobox": {
+"rec": 49
+},
+"seasons": [
+[
+1985,
+0,
+0,
+4
+],
+[
+1986,
+0,
+0,
+5
+],
+[
+1987,
+0,
+0,
+7
+],
+[
+1988,
+0,
+0,
+7
+],
+[
+1989,
+0,
+0,
+8
+],
+[
+1990,
+0,
+0,
+5
+],
+[
+1991,
+0,
+0,
+4
+],
+[
+1992,
+0,
+0,
+5
+],
+[
+1993,
+0,
+0,
+3
+],
+[
+1994,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Eric Metcalf",
+"wiki": "Eric Metcalf",
+"pos": "Running back , wide receiver , return specialist",
+"first": 1989,
+"last": 2002,
+"infobox": {},
+"seasons": [
+[
+1989,
+0,
+6,
+4
+],
+[
+1990,
+0,
+1,
+1
+],
+[
+1991,
+0,
+0,
+0
+],
+[
+1992,
+0,
+1,
+5
+],
+[
+1993,
+0,
+1,
+2
+],
+[
+1994,
+0,
+2,
+3
+],
+[
+1995,
+0,
+1,
+8
+],
+[
+1996,
+0,
+0,
+6
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Eric Moulds",
@@ -8196,7 +9087,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ernest Givins",
@@ -8272,7 +9165,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Errict Rhett",
@@ -8317,7 +9212,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Floyd Little",
@@ -8389,7 +9286,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Floyd Turner",
@@ -8459,7 +9358,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Fran Tarkenton",
@@ -8585,7 +9486,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Franco Harris",
@@ -8681,7 +9584,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Frank Clarke",
@@ -8763,7 +9668,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Frank Ryan",
@@ -8858,7 +9765,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Frank Tripucka",
@@ -8924,43 +9833,21 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Frankie Albert",
 "wiki": "Frankie Albert",
 "pos": "Quarterback , punter",
-"first": 1946,
+"first": 1950,
 "last": 1952,
 "infobox": {
 "pass": 0,
 "rush": 27
 },
 "seasons": [
-[
-1946,
-14,
-4,
-0
-],
-[
-1947,
-18,
-5,
-0
-],
-[
-1948,
-29,
-8,
-0
-],
-[
-1949,
-27,
-3,
-0
-],
 [
 1950,
 14,
@@ -8981,11 +9868,15 @@
 ]
 ],
 "notes": [
-"infobox pass 0 != table 115"
+"infobox pass 0 != table 27"
 ],
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
 },
 {
@@ -9050,7 +9941,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Fred Biletnikoff",
@@ -9150,7 +10043,35 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Fred Taylor",
+"wiki": "Fred Taylor (running back)",
+"pos": "Running back",
+"first": 1998,
+"last": 2010,
+"infobox": {
+"rush": 66,
+"rec": 8
+},
+"seasons": [
+[
+1998,
+0,
+14,
+3
 ]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Freeman McNeil",
@@ -9239,7 +10160,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gale Sayers",
@@ -9300,7 +10223,9 @@
 "pass",
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Garrison Hearst",
@@ -9356,7 +10281,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gary Collins",
@@ -9432,7 +10359,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gary Famiglietti",
@@ -9501,7 +10430,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gary Hogeboom",
@@ -9578,7 +10509,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "George Blanda",
@@ -9753,6 +10686,12 @@
 ],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -9812,7 +10751,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gerald Riggs",
@@ -9889,7 +10830,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gerry Ellis",
@@ -9948,7 +10891,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Greg Landry",
@@ -10055,7 +11000,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Gus Frerotte",
@@ -10101,6 +11048,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -10171,7 +11124,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Harold Carmichael",
@@ -10271,7 +11226,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Harold Jackson",
@@ -10384,7 +11341,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Haywood Jeffires",
@@ -10460,7 +11419,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Henry Ellard",
@@ -10573,7 +11534,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Herman Moore",
@@ -10637,7 +11600,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Herschel Walker",
@@ -10730,7 +11695,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Homer Jones",
@@ -10788,7 +11755,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Hugh Gallarneau",
@@ -10833,7 +11802,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Hugh Taylor",
@@ -10897,7 +11868,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ickey Woods",
@@ -10938,7 +11911,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ike Hilliard",
@@ -10966,7 +11941,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Irving Fryar",
@@ -11072,7 +12049,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Isaac Bruce",
@@ -11120,7 +12099,9 @@
 "pass",
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "J. J. Stokes",
@@ -11160,7 +12141,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jack Kemp",
@@ -11237,7 +12220,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jack Trudeau",
@@ -11314,7 +12299,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jackie Parker",
@@ -11328,7 +12315,7 @@
 1954,
 2,
 10,
-0
+3
 ],
 [
 1955,
@@ -11346,7 +12333,7 @@
 1957,
 3,
 11,
-0
+5
 ],
 [
 1958,
@@ -11358,19 +12345,19 @@
 1959,
 8,
 4,
-0
+3
 ],
 [
 1960,
 6,
 8,
-0
+2
 ],
 [
 1961,
 11,
 3,
-0
+1
 ],
 [
 1962,
@@ -11382,13 +12369,13 @@
 1963,
 7,
 0,
-0
+2
 ],
 [
 1964,
 18,
 2,
-0
+3
 ],
 [
 1965,
@@ -11400,8 +12387,11 @@
 "notes": [],
 "kinds": [
 "pass",
+"rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jake Plummer",
@@ -11430,7 +12420,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jake Reed",
@@ -11494,7 +12486,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "James Lofton",
@@ -11606,7 +12600,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jay Novacek",
@@ -11688,7 +12684,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jay Schroeder",
@@ -11766,7 +12764,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jeff Blake",
@@ -11820,7 +12820,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jeff George",
@@ -11888,11 +12890,15 @@
 0
 ]
 ],
-"notes": [
-"infobox rush 2 != table 0"
-],
+"notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 2"
 ]
 },
 {
@@ -11957,7 +12963,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jeff Hostetler",
@@ -12046,7 +13054,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jerome Bettis",
@@ -12100,7 +13110,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jerry Rice",
@@ -12201,7 +13213,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Benton",
@@ -12271,7 +13285,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Brown",
@@ -12343,7 +13359,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Everett",
@@ -12431,6 +13449,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -12521,7 +13545,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Hart",
@@ -12651,6 +13677,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -12734,7 +13766,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Kiick",
@@ -12803,7 +13837,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim McMahon",
@@ -12907,11 +13943,15 @@
 0
 ]
 ],
-"notes": [
-"infobox rush 16 != table 0"
-],
+"notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 16"
 ]
 },
 {
@@ -12976,7 +14016,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Nance",
@@ -13041,7 +14083,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jim Plunkett",
@@ -13145,11 +14189,15 @@
 0
 ]
 ],
-"notes": [
-"infobox rush 14 != table 0"
-],
+"notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 14"
 ]
 },
 {
@@ -13228,7 +14276,63 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Jimmy Smith",
+"wiki": "Jimmy Smith (wide receiver)",
+"pos": "Wide receiver",
+"first": 1992,
+"last": 2005,
+"infobox": {
+"rec": 67
+},
+"seasons": [
+[
+1992,
+0,
+0,
+0
+],
+[
+1993,
+0,
+0,
+0
+],
+[
+1995,
+0,
+0,
+3
+],
+[
+1996,
+0,
+0,
+7
+],
+[
+1997,
+0,
+0,
+4
+],
+[
+1998,
+0,
+0,
+8
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Joe Cribbs",
@@ -13299,7 +14403,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Joe Ferguson",
@@ -13417,6 +14523,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -13451,7 +14563,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Joe Montana",
@@ -13565,7 +14679,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Joe Morris",
@@ -13630,7 +14746,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Joe Namath",
@@ -13724,31 +14842,25 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
 "name": "Joe Perry",
 "wiki": "Joe Perry (American football)",
 "pos": "Fullback",
-"first": 1948,
+"first": 1950,
 "last": 1963,
 "infobox": {
 "rush": 71,
 "rec": 12
 },
 "seasons": [
-[
-1948,
-0,
-10,
-1
-],
-[
-1949,
-0,
-8,
-3
-],
 [
 1950,
 0,
@@ -13838,6 +14950,10 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1948, 1949]"
 ]
 },
 {
@@ -13881,7 +14997,9 @@
 ],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "John Brodie",
@@ -14000,7 +15118,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "John Elway",
@@ -14114,6 +15234,84 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "John Friesz",
+"wiki": "John Friesz",
+"pos": "Quarterback",
+"first": 1990,
+"last": 2000,
+"infobox": {
+"pass": 45
+},
+"seasons": [
+[
+1990,
+1,
+0,
+0
+],
+[
+1991,
+12,
+0,
+0
+],
+[
+1992,
+0,
+0,
+0
+],
+[
+1993,
+6,
+0,
+0
+],
+[
+1994,
+10,
+0,
+0
+],
+[
+1995,
+6,
+0,
+0
+],
+[
+1996,
+8,
+0,
+0
+],
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+2,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -14228,7 +15426,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "John Jefferson",
@@ -14292,7 +15492,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "John Riggins",
@@ -14400,7 +15602,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "John Stallworth",
@@ -14500,7 +15704,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "John Taylor",
@@ -14570,7 +15776,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Johnnie Morton",
@@ -14616,7 +15824,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Johnny Drake",
@@ -14661,7 +15871,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Johnny Hector",
@@ -14738,6 +15950,55 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Johnny Lujack",
+"wiki": "Johnny Lujack",
+"pos": "Quarterback , safety",
+"first": 1948,
+"last": 1951,
+"infobox": {
+"pass": 41,
+"rush": 21
+},
+"seasons": [
+[
+1948,
+6,
+0,
+0
+],
+[
+1949,
+23,
+0,
+0
+],
+[
+1950,
+4,
+0,
+0
+],
+[
+1951,
+8,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 21"
 ]
 },
 {
@@ -14816,7 +16077,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Johnny Unitas",
@@ -14942,7 +16205,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Jon Kitna",
@@ -14971,7 +16236,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Keenan McCardell",
@@ -15035,7 +16302,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Keith Byars",
@@ -15131,7 +16400,81 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Keith Jackson",
+"wiki": "Keith Jackson (tight end)",
+"pos": "Tight end",
+"first": 1988,
+"last": 1996,
+"infobox": {
+"rec": 49
+},
+"seasons": [
+[
+1988,
+0,
+0,
+6
+],
+[
+1989,
+0,
+0,
+3
+],
+[
+1990,
+0,
+0,
+6
+],
+[
+1991,
+0,
+0,
+5
+],
+[
+1992,
+0,
+0,
+5
+],
+[
+1993,
+0,
+0,
+6
+],
+[
+1994,
+0,
+0,
+7
+],
+[
+1995,
+0,
+0,
+1
+],
+[
+1996,
+0,
+0,
+10
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ken Anderson",
@@ -15243,6 +16586,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -15307,7 +16656,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ken O'Brien",
@@ -15383,6 +16734,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -15490,7 +16847,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Kenneth Davis",
@@ -15559,7 +16918,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Kerry Collins",
@@ -15600,7 +16961,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Kevin House",
@@ -15664,7 +17027,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Keyshawn Johnson",
@@ -15698,7 +17063,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Kordell Stewart",
@@ -15741,7 +17108,9 @@
 "pass",
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Lamar Smith",
@@ -15788,7 +17157,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Lance Alworth",
@@ -15871,7 +17242,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Lance Rentzel",
@@ -15946,7 +17319,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Larry Csonka",
@@ -16032,7 +17407,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Larry Kinnebrew",
@@ -16091,7 +17468,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Len Dawson",
@@ -16224,6 +17603,12 @@
 ],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -16314,7 +17699,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Leroy Hoard",
@@ -16383,7 +17770,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Leroy Kelly",
@@ -16458,7 +17847,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Lorenzo White",
@@ -16524,7 +17915,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Louis Lipps",
@@ -16594,7 +17987,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Lynn Dickey",
@@ -16700,7 +18095,85 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
+},
+{
+"name": "Lynn Swann",
+"wiki": "Lynn Swann",
+"pos": "Wide receiver",
+"first": 1974,
+"last": 1982,
+"infobox": {
+"rec": 51
+},
+"seasons": [
+[
+1974,
+0,
+0,
+2
+],
+[
+1975,
+0,
+0,
+11
+],
+[
+1976,
+0,
+0,
+3
+],
+[
+1977,
+0,
+0,
+7
+],
+[
+1978,
+0,
+0,
+11
+],
+[
+1979,
+0,
+0,
+5
+],
+[
+1980,
+0,
+0,
+7
+],
+[
+1981,
+0,
+0,
+5
+],
+[
+1982,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "MacArthur Lane",
@@ -16781,7 +18254,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Malcolm Kutner",
@@ -16827,7 +18302,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Marc Wilson",
@@ -16905,7 +18382,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Marcus Allen",
@@ -17019,7 +18498,33 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Marcus Robinson",
+"wiki": "Marcus Robinson (American football)",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2006,
+"infobox": {
+"rec": 43
+},
+"seasons": [
+[
+1998,
+0,
+0,
+1
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mario Bates",
@@ -17066,43 +18571,21 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Marion Motley",
 "wiki": "Marion Motley",
 "pos": "Fullback , linebacker",
-"first": 1946,
+"first": 1950,
 "last": 1955,
 "infobox": {
 "rush": 31,
 "rec": 7
 },
 "seasons": [
-[
-1946,
-0,
-5,
-1
-],
-[
-1947,
-0,
-8,
-1
-],
-[
-1948,
-0,
-5,
-2
-],
-[
-1949,
-0,
-8,
-0
-],
 [
 1950,
 0,
@@ -17138,6 +18621,10 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
 },
 {
@@ -17208,7 +18695,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mark Brunell",
@@ -17261,7 +18750,99 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Mark Carrier",
+"wiki": "Mark Carrier (wide receiver)",
+"pos": "",
+"first": 1987,
+"last": 1998,
+"infobox": {
+"rec": 48
+},
+"seasons": [
+[
+1987,
+0,
+0,
+3
+],
+[
+1988,
+0,
+0,
+5
+],
+[
+1989,
+0,
+0,
+9
+],
+[
+1990,
+0,
+0,
+4
+],
+[
+1991,
+0,
+0,
+2
+],
+[
+1992,
+0,
+0,
+4
+],
+[
+1993,
+0,
+0,
+3
+],
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+3
+],
+[
+1996,
+0,
+0,
+6
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+2
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mark Duper",
@@ -17343,7 +18924,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mark Malone",
@@ -17414,7 +18997,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mark Rypien",
@@ -17490,6 +19075,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -17538,7 +19129,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Marvin Harrison",
@@ -17573,6 +19166,100 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Matt Dunigan",
+"wiki": "Matt Dunigan",
+"pos": "Quarterback",
+"first": 1983,
+"last": 1996,
+"infobox": {},
+"seasons": [
+[
+1983,
+1,
+0,
+0
+],
+[
+1984,
+21,
+0,
+0
+],
+[
+1985,
+19,
+0,
+0
+],
+[
+1986,
+25,
+0,
+0
+],
+[
+1987,
+21,
+0,
+0
+],
+[
+1990,
+17,
+0,
+0
+],
+[
+1991,
+16,
+0,
+0
+],
+[
+1992,
+17,
+0,
+0
+],
+[
+1993,
+36,
+0,
+0
+],
+[
+1994,
+31,
+0,
+0
+],
+[
+1995,
+34,
+0,
+0
+],
+[
+1996,
+12,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -17659,7 +19346,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mercury Morris",
@@ -17722,7 +19411,87 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Michael Haynes",
+"wiki": "Michael Haynes (wide receiver)",
+"pos": "Wide receiver",
+"first": 1988,
+"last": 1997,
+"infobox": {
+"rec": 47
+},
+"seasons": [
+[
+1988,
+0,
+0,
+4
+],
+[
+1989,
+0,
+0,
+4
+],
+[
+1990,
+0,
+0,
+0
+],
+[
+1991,
+0,
+0,
+11
+],
+[
+1992,
+0,
+0,
+10
+],
+[
+1993,
+0,
+0,
+4
+],
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+4
+],
+[
+1996,
+0,
+0,
+4
+],
+[
+1997,
+0,
+0,
+1
 ]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Michael Irvin",
@@ -17805,7 +19574,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Michael Jackson",
@@ -17869,7 +19640,50 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Mike Alstott",
+"wiki": "Mike Alstott",
+"pos": "Fullback",
+"first": 1996,
+"last": 2006,
+"infobox": {
+"rush": 58,
+"rec": 13
+},
+"seasons": [
+[
+1996,
+0,
+3,
+3
+],
+[
+1997,
+0,
+7,
+3
+],
+[
+1998,
+0,
+8,
+1
 ]
+],
+"notes": [
+"career row rush 58 != season sum 59",
+"infobox rush 58 != table 59"
+],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mike Pagel",
@@ -17959,7 +19773,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Mike Quick",
@@ -18029,7 +19845,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Milt Plum",
@@ -18124,7 +19942,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Muhsin Muhammad",
@@ -18159,7 +19979,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Nat Moore",
@@ -18253,7 +20075,64 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Natrone Means",
+"wiki": "Natrone Means",
+"pos": "",
+"first": 1993,
+"last": 1999,
+"infobox": {
+"rush": 45
+},
+"seasons": [
+[
+1993,
+0,
+8,
+0
+],
+[
+1994,
+0,
+12,
+0
+],
+[
+1995,
+0,
+5,
+0
+],
+[
+1996,
+0,
+2,
+1
+],
+[
+1997,
+0,
+9,
+0
+],
+[
+1998,
+0,
+5,
+0
 ]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Neal Anderson",
@@ -18316,7 +20195,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Neil Lomax",
@@ -18388,7 +20269,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Neil O'Donnell",
@@ -18452,6 +20335,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -18565,7 +20454,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Norm Van Brocklin",
@@ -18653,6 +20544,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -18737,7 +20634,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Otis Taylor",
@@ -18819,7 +20718,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ottis Anderson",
@@ -18924,43 +20825,21 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Otto Graham",
 "wiki": "Otto Graham",
 "pos": "Quarterback",
-"first": 1946,
+"first": 1950,
 "last": 1955,
 "infobox": {
 "pass": 174,
 "rush": 44
 },
 "seasons": [
-[
-1946,
-17,
-1,
-0
-],
-[
-1947,
-25,
-1,
-0
-],
-[
-1948,
-25,
-6,
-0
-],
-[
-1949,
-19,
-3,
-0
-],
 [
 1950,
 14,
@@ -19002,6 +20881,10 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1946, 1947, 1948, 1949]"
 ]
 },
 {
@@ -19080,7 +20963,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Paul Lowe",
@@ -19158,7 +21043,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Paul Robinson",
@@ -19209,7 +21096,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Paul Warfield",
@@ -19310,7 +21199,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Pete Banaszak",
@@ -19405,7 +21296,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Pete Pihos",
@@ -19475,7 +21368,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Peyton Manning",
@@ -19498,7 +21393,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Phil Simms",
@@ -19598,6 +21495,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -19628,7 +21531,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Quinn Early",
@@ -19710,7 +21615,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Randall Cunningham",
@@ -19806,7 +21713,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Randy Moss",
@@ -19830,7 +21739,9 @@
 "pass",
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ray Butler",
@@ -19898,7 +21809,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Raymond Berry",
@@ -19992,7 +21905,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rich Gannon",
@@ -20072,11 +21987,15 @@
 0
 ]
 ],
-"notes": [
-"infobox rush 21 != table 0"
-],
+"notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns; career rush 21"
 ]
 },
 {
@@ -20164,7 +22083,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rick Mirer",
@@ -20217,7 +22138,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rickey Dudley",
@@ -20251,7 +22174,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ricky Proehl",
@@ -20321,7 +22246,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ricky Watters",
@@ -20381,7 +22308,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rob Goode",
@@ -20426,7 +22355,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Robert Brooks",
@@ -20484,7 +22415,65 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Robert Smith",
+"wiki": "Robert Smith (running back)",
+"pos": "Running back",
+"first": 1993,
+"last": 2000,
+"infobox": {
+"rush": 32,
+"rec": 6
+},
+"seasons": [
+[
+1993,
+0,
+2,
+0
+],
+[
+1994,
+0,
+1,
+0
+],
+[
+1995,
+0,
+5,
+0
+],
+[
+1996,
+0,
+3,
+0
+],
+[
+1997,
+0,
+6,
+1
+],
+[
+1998,
+0,
+6,
+2
 ]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rodney Hampton",
@@ -20547,7 +22536,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rodney Holman",
@@ -20647,7 +22638,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Rodney Peete",
@@ -20724,7 +22717,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Roger Craig",
@@ -20805,7 +22800,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Roger Staubach",
@@ -20889,7 +22886,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Roman Gabriel",
@@ -21003,7 +23002,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ron Jaworski",
@@ -21122,7 +23123,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Roy Green",
@@ -21222,7 +23225,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ryan Leaf",
@@ -21245,7 +23250,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Sammy Baugh",
@@ -21357,6 +23364,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -21428,7 +23441,145 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Scott Mitchell",
+"wiki": "Scott Mitchell (quarterback)",
+"pos": "Quarterback",
+"first": 1992,
+"last": 2001,
+"infobox": {
+"pass": 95
+},
+"seasons": [
+[
+1992,
+0,
+0,
+0
+],
+[
+1993,
+12,
+0,
+0
+],
+[
+1994,
+10,
+0,
+0
+],
+[
+1995,
+32,
+0,
+0
+],
+[
+1996,
+17,
+0,
+0
+],
+[
+1997,
+19,
+0,
+0
+],
+[
+1998,
+1,
+0,
+0
 ]
+],
+"notes": [],
+"kinds": [
+"pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
+]
+},
+{
+"name": "Shannon Sharpe",
+"wiki": "Shannon Sharpe",
+"pos": "Tight end",
+"first": 1990,
+"last": 2003,
+"infobox": {
+"rec": 62
+},
+"seasons": [
+[
+1990,
+0,
+0,
+1
+],
+[
+1991,
+0,
+0,
+1
+],
+[
+1992,
+0,
+0,
+2
+],
+[
+1993,
+0,
+0,
+9
+],
+[
+1994,
+0,
+0,
+4
+],
+[
+1995,
+0,
+0,
+4
+],
+[
+1996,
+0,
+0,
+10
+],
+[
+1997,
+0,
+0,
+3
+],
+[
+1998,
+0,
+0,
+10
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Sid Luckman",
@@ -21516,6 +23667,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -21640,6 +23797,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -21716,7 +23879,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Stan Humphries",
@@ -21781,7 +23946,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Stanley Morgan",
@@ -21882,7 +24049,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Stephen Davis",
@@ -21914,11 +24083,15 @@
 0
 ]
 ],
-"notes": [
-"infobox rec 4 != table 0"
-],
+"notes": [],
 "kinds": [
 "rush"
+],
+"missing": [
+"rec"
+],
+"info": [
+"table has no rec columns; career rec 4"
 ]
 },
 {
@@ -21978,7 +24151,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve Bartkowski",
@@ -22066,6 +24241,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -22155,7 +24336,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve Bono",
@@ -22255,6 +24438,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -22373,6 +24562,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -22487,7 +24682,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve Largent",
@@ -22587,7 +24784,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve McNair",
@@ -22631,7 +24830,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve Van Buren",
@@ -22697,7 +24898,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve Watson",
@@ -22767,7 +24970,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Steve Young",
@@ -22869,7 +25074,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Stump Mitchell",
@@ -22938,7 +25145,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Ted Fritsch",
@@ -23007,7 +25216,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terance Mathis",
@@ -23077,7 +25288,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terrell Davis",
@@ -23118,7 +25331,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terrell Owens",
@@ -23153,7 +25368,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terry Allen",
@@ -23218,7 +25435,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terry Barr",
@@ -23288,6 +25507,12 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -23390,7 +25615,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terry Glenn",
@@ -23424,7 +25651,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Terry Kirby",
@@ -23475,7 +25704,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Thurman Thomas",
@@ -23559,7 +25790,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tiki Barber",
@@ -23589,7 +25822,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tim Brown",
@@ -23672,7 +25907,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tobin Rote",
@@ -23768,7 +26005,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tom Fears",
@@ -23838,7 +26077,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tom Matte",
@@ -23925,7 +26166,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tom Rathman",
@@ -23996,7 +26239,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tom Sullivan",
@@ -24055,7 +26300,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tommy Kramer",
@@ -24155,6 +26402,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -24199,7 +26452,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tommy McDonald",
@@ -24287,7 +26542,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tommy Thompson",
@@ -24358,7 +26615,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tony Banks",
@@ -24393,7 +26652,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tony Collins",
@@ -24459,7 +26720,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tony Dorsett",
@@ -24549,7 +26812,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tony Eason",
@@ -24613,6 +26878,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -24641,7 +26912,80 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": []
+},
+{
+"name": "Tony Martin",
+"wiki": "Tony Martin (American football)",
+"pos": "Wide receiver",
+"first": 1990,
+"last": 2001,
+"infobox": {},
+"seasons": [
+[
+1990,
+0,
+0,
+2
+],
+[
+1991,
+0,
+0,
+2
+],
+[
+1992,
+0,
+0,
+2
+],
+[
+1993,
+0,
+0,
+3
+],
+[
+1994,
+0,
+0,
+7
+],
+[
+1995,
+0,
+0,
+6
+],
+[
+1996,
+0,
+0,
+14
+],
+[
+1997,
+0,
+0,
+6
+],
+[
+1998,
+0,
+0,
+6
 ]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Torrance Small",
@@ -24699,7 +27043,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Trent Dilfer",
@@ -24746,7 +27092,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Trent Green",
@@ -24775,7 +27123,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Troy Aikman",
@@ -24852,7 +27202,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Troy Brown",
@@ -24904,7 +27256,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Tyrone Wheatley",
@@ -24943,7 +27297,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Vance Johnson",
@@ -25019,7 +27375,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Vinny Testaverde",
@@ -25109,7 +27467,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Wade Wilson",
@@ -25233,6 +27593,12 @@
 "notes": [],
 "kinds": [
 "pass"
+],
+"missing": [
+"rush"
+],
+"info": [
+"table has no rush columns"
 ]
 },
 {
@@ -25330,7 +27696,9 @@
 "pass",
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Warren Moon",
@@ -25438,7 +27806,9 @@
 "kinds": [
 "pass",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Warren Wells",
@@ -25484,7 +27854,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Warrick Dunn",
@@ -25514,7 +27886,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Webster Slaughter",
@@ -25602,7 +27976,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Wes Chandler",
@@ -25684,7 +28060,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Wesley Walls",
@@ -25760,7 +28138,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Wilbert Montgomery",
@@ -25832,7 +28212,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Willie Gault",
@@ -25912,7 +28294,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Wray Carlton",
@@ -25975,31 +28359,21 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Y. A. Tittle",
 "wiki": "Y. A. Tittle",
 "pos": "Quarterback",
-"first": 1948,
+"first": 1950,
 "last": 1964,
 "infobox": {
 "pass": 242,
 "rush": 39
 },
 "seasons": [
-[
-1948,
-16,
-4,
-0
-],
-[
-1949,
-14,
-2,
-0
-],
 [
 1950,
 8,
@@ -26095,6 +28469,10 @@
 "kinds": [
 "pass",
 "rush"
+],
+"missing": [],
+"info": [
+"AAFC seasons left out: [1948, 1949]"
 ]
 },
 {
@@ -26159,7 +28537,9 @@
 "notes": [],
 "kinds": [
 "rec"
-]
+],
+"missing": [],
+"info": []
 },
 {
 "name": "Zack Crockett",
@@ -26201,7 +28581,9 @@
 "kinds": [
 "rec",
 "rush"
-]
+],
+"missing": [],
+"info": []
 }
 ]
 }

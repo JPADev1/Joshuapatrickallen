@@ -1,0 +1,21 @@
+# Johnny Hector: fetch failed: The page you specified doesn't exist.
+## headings: Regular season | NFL career statistics
+  Year ; Team ; Games ; Rushing ; Receiving
+  GP ; GS ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1983 ; NYJ ; 10 ; 1 ; 16 ; 85 ; 5.3 ; 42 ; 0 ; 5 ; 61 ; 12.2 ; 22 ; 1
+  1984 ; NYJ ; 13 ; 2 ; 124 ; 531 ; 4.3 ; 64 ; 1 ; 20 ; 182 ; 9.1 ; 26 ; 0
+  1985 ; NYJ ; 14 ; 5 ; 145 ; 572 ; 3.9 ; 22 ; 6 ; 17 ; 164 ; 9.6 ; 28 ; 0
+  1986 ; NYJ ; 13 ; 5 ; 164 ; 605 ; 3.7 ; 41 ; 8 ; 33 ; 302 ; 9.2 ; 23 ; 0
+  1987 ; NYJ ; 11 ; 6 ; 111 ; 435 ; 3.9 ; 20 ; 11 ; 32 ; 249 ; 7.8 ; 27 ; 0
+  1988 ; NYJ ; 16 ; 1 ; 137 ; 561 ; 4.1 ; 19 ; 10 ; 26 ; 237 ; 9.1 ; 30 ; 0
+  1989 ; NYJ ; 15 ; 9 ; 177 ; 702 ; 4.0 ; 24 ; 3 ; 38 ; 330 ; 8.7 ; 32 ; 2
+  1990 ; NYJ ; 15 ; 3 ; 91 ; 377 ; 4.1 ; 22 ; 2 ; 8 ; 72 ; 9.0 ; 25 ; 0
+  1991 ; NYJ ; 14 ; 1 ; 62 ; 345 ; 5.6 ; 47 ; 0 ; 7 ; 51 ; 7.3 ; 16 ; 0
+  1992 ; NYJ ; 5 ; 1 ; 24 ; 67 ; 2.8 ; 14 ; 0 ; 2 ; 13 ; 6.5 ; 9 ; 0
+   ; 126 ; 34 ; 1,051 ; 4,280 ; 4.1 ; 64 ; 41 ; 188 ; 1,661 ; 8.8 ; 32 ; 3
+## headings: Playoffs | Regular season | NFL career statistics
+  Year ; Team ; Games ; Rushing ; Receiving
+  GP ; GS ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1985 ; NYJ ; 1 ; 0 ; 4 ; 13 ; 3.3 ; 7 ; 0 ; 1 ; 11 ; 11.0 ; 11 ; 1
+  1991 ; NYJ ; 1 ; 1 ; 11 ; 43 ; 3.9 ; 8 ; 0 ; 0 ; 0 ; 0.0 ; 0 ; 0
+   ; 2 ; 1 ; 15 ; 56 ; 3.7 ; 8 ; 0 ; 1 ; 11 ; 11.0 ; 11 ; 1

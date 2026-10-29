@@ -1,0 +1,84 @@
+# Vinny Testaverde: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Testaverde with the Baltimore Ravens in 1996
+  No. 14, 12, 16
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1963-11-13 ) November 13, 1963 (age 62) Brooklyn, New York , U.S.
+  Listed height ; 6 ft 5 in (1.96 m)
+  Listed weight ; 233 lb (106 kg)
+  Career information
+  High school ; Sewanhaka ( Floral Park, New York )
+  College ; Miami (FL) (1982–1986)
+  NFL draft ; 1987 : 1st round, 1st overall pick
+  Career history
+  Tampa Bay Buccaneers ( 1987 – 1992 ) Cleveland Browns ( 1993 – 1995 ) Baltimore Ravens ( 1996 – 1997 ) New York Jets ( 1998 – 2003 ) Dallas Cowboys ( 2004 ) New York Jets ( 2005 ) New England Patriots ( 2006 ) Carolina Panthers ( 2007 )
+  
+  Awards and highlights
+  2× Pro Bowl ( 1996 , 1998 ) PFWA All-Rookie Team ( 1987 ) National champion ( 1983 ) Heisman Trophy (1986) Unanimous All-American ( 1986 ) Second-team All-American ( 1985 ) Miami Hurricanes No. 14 retired
+  
+  Career NFL statistics
+  Passing attempts 6,701 Passing completions 3,787 Completion percentage 56.5% TD – INT 275–267 Passing yards 46,233 Passer rating 75 Rushing yards 1,661 Rushing touchdowns 15 Stats at Pro Football Reference ; Passing attempts ; 6,701 ; Passing completions ; 3,787 ; Completion percentage ; 56.5% ; TD – INT ; 275–267 ; Passing yards ; 46,233 ; Passer rating ; 75 ; Rushing yards ; 1,661 ; Rushing touchdowns ; 15 ; Stats at Pro Football Reference
+  Passing attempts ; 6,701
+  Passing completions ; 3,787
+  Completion percentage ; 56.5%
+  TD – INT ; 275–267
+  Passing yards ; 46,233
+  Passer rating ; 75
+  Rushing yards ; 1,661
+  Rushing touchdowns ; 15
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 6,701
+  Passing completions ; 3,787
+  Completion percentage ; 56.5%
+  TD – INT ; 275–267
+  Passing yards ; 46,233
+  Passer rating ; 75
+  Rushing yards ; 1,661
+  Rushing touchdowns ; 15
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles [ 111 ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1987 ; TB ; 6 ; 4 ; 0–4 ; 71 ; 165 ; 43.0 ; 1,081 ; 6.6 ; 5 ; 6 ; 60.2 ; 13 ; 50 ; 3.8 ; 1 ; 18 ; 140 ; 7 ; 2
+  1988 ; TB ; 15 ; 15 ; 5–10 ; 222 ; 466 ; 47.6 ; 3,240 ; 7.0 ; 13 ; 35 ; 48.8 ; 28 ; 138 ; 4.9 ; 1 ; 33 ; 292 ; 9 ; 5
+  1989 ; TB ; 14 ; 14 ; 5–9 ; 258 ; 480 ; 53.8 ; 3,133 ; 6.5 ; 20 ; 22 ; 68.9 ; 25 ; 139 ; 5.6 ; 0 ; 38 ; 294 ; 4 ; 2
+  1990 ; TB ; 14 ; 13 ; 6–7 ; 203 ; 365 ; 55.6 ; 2,818 ; 7.7 ; 17 ; 18 ; 75.6 ; 38 ; 280 ; 7.4 ; 1 ; 38 ; 330 ; 10 ; 0
+  1991 ; TB ; 13 ; 12 ; 3–9 ; 166 ; 326 ; 50.9 ; 1,994 ; 6.1 ; 8 ; 15 ; 59.0 ; 32 ; 101 ; 3.2 ; 0 ; 35 ; 234 ; 6 ; 2
+  1992 ; TB ; 14 ; 14 ; 5–9 ; 206 ; 358 ; 57.5 ; 2,554 ; 7.1 ; 14 ; 16 ; 74.2 ; 36 ; 197 ; 5.5 ; 2 ; 35 ; 259 ; 4 ; 1
+  1993 ; CLE ; 10 ; 6 ; 3–3 ; 130 ; 230 ; 56.5 ; 1,797 ; 7.8 ; 14 ; 9 ; 85.7 ; 18 ; 74 ; 4.1 ; 0 ; 17 ; 101 ; 4 ; 3
+  1994 ; CLE ; 14 ; 13 ; 9–4 ; 207 ; 376 ; 55.1 ; 2,575 ; 6.8 ; 16 ; 18 ; 70.7 ; 21 ; 37 ; 1.8 ; 2 ; 12 ; 83 ; 3 ; 2
+  1995 ; CLE ; 13 ; 12 ; 4–8 ; 241 ; 392 ; 61.5 ; 2,883 ; 7.4 ; 17 ; 10 ; 87.8 ; 18 ; 62 ; 3.4 ; 2 ; 17 ; 87 ; 4 ; 1
+  1996 ; BAL ; 16 ; 16 ; 4–12 ; 325 ; 549 ; 59.2 ; 4,177 ; 7.6 ; 33 ; 19 ; 88.7 ; 34 ; 188 ; 5.5 ; 2 ; 34 ; 270 ; 9 ; 7
+  1997 ; BAL ; 13 ; 13 ; 4–8–1 ; 271 ; 470 ; 57.7 ; 2,971 ; 6.3 ; 18 ; 15 ; 75.9 ; 34 ; 138 ; 4.1 ; 0 ; 20 ; 129 ; 11 ; 3
+  1998 ; NYJ ; 14 ; 13 ; 12–1 ; 259 ; 421 ; 61.5 ; 3,256 ; 7.7 ; 29 ; 7 ; 101.6 ; 24 ; 104 ; 4.3 ; 1 ; 19 ; 140 ; 7 ; 3
+  1999 ; NYJ ; 1 ; 1 ; 0–1 ; 10 ; 15 ; 66.7 ; 96 ; 6.4 ; 1 ; 1 ; 78.7 ; 0 ; 0 ; — ; 0 ; 0 ; 0 ; 0 ; 0
+  2000 ; NYJ ; 16 ; 16 ; 9–7 ; 328 ; 590 ; 55.6 ; 3,732 ; 6.3 ; 21 ; 25 ; 69.0 ; 25 ; 32 ; 1.3 ; 0 ; 13 ; 71 ; 7 ; 5
+  2001 ; NYJ ; 16 ; 16 ; 10–6 ; 260 ; 441 ; 59.0 ; 2,752 ; 6.2 ; 15 ; 14 ; 75.3 ; 31 ; 25 ; 0.8 ; 0 ; 18 ; 122 ; 12 ; 2
+  2002 ; NYJ ; 5 ; 4 ; 1–3 ; 54 ; 83 ; 65.1 ; 499 ; 6.0 ; 3 ; 3 ; 78.3 ; 2 ; 23 ; 11.5 ; 0 ; 9 ; 62 ; 2 ; 2
+  2003 ; NYJ ; 7 ; 7 ; 2–5 ; 123 ; 198 ; 62.1 ; 1,385 ; 7.0 ; 7 ; 2 ; 90.6 ; 6 ; 17 ; 2.8 ; 0 ; 6 ; 48 ; 1 ; 0
+  2004 ; DAL ; 16 ; 15 ; 5–10 ; 297 ; 495 ; 60.0 ; 3,532 ; 7.1 ; 17 ; 20 ; 76.4 ; 21 ; 38 ; 1.8 ; 1 ; 34 ; 182 ; 8 ; 4
+  2005 ; NYJ ; 6 ; 4 ; 1–3 ; 60 ; 106 ; 56.6 ; 777 ; 7.3 ; 1 ; 6 ; 59.4 ; 7 ; 4 ; 0.6 ; 2 ; 12 ; 102 ; 8 ; 6
+  2006 ; NE ; 3 ; 0 ; — ; 2 ; 3 ; 66.7 ; 29 ; 9.7 ; 1 ; 0 ; 137.5 ; 8 ; −8 ; −1.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  2007 ; CAR ; 7 ; 6 ; 2–4 ; 94 ; 172 ; 54.7 ; 952 ; 5.5 ; 5 ; 6 ; 65.8 ; 9 ; 22 ; 2.4 ; 0 ; 9 ; 46 ; 3 ; 1
+  Career ; 233 ; 214 ; 90–123–1 ; 3,787 ; 6,701 ; 56.5 ; 46,233 ; 6.9 ; 275 ; 267 ; 75.0 ; 430 ; 1,661 ; 3.9 ; 15 ; 417 ; 2,992 ; 119 ; 51
+## headings: Postseason | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles [ 111 ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1994 ; CLE ; 2 ; 2 ; 1–1 ; 33 ; 61 ; 54.1 ; 412 ; 6.8 ; 2 ; 2 ; 72.6 ; 5 ; 19 ; 3.8 ; 0 ; 4 ; 27 ; 0 ; 0
+  1998 ; NYJ ; 2 ; 2 ; 1–1 ; 55 ; 88 ; 62.5 ; 640 ; 7.3 ; 1 ; 3 ; 74.1 ; 1 ; −1 ; −1.0 ; 0 ; 2 ; 6 ; 0 ; 0
+  2001 ; NYJ ; 1 ; 1 ; 0–1 ; 26 ; 40 ; 65.0 ; 268 ; 6.7 ; 3 ; 0 ; 109.2 ; 1 ; 1 ; 1.0 ; 0 ; 1 ; 3 ; 0 ; 0
+  2002 ; NYJ ; 1 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; — ; 2 ; −2 ; −1.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  2006 ; NE ; 1 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; — ; 1 ; −1 ; −1.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  Career ; 7 ; 5 ; 2–3 ; 114 ; 189 ; 60.3 ; 1,320 ; 7.0 ; 6 ; 5 ; 81.0 ; 10 ; 16 ; 1.6 ; 0 ; 7 ; 36 ; 0 ; 0
+## headings: College | Postseason | Regular season
+  Season ; Team ; Passing
+  Cmp ; Att ; Pct ; Yds ; TD ; Int ; Rtg
+  1982 ; Miami ; 5 ; 12 ; 41.7 ; 79 ; 1 ; 0 ; 124.5
+  1983 ; Miami ; Redshirt
+  1984 ; Miami ; 17 ; 34 ; 50 ; 184 ; 0 ; 1 ; 89.6
+  1985 ; Miami ; 216 ; 352 ; 61.4 ; 3,238 ; 21 ; 15 ; 149.8
+  1986 ; Miami ; 175 ; 276 ; 63.4 ; 2,557 ; 26 ; 9 ; 165.8
+  Career ; 413 ; 674 ; 61.3 ; 6,058 ; 48 ; 25 ; 152.9

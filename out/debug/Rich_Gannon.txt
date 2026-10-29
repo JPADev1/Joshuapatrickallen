@@ -1,4 +1,4 @@
-# Rich Gannon: infobox rush 21 != table 0
+# Rich Gannon: fetch failed: The page you specified doesn't exist.
 ## headings: 
   Gannon in 1992
   No. 16, 12

@@ -1,4 +1,4 @@
-# Leonard Russell (American football): no NFL stats table
+# Leonard Russell (American football): fetch failed: The page you specified doesn't exist.
 ## headings: NFL career statistics | Professional career
   Year ; Team ; GP ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
   1991 ; NE ; 16 ; 266 ; 959 ; 3.6 ; 24 ; 4 ; 18 ; 81 ; 4.5 ; 18 ; 0

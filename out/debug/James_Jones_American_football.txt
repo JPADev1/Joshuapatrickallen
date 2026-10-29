@@ -1,1 +1,1 @@
-# James Jones (American football): no NFL stats table
+# James Jones (American football): fetch failed: The page you specified doesn't exist.

@@ -1,1 +1,1 @@
-# Joe Morris: no NFL stats table
+# Joe Morris: fetch failed: The page you specified doesn't exist.

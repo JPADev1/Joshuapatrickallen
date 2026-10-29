@@ -1,0 +1,95 @@
+# Peyton Manning: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Manning in Denver in 2021
+  No. 18
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1976-03-24 ) March 24, 1976 (age 50) New Orleans , Louisiana, U.S.
+  Listed height ; 6 ft 5 in (1.96 m)
+  Listed weight ; 230 lb (104 kg)
+  Career information
+  High school ; Isidore Newman (New Orleans)
+  College ; Tennessee (1994–1997)
+  NFL draft ; 1998 : 1st round, 1st overall pick
+  Career history
+  Indianapolis Colts ( 1998 – 2011 ) Denver Broncos ( 2012 – 2015 )
+  
+  Awards and highlights
+  2× Super Bowl champion ( XLI , 50 ) Super Bowl MVP ( XLI ) 5× NFL Most Valuable Player (2003, [ a ] 2004, 2008, 2009, 2013) 2× NFL Offensive Player of the Year (2004, 2013) NFL Comeback Player of the Year (2012) Walter Payton NFL Man of the Year (2005) 7× First-team All-Pro ( 2003 – 2005 , 2008 , 2009 , 2012 , 2013 ) 3× Second-team All-Pro ( 1999 , 2000 , 2006 ) 14× Pro Bowl ( 1999 , 2000 , 2002 – 2010 , 2012 – 2014 ) 3× NFL passing yards leader (2000, 2003, 2013) 4× NFL passing touchdowns leader (2000, 2004, 2006, 2013) 3× NFL passer rating leader (2004–2006) 2× NFL completion percentage leader (2003, 2012) NFL 2000s All-Decade Team NFL 100th Anniversary All-Time Team SI Sportsman of the Year (2013) Indianapolis Colts Ring of Honor Indianapolis Colts No. 18 retired Denver Broncos Ring of Fame Denver Broncos No. 18 honored Consensus All-American ( 1997 ) 2× Third-team All-American ( 1995 , 1996 ) SEC Male Athlete of the Year (1998) Tennessee Volunteers No. 16 retired NFL records Most passing touchdowns in a season: 55 (2013) Most passing yards in a season: 5,477 (2013) Most touchdown passes in a game: 7 (tied) Games with a perfect passer rating : 4 (tied) [ b ] Most MVP awards won ( 5 )
+  
+  Career NFL statistics
+  Passing attempts 9,380 Passing completions 6,125 Completion percentage 65.3% TD – INT 539–251 Passing yards 71,940 Passer rating 96.5 Stats at Pro Football Reference ; Passing attempts ; 9,380 ; Passing completions ; 6,125 ; Completion percentage ; 65.3% ; TD – INT ; 539–251 ; Passing yards ; 71,940 ; Passer rating ; 96.5 ; Stats at Pro Football Reference
+  Passing attempts ; 9,380
+  Passing completions ; 6,125
+  Completion percentage ; 65.3%
+  TD – INT ; 539–251
+  Passing yards ; 71,940
+  Passer rating ; 96.5
+  Stats at Pro Football Reference
+  Pro Football Hall of Fame
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 9,380
+  Passing completions ; 6,125
+  Completion percentage ; 65.3%
+  TD – INT ; 539–251
+  Passing yards ; 71,940
+  Passer rating ; 96.5
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacked ; Fumbles [ c ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Y/G ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Y/A ; Lng ; TD ; Sck ; SckY ; Fum ; Lost
+  1998 ; IND ; 16 ; 16 ; 3–13 ; 326 ; 575 ; 56.7 ; 3,739 ; 6.5 ; 233.7 ; 78 ; 26 ; 28 ; 71.2 ; 15 ; 62 ; 4.1 ; 15 ; 0 ; 22 ; 109 ; 3 ; 1
+  1999 ; IND ; 16 ; 16 ; 13–3 ; 331 ; 533 ; 62.1 ; 4,135 ; 7.8 ; 258.4 ; 80 ; 26 ; 15 ; 90.7 ; 35 ; 73 ; 2.1 ; 13 ; 2 ; 14 ; 116 ; 6 ; 3
+  2000 ; IND ; 16 ; 16 ; 10–6 ; 357 ; 571 ; 62.5 ; 4,413 ; 7.7 ; 275.8 ; 78 ; 33 ; 15 ; 94.7 ; 37 ; 116 ; 3.1 ; 14 ; 1 ; 20 ; 131 ; 5 ; 2
+  2001 ; IND ; 16 ; 16 ; 6–10 ; 343 ; 547 ; 62.7 ; 4,131 ; 7.6 ; 258.2 ; 86 ; 26 ; 23 ; 84.1 ; 35 ; 157 ; 4.5 ; 33 ; 4 ; 29 ; 232 ; 7 ; 3
+  2002 ; IND ; 16 ; 16 ; 10–6 ; 392 ; 591 ; 66.3 ; 4,200 ; 7.1 ; 262.5 ; 69 ; 27 ; 19 ; 88.8 ; 38 ; 148 ; 3.9 ; 13 ; 2 ; 23 ; 145 ; 6 ; 2
+  2003 ; IND ; 16 ; 16 ; 12–4 ; 379 ; 566 ; 67.0 ; 4,267 ; 7.5 ; 266.7 ; 79 ; 29 ; 10 ; 99.0 ; 28 ; 26 ; 0.9 ; 10 ; 0 ; 18 ; 107 ; 6 ; 1
+  2004 ; IND ; 16 ; 16 ; 12–4 ; 336 ; 497 ; 67.6 ; 4,557 ; 9.2 ; 284.8 ; 80 ; 49 ; 10 ; 121.1 ; 25 ; 38 ; 1.5 ; 19 ; 0 ; 13 ; 101 ; 5 ; 1
+  2005 ; IND ; 16 ; 16 ; 14–2 ; 305 ; 453 ; 67.3 ; 3,747 ; 8.3 ; 234.2 ; 80 ; 28 ; 10 ; 104.1 ; 33 ; 45 ; 1.4 ; 12 ; 0 ; 17 ; 81 ; 5 ; 2
+  2006 ; IND ; 16 ; 16 ; 12–4 ; 362 ; 557 ; 65.0 ; 4,397 ; 7.9 ; 274.8 ; 68 ; 31 ; 9 ; 101.0 ; 23 ; 36 ; 1.6 ; 12 ; 4 ; 14 ; 86 ; 2 ; 1
+  2007 ; IND ; 16 ; 16 ; 13–3 ; 337 ; 515 ; 65.4 ; 4,040 ; 7.8 ; 252.5 ; 73 ; 31 ; 14 ; 98.0 ; 20 ; −5 ; −0.3 ; 4 ; 3 ; 21 ; 124 ; 6 ; 1
+  2008 ; IND ; 16 ; 16 ; 12–4 ; 371 ; 555 ; 66.8 ; 4,002 ; 7.2 ; 250.1 ; 75 ; 27 ; 12 ; 95.0 ; 20 ; 21 ; 1.1 ; 12 ; 1 ; 14 ; 86 ; 1 ; 0
+  2009 ; IND ; 16 ; 16 ; 14–2 ; 393 ; 571 ; 68.8 ; 4,500 ; 7.9 ; 281.3 ; 80 ; 33 ; 16 ; 99.9 ; 19 ; −13 ; −0.7 ; 3 ; 0 ; 10 ; 74 ; 2 ; 0
+  2010 ; IND ; 16 ; 16 ; 10–6 ; 450 ; 679 ; 66.3 ; 4,700 ; 6.9 ; 293.8 ; 73 ; 33 ; 17 ; 91.9 ; 18 ; 18 ; 1.0 ; 27 ; 0 ; 16 ; 91 ; 3 ; 1
+  2011 ; IND ; 0 ; 0 ; Did not play due to injury
+  2012 ; DEN ; 16 ; 16 ; 13–3 ; 400 ; 583 ; 68.6 ; 4,659 ; 8.0 ; 291.2 ; 71 ; 37 ; 11 ; 105.8 ; 23 ; 6 ; 0.3 ; 10 ; 0 ; 21 ; 137 ; 2 ; 2
+  2013 ; DEN ; 16 ; 16 ; 13–3 ; 450 ; 659 ; 68.3 ; 5,477 ; 8.3 ; 342.3 ; 78 ; 55 ; 10 ; 115.1 ; 32 ; −31 ; −1.0 ; 1 ; 1 ; 18 ; 120 ; 10 ; 6
+  2014 ; DEN ; 16 ; 16 ; 12–4 ; 395 ; 597 ; 66.2 ; 4,727 ; 7.9 ; 295.4 ; 86 ; 39 ; 15 ; 101.5 ; 24 ; −24 ; −1.0 ; 4 ; 0 ; 17 ; 118 ; 5 ; 2
+  2015 ; DEN ; 10 ; 9 ; 7–2 ; 198 ; 331 ; 59.8 ; 2,249 ; 6.8 ; 224.9 ; 75 ; 9 ; 17 ; 67.9 ; 6 ; −6 ; −1.0 ; −1 ; 0 ; 16 ; 95 ; 1 ; 0
+  Career ; 266 ; 265 ; 186–79 ; 6,125 ; 9,380 ; 65.3 ; 71,940 ; 7.7 ; 270.5 ; 86 ; 539 ; 251 ; 96.5 ; 431 ; 667 ; 1.5 ; 33 ; 18 ; 303 ; 1,953 ; 75 ; 28
+## headings: Postseason | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing ; Sacked ; Fumbles [ c ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Y/G ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Y/A ; Lng ; TD ; Sck ; SckY ; Fum ; Lost
+  1999 ; IND ; 1 ; 1 ; 0–1 ; 19 ; 42 ; 45.2 ; 227 ; 5.4 ; 227.0 ; 33 ; 0 ; 0 ; 62.3 ; 2 ; 22 ; 11.0 ; 15 ; 1 ; 0 ; 0 ; 0 ; 0
+  2000 ; IND ; 1 ; 1 ; 0–1 ; 17 ; 32 ; 53.1 ; 194 ; 6.1 ; 194.0 ; 30 ; 1 ; 0 ; 82.0 ; 1 ; −2 ; −2.0 ; −2 ; 0 ; 0 ; 0 ; 0 ; 0
+  2002 ; IND ; 1 ; 1 ; 0–1 ; 14 ; 31 ; 45.2 ; 137 ; 4.4 ; 137.0 ; 17 ; 0 ; 2 ; 31.2 ; 1 ; 2 ; 2.0 ; 2 ; 0 ; 1 ; 13 ; 0 ; 0
+  2003 ; IND ; 3 ; 3 ; 2–1 ; 67 ; 103 ; 65.0 ; 918 ; 8.9 ; 306.0 ; 87 ; 9 ; 4 ; 106.4 ; 4 ; 3 ; 0.8 ; 3 ; 0 ; 5 ; 41 ; 1 ; 0
+  2004 ; IND ; 2 ; 2 ; 1–1 ; 54 ; 75 ; 72.0 ; 696 ; 9.3 ; 348.0 ; 49 ; 4 ; 2 ; 107.4 ; 2 ; 8 ; 4.0 ; 7 ; 1 ; 2 ; 12 ; 1 ; 0
+  2005 ; IND ; 1 ; 1 ; 0–1 ; 22 ; 38 ; 57.9 ; 290 ; 7.6 ; 290.0 ; 50 ; 1 ; 0 ; 90.9 ; 0 ; 0 ; — ; 0 ; 0 ; 5 ; 43 ; 0 ; 0
+  2006 ; IND ; 4 ; 4 ; 4–0 ; 97 ; 153 ; 63.4 ; 1,034 ; 6.8 ; 258.5 ; 53 ; 3 ; 7 ; 70.5 ; 8 ; 3 ; 0.4 ; 7 ; 1 ; 6 ; 41 ; 1 ; 1
+  2007 ; IND ; 1 ; 1 ; 0–1 ; 33 ; 48 ; 68.8 ; 402 ; 8.4 ; 402.0 ; 55 ; 3 ; 2 ; 97.7 ; 1 ; −6 ; −6.0 ; −6 ; 0 ; 0 ; 0 ; 0 ; 0
+  2008 ; IND ; 1 ; 1 ; 0–1 ; 25 ; 42 ; 59.5 ; 310 ; 7.4 ; 310.0 ; 72 ; 1 ; 0 ; 90.4 ; 1 ; −1 ; −1.0 ; −1 ; 0 ; 1 ; 8 ; 0 ; 0
+  2009 ; IND ; 3 ; 3 ; 2–1 ; 87 ; 128 ; 68.0 ; 956 ; 7.5 ; 318.7 ; 46 ; 6 ; 2 ; 99.0 ; 3 ; −2 ; −0.7 ; 0 ; 0 ; 4 ; 30 ; 0 ; 0
+  2010 ; IND ; 1 ; 1 ; 0–1 ; 18 ; 26 ; 69.2 ; 225 ; 8.7 ; 225.0 ; 57 ; 1 ; 0 ; 108.7 ; 0 ; 0 ; — ; 0 ; 0 ; 1 ; 6 ; 0 ; 0
+  2012 ; DEN ; 1 ; 1 ; 0–1 ; 28 ; 43 ; 65.1 ; 290 ; 6.7 ; 290.0 ; 32 ; 3 ; 2 ; 88.3 ; 1 ; −1 ; −1.0 ; −1 ; 0 ; 3 ; 17 ; 2 ; 1
+  2013 ; DEN ; 3 ; 3 ; 2–1 ; 91 ; 128 ; 71.1 ; 910 ; 7.1 ; 303.3 ; 37 ; 5 ; 3 ; 94.2 ; 3 ; −2 ; −0.7 ; 0 ; 0 ; 1 ; 1 ; 1 ; 1
+  2014 ; DEN ; 1 ; 1 ; 0–1 ; 26 ; 46 ; 56.5 ; 211 ; 4.6 ; 211.0 ; 32 ; 1 ; 0 ; 75.5 ; 0 ; 0 ; — ; 0 ; 0 ; 2 ; 11 ; 1 ; 1
+  2015 ; DEN ; 3 ; 3 ; 3–0 ; 51 ; 92 ; 55.4 ; 539 ; 5.9 ; 179.7 ; 34 ; 2 ; 1 ; 75.4 ; 5 ; 10 ; 2.0 ; 12 ; 0 ; 9 ; 75 ; 4 ; 2
+  Career ; 27 ; 27 ; 14–13 ; 649 ; 1,027 ; 63.2 ; 7,339 ; 7.1 ; 271.8 ; 87 ; 40 ; 25 ; 87.4 ; 32 ; 34 ; 1.1 ; 15 ; 3 ; 40 ; 298 ; 11 ; 6
+## headings: Super Bowl | Postseason | Regular season
+  Year ; SB ; Team ; Opp. ; Passing ; Result
+  Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg
+  2006 ; XLI ; IND ; CHI ; 25 ; 38 ; 65.8 ; 247 ; 6.5 ; 1 ; 1 ; 81.8 ; W 29–17
+  2009 ; XLIV ; IND ; NO ; 31 ; 45 ; 68.9 ; 333 ; 7.4 ; 1 ; 1 ; 88.5 ; L 31–17
+  2013 ; XLVIII ; DEN ; SEA ; 34 ; 49 ; 69.4 ; 280 ; 5.7 ; 1 ; 2 ; 73.5 ; L 43–8
+  2015 ; 50 ; DEN ; CAR ; 13 ; 23 ; 56.5 ; 141 ; 6.1 ; 0 ; 1 ; 56.6 ; W 24–10
+  Career ; 103 ; 155 ; 66.5 ; 1,001 ; 6.5 ; 3 ; 5 ; 77.4 ; W−L 2–2
+## headings: College | Super Bowl | Postseason
+  Year ; Team ; Games [ d ] ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1994 ; Tennessee ; 12 ; 8 ; 7–1 ; 89 ; 144 ; 61.8 ; 1,141 ; 7.9 ; 11 ; 6 ; 145.2 ; 21 ; −26 ; −1.2 ; 1
+  1995 ; Tennessee ; 12 ; 12 ; 11–1 ; 244 ; 380 ; 64.2 ; 2,954 ; 7.8 ; 22 ; 4 ; 146.5 ; 41 ; 6 ; 0.1 ; 5
+  1996 ; Tennessee ; 12 ; 12 ; 10–2 ; 243 ; 380 ; 63.9 ; 3,287 ; 8.7 ; 20 ; 12 ; 147.7 ; 42 ; −131 ; −3.1 ; 3
+  1997 ; Tennessee ; 13 ; 13 ; 11–2 ; 287 ; 477 ; 60.2 ; 3,819 ; 8.0 ; 36 ; 11 ; 147.7 ; 49 ; −30 ; −0.6 ; 3
+  Career ; 49 ; 45 ; 39–6 ; 863 ; 1,381 ; 62.5 ; 11,201 ; 8.1 ; 89 ; 33 ; 147.1 ; 153 ; –181 ; –1.2 ; 12

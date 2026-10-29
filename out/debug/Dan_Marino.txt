@@ -1,0 +1,85 @@
+# Dan Marino: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Marino preparing for a 2005 ESPN interview
+  Miami Dolphins
+  Title ; Special advisor
+  Personal information
+  Born ; ( 1961-09-15 ) September 15, 1961 (age 65) Pittsburgh , Pennsylvania, U.S.
+  Listed height ; 6 ft 4 in (1.93 m)
+  Listed weight ; 224 lb (102 kg)
+  Career information
+  Position ; Quarterback (No. 13)
+  High school ; Central Catholic (Pittsburgh)
+  College ; Pittsburgh (1979–1982)
+  NFL draft ; 1983 : 1st round, 27th overall pick
+  Career history
+  Playing
+  Miami Dolphins ( 1983 – 1999 )
+  Operations
+  Miami Dolphins ( 2014 –present) Special advisor
+  
+  Awards and highlights
+  NFL Most Valuable Player (1984) NFL Offensive Player of the Year (1984) NFL Comeback Player of the Year (1994) NFL Man of the Year (1998) The Sporting News NFL Rookie of the Year (1983) 3x First-team All-Pro ( 1984 – 1986 ) 5× Second-team All-Pro ( 1983 , 1988 , 1992 , 1994 , 1995 ) 9× Pro Bowl ( 1983 – 1987 , 1991 , 1992 , 1994 , 1995 ) 5× NFL passing yards leader (1984–1986, 1988, 1992) 3× NFL passing touchdowns leader (1984–1986) NFL passer rating leader (1984) NFL 100th Anniversary All-Time Team PFWA All-Rookie Team ( 1983 ) George Halas Award (1995) Miami Dolphins Honor Roll Miami Dolphins No. 13 retired Dolphins Walk of Fame (2011) First-team All-American ( 1981 ) NCAA passing touchdowns leader (1981) First-team All- East ( 1981 ) Pittsburgh Panthers No. 13 retired NFL records Lowest sack percentage, season: 1.0% ( 1988 ) Most seasons leading league, completions: 6 Most seasons leading league, pass attempts: 5
+  
+  Career NFL statistics
+  Passing attempts 8,358 Passing completions 4,967 Completion percentage 59.4% TD – INT 420–252 Passing yards 61,361 Passer rating 86.4 Stats at Pro Football Reference ; Passing attempts ; 8,358 ; Passing completions ; 4,967 ; Completion percentage ; 59.4% ; TD – INT ; 420–252 ; Passing yards ; 61,361 ; Passer rating ; 86.4 ; Stats at Pro Football Reference
+  Passing attempts ; 8,358
+  Passing completions ; 4,967
+  Completion percentage ; 59.4%
+  TD – INT ; 420–252
+  Passing yards ; 61,361
+  Passer rating ; 86.4
+  Stats at Pro Football Reference
+  Pro Football Hall of Fame
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 8,358
+  Passing completions ; 4,967
+  Completion percentage ; 59.4%
+  TD – INT ; 420–252
+  Passing yards ; 61,361
+  Passer rating ; 86.4
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles [ 69 ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1983 ; MIA ; 11 ; 9 ; 7–2 ; 173 ; 296 ; 58.4 ; 2,210 ; 7.5 ; 20 ; 6 ; 96.0 ; 28 ; 45 ; 1.6 ; 2 ; 10 ; 80 ; 5 ; 0
+  1984 ; MIA ; 16 ; 16 ; 14–2 ; 362 ; 564 ; 64.2 ; 5,084 ; 9.0 ; 48 ; 17 ; 108.9 ; 28 ; −7 ; −0.3 ; 0 ; 13 ; 120 ; 6 ; 0
+  1985 ; MIA ; 16 ; 16 ; 12–4 ; 336 ; 567 ; 59.3 ; 4,137 ; 7.3 ; 30 ; 21 ; 84.1 ; 26 ; −24 ; −0.9 ; 0 ; 18 ; 157 ; 9 ; 6
+  1986 ; MIA ; 16 ; 16 ; 8–8 ; 378 ; 623 ; 60.7 ; 4,746 ; 7.6 ; 44 ; 23 ; 92.5 ; 12 ; −3 ; −0.3 ; 0 ; 17 ; 119 ; 8 ; 3
+  1987 ; MIA ; 12 ; 12 ; 7–5 ; 263 ; 444 ; 59.2 ; 3,245 ; 7.3 ; 26 ; 13 ; 89.2 ; 12 ; −5 ; −0.4 ; 1 ; 9 ; 77 ; 5 ; 2
+  1988 ; MIA ; 16 ; 16 ; 6–10 ; 354 ; 606 ; 58.4 ; 4,434 ; 7.3 ; 28 ; 23 ; 80.8 ; 20 ; −17 ; −0.9 ; 0 ; 6 ; 31 ; 10 ; 3
+  1989 ; MIA ; 16 ; 16 ; 8–8 ; 308 ; 550 ; 56.0 ; 3,997 ; 7.3 ; 24 ; 22 ; 76.9 ; 14 ; −7 ; −0.5 ; 2 ; 10 ; 86 ; 7 ; 5
+  1990 ; MIA ; 16 ; 16 ; 12–4 ; 306 ; 531 ; 57.6 ; 3,563 ; 6.7 ; 21 ; 11 ; 82.6 ; 16 ; 29 ; 1.8 ; 0 ; 15 ; 90 ; 3 ; 1
+  1991 ; MIA ; 16 ; 16 ; 8–8 ; 318 ; 549 ; 57.9 ; 3,970 ; 7.2 ; 25 ; 13 ; 85.8 ; 27 ; 32 ; 1.2 ; 1 ; 27 ; 182 ; 6 ; 2
+  1992 ; MIA ; 16 ; 16 ; 11–5 ; 330 ; 554 ; 59.6 ; 4,116 ; 7.4 ; 24 ; 16 ; 85.1 ; 20 ; 66 ; 3.3 ; 0 ; 28 ; 173 ; 5 ; 1
+  1993 ; MIA ; 5 ; 5 ; 4–1 ; 91 ; 150 ; 60.7 ; 1,218 ; 8.1 ; 8 ; 3 ; 95.9 ; 9 ; −4 ; −0.4 ; 1 ; 7 ; 42 ; 4 ; 1
+  1994 ; MIA ; 16 ; 16 ; 10–6 ; 385 ; 615 ; 62.6 ; 4,453 ; 7.2 ; 30 ; 17 ; 89.2 ; 22 ; −6 ; −0.3 ; 1 ; 18 ; 113 ; 9 ; 2
+  1995 ; MIA ; 14 ; 14 ; 9–5 ; 309 ; 482 ; 64.1 ; 3,668 ; 7.6 ; 24 ; 15 ; 90.8 ; 11 ; 14 ; 1.3 ; 0 ; 22 ; 153 ; 7 ; 2
+  1996 ; MIA ; 13 ; 13 ; 7–6 ; 221 ; 373 ; 59.2 ; 2,795 ; 7.5 ; 17 ; 9 ; 87.8 ; 11 ; −3 ; −0.3 ; 0 ; 18 ; 131 ; 4 ; 2
+  1997 ; MIA ; 16 ; 16 ; 9–7 ; 319 ; 548 ; 58.2 ; 3,780 ; 6.9 ; 16 ; 11 ; 80.7 ; 18 ; −14 ; −0.8 ; 0 ; 20 ; 132 ; 8 ; 4
+  1998 ; MIA ; 16 ; 16 ; 10–6 ; 310 ; 537 ; 57.7 ; 3,497 ; 6.5 ; 23 ; 15 ; 80.0 ; 21 ; −3 ; −0.1 ; 1 ; 23 ; 178 ; 9 ; 4
+  1999 ; MIA ; 11 ; 11 ; 5–6 ; 204 ; 369 ; 55.3 ; 2,448 ; 6.6 ; 12 ; 17 ; 67.4 ; 6 ; −6 ; −1.0 ; 0 ; 9 ; 66 ; 5 ; 3
+  Career ; 242 ; 240 ; 147–93 ; 4,967 ; 8,358 ; 59.4 ; 61,361 ; 7.3 ; 420 ; 252 ; 86.4 ; 301 ; 87 ; 0.3 ; 9 ; 270 ; 1,930 ; 110 ; 41
+## headings: Playoffs | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks ; Fumbles [ 69 ]
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1983 ; MIA ; 1 ; 1 ; 0–1 ; 15 ; 25 ; 60.0 ; 193 ; 7.7 ; 2 ; 2 ; 77.6 ; 0 ; 0 ; — ; 0 ; 0 ; 0 ; 0 ; 0
+  1984 ; MIA ; 3 ; 3 ; 2–1 ; 71 ; 116 ; 61.2 ; 1,001 ; 8.6 ; 8 ; 5 ; 94.1 ; 1 ; 0 ; 0.0 ; 0 ; 4 ; 29 ; 1 ; 0
+  1985 ; MIA ; 2 ; 2 ; 1–1 ; 45 ; 93 ; 48.4 ; 486 ; 5.2 ; 3 ; 3 ; 61.5 ; 1 ; 0 ; 0.0 ; 0 ; 1 ; 14 ; 1 ; 1
+  1990 ; MIA ; 2 ; 2 ; 1–1 ; 42 ; 79 ; 53.2 ; 544 ; 6.9 ; 5 ; 2 ; 85.6 ; 5 ; −1 ; −0.2 ; 1 ; 2 ; 8 ; 1 ; 1
+  1992 ; MIA ; 2 ; 2 ; 1–1 ; 39 ; 74 ; 52.7 ; 435 ; 5.9 ; 4 ; 2 ; 77.3 ; 1 ; −2 ; −2.0 ; 0 ; 4 ; 25 ; 1 ; 1
+  1994 ; MIA ; 2 ; 2 ; 1–1 ; 46 ; 67 ; 68.7 ; 519 ; 7.7 ; 5 ; 0 ; 116.4 ; 2 ; 4 ; 2.0 ; 0 ; 2 ; 13 ; 1 ; 0
+  1995 ; MIA ; 1 ; 1 ; 0–1 ; 33 ; 64 ; 51.6 ; 422 ; 6.6 ; 2 ; 3 ; 63.4 ; 1 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  1997 ; MIA ; 1 ; 1 ; 0–1 ; 17 ; 43 ; 39.5 ; 141 ; 3.3 ; 0 ; 2 ; 29.3 ; 1 ; 2 ; 2.0 ; 0 ; 4 ; 21 ; 2 ; 1
+  1998 ; MIA ; 2 ; 2 ; 1–1 ; 49 ; 71 ; 69.0 ; 478 ; 6.7 ; 1 ; 3 ; 74.7 ; 1 ; −1 ; −1.0 ; 0 ; 2 ; 12 ; 0 ; 0
+  1999 ; MIA ; 2 ; 2 ; 1–1 ; 28 ; 55 ; 50.9 ; 291 ; 5.3 ; 2 ; 2 ; 63.5 ; 2 ; −1 ; −0.5 ; 0 ; 3 ; 19 ; 2 ; 2
+  Career ; 18 ; 18 ; 8–10 ; 385 ; 687 ; 56.0 ; 4,510 ; 6.6 ; 32 ; 24 ; 77.1 ; 15 ; 1 ; 0.1 ; 1 ; 22 ; 141 ; 9 ; 6
+## headings: College | Playoffs | Regular season
+  Year ; Team ; GP ; Passing ; Rushing
+  Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1979 ; Pittsburgh ; 12 ; 130 ; 222 ; 58.6 ; 1,680 ; 7.5 ; 10 ; 9 ; 128.9 ; 35 ; −85 ; −2.4 ; 1
+  1980 ; Pittsburgh ; 12 ; 116 ; 224 ; 51.8 ; 1,609 ; 7.2 ; 15 ; 14 ; 121.7 ; 14 ; −53 ; −3.8 ; 0
+  1981 ; Pittsburgh ; 12 ; 226 ; 380 ; 59.5 ; 2,876 ; 7.6 ; 37 ; 23 ; 143.1 ; 24 ; −95 ; −4.0 ; 2
+  1982 ; Pittsburgh ; 12 ; 221 ; 378 ; 58.5 ; 2,432 ; 6.4 ; 17 ; 23 ; 115.2 ; 44 ; −44 ; −1.0 ; 0
+  Career [ 22 ] ; 48 ; 693 ; 1,204 ; 57.6 ; 8,597 ; 7.1 ; 79 ; 69 ; 127.7 ; 117 ; -277 ; -2.4 ; 3

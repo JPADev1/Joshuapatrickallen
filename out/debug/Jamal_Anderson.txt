@@ -1,1 +1,1 @@
-# Jamal Anderson: no NFL stats table
+# Jamal Anderson: fetch failed: The page you specified doesn't exist.

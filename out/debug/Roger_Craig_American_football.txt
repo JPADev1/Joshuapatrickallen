@@ -1,4 +1,4 @@
-# Roger Craig (American football): no NFL stats table
+# Roger Craig (American football): fetch failed: The page you specified doesn't exist.
 ## headings: Regular season | NFL | Career statistics
   Year ; Team ; Games ; Rushing ; Receiving ; Total Yds ; Total TD ; Fum
   GP ; GS ; Att ; Yds ; Avg ; TD ; Rec ; Yds ; Avg ; TD ; Touch ; Y/T ; Yds

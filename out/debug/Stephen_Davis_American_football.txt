@@ -1,4 +1,4 @@
-# Stephen Davis (American football): infobox rec 4 != table 0
+# Stephen Davis (American football): fetch failed: The page you specified doesn't exist.
 ## headings: NFL career statistics | Retirement | St. Louis Rams
   Year ; Team ; GP ; Rushing ; Fumbles
   Att ; Yds ; Avg ; Lng ; TD ; FD ; Fum ; Lost

@@ -1,0 +1,84 @@
+# Mark Brunell: fetch failed: The page you specified doesn't exist.
+## headings: 
+  Brunell with the Washington Redskins in 2006
+  Detroit Lions
+  Title ; Quarterbacks coach
+  Personal information
+  Born ; ( 1970-09-17 ) September 17, 1970 (age 56) Los Angeles, California , U.S.
+  Listed height ; 6 ft 1 in (1.85 m)
+  Listed weight ; 215 lb (98 kg)
+  Career information
+  Position ; Quarterback (No. 8, 11)
+  High school ; St. Joseph ( Santa Maria, California )
+  College ; Washington (1988–1992)
+  NFL draft ; 1993 : 5th round, 118th overall pick
+  Career history
+  Playing
+  Green Bay Packers ( 1993 – 1994 ) Jacksonville Jaguars ( 1995 – 2003 ) Washington Redskins ( 2004 – 2007 ) New Orleans Saints ( 2008 – 2009 ) New York Jets ( 2010 – 2011 )
+  Coaching
+  Providence School (2012) Assistant coach Episcopal School of Jacksonville (2013–2020) Head coach Detroit Lions ( 2021 –present) Quarterbacks coach
+  
+  Awards and highlights
+  Super Bowl champion ( XLIV ) 3× Pro Bowl ( 1996 , 1997 , 1999 ) NFL passing yards leader (1996) Pride of the Jaguars National champion ( 1991 ) 2× Second-team All-Pac-10 ( 1990 , 1992 ) Rose Bowl MVP ( 1991 ) Rose Bowl Hall of Fame (2015)
+  
+  Career NFL statistics
+  Passing attempts 4,640 Passing completions 2,761 Completion percentage 59.5% TD – INT 184–108 Passing yards 32,072 Passer rating 84 Stats at Pro Football Reference ; Passing attempts ; 4,640 ; Passing completions ; 2,761 ; Completion percentage ; 59.5% ; TD – INT ; 184–108 ; Passing yards ; 32,072 ; Passer rating ; 84 ; Stats at Pro Football Reference
+  Passing attempts ; 4,640
+  Passing completions ; 2,761
+  Completion percentage ; 59.5%
+  TD – INT ; 184–108
+  Passing yards ; 32,072
+  Passer rating ; 84
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 4,640
+  Passing completions ; 2,761
+  Completion percentage ; 59.5%
+  TD – INT ; 184–108
+  Passing yards ; 32,072
+  Passer rating ; 84
+  Stats at Pro Football Reference
+## headings: Regular season | NFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacked ; Fumbles
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD ; Sck ; SckY ; Fum ; Lost
+  1993 ; GB ; 0 ; 0 ; — ; DNP
+  1994 ; GB ; 2 ; 0 ; — ; 12 ; 27 ; 44.4 ; 95 ; 3.5 ; 0 ; 0 ; 53.8 ; 6 ; 7 ; 1.2 ; 1 ; 2 ; 16 ; 1 ; 1
+  1995 ; JAX ; 13 ; 10 ; 3–7 ; 201 ; 346 ; 58.1 ; 2,168 ; 6.3 ; 15 ; 7 ; 82.6 ; 67 ; 480 ; 7.2 ; 4 ; 39 ; 238 ; 5 ; 2
+  1996 ; JAX ; 16 ; 16 ; 9–7 ; 353 ; 557 ; 63.4 ; 4,367 ; 7.8 ; 19 ; 20 ; 84.0 ; 80 ; 396 ; 5.0 ; 3 ; 50 ; 257 ; 14 ; 3
+  1997 ; JAX ; 14 ; 14 ; 9–5 ; 264 ; 435 ; 60.7 ; 3,281 ; 7.5 ; 18 ; 7 ; 91.2 ; 48 ; 257 ; 5.4 ; 2 ; 33 ; 189 ; 4 ; 2
+  1998 ; JAX ; 13 ; 13 ; 10–3 ; 208 ; 354 ; 58.8 ; 2,601 ; 7.3 ; 20 ; 9 ; 89.9 ; 49 ; 192 ; 3.9 ; 0 ; 28 ; 172 ; 3 ; 2
+  1999 ; JAX ; 15 ; 15 ; 13–2 ; 259 ; 441 ; 58.7 ; 3,060 ; 6.9 ; 14 ; 9 ; 82.0 ; 47 ; 208 ; 4.4 ; 1 ; 29 ; 174 ; 6 ; 1
+  2000 ; JAX ; 16 ; 16 ; 7–9 ; 311 ; 512 ; 60.7 ; 3,640 ; 7.1 ; 20 ; 14 ; 84.0 ; 48 ; 236 ; 4.9 ; 2 ; 54 ; 289 ; 7 ; 3
+  2001 ; JAX ; 15 ; 15 ; 6–9 ; 289 ; 473 ; 61.1 ; 3,309 ; 7.0 ; 19 ; 13 ; 84.1 ; 39 ; 224 ; 5.7 ; 1 ; 57 ; 387 ; 8 ; 3
+  2002 ; JAX ; 15 ; 15 ; 6–9 ; 245 ; 416 ; 58.9 ; 2,788 ; 6.7 ; 17 ; 7 ; 85.7 ; 43 ; 207 ; 4.8 ; 0 ; 34 ; 210 ; 5 ; 2
+  2003 ; JAX ; 3 ; 3 ; 0–3 ; 54 ; 82 ; 65.9 ; 484 ; 5.9 ; 2 ; 0 ; 89.7 ; 8 ; 19 ; 2.4 ; 1 ; 9 ; 46 ; 1 ; 0
+  2004 ; WAS ; 9 ; 9 ; 3–6 ; 118 ; 237 ; 49.8 ; 1,194 ; 5.0 ; 7 ; 6 ; 63.9 ; 19 ; 62 ; 3.3 ; 0 ; 15 ; 105 ; 6 ; 3
+  2005 ; WAS ; 16 ; 15 ; 9–6 ; 262 ; 454 ; 57.7 ; 3,050 ; 6.7 ; 23 ; 10 ; 85.9 ; 42 ; 111 ; 2.6 ; 0 ; 27 ; 213 ; 11 ; 6
+  2006 ; WAS ; 10 ; 9 ; 3–6 ; 162 ; 260 ; 62.3 ; 1,789 ; 6.9 ; 8 ; 4 ; 86.5 ; 13 ; 34 ; 2.6 ; 0 ; 12 ; 92 ; 5 ; 1
+  2007 ; WAS ; 0 ; 0 ; — ; DNP
+  2008 ; NO ; 2 ; 0 ; — ; 0 ; 0 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0.0 ; 0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  2009 ; NO ; 4 ; 1 ; 0–1 ; 15 ; 30 ; 50.0 ; 102 ; 3.4 ; 0 ; 1 ; 44.0 ; 4 ; -12 ; -3.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  2010 ; NYJ ; 2 ; 0 ; — ; 6 ; 12 ; 50.0 ; 117 ; 9.2 ; 2 ; 1 ; 86.8 ; 0 ; 0 ; 0.0 ; 0 ; 1 ; 7 ; 0 ; 0
+  2011 ; NYJ ; 16 ; 0 ; — ; 1 ; 3 ; 33.3 ; 27 ; 9.0 ; 0 ; 0 ; 67.4 ; 0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0 ; 0
+  Total ; 176 ; 151 ; 78–73 ; 2,754 ; 4,625 ; 59.5 ; 32,072 ; 6.9 ; 184 ; 108 ; 84.0 ; 513 ; 2,421 ; 4.7 ; 15 ; 389 ; 2,388 ; 76 ; 29
+## headings: Playoffs | Regular season | NFL
+  Year ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1993 ; GB ; 0 ; 0 ; — ; DNP
+  1994 ; GB ; 1 ; 0 ; — ; 3 ; 11 ; 27.3 ; 25 ; 2.3 ; 0 ; 0 ; 39.6 ; 4 ; 26 ; 6.5 ; 0
+  1996 ; JAX ; 3 ; 3 ; 2–1 ; 56 ; 100 ; 56.0 ; 674 ; 6.7 ; 3 ; 4 ; 70.2 ; 16 ; 87 ; 5.4 ; 0
+  1997 ; JAX ; 1 ; 1 ; 0–1 ; 18 ; 32 ; 56.3 ; 203 ; 6.3 ; 0 ; 1 ; 62.4 ; 3 ; 4 ; 1.3 ; 0
+  1998 ; JAX ; 2 ; 2 ; 1–1 ; 38 ; 65 ; 58.5 ; 317 ; 4.9 ; 4 ; 3 ; 72.4 ; 6 ; 7 ; 1.2 ; 0
+  1999 ; JAX ; 2 ; 2 ; 1–1 ; 24 ; 47 ; 51.1 ; 331 ; 7.0 ; 3 ; 2 ; 77.5 ; 2 ; 5 ; 2.5 ; 0
+  2005 ; WAS ; 2 ; 2 ; 1–1 ; 29 ; 52 ; 55.8 ; 283 ; 5.4 ; 1 ; 1 ; 69.6 ; 8 ; 18 ; 2.3 ; 0
+  2009 ; NO ; 0 ; 0 ; — ; DNP
+  2010 ; NYJ ; 0 ; 0 ; — ; DNP
+  Total ; 11 ; 10 ; 5–5 ; 168 ; 307 ; 54.7 ; 1,833 ; 6.0 ; 11 ; 11 ; 69.6 ; 39 ; 147 ; 3.8 ; 0
+## headings: College | Playoffs | Regular season
+  Season ; Team ; GP ; Passing ; Rushing
+  Cmp ; Att ; Pct ; Yds ; Avg ; AY/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1989 ; Washington ; 3 ; 6 ; 12 ; 50 ; 57 ; 4.8 ; -2.8 ; 0 ; 2 ; 56.6 ; 4 ; 12 ; 3 ; 0
+  1990 ; Washington ; 11 ; 118 ; 253 ; 46.6 ; 1,732 ; 6.8 ; 6.5 ; 14 ; 8 ; 116.1 ; 105 ; 444 ; 4.2 ; 10
+  1991 ; Washington ; 8 ; 26 ; 44 ; 59.1 ; 333 ; 7.6 ; 7.3 ; 4 ; 2 ; 143.6 ; 13 ; 25 ; 1.9 ; 1
+  1992 ; Washington ; 11 ; 109 ; 189 ; 57.7 ; 1,301 ; 6.9 ; 6.5 ; 5 ; 4 ; 120.0 ; 68 ; 197 ; 2.9 ; 8
+  Career ; 33 ; 259 ; 498 ; 52 ; 3,423 ; 6.9 ; 6.4 ; 23 ; 16 ; 118.6 ; 190 ; 678 ; 3.6 ; 19

@@ -1,0 +1,59 @@
+# Rick Mirer: fetch failed: The page you specified doesn't exist.
+## headings: 
+  No. 3, 13, 5
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1970-03-19 ) March 19, 1970 (age 56) Goshen, Indiana , U.S.
+  Listed height ; 6 ft 2 in (1.88 m)
+  Listed weight ; 210 lb (95 kg)
+  Career information
+  High school ; Goshen
+  College ; Notre Dame (1989–1992)
+  NFL draft ; 1993 : 1st round, 2nd overall pick
+  Career history
+  Seattle Seahawks ( 1993 – 1996 ) Chicago Bears ( 1997 ) Green Bay Packers ( 1998 ) New York Jets ( 1999 ) San Francisco 49ers ( 2000 – 2001 ) Oakland Raiders ( 2002 – 2003 ) Detroit Lions ( 2004 )
+  
+  Awards and highlights
+  UPI Rookie of the Year (1993) PFWA All-Rookie Team ( 1993 ) Quarterback of the Year (1992)
+  
+  Career NFL statistics
+  Passing attempts 2,043 Passing completions 1,088 Completion percentage 53.3% TD – INT 50–76 Passing yards 11,969 Passer rating 63.5 Stats at Pro Football Reference ; Passing attempts ; 2,043 ; Passing completions ; 1,088 ; Completion percentage ; 53.3% ; TD – INT ; 50–76 ; Passing yards ; 11,969 ; Passer rating ; 63.5 ; Stats at Pro Football Reference
+  Passing attempts ; 2,043
+  Passing completions ; 1,088
+  Completion percentage ; 53.3%
+  TD – INT ; 50–76
+  Passing yards ; 11,969
+  Passer rating ; 63.5
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 2,043
+  Passing completions ; 1,088
+  Completion percentage ; 53.3%
+  TD – INT ; 50–76
+  Passing yards ; 11,969
+  Passer rating ; 63.5
+  Stats at Pro Football Reference
+## headings: NFL | Career statistics | Professional career
+  Year ; Team ; GP ; Passing ; Rushing
+  Att ; Comp ; Yds ; TD ; Int ; Att ; Yds ; Avg ; TD
+  1993 ; SEA ; 16 ; 486 ; 274 ; 2,833 ; 12 ; 17 ; 68 ; 343 ; 5.0 ; 3
+  1994 ; SEA ; 13 ; 381 ; 195 ; 2,151 ; 11 ; 7 ; 34 ; 153 ; 4.5 ; 0
+  1995 ; SEA ; 15 ; 391 ; 209 ; 2,564 ; 13 ; 20 ; 43 ; 193 ; 4.5 ; 1
+  1996 ; SEA ; 11 ; 265 ; 136 ; 1,546 ; 5 ; 12 ; 33 ; 191 ; 5.8 ; 2
+  1997 ; CHI ; 7 ; 103 ; 53 ; 420 ; 0 ; 6 ; 20 ; 78 ; 3.9 ; 1
+  1998 ; GB ; 0 ; DNP
+  1999 ; NYJ ; 8 ; 176 ; 95 ; 1,062 ; 5 ; 9 ; 21 ; 89 ; 4.2 ; 1
+  2000 ; SF ; 1 ; 20 ; 10 ; 126 ; 1 ; 0 ; 3 ; 0 ; 0.0 ; 0
+  2001 ; SF ; 0 ; DNP
+  2002 ; OAK ; 0 ; DNP
+  2003 ; OAK ; 9 ; 221 ; 116 ; 1,267 ; 3 ; 5 ; 20 ; 183 ; 4.2 ; 1
+  2004 ; DET ; 0 ; DNP
+  Career ; 80 ; 2,043 ; 1,088 ; 11,969 ; 50 ; 76 ; 242 ; 1,130 ; 4.7 ; 9
+## headings: College | NFL | Career statistics
+  Season ; Team ; Games ; Passing ; Rushing
+  GP ; GS ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rate ; Att ; Yds ; Avg ; TD
+  1989 ; Notre Dame ; 10 ; 1 ; 15 ; 30 ; 50.0 ; 456 ; 6.0 ; 0 ; 1 ; 93.7 ; 12 ; 32 ; 2.6 ; 0
+  1990 ; Notre Dame ; 12 ; 9 ; 110 ; 200 ; 55.0 ; 1,824 ; 9.1 ; 8 ; 6 ; 138.8 ; 98 ; 198 ; 2.0 ; 6
+  1991 ; Notre Dame ; 13 ; 13 ; 132 ; 234 ; 56.4 ; 2,117 ; 9.0 ; 18 ; 10 ; 149.2 ; 75 ; 306 ; 4.0 ; 9
+  1992 ; Notre Dame ; 12 ; 12 ; 120 ; 234 ; 51.3 ; 1,876 ; 8.0 ; 15 ; 6 ; 134.7 ; 68 ; 158 ; 2.3 ; 2
+  Career ; 47 ; 35 ; 377 ; 698 ; 54.0 ; 5,997 ; 8.6 ; 41 ; 23 ; 139.0 ; 253 ; 694 ; 2.7 ; 17
