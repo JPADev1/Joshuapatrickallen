@@ -1,0 +1,16 @@
+# Chet Mutryn: infobox rush 27 != table 25; infobox rec 12 != table 10
+## headings: Regular season | NFL/AAFC career statistics | Professional football career
+  Year ; Team ; Games ; Rushing ; Receiving
+  GP ; GS ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1946 ; BUF ; 14 ; 8 ; 57 ; 289 ; 5.1 ; - ; 1 ; 7 ; 168 ; 24.0 ; 54 ; 3
+  1947 ; BUF ; 14 ; 14 ; 140 ; 868 ; 6.2 ; 50 ; 9 ; 10 ; 176 ; 17.6 ; 58 ; 2
+  1948 ; BUF ; 14 ; 14 ; 147 ; 823 ; 5.6 ; 68 ; 10 ; 39 ; 794 ; 20.4 ; 71 ; 5
+  1949 ; BUF ; 11 ; 11 ; 131 ; 696 ; 5.3 ; - ; 5 ; 29 ; 333 ; 11.5 ; - ; 0
+  1950 ; BCL ; 12 ; 12 ; 108 ; 355 ; 3.3 ; 34 ; 2 ; 36 ; 379 ; 10.5 ; 30 ; 2
+  Career ; 65 ; 59 ; 583 ; 3,031 ; 5.2 ; 68 ; 27 ; 121 ; 1,850 ; 15.3 ; 71 ; 12
+## headings: Playoffs | Regular season | NFL/AAFC career statistics
+  Year ; Team ; Games ; Rushing ; Receiving
+  GP ; GS ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1948 ; BUF ; 2 ; 1 ; 19 ; 62 ; 3.3 ; 5 ; 0 ; 2 ; 5 ; 2.5 ; 4 ; 0
+  1949 ; BUF ; 1 ; 1 ; 8 ; 24 ; 3.0 ; - ; 0 ; 6 ; 81 ; 13.5 ; - ; 2
+  Career ; 3 ; 2 ; 27 ; 86 ; 3.2 ; 5 ; 0 ; 8 ; 86 ; 10.8 ; 4 ; 2

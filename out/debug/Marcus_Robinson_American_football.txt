@@ -1,0 +1,13 @@
+# Marcus Robinson (American football): no NFL stats table
+## headings: Career stats | Personal life | Life after the NFL
+  Year ; Team ; Rec ; Yds ; TD
+  1998 ; Chicago Bears ; 5 ; 44 ; 1
+  1999 ; Chicago Bears ; 84 ; 1400 ; 9
+  2000 ; Chicago Bears ; 55 ; 738 ; 5
+  2001 ; Chicago Bears ; 23 ; 269 ; 2
+  2002 ; Chicago Bears ; 21 ; 244 ; 3
+  2003 ; Baltimore Ravens ; 31 ; 451 ; 6
+  2004 ; Minnesota Vikings ; 47 ; 657 ; 8
+  2005 ; Minnesota Vikings ; 31 ; 515 ; 5
+  2006 ; Minnesota Vikings ; 29 ; 381 ; 4
+   ;  ; 325 ; 4699 ; 43

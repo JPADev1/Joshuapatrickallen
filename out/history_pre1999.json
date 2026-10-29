@@ -30,7 +30,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Abner Haynes",
@@ -92,7 +96,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Al Denson",
@@ -153,7 +161,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Al Toon",
@@ -214,7 +225,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Alan Ameche",
@@ -264,7 +278,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Alfred Jenkins",
@@ -331,7 +349,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Alyn Beals",
@@ -380,7 +401,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Amani Toomer",
@@ -411,7 +435,11 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Andre Reed",
@@ -508,7 +536,11 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Andre Rison",
@@ -581,7 +613,10 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Andy Farkas",
@@ -643,7 +678,93 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Anthony Carter",
+"wiki": "Anthony Carter (American football)",
+"pos": "Wide receiver",
+"first": 1985,
+"last": 1995,
+"infobox": {
+"rec": 55
+},
+"seasons": [
+[
+1985,
+0,
+0,
+8
+],
+[
+1986,
+0,
+0,
+7
+],
+[
+1987,
+0,
+0,
+7
+],
+[
+1988,
+0,
+0,
+6
+],
+[
+1989,
+0,
+0,
+4
+],
+[
+1990,
+0,
+0,
+8
+],
+[
+1991,
+0,
+0,
+5
+],
+[
+1992,
+0,
+0,
+2
+],
+[
+1993,
+0,
+0,
+5
+],
+[
+1994,
+0,
+0,
+3
+],
+[
+1995,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Antonio Freeman",
@@ -680,7 +801,10 @@
 14
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Antowain Smith",
@@ -706,7 +830,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Archie Manning",
@@ -806,6 +934,9 @@
 ],
 "notes": [
 "infobox rush 18 != table 0"
+],
+"kinds": [
+"pass"
 ]
 },
 {
@@ -900,6 +1031,10 @@
 ],
 "notes": [
 "infobox rush 3 != table 2"
+],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -1009,7 +1144,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Babe Parilli",
@@ -1112,7 +1250,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Bam Morris",
@@ -1153,7 +1295,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Barry Sanders",
@@ -1227,7 +1373,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Bart Starr",
@@ -1338,6 +1488,10 @@
 ],
 "notes": [
 "career row rush 15 != season sum 19"
+],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -1399,7 +1553,10 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Benny Friedman",
@@ -1461,7 +1618,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Bernie Kosar",
@@ -1544,7 +1705,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Bert Jones",
@@ -1617,7 +1781,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Bill Groman",
@@ -1669,6 +1837,9 @@
 "notes": [
 "career row rec 36 != season sum 39",
 "infobox rec 36 != table 39"
+],
+"kinds": [
+"rec"
 ]
 },
 {
@@ -1742,7 +1913,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Bill Paschal",
@@ -1789,7 +1964,11 @@
 4
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Billy Dewell",
@@ -1844,7 +2023,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Billy Howton",
@@ -1929,7 +2111,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Billy Kilmer",
@@ -2038,7 +2223,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Billy Sims",
@@ -2082,7 +2271,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Billy Wilson",
@@ -2155,7 +2348,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Bob Griese",
@@ -2252,7 +2448,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Bob Hayes",
@@ -2331,7 +2531,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Bobby Douglass",
@@ -2405,7 +2609,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Bobby Engram",
@@ -2436,7 +2644,11 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Bobby Layne",
@@ -2545,6 +2757,10 @@
 "career row rush 25 != season sum 28",
 "infobox pass 196 != table 210",
 "infobox rush 25 != table 28"
+],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -2622,7 +2838,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Bobby Thomason",
@@ -2683,7 +2903,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Boomer Esiason",
@@ -2780,7 +3004,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Brad Baxter",
@@ -2835,7 +3062,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Brad Johnson",
@@ -2878,7 +3109,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Brent Jones",
@@ -2957,7 +3192,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Brett Favre",
@@ -3018,7 +3256,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Brett Perriman",
@@ -3091,7 +3333,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Brian Blades",
@@ -3170,7 +3415,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Brian Sipe",
@@ -3243,7 +3491,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Bronko Nagurski",
@@ -3310,7 +3561,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Bubby Brister",
@@ -3396,7 +3651,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Calvin Williams",
@@ -3451,7 +3710,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Carl Pickens",
@@ -3506,7 +3768,11 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Carlos Carson",
@@ -3579,7 +3845,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Cecil Isbell",
@@ -3623,7 +3892,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Charles White",
@@ -3685,7 +3958,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Charley Johnson",
@@ -3789,7 +4066,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Charley Taylor",
@@ -3887,7 +4168,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Charlie Batch",
@@ -3907,7 +4192,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Charlie Conerly",
@@ -4004,7 +4293,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Charlie Garner",
@@ -4048,14 +4340,18 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Chet Mutryn",
 "wiki": "Chet Mutryn",
 "pos": "Halfback Return specialist Defensive back",
 "first": 1946,
-"last": 1950,
+"last": 1949,
 "infobox": {
 "rush": 27,
 "rec": 12
@@ -4084,15 +4380,16 @@
 0,
 5,
 0
-],
-[
-1950,
-0,
-2,
-2
 ]
 ],
-"notes": []
+"notes": [
+"infobox rush 27 != table 25",
+"infobox rec 12 != table 10"
+],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Chris Burford",
@@ -4153,7 +4450,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Chris Calloway",
@@ -4218,7 +4518,11 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Chris Chandler",
@@ -4297,7 +4601,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Chuck Foreman",
@@ -4359,7 +4667,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Chuck Muncie",
@@ -4427,7 +4739,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Cliff Battles",
@@ -4477,7 +4793,12 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rec",
+"rush"
+]
 },
 {
 "name": "Cliff Branch",
@@ -4574,7 +4895,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Cloyce Box",
@@ -4617,7 +4941,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Cookie Gilchrist",
@@ -4640,42 +4967,6 @@
 1955,
 0,
 10,
-0
-],
-[
-1956,
-0,
-2,
-2
-],
-[
-1957,
-0,
-7,
-0
-],
-[
-1958,
-0,
-5,
-0
-],
-[
-1959,
-0,
-4,
-1
-],
-[
-1960,
-0,
-6,
-2
-],
-[
-1961,
-0,
-3,
 0
 ],
 [
@@ -4716,10 +5007,12 @@
 ]
 ],
 "notes": [
-"career row rec 11 != season sum 23",
-"career row rush 65 != season sum 79",
-"infobox rush 37 != table 79",
-"infobox rec 6 != table 23"
+"infobox rush 37 != table 52",
+"infobox rec 6 != table 18"
+],
+"kinds": [
+"rec",
+"rush"
 ]
 },
 {
@@ -4746,7 +5039,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Cotton Davidson",
@@ -4819,7 +5116,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Craig Heyward",
@@ -4899,7 +5200,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Craig Morton",
@@ -5021,7 +5326,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Cris Carter",
@@ -5106,7 +5415,10 @@
 12
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Cris Collinsworth",
@@ -5167,7 +5479,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Curt Warner",
@@ -5226,7 +5542,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Curtis Dickey",
@@ -5282,7 +5602,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Curtis Martin",
@@ -5320,7 +5644,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Curtis McClinton",
@@ -5379,7 +5707,74 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Dalton Hilliard",
+"wiki": "Dalton Hilliard",
+"pos": "Running back",
+"first": 1986,
+"last": 1993,
+"infobox": {},
+"seasons": [
+[
+1986,
+0,
+5,
+0
+],
+[
+1987,
+0,
+7,
+1
+],
+[
+1988,
+0,
+5,
+1
+],
+[
+1989,
+0,
+13,
+5
+],
+[
+1990,
+0,
+0,
+1
+],
+[
+1991,
+0,
+4,
+1
+],
+[
+1992,
+0,
+3,
+4
+],
+[
+1993,
+0,
+2,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Dan Fouts",
@@ -5483,7 +5878,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Dan Marino",
@@ -5592,7 +5991,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Dan Towler",
@@ -5639,7 +6042,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Danny White",
@@ -5730,7 +6137,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Daryl Turner",
@@ -5767,7 +6178,10 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Daryle Lamonica",
@@ -5853,7 +6267,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Dave Krieg",
@@ -5980,7 +6398,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Dave Parks",
@@ -6053,7 +6474,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "David Sims",
@@ -6084,7 +6508,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "David Woodley",
@@ -6133,7 +6561,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Derrick Fenner",
@@ -6200,7 +6632,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Derrick Mason",
@@ -6225,7 +6661,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Dick Gordon",
@@ -6298,7 +6737,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Don Hutson",
@@ -6377,7 +6819,11 @@
 9
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Don Majkowski",
@@ -6451,7 +6897,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Don Maynard",
@@ -6554,7 +7004,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Don Meredith",
@@ -6621,7 +7074,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Doug Flutie",
@@ -6665,7 +7122,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Drew Bledsoe",
@@ -6714,7 +7175,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Duane Thomas",
@@ -6749,7 +7214,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Earl Campbell",
@@ -6810,7 +7279,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Earl Morrall",
@@ -6949,7 +7422,112 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
+},
+{
+"name": "Earnest Byner",
+"wiki": "Earnest Byner",
+"pos": "Running back",
+"first": 1984,
+"last": 1997,
+"infobox": {
+"rush": 56
+},
+"seasons": [
+[
+1984,
+0,
+2,
+0
+],
+[
+1985,
+0,
+8,
+2
+],
+[
+1986,
+0,
+2,
+2
+],
+[
+1987,
+0,
+8,
+2
+],
+[
+1988,
+0,
+3,
+2
+],
+[
+1989,
+0,
+7,
+2
+],
+[
+1990,
+0,
+6,
+1
+],
+[
+1991,
+0,
+5,
+0
+],
+[
+1992,
+0,
+6,
+1
+],
+[
+1993,
+0,
+1,
+0
+],
+[
+1994,
+0,
+2,
+0
+],
+[
+1995,
+0,
+2,
+2
+],
+[
+1996,
+0,
+4,
+1
+],
+[
+1997,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Ed Brown",
@@ -7034,7 +7612,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Ed McCaffrey",
@@ -7095,7 +7676,10 @@
 10
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Eddie George",
@@ -7127,7 +7711,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Elroy Hirsch",
@@ -7212,7 +7800,57 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Elvis Grbac",
+"wiki": "Elvis Grbac",
+"pos": "Quarterback",
+"first": 1994,
+"last": 2001,
+"infobox": {
+"pass": 99
+},
+"seasons": [
+[
+1994,
+2,
+0,
+0
+],
+[
+1995,
+8,
+0,
+0
+],
+[
+1996,
+8,
+0,
+0
+],
+[
+1997,
+11,
+0,
+0
+],
+[
+1998,
+5,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Emerson Boozer",
@@ -7285,7 +7923,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Emmitt Smith",
@@ -7353,7 +7995,11 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Eric Dickerson",
@@ -7433,7 +8079,90 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Eric Hipple",
+"wiki": "Eric Hipple",
+"pos": "Quarterback",
+"first": 1980,
+"last": 1989,
+"infobox": {
+"pass": 55,
+"rush": 13
+},
+"seasons": [
+[
+1980,
+0,
+0,
+0
+],
+[
+1981,
+14,
+0,
+0
+],
+[
+1982,
+2,
+0,
+0
+],
+[
+1983,
+12,
+0,
+0
+],
+[
+1984,
+1,
+0,
+0
+],
+[
+1985,
+17,
+0,
+0
+],
+[
+1986,
+9,
+0,
+0
+],
+[
+1987,
+0,
+0,
+0
+],
+[
+1988,
+0,
+0,
+0
+],
+[
+1989,
+0,
+0,
+0
+]
+],
+"notes": [
+"infobox rush 13 != table 0"
+],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Eric Moulds",
@@ -7464,7 +8193,10 @@
 9
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Ernest Givins",
@@ -7537,7 +8269,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Errict Rhett",
@@ -7578,7 +8313,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Floyd Little",
@@ -7646,7 +8385,11 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Floyd Turner",
@@ -7713,7 +8456,10 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Fran Tarkenton",
@@ -7835,7 +8581,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Franco Harris",
@@ -7927,7 +8677,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Frank Clarke",
@@ -8006,7 +8760,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Frank Ryan",
@@ -8097,7 +8854,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Frank Tripucka",
@@ -8159,7 +8920,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Frankie Albert",
@@ -8217,6 +8982,10 @@
 ],
 "notes": [
 "infobox pass 0 != table 115"
+],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -8278,7 +9047,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Fred Biletnikoff",
@@ -8375,7 +9147,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Freeman McNeil",
@@ -8460,7 +9235,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Gale Sayers",
@@ -8516,7 +9295,12 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rec",
+"rush"
+]
 },
 {
 "name": "Garrison Hearst",
@@ -8568,6 +9352,10 @@
 ],
 "notes": [
 "career row rec 0 != season sum 9"
+],
+"kinds": [
+"rec",
+"rush"
 ]
 },
 {
@@ -8641,7 +9429,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Gary Famiglietti",
@@ -8706,7 +9497,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Gary Hogeboom",
@@ -8779,7 +9574,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "George Blanda",
@@ -8951,6 +9750,9 @@
 "notes": [
 "career row pass 236 != season sum 237",
 "infobox pass 236 != table 237"
+],
+"kinds": [
+"pass"
 ]
 },
 {
@@ -9006,7 +9808,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Gerald Riggs",
@@ -9079,7 +9885,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Gerry Ellis",
@@ -9134,7 +9944,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Greg Landry",
@@ -9237,7 +10051,57 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
+},
+{
+"name": "Gus Frerotte",
+"wiki": "Gus Frerotte",
+"pos": "Quarterback",
+"first": 1994,
+"last": 2008,
+"infobox": {
+"pass": 114
+},
+"seasons": [
+[
+1994,
+5,
+0,
+0
+],
+[
+1995,
+13,
+0,
+0
+],
+[
+1996,
+12,
+0,
+0
+],
+[
+1997,
+17,
+0,
+0
+],
+[
+1998,
+1,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Harlon Hill",
@@ -9304,7 +10168,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Harold Carmichael",
@@ -9401,7 +10268,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Harold Jackson",
@@ -9510,7 +10380,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Haywood Jeffires",
@@ -9583,7 +10457,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Henry Ellard",
@@ -9692,7 +10569,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Herman Moore",
@@ -9753,7 +10634,10 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Herschel Walker",
@@ -9842,6 +10726,10 @@
 "notes": [
 "career row rec 21 != season sum 22",
 "infobox rec 21 != table 22"
+],
+"kinds": [
+"rec",
+"rush"
 ]
 },
 {
@@ -9897,7 +10785,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Hugh Gallarneau",
@@ -9938,7 +10829,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Hugh Taylor",
@@ -9999,7 +10894,10 @@
 8
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Ickey Woods",
@@ -10036,7 +10934,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Ike Hilliard",
@@ -10061,7 +10963,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Irving Fryar",
@@ -10164,7 +11069,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Isaac Bruce",
@@ -10207,7 +11115,12 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rec",
+"rush"
+]
 },
 {
 "name": "J. J. Stokes",
@@ -10244,7 +11157,10 @@
 8
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Jack Kemp",
@@ -10317,7 +11233,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jack Trudeau",
@@ -10390,14 +11310,18 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jackie Parker",
 "wiki": "Jackie Parker",
 "pos": "Quarterback , running back , defensive back , kicker",
 "first": 1954,
-"last": 1968,
+"last": 1965,
 "infobox": {},
 "seasons": [
 [
@@ -10471,16 +11395,12 @@
 1,
 0,
 0
-],
-[
-1968,
-0,
-1,
-0
 ]
 ],
-"notes": [
-"career row pass 88 != season sum 96"
+"notes": [],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -10506,7 +11426,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jake Reed",
@@ -10567,7 +11491,10 @@
 4
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "James Lofton",
@@ -10676,7 +11603,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Jay Novacek",
@@ -10755,7 +11685,10 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Jay Schroeder",
@@ -10829,7 +11762,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jeff Blake",
@@ -10879,7 +11816,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jeff George",
@@ -10949,6 +11890,9 @@
 ],
 "notes": [
 "infobox rush 2 != table 0"
+],
+"kinds": [
+"pass"
 ]
 },
 {
@@ -11010,7 +11954,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Jeff Hostetler",
@@ -11095,7 +12042,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jerome Bettis",
@@ -11145,7 +12096,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Jerry Rice",
@@ -11242,7 +12197,11 @@
 9
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Jim Benton",
@@ -11309,7 +12268,10 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Jim Brown",
@@ -11377,7 +12339,11 @@
 4
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Jim Everett",
@@ -11462,7 +12428,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Jim Harbaugh",
@@ -11548,7 +12517,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jim Hart",
@@ -11675,7 +12648,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Jim Kelly",
@@ -11754,7 +12730,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jim Kiick",
@@ -11819,7 +12799,120 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Jim McMahon",
+"wiki": "Jim McMahon",
+"pos": "Quarterback",
+"first": 1982,
+"last": 1996,
+"infobox": {
+"pass": 100,
+"rush": 16
+},
+"seasons": [
+[
+1982,
+9,
+0,
+0
+],
+[
+1983,
+12,
+0,
+0
+],
+[
+1984,
+8,
+0,
+0
+],
+[
+1985,
+15,
+0,
+0
+],
+[
+1986,
+5,
+0,
+0
+],
+[
+1987,
+12,
+0,
+0
+],
+[
+1988,
+6,
+0,
+0
+],
+[
+1989,
+10,
+0,
+0
+],
+[
+1990,
+0,
+0,
+0
+],
+[
+1991,
+12,
+0,
+0
+],
+[
+1992,
+1,
+0,
+0
+],
+[
+1993,
+9,
+0,
+0
+],
+[
+1994,
+1,
+0,
+0
+],
+[
+1995,
+0,
+0,
+0
+],
+[
+1996,
+0,
+0,
+0
+]
+],
+"notes": [
+"infobox rush 16 != table 0"
+],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Jim Mutscheller",
@@ -11880,7 +12973,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Jim Nance",
@@ -11941,7 +13037,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Jim Plunkett",
@@ -12047,6 +13147,9 @@
 ],
 "notes": [
 "infobox rush 14 != table 0"
+],
+"kinds": [
+"pass"
 ]
 },
 {
@@ -12121,7 +13224,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Joe Cribbs",
@@ -12188,7 +13295,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Joe Ferguson",
@@ -12303,7 +13414,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Joe Horn",
@@ -12334,7 +13448,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Joe Montana",
@@ -12444,7 +13561,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Joe Morris",
@@ -12505,7 +13626,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Joe Namath",
@@ -12596,7 +13721,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Joe Perry",
@@ -12706,7 +13834,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Joey Galloway",
@@ -12746,6 +13878,9 @@
 "notes": [
 "career row rec 77 != season sum 79",
 "infobox rec 77 != table 79"
+],
+"kinds": [
+"rec"
 ]
 },
 {
@@ -12861,7 +13996,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "John Elway",
@@ -12971,7 +14110,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "John Hadl",
@@ -13081,7 +14224,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "John Jefferson",
@@ -13142,7 +14289,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "John Riggins",
@@ -13246,7 +14396,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "John Stallworth",
@@ -13343,7 +14497,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "John Taylor",
@@ -13410,7 +14567,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Johnnie Morton",
@@ -13453,7 +14613,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Johnny Drake",
@@ -13494,7 +14657,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Johnny Hector",
@@ -13567,7 +14734,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Johnny Morris",
@@ -13641,7 +14812,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Johnny Unitas",
@@ -13763,7 +14938,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Jon Kitna",
@@ -13788,7 +14967,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Keenan McCardell",
@@ -13849,7 +15032,10 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Keith Byars",
@@ -13941,7 +15127,11 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Ken Anderson",
@@ -14050,7 +15240,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Ken Kavanaugh",
@@ -14111,7 +15304,10 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Ken O'Brien",
@@ -14184,7 +15380,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Ken Stabler",
@@ -14287,7 +15486,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Kenneth Davis",
@@ -14352,7 +15555,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Kerry Collins",
@@ -14389,7 +15596,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Kevin House",
@@ -14450,7 +15661,44 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
+},
+{
+"name": "Keyshawn Johnson",
+"wiki": "Keyshawn Johnson",
+"pos": "Wide receiver",
+"first": 1996,
+"last": 2006,
+"infobox": {
+"rec": 64
+},
+"seasons": [
+[
+1996,
+0,
+0,
+8
+],
+[
+1997,
+0,
+0,
+5
+],
+[
+1998,
+0,
+0,
+10
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Kordell Stewart",
@@ -14488,7 +15736,12 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rec",
+"rush"
+]
 },
 {
 "name": "Lamar Smith",
@@ -14531,7 +15784,11 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Lance Alworth",
@@ -14610,7 +15867,11 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Lance Rentzel",
@@ -14681,7 +15942,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Larry Csonka",
@@ -14763,6 +16028,10 @@
 ],
 "notes": [
 "career row rec 5 != season sum 4"
+],
+"kinds": [
+"rec",
+"rush"
 ]
 },
 {
@@ -14818,7 +16087,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Len Dawson",
@@ -14948,6 +16221,9 @@
 "notes": [
 "career row pass 239 != season sum 232",
 "infobox pass 239 != table 232"
+],
+"kinds": [
+"pass"
 ]
 },
 {
@@ -15034,7 +16310,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Leroy Hoard",
@@ -15099,7 +16379,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Leroy Kelly",
@@ -15170,7 +16454,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Lorenzo White",
@@ -15232,7 +16520,81 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Louis Lipps",
+"wiki": "Louis Lipps",
+"pos": "Wide receiver , return specialist",
+"first": 1984,
+"last": 1992,
+"infobox": {
+"rec": 39
+},
+"seasons": [
+[
+1984,
+0,
+0,
+9
+],
+[
+1985,
+0,
+0,
+12
+],
+[
+1986,
+0,
+0,
+3
+],
+[
+1987,
+0,
+0,
+0
+],
+[
+1988,
+0,
+0,
+5
+],
+[
+1989,
+0,
+0,
+5
+],
+[
+1990,
+0,
+0,
+3
+],
+[
+1991,
+0,
+0,
+2
+],
+[
+1992,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Lynn Dickey",
@@ -15335,7 +16697,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "MacArthur Lane",
@@ -15412,7 +16777,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Malcolm Kutner",
@@ -15455,7 +16824,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Marc Wilson",
@@ -15529,7 +16901,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Marcus Allen",
@@ -15639,7 +17015,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Mario Bates",
@@ -15682,7 +17062,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Marion Motley",
@@ -15750,7 +17134,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Mark Bavaro",
@@ -15817,7 +17205,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Mark Brunell",
@@ -15866,7 +17257,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Mark Duper",
@@ -15945,7 +17340,10 @@
 7
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Mark Malone",
@@ -16012,7 +17410,87 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
+},
+{
+"name": "Mark Rypien",
+"wiki": "Mark Rypien",
+"pos": "Quarterback",
+"first": 1988,
+"last": 2001,
+"infobox": {
+"pass": 115
+},
+"seasons": [
+[
+1988,
+18,
+0,
+0
+],
+[
+1989,
+22,
+0,
+0
+],
+[
+1990,
+16,
+0,
+0
+],
+[
+1991,
+28,
+0,
+0
+],
+[
+1992,
+13,
+0,
+0
+],
+[
+1993,
+4,
+0,
+0
+],
+[
+1994,
+4,
+0,
+0
+],
+[
+1995,
+9,
+0,
+0
+],
+[
+1996,
+1,
+0,
+0
+],
+[
+1997,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Marshall Faulk",
@@ -16056,7 +17534,11 @@
 4
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Marvin Harrison",
@@ -16087,7 +17569,11 @@
 7
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Mel Gray",
@@ -16170,7 +17656,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Mercury Morris",
@@ -16229,7 +17718,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Michael Irvin",
@@ -16308,7 +17801,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Michael Jackson",
@@ -16369,7 +17866,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Mike Pagel",
@@ -16455,7 +17955,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Mike Quick",
@@ -16522,7 +18026,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Milt Plum",
@@ -16613,7 +18120,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Muhsin Muhammad",
@@ -16644,7 +18155,11 @@
 6
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Nat Moore",
@@ -16735,7 +18250,10 @@
 7
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Neal Anderson",
@@ -16794,7 +18312,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Neil Lomax",
@@ -16862,7 +18384,75 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
+},
+{
+"name": "Neil O'Donnell",
+"wiki": "Neil O'Donnell",
+"pos": "Quarterback",
+"first": 1991,
+"last": 2003,
+"infobox": {
+"pass": 120
+},
+"seasons": [
+[
+1991,
+11,
+0,
+0
+],
+[
+1992,
+13,
+0,
+0
+],
+[
+1993,
+14,
+0,
+0
+],
+[
+1994,
+13,
+0,
+0
+],
+[
+1995,
+17,
+0,
+0
+],
+[
+1996,
+4,
+0,
+0
+],
+[
+1997,
+17,
+0,
+0
+],
+[
+1998,
+15,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Norm Snead",
@@ -16971,7 +18561,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Norm Van Brocklin",
@@ -17056,7 +18650,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "O. J. Simpson",
@@ -17136,7 +18733,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Otis Taylor",
@@ -17215,7 +18816,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Ottis Anderson",
@@ -17316,6 +18920,10 @@
 "notes": [
 "career row rush 81 != season sum 82",
 "infobox rush 81 != table 82"
+],
+"kinds": [
+"rec",
+"rush"
 ]
 },
 {
@@ -17390,7 +18998,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Paul Hornung",
@@ -17464,7 +19076,11 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Paul Lowe",
@@ -17538,7 +19154,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Paul Robinson",
@@ -17585,7 +19205,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Paul Warfield",
@@ -17682,7 +19306,11 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Pete Banaszak",
@@ -17773,7 +19401,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Pete Pihos",
@@ -17840,7 +19472,10 @@
 7
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Peyton Manning",
@@ -17859,7 +19494,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Phil Simms",
@@ -17956,7 +19595,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Priest Holmes",
@@ -17982,7 +19624,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Quinn Early",
@@ -18061,7 +19707,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Randall Cunningham",
@@ -18153,7 +19802,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Randy Moss",
@@ -18172,7 +19825,12 @@
 17
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rec",
+"rush"
+]
 },
 {
 "name": "Ray Butler",
@@ -18237,7 +19895,10 @@
 4
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Raymond Berry",
@@ -18328,7 +19989,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Rich Gannon",
@@ -18410,6 +20074,9 @@
 ],
 "notes": [
 "infobox rush 21 != table 0"
+],
+"kinds": [
+"pass"
 ]
 },
 {
@@ -18493,7 +20160,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Rick Mirer",
@@ -18542,7 +20213,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Rickey Dudley",
@@ -18573,7 +20248,10 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Ricky Proehl",
@@ -18640,7 +20318,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Ricky Watters",
@@ -18696,7 +20377,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Rob Goode",
@@ -18737,7 +20422,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Robert Brooks",
@@ -18792,7 +20481,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Rodney Hampton",
@@ -18851,7 +20543,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Rodney Holman",
@@ -18948,7 +20644,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Rodney Peete",
@@ -19021,7 +20720,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Roger Craig",
@@ -19098,7 +20801,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Roger Staubach",
@@ -19178,7 +20885,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Roman Gabriel",
@@ -19288,7 +20999,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Ron Jaworski",
@@ -19403,7 +21118,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Roy Green",
@@ -19500,90 +21219,10 @@
 0
 ]
 ],
-"notes": []
-},
-{
-"name": "Russ Jackson",
-"wiki": "Russ Jackson",
-"pos": "Quarterback",
-"first": 1958,
-"last": 1969,
-"infobox": {},
-"seasons": [
-[
-1958,
-3,
-5,
-0
-],
-[
-1959,
-7,
-3,
-0
-],
-[
-1960,
-2,
-6,
-0
-],
-[
-1961,
-8,
-6,
-0
-],
-[
-1962,
-10,
-8,
-0
-],
-[
-1963,
-19,
-5,
-0
-],
-[
-1964,
-18,
-3,
-0
-],
-[
-1965,
-18,
-2,
-0
-],
-[
-1966,
-17,
-3,
-0
-],
-[
-1967,
-25,
-4,
-0
-],
-[
-1968,
-25,
-6,
-0
-],
-[
-1969,
-33,
-3,
-0
+"notes": [],
+"kinds": [
+"rec"
 ]
-],
-"notes": []
 },
 {
 "name": "Ryan Leaf",
@@ -19602,7 +21241,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Sammy Baugh",
@@ -19711,7 +21354,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Sammy Winder",
@@ -19778,7 +21424,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Sid Luckman",
@@ -19863,7 +21513,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Sonny Jurgensen",
@@ -19984,7 +21637,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Sonny Randle",
@@ -20057,7 +21713,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Stan Humphries",
@@ -20118,7 +21777,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Stanley Morgan",
@@ -20215,7 +21878,11 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Stephen Davis",
@@ -20249,6 +21916,9 @@
 ],
 "notes": [
 "infobox rec 4 != table 0"
+],
+"kinds": [
+"rush"
 ]
 },
 {
@@ -20304,7 +21974,11 @@
 18
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Steve Bartkowski",
@@ -20389,7 +22063,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Steve Beuerlein",
@@ -20474,7 +22151,111 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
+},
+{
+"name": "Steve Bono",
+"wiki": "Steve Bono",
+"pos": "Quarterback",
+"first": 1985,
+"last": 1999,
+"infobox": {
+"pass": 62
+},
+"seasons": [
+[
+1985,
+0,
+0,
+0
+],
+[
+1986,
+0,
+0,
+0
+],
+[
+1987,
+5,
+0,
+0
+],
+[
+1988,
+1,
+0,
+0
+],
+[
+1989,
+1,
+0,
+0
+],
+[
+1990,
+0,
+0,
+0
+],
+[
+1991,
+11,
+0,
+0
+],
+[
+1992,
+2,
+0,
+0
+],
+[
+1993,
+0,
+0,
+0
+],
+[
+1994,
+4,
+0,
+0
+],
+[
+1995,
+21,
+0,
+0
+],
+[
+1996,
+12,
+0,
+0
+],
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+5,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Steve DeBerg",
@@ -20589,7 +22370,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Steve Grogan",
@@ -20699,7 +22483,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Steve Largent",
@@ -20796,7 +22584,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Steve McNair",
@@ -20836,6 +22627,10 @@
 ],
 "notes": [
 "infobox rush 38 != table 37"
+],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -20898,7 +22693,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Steve Watson",
@@ -20965,7 +22764,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Steve Young",
@@ -21063,7 +22865,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Stump Mitchell",
@@ -21128,7 +22934,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Ted Fritsch",
@@ -21193,7 +23003,81 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Terance Mathis",
+"wiki": "Terance Mathis",
+"pos": "",
+"first": 1990,
+"last": 2002,
+"infobox": {
+"rec": 63
+},
+"seasons": [
+[
+1990,
+0,
+0,
+0
+],
+[
+1991,
+0,
+0,
+1
+],
+[
+1992,
+0,
+0,
+3
+],
+[
+1993,
+0,
+0,
+0
+],
+[
+1994,
+0,
+0,
+11
+],
+[
+1995,
+0,
+0,
+9
+],
+[
+1996,
+0,
+0,
+7
+],
+[
+1997,
+0,
+0,
+6
+],
+[
+1998,
+0,
+0,
+11
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Terrell Davis",
@@ -21230,7 +23114,11 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Terrell Owens",
@@ -21261,7 +23149,11 @@
 14
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Terry Allen",
@@ -21322,6 +23214,10 @@
 ],
 "notes": [
 "career row rec 6 != season sum 7"
+],
+"kinds": [
+"rec",
+"rush"
 ]
 },
 {
@@ -21389,7 +23285,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Terry Bradshaw",
@@ -21487,7 +23386,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Terry Glenn",
@@ -21518,7 +23421,61 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
+},
+{
+"name": "Terry Kirby",
+"wiki": "Terry Kirby",
+"pos": "Running back",
+"first": 1993,
+"last": 2002,
+"infobox": {},
+"seasons": [
+[
+1993,
+0,
+3,
+3
+],
+[
+1994,
+0,
+2,
+0
+],
+[
+1995,
+0,
+4,
+3
+],
+[
+1996,
+0,
+3,
+1
+],
+[
+1997,
+0,
+6,
+1
+],
+[
+1998,
+0,
+3,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Thurman Thomas",
@@ -21598,7 +23555,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tiki Barber",
@@ -21624,7 +23585,11 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tim Brown",
@@ -21703,7 +23668,11 @@
 9
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tobin Rote",
@@ -21795,7 +23764,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Tom Fears",
@@ -21862,7 +23835,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Tom Matte",
@@ -21945,7 +23921,11 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tom Rathman",
@@ -22012,7 +23992,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tom Sullivan",
@@ -22067,7 +24051,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tommy Kramer",
@@ -22164,7 +24152,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Tommy Maddox",
@@ -22204,6 +24195,10 @@
 ],
 "notes": [
 "infobox rush 5 != table 1"
+],
+"kinds": [
+"pass",
+"rush"
 ]
 },
 {
@@ -22289,7 +24284,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Tommy Thompson",
@@ -22356,7 +24354,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Tony Banks",
@@ -22387,7 +24389,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Tony Collins",
@@ -22449,7 +24455,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Tony Dorsett",
@@ -22535,7 +24545,75 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
+},
+{
+"name": "Tony Eason",
+"wiki": "Tony Eason",
+"pos": "Quarterback",
+"first": 1983,
+"last": 1990,
+"infobox": {
+"pass": 61
+},
+"seasons": [
+[
+1983,
+1,
+0,
+0
+],
+[
+1984,
+23,
+0,
+0
+],
+[
+1985,
+11,
+0,
+0
+],
+[
+1986,
+19,
+0,
+0
+],
+[
+1987,
+3,
+0,
+0
+],
+[
+1988,
+0,
+0,
+0
+],
+[
+1989,
+4,
+0,
+0
+],
+[
+1990,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Tony Gonzalez",
@@ -22560,7 +24638,68 @@
 2
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
+},
+{
+"name": "Torrance Small",
+"wiki": "Torrance Small",
+"pos": "Wide receiver",
+"first": 1992,
+"last": 2001,
+"infobox": {
+"rec": 31
+},
+"seasons": [
+[
+1992,
+0,
+0,
+3
+],
+[
+1993,
+0,
+0,
+1
+],
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+5
+],
+[
+1996,
+0,
+0,
+2
+],
+[
+1997,
+0,
+0,
+1
+],
+[
+1998,
+0,
+0,
+7
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Trent Dilfer",
@@ -22603,7 +24742,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Trent Green",
@@ -22628,7 +24771,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Troy Aikman",
@@ -22701,7 +24848,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Troy Brown",
@@ -22750,7 +24901,10 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Tyrone Wheatley",
@@ -22785,7 +24939,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Vance Johnson",
@@ -22858,7 +25016,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Vinny Testaverde",
@@ -22944,7 +25105,135 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
+},
+{
+"name": "Wade Wilson",
+"wiki": "Wade Wilson (American football)",
+"pos": "Quarterback",
+"first": 1981,
+"last": 1998,
+"infobox": {
+"pass": 99
+},
+"seasons": [
+[
+1981,
+0,
+0,
+0
+],
+[
+1982,
+0,
+0,
+0
+],
+[
+1983,
+1,
+0,
+0
+],
+[
+1984,
+5,
+0,
+0
+],
+[
+1985,
+3,
+0,
+0
+],
+[
+1986,
+7,
+0,
+0
+],
+[
+1987,
+14,
+0,
+0
+],
+[
+1988,
+15,
+0,
+0
+],
+[
+1989,
+9,
+0,
+0
+],
+[
+1990,
+9,
+0,
+0
+],
+[
+1991,
+3,
+0,
+0
+],
+[
+1992,
+13,
+0,
+0
+],
+[
+1993,
+12,
+0,
+0
+],
+[
+1994,
+0,
+0,
+0
+],
+[
+1995,
+1,
+0,
+0
+],
+[
+1996,
+0,
+0,
+0
+],
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+7,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass"
+]
 },
 {
 "name": "Walter Payton",
@@ -23036,7 +25325,12 @@
 1
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rec",
+"rush"
+]
 },
 {
 "name": "Warren Moon",
@@ -23140,7 +25434,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Warren Wells",
@@ -23183,7 +25481,10 @@
 11
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Warrick Dunn",
@@ -23209,7 +25510,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Webster Slaughter",
@@ -23294,7 +25599,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Wes Chandler",
@@ -23373,7 +25681,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Wesley Walls",
@@ -23446,7 +25757,10 @@
 5
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Wilbert Montgomery",
@@ -23514,7 +25828,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Willie Gault",
@@ -23591,7 +25909,10 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Wray Carlton",
@@ -23650,7 +25971,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 },
 {
 "name": "Y. A. Tittle",
@@ -23766,7 +26091,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+]
 },
 {
 "name": "Yancey Thigpen",
@@ -23827,7 +26156,10 @@
 3
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec"
+]
 },
 {
 "name": "Zack Crockett",
@@ -23865,7 +26197,11 @@
 0
 ]
 ],
-"notes": []
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+]
 }
 ]
 }

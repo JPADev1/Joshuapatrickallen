@@ -1,0 +1,56 @@
+# Jeff George: infobox rush 2 != table 0
+## headings: 
+  No. 11, 1, 3
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1967-12-08 ) December 8, 1967 (age 58) Indianapolis, Indiana , U.S.
+  Listed height ; 6 ft 4 in (1.93 m)
+  Listed weight ; 214 lb (97 kg)
+  Career information
+  High school ; Warren Central (Indianapolis)
+  College ; Purdue (1986) Illinois (1987–1989)
+  NFL draft ; 1990 : 1st round, 1st overall pick
+  Career history
+  Indianapolis Colts ( 1990 – 1993 ) Atlanta Falcons ( 1994 – 1996 ) Oakland Raiders ( 1997 – 1998 ) Minnesota Vikings ( 1999 ) Washington Redskins ( 2000 – 2001 ) Seattle Seahawks ( 2002 ) Chicago Bears ( 2004 ) Oakland Raiders ( 2006 )*
+  * Offseason or practice squad member only
+  
+  Awards and highlights
+  NFL passing yards leader ( 1997 ) PFWA All-Rookie Team ( 1990 ) Sammy Baugh Trophy (1989) First-team All-Big Ten ( 1989 ) Second-team All-Big Ten ( 1988 )
+  
+  Career NFL statistics
+  Passing attempts 3,967 Passing completions 2,298 Completion percentage 57.9% TD – INT 154–112 Passing yards 27,602 Passer rating 80.4 Rushing yards 307 Rushing touchdowns 2 Stats at Pro Football Reference ; Passing attempts ; 3,967 ; Passing completions ; 2,298 ; Completion percentage ; 57.9% ; TD – INT ; 154–112 ; Passing yards ; 27,602 ; Passer rating ; 80.4 ; Rushing yards ; 307 ; Rushing touchdowns ; 2 ; Stats at Pro Football Reference
+  Passing attempts ; 3,967
+  Passing completions ; 2,298
+  Completion percentage ; 57.9%
+  TD – INT ; 154–112
+  Passing yards ; 27,602
+  Passer rating ; 80.4
+  Rushing yards ; 307
+  Rushing touchdowns ; 2
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 3,967
+  Passing completions ; 2,298
+  Completion percentage ; 57.9%
+  TD – INT ; 154–112
+  Passing yards ; 27,602
+  Passer rating ; 80.4
+  Rushing yards ; 307
+  Rushing touchdowns ; 2
+  Stats at Pro Football Reference
+## headings: NFL career statistics | Late career | Washington Redskins
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; Lng ; TD ; Int ; Rtg ; Fum
+  1990 ; IND ; 13 ; 12 ; 5–7 ; 181 ; 334 ; 54.2 ; 2,152 ; 6.4 ; 75 ; 16 ; 13 ; 73.8 ; 0
+  1991 ; IND ; 16 ; 16 ; 1–15 ; 292 ; 485 ; 60.2 ; 2,910 ; 6.0 ; 49 ; 10 ; 12 ; 73.8 ; 8
+  1992 ; IND ; 10 ; 10 ; 6–4 ; 167 ; 306 ; 54.6 ; 1,963 ; 6.4 ; 57 ; 7 ; 15 ; 61.5 ; 3
+  1993 ; IND ; 13 ; 11 ; 2–9 ; 234 ; 407 ; 57.5 ; 2,526 ; 6.2 ; 72 ; 8 ; 6 ; 76.3 ; 3
+  1994 ; ATL ; 16 ; 16 ; 7–9 ; 322 ; 524 ; 61.5 ; 3,734 ; 7.1 ; 85 ; 23 ; 18 ; 83.3 ; 4
+  1995 ; ATL ; 16 ; 16 ; 9–7 ; 336 ; 557 ; 60.3 ; 4,143 ; 7.4 ; 62 ; 24 ; 11 ; 89.5 ; 3
+  1996 ; ATL ; 3 ; 3 ; 0–3 ; 56 ; 99 ; 56.6 ; 698 ; 7.0 ; 67 ; 3 ; 3 ; 76.1 ; 1
+  1997 ; OAK ; 16 ; 16 ; 4–12 ; 290 ; 521 ; 55.7 ; 3,917 ; 7.5 ; 76 ; 29 ; 9 ; 91.2 ; 5
+  1998 ; OAK ; 8 ; 7 ; 3–4 ; 93 ; 169 ; 55.0 ; 1,186 ; 7.0 ; 75 ; 4 ; 5 ; 72.7 ; 5
+  1999 ; MIN ; 12 ; 10 ; 8–2 ; 191 ; 329 ; 58.1 ; 2,816 ; 8.6 ; 80 ; 23 ; 12 ; 94.2 ; 7
+  2000 ; WAS ; 6 ; 5 ; 1–4 ; 113 ; 194 ; 58.2 ; 1,389 ; 7.2 ; 50 ; 7 ; 6 ; 79.6 ; 2
+  2001 ; WAS ; 2 ; 2 ; 0–2 ; 23 ; 42 ; 54.8 ; 168 ; 4.0 ; 17 ; 0 ; 3 ; 34.6 ; 0
+  Career [ 6 ] ; 131 ; 124 ; 46–78 ; 2,298 ; 3,967 ; 57.9 ; 27,602 ; 7.0 ; 85 ; 154 ; 113 ; 80.4 ; 41

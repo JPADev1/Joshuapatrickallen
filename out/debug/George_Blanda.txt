@@ -1,0 +1,94 @@
+# George Blanda: career row pass 236 != season sum 237; infobox pass 236 != table 237
+## headings: 
+  Blanda depicted on a 1954 Bowman football card
+  No. 22, 64, 16
+  Positions ; Quarterback , placekicker
+  Personal information
+  Born ; ( 1927-09-17 ) September 17, 1927 Youngwood, Pennsylvania , U.S.
+  Died ; September 27, 2010 (2010-09-27) (aged 83) Alameda, California , U.S.
+  Listed height ; 6 ft 2 in (1.88 m)
+  Listed weight ; 215 lb (98 kg)
+  Career information
+  High school ; Youngwood
+  College ; Kentucky (1945–1948)
+  NFL draft ; 1949 : 12th round, 119th overall pick
+  Career history
+  Chicago Bears ( 1949 ) Baltimore Colts ( 1950 ) Chicago Bears (1950– 1958 ) Houston Oilers ( 1960 – 1966 ) Oakland Raiders ( 1967 – 1975 )
+  
+  Awards and highlights
+  3× AFL champion ( 1960 , 1961 , 1967 ) AFL Most Valuable Player (1961) NFL Man of the Year (1974) First-team All-AFL ( 1961 ) 2× Second-team All-AFL ( 1962 , 1963 ) 4× AFL All-Star (1961–1963, 1967) 2× AFL passing yards leader (1961, 1963) AFL passing touchdowns leader (1961) AFL passer rating leader (1961) AFL scoring leader (1967) AFL All-Time Team AP Male Athlete of the Year (1970) Bert Bell Award (1970) UPI AFC Player of the Year (1970) 100 greatest Bears of All-Time Titans/Oilers Ring of Honor NFL records Most seasons played: 26 Most career extra points made: 943 Most passing touchdowns in a game : 7 (tied) Most interceptions thrown, single season: 42 (1962)
+  
+  Career NFL/AFL statistics
+  Passing completions / attempts 1,911 / 4,007 Completion percentage 47.7% TD – INT 236–277 Passing yards 26,920 Passer rating 60.6 Field goals made / attempted 335 / 641 Field goal percentage 52.3% Extra points made / attempted 943 / 959 Extra point percentage 98.3% Points scored 2,002 Stats at Pro Football Reference ; Passing completions / attempts ; 1,911 / 4,007 ; Completion percentage ; 47.7% ; TD – INT ; 236–277 ; Passing yards ; 26,920 ; Passer rating ; 60.6 ; Field goals made / attempted ; 335 / 641 ; Field goal percentage ; 52.3% ; Extra points made / attempted ; 943 / 959 ; Extra point percentage ; 98.3% ; Points scored ; 2,002 ; Stats at Pro Football Reference
+  Passing completions / attempts ; 1,911 / 4,007
+  Completion percentage ; 47.7%
+  TD – INT ; 236–277
+  Passing yards ; 26,920
+  Passer rating ; 60.6
+  Field goals made / attempted ; 335 / 641
+  Field goal percentage ; 52.3%
+  Extra points made / attempted ; 943 / 959
+  Extra point percentage ; 98.3%
+  Points scored ; 2,002
+  Stats at Pro Football Reference
+  Pro Football Hall of Fame
+## headings: 
+  Passing completions / attempts ; 1,911 / 4,007
+  Completion percentage ; 47.7%
+  TD – INT ; 236–277
+  Passing yards ; 26,920
+  Passer rating ; 60.6
+  Field goals made / attempted ; 335 / 641
+  Field goal percentage ; 52.3%
+  Extra points made / attempted ; 943 / 959
+  Extra point percentage ; 98.3%
+  Points scored ; 2,002
+  Stats at Pro Football Reference
+## headings: Regular season | NFL/AFL career statistics | Oakland Raiders
+  Year ; Team ; Games ; Passing ; Kicking
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Lng ; TD ; Int ; Rtg ; FGM ; FGA ; Lng ; FG% ; XPM ; XPA ; XP% ; Pts
+  1949 ; CHI ; 12 ; 2 ; — ; 9 ; 21 ; 42.9 ; 197 ; 9.4 ; 44 ; 0 ; 5 ; 37.3 ; 7 ; 15 ; — ; 46.7 ; 0 ; 0 ; — ; 21
+  1950 ; BAL ; 1 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 0 ; 0 ; 0 ; — ; 0 ; 0 ; — ; 0
+  CHI ; 11 ; 0 ; — ; 0 ; 1 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 39.6 ; 6 ; 15 ; — ; 40.0 ; 0 ; 0 ; — ; 18
+  1951 ; CHI ; 12 ; 0 ; — ; 0 ; 0 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0.0 ; 6 ; 17 ; — ; 35.3 ; 26 ; 26 ; 100.0 ; 44
+  1952 ; CHI ; 12 ; 2 ; 1−1 ; 47 ; 131 ; 35.9 ; 664 ; 5.1 ; 59 ; 8 ; 11 ; 38.5 ; 6 ; 25 ; — ; 24.0 ; 30 ; 30 ; 100.0 ; 48
+  1953 ; CHI ; 12 ; 12 ; 3−8−1 ; 169 ; 362 ; 46.7 ; 2,164 ; 6.0 ; 72 ; 14 ; 23 ; 52.3 ; 7 ; 20 ; — ; 35.0 ; 27 ; 27 ; 100.0 ; 48
+  1954 ; CHI ; 8 ; 7 ; 4−3 ; 131 ; 281 ; 46.6 ; 1,929 ; 6.9 ; 76 ; 15 ; 17 ; 62.1 ; 8 ; 16 ; — ; 50.0 ; 23 ; 23 ; 100.0 ; 47
+  1955 ; CHI ; 12 ; 0 ; — ; 42 ; 97 ; 43.3 ; 459 ; 4.7 ; 51 ; 4 ; 7 ; 41.6 ; 11 ; 16 ; — ; 68.8 ; 37 ; 37 ; 100.0 ; 70
+  1956 ; CHI ; 12 ; 0 ; — ; 37 ; 69 ; 53.6 ; 439 ; 6.4 ; 69 ; 7 ; 4 ; 82.9 ; 12 ; 28 ; — ; 42.9 ; 45 ; 47 ; 95.7 ; 81
+  1957 ; CHI ; 12 ; 0 ; — ; 8 ; 19 ; 42.1 ; 65 ; 3.4 ; 13 ; 1 ; 3 ; 11.8 ; 14 ; 26 ; — ; 53.8 ; 23 ; 23 ; 100.0 ; 65
+  1958 ; CHI ; 12 ; 0 ; — ; 2 ; 7 ; 28.6 ; 19 ; 2.7 ; 12 ; 0 ; 0 ; 39.6 ; 11 ; 23 ; — ; 47.8 ; 36 ; 37 ; 97.3 ; 69
+  1960 ; HOU ; 14 ; 11 ; 8−3 ; 169 ; 363 ; 46.6 ; 2,413 ; 6.6 ; 88 ; 24 ; 22 ; 65.4 ; 15 ; 32 ; 53 ; 45.5 ; 46 ; 47 ; 97.9 ; 91
+  1961 ; HOU ; 14 ; 11 ; 9−2 ; 187 ; 362 ; 51.7 ; 3,330 ; 9.2 ; 80 ; 36 ; 22 ; 91.3 ; 16 ; 29 ; 55 ; 55.2 ; 64 ; 65 ; 98.5 ; 112
+  1962 ; HOU ; 14 ; 14 ; 11−3 ; 197 ; 418 ; 47.1 ; 2,810 ; 6.7 ; 78 ; 27 ; 42 ; 51.3 ; 11 ; 26 ; 54 ; 42.3 ; 48 ; 49 ; 98.0 ; 81
+  1963 ; HOU ; 14 ; 13 ; 6−7 ; 224 ; 423 ; 53.0 ; 3,003 ; 7.1 ; 80 ; 24 ; 25 ; 70.1 ; 9 ; 24 ; 46 ; 37.5 ; 39 ; 39 ; 100.0 ; 66
+  1964 ; HOU ; 14 ; 13 ; 4−9 ; 262 ; 505 ; 51.9 ; 3,287 ; 6.5 ; 80 ; 17 ; 27 ; 61.4 ; 13 ; 29 ; 49 ; 44.8 ; 37 ; 38 ; 97.4 ; 76
+  1965 ; HOU ; 14 ; 12 ; 3−9 ; 186 ; 442 ; 42.1 ; 2,542 ; 5.8 ; 95 ; 20 ; 30 ; 47.9 ; 11 ; 21 ; 45 ; 52.4 ; 28 ; 28 ; 100.0 ; 61
+  1966 ; HOU ; 14 ; 8 ; 3−5 ; 122 ; 271 ; 45.0 ; 1,764 ; 6.5 ; 79 ; 17 ; 21 ; 55.3 ; 16 ; 30 ; 51 ; 53.3 ; 39 ; 40 ; 97.5 ; 87
+  1967 ; OAK ; 14 ; 0 ; — ; 15 ; 38 ; 39.5 ; 285 ; 7.5 ; 50 ; 3 ; 3 ; 59.6 ; 20 ; 30 ; 46 ; 66.7 ; 56 ; 57 ; 98.2 ; 116
+  1968 ; OAK ; 14 ; 1 ; 1−0 ; 30 ; 49 ; 61.2 ; 522 ; 10.7 ; 94 ; 6 ; 2 ; 120.1 ; 21 ; 34 ; 48 ; 61.8 ; 54 ; 54 ; 100.0 ; 117
+  1969 ; OAK ; 14 ; 0 ; — ; 6 ; 13 ; 46.2 ; 73 ; 5.6 ; 20 ; 2 ; 1 ; 71.5 ; 20 ; 37 ; 46 ; 54.1 ; 45 ; 45 ; 100.0 ; 105
+  1970 ; OAK ; 14 ; 0 ; — ; 29 ; 55 ; 52.7 ; 461 ; 8.4 ; 44 ; 6 ; 5 ; 79.4 ; 16 ; 29 ; 52 ; 55.2 ; 36 ; 36 ; 100.0 ; 84
+  1971 ; OAK ; 14 ; 0 ; — ; 32 ; 58 ; 55.2 ; 378 ; 6.5 ; 37 ; 4 ; 6 ; 58.6 ; 15 ; 22 ; 42 ; 68.2 ; 41 ; 42 ; 97.6 ; 86
+  1972 ; OAK ; 14 ; 0 ; — ; 5 ; 15 ; 33.3 ; 77 ; 5.1 ; 26 ; 1 ; 0 ; 73.5 ; 17 ; 26 ; 48 ; 65.4 ; 44 ; 44 ; 100.0 ; 95
+  1973 ; OAK ; 14 ; 0 ; — ; 0 ; 0 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0.0 ; 23 ; 33 ; 49 ; 69.7 ; 31 ; 31 ; 100.0 ; 100
+  1974 ; OAK ; 14 ; 0 ; — ; 1 ; 4 ; 25.0 ; 28 ; 7.0 ; 28 ; 1 ; 0 ; 95.8 ; 11 ; 17 ; 49 ; 64.7 ; 44 ; 46 ; 95.7 ; 77
+  1975 ; OAK ; 14 ; 0 ; — ; 1 ; 3 ; 33.3 ; 11 ; 3.7 ; 11 ; 0 ; 1 ; 5.6 ; 13 ; 21 ; 37 ; 61.9 ; 44 ; 48 ; 91.7 ; 83
+  Career ; 340 ; 106 ; 53−50−1 ; 1,911 ; 4,007 ; 47.7 ; 26,920 ; 6.7 ; 95 ; 236 ; 277 ; 60.6 ; 335 ; 641 ; 55 ; 52.4 ; 943 ; 959 ; 98.3 ; 1,948
+## headings: Postseason | Regular season | NFL/AFL career statistics
+  Year ; Team ; Games ; Passing ; Kicking
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Lng ; TD ; Int ; Rtg ; FGM ; FGA ; FG% ; XPM ; XPA ; XP% ; Pts
+  1950 ; CHI ; 1 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 0 ; 0 ; — ; 0 ; 0 ; — ; 0
+  1956 ; CHI ; 1 ; 1 ; 0–1 ; 12 ; 27 ; 44.4 ; 140 ; 5.2 ; — ; 0 ; 1 ; 45.3 ; 0 ; 0 ; — ; 1 ; 1 ; 100.0 ; 1
+  1960 ; HOU ; 1 ; 1 ; 1–0 ; 16 ; 31 ; 51.6 ; 301 ; 9.7 ; 88 ; 3 ; 0 ; 117.8 ; 1 ; 2 ; 50.0 ; 3 ; 3 ; 100.0 ; 6
+  1961 ; HOU ; 1 ; 1 ; 1–0 ; 18 ; 40 ; 45.0 ; 160 ; 4.0 ; 35 ; 1 ; 5 ; 25.0 ; 1 ; 1 ; 100.0 ; 1 ; 1 ; 100.0 ; 4
+  1962 ; HOU ; 1 ; 1 ; 0–1 ; 23 ; 46 ; 50.0 ; 261 ; 5.7 ; 24 ; 1 ; 5 ; 35.1 ; 1 ; 3 ; 33.3 ; 2 ; 2 ; 100.0 ; 5
+  1967 ; OAK ; 2 ; 0 ; — ; 0 ; 2 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 39.6 ; 4 ; 7 ; 57.1 ; 6 ; 6 ; 100.0 ; 18
+  1968 ; OAK ; 2 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 5 ; 6 ; 83.3 ; 7 ; 7 ; 100.0 ; 22
+  1969 ; OAK ; 2 ; 0 ; — ; 3 ; 11 ; 27.3 ; 57 ; 5.2 ; 33 ; 0 ; 3 ; 9.1 ; 0 ; 3 ; 0.0 ; 9 ; 9 ; 100.0 ; 9
+  1970 ; OAK ; 2 ; 0 ; — ; 17 ; 32 ; 53.1 ; 271 ; 8.5 ; 38 ; 2 ; 3 ; 63.4 ; 1 ; 2 ; 50.0 ; 5 ; 5 ; 100.0 ; 8
+  1972 ; OAK ; 1 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 0 ; 0 ; — ; 1 ; 1 ; 100.0 ; 1
+  1973 ; OAK ; 2 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 5 ; 7 ; 71.4 ; 4 ; 4 ; 100.0 ; 19
+  1974 ; OAK ; 2 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 2 ; 3 ; 66.7 ; 5 ; 5 ; 100.0 ; 11
+  1975 ; OAK ; 2 ; 0 ; — ; 0 ; 0 ; — ; 0 ; — ; 0 ; 0 ; 0 ; — ; 2 ; 5 ; 40.0 ; 5 ; 5 ; 100.0 ; 11
+  Career ; 20 ; 4 ; 2–2 ; 89 ; 189 ; 47.1 ; 1,190 ; 6.3 ; 88 ; 7 ; 17 ; 42.4 ; 22 ; 39 ; 56.4 ; 49 ; 49 ; 100.0 ; 115

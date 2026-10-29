@@ -1,0 +1,61 @@
+# Jim McMahon: infobox rush 16 != table 0
+## headings: 
+  McMahon in 2006
+  No. 9,10
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1959-08-21 ) August 21, 1959 (age 67) Jersey City, New Jersey , U.S.
+  Listed height ; 6 ft 1 in (1.85 m)
+  Listed weight ; 195 lb (88 kg)
+  Career information
+  High school ; Roy ( Roy, Utah )
+  College ; BYU (1977–1981)
+  NFL draft ; 1982 : 1st round, 5th overall pick
+  Career history
+  Chicago Bears ( 1982 – 1988 ) San Diego Chargers ( 1989 ) Philadelphia Eagles ( 1990 – 1992 ) Minnesota Vikings ( 1993 ) Arizona Cardinals ( 1994 ) Cleveland Browns ( 1995 )* Green Bay Packers ( 1995 – 1996 )
+  * Offseason or practice squad member only
+  
+  Awards and highlights
+  2× Super Bowl champion ( XX , XXXI ) NFC Offensive Rookie of the Year (1982) NFL Comeback Player of the Year (1991) Pro Bowl ( 1985 ) 100 greatest Bears of All-Time Davey O'Brien Award (1981) Sammy Baugh Trophy (1981) Unanimous All-American ( 1981 ) First-team All-American ( 1980 ) NCAA passing yards leader (1980) NCAA passing touchdowns leader (1980) 2× NCAA passer rating leader (1980, 1981) NCAA completion percentage leader (1981) 3× WAC Offensive Player of the Year (1978, 1980, 1981) First-team All- WAC (1981) BYU Cougars No. 9 retired
+  
+  Career NFL statistics
+  Passing attempts 2,573 Passing completions 1,492 Completion percentage 58.0% TD – INT 100–90 Passing yards 18,148 Passer rating 78.2 Rushing yards 1,631 Rushing touchdowns 16 Stats at Pro Football Reference ; Passing attempts ; 2,573 ; Passing completions ; 1,492 ; Completion percentage ; 58.0% ; TD – INT ; 100–90 ; Passing yards ; 18,148 ; Passer rating ; 78.2 ; Rushing yards ; 1,631 ; Rushing touchdowns ; 16 ; Stats at Pro Football Reference
+  Passing attempts ; 2,573
+  Passing completions ; 1,492
+  Completion percentage ; 58.0%
+  TD – INT ; 100–90
+  Passing yards ; 18,148
+  Passer rating ; 78.2
+  Rushing yards ; 1,631
+  Rushing touchdowns ; 16
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 2,573
+  Passing completions ; 1,492
+  Completion percentage ; 58.0%
+  TD – INT ; 100–90
+  Passing yards ; 18,148
+  Passer rating ; 78.2
+  Rushing yards ; 1,631
+  Rushing touchdowns ; 16
+  Stats at Pro Football Reference
+## headings: Regular season | NFL career statistics | Legacy
+  Year ; Team ; Games ; Passing ; Sacks
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg ; Sck ; SckY
+  1982 ; CHI ; 8 ; 7 ; 3–4 ; 120 ; 210 ; 57.1 ; 1,501 ; 7.2 ; 9 ; 7 ; 79.9 ; 27 ; 196
+  1983 ; CHI ; 14 ; 13 ; 7–6 ; 175 ; 295 ; 59.3 ; 2,184 ; 7.4 ; 12 ; 13 ; 77.6 ; 42 ; 266
+  1984 ; CHI ; 9 ; 9 ; 7–2 ; 85 ; 143 ; 59.4 ; 1,146 ; 8.0 ; 8 ; 2 ; 97.8 ; 10 ; 48
+  1985 ; CHI ; 13 ; 11 ; 11–0 ; 178 ; 313 ; 56.9 ; 2,392 ; 7.6 ; 15 ; 11 ; 82.6 ; 26 ; 125
+  1986 ; CHI ; 6 ; 6 ; 6–0 ; 77 ; 150 ; 51.3 ; 995 ; 6.6 ; 5 ; 8 ; 61.4 ; 6 ; 40
+  1987 ; CHI ; 7 ; 6 ; 5–1 ; 125 ; 210 ; 59.5 ; 1,639 ; 7.8 ; 12 ; 8 ; 87.4 ; 22 ; 136
+  1988 ; CHI ; 9 ; 9 ; 7–2 ; 114 ; 192 ; 59.4 ; 1,346 ; 7.0 ; 6 ; 7 ; 76.0 ; 13 ; 79
+  1989 ; SD ; 12 ; 11 ; 4–7 ; 176 ; 318 ; 55.3 ; 2,132 ; 6.7 ; 10 ; 10 ; 73.5 ; 28 ; 167
+  1990 ; PHI ; 5 ; 0 ; — ; 6 ; 9 ; 66.7 ; 63 ; 7.0 ; 0 ; 0 ; 86.8 ; 1 ; 7
+  1991 ; PHI ; 12 ; 11 ; 8–3 ; 187 ; 311 ; 60.1 ; 2,239 ; 7.2 ; 12 ; 11 ; 80.3 ; 21 ; 128
+  1992 ; PHI ; 4 ; 1 ; 1–0 ; 22 ; 43 ; 51.2 ; 279 ; 6.5 ; 1 ; 2 ; 60.1 ; 4 ; 25
+  1993 ; MIN ; 12 ; 12 ; 8–4 ; 200 ; 331 ; 60.4 ; 1,968 ; 6.0 ; 9 ; 8 ; 76.2 ; 23 ; 104
+  1994 ; ARI ; 2 ; 1 ; 0–1 ; 23 ; 43 ; 53.5 ; 219 ; 5.1 ; 1 ; 3 ; 46.6 ; 3 ; 23
+  1995 ; GB ; 1 ; 0 ; — ; 1 ; 1 ; 100.0 ; 6 ; 6.0 ; 0 ; 0 ; 91.7 ; 0 ; 0
+  1996 ; GB ; 5 ; 0 ; — ; 3 ; 4 ; 75.0 ; 39 ; 9.8 ; 0 ; 0 ; 105.2 ; 0 ; 0
+  Career ; 129 ; 97 ; 67–30 ; 1,492 ; 2,573 ; 58.0 ; 18,148 ; 7.1 ; 100 ; 90 ; 78.2 ; 226 ; 1,344

@@ -1,0 +1,9 @@
+# Barry Foster (American football): no NFL stats table
+## headings: NFL career statistics | Since Retirement | Playing career
+  Year ; Team ; GP ; Att ; Yds ; Avg ; Lng ; TD ; Rec ; Yds ; Avg ; Lng ; TD
+  1990 ; PIT ; 16 ; 36 ; 203 ; 5.6 ; 38 ; 1 ; 1 ; 2 ; 2.0 ; 2 ; 0
+  1991 ; PIT ; 10 ; 96 ; 488 ; 5.1 ; 56 ; 1 ; 9 ; 117 ; 13.0 ; 31 ; 1
+  1992 ; PIT ; 16 ; 390 ; 1,690 ; 4.3 ; 69 ; 11 ; 36 ; 344 ; 9.6 ; 42 ; 0
+  1993 ; PIT ; 9 ; 177 ; 711 ; 4.0 ; 38 ; 8 ; 27 ; 217 ; 8.0 ; 21 ; 1
+  1994 ; PIT ; 11 ; 216 ; 851 ; 3.9 ; 29 ; 5 ; 20 ; 124 ; 6.2 ; 27 ; 0
+  Career ; 62 ; 915 ; 3,943 ; 4.3 ; 69 ; 26 ; 93 ; 804 ; 8.6 ; 42 ; 2

@@ -1,0 +1,71 @@
+# Frankie Albert: infobox pass 0 != table 115
+## headings: 
+  Albert in 1949
+  No. 63, 13
+  Positions ; Quarterback , punter
+  Personal information
+  Born ; ( 1920-01-27 ) January 27, 1920 Chicago, Illinois , U.S.
+  Died ; September 4, 2002 (2002-09-04) (aged 82) Palo Alto, California , U.S.
+  Listed height ; 5 ft 10 in (1.78 m)
+  Listed weight ; 166 lb (75 kg)
+  Career information
+  High school ; Glendale ( Glendale, California )
+  College ; Stanford (1939–1941)
+  NFL draft ; 1942 : 1st round, 10th overall pick
+  Career history
+  Playing
+  Los Angeles Bulldogs ( 1945 ) San Francisco 49ers ( 1946 – 1952 ) Calgary Stampeders ( 1953 )
+  Coaching
+  San Francisco 49ers ( 1955 ) Backfield coach San Francisco 49ers ( 1956 – 1958 ) Head coach
+  
+  Awards and highlights
+  As a player AAFC Most Valuable Player (1948) 3× Second-team All-Pro (1946, 1947, 1949) [ a ] Pro Bowl ( 1950 ) 2× AAFC passing touchdowns leader (1948, 1949) AAFC completion percentage leader (1948) AAFC passer rating leader (1948) 2× Consensus All-American ( 1940 , 1941 ) 2× First-team All-PCC ( 1940 , 1941 ) AAFC record Most passing touchdowns in a season: 29 (1948)
+  
+  Career AAFC/NFL statistics
+  TD – INT 115–98 Passing yards 10,795 Completion percentage 53.1% Passer rating 73.5 Rushing yards 1,272 Rushing touchdowns 27 Punting yards 12,866 Punting average 43 Stats at Pro Football Reference ; TD – INT ; 115–98 ; Passing yards ; 10,795 ; Completion percentage ; 53.1% ; Passer rating ; 73.5 ; Rushing yards ; 1,272 ; Rushing touchdowns ; 27 ; Punting yards ; 12,866 ; Punting average ; 43 ; Stats at Pro Football Reference
+  TD – INT ; 115–98
+  Passing yards ; 10,795
+  Completion percentage ; 53.1%
+  Passer rating ; 73.5
+  Rushing yards ; 1,272
+  Rushing touchdowns ; 27
+  Punting yards ; 12,866
+  Punting average ; 43
+  Stats at Pro Football Reference
+  Head coaching record
+  Regular season ; 19–16–1 (.542)
+  Postseason ; 0–1 (.000)
+  Career ; 19–17–1 (.527)
+  Coaching profile at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  TD – INT ; 115–98
+  Passing yards ; 10,795
+  Completion percentage ; 53.1%
+  Passer rating ; 73.5
+  Rushing yards ; 1,272
+  Rushing touchdowns ; 27
+  Punting yards ; 12,866
+  Punting average ; 43
+  Stats at Pro Football Reference
+## headings: Regular season | AAFC/NFL | Football career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacked ; Punting
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Y/A ; Lng ; TD ; Sck ; SckY ; Pnt ; Yds ; Avg ; Lng
+  1946 ; SF ; 14 ; 11 ; — ; 104 ; 197 ; 52.8 ; 1,404 ; 7.1 ; 54 ; 14 ; 14 ; 69.8 ; 69 ; -10 ; -0.1 ; — ; 4 ; — ; — ; 54 ; 2,214 ; 41.0 ; —
+  1947 ; SF ; 14 ; 9 ; — ; 128 ; 242 ; 52.9 ; 1,692 ; 7.0 ; 60 ; 18 ; 15 ; 74.3 ; 46 ; 179 ; 3.9 ; — ; 5 ; 13 ; 119 ; 40 ; 1,759 ; 44.0 ; —
+  1948 ; SF ; 14 ; 9 ; — ; 154 ; 264 ; 58.3 ; 1,990 ; 7.5 ; 59 ; 29 ; 10 ; 102.9 ; 69 ; 349 ; 5.1 ; — ; 8 ; 16 ; 165 ; 35 ; 1,568 ; 44.8 ; —
+  1949 ; SF ; 12 ; 9 ; — ; 129 ; 260 ; 49.6 ; 1,862 ; 7.2 ; 75 ; 27 ; 16 ; 82.2 ; 35 ; 249 ; 7.1 ; — ; 3 ; 14 ; 153 ; 31 ; 1,495 ; 48.2 ; —
+  1950 ; SF ; 12 ; 12 ; 3–9 ; 155 ; 306 ; 50.7 ; 1,767 ; 5.8 ; 43 ; 14 ; 23 ; 52.3 ; 53 ; 272 ; 5.1 ; 42 ; 3 ; — ; 311 ; 37 ; 1,424 ; 38.5 ; 64
+  1951 ; SF ; 12 ; 11 ; 6–4–1 ; 90 ; 166 ; 54.2 ; 1,116 ; 6.7 ; 47 ; 5 ; 10 ; 60.2 ; 35 ; 146 ; 4.2 ; 34 ; 3 ; — ; 171 ; 34 ; 1,507 ; 44.3 ; 66
+  1952 ; SF ; 12 ; 7 ; 4–3 ; 71 ; 129 ; 55.0 ; 964 ; 7.5 ; 60 ; 8 ; 10 ; 67.5 ; 22 ; 87 ; 4.0 ; 29 ; 1 ; — ; 177 ; 68 ; 2,899 ; 42.6 ; 70
+  Career ; 90 ; 68 ; 13–16–1 ; 831 ; 1,564 ; 53.1 ; 10,795 ; 6.9 ; 75 ; 115 ; 98 ; 73.5 ; 329 ; 1,272 ; 3.9 ; 42 ; 27 ; 43 ; 1,096 ; 299 ; 12,866 ; 43.0 ; 70
+## headings: Postseason | Regular season | AAFC/NFL
+  Year ; Team ; Games ; Passing ; Rushing ; Sacked ; Punting
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Y/A ; Lng ; TD ; Sck ; SckY ; Pnt ; Yds ; Avg ; Lng
+  1949 ; SF ; 2 ; 2 ; 1–1 ; 17 ; 41 ; 41.5 ; 204 ; 5.0 ; 30 ; 2 ; 2 ; 53.3 ; 14 ; 92 ; 6.6 ; — ; 0 ; 4 ; 39 ; 14 ; 639 ; 45.6 ; —
+  Career ; 2 ; 2 ; 1–1 ; 17 ; 41 ; 41.5 ; 204 ; 5.0 ; 30 ; 2 ; 2 ; 53.3 ; 14 ; 92 ; 6.6 ; N/A ; 0 ; 4 ; 39 ; 14 ; 639 ; 45.6 ; N/A
+## headings: WIFU | Postseason | Regular season
+  Year ; Team ; Games ; Passing ; Rushing ; Sacked ; Punting
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; Lng ; TD ; Int ; Rtg ; Att ; Yds ; Y/A ; Lng ; TD ; Sck ; SckY ; Pnt ; Yds ; Avg ; Lng
+  1953 ; CAL ; — ; — ; 3–12–1 ; 104 ; 225 ; 48.2 ; 1,562 ; — ; — ; 12 ; 16 ; — ; 53 ; -25 ; -0.5 ; — ; 2 ; — ; — ; 48 ; 1,926 ; 40.1 ; —
+  Career ; — ; — ; 3–12–1 ; 104 ; 225 ; 48.2 ; 1,562 ; — ; — ; 12 ; 16 ; — ; 53 ; -25 ; -0.5 ; — ; 2 ; — ; — ; 48 ; 1,926 ; 40.1 ; —

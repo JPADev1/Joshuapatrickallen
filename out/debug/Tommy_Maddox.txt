@@ -1,0 +1,85 @@
+# Tommy Maddox: infobox rush 5 != table 1
+## headings: 
+  Maddox with the Pittsburgh Steelers in 2005
+  No. 8, 12
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1971-09-02 ) September 2, 1971 (age 55) Shreveport, Louisiana , U.S.
+  Listed height ; 6 ft 4 in (1.93 m)
+  Listed weight ; 219 lb (99 kg)
+  Career information
+  High school ; L. D. Bell ( Hurst, Texas )
+  College ; UCLA (1990–1991)
+  NFL draft ; 1992 : 1st round, 25th overall pick
+  Career history
+  Denver Broncos ( 1992 – 1993 ) Los Angeles Rams ( 1994 ) New York Giants ( 1995 ) Atlanta Falcons ( 1997 )* New Jersey Red Dogs ( 2000 ) Los Angeles Xtreme (2001) Pittsburgh Steelers ( 2001 – 2005 ) Philadelphia Soul ( 2006 )*
+  * Offseason or practice squad member only
+  
+  Awards and highlights
+  Super Bowl champion ( XL ) NFL Comeback Player of the Year (2002) XFL champion (2001) XFL Most Valuable Player (2001)
+  
+  Career NFL statistics
+  Passing attempts 1,200 Passing completions 683 Completion percentage 57.2% TD – INT 48–54 Passing yards 8,087 Passer rating 72.4 Stats at Pro Football Reference ; Passing attempts ; 1,200 ; Passing completions ; 683 ; Completion percentage ; 57.2% ; TD – INT ; 48–54 ; Passing yards ; 8,087 ; Passer rating ; 72.4 ; Stats at Pro Football Reference
+  Passing attempts ; 1,200
+  Passing completions ; 683
+  Completion percentage ; 57.2%
+  TD – INT ; 48–54
+  Passing yards ; 8,087
+  Passer rating ; 72.4
+  Stats at Pro Football Reference
+  Career AFL statistics
+  Comp. / Att. 283 / 490 Passing yards 3,378 TD–INT 62–17 Passer rating 96.11 Rushing touchdowns 5 Stats at ArenaFan.com ; Comp. / Att. ; 283 / 490 ; Passing yards ; 3,378 ; TD–INT ; 62–17 ; Passer rating ; 96.11 ; Rushing touchdowns ; 5 ; Stats at ArenaFan.com
+  Comp. / Att. ; 283 / 490
+  Passing yards ; 3,378
+  TD–INT ; 62–17
+  Passer rating ; 96.11
+  Rushing touchdowns ; 5
+  Stats at ArenaFan.com
+## headings: 
+  Passing attempts ; 1,200
+  Passing completions ; 683
+  Completion percentage ; 57.2%
+  TD – INT ; 48–54
+  Passing yards ; 8,087
+  Passer rating ; 72.4
+  Stats at Pro Football Reference
+## headings: 
+  Comp. / Att. ; 283 / 490
+  Passing yards ; 3,378
+  TD–INT ; 62–17
+  Passer rating ; 96.11
+  Rushing touchdowns ; 5
+  Stats at ArenaFan.com
+## headings: AFL & XFL | Career statistics | Free agency (2006)
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Rtg
+  2000 ; New Jersey Red Dogs ; 13 ; 13 ; 3−10 ; 283 ; 490 ; 57.8 ; 3,378 ; 6.9 ; 62 ; 17 ; 104.1
+  AFL career ; 13 ; 13 ; 3−10 ; 283 ; 490 ; 57.8 ; 3,378 ; 6.9 ; 62 ; 17 ; 104.1
+  2001 ; Los Angeles Xtreme ; 10 ; 10 ; 7−3 ; 196 ; 342 ; 57.3 ; 2,186 ; 6.4 ; 18 ; 9 ; 83.1
+  XFL career ; 10 ; 10 ; 7−3 ; 196 ; 342 ; 57.3 ; 2,186 ; 6.4 ; 18 ; 9 ; 83.1
+## headings: NFL | AFL & XFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg ; Att ; Yds ; Avg ; Lng ; TD ; Sck ; SckY
+  1992 ; DEN ; 13 ; 4 ; 0−4 ; 66 ; 121 ; 54.5 ; 757 ; 6.3 ; 5 ; 9 ; 38 ; 56.4 ; 9 ; 20 ; 2.2 ; 11 ; 0 ; 10 ; 60
+  1993 ; DEN ; 16 ; 0 ; — ; 1 ; 1 ; 100.0 ; 1 ; 1.0 ; 1 ; 0 ; 1 ; 118.7 ; 2 ; -2 ; -1.0 ; -1 ; 0 ; 0 ; 0
+  1994 ; LAR ; 5 ; 0 ; — ; 10 ; 19 ; 52.6 ; 141 ; 7.4 ; 0 ; 2 ; 39 ; 37.3 ; 1 ; 1 ; 1.0 ; 1 ; 0 ; 0 ; 0
+  1995 ; NYG ; 16 ; 0 ; — ; 6 ; 23 ; 26.1 ; 49 ; 2.1 ; 0 ; 3 ; 13 ; 0.0 ; 1 ; 4 ; 4.0 ; 4 ; 0 ; 2 ; 7
+  2001 ; PIT ; 3 ; 0 ; — ; 7 ; 9 ; 77.8 ; 154 ; 17.1 ; 1 ; 1 ; 57 ; 116.2 ; 6 ; 9 ; 1.5 ; 8 ; 1 ; 1 ; 4
+  2002 ; PIT ; 15 ; 11 ; 7−3−1 ; 234 ; 377 ; 62.1 ; 2,836 ; 7.5 ; 20 ; 16 ; 72 ; 85.2 ; 19 ; 43 ; 2.3 ; 21 ; 0 ; 26 ; 148
+  2003 ; PIT ; 16 ; 16 ; 6−10 ; 298 ; 519 ; 57.4 ; 3,414 ; 6.6 ; 18 ; 17 ; 53 ; 75.3 ; 13 ; 12 ; 0.9 ; 6 ; 0 ; 41 ; 242
+  2004 ; PIT ; 4 ; 3 ; 2−1 ; 30 ; 60 ; 50.0 ; 329 ; 5.5 ; 1 ; 2 ; 39 ; 58.3 ; 9 ; 15 ; 1.7 ; 10 ; 0 ; 6 ; 37
+  2005 ; PIT ; 4 ; 2 ; 0−2 ; 34 ; 71 ; 47.9 ; 406 ; 5.7 ; 2 ; 4 ; 32 ; 51.7 ; 8 ; 26 ; 3.3 ; 16 ; 0 ; 8 ; 43
+  Career ; 92 ; 36 ; 15−20−1 ; 686 ; 1,200 ; 57.2 ; 8,087 ; 6.7 ; 48 ; 54 ; 72 ; 72.4 ; 68 ; 128 ; 1.9 ; 21 ; 1 ; 94 ; 541
+## headings: NFL | AFL & XFL | Career statistics
+  Year ; Team ; Games ; Passing ; Rushing ; Sacks
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg ; Att ; Yds ; Avg ; Lng ; TD ; Sck ; SckY
+  1993 ; DEN ; 1 ; 0 ; 0−0 ; 3 ; 7 ; 42.9 ; 34 ; 4.9 ; 0 ; 0 ; 13 ; 58.0 ; 1 ; 1 ; 1.0 ; 1 ; 0 ; 0 ; 0
+  2002 ; PIT ; 2 ; 2 ; 1−1 ; 51 ; 89 ; 57.3 ; 633 ; 7.1 ; 5 ; 3 ; 40 ; 84.2 ; 2 ; 7 ; 3.5 ; 8 ; 0 ; 4 ; 33
+  Career ; 3 ; 2 ; 1−1 ; 54 ; 96 ; 56.3 ; 667 ; 6.9 ; 5 ; 3 ; 40 ; 82.2 ; 3 ; 8 ; 2.7 ; 8 ; 0 ; 4 ; 33
+## headings: College | NFL | AFL & XFL
+  Season ; Team ; Games [ a ] ; Passing ; Rushing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1989 ; UCLA ; 0 ; 0 ; — ; Redshirted
+  1990 ; UCLA ; 11 ; 9 ; 4–5 ; 182 ; 327 ; 55.7 ; 2,682 ; 8.2 ; 17 ; 14 ; 133.1 ; 90 ; 148 ; 1.6 ; 2
+  1991 ; UCLA ; 12 ; 12 ; 9–3 ; 192 ; 315 ; 61.0 ; 2,505 ; 8.0 ; 16 ; 15 ; 135.0 ; 72 ; –33 ; –0.5 ; 2
+  Career ; 23 ; 21 ; 13–8 ; 374 ; 642 ; 58.3 ; 5,187 ; 8.1 ; 33 ; 29 ; 134.1 ; 162 ; 115 ; 0.7 ; 4

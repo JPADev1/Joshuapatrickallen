@@ -1,0 +1,68 @@
+# Archie Manning: infobox rush 18 != table 0
+## headings: 
+  Manning in 2017
+  No. 8, 4
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1949-05-19 ) May 19, 1949 (age 77) Drew, Mississippi , U.S.
+  Listed height ; 6 ft 3 in (1.91 m)
+  Listed weight ; 212 lb (96 kg)
+  Career information
+  High school ; Drew
+  College ; Ole Miss (1968–1970)
+  NFL draft ; 1971 : 1st round, 2nd overall pick
+  Career history
+  New Orleans Saints ( 1971 – 1982 ) Houston Oilers ( 1982 – 1983 ) Minnesota Vikings ( 1983 – 1984 )
+  
+  Awards and highlights
+  UPI NFC Player of the Year (1978) Sporting News NFC Player of the Year (1978) 2× Pro Bowl ( 1978 , 1979 ) New Orleans Saints Ring of Honor New Orleans Saints Hall of Fame NFLPA Alan Page Community Award (1978) Jack Horrigan Award (1983) SEC Player of the Year (1969) Walter Camp Memorial Trophy (1969) First-team All-American ( 1969 ) 2× First-team All-SEC ( 1969 , 1970 ) SEC All-Time Team (1982) SEC Football Legends Ole Miss Team of the Century Ole Miss Rebels No. 18 retired Gator Bowl Hall of Fame (1989) Sugar Bowl Hall of Fame (2017) Reds Bagnell Award (2011) Walter Camp Distinguished American Award (2018)
+  
+  Career NFL statistics
+  Passing attempts 3,642 Passing completions 2,011 Completion percentage 55.2% TD – INT 125–173 Passing yards 23,911 Passer rating 67.1 Rushing yards 2,197 Rushing touchdowns 18 Stats at Pro Football Reference ; Passing attempts ; 3,642 ; Passing completions ; 2,011 ; Completion percentage ; 55.2% ; TD – INT ; 125–173 ; Passing yards ; 23,911 ; Passer rating ; 67.1 ; Rushing yards ; 2,197 ; Rushing touchdowns ; 18 ; Stats at Pro Football Reference
+  Passing attempts ; 3,642
+  Passing completions ; 2,011
+  Completion percentage ; 55.2%
+  TD – INT ; 125–173
+  Passing yards ; 23,911
+  Passer rating ; 67.1
+  Rushing yards ; 2,197
+  Rushing touchdowns ; 18
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 3,642
+  Passing completions ; 2,011
+  Completion percentage ; 55.2%
+  TD – INT ; 125–173
+  Passing yards ; 23,911
+  Passer rating ; 67.1
+  Rushing yards ; 2,197
+  Rushing touchdowns ; 18
+  Stats at Pro Football Reference
+## headings: NFL | Career statistics | Professional career
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg
+  1971 ; NO ; 12 ; 10 ; 3−5−2 ; 86 ; 177 ; 48.6 ; 1,164 ; 6.6 ; 6 ; 9 ; 63 ; 60.1
+  1972 ; NO ; 14 ; 14 ; 2−11−1 ; 230 ; 448 ; 51.3 ; 2,781 ; 6.2 ; 18 ; 21 ; 66 ; 64.6
+  1973 ; NO ; 13 ; 13 ; 5−8 ; 140 ; 267 ; 52.4 ; 1,642 ; 6.1 ; 10 ; 12 ; 65 ; 65.2
+  1974 ; NO ; 11 ; 11 ; 3−8 ; 134 ; 261 ; 51.3 ; 1,429 ; 5.5 ; 6 ; 16 ; 79 ; 49.8
+  1975 ; NO ; 13 ; 13 ; 2−11 ; 159 ; 338 ; 47 ; 1,683 ; 5.0 ; 7 ; 20 ; 71 ; 44.3
+  1976 ; NO ; 0 ; 0 ; Did not play due to injury
+  1977 ; NO ; 10 ; 9 ; 1−8 ; 113 ; 205 ; 55.1 ; 1,284 ; 5.0 ; 8 ; 9 ; 59 ; 68.8
+  1978 ; NO ; 16 ; 16 ; 7−9 ; 291 ; 471 ; 61.8 ; 3,416 ; 7.3 ; 17 ; 16 ; 71 ; 81.7
+  1979 ; NO ; 16 ; 16 ; 8−8 ; 252 ; 420 ; 60 ; 3,169 ; 7.5 ; 15 ; 20 ; 85 ; 75.6
+  1980 ; NO ; 16 ; 16 ; 1−15 ; 309 ; 509 ; 60.7 ; 3,716 ; 7.3 ; 23 ; 20 ; 56 ; 81.8
+  1981 ; NO ; 12 ; 11 ; 3−8 ; 134 ; 232 ; 57.8 ; 1,447 ; 6.2 ; 5 ; 11 ; 55 ; 63.6
+  1982 ; NO ; 1 ; 0 ; — ; 1 ; 7 ; 14.3 ; 3 ; 0.4 ; 0 ; 2 ; 3 ; 0.0
+  HOU ; 6 ; 5 ; 0−5 ; 67 ; 132 ; 52.8 ; 877 ; 7.0 ; 6 ; 6 ; 54 ; 71.3
+  1983 ; HOU ; 3 ; 3 ; 0−3 ; 44 ; 88 ; 50 ; 755 ; 8.6 ; 2 ; 8 ; 47 ; 49.2
+  MIN ; 2 ; 0 ; — ; 0 ; 0 ; 0.0 ; 0 ; 0.0 ; 0 ; 0 ; 0 ; 0.0
+  1984 ; MIN ; 6 ; 2 ; 0−2 ; 52 ; 94 ; 55.3 ; 545 ; 5.8 ; 2 ; 3 ; 56 ; 66.1
+  Career [ 35 ] ; 151 ; 139 ; 35−101−3 ; 2,011 ; 3,642 ; 55.2 ; 23,911 ; 6.6 ; 125 ; 173 ; 85 ; 67.1
+## headings: College | NFL | Career statistics
+  Season ; Team ; Passing ; Rushing
+  Cmp ; Att ; Yds ; Pct ; TD ; Int ; Rtg ; Att ; Yds ; Avg ; TD
+  1968 ; Ole Miss ; 127 ; 263 ; 1,510 ; 48.3 ; 8 ; 17 ; 93.6 ; 110 ; 208 ; 1.9 ; 5
+  1969 ; Ole Miss ; 154 ; 265 ; 1,762 ; 58.1 ; 9 ; 9 ; 118.4 ; 124 ; 502 ; 4.0 ; 14
+  1970 ; Ole Miss ; 121 ; 233 ; 1,481 ; 51.9 ; 14 ; 14 ; 113.1 ; 80 ; 113 ; 1.4 ; 6
+  Career ; 402 ; 761 ; 4,753 ; 52.8 ; 31 ; 40 ; 108.2 ; 314 ; 823 ; 2.6 ; 25

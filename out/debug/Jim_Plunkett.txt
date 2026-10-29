@@ -1,0 +1,74 @@
+# Jim Plunkett: infobox rush 14 != table 0
+## headings: 
+  Plunkett in 2018
+  No. 16
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1947-12-05 ) December 5, 1947 (age 78) San Jose, California , U.S.
+  Listed height ; 6 ft 3 in (1.91 m)
+  Listed weight ; 220 lb (100 kg)
+  Career information
+  High school ; William C. Overfelt (San Jose) James Lick (San Jose)
+  College ; Stanford (1968–1970)
+  NFL draft ; 1971 : 1st round, 1st overall pick
+  Career history
+  New England Patriots ( 1971 – 1975 ) San Francisco 49ers ( 1976 – 1977 ) Oakland / Los Angeles Raiders ( 1978 – 1986 )
+  
+  Awards and highlights
+  2× Super Bowl champion ( XV , XVIII ) Super Bowl MVP ( XV ) NFL Comeback Player of the Year (1980) AFC Rookie of the Year (1971) Heisman Trophy (1970) Consensus All-American ( 1970 ) Second-team All-American ( 1969 ) 2× First-team All-Pac-8 ( 1969 , 1970 ) Second-team All-Pac-8 ( 1968 ) Stanford Cardinal No. 16 retired NFL record Longest touchdown pass: 99 yards (tied)
+  
+  Career NFL statistics
+  Passing attempts 3,701 Passing completions 1,943 Completion percentage 52.5% TD – INT 164–198 Passing yards 25,882 Passer rating 67.5 Rushing yards 1,337 Rushing touchdowns 14 Stats at Pro Football Reference ; Passing attempts ; 3,701 ; Passing completions ; 1,943 ; Completion percentage ; 52.5% ; TD – INT ; 164–198 ; Passing yards ; 25,882 ; Passer rating ; 67.5 ; Rushing yards ; 1,337 ; Rushing touchdowns ; 14 ; Stats at Pro Football Reference
+  Passing attempts ; 3,701
+  Passing completions ; 1,943
+  Completion percentage ; 52.5%
+  TD – INT ; 164–198
+  Passing yards ; 25,882
+  Passer rating ; 67.5
+  Rushing yards ; 1,337
+  Rushing touchdowns ; 14
+  Stats at Pro Football Reference
+  College Football Hall of Fame
+## headings: 
+  Passing attempts ; 3,701
+  Passing completions ; 1,943
+  Completion percentage ; 52.5%
+  TD – INT ; 164–198
+  Passing yards ; 25,882
+  Passer rating ; 67.5
+  Rushing yards ; 1,337
+  Rushing touchdowns ; 14
+  Stats at Pro Football Reference
+## headings: Regular season | NFL career statistics | Professional career
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg
+  1971 ; NE ; 14 ; 14 ; 6–8 ; 158 ; 328 ; 48.2 ; 2,158 ; 6.6 ; 19 ; 16 ; 88 ; 68.6
+  1972 ; NE ; 14 ; 14 ; 3–11 ; 169 ; 355 ; 47.6 ; 2,196 ; 6.2 ; 8 ; 25 ; 62 ; 45.7
+  1973 ; NE ; 14 ; 14 ; 5–9 ; 193 ; 376 ; 51.3 ; 2,550 ; 6.8 ; 13 ; 17 ; 64 ; 65.8
+  1974 ; NE ; 14 ; 14 ; 7–7 ; 173 ; 352 ; 49.1 ; 2,457 ; 7.0 ; 19 ; 22 ; 69 ; 64.1
+  1975 ; NE ; 5 ; 5 ; 2–3 ; 36 ; 92 ; 39.1 ; 571 ; 6.2 ; 3 ; 7 ; 76 ; 39.7
+  1976 ; SF ; 12 ; 12 ; 6–6 ; 126 ; 243 ; 51.9 ; 1,592 ; 6.6 ; 13 ; 16 ; 85 ; 63.0
+  1977 ; SF ; 14 ; 14 ; 5–9 ; 128 ; 248 ; 51.6 ; 1,693 ; 6.8 ; 9 ; 14 ; 47 ; 62.1
+  1979 ; OAK ; 4 ; 0 ; — ; 7 ; 15 ; 46.7 ; 89 ; 5.9 ; 1 ; 1 ; 39 ; 60.1
+  1980 ; OAK ; 13 ; 11 ; 9–2 ; 165 ; 320 ; 51.6 ; 2,299 ; 7.2 ; 18 ; 16 ; 86 ; 72.9
+  1981 ; OAK ; 9 ; 7 ; 2–5 ; 94 ; 179 ; 52.5 ; 1,045 ; 5.8 ; 4 ; 9 ; 42 ; 56.7
+  1982 ; RAI ; 9 ; 9 ; 8–1 ; 152 ; 261 ; 58.2 ; 2,035 ; 7.8 ; 14 ; 15 ; 52 ; 77.0
+  1983 ; RAI ; 14 ; 13 ; 10–3 ; 230 ; 379 ; 60.7 ; 2,935 ; 7.7 ; 20 ; 18 ; 99 ; 82.7
+  1984 ; RAI ; 8 ; 6 ; 5–1 ; 108 ; 198 ; 54.5 ; 1,473 ; 7.4 ; 6 ; 10 ; 73 ; 67.6
+  1985 ; RAI ; 3 ; 3 ; 1–2 ; 71 ; 103 ; 68.9 ; 803 ; 7.8 ; 3 ; 3 ; 41 ; 89.6
+  1986 ; RAI ; 10 ; 8 ; 3–5 ; 133 ; 252 ; 52.8 ; 1,986 ; 7.9 ; 14 ; 9 ; 81 ; 82.5
+  Career ; 157 ; 144 ; 72–72 ; 1,943 ; 3,701 ; 52.5 ; 25,882 ; 7.0 ; 164 ; 198 ; 99 ; 67.5
+## headings: Postseason | Regular season | NFL career statistics
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg
+  1980 ; OAK ; 4 ; 4 ; 4–0 ; 49 ; 92 ; 53.3 ; 839 ; 9.1 ; 7 ; 3 ; 80 ; 96.2
+  1982 ; RAI ; 2 ; 2 ; 1–1 ; 45 ; 70 ; 64.3 ; 652 ; 9.3 ; 1 ; 5 ; 64 ; 69.5
+  1983 ; RAI ; 3 ; 3 ; 3–0 ; 54 ; 83 ; 65.1 ; 618 ; 7.4 ; 2 ; 2 ; 50 ; 85.3
+  1984 ; RAI ; 1 ; 1 ; 0–1 ; 14 ; 27 ; 51.9 ; 184 ; 6.8 ; 1 ; 2 ; 46 ; 55.2
+  Career ; 10 ; 10 ; 8–2 ; 162 ; 272 ; 59.6 ; 2,293 ; 8.4 ; 11 ; 12 ; 80 ; 81.9
+## headings: Super Bowl | Postseason | Regular season
+  Year ; SB ; Team ; Opp. ; Passing ; Rushing ; Result
+  Cmp ; Att ; Pct ; Yds ; Y/A ; TD ; Int ; Rtg ; Att ; Yds ; Y/A ; TD
+  1980 ; XV ; OAK ; PHI ; 12 ; 21 ; 57.1 ; 261 ; 12.4 ; 3 ; 0 ; 145.0 ; 3 ; 9 ; 3.0 ; 0 ; W 27–10
+  1984 ; XVIII ; RAI ; WAS ; 16 ; 25 ; 64.0 ; 172 ; 6.9 ; 1 ; 0 ; 97.4 ; 1 ; -2 ; -2.0 ; 0 ; W 38–9
+  Career ; 29 ; 46 ; 63.0 ; 433 ; 9.4 ; 4 ; 0 ; 122.8 ; 4 ; 7 ; 1.8 ; 0 ; W−L 2–0

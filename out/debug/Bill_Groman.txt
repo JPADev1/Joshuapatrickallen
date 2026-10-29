@@ -1,0 +1,11 @@
+# Bill Groman: career row rec 36 != season sum 39; infobox rec 36 != table 39
+## headings: Regular season | AFL career statistics | After football
+  Year ; Team ; Games ; Receiving
+  GP ; GS ; Rec ; Yds ; Avg ; Lng ; TD
+  1960 ; HOU ; 14 ; 13 ; 72 ; 1,473 ; 20.5 ; 92 ; 12
+  1961 ; HOU ; 14 ; 13 ; 50 ; 1,175 ; 23.5 ; 80 ; 17
+  1962 ; HOU ; 14 ; 6 ; 21 ; 328 ; 15.6 ; 64 ; 6
+  1963 ; DEN ; 14 ; 5 ; 27 ; 437 ; 16.2 ; 74 ; 3
+  1964 ; BUF ; 5 ; 0 ; 4 ; 68 ; 17.0 ; 22 ; 1
+  1965 ; BUF ; 5 ; 0 ; Did not record any stats
+  Career ; 66 ; 37 ; 174 ; 3,481 ; 20.0 ; 92 ; 36

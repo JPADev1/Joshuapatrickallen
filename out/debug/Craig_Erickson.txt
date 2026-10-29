@@ -1,0 +1,45 @@
+# Craig Erickson: table has no TD columns
+## headings: 
+  No. 7
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1969-05-17 ) May 17, 1969 (age 57) Boynton Beach, Florida , U.S.
+  Listed height ; 6 ft 2 in (1.88 m)
+  Listed weight ; 213 lb (97 kg)
+  Career information
+  High school ; Cardinal Newman ( West Palm Beach, Florida )
+  College ; Miami (FL)
+  NFL draft ; 1991 : 5th round, 131st overall pick
+  Career history
+  Tampa Bay Buccaneers ( 1992 – 1994 ) Indianapolis Colts ( 1995 ) Miami Dolphins ( 1996 – 1998 ) Chicago Bears ( 1999 )
+  
+  Awards and highlights
+  2× National champion ( 1987 , 1989 ) Johnny Unitas Golden Arm Award (1990)
+  
+  Career NFL statistics
+  Passing attempts 1,092 Passing completions 591 Completion percentage 54.1% TD – INT 41–38 Passing yards 7,625 Passer rating 74.3 Rushing yards 201 Rushing touchdowns 1 Stats at Pro Football Reference ; Passing attempts ; 1,092 ; Passing completions ; 591 ; Completion percentage ; 54.1% ; TD – INT ; 41–38 ; Passing yards ; 7,625 ; Passer rating ; 74.3 ; Rushing yards ; 201 ; Rushing touchdowns ; 1 ; Stats at Pro Football Reference
+  Passing attempts ; 1,092
+  Passing completions ; 591
+  Completion percentage ; 54.1%
+  TD – INT ; 41–38
+  Passing yards ; 7,625
+  Passer rating ; 74.3
+  Rushing yards ; 201
+  Rushing touchdowns ; 1
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 1,092
+  Passing completions ; 591
+  Completion percentage ; 54.1%
+  TD – INT ; 41–38
+  Passing yards ; 7,625
+  Passer rating ; 74.3
+  Rushing yards ; 201
+  Rushing touchdowns ; 1
+  Stats at Pro Football Reference
+## headings: Statistics | College career
+  Year ; Comp ; Att ; Comp % ; Passing ; TD ; INT ; Rtg
+  1987 ; 22 ; 37 ; 59.5 ; 307 ; 2 ; 0 ; 147.0
+  1988 ; 26 ; 49 ; 53.1 ; 379 ; 6 ; 1 ; 154.4
+  1989 ; 147 ; 273 ; 53.8 ; 2,007 ; 16 ; 13 ; 125.4
+  1990 ; 225 ; 393 ; 57.3 ; 3,363 ; 22 ; 7 ; 144.0

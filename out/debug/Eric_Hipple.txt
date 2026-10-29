@@ -1,0 +1,61 @@
+# Eric Hipple: infobox rush 13 != table 0
+## headings: 
+  Hipple at a book signing in September 2009 .
+  No. 17
+  Position ; Quarterback
+  Personal information
+  Born ; ( 1957-09-16 ) September 16, 1957 (age 69) Lubbock , Texas , U.S.
+  Listed height ; 6 ft 2 in (1.88 m)
+  Listed weight ; 196 lb (89 kg)
+  Career information
+  College ; Utah State
+  NFL draft ; 1980 : 4th round, 85th overall pick
+  Career history
+  Detroit Lions ( 1980 – 1989 )
+  
+  Awards and highlights
+  NFL completion percentage leader ( 1986 )
+  
+  Career NFL statistics
+  Passing attempts 1,546 Passing completions 830 Completion percentage 53.7% TD – INT 55–70 Passing yards 10,711 Passer rating 68.7 Rushing yards 530 Rushing touchdowns 13 Stats at Pro Football Reference ; Passing attempts ; 1,546 ; Passing completions ; 830 ; Completion percentage ; 53.7% ; TD – INT ; 55–70 ; Passing yards ; 10,711 ; Passer rating ; 68.7 ; Rushing yards ; 530 ; Rushing touchdowns ; 13 ; Stats at Pro Football Reference
+  Passing attempts ; 1,546
+  Passing completions ; 830
+  Completion percentage ; 53.7%
+  TD – INT ; 55–70
+  Passing yards ; 10,711
+  Passer rating ; 68.7
+  Rushing yards ; 530
+  Rushing touchdowns ; 13
+  Stats at Pro Football Reference
+## headings: 
+  Passing attempts ; 1,546
+  Passing completions ; 830
+  Completion percentage ; 53.7%
+  TD – INT ; 55–70
+  Passing yards ; 10,711
+  Passer rating ; 68.7
+  Rushing yards ; 530
+  Rushing touchdowns ; 13
+  Stats at Pro Football Reference
+## headings: NFL | Career statistics | Professional career
+  Year ; Team ; Games ; Passing
+  GP ; GS ; Record ; Cmp ; Att ; Pct ; Yds ; Avg ; TD ; Int ; Lng ; Rtg
+  1980 ; DET ; 15 ; 0 ; Did not play
+  1981 ; DET ; 16 ; 10 ; 6−4 ; 140 ; 279 ; 50.2 ; 2,358 ; 8.5 ; 14 ; 15 ; 94 ; 73.4
+  1982 ; DET ; 9 ; 4 ; 2−2 ; 36 ; 86 ; 41.9 ; 411 ; 4.8 ; 2 ; 4 ; 52 ; 45.3
+  1983 ; DET ; 16 ; 16 ; 9−7 ; 204 ; 387 ; 52.7 ; 2,577 ; 6.7 ; 12 ; 18 ; 80 ; 64.7
+  1984 ; DET ; 8 ; 1 ; 1−0 ; 16 ; 38 ; 42.1 ; 246 ; 6.5 ; 1 ; 1 ; 40 ; 62.0
+  1985 ; DET ; 16 ; 15 ; 7−8 ; 223 ; 406 ; 54.9 ; 2,952 ; 7.3 ; 17 ; 18 ; 56 ; 73.6
+  1986 ; DET ; 16 ; 10 ; 3−7 ; 192 ; 305 ; 63.0 ; 1,919 ; 6.3 ; 9 ; 11 ; 46 ; 75.6
+  1987 ; DET ; 0 ; 0 ; Did not play due to injury
+  1988 ; DET ; 5 ; 0 ; − ; 12 ; 27 ; 44.4 ; 158 ; 5.9 ; 0 ; 0 ; 31 ; 63.5
+  1989 ; DET ; 1 ; 1 ; 0−1 ; 7 ; 18 ; 38.9 ; 90 ; 5.0 ; 0 ; 3 ; 30 ; 15.7
+  Career ; 102 ; 57 ; 28−29 ; 830 ; 1,546 ; 53.7 ; 10,711 ; 6.9 ; 55 ; 70 ; 94 ; 68.7
+## headings: College | NFL | Career statistics
+  Season ; Team ; GP ; Passing
+  Cmp ; Att ; Pct ; Yds ; TD ; Int ; Rtg
+  1976 ; Utah State ; 11 ; 74 ; 151 ; 49.0 ; 760 ; 2 ; 10 ; 82.4
+  1977 ; Utah State ; 11 ; 91 ; 173 ; 52.6 ; 1,301 ; 10 ; 11 ; 122.1
+  1978 ; Utah State ; 11 ; 150 ; 287 ; 52.3 ; 2,088 ; 9 ; 15 ; 113.3
+  1979 ; Utah State ; 11 ; 144 ; 239 ; 60.3 ; 1,924 ; 13 ; 6 ; 140.8
+  College career ; 44 ; 459 ; 850 ; 54.0 ; 6,073 ; 34 ; 42 ; 117.3
