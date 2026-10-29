@@ -14,7 +14,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from fetch_wiki import fetch  # noqa: E402
+from fetch_wiki import fetch, search  # noqa: E402
 
 warnings.filterwarnings("ignore")
 OUT = sys.argv[1] if len(sys.argv) > 1 else "out"
@@ -337,13 +337,21 @@ def main():
     for c in draft_candidates():
         res = None
         alt = {"QB": "quarterback", "RB": "running back", "FB": "fullback", "WR": "wide receiver", "TE": "tight end"}.get(c["pos"])
-        for t in [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else []):
-            res = take(t, c)
+        tries = [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else [])
+        res, why, i = None, [], 0
+        while i < len(tries):
+            res = take(tries[i], c)
             if res is None or res == "ok" or res.startswith("career began"):
                 break  # None: already collected from a leader list
+            why.append(f"{tries[i]}: {res}")
+            if i == len(tries) - 1 and len(tries) < 8:  # fall back to Wikipedia search
+                tries += [t for t in search(f"{c['name']} {alt or ''} NFL") if t not in tries][:4]
+            i += 1
+        if res is not None and res != "ok" and not res.startswith("career began"):
+            res = " / ".join(why[-3:])
         if res and res != "ok" and not res.startswith("career began"):
             report.append(f"draft-miss\t{c['name']}\t{res}")
-            for t in [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else []):
+            for t in tries[:3]:
                 dump(t, res)
     # keep pre-1999 seasons only; nflverse supplies 1999+
     out = []
@@ -354,7 +362,8 @@ def main():
         out.append({"name": re.sub(r"\s*\(.*?\)$", "", pl["title"]), "wiki": pl["title"], "pos": pl["pos"],
                     "first": pl["first"], "last": pl["last"], "infobox": pl["infobox"],
                     "seasons": [[y, v["pass"], v["rush"], v["rec"]] for y, v in s.items()], "notes": pl["notes"],
-                    "kinds": pl["kinds"], "missing": pl["missing"], "info": pl["info"]})
+                    "kinds": pl["kinds"], "missing": pl["missing"], "info": pl["info"],
+                    "career": {k: pl["infobox"][k] for k in pl["missing"] if k in pl["infobox"]}})
         if pl["notes"]:
             report.append(f"check\t{pl['title']}\t" + "; ".join(pl["notes"]))
             dump(pl["title"], "; ".join(pl["notes"]))

@@ -26,6 +26,17 @@ def fetch(title):
     return None, str(err)
 
 
+def search(q, n=4):
+    """Titles of the top Wikipedia search hits for q."""
+    qs = urllib.parse.urlencode({"action": "query", "list": "search", "srsearch": q, "srlimit": n, "format": "json"})
+    try:
+        req = urllib.request.Request(f"{API}?{qs}", headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return [h["title"] for h in json.load(r)["query"]["search"]]
+    except Exception:
+        return []
+
+
 def slug(t):
     return re.sub(r"[^A-Za-z0-9]+", "_", t).strip("_")
 
