@@ -77,8 +77,9 @@ def load(name):
         return None
 
 
-def save(name, obj):
-    """Write only when something besides the 'updated' stamp changed."""
+def save(name, obj, rows=None):
+    """Write only when something besides the 'updated' stamp changed.
+    rows: name of a long list to write one item per line (small file, readable diffs)."""
     old = load(name)
     strip = lambda d: json.dumps({k: v for k, v in (d or {}).items() if k != "updated"}, sort_keys=True)
     if old is not None and strip(old) == strip(obj):
@@ -86,7 +87,12 @@ def save(name, obj):
         return
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, name), "w") as f:
-        f.write(json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
+        if rows:
+            head = json.dumps({k: v for k, v in obj.items() if k != rows}, ensure_ascii=False)[:-1]
+            f.write(head + f',"{rows}":[\n' + ",\n".join(json.dumps(x, ensure_ascii=False, separators=(",", ":"))
+                                                     for x in obj[rows]) + "\n]}\n")
+        else:
+            f.write(json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
     print(f"{name}: updated")
 
 
@@ -624,6 +630,35 @@ def build_mountain_live(week26):
                                         "first": {k: v for k, v in first.items() if k in tot}, "players": out})
 
 
+def build_season_weeks(week26, sched):
+    """This season, week by week, for the Touchdown Mountain "This season" view (td-week-<season>.json).
+    Every player with a touchdown this season, with each week he played: [week, pass, rush, rec]."""
+    fb = {"FB": "RB", "HB": "RB"}
+    rows = [r for r in week26 if r.get("season_type") == "REG"]
+    if not rows:
+        return
+    weeks = defaultdict(dict)
+    meta = {}
+    for r in rows:
+        pid, wk = r["player_id"], int(r["week"])
+        t = [int(num(r, "passing_tds")), int(num(r, "rushing_tds")), int(num(r, "receiving_tds"))]
+        old = weeks[pid].get(wk, [0, 0, 0])
+        weeks[pid][wk] = [a + b for a, b in zip(old, t)]
+        meta[pid] = (r.get("player_display_name") or pid, fb.get(r.get("position", ""), r.get("position", "")))
+    last = max(int(r["week"]) for r in rows)
+    games = [g for g in sched if int(g["season"]) == SEASON and g["game_type"] == "REG" and int(g["week"]) == last]
+    in_progress = any(g["home_score"] in ("", "NA") for g in games)
+    out = []
+    for pid, w in sorted(weeks.items()):
+        if pid != ALLEN and not any(sum(t) for t in w.values()):
+            continue
+        out.append({"id": pid, "name": meta[pid][0], "pos": meta[pid][1],
+                    "w": [[k] + w[k] for k in sorted(w)]})
+    bye = [wk for wk in range(1, last + 1) if wk not in weeks.get(ALLEN, {})]
+    save(f"td-week-{SEASON}.json", {"updated": date.today().isoformat(), "season": SEASON, "weeks": last,
+                                    "inProgress": in_progress, "billsBye": bye, "players": out}, rows="players")
+
+
 def main():
     T = team_table()
     sched = [g for g in get("schedules/games.csv") if int(g["season"]) >= 1999]
@@ -640,6 +675,10 @@ def main():
         build_mountain_live(week26)
     except Exception as e:  # never let the mountain page block the rest of the update
         print("touchdown mountain skipped:", e)
+    try:
+        build_season_weeks(week26, sched)
+    except Exception as e:
+        print("touchdown mountain (this season) skipped:", e)
     team_rows = get(f"stats_team/stats_team_week_{SEASON}.csv")
     try:
         inj = get(f"injuries/injuries_{SEASON}.csv")

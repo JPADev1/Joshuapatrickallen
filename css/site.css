@@ -317,3 +317,8 @@ html.mtn-lock,html.mtn-lock body{overflow:hidden}
   .mtn-card.max .mtn-range label{font-size:.82rem}
   .mtn-card.max{padding-top:calc(6px + env(safe-area-inset-top,0px));padding-bottom:calc(4px + env(safe-area-inset-bottom,0px))}
 }
+/* all-time / this season toggle */
+.mtn-ctl .mtn-mode{background:var(--bg);border-radius:99px;padding:3px;gap:2px;width:fit-content}
+.mtn-ctl .mtn-mode button{border:0;background:transparent;font-weight:700}
+.mtn-ctl .mtn-mode button[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.mtn-ctl .mtn-mode button:disabled{opacity:.4;cursor:default}
