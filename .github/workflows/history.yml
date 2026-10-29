@@ -31,6 +31,7 @@ jobs:
       - name: Run
         run: bash run.sh
       - name: Save results to this branch
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "stats-bot"
