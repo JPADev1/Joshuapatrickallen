@@ -257,6 +257,10 @@ def player(title):
     if missing:
         info.append("table has no " + "/".join(missing) + " columns" +
                     ("".join(f"; career {k} {ib[k]}" for k in missing if k in ib)))
+    # a category whose season rows disagree with the career total by more than 1 TD is treated as unknown
+    for k in ("pass", "rush", "rec"):
+        if k in ib and k in kinds and k not in missing and abs(sum(v[k] for v in seasons.values()) - ib[k]) > 1:
+            missing.append(k)
     if not seasons:
         return None, "only non-NFL seasons in the table"
     return {"title": d["title"], "pos": ib.get("pos", ""), "first": min(seasons), "last": max(seasons),
@@ -335,8 +339,8 @@ def main():
         alt = {"QB": "quarterback", "RB": "running back", "FB": "fullback", "WR": "wide receiver", "TE": "tight end"}.get(c["pos"])
         for t in [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else []):
             res = take(t, c)
-            if res == "ok" or (res and res.startswith("career began")):
-                break
+            if res is None or res == "ok" or res.startswith("career began"):
+                break  # None: already collected from a leader list
         if res and res != "ok" and not res.startswith("career began"):
             report.append(f"draft-miss\t{c['name']}\t{res}")
             for t in [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else []):
