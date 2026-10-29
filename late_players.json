@@ -1,0 +1,1478 @@
+[
+{
+"name": "Troy Aikman",
+"pos": "QB",
+"since1999": {
+"pass": 24,
+"rush": 1,
+"rec": 0
+}
+},
+{
+"name": "Derrick Alexander",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 1,
+"rec": 16
+}
+},
+{
+"name": "Stephen Alexander",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 10
+}
+},
+{
+"name": "Terry Allen",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 13,
+"rec": 1
+}
+},
+{
+"name": "Mike Alstott",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 40,
+"rec": 6
+}
+},
+{
+"name": "Richie Anderson",
+"pos": "FB",
+"since1999": {
+"pass": 1,
+"rush": 2,
+"rec": 12
+}
+},
+{
+"name": "Tony Banks",
+"pos": "QB",
+"since1999": {
+"pass": 41,
+"rush": 2,
+"rec": 0
+}
+},
+{
+"name": "Tiki Barber",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 52,
+"rec": 8
+}
+},
+{
+"name": "Charlie Batch",
+"pos": "QB",
+"since1999": {
+"pass": 50,
+"rush": 5,
+"rec": 0
+}
+},
+{
+"name": "Mario Bates",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 11,
+"rec": 0
+}
+},
+{
+"name": "Fred Beasley",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 8,
+"rec": 5
+}
+},
+{
+"name": "Donnell Bennett",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 9,
+"rec": 0
+}
+},
+{
+"name": "Jerome Bettis",
+"pos": "RB",
+"since1999": {
+"pass": 3,
+"rush": 57,
+"rec": 0
+}
+},
+{
+"name": "Steve Beuerlein",
+"pos": "QB",
+"since1999": {
+"pass": 63,
+"rush": 4,
+"rec": 0
+}
+},
+{
+"name": "Tim Biakabutuka",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 9,
+"rec": 2
+}
+},
+{
+"name": "Jeff Blake",
+"pos": "QB",
+"since1999": {
+"pass": 57,
+"rush": 6,
+"rec": 0
+}
+},
+{
+"name": "Drew Bledsoe",
+"pos": "QB",
+"since1999": {
+"pass": 123,
+"rush": 10,
+"rec": 0
+}
+},
+{
+"name": "Corey Bradford",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 25
+}
+},
+{
+"name": "Kyle Brady",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 15
+}
+},
+{
+"name": "Tim Brown",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 31
+}
+},
+{
+"name": "Troy Brown",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 24
+}
+},
+{
+"name": "Isaac Bruce",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 61
+}
+},
+{
+"name": "Mark Brunell",
+"pos": "QB",
+"since1999": {
+"pass": 112,
+"rush": 5,
+"rec": 0
+}
+},
+{
+"name": "Dwayne Carswell",
+"pos": "OT",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 14
+}
+},
+{
+"name": "Cris Carter",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 29
+}
+},
+{
+"name": "Larry Centers",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 4,
+"rec": 9
+}
+},
+{
+"name": "Chris Chandler",
+"pos": "QB",
+"since1999": {
+"pass": 51,
+"rush": 1,
+"rec": 0
+}
+},
+{
+"name": "Wayne Chrebet",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 23
+}
+},
+{
+"name": "Bob Christian",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 10,
+"rec": 4
+}
+},
+{
+"name": "Kerry Collins",
+"pos": "QB",
+"since1999": {
+"pass": 157,
+"rush": 5,
+"rec": 0
+}
+},
+{
+"name": "Albert Connell",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 12
+}
+},
+{
+"name": "Curtis Conway",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 3,
+"rec": 25
+}
+},
+{
+"name": "Ernie Conwell",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 2,
+"rec": 11
+}
+},
+{
+"name": "Zack Crockett",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 35,
+"rec": 1
+}
+},
+{
+"name": "Germane Crowell",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 13
+}
+},
+{
+"name": "Randall Cunningham",
+"pos": "QB",
+"since1999": {
+"pass": 17,
+"rush": 2,
+"rec": 0
+}
+},
+{
+"name": "Stephen Davis",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 60,
+"rec": 2
+}
+},
+{
+"name": "Sean Dawkins",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 12
+}
+},
+{
+"name": "Jake Delhomme",
+"pos": "QB",
+"since1999": {
+"pass": 126,
+"rush": 7,
+"rec": 0
+}
+},
+{
+"name": "Trent Dilfer",
+"pos": "QB",
+"since1999": {
+"pass": 54,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Ken Dilger",
+"pos": "TE",
+"since1999": {
+"pass": 1,
+"rush": 0,
+"rec": 12
+}
+},
+{
+"name": "Corey Dillon",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 68,
+"rec": 6
+}
+},
+{
+"name": "Rickey Dudley",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 17
+}
+},
+{
+"name": "Warrick Dunn",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 43,
+"rec": 12
+}
+},
+{
+"name": "Tim Dwight",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 3,
+"rec": 18
+}
+},
+{
+"name": "Kevin Dyson",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 16
+}
+},
+{
+"name": "Bobby Engram",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 22
+}
+},
+{
+"name": "Marshall Faulk",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 58,
+"rec": 27
+}
+},
+{
+"name": "Christian Fauria",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 18
+}
+},
+{
+"name": "Brett Favre",
+"pos": "QB",
+"since1999": {
+"pass": 295,
+"rush": 3,
+"rec": 0
+}
+},
+{
+"name": "Jay Fiedler",
+"pos": "QB",
+"since1999": {
+"pass": 68,
+"rush": 11,
+"rec": 0
+}
+},
+{
+"name": "Doug Flutie",
+"pos": "QB",
+"since1999": {
+"pass": 52,
+"rush": 7,
+"rec": 0
+}
+},
+{
+"name": "Antonio Freeman",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 25
+}
+},
+{
+"name": "Gus Frerotte",
+"pos": "QB",
+"since1999": {
+"pass": 66,
+"rush": 3,
+"rec": 0
+}
+},
+{
+"name": "Oronde Gadsden",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 15
+}
+},
+{
+"name": "Joey Galloway",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 41
+}
+},
+{
+"name": "Rich Gannon",
+"pos": "QB",
+"since1999": {
+"pass": 114,
+"rush": 11,
+"rec": 0
+}
+},
+{
+"name": "Charlie Garner",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 22,
+"rec": 12
+}
+},
+{
+"name": "Eddie George",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 49,
+"rec": 8
+}
+},
+{
+"name": "Jeff George",
+"pos": "QB",
+"since1999": {
+"pass": 30,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Terry Glenn",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 1,
+"rec": 33
+}
+},
+{
+"name": "Tony Gonzalez",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 107
+}
+},
+{
+"name": "Jeff Graham",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 11
+}
+},
+{
+"name": "Kent Graham",
+"pos": "QB",
+"since1999": {
+"pass": 12,
+"rush": 1,
+"rec": 0
+}
+},
+{
+"name": "Elvis Grbac",
+"pos": "QB",
+"since1999": {
+"pass": 60,
+"rush": 2,
+"rec": 0
+}
+},
+{
+"name": "Ahman Green",
+"pos": "RB",
+"since1999": {
+"pass": 1,
+"rush": 59,
+"rec": 14
+}
+},
+{
+"name": "Brian Griese",
+"pos": "QB",
+"since1999": {
+"pass": 119,
+"rush": 5,
+"rec": 0
+}
+},
+{
+"name": "Az-Zahir Hakim",
+"pos": "WR",
+"since1999": {
+"pass": 1,
+"rush": 0,
+"rec": 27
+}
+},
+{
+"name": "Patrick Hape",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 10
+}
+},
+{
+"name": "Jim Harbaugh",
+"pos": "QB",
+"since1999": {
+"pass": 18,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Marvin Harrison",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 107
+}
+},
+{
+"name": "William Henderson",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 3,
+"rec": 11
+}
+},
+{
+"name": "Ike Hilliard",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 33
+}
+},
+{
+"name": "Leroy Hoard",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 10,
+"rec": 0
+}
+},
+{
+"name": "Robert Holcombe",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 9,
+"rec": 3
+}
+},
+{
+"name": "Priest Holmes",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 79,
+"rec": 8
+}
+},
+{
+"name": "Joe Horn",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 57
+}
+},
+{
+"name": "Damon Huard",
+"pos": "QB",
+"since1999": {
+"pass": 33,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Richard Huntley",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 10,
+"rec": 4
+}
+},
+{
+"name": "Qadry Ismail",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 21
+}
+},
+{
+"name": "Willie Jackson",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 14
+}
+},
+{
+"name": "Patrick Jeffers",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 12
+}
+},
+{
+"name": "Shawn Jefferson",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 11
+}
+},
+{
+"name": "Brad Johnson",
+"pos": "QB",
+"since1999": {
+"pass": 122,
+"rush": 7,
+"rec": 0
+}
+},
+{
+"name": "Keyshawn Johnson",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 1,
+"rec": 41
+}
+},
+{
+"name": "Rob Johnson",
+"pos": "QB",
+"since1999": {
+"pass": 20,
+"rush": 2,
+"rec": 0
+}
+},
+{
+"name": "Freddie Jones",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 17
+}
+},
+{
+"name": "Joe Jurevicius",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 29
+}
+},
+{
+"name": "Eddie Kennison",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 32
+}
+},
+{
+"name": "Jon Kitna",
+"pos": "QB",
+"since1999": {
+"pass": 161,
+"rush": 9,
+"rec": 0
+}
+},
+{
+"name": "Dorsey Levens",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 20,
+"rec": 3
+}
+},
+{
+"name": "Chad Lewis",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 19
+}
+},
+{
+"name": "Ray Lucas",
+"pos": "QB",
+"since1999": {
+"pass": 18,
+"rush": 4,
+"rec": 0
+}
+},
+{
+"name": "Peyton Manning",
+"pos": "QB",
+"since1999": {
+"pass": 513,
+"rush": 18,
+"rec": 0
+}
+},
+{
+"name": "Dan Marino",
+"pos": "QB",
+"since1999": {
+"pass": 12,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Curtis Martin",
+"pos": "RB",
+"since1999": {
+"pass": 2,
+"rush": 50,
+"rec": 4
+}
+},
+{
+"name": "Derrick Mason",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 63
+}
+},
+{
+"name": "Terance Mathis",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 15
+}
+},
+{
+"name": "Shane Matthews",
+"pos": "QB",
+"since1999": {
+"pass": 30,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Derrick Mayes",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 11
+}
+},
+{
+"name": "Ed McCaffrey",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 19
+}
+},
+{
+"name": "Keenan McCardell",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 41
+}
+},
+{
+"name": "Steve McNair",
+"pos": "QB",
+"since1999": {
+"pass": 136,
+"rush": 23,
+"rec": 0
+}
+},
+{
+"name": "Itula Mili",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 13
+}
+},
+{
+"name": "Jim Miller",
+"pos": "QB",
+"since1999": {
+"pass": 34,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Dave Moore",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 16
+}
+},
+{
+"name": "Johnnie Morton",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 20
+}
+},
+{
+"name": "Randy Moss",
+"pos": "WR",
+"since1999": {
+"pass": 2,
+"rush": 0,
+"rec": 139
+}
+},
+{
+"name": "Eric Moulds",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 38
+}
+},
+{
+"name": "Muhsin Muhammad",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 55
+}
+},
+{
+"name": "Neil O'Donnell",
+"pos": "QB",
+"since1999": {
+"pass": 16,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Terrell Owens",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 2,
+"rec": 127
+}
+},
+{
+"name": "Jerome Pathon",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 14
+}
+},
+{
+"name": "David Patten",
+"pos": "WR",
+"since1999": {
+"pass": 1,
+"rush": 1,
+"rec": 21
+}
+},
+{
+"name": "Rodney Peete",
+"pos": "QB",
+"since1999": {
+"pass": 17,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Michael Pittman",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 25,
+"rec": 8
+}
+},
+{
+"name": "Jake Plummer",
+"pos": "QB",
+"since1999": {
+"pass": 129,
+"rush": 11,
+"rec": 0
+}
+},
+{
+"name": "Marcus Pollard",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 35
+}
+},
+{
+"name": "Ricky Proehl",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 21
+}
+},
+{
+"name": "Jerry Rice",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 33
+}
+},
+{
+"name": "Tony Richardson",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 13,
+"rec": 4
+}
+},
+{
+"name": "Jay Riemersma",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 15
+}
+},
+{
+"name": "Marcus Robinson",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 42
+}
+},
+{
+"name": "Frank Sanders",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 11
+}
+},
+{
+"name": "Cory Schlesinger",
+"pos": "FB",
+"since1999": {
+"pass": 0,
+"rush": 5,
+"rec": 7
+}
+},
+{
+"name": "Bill Schroeder",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 26
+}
+},
+{
+"name": "Darnay Scott",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 10
+}
+},
+{
+"name": "Mike Sellers",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 3,
+"rec": 18
+}
+},
+{
+"name": "Shannon Sharpe",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 18
+}
+},
+{
+"name": "Bobby Shaw",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 14
+}
+},
+{
+"name": "David Sloan",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 13
+}
+},
+{
+"name": "Antowain Smith",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 38,
+"rec": 3
+}
+},
+{
+"name": "Emmitt Smith",
+"pos": "RB",
+"since1999": {
+"pass": 1,
+"rush": 39,
+"rec": 2
+}
+},
+{
+"name": "Jimmy Smith",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 45
+}
+},
+{
+"name": "Lamar Smith",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 27,
+"rec": 5
+}
+},
+{
+"name": "Robert Smith",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 9,
+"rec": 3
+}
+},
+{
+"name": "Rod Smith",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 1,
+"rec": 47
+}
+},
+{
+"name": "Duce Staley",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 19,
+"rec": 9
+}
+},
+{
+"name": "James Stewart",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 28,
+"rec": 4
+}
+},
+{
+"name": "Kordell Stewart",
+"pos": "QB",
+"since1999": {
+"pass": 44,
+"rush": 19,
+"rec": 1
+}
+},
+{
+"name": "J.J. Stokes",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 14
+}
+},
+{
+"name": "Fred Taylor",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 52,
+"rec": 5
+}
+},
+{
+"name": "Vinny Testaverde",
+"pos": "QB",
+"since1999": {
+"pass": 71,
+"rush": 3,
+"rec": 0
+}
+},
+{
+"name": "James Thrash",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 2,
+"rec": 21
+}
+},
+{
+"name": "Mike Tomczak",
+"pos": "QB",
+"since1999": {
+"pass": 12,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Amani Toomer",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 1,
+"rec": 48
+}
+},
+{
+"name": "Alex Van Pelt",
+"pos": "QB",
+"since1999": {
+"pass": 12,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Mike Vrabel",
+"pos": "OLB",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 10
+}
+},
+{
+"name": "Wesley Walls",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 24
+}
+},
+{
+"name": "Hines Ward",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 1,
+"rec": 85
+}
+},
+{
+"name": "Kurt Warner",
+"pos": "QB",
+"since1999": {
+"pass": 206,
+"rush": 3,
+"rec": 0
+}
+},
+{
+"name": "Ricky Watters",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 13,
+"rec": 4
+}
+},
+{
+"name": "Michael Westbrook",
+"pos": "WR",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 15
+}
+},
+{
+"name": "Tyrone Wheatley",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 32,
+"rec": 5
+}
+},
+{
+"name": "Moe Williams",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 20,
+"rec": 4
+}
+},
+{
+"name": "Roland Williams",
+"pos": "TE",
+"since1999": {
+"pass": 0,
+"rush": 0,
+"rec": 11
+}
+},
+{
+"name": "Frank Wycheck",
+"pos": "TE",
+"since1999": {
+"pass": 2,
+"rush": 0,
+"rec": 14
+}
+},
+{
+"name": "Trent Green",
+"pos": "QB",
+"since1999": {
+"pass": 139,
+"rush": 4,
+"rec": 0
+}
+},
+{
+"name": "Ryan Leaf",
+"pos": "QB",
+"since1999": {
+"pass": 12,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Jamie Martin",
+"pos": "QB",
+"since1999": {
+"pass": 15,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Todd Bouman",
+"pos": "QB",
+"since1999": {
+"pass": 13,
+"rush": 0,
+"rec": 0
+}
+},
+{
+"name": "Garrison Hearst",
+"pos": "RB",
+"since1999": {
+"pass": 0,
+"rush": 16,
+"rec": 3
+}
+},
+{
+"name": "Kelly Holcomb",
+"pos": "QB",
+"since1999": {
+"pass": 38,
+"rush": 1,
+"rec": 0
+}
+},
+{
+"name": "Tommy Maddox",
+"pos": "QB",
+"since1999": {
+"pass": 42,
+"rush": 1,
+"rec": 0
+}
+}
+]

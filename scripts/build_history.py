@@ -309,7 +309,7 @@ def main():
     titles += EXTRA
     seen, players, report = set(), {}, []
 
-    def take(t, expect=None):
+    def take(t, expect=None, since=None):
         if t in seen:
             return None
         seen.add(t)
@@ -323,6 +323,11 @@ def main():
                     continue
                 if abs(tot - expect[k]) > 1:
                     return f"not the same player? {k} {tot} vs draft data {expect[k]}"
+        if since:  # players found from nflverse: their 1999+ Wikipedia seasons must match nflverse
+            for k in pl["kinds"]:
+                tot = sum(v[k] for y, v in pl["seasons"].items() if y >= 1999)
+                if abs(tot - since[k]) > 1:
+                    return f"not the same player? {k} 1999+ {tot} vs nflverse {since[k]}"
         if pl["first"] >= 1999:
             return "career began 1999 or later (nflverse covers it)"
         key = pl["title"]
@@ -353,6 +358,22 @@ def main():
             report.append(f"draft-miss\t{c['name']}\t{res}")
             for t in tries[:3]:
                 dump(t, res)
+    # players who entered before 1999 and kept scoring after it (Kurt Warner, Hines Ward, ...)
+    late = json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "late_players.json")))
+    for c in late:
+        alt = {"QB": "quarterback", "RB": "running back", "FB": "fullback", "WR": "wide receiver", "TE": "tight end"}.get(c["pos"])
+        tries = [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else [])
+        res, why, i = None, [], 0
+        while i < len(tries):
+            res = take(tries[i], since=c["since1999"])
+            if res is None or res == "ok":
+                break
+            why.append(f"{tries[i]}: {res}")
+            if i == len(tries) - 1 and len(tries) < 8:
+                tries += [t for t in search(f"{c['name']} {alt or ''} NFL") if t not in tries][:4]
+            i += 1
+        if res is not None and res != "ok":
+            report.append(f"late-miss\t{c['name']}\t" + " / ".join(why[-3:]))
     # keep pre-1999 seasons only; nflverse supplies 1999+
     out = []
     for pl in players.values():
