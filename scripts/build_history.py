@@ -307,12 +307,12 @@ def main():
         print(f"{L}: {len(got)} links")
         titles += got
     titles += EXTRA
-    seen, players, report = set(), {}, []
+    seen, players, report = {}, {}, []
 
     def take(t, expect=None, since=None):
-        if t in seen:
-            return None
-        seen.add(t)
+        if seen.get(t) == "ok":
+            return None  # already collected
+        seen[t] = "tried"
         pl, err = player(t)
         if err:
             return err
@@ -333,6 +333,7 @@ def main():
         key = pl["title"]
         if key not in players:
             players[key] = pl
+        seen[t] = "ok"
         return "ok"
 
     for t in dict.fromkeys(titles):
@@ -378,7 +379,7 @@ def main():
     out = []
     for pl in players.values():
         s = {y: v for y, v in pl["seasons"].items() if y < 1999}
-        if not any(v["pass"] or v["rush"] or v["rec"] for v in s.values()):
+        if not s:  # a known zero before 1999 still matters (it lets 1999+ players be placed)
             continue
         out.append({"name": re.sub(r"\s*\(.*?\)$", "", pl["title"]), "wiki": pl["title"], "pos": pl["pos"],
                     "first": pl["first"], "last": pl["last"], "infobox": pl["infobox"],
