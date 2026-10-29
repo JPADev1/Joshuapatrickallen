@@ -232,6 +232,8 @@ def player(title):
             for k in ("pass", "rush", "rec"):
                 seasons[r["year"]][k] -= r.get(k, 0)
         notes.append(f"AAFC seasons left out: {sorted({r['year'] for r in dropped})}")
+    if not seasons:
+        return None, "only non-NFL seasons in the table"
     return {"title": d["title"], "pos": ib.get("pos", ""), "first": min(seasons), "last": max(seasons),
             "seasons": {y: v for y, v in sorted(seasons.items())}, "infobox": {k: ib[k] for k in ("pass", "rush", "rec") if k in ib},
             "heading": " > ".join(reversed(hs or [])), "notes": notes, "kinds": p["kinds"]}, None
