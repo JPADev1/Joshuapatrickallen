@@ -60,9 +60,9 @@ DRAFT_URL = "https://github.com/nflverse/nflverse-data/releases/download/draft_p
 EXCLUDE_HEAD = re.compile(r"\b(cfl|usfl|college|xfl|arena|wfl|ufl|aaf|canadian|high school|postseason|playoffs|super bowl)\b", re.I)
 AAFC = re.compile(r"\b(aafc|dons|yankees|rockets|hornets|seahawks|dodgers)\b", re.I)
 CFL = re.compile(r"argonauts|alouettes|tiger.?cats|blue bombers|roughriders|rough riders|eskimos|\belks\b|stampeders|"
-                 r"renegades|\bbc lions|british columbia|\bcfl\b|stallions|posse|barracudas|mad dogs|gold miners", re.I)
-CFL_CODES = {"TOR", "MTL", "HAM", "WPG", "SSK", "SAS", "EDM", "CGY", "OTT", "BCL", "BC", "SHR", "SA", "BIR", "MEM"}
-AAFC_CODES = {"CLE", "SF", "SFO", "BAL", "BUF", "NYY", "LAD", "CHR", "CHH", "MIA", "BKN", "BRK", "BKD", "CHI"}
+                 r"renegades|\bbc lions|british columbia|\bcfl\b|stallions|posse|barracudas|mad dogs|gold miners|imperials|dutchmen|orfu", re.I)
+CFL_CODES = {"TOR", "MTL", "HAM", "WPG", "SSK", "SAS", "EDM", "CGY", "OTT", "BC", "SHR", "BIR", "MEM"}
+AAFC_CODES = {"CLE", "SF", "SFO", "BAL", "BUF", "NYY", "LAD", "CHR", "CHH", "MIA", "BKN", "BRK", "BKD"}
 
 
 def slug(t):
@@ -91,21 +91,29 @@ def headings(t):
     return [h.get_text(" ", strip=True) for h in t.find_all_previous(["h2", "h3", "h4"])][:3]
 
 
-def pick_table(soup):
+def pick_tables(soup):
+    """The NFL regular-season stats table, plus sibling tables in the same section
+    (some pages split rushing and receiving into separate tables)."""
     cands = []
     for t in soup.find_all("table"):
         txt = t.get_text(" ", strip=True)
         if "Year" not in txt[:200] or "TD" not in txt:
             continue
         cands.append((headings(t), t))
+    pick = None
     for hs, t in cands:   # "Regular season" under an NFL/AFL career section
         if hs and re.search(r"regular season", hs[0], re.I) and not any(EXCLUDE_HEAD.search(h) for h in hs[1:2]) \
                 and not EXCLUDE_HEAD.search(hs[0].replace("Regular season", "")):
-            return t, hs
-    for hs, t in cands:   # otherwise the first stats table that isn't college/CFL/playoffs
-        if hs and not EXCLUDE_HEAD.search(hs[0]) and re.search(r"statistic|career|nfl|afl", " ".join(hs[:2]), re.I):
-            return t, hs
-    return None, None
+            pick = hs
+            break
+    if pick is None:
+        for hs, t in cands:   # otherwise the first stats section that isn't college/CFL/playoffs
+            if hs and not EXCLUDE_HEAD.search(hs[0]) and re.search(r"statistic|career|nfl|afl|professional", " ".join(hs[:2]), re.I):
+                pick = hs
+                break
+    if pick is None:
+        return [], None
+    return [t for hs, t in cands if hs == pick], pick
 
 
 def colname(c):
@@ -131,6 +139,14 @@ def parse_table(t):
         k = "pass" if "pass" in grp else "rush" if "rush" in grp else "rec" if "rec" in grp else None
         if k and k not in kind_cols:
             kind_cols[k] = i
+    if not kind_cols:
+        bare = [i for i, parts in enumerate(cols) if parts and re.match(r"^(td|tds)$", parts[-1], re.I)]
+        names = {parts[-1].lower() for parts in cols if parts}
+        if len(bare) == 1:
+            k = "pass" if names & {"cmp", "comp", "pct", "rtg", "rate"} else "rec" if names & {"rec", "receptions", "tgt"} \
+                else "rush" if names & {"att", "car", "carries", "rush"} else None
+            if k:
+                kind_cols[k] = bare[0]
     if not kind_cols:
         return None
     rows, career = [], None
@@ -191,52 +207,62 @@ def player(title):
     if "text" not in d:
         return None, f"fetch failed: {d.get('error')}"
     soup = BeautifulSoup(d["text"], "lxml")
-    t, hs = pick_table(soup)
-    if t is None:
+    tables, hs = pick_tables(soup)
+    if not tables:
         return None, "no NFL stats table"
-    try:
-        p = parse_table(t)
-    except Exception as e:
-        return None, f"table parse error: {e}"
-    if not p or not p["rows"]:
+    parsed = []
+    for t in tables:
+        try:
+            p = parse_table(t)
+        except Exception as e:
+            p = None
+        if p and p["rows"]:
+            parsed.append(p)
+    # first table wins; siblings only add kinds it doesn't have
+    use, kinds = [], set()
+    for p in parsed:
+        new = [k for k in p["kinds"] if k not in kinds]
+        if new:
+            use.append((p, new))
+            kinds.update(new)
+    if not use:
         return None, "table has no TD columns"
     ib = infobox(soup)
     seasons = defaultdict(lambda: {"pass": 0, "rush": 0, "rec": 0})
-    dropped = []
-    cfl = [r for r in p["rows"] if CFL.search(r["team"]) or r["team"].strip().upper() in CFL_CODES]
-    if cfl:
-        p["rows"] = [r for r in p["rows"] if r not in cfl]
-    for r in p["rows"]:
-        if 1946 <= r["year"] <= 1949 and (AAFC.search(r["team"]) or r["team"].strip().upper() in AAFC_CODES
-                                           and not re.search(r"bears|cardinals|rams|eagles|steelers", r["team"], re.I)):
-            # AAFC seasons aren't NFL stats; only drop them when the infobox total says so (checked below)
-            dropped.append(r)
-        for k in ("pass", "rush", "rec"):
-            seasons[r["year"]][k] += r.get(k, 0)
-    all_sum = {k: sum(r.get(k, 0) for r in p["rows"]) for k in ("pass", "rush", "rec")}
-    notes = []
-    if p["career"] and not cfl:
-        for k in p["kinds"]:
-            if p["career"].get(k, 0) != all_sum[k]:
-                notes.append(f"career row {k} {p['career'][k]} != season sum {all_sum[k]}")
-    aafc_sum = {k: sum(r.get(k, 0) for r in dropped) for k in ("pass", "rush", "rec")}
-    use_aafc = True
-    for k in ("pass", "rush", "rec"):
-        if k in ib and ib[k] != all_sum[k]:
-            if dropped and ib[k] == all_sum[k] - aafc_sum[k]:
-                use_aafc = False
-            else:
-                notes.append(f"infobox {k} {ib[k]} != table {all_sum[k]}")
-    if not use_aafc:
-        for r in dropped:
-            for k in ("pass", "rush", "rec"):
-                seasons[r["year"]][k] -= r.get(k, 0)
-        notes.append(f"AAFC seasons left out: {sorted({r['year'] for r in dropped})}")
+    notes, info, left = [], [], set()
+    for p, ks in use:
+        cfl = [r for r in p["rows"] if CFL.search(r["team"]) or r["team"].strip().upper() in CFL_CODES]
+        aafc = [r for r in p["rows"] if r not in cfl and 1946 <= r["year"] <= 1949 and
+                (AAFC.search(r["team"]) or (r["team"].strip().upper() in AAFC_CODES and r["year"] >= (1947 if r["team"].strip().upper() == "BAL" else 1946)))]
+        keep = [r for r in p["rows"] if r not in cfl and r not in aafc]
+        if aafc:
+            left.update(r["year"] for r in aafc)
+        whole = {k: sum(r.get(k, 0) for r in p["rows"]) for k in ks}
+        nfl = {k: sum(r.get(k, 0) for r in keep) for k in ks}
+        for k in ks:
+            if p["career"] and not cfl and k in p["career"] and p["career"][k] != whole[k] and p["career"][k] != nfl[k]:
+                notes.append(f"career row {k} {p['career'][k]} != season sum {whole[k]}")
+            if k in ib and ib[k] not in (nfl[k], whole[k]):
+                notes.append(f"infobox {k} {ib[k]} != table {nfl[k]}")
+        for r in keep:
+            for k in ks:
+                seasons[r["year"]][k] += r.get(k, 0)
+            seasons[r["year"]]  # a season with no TDs still counts as a season
+    if left:
+        info.append(f"AAFC seasons left out: {sorted(left)}")
+    pos = ib.get("pos", "").lower()
+    expect = {"pass", "rush"} if "quarterback" in pos else {"rush", "rec"} if re.search(r"running|half|full|tail", pos) \
+        else {"rec"} if re.search(r"receiver|end|flanker", pos) else set()
+    missing = [k for k in ("pass", "rush", "rec") if k not in kinds and (ib.get(k) or k in expect)]
+    if missing:
+        info.append("table has no " + "/".join(missing) + " columns" +
+                    ("".join(f"; career {k} {ib[k]}" for k in missing if k in ib)))
     if not seasons:
         return None, "only non-NFL seasons in the table"
     return {"title": d["title"], "pos": ib.get("pos", ""), "first": min(seasons), "last": max(seasons),
             "seasons": {y: v for y, v in sorted(seasons.items())}, "infobox": {k: ib[k] for k in ("pass", "rush", "rec") if k in ib},
-            "heading": " > ".join(reversed(hs or [])), "notes": notes, "kinds": p["kinds"]}, None
+            "heading": " > ".join(reversed(hs or [])), "notes": notes, "info": info, "kinds": sorted(kinds),
+            "missing": missing}, None
 
 
 def list_links(title):
@@ -289,6 +315,8 @@ def main():
         if expect:  # draft-data check that this is the right person
             for k in pl["kinds"]:
                 tot = sum(v[k] for v in pl["seasons"].values())
+                if k in pl["infobox"] and pl["infobox"][k] == tot:
+                    continue
                 if abs(tot - expect[k]) > 1:
                     return f"not the same player? {k} {tot} vs draft data {expect[k]}"
         if pl["first"] >= 1999:
@@ -304,13 +332,15 @@ def main():
             report.append(f"skip\t{t}\t{res}")
     for c in draft_candidates():
         res = None
-        for t in (f"{c['name']} (American football)", c["name"]):
+        alt = {"QB": "quarterback", "RB": "running back", "FB": "fullback", "WR": "wide receiver", "TE": "tight end"}.get(c["pos"])
+        for t in [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else []):
             res = take(t, c)
             if res == "ok" or (res and res.startswith("career began")):
                 break
         if res and res != "ok" and not res.startswith("career began"):
             report.append(f"draft-miss\t{c['name']}\t{res}")
-            dump(f"{c['name']} (American football)", res); dump(c["name"], res)
+            for t in [f"{c['name']} (American football)", c["name"]] + ([f"{c['name']} ({alt})"] if alt else []):
+                dump(t, res)
     # keep pre-1999 seasons only; nflverse supplies 1999+
     out = []
     for pl in players.values():
@@ -320,7 +350,7 @@ def main():
         out.append({"name": re.sub(r"\s*\(.*?\)$", "", pl["title"]), "wiki": pl["title"], "pos": pl["pos"],
                     "first": pl["first"], "last": pl["last"], "infobox": pl["infobox"],
                     "seasons": [[y, v["pass"], v["rush"], v["rec"]] for y, v in s.items()], "notes": pl["notes"],
-                    "kinds": pl["kinds"]})
+                    "kinds": pl["kinds"], "missing": pl["missing"], "info": pl["info"]})
         if pl["notes"]:
             report.append(f"check\t{pl['title']}\t" + "; ".join(pl["notes"]))
             dump(pl["title"], "; ".join(pl["notes"]))
