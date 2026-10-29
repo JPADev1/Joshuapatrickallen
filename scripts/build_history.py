@@ -59,6 +59,9 @@ EXTRA = ["Charlie Conerly", "Tobin Rote", "Jack Kemp", "Bobby Layne", "Norm Van 
 DRAFT_URL = "https://github.com/nflverse/nflverse-data/releases/download/draft_picks/draft_picks.csv"
 EXCLUDE_HEAD = re.compile(r"\b(cfl|usfl|college|xfl|arena|wfl|ufl|aaf|canadian|high school|postseason|playoffs|super bowl)\b", re.I)
 AAFC = re.compile(r"\b(aafc|dons|yankees|rockets|hornets|seahawks|dodgers)\b", re.I)
+CFL = re.compile(r"argonauts|alouettes|tiger.?cats|blue bombers|roughriders|rough riders|eskimos|\belks\b|stampeders|"
+                 r"renegades|\bbc lions|british columbia|\bcfl\b|stallions|posse|barracudas|mad dogs|gold miners", re.I)
+CFL_CODES = {"TOR", "MTL", "HAM", "WPG", "SSK", "SAS", "EDM", "CGY", "OTT", "BCL", "BC", "SHR", "SA", "BIR", "MEM"}
 AAFC_CODES = {"CLE", "SF", "SFO", "BAL", "BUF", "NYY", "LAD", "CHR", "CHH", "MIA", "BKN", "BRK", "BKD", "CHI"}
 
 
@@ -115,9 +118,16 @@ def parse_table(t):
     cols = [colname(c) for c in df.columns]
     kind_cols = {}
     for i, parts in enumerate(cols):
-        if not parts or parts[-1] not in ("TD", "TDs", "Td"):
+        if not parts:
             continue
-        grp = " ".join(parts[:-1]).lower()
+        lastp = parts[-1]
+        m1 = re.match(r"^(pass(?:ing)?|rush(?:ing)?|rec(?:eiving)?)\s*(td|tds|touchdowns)$", lastp, re.I)
+        if m1:
+            grp = m1.group(1).lower()
+        elif re.match(r"^(td|tds|touchdowns)$", lastp, re.I):
+            grp = " ".join(parts[:-1]).lower()
+        else:
+            continue
         k = "pass" if "pass" in grp else "rush" if "rush" in grp else "rec" if "rec" in grp else None
         if k and k not in kind_cols:
             kind_cols[k] = i
@@ -159,6 +169,23 @@ def infobox(soup):
     return out
 
 
+def dump(title, why):
+    d = page(title)
+    if "text" not in d:
+        return
+    soup = BeautifulSoup(d["text"], "lxml")
+    os.makedirs(os.path.join(OUT, "debug"), exist_ok=True)
+    lines = [f"# {title}: {why}"]
+    for t in soup.find_all("table"):
+        txt = t.get_text(" ", strip=True)
+        if "TD" not in txt:
+            continue
+        lines.append("## headings: " + " | ".join(headings(t)))
+        for tr in t.find_all("tr")[:40]:
+            lines.append("  " + " ; ".join(c.get_text(" ", strip=True) for c in tr.find_all(["th", "td"])))
+    open(os.path.join(OUT, "debug", slug(title) + ".txt"), "w").write("\n".join(lines) + "\n")
+
+
 def player(title):
     d = page(title)
     if "text" not in d:
@@ -176,6 +203,9 @@ def player(title):
     ib = infobox(soup)
     seasons = defaultdict(lambda: {"pass": 0, "rush": 0, "rec": 0})
     dropped = []
+    cfl = [r for r in p["rows"] if CFL.search(r["team"]) or r["team"].strip().upper() in CFL_CODES]
+    if cfl:
+        p["rows"] = [r for r in p["rows"] if r not in cfl]
     for r in p["rows"]:
         if 1946 <= r["year"] <= 1949 and (AAFC.search(r["team"]) or r["team"].strip().upper() in AAFC_CODES
                                            and not re.search(r"bears|cardinals|rams|eagles|steelers", r["team"], re.I)):
@@ -185,7 +215,7 @@ def player(title):
             seasons[r["year"]][k] += r.get(k, 0)
     all_sum = {k: sum(r.get(k, 0) for r in p["rows"]) for k in ("pass", "rush", "rec")}
     notes = []
-    if p["career"]:
+    if p["career"] and not cfl:
         for k in p["kinds"]:
             if p["career"].get(k, 0) != all_sum[k]:
                 notes.append(f"career row {k} {p['career'][k]} != season sum {all_sum[k]}")
@@ -204,7 +234,7 @@ def player(title):
         notes.append(f"AAFC seasons left out: {sorted({r['year'] for r in dropped})}")
     return {"title": d["title"], "pos": ib.get("pos", ""), "first": min(seasons), "last": max(seasons),
             "seasons": {y: v for y, v in sorted(seasons.items())}, "infobox": {k: ib[k] for k in ("pass", "rush", "rec") if k in ib},
-            "heading": " > ".join(reversed(hs or [])), "notes": notes}, None
+            "heading": " > ".join(reversed(hs or [])), "notes": notes, "kinds": p["kinds"]}, None
 
 
 def list_links(title):
@@ -255,7 +285,7 @@ def main():
         if err:
             return err
         if expect:  # draft-data check that this is the right person
-            for k in ("pass", "rush", "rec"):
+            for k in pl["kinds"]:
                 tot = sum(v[k] for v in pl["seasons"].values())
                 if abs(tot - expect[k]) > 1:
                     return f"not the same player? {k} {tot} vs draft data {expect[k]}"
@@ -278,6 +308,7 @@ def main():
                 break
         if res and res != "ok" and not res.startswith("career began"):
             report.append(f"draft-miss\t{c['name']}\t{res}")
+            dump(f"{c['name']} (American football)", res); dump(c["name"], res)
     # keep pre-1999 seasons only; nflverse supplies 1999+
     out = []
     for pl in players.values():
@@ -286,9 +317,11 @@ def main():
             continue
         out.append({"name": re.sub(r"\s*\(.*?\)$", "", pl["title"]), "wiki": pl["title"], "pos": pl["pos"],
                     "first": pl["first"], "last": pl["last"], "infobox": pl["infobox"],
-                    "seasons": [[y, v["pass"], v["rush"], v["rec"]] for y, v in s.items()], "notes": pl["notes"]})
+                    "seasons": [[y, v["pass"], v["rush"], v["rec"]] for y, v in s.items()], "notes": pl["notes"],
+                    "kinds": pl["kinds"]})
         if pl["notes"]:
             report.append(f"check\t{pl['title']}\t" + "; ".join(pl["notes"]))
+            dump(pl["title"], "; ".join(pl["notes"]))
     out.sort(key=lambda p: p["name"])
     json.dump({"source": "Wikipedia player pages (CC BY-SA 4.0), regular season, NFL/AFL",
                "players": out}, open(os.path.join(OUT, "history_pre1999.json"), "w"), indent=0)
