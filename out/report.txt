@@ -1,4 +1,4 @@
-385 players with pre-1999 seasons; 17 need a look
+415 players with pre-1999 seasons; 19 need a look
 
 check	Arnie Herber	infobox rush 3 != table 2
 check	Bart Starr	career row rush 15 != season sum 19
@@ -9,14 +9,30 @@ check	Cookie Gilchrist	infobox rec 6 != table 15
 check	Frankie Albert	infobox pass 0 != table 27
 check	Garrison Hearst	career row rec 0 != season sum 9
 check	George Blanda	career row pass 236 != season sum 237; infobox pass 236 != table 237
+check	Germane Crowell	career row rush 1 != season sum 0
 check	Herschel Walker	career row rec 21 != season sum 22; infobox rec 21 != table 22
 check	Joey Galloway	career row rec 77 != season sum 79; infobox rec 77 != table 79
 check	Larry Csonka	career row rec 5 != season sum 4
 check	Len Dawson	career row pass 239 != season sum 232; infobox pass 239 != table 232
 check	Ottis Anderson	career row rush 81 != season sum 82; infobox rush 81 != table 82
+check	Robert Holcombe	infobox rush 14 != table 11
 check	Steve McNair	infobox rush 38 != table 37
 check	Terry Allen (running back)	career row rec 6 != season sum 7
 check	Tommy Maddox	infobox rush 5 != table 1
+late-miss	Albert Connell	1973 NFL draft: no NFL stats table / Al Harris (cornerback): table has no TD columns / Piper High School (Florida): no NFL stats table
+late-miss	Bobby Shaw	David Shaw (American football): no NFL stats table / Ahmad Rashad: not the same player? rec 1999+ 0 vs nflverse 14 / 2024 NFL season: no NFL stats table
+late-miss	Christian Fauria	Joseph Fauria: no NFL stats table / Carlester Crumpler: no NFL stats table / Super Bowl XXXVIII: no NFL stats table
+late-miss	Damon Huard	Brock Huard: not the same player? pass 1999+ 4 vs nflverse 33 / Luke Huard: no NFL stats table / Sam Huard: no NFL stats table
+late-miss	Donnell Bennett	Coleman Bennett: no NFL stats table / Tony Richardson (American football): not the same player? rec 1999+ 5 vs nflverse 0 / 1989 NFL draft: no NFL stats table
+late-miss	Dwayne Carswell	List of suspensions in the NFL: no NFL stats table / 2001 NFL draft: no NFL stats table / Super Bowl XXXIII: no NFL stats table
+late-miss	Itula Mili	2003–04 NFL playoffs: no NFL stats table / Ron Howard (American football): no NFL stats table / H-back: no NFL stats table
+late-miss	James Thrash	2024 NFL draft: no NFL stats table / Todd Pinkston: not the same player? rec 1999+ 14 vs nflverse 21 / 2001 St. Louis Rams season: no NFL stats table
+late-miss	Moe Williams	Artose Pinner: no NFL stats table / Shelby High School (North Carolina): no NFL stats table / Benny Snell: not the same player? rec 1999+ 0 vs nflverse 4
+late-miss	Patrick Hape	Brooks High School (Alabama): no NFL stats table / 1997 NFL draft: no NFL stats table / 1997 Tampa Bay Buccaneers season: no NFL stats table
+late-miss	Patrick Jeffers	1996 NFL draft: no NFL stats table / Odell Beckham Jr.: not the same player? rec 1999+ 59 vs nflverse 12 / Kelvin Benjamin: not the same player? rec 1999+ 20 vs nflverse 12
+late-miss	Richard Huntley	Bo Scarbrough: no NFL stats table / List of NFL nicknames: no NFL stats table / Adrian Murrell: not the same player? rec 1999+ 0 vs nflverse 4
+late-miss	Rob Johnson	Josh Johnson (quarterback): not the same player? pass 1999+ 14 vs nflverse 20 / C. J. Gardner-Johnson: table has no TD columns / Lane Johnson: no NFL stats table
+late-miss	Shane Matthews	List of Chicago Bears starting quarterbacks: no NFL stats table / List of Washington Commanders starting quarterbacks: no NFL stats table / Jim Miller (quarterback): not the same player? pass 1999+ 0 vs nflverse 30
 skip	Aaron Jones (running back)	career began 1999 or later (nflverse covers it)
 skip	Aaron Rodgers	career began 1999 or later (nflverse covers it)
 skip	Adrian Burk	no NFL stats table

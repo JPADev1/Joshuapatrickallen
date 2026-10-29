@@ -1294,6 +1294,32 @@
 "career": {}
 },
 {
+"name": "Az-Zahir Hakim",
+"wiki": "Az-Zahir Hakim",
+"pos": "Wide receiver , return specialist",
+"first": 1998,
+"last": 2006,
+"infobox": {
+"rec": 28
+},
+"seasons": [
+[
+1998,
+0,
+1,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Babe Parilli",
 "wiki": "Babe Parilli",
 "pos": "Quarterback",
@@ -2241,6 +2267,37 @@
 "career": {}
 },
 {
+"name": "Bill Schroeder",
+"wiki": "Bill Schroeder (wide receiver)",
+"pos": "Wide receiver",
+"first": 1997,
+"last": 2004,
+"infobox": {
+"rec": 28
+},
+"seasons": [
+[
+1997,
+0,
+0,
+1
+],
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Billy Dewell",
 "wiki": "Billy Dewell",
 "pos": "End",
@@ -2633,6 +2690,63 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Bob Christian",
+"wiki": "Bob Christian (American football)",
+"pos": "Fullback",
+"first": 1992,
+"last": 2002,
+"infobox": {
+"rush": 12,
+"rec": 7
+},
+"seasons": [
+[
+1992,
+0,
+0,
+0
+],
+[
+1993,
+0,
+0,
+0
+],
+[
+1994,
+0,
+0,
+0
+],
+[
+1995,
+0,
+0,
+1
+],
+[
+1997,
+0,
+0,
+1
+],
+[
+1998,
+0,
+2,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
 ],
 "missing": [],
 "info": [],
@@ -4262,6 +4376,31 @@
 "info": [
 "table has no rec columns"
 ],
+"career": {}
+},
+{
+"name": "Chad Lewis",
+"wiki": "Chad Lewis",
+"pos": "Tight end",
+"first": 1997,
+"last": 2005,
+"infobox": {
+"rec": 23
+},
+"seasons": [
+[
+1997,
+0,
+0,
+4
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
 "career": {}
 },
 {
@@ -7185,6 +7324,37 @@
 "career": {}
 },
 {
+"name": "David Patten",
+"wiki": "David Patten",
+"pos": "Wide receiver",
+"first": 1997,
+"last": 2008,
+"infobox": {
+"rec": 24
+},
+"seasons": [
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "David Sims",
 "wiki": "David Sims (running back)",
 "pos": "Running back",
@@ -7217,6 +7387,47 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "David Sloan",
+"wiki": "David Sloan (American football)",
+"pos": "Tight end",
+"first": 1995,
+"last": 2002,
+"infobox": {},
+"seasons": [
+[
+1995,
+0,
+0,
+1
+],
+[
+1996,
+0,
+0,
+0
+],
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
 ],
 "missing": [],
 "info": [],
@@ -8047,6 +8258,39 @@
 ],
 [
 1974,
+0,
+5,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Duce Staley",
+"wiki": "Duce Staley",
+"pos": "Running back",
+"first": 1997,
+"last": 2006,
+"infobox": {
+"rush": 24,
+"rec": 10
+},
+"seasons": [
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
 0,
 5,
 1
@@ -9413,6 +9657,43 @@
 "career": {}
 },
 {
+"name": "Ernie Conwell",
+"wiki": "Ernie Conwell",
+"pos": "Tight end",
+"first": 1996,
+"last": 2006,
+"infobox": {
+"rec": 15
+},
+"seasons": [
+[
+1996,
+0,
+0,
+0
+],
+[
+1997,
+0,
+0,
+4
+],
+[
+1998,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Errict Rhett",
 "wiki": "Errict Rhett",
 "pos": "Running back",
@@ -10089,6 +10370,62 @@
 "career": {}
 },
 {
+"name": "Frank Wycheck",
+"wiki": "Frank Wycheck",
+"pos": "Tight end",
+"first": 1993,
+"last": 2003,
+"infobox": {
+"rec": 28
+},
+"seasons": [
+[
+1993,
+0,
+0,
+0
+],
+[
+1994,
+0,
+0,
+1
+],
+[
+1995,
+0,
+1,
+1
+],
+[
+1996,
+0,
+0,
+6
+],
+[
+1997,
+0,
+0,
+4
+],
+[
+1998,
+0,
+0,
+2
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Frankie Albert",
 "wiki": "Frankie Albert",
 "pos": "Quarterback , punter",
@@ -10329,6 +10666,35 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Freddie Jones",
+"wiki": "Freddie Jones (American football)",
+"pos": "Tight end",
+"first": 1997,
+"last": 2004,
+"infobox": {},
+"seasons": [
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+3
+]
+],
+"notes": [],
+"kinds": [
+"rec"
 ],
 "missing": [],
 "info": [],
@@ -11096,6 +11462,34 @@
 ]
 ],
 "notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Germane Crowell",
+"wiki": "Germane Crowell",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2002,
+"infobox": {
+"rec": 16
+},
+"seasons": [
+[
+1998,
+0,
+0,
+3
+]
+],
+"notes": [
+"career row rush 1 != season sum 0"
+],
 "kinds": [
 "rec",
 "rush"
@@ -13172,6 +13566,37 @@
 "career": {}
 },
 {
+"name": "Jay Riemersma",
+"wiki": "Jay Riemersma",
+"pos": "Tight end",
+"first": 1997,
+"last": 2004,
+"infobox": {
+"rec": 23
+},
+"seasons": [
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+6
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Jay Schroeder",
 "wiki": "Jay Schroeder",
 "pos": "Quarterback",
@@ -13600,6 +14025,31 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Jerome Pathon",
+"wiki": "Jerome Pathon",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2005,
+"infobox": {
+"rec": 15
+},
+"seasons": [
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
 ],
 "missing": [],
 "info": [],
@@ -17143,6 +17593,49 @@
 "career": {}
 },
 {
+"name": "Ken Dilger",
+"wiki": "Ken Dilger",
+"pos": "Tight end",
+"first": 1995,
+"last": 2004,
+"infobox": {
+"rec": 24
+},
+"seasons": [
+[
+1995,
+0,
+0,
+4
+],
+[
+1996,
+0,
+0,
+4
+],
+[
+1997,
+0,
+0,
+3
+],
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Ken Kavanaugh",
 "wiki": "Ken Kavanaugh",
 "pos": "End",
@@ -17475,6 +17968,62 @@
 "career": {}
 },
 {
+"name": "Kent Graham",
+"wiki": "Kent Graham",
+"pos": "Quarterback",
+"first": 1992,
+"last": 2001,
+"infobox": {
+"pass": 39
+},
+"seasons": [
+[
+1992,
+1,
+0,
+0
+],
+[
+1993,
+0,
+0,
+0
+],
+[
+1994,
+3,
+0,
+0
+],
+[
+1996,
+12,
+0,
+0
+],
+[
+1997,
+4,
+2,
+0
+],
+[
+1998,
+7,
+2,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Kerry Collins",
 "wiki": "Kerry Collins",
 "pos": "Quarterback",
@@ -17512,6 +18061,32 @@
 "notes": [],
 "kinds": [
 "pass",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Kevin Dyson",
+"wiki": "Kevin Dyson",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2003,
+"infobox": {
+"rec": 18
+},
+"seasons": [
+[
+1998,
+0,
+0,
+2
+]
+],
+"notes": [],
+"kinds": [
+"rec",
 "rush"
 ],
 "missing": [],
@@ -17663,6 +18238,49 @@
 "pass",
 "rec",
 "rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Kyle Brady",
+"wiki": "Kyle Brady",
+"pos": "Tight end",
+"first": 1995,
+"last": 2007,
+"infobox": {
+"rec": 25
+},
+"seasons": [
+[
+1995,
+0,
+0,
+2
+],
+[
+1996,
+0,
+0,
+1
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+5
+]
+],
+"notes": [],
+"kinds": [
+"rec"
 ],
 "missing": [],
 "info": [],
@@ -17871,6 +18489,81 @@
 0,
 0,
 1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Larry Centers",
+"wiki": "Larry Centers",
+"pos": "Fullback",
+"first": 1990,
+"last": 2003,
+"infobox": {
+"rush": 14,
+"rec": 28
+},
+"seasons": [
+[
+1990,
+0,
+0,
+0
+],
+[
+1991,
+0,
+0,
+0
+],
+[
+1992,
+0,
+0,
+2
+],
+[
+1993,
+0,
+0,
+3
+],
+[
+1994,
+0,
+5,
+2
+],
+[
+1995,
+0,
+2,
+2
+],
+[
+1996,
+0,
+2,
+7
+],
+[
+1997,
+0,
+1,
+1
+],
+[
+1998,
+0,
+0,
+2
 ]
 ],
 "notes": [],
@@ -19079,6 +19772,49 @@
 "career": {}
 },
 {
+"name": "Marcus Pollard",
+"wiki": "Marcus Pollard",
+"pos": "Director of player engagement and youth football",
+"first": 1995,
+"last": 2008,
+"infobox": {
+"rec": 40
+},
+"seasons": [
+[
+1995,
+0,
+0,
+0
+],
+[
+1996,
+0,
+0,
+1
+],
+[
+1997,
+0,
+0,
+0
+],
+[
+1998,
+0,
+0,
+4
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Marcus Robinson",
 "wiki": "Marcus Robinson (American football)",
 "pos": "Wide receiver",
@@ -20244,6 +20980,50 @@
 "career": {}
 },
 {
+"name": "Michael Westbrook",
+"wiki": "Michael Westbrook",
+"pos": "Wide receiver",
+"first": 1995,
+"last": 2002,
+"infobox": {
+"rec": 26
+},
+"seasons": [
+[
+1995,
+0,
+1,
+1
+],
+[
+1996,
+0,
+0,
+1
+],
+[
+1997,
+0,
+0,
+3
+],
+[
+1998,
+0,
+0,
+6
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Mike Pagel",
 "wiki": "Mike Pagel",
 "pos": "Quarterback",
@@ -20404,6 +21184,111 @@
 "notes": [],
 "kinds": [
 "rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Mike Tomczak",
+"wiki": "Mike Tomczak",
+"pos": "",
+"first": 1985,
+"last": 1999,
+"infobox": {
+"pass": 88,
+"rush": 9
+},
+"seasons": [
+[
+1985,
+0,
+0,
+0
+],
+[
+1986,
+2,
+3,
+0
+],
+[
+1987,
+5,
+1,
+0
+],
+[
+1988,
+7,
+1,
+0
+],
+[
+1989,
+16,
+1,
+0
+],
+[
+1990,
+3,
+2,
+0
+],
+[
+1991,
+11,
+1,
+0
+],
+[
+1992,
+7,
+0,
+0
+],
+[
+1993,
+2,
+0,
+0
+],
+[
+1994,
+4,
+0,
+0
+],
+[
+1995,
+1,
+0,
+0
+],
+[
+1996,
+15,
+0,
+0
+],
+[
+1997,
+1,
+0,
+0
+],
+[
+1998,
+2,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"pass",
+"rush"
 ],
 "missing": [],
 "info": [],
@@ -23023,6 +23908,39 @@
 "career": {}
 },
 {
+"name": "Robert Holcombe",
+"wiki": "Robert Holcombe",
+"pos": "Running back Fullback",
+"first": 1998,
+"last": 2004,
+"infobox": {
+"rush": 14,
+"rec": 3
+},
+"seasons": [
+[
+1998,
+0,
+2,
+0
+]
+],
+"notes": [
+"infobox rush 14 != table 11"
+],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [
+"rush"
+],
+"info": [],
+"career": {
+"rush": 14
+}
+},
+{
 "name": "Robert Smith",
 "wiki": "Robert Smith (running back)",
 "pos": "Running back",
@@ -23124,6 +24042,49 @@
 0,
 0,
 8
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Rod Smith",
+"wiki": "Rod Smith (wide receiver)",
+"pos": "Wide receiver",
+"first": 1995,
+"last": 2006,
+"infobox": {
+"rec": 68
+},
+"seasons": [
+[
+1995,
+0,
+0,
+1
+],
+[
+1996,
+0,
+0,
+2
+],
+[
+1997,
+0,
+0,
+12
+],
+[
+1998,
+0,
+0,
+6
 ]
 ],
 "notes": [],
@@ -24181,6 +25142,61 @@
 "career": {}
 },
 {
+"name": "Sean Dawkins",
+"wiki": "Sean Dawkins",
+"pos": "Wide receiver",
+"first": 1993,
+"last": 2001,
+"infobox": {
+"rec": 25
+},
+"seasons": [
+[
+1993,
+0,
+0,
+1
+],
+[
+1994,
+0,
+0,
+5
+],
+[
+1995,
+0,
+0,
+3
+],
+[
+1996,
+0,
+0,
+1
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Shannon Sharpe",
 "wiki": "Shannon Sharpe",
 "pos": "Tight end",
@@ -24243,6 +25259,73 @@
 0,
 0,
 10
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Shawn Jefferson",
+"wiki": "Shawn Jefferson",
+"pos": "Wide receiver",
+"first": 1991,
+"last": 2003,
+"infobox": {
+"rec": 29
+},
+"seasons": [
+[
+1991,
+0,
+0,
+1
+],
+[
+1992,
+0,
+0,
+2
+],
+[
+1993,
+0,
+0,
+2
+],
+[
+1994,
+0,
+0,
+3
+],
+[
+1995,
+0,
+0,
+2
+],
+[
+1996,
+0,
+0,
+4
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
+0,
+0,
+2
 ]
 ],
 "notes": [],
@@ -24725,6 +25808,31 @@
 "kinds": [
 "rec",
 "rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Stephen Alexander",
+"wiki": "Stephen Alexander (American football)",
+"pos": "Tight end",
+"first": 1998,
+"last": 2006,
+"infobox": {
+"rec": 14
+},
+"seasons": [
+[
+1998,
+0,
+0,
+4
+]
+],
+"notes": [],
+"kinds": [
+"rec"
 ],
 "missing": [],
 "info": [],
@@ -26530,6 +27638,45 @@
 "career": {}
 },
 {
+"name": "Tim Biakabutuka",
+"wiki": "Tim Biakabutuka",
+"pos": "Running back",
+"first": 1996,
+"last": 2001,
+"infobox": {
+"rush": 14,
+"rec": 3
+},
+"seasons": [
+[
+1996,
+0,
+0,
+0
+],
+[
+1997,
+0,
+2,
+0
+],
+[
+1998,
+0,
+3,
+1
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Tim Brown",
 "wiki": "Tim Brown (American football)",
 "pos": "Wide receiver",
@@ -26604,6 +27751,30 @@
 0,
 0,
 9
+]
+],
+"notes": [],
+"kinds": [
+"rec",
+"rush"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Tim Dwight",
+"wiki": "Tim Dwight",
+"pos": "Wide receiver",
+"first": 1998,
+"last": 2007,
+"infobox": {},
+"seasons": [
+[
+1998,
+0,
+0,
+1
 ]
 ],
 "notes": [],
@@ -28627,6 +29798,49 @@
 "career": {}
 },
 {
+"name": "Wayne Chrebet",
+"wiki": "Wayne Chrebet",
+"pos": "Wide receiver",
+"first": 1995,
+"last": 2005,
+"infobox": {
+"rec": 41
+},
+"seasons": [
+[
+1995,
+0,
+0,
+4
+],
+[
+1996,
+0,
+0,
+3
+],
+[
+1997,
+0,
+0,
+3
+],
+[
+1998,
+0,
+0,
+8
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
 "name": "Webster Slaughter",
 "wiki": "Webster Slaughter",
 "pos": "Wide receiver",
@@ -29026,6 +30240,49 @@
 ],
 [
 1993,
+0,
+0,
+0
+]
+],
+"notes": [],
+"kinds": [
+"rec"
+],
+"missing": [],
+"info": [],
+"career": {}
+},
+{
+"name": "Willie Jackson",
+"wiki": "Willie Jackson (American football)",
+"pos": "Wide receiver",
+"first": 1995,
+"last": 2002,
+"infobox": {
+"rec": 24
+},
+"seasons": [
+[
+1995,
+0,
+0,
+5
+],
+[
+1996,
+0,
+0,
+3
+],
+[
+1997,
+0,
+0,
+2
+],
+[
+1998,
 0,
 0,
 0
