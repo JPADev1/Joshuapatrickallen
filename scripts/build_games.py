@@ -19,8 +19,8 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else "out"
 H.OUT, H.CACHE = OUT, os.path.join(OUT, "pages")
 
 
-def season_max(y):  # NFL/AFL regular-season length
-    return 17 if y >= 2021 else 16 if y >= 1978 else 14 if y >= 1961 else 12 if y >= 1947 else 11
+def season_max(y):  # longest NFL/AFL regular season that year (early NFL schedules varied by team)
+    return 17 if y >= 2021 else 16 if y >= 1978 else 14 if y >= 1960 else 12 if y >= 1947 else 15
 
 
 def games_col(df):
@@ -56,9 +56,13 @@ def games(title):
                 continue
             if 1946 <= yr <= 1949 and (H.AAFC.search(team) or team.strip().upper() in H.AAFC_CODES):
                 continue
-            per[yr] = per.get(yr, 0) + H.num(r.iloc[gi])  # traded mid-season: one row per team
+            per.setdefault(yr, []).append(H.num(r.iloc[gi]))  # traded mid-season: one row per team
         if per:
-            return per, None
+            out = {}
+            for yr, gs in per.items():
+                top = max(gs)  # some tables add a season total row under the team rows; don't count it twice
+                out[yr] = top if len(gs) > 2 and top == sum(gs) - top else sum(gs)
+            return out, None
     return None, "no games column"
 
 
