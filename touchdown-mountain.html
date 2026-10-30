@@ -106,12 +106,12 @@ function isMax(){return el('mtnCard').classList.contains('max');}
 function geom(){
   var m=el('mtn'), w=m.clientWidth, narrow=w<560, h, cap=el('kNote');
   if(isMax()){ m.style.height=''; h=Math.max(150,m.clientHeight); }  // full screen: fill the space that's left
-  else { h=narrow?Math.max(640,Math.round(w*1.8)):Math.round(Math.min(580,Math.max(480,w*0.62))); m.style.height=h+'px'; }
+  else { h=narrow?Math.max(640,Math.round(w*1.8)):580; m.style.height=h+'px'; }
   var short=narrow?h<560:h<380; m.classList.toggle('short',short);
   var x0=w*0.02, xp=w*(narrow?0.8:0.79), yb=h-34, yp=short?Math.max(56,Math.min(92,h*0.16)):Math.min(narrow?92:96,Math.max(78,h*0.16)), xr=w*0.995;
   G={w:w,h:h,narrow:narrow,x0:x0,xp:xp,yb:yb,yp:yp,xr:xr};
   // how many pills fit: they alternate sides of the ridge, so each side needs a pill's height per spot
-  var ph=short?17:22, fit=Math.floor(2*(yb-yp-6)/(ph+5))+1;
+  var ph=short?17:22, fit=Math.floor(2*(yb-yp-6)/(ph+7))+1;
   K=Math.max(8,Math.min(KMAX,fit));
   if(isMax()){ var was=cap.hidden; cap.hidden=K===KMAX;
     cap.textContent='Top '+K+' shown'+(narrow?' on this screen.':'. Turn your phone upright for all 20.');
@@ -175,12 +175,20 @@ function placeAll(rows){
       px=Math.max(4,Math.min(G.w-pw-4,px));}
     boxes.push({d:d,a:a,x:px,y:py,w:pw,h:ph,fixed:base||i===0,me:id===ALLEN});
   });
-  // nudge overlapping pills apart vertically (keeps them near their spot on the ridge)
-  for(var it=0;it<250;it++){var moved=false;
+  // nudge pills apart vertically (keeps them near their spot on the ridge) while keeping rank order:
+  // every pill on the ridge sits at least half a pill lower than the one ranked just ahead of it,
+  // so a higher-ranked pill is never drawn below a lower-ranked one
+  var ridgeBoxes=boxes.filter(function(b){return b.a;});
+  function push(up,dn,need){ if(need<=0)return false;
+    if(up.fixed)dn.y+=need; else if(dn.fixed)up.y-=need; else{up.y-=need/2;dn.y+=need/2;} return true;}
+  for(var it=0;it<300;it++){var moved=false;
+    for(var k=1;k<ridgeBoxes.length;k++){var U=ridgeBoxes[k-1],D=ridgeBoxes[k];
+      if(push(U,D,(U.y+U.h/2)+Math.ceil(U.h/2)+3-(D.y+D.h/2)+0.5))moved=true;}
     for(var i=0;i<boxes.length;i++)for(var j=i+1;j<boxes.length;j++){var A=boxes[i],Bx=boxes[j];
       if(A.x<Bx.x+Bx.w+4&&Bx.x<A.x+A.w+4&&A.y<Bx.y+Bx.h+3&&Bx.y<A.y+A.h+3){
-        var over=Math.min(A.y+A.h+3-Bx.y,Bx.y+Bx.h+3-A.y)/2+0.5, up=A.y<Bx.y?A:Bx, dn=up===A?Bx:A;
-        if(!up.fixed)up.y-=over; else dn.y+=over; if(!dn.fixed)dn.y+=over; else up.y-=over; moved=true;}}
+        // on the ridge the higher-ranked pill (earlier in the list) always goes up; base camp keeps its spot
+        var up=(A.a&&Bx.a)||Bx.y>=A.y?A:Bx, dn=up===A?Bx:A;
+        if(push(up,dn,up.y+up.h+3-dn.y+0.5))moved=true;}}
     boxes.forEach(function(b){if(!b.fixed)b.y=Math.max(2,Math.min(G.h-b.h-24,b.y));}); if(!moved)break;}
   boxes.forEach(function(b){
     b.d.style.transform='translate('+b.x.toFixed(1)+'px,'+b.y.toFixed(1)+'px)'; b.d.style.opacity='1';
