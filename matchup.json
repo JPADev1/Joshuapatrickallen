@@ -26,6 +26,20 @@
   "week": 8,
   "bills": [
    {
+    "name": "Dee Alford",
+    "pos": "CB",
+    "injury": "Ankle",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Ray Davis",
+    "pos": "RB",
+    "injury": "Illness",
+    "status": "DNP",
+    "game": false
+   },
+   {
     "name": "Spencer Brown",
     "pos": "T",
     "injury": "Back",
@@ -54,23 +68,9 @@
     "game": false
    },
    {
-    "name": "Dee Alford",
-    "pos": "CB",
-    "injury": "Ankle",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Ed Oliver",
-    "pos": "DE",
+    "name": "Joe Andreessen",
+    "pos": "LB",
     "injury": "Knee",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "T.J. Sanders",
-    "pos": "DE",
-    "injury": "Shoulder",
     "status": "Limited",
     "game": false
    },
@@ -91,52 +91,10 @@
   ],
   "opp": [
    {
-    "name": "Calais Campbell",
-    "pos": "DT",
-    "injury": "Not injury related - resting player",
-    "status": "DNP",
-    "game": false
-   },
-   {
     "name": "Jaylinn Hawkins",
     "pos": "S",
     "injury": "Knee",
     "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Kyle Hamilton",
-    "pos": "S",
-    "injury": "Knee",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Olaivavega Ioane",
-    "pos": "G",
-    "injury": "Knee",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Roquan Smith",
-    "pos": "LB",
-    "injury": "Knee",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Broderick Washington",
-    "pos": "DE",
-    "injury": "Ankle",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "John Jenkins",
-    "pos": "DT",
-    "injury": "Knee",
-    "status": "Limited",
     "game": false
    },
    {
@@ -147,15 +105,22 @@
     "game": false
    },
    {
-    "name": "Ronnie Stanley",
-    "pos": "T",
-    "injury": "Toe",
+    "name": "Kyle Hamilton",
+    "pos": "S",
+    "injury": "Knee",
     "status": "Limited",
     "game": false
    },
    {
-    "name": "T.J. Tampa",
-    "pos": "CB",
+    "name": "Olaivavega Ioane",
+    "pos": "G",
+    "injury": "Knee",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Roquan Smith",
+    "pos": "LB",
     "injury": "Knee",
     "status": "Limited",
     "game": false
