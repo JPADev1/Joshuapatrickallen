@@ -605,13 +605,27 @@ def build_mountain_live(week26):
         base = {p["id"]: p for p in json.load(open(os.path.join(REPO, "data", "td-mountain.json")))["players"]}
     except FileNotFoundError:
         return
-    tot, meta = defaultdict(lambda: [0, 0, 0]), {}
+    tot, meta, gp = defaultdict(lambda: [0, 0, 0]), {}, defaultdict(int)
     for r in week26:
         if r.get("season_type") != "REG":
             continue
         t = tot[r["player_id"]]
         t[0] += int(num(r, "passing_tds")); t[1] += int(num(r, "rushing_tds")); t[2] += int(num(r, "receiving_tds"))
+        gp[r["player_id"]] += 1  # one row per game played
         meta[r["player_id"]] = (r.get("player_display_name") or r["player_id"], r.get("position", ""))
+    # games: nflverse rows only exist for games with a stat; snap counts catch games without one
+    try:
+        by_pfr = {b["pfr"]: pid for pid, b in base.items() if b.get("pfr")}
+        snaps = defaultdict(int)
+        for r in get(f"snap_counts/snap_counts_{SEASON}.csv"):
+            if r.get("game_type") == "REG" and r.get("pfr_player_id") in by_pfr and \
+                    any(num(r, k) > 0 for k in ("offense_snaps", "defense_snaps", "st_snaps")):
+                snaps[by_pfr[r["pfr_player_id"]]] += 1
+        for pid, g in snaps.items():
+            gp[pid] = max(gp[pid], g)
+            tot[pid]  # on the field with no stats still counts as a game
+    except Exception as e:
+        print("snap counts skipped:", e)
     old = load(f"td-mountain-{SEASON}.json") or {}
     first = dict(old.get("first", {}))  # rookie season of newcomers, so the player list is only downloaded once each
     new = [pid for pid, t in tot.items() if pid not in base and sum(t) >= 3 and pid not in first]
@@ -621,11 +635,13 @@ def build_mountain_live(week26):
                 first[p["gsis_id"]] = int(p.get("rookie_season") or SEASON)
     out = []
     for pid, t in sorted(tot.items()):
-        if not any(t) or (pid not in base and (sum(t) < 3 or pid not in first)):
+        if (pid not in base and not any(t)) or (pid not in base and (sum(t) < 3 or pid not in first)):
             continue
         b = base.get(pid)
+        if b is None and pid not in meta:
+            continue
         out.append({"id": pid, "name": b["name"] if b else meta[pid][0], "pos": b["pos"] if b else meta[pid][1],
-                    "first": b["first"] if b else first[pid], "td": t})
+                    "first": b["first"] if b else first[pid], "td": t, "g": gp[pid]})
     save(f"td-mountain-{SEASON}.json", {"updated": date.today().isoformat(), "season": SEASON,
                                         "first": {k: v for k, v in first.items() if k in tot}, "players": out})
 

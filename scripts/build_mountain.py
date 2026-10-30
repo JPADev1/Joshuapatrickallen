@@ -26,6 +26,8 @@ POS_MAP = [(r"quarterback|^qb", "QB"), (r"running back|halfback|fullback|tailbac
 
 
 ALIAS = {"rocketismail": "raghibismail"}
+# Wikipedia rows that slipped past the CFL filter: Matt Dunigan's only "NFL" season (1995) was the CFL's Birmingham Barracudas
+NOT_NFL = {"Matt Dunigan"}
 
 
 def norm(name):
@@ -66,6 +68,8 @@ def total(p, kind, n):
 
 def main():
     hist = json.load(open(os.path.join(HERE, "history_pre1999.json")))["players"]
+    # games played before 1999, from the same Wikipedia tables (built on the history-build branch)
+    hist_games = json.load(open(os.path.join(HERE, "games_pre1999.json")))["players"]
     people = {}   # id -> {name, pos, first, seasons{year:[p,r,c]}}
     roster = {r["gsis_id"]: r for r in U.get("players/players.csv")}
 
@@ -77,11 +81,30 @@ def main():
             info = roster.get(pid, {})
             p = people.setdefault(pid, {"id": pid, "name": r.get("player_display_name") or info.get("display_name", pid),
                                         "pos": info.get("position") or r.get("position", ""),
-                                        "first": int(info.get("rookie_season") or y), "last": y, "seasons": {}})
+                                        "first": int(info.get("rookie_season") or y), "last": y, "seasons": {}, "games": {}})
             p["last"] = max(p["last"], y)
             p["first"] = min(p["first"], y)
-            if any(t):
+            g = int(U.num(r, "games"))
+            if g:
+                p["games"][y] = g
+            if any(t) or g:  # a season with games but no TDs still counts toward games played
                 p["seasons"][y] = t
+
+    # nflverse "games" only counts games where a player recorded a stat. Snap counts (2012 on, from
+    # Pro Football Reference) list every game he was on the field, so use whichever is higher.
+    pfr = {r["pfr_id"]: r["gsis_id"] for r in roster.values() if r.get("pfr_id")}
+    for y in range(2012, U.SEASON):
+        snaps = defaultdict(int)
+        for r in U.get(f"snap_counts/snap_counts_{y}.csv"):
+            if r["game_type"] == "REG" and r["pfr_player_id"] in pfr and \
+                    any(U.num(r, k) > 0 for k in ("offense_snaps", "defense_snaps", "st_snaps")):
+                snaps[pfr[r["pfr_player_id"]]] += 1
+        for pid, g in snaps.items():
+            p = people.get(pid)
+            if p and g > p["games"].get(y, 0):
+                p["games"][y] = g
+                p["seasons"].setdefault(y, [0, 0, 0])
+                p["first"], p["last"] = min(p["first"], y), max(p["last"], y)
 
     # Merge Wikipedia history (pre-1999 seasons) onto players who continued past 1998
     by_name = defaultdict(list)
@@ -90,7 +113,10 @@ def main():
             by_name[norm(p["name"])].append(pid)
     problems, merged, hist_only = [], 0, 0
     for h in hist:
+        if h["name"] in NOT_NFL:
+            continue
         seasons = {y: [a, b, c] for y, a, b, c in h["seasons"]}
+        games = {y: g for y, g in hist_games.get(h["wiki"], [])}  # g is None where the table had no games
         key = norm(h["name"])
         cands = by_name.get(key, [])
         # one pre-1999 nflverse player with that name is a match; several are told apart by when they started
@@ -100,6 +126,7 @@ def main():
         if matches and h["last"] >= 1999:
             p = people[matches[0]]
             p["seasons"].update(seasons)
+            p["games"].update({y: games.get(y) for y in seasons})
             p["first"] = min(p["first"], h["first"])  # nflverse rookie season = year he entered the league
             p["wiki"] = h["wiki"]
             if h.get("missing"):
@@ -114,11 +141,13 @@ def main():
         elif h["last"] >= 1999 and not matches:
             problems.append(f"{h['name']}: played past 1998 but no nflverse match; using Wikipedia seasons only")
             people["w:" + h["wiki"]] = {"id": "w:" + h["wiki"], "name": h["name"], "pos": pos_code(h["pos"]), "first": h["first"],
-                                         "last": h["last"], "seasons": seasons, "wiki": h["wiki"],
+                                         "last": h["last"], "seasons": seasons, "wiki": h["wiki"], "gpx": 1,  # 1999+ games unknown
+                                         "games": {y: games.get(y) for y in seasons},
                                          "miss": h.get("missing", []), "car": h.get("career", {})}
         else:
             people["w:" + h["wiki"]] = {"id": "w:" + h["wiki"], "name": h["name"], "pos": pos_code(h["pos"]),
                                          "first": h["first"], "last": h["last"], "seasons": seasons, "wiki": h["wiki"],
+                                         "games": {y: games.get(y) for y in seasons},
                                          "miss": h.get("missing", []), "car": h.get("career", {})}
             hist_only += 1
 
@@ -153,7 +182,12 @@ def main():
     out = []
     for p in sorted(pool, key=lambda p: p["name"]):
         q = {"id": p["id"], "name": p["name"], "pos": p["pos"], "first": p["first"], "last": p["last"],
-             "seasons": [[y] + s for y, s in sorted(p["seasons"].items())]}
+             # [year, pass, rush, rec, games]; games is null where the source doesn't give it
+             "seasons": [[y] + s + [p.get("games", {}).get(y)] for y, s in sorted(p["seasons"].items())]}
+        if p.get("gpx"):
+            q["gpx"] = 1
+        if p["last"] >= U.SEASON - 2 and roster.get(p["id"], {}).get("pfr_id"):
+            q["pfr"] = roster[p["id"]]["pfr_id"]  # lets the hourly job match this season's snap counts
         if p.get("miss"):
             q["miss"], q["car"] = p["miss"], p.get("car", {})
         out.append(q)

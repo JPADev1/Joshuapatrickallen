@@ -73,6 +73,14 @@ function total(p,kind,n){
   }
   return t;
 }
+// Games played through the same seasons as total(); null if any of those seasons has no games number.
+function gamesTotal(p,n){
+  var cap=n?p.first+n-1:9999, g=0;
+  if(p.gpx&&cap>=1999)return null;
+  for(var i=0;i<p.seasons.length;i++){var s=p.seasons[i]; if(s[0]>cap)break; if(s[4]==null)return null; g+=s[4];}
+  return g||null;
+}
+function rate(v,g){return g?(v/g).toFixed(1):'–';}
 function weekTotal(p,kind,w){var t=0,g=0,parts=PARTS[kind];
   for(var i=0;i<p.w.length;i++){var r=p.w[i]; if(r[0]>w)break; g++; for(var j=0;j<parts.length;j++)t+=r[parts[j]];}
   return [t,g];}
@@ -85,7 +93,7 @@ function ranking(){
   if(S.mode==='season'){ // this season through week w; parentheses = games played
     var sr=[]; SP.forEach(function(p){
       if(p.id!==ALLEN&&S.pos!=='ALL'&&p.pos!==S.pos)return;
-      var tg=weekTotal(p,S.kind,S.w); if(tg[0]>0||p.id===ALLEN)sr.push({p:p,v:tg[0],paren:tg[1],games:tg[1]});});
+      var tg=weekTotal(p,S.kind,S.w); if(tg[0]>0||p.id===ALLEN)sr.push({p:p,v:tg[0],paren:null,games:tg[1],gp:tg[1]});});
     return ranked(sr);
   }
   var rows=[];
@@ -95,7 +103,7 @@ function ranking(){
     var v=total(p,S.kind,S.n); if(v===null)return;
     // parentheses: seasons played; at Career for everyone, otherwise only for careers shorter than the slider
     var yrs=played(p), paren=!S.n||yrs<S.n?yrs:null;
-    if(v>0||p.id===ALLEN)rows.push({p:p,v:v,paren:paren});
+    if(v>0||p.id===ALLEN)rows.push({p:p,v:v,paren:paren,gp:gamesTotal(p,S.n)});
   });
   return ranked(rows);
 }
@@ -152,7 +160,7 @@ function short(n){var a=n.split(' '), l=last(n); return DUP[l]?a[0].charAt(0)+'.
 function played(p){return (p.last||CUR)-p.first+1;}
 function label(x){var nm=x.p.id===ALLEN?'Josh Allen':(G.narrow?short(x.p.name):x.p.name);
   var paren=x.paren!=null?' <small>('+x.paren+')</small>':'';
-  return '<i>'+(x.tie?'T-':'')+x.rank+'</i>'+esc(nm)+paren+' <b>'+x.v+'</b>';}
+  return '<i>'+(x.tie?'T-':'')+x.rank+'</i>'+esc(nm)+paren+' TD-<b>'+x.v+'</b><small>, GP-'+(x.gp||'–')+', '+rate(x.v,x.gp)+'</small>';}
 function placeAll(rows){
   var top=rows.slice(0,K), meRow=rows.filter(function(x){return x.p.id===ALLEN;})[0];
   var show=top.slice(); if(meRow&&meRow.rank>K&&top.indexOf(meRow)<0)show.push(meRow);
@@ -165,7 +173,7 @@ function placeAll(rows){
     if(!d){d=document.createElement('div');d.className='pill-m'+(id===ALLEN?' me':'');d.style.opacity='0';el('pills').appendChild(d);pillEls[id]=d;
       d.style.transform='translate('+(G.w*0.04)+'px,'+(G.h-20)+'px)';}
     d.innerHTML=label(x); seen[id]=1;
-    d.title=x.p.name+(x.p.pos?' ('+x.p.pos+')':'')+': '+x.v+' '+KIND_WORD[S.kind]+(x.paren!=null?' in '+x.paren+(S.mode==='season'?(x.paren===1?' game':' games'):(x.paren===1?' season':' seasons')):'');
+    d.title=x.p.name+(x.p.pos?' ('+x.p.pos+')':'')+': '+x.v+' '+KIND_WORD[S.kind]+(x.paren!=null?' in '+x.paren+(x.paren===1?' season':' seasons'):'')+(x.gp?', '+x.gp+(x.gp===1?' game':' games')+' played, '+rate(x.v,x.gp)+' per game':'');
     var base=x.rank>K||i>=K, a=base?null:anchor(i+1), pw=d.offsetWidth||120, ph=d.offsetHeight||22, px, py;
     if(base){px=G.w-pw-8;py=G.h-ph-1;d.classList.add('basecamp');}  // base camp: foot of the steep side, always clear
     else{d.classList.remove('basecamp');
@@ -216,7 +224,7 @@ function headline(rows){
     var ab=rows.filter(function(x){return x.v>me.v;});
     if(!ab.length)t+='Nobody has more. He\u2019s on the summit.';
     else{var nx2=ab[ab.length-1]; t+='Next up: '+esc(nx2.p.name)+' with '+nx2.v+' ('+(nx2.v-me.v)+' more).';}
-    t+=' <span class="mtn-sm">'+CUR+' regular season. Numbers in parentheses are games played.</span>';
+    t+=' <span class="mtn-sm">'+CUR+' regular season. GP = games played; the last number is touchdowns per game.</span>';
     el('headline').innerHTML=t;
     el('sub').textContent='Josh Allen vs '+(S.pos==='ALL'?'everyone':POS_WORD[S.pos])+': '+KIND_WORD[S.kind]+', '+CUR+' season through Week '+S.w+'.';
     return;
@@ -227,8 +235,8 @@ function headline(rows){
   var above=rows.filter(function(x){return x.v>me.v;});
   if(!above.length)txt+='Nobody has more. He’s on the summit.';
   else{var nx=above[above.length-1]; txt+='Next up: '+esc(nx.p.name)+' with '+nx.v+' ('+(nx.v-me.v)+' more).';}
-  if(S.n)txt+=' <span class="mtn-sm">Compared with each player’s first '+(S.n===1?'season':S.n+' seasons')+'; numbers in parentheses are careers shorter than that.</span>';
-  else txt+=' <span class="mtn-sm">Numbers in parentheses are seasons played.</span>';
+  if(S.n)txt+=' <span class="mtn-sm">Compared with each player’s first '+(S.n===1?'season':S.n+' seasons')+'; numbers in parentheses are careers shorter than that. GP = games played in those seasons; the last number is touchdowns per game.</span>';
+  else txt+=' <span class="mtn-sm">Numbers in parentheses are seasons played. GP = games played; the last number is touchdowns per game.</span>';
   el('headline').innerHTML=txt;
   el('sub').textContent=S.pos==='ALL'&&S.kind==='tot'&&!S.n?'Where Josh Allen stands among the NFL’s all-time touchdown leaders.':'Josh Allen vs '+(S.pos==='ALL'?'everyone':'all-time '+POS_WORD[S.pos])+': '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+'.';
 }
@@ -237,15 +245,15 @@ function list(rows){
   if(me&&me.rank>K)show.push(me);
   if(S.mode==='season'){
     el('listHead').textContent='The top 20: '+KIND_WORD[S.kind]+', '+CUR+' through Week '+S.w+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
-    el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>Games</th></tr></thead><tbody>'+show.map(function(x){
-      return '<tr'+(x.p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(x.p.name)+'</td><td><b>'+x.v+'</b></td><td>'+esc(x.p.pos)+'</td><td>'+x.games+'</td></tr>';
+    el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>GP</th><th>TD/G</th></tr></thead><tbody>'+show.map(function(x){
+      return '<tr'+(x.p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(x.p.name)+'</td><td><b>'+x.v+'</b></td><td>'+esc(x.p.pos)+'</td><td>'+x.games+'</td><td>'+rate(x.v,x.games)+'</td></tr>';
     }).join('')+'</tbody>';
     return;
   }
   el('listHead').textContent='The top 20: '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
-  el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>Seasons</th></tr></thead><tbody>'+show.map(function(x){
+  el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>Seasons</th><th>GP</th><th>TD/G</th></tr></thead><tbody>'+show.map(function(x){
     var p=x.p, endY=S.n?Math.min(p.first+S.n-1,p.last||CUR):(p.last||CUR);
-    return '<tr'+(p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(p.name)+(x.paren!=null?' ('+x.paren+')':'')+'</td><td><b>'+x.v+'</b></td><td>'+esc(p.pos)+'</td><td>'+p.first+'–'+endY+'</td></tr>';
+    return '<tr'+(p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(p.name)+(x.paren!=null?' ('+x.paren+')':'')+'</td><td><b>'+x.v+'</b></td><td>'+esc(p.pos)+'</td><td>'+p.first+'–'+endY+'</td><td>'+(x.gp||'–')+'</td><td>'+rate(x.v,x.gp)+'</td></tr>';
   }).join('')+'</tbody>';
 }
 
@@ -336,16 +344,17 @@ Promise.all([fetch('data/td-mountain.json').then(function(r){if(!r.ok)throw 0;re
   var base=res[0], live=res[1], allen=res[2], wk=res[3], byId={};
   P=base.players; P.forEach(function(p){byId[p.id]=p;});
   CUR=base.through+1;
+  var wg={}; if(wk&&wk.season===CUR)(wk.players||[]).forEach(function(q){wg[q.id]=(q.w||[]).length;}); // games this season, week by week
   if(live&&live.season===CUR){
-    (live.players||[]).forEach(function(q){var p=byId[q.id];
+    (live.players||[]).forEach(function(q){var p=byId[q.id]; if(q.g==null&&wg[q.id]!=null)q.g=wg[q.id];
       if(!p){p={id:q.id,name:q.name,pos:q.pos,first:q.first,last:CUR,seasons:[]};P.push(p);byId[q.id]=p;}
       p.last=CUR;
-      p.seasons=p.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,q.td[0],q.td[1],q.td[2]]]);});
+      p.seasons=p.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,q.td[0],q.td[1],q.td[2],q.g!=null?q.g:null]]);});
   }
   ME=byId[ALLEN];
   // Allen's own current season straight from his live stat line (always the freshest number)
   if(ME&&allen&&allen.now&&!(live&&live.season===CUR)){var n=allen.now;
-    ME.seasons=ME.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,n.td||0,n.rushTD||0,n.recTD||0]]); ME.last=CUR;}
+    ME.seasons=ME.seasons.filter(function(s){return s[0]!==CUR;}).concat([[CUR,n.td||0,n.rushTD||0,n.recTD||0,n.g!=null?n.g:null]]); ME.last=CUR;}
   AN=CUR-ME.first+1;
   var brady=P.filter(function(p){return p.name==='Tom Brady';})[0]; MAXN=brady?played(brady):23;
   if(wk&&wk.season===CUR&&wk.weeks>0){ SP=wk.players||[]; WK=wk.weeks; S.w=WK; WINFO={inProgress:wk.inProgress,bye:wk.billsBye||[]}; }
