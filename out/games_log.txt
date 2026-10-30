@@ -1,29 +1,5 @@
-427 of 428 players have games; 26 notes
+427 of 428 players have games; 2 notes
 
 missing	Marcus Robinson	no games column
-odd	Abner Haynes	1960: 14 games
-odd	Arnie Herber	1932: 14 games
-odd	Arnie Herber	1936: 12 games
-odd	Babe Parilli	1960: 14 games
-odd	Benny Friedman	1927: 13 games
-odd	Benny Friedman	1929: 15 games
-odd	Benny Friedman	1930: 15 games
-odd	Bill Groman	1960: 14 games
-odd	Bobby Layne	1958: 24 games
-odd	Bronko Nagurski	1930: 13 games
-odd	Bronko Nagurski	1932: 14 games
-odd	Bronko Nagurski	1933: 13 games
-odd	Bronko Nagurski	1934: 13 games
-odd	Chris Burford	1960: 14 games
-odd	Cliff Battles	1933: 12 games
-odd	Cliff Battles	1934: 12 games
-odd	Cotton Davidson	1960: 14 games
-odd	Don Hutson	1936: 12 games
-odd	Don Maynard	1960: 14 games
-odd	Frank Tripucka	1960: 14 games
-odd	George Blanda	1960: 14 games
-odd	Jack Kemp	1960: 14 games
 odd	Matt Dunigan	1995: 18 games
-odd	Paul Lowe	1960: 14 games
-odd	Wray Carlton	1960: 14 games
 
