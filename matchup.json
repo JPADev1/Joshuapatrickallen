@@ -598,5 +598,768 @@
     "detail": "Needs 3 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14."
    }
   ]
+ },
+ "props": {
+  "asOf": "Oct. 31, 2026",
+  "items": [
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "James Cook",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing yards",
+    "key": "rushYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     57,
+     135,
+     154,
+     75,
+     111,
+     95
+    ],
+    "ladder": [
+     {
+      "line": 50,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "next": {
+     "line": 60,
+     "hit": 5
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 50+ in all 6 games.",
+     "Averages 104.5 rushing yards a game (median 103).",
+     "Steady workload: 19.5 carries a game."
+    ],
+    "cons": [
+     "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Completions",
+    "key": "cmp",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     20,
+     20,
+     16,
+     23,
+     12,
+     23
+    ],
+    "ladder": [
+     {
+      "line": 12,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "next": {
+     "line": 15,
+     "hit": 5
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 12+ in all 6 games.",
+     "Averages 19.0 completions a game (median 20).",
+     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+    ],
+    "cons": [
+     "Closest call: 12 vs LA in Week 5.",
+     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     6,
+     14,
+     8,
+     5,
+     10,
+     5
+    ],
+    "ladder": [
+     {
+      "line": 4,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "next": {
+     "line": 6,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 4+ in all 6 games.",
+     "Averages 8.0 rushing attempts a game (median 7).",
+     "Even his lowest game (5 vs NE) cleared it comfortably."
+    ],
+    "cons": [
+     "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game.",
+     "Swingy: anywhere from 5 to 14 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BAL",
+    "nick": "Ravens",
+    "player": "Zay Flowers",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receiving yards",
+    "key": "recYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@IND"
+     },
+     {
+      "wk": 3,
+      "opp": "@DAL"
+     },
+     {
+      "wk": 4,
+      "opp": "TEN"
+     },
+     {
+      "wk": 5,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 6,
+      "opp": "@CLE"
+     },
+     {
+      "wk": 7,
+      "opp": "CIN"
+     }
+    ],
+    "vals": [
+     150,
+     84,
+     118,
+     53,
+     66,
+     137
+    ],
+    "ladder": [
+     {
+      "line": 50,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "next": {
+     "line": 60,
+     "hit": 5
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 50+ in all 6 games.",
+     "Averages 101.3 receiving yards a game (median 101).",
+     "Steady volume: 8.8 targets a game.",
+     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 53 vs ATL in Week 5."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "James Cook",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     13,
+     21,
+     24,
+     12,
+     25,
+     22
+    ],
+    "ladder": [
+     {
+      "line": 8,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 10,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 12,
+      "hit": 6,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 15,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 12+ in all 6 games.",
+     "Averages 19.5 rushing attempts a game (median 21.5)."
+    ],
+    "cons": [
+     "Closest call: 12 vs NE in Week 4.",
+     "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Passing yards",
+    "key": "passYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     334,
+     248,
+     204,
+     253,
+     210,
+     255
+    ],
+    "ladder": [
+     {
+      "line": 150,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 175,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 200,
+      "hit": 6,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 225,
+     "hit": 4
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 200+ in all 6 games.",
+     "Averages 250.7 passing yards a game (median 250.5).",
+     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+    ],
+    "cons": [
+     "Closest call: 204 vs LAC in Week 3.",
+     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Ty Johnson",
+    "pos": "RB",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     4,
+     2,
+     4,
+     2
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 4,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 3,
+     "hit": 2
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 2+ in all 4 games.",
+     "Averages 3.0 receptions a game (median 3).",
+     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+    ],
+    "cons": [
+     "Closest call: 2 vs NE in Week 4.",
+     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game.",
+     "Small sample: 4 games."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BAL",
+    "nick": "Ravens",
+    "player": "Derrick Henry",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing yards",
+    "key": "rushYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@IND"
+     },
+     {
+      "wk": 2,
+      "opp": "NO"
+     },
+     {
+      "wk": 3,
+      "opp": "@DAL"
+     },
+     {
+      "wk": 4,
+      "opp": "TEN"
+     },
+     {
+      "wk": 5,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 6,
+      "opp": "@CLE"
+     },
+     {
+      "wk": 7,
+      "opp": "CIN"
+     }
+    ],
+    "vals": [
+     144,
+     68,
+     89,
+     73,
+     102,
+     58,
+     45
+    ],
+    "ladder": [
+     {
+      "line": 40,
+      "hit": 7,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 50,
+     "hit": 6
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 40+ in all 7 games.",
+     "Averages 82.7 rushing yards a game (median 73).",
+     "Steady workload: 21.0 carries a game."
+    ],
+    "cons": [
+     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game.",
+     "Swingy: anywhere from 45 to 144 this season.",
+     "Trending down: 51.5 a game over his last two, below his 82.7 average."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BAL",
+    "nick": "Ravens",
+    "player": "Derrick Henry",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@IND"
+     },
+     {
+      "wk": 2,
+      "opp": "NO"
+     },
+     {
+      "wk": 3,
+      "opp": "@DAL"
+     },
+     {
+      "wk": 4,
+      "opp": "TEN"
+     },
+     {
+      "wk": 5,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 6,
+      "opp": "@CLE"
+     },
+     {
+      "wk": 7,
+      "opp": "CIN"
+     }
+    ],
+    "vals": [
+     24,
+     16,
+     26,
+     23,
+     24,
+     17,
+     17
+    ],
+    "ladder": [
+     {
+      "line": 10,
+      "hit": 7,
+      "stars": 5.0
+     },
+     {
+      "line": 12,
+      "hit": 7,
+      "stars": 5.0
+     },
+     {
+      "line": 15,
+      "hit": 7,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 18,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 15+ in all 7 games.",
+     "Averages 21.0 rushing attempts a game (median 23)."
+    ],
+    "cons": [
+     "Closest call: 16 vs NO in Week 2.",
+     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BAL",
+    "nick": "Ravens",
+    "player": "Tyler Huntley",
+    "pos": "QB",
+    "cat": "Rushing",
+    "market": "Rushing yards",
+    "key": "rushYds",
+    "games": [
+     {
+      "wk": 4,
+      "opp": "TEN"
+     },
+     {
+      "wk": 5,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 6,
+      "opp": "@CLE"
+     },
+     {
+      "wk": 7,
+      "opp": "CIN"
+     }
+    ],
+    "vals": [
+     16,
+     20,
+     28,
+     12
+    ],
+    "ladder": [
+     {
+      "line": 10,
+      "hit": 4,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 15,
+     "hit": 3
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 10+ in all 4 games.",
+     "Averages 19.0 rushing yards a game (median 18).",
+     "Even his lowest game (12 vs CIN) cleared it comfortably."
+    ],
+    "cons": [
+     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game.",
+     "Small sample: 4 games."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BAL",
+    "nick": "Ravens",
+    "player": "Zay Flowers",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@IND"
+     },
+     {
+      "wk": 3,
+      "opp": "@DAL"
+     },
+     {
+      "wk": 4,
+      "opp": "TEN"
+     },
+     {
+      "wk": 5,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 6,
+      "opp": "@CLE"
+     },
+     {
+      "wk": 7,
+      "opp": "CIN"
+     }
+    ],
+    "vals": [
+     5,
+     5,
+     8,
+     8,
+     6,
+     8
+    ],
+    "ladder": [
+     {
+      "line": 3,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 4,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 5,
+      "hit": 6,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 6,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 5+ in all 6 games.",
+     "Averages 6.7 receptions a game (median 7).",
+     "Steady volume: 8.8 targets a game.",
+     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 5 vs IND in Week 1."
+    ],
+    "status": ""
+   }
+  ],
+  "weather": {
+   "indoor": false,
+   "temp": 66,
+   "wind": 7,
+   "gust": 12,
+   "rain": 0,
+   "snow": 0,
+   "pop": 4
+  },
+  "conditions": [
+   "Game-day forecast at kickoff: 66°F, wind 7 mph (gusts 12), 4% chance of precipitation. Nothing in it changes the ratings.",
+   "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
+  ],
+  "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
  }
 }
