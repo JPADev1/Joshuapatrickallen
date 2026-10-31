@@ -1,0 +1,707 @@
+{
+"_how": "Official regular-season career totals for retired players, from Wikipedia's career passing yards and rushing yards leader lists (Oct. 2026), plus the Pro-Football-Reference QB rushing totals already used on the site. The stat mountains use these in views that cover a player's whole career; season-by-season views use nflverse (1999 on) and Wikipedia season tables (before 1999). qbw: [regular-season wins, losses+ties, playoff wins, playoff losses] as the starter from Wikipedia's list of career quarterback wins leaders, used for retired quarterbacks.",
+"pass": {
+"Tom Brady": 89214,
+"Drew Brees": 80358,
+"Peyton Manning": 71940,
+"Brett Favre": 71838,
+"Aaron Rodgers": 67973,
+"Matthew Stafford": 66505,
+"Ben Roethlisberger": 64088,
+"Philip Rivers": 63984,
+"Matt Ryan": 62792,
+"Dan Marino": 61361,
+"Eli Manning": 57023,
+"John Elway": 51475,
+"Warren Moon": 49325,
+"Joe Flacco": 48176,
+"Fran Tarkenton": 47003,
+"Russell Wilson": 46966,
+"Kirk Cousins": 46577,
+"Carson Palmer": 46247,
+"Vinny Testaverde": 46233,
+"Drew Bledsoe": 44611,
+"Dan Fouts": 43040,
+"Jared Goff": 41410,
+"Derek Carr": 41245,
+"Kerry Collins": 40922,
+"Joe Montana": 40551,
+"Johnny Unitas": 40239,
+"Andy Dalton": 39793,
+"Dave Krieg": 38147,
+"Boomer Esiason": 37920,
+"Dak Prescott": 37840,
+"Patrick Mahomes": 37413,
+"Donovan McNabb": 37276,
+"Matt Hasselbeck": 36638,
+"Alex Smith": 35650,
+"Jim Kelly": 35467,
+"Jay Cutler": 35133,
+"Ryan Fitzpatrick": 34990,
+"Ryan Tannehill": 34881,
+"Jim Everett": 34837,
+"Jim Hart": 34665,
+"Steve DeBerg": 34241,
+"Tony Romo": 34183,
+"John Hadl": 33503,
+"Phil Simms": 33462,
+"Steve Young": 33124,
+"Y. A. Tittle": 33070,
+"Troy Aikman": 32942,
+"Ken Anderson": 32838,
+"Cam Newton": 32382,
+"Kurt Warner": 32344
+},
+"rush": {
+"Emmitt Smith": 18355,
+"Walter Payton": 16726,
+"Frank Gore": 16000,
+"Barry Sanders": 15269,
+"Adrian Peterson": 14918,
+"Curtis Martin": 14101,
+"LaDainian Tomlinson": 13684,
+"Jerome Bettis": 13662,
+"Derrick Henry": 13597,
+"Eric Dickerson": 13259,
+"Tony Dorsett": 12739,
+"Jim Brown": 12312,
+"Marshall Faulk": 12279,
+"Edgerrin James": 12246,
+"Marcus Allen": 12243,
+"Franco Harris": 12120,
+"Thurman Thomas": 12074,
+"Fred Taylor": 11695,
+"Steven Jackson": 11438,
+"John Riggins": 11352,
+"Corey Dillon": 11241,
+"O. J. Simpson": 11236,
+"LeSean McCoy": 11102,
+"Warrick Dunn": 10967,
+"Ricky Watters": 10643,
+"Jamal Lewis": 10607,
+"Thomas Jones": 10591,
+"Tiki Barber": 10449,
+"Eddie George": 10441,
+"Marshawn Lynch": 10413,
+"Ottis Anderson": 10273,
+"Ricky Williams": 10009,
+"Michael Vick": 6109,
+"Cam Newton": 5628,
+"Randall Cunningham": 4928,
+"Steve Young": 4239
+},
+"qbw": {
+"Tom Brady": [
+251,
+82,
+35,
+13
+],
+"Brett Favre": [
+186,
+112,
+13,
+11
+],
+"Peyton Manning": [
+186,
+79,
+14,
+13
+],
+"Drew Brees": [
+172,
+114,
+9,
+9
+],
+"Aaron Rodgers": [
+168,
+96,
+11,
+11
+],
+"Ben Roethlisberger": [
+165,
+82,
+13,
+10
+],
+"John Elway": [
+148,
+83,
+14,
+7
+],
+"Dan Marino": [
+147,
+93,
+8,
+10
+],
+"Philip Rivers": [
+134,
+109,
+null,
+null
+],
+"Matt Ryan": [
+124,
+110,
+null,
+null
+],
+"Fran Tarkenton": [
+124,
+115,
+null,
+null
+],
+"Matthew Stafford": [
+123,
+123,
+7,
+6
+],
+"Russell Wilson": [
+121,
+81,
+9,
+8
+],
+"Johnny Unitas": [
+118,
+67,
+null,
+null
+],
+"Eli Manning": [
+117,
+117,
+8,
+4
+],
+"Joe Montana": [
+117,
+47,
+16,
+7
+],
+"Terry Bradshaw": [
+107,
+51,
+14,
+5
+],
+"Joe Flacco": [
+107,
+94,
+10,
+6
+],
+"Warren Moon": [
+102,
+101,
+null,
+null
+],
+"Jim Kelly": [
+101,
+59,
+9,
+8
+],
+"Patrick Mahomes": [
+100,
+32,
+17,
+4
+],
+"Alex Smith": [
+99,
+68,
+null,
+null
+],
+"Drew Bledsoe": [
+98,
+95,
+null,
+null
+],
+"Dave Krieg": [
+98,
+77,
+null,
+null
+],
+"Donovan McNabb": [
+98,
+63,
+9,
+7
+],
+"Ken Stabler": [
+96,
+50,
+7,
+5
+],
+"Phil Simms": [
+95,
+64,
+null,
+null
+],
+"Troy Aikman": [
+94,
+71,
+11,
+4
+],
+"Len Dawson": [
+94,
+65,
+null,
+null
+],
+"Jared Goff": [
+94,
+63,
+null,
+null
+],
+"Bart Starr": [
+94,
+63,
+9,
+1
+],
+"Steve Young": [
+94,
+49,
+8,
+6
+],
+"Josh Allen": [
+93,
+40,
+8,
+7
+],
+"Bob Griese": [
+92,
+59,
+null,
+null
+],
+"Carson Palmer": [
+92,
+89,
+null,
+null
+],
+"Ken Anderson": [
+91,
+81,
+null,
+null
+],
+"Steve McNair": [
+91,
+62,
+null,
+null
+],
+"Kirk Cousins": [
+91,
+83,
+null,
+null
+],
+"Vinny Testaverde": [
+90,
+124,
+null,
+null
+],
+"Jim Hart": [
+87,
+93,
+null,
+null
+],
+"Dan Fouts": [
+86,
+85,
+null,
+null
+],
+"Roman Gabriel": [
+86,
+71,
+null,
+null
+],
+"Dak Prescott": [
+86,
+60,
+null,
+null
+],
+"Matt Hasselbeck": [
+85,
+75,
+null,
+null
+],
+"Roger Staubach": [
+85,
+29,
+11,
+6
+],
+"Andy Dalton": [
+84,
+84,
+null,
+null
+],
+"Randall Cunningham": [
+82,
+53,
+null,
+null
+],
+"John Hadl": [
+82,
+84,
+null,
+null
+],
+"Kerry Collins": [
+81,
+99,
+null,
+null
+],
+"Bobby Layne": [
+81,
+66,
+null,
+null
+],
+"Craig Morton": [
+81,
+68,
+null,
+null
+],
+"Ryan Tannehill": [
+81,
+70,
+null,
+null
+],
+"Boomer Esiason": [
+80,
+93,
+null,
+null
+],
+"Joe Ferguson": [
+79,
+92,
+null,
+null
+],
+"Lamar Jackson": [
+79,
+32,
+null,
+null
+],
+"Mark Brunell": [
+78,
+73,
+null,
+null
+],
+"Tony Romo": [
+78,
+49,
+null,
+null
+],
+"Y. A. Tittle": [
+78,
+55,
+null,
+null
+],
+"Derek Carr": [
+77,
+92,
+null,
+null
+],
+"Joe Theismann": [
+77,
+47,
+null,
+null
+],
+"Rich Gannon": [
+76,
+56,
+null,
+null
+],
+"Steve Grogan": [
+75,
+60,
+null,
+null
+],
+"Cam Newton": [
+75,
+69,
+null,
+null
+],
+"John Brodie": [
+74,
+84,
+null,
+null
+],
+"Jay Cutler": [
+74,
+79,
+null,
+null
+],
+"Ron Jaworski": [
+73,
+70,
+null,
+null
+],
+"Brad Johnson": [
+72,
+53,
+null,
+null
+],
+"Jim Plunkett": [
+72,
+72,
+8,
+2
+],
+"Sonny Jurgensen": [
+69,
+78,
+null,
+null
+],
+"Jake Plummer": [
+69,
+67,
+null,
+null
+],
+"Chris Chandler": [
+67,
+85,
+null,
+null
+],
+"Jim McMahon": [
+67,
+30,
+null,
+null
+],
+"Kurt Warner": [
+67,
+49,
+9,
+4
+],
+"Jim Harbaugh": [
+66,
+74,
+null,
+null
+],
+"Daryle Lamonica": [
+66,
+22,
+null,
+null
+],
+"Charlie Conerlyd": [
+65,
+40,
+null,
+null
+],
+"Jack Kemp": [
+65,
+40,
+null,
+null
+],
+"Jim Everett": [
+64,
+92,
+null,
+null
+],
+"Earl Morrall": [
+63,
+39,
+null,
+null
+],
+"Joe Namath": [
+62,
+67,
+null,
+null
+],
+"Danny White": [
+62,
+30,
+null,
+null
+],
+"Billy Kilmer": [
+61,
+53,
+null,
+null
+],
+"Jay Schroeder": [
+61,
+38,
+null,
+null
+],
+"Norm Van Brocklin": [
+61,
+40,
+null,
+null
+],
+"Michael Vick": [
+61,
+52,
+null,
+null
+],
+"Steve Bartkowski": [
+59,
+68,
+null,
+null
+],
+"Ryan Fitzpatrick": [
+59,
+88,
+null,
+null
+],
+"Jalen Hurts": [
+59,
+28,
+null,
+null
+],
+"Charley Johnson": [
+59,
+65,
+null,
+null
+],
+"Baker Mayfield": [
+59,
+65,
+null,
+null
+],
+"Trent Dilfer": [
+58,
+55,
+null,
+null
+],
+"Jeff Garcia": [
+58,
+58,
+null,
+null
+],
+"Otto Grahame": [
+57,
+14,
+null,
+null
+],
+"Frank Ryan": [
+57,
+30,
+null,
+null
+],
+"Brian Sipe": [
+57,
+55,
+null,
+null
+],
+"Jake Delhomme": [
+56,
+40,
+null,
+null
+],
+"Trent Green": [
+56,
+57,
+null,
+null
+],
+"Bobby Hebert": [
+56,
+44,
+null,
+null
+],
+"Dan Pastorini": [
+56,
+61,
+null,
+null
+],
+"Milt Plum": [
+56,
+47,
+null,
+null
+],
+"Quarterback": [
+0,
+0,
+null,
+null
+],
+"Matt Schaub": [
+47,
+46,
+null,
+null
+]
+}
+}

@@ -598,6 +598,199 @@ def build_watch(allen, ranks, week26, m):
             "items": [{"title": t, "detail": d} for _, t, d in items]}
 
 
+# ---------- 5. 90%+ props (Next game page) ----------
+# Alternate lines books commonly post. A prop shows when a player cleared a line in 90%+ of his games this season.
+MARKETS = [  # key, label, category, value(row), lines, who
+    ("passYds", "Passing yards", "Passing", lambda r: num(r, "passing_yards"), [150, 175, 200, 225, 250, 275, 300], "qb"),
+    ("passTD", "Passing TDs", "Passing", lambda r: num(r, "passing_tds"), [1, 2, 3], "qb"),
+    ("cmp", "Completions", "Passing", lambda r: num(r, "completions"), [12, 15, 18, 20, 22, 25], "qb"),
+    ("rushYds", "Rushing yards", "Rushing", lambda r: num(r, "rushing_yards"), [10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100], "rush"),
+    ("rushAtt", "Rushing attempts", "Rushing", lambda r: num(r, "carries"), [4, 6, 8, 10, 12, 15, 18, 20], "rush"),
+    ("rec", "Receptions", "Receiving", lambda r: num(r, "receptions"), [1, 2, 3, 4, 5, 6, 7, 8], "rec"),
+    ("recYds", "Receiving yards", "Receiving", lambda r: num(r, "receiving_yards"), [10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100], "rec"),
+    ("anyTD", "Anytime TD", "TD", lambda r: num(r, "rushing_tds") + num(r, "receiving_tds"), [1], "td"),
+]
+DEF_FOR = {"Passing": ("pass_allowed", "against the pass", "passing yards"), "Receiving": ("pass_allowed", "against the pass", "passing yards"),
+           "Rushing": ("rush_allowed", "against the run", "rushing yards"), "TD": ("pa", "in points allowed", "points")}
+
+
+def pname(s):
+    import re
+    s = re.sub(r"\b(jr|sr|ii|iii|iv)\b\.?", "", s.lower())
+    return re.sub(r"[^a-z]", "", s)
+
+
+def stars(x):
+    return max(1.0, min(5.0, round(x * 2) / 2))
+
+
+def build_props(week26, sched, S, m, snaps):
+    """Every Bills and opponent prop that hit in 90%+ of the player's games this season, with the game log,
+    a confidence rating (1-5 stars) and pros and cons. Games come from snap counts, so a game a player
+    was on the field for without a catch or carry counts as a zero (a miss), not a skipped game."""
+    teams = [BILLS, m["opp"]["abbr"]]
+    games = {g["game_id"]: g for g in sched if g["season"] == str(SEASON) and g["game_type"] == "REG"}
+    played = {t: sorted({gid for gid, g in games.items() if t in (g["home_team"], g["away_team"]) and g["home_score"] not in ("", "NA")},
+                        key=lambda gid: games[gid]["gameday"]) for t in teams}
+    rows = defaultdict(dict)   # (team, pid) -> {game_id: row}
+    names = {}
+    for r in week26:
+        if r.get("season_type") == "REG" and r["team"] in teams and r["game_id"] in games:
+            rows[(r["team"], r["player_id"])][r["game_id"]] = r
+            names[(r["team"], pname(r["player_display_name"]))] = r["player_id"]
+            names.setdefault(("pos", r["player_id"]), r.get("position", ""))
+            names.setdefault(("name", r["player_id"]), r["player_display_name"])
+    on_field = defaultdict(set)  # (team, pid) -> games with an offensive snap
+    for s in snaps:
+        if s.get("game_type") == "REG" and s["team"] in teams and s["game_id"] in games and num(s, "offense_snaps") > 0:
+            pid = names.get((s["team"], pname(s["player"])))
+            if pid:
+                on_field[(s["team"], pid)].add(s["game_id"])
+    status = {}
+    for side, team in (("bills", BILLS), ("opp", teams[1])):
+        for x in m["injuries"][side]:
+            status[(team, pname(x["name"]))] = x["status"]
+    rank = {}
+    tlist = [t for t in S if S[t]["g"]]
+    for f in ("pass_allowed", "rush_allowed", "pa"):
+        per = {t: S[t][f] / S[t]["g"] for t in tlist}
+        rank[f] = {t: 1 + sum(1 for x in tlist if per[x] < per[t] - 1e-9) for t in tlist}  # 1 = allows the least
+        rank[f + "_v"] = per
+    opp_of = {BILLS: teams[1], teams[1]: BILLS}
+    nickname = {BILLS: "Bills", teams[1]: m["opp"]["nick"]}
+
+    out = []
+    for (team, pid), by_game in rows.items():
+        gids = [g for g in played[team] if g in by_game or g in on_field[(team, pid)]]
+        if len(gids) < 4 or not set(gids) & set(played[team][-2:]):
+            continue  # needs 4+ games and to have played in one of the team's last two
+        name = names[("name", pid)]
+        st = status.get((team, pname(name)), "")
+        if st in ("Out", "Doubtful"):
+            continue
+        pos = names[("pos", pid)]
+        zero = defaultdict(float)
+        log = [by_game.get(g, zero) for g in gids]
+        labels = []
+        for g in gids:
+            gm = games[g]
+            home = gm["home_team"] == team
+            labels.append({"wk": int(gm["week"]), "opp": ("" if home else "@") + (gm["away_team"] if home else gm["home_team"])})
+        att = [num(r, "attempts") for r in log]
+        car = [num(r, "carries") for r in log]
+        tgt = [num(r, "targets") for r in log]
+        n = len(log)
+        for key, label, cat, f, lines, who in MARKETS:
+            if who == "qb" and (pos != "QB" or min(att) < 10):
+                continue
+            if who == "rush" and sum(car) / n < 4:
+                continue
+            if who == "rec" and (sum(tgt) / n < 2.5 or pos == "QB"):
+                continue
+            if who == "td" and (pos == "QB" and key == "anyTD" and sum(car) / n < 4):
+                continue
+            vals = [int(f(r)) for r in log]
+            avg = sum(vals) / n
+            med = sorted(vals)[n // 2] if n % 2 else (sorted(vals)[n // 2 - 1] + sorted(vals)[n // 2]) / 2
+            rungs = []
+            for ln in lines:
+                hit = sum(1 for v in vals if v >= ln)
+                if hit / n >= 0.9 and (ln >= 0.4 * avg or key in ("passTD", "anyTD")):
+                    rungs.append((ln, hit))
+            if not rungs:
+                continue
+            fld, against, unit = DEF_FOR[cat]
+            o = opp_of[team]
+            drank, dval = rank[fld].get(o), rank[fld + "_v"].get(o, 0)
+            ladder = []
+            for ln, hit in rungs:
+                misses = [i for i, v in enumerate(vals) if v < ln]
+                minv = min(vals)
+                margin = (med - ln) / ln
+                s = 2.5 + (1 if hit == n else 0) + (0.5 if n >= 6 else 0)
+                s += 1 if margin >= 0.5 else 0.5 if margin >= 0.25 else -0.5 if margin < 0.1 else 0
+                if hit == n and minv - ln < max(1, 0.1 * ln):
+                    s -= 0.5  # cleared every game, but one only just
+                if drank and drank <= 8:
+                    s -= 0.5
+                if drank and drank >= 25:
+                    s += 0.5
+                if st == "Questionable":
+                    s -= 1
+                elif st in ("DNP", "Limited"):
+                    s -= 0.5
+                if any(i >= n - 2 for i in misses):
+                    s -= 0.5
+                elif key != "anyTD" and sum(vals[-2:]) / 2 < 0.75 * avg:
+                    s -= 0.5  # trending down
+                ladder.append({"line": ln, "hit": hit, "stars": stars(s)})
+            top = ladder[-1]
+            ln = top["line"]
+            unit_word = label.lower() if key != "anyTD" else "touchdowns"
+            pros, cons = [], []
+            pros.append(f"Cleared {ln}+ in {'all ' + str(n) if top['hit'] == n else str(top['hit']) + ' of ' + str(n)} games.")
+            if key != "anyTD":
+                pros.append(f"Averages {avg:.1f} {unit_word} a game (median {med:g}).")
+            else:
+                pros.append(f"{sum(vals)} touchdowns in {n} games.")
+            streak = 0
+            for v in reversed(vals):
+                if v >= ln:
+                    streak += 1
+                else:
+                    break
+            if 3 <= streak < n:
+                pros.append(f"Cleared it in each of his last {streak} games.")
+            lo_i = min(range(n), key=lambda i: vals[i])
+            if top["hit"] == n and vals[lo_i] - ln >= max(1, 0.2 * ln):
+                pros.append(f"Even his lowest game ({vals[lo_i]} vs {labels[lo_i]['opp'].lstrip('@')}) cleared it comfortably.")
+            if key in ("rushYds",) and sum(car) / n >= 8:
+                pros.append(f"Steady workload: {sum(car) / n:.1f} carries a game.")
+            if key in ("rec", "recYds") and sum(tgt) / n >= 4:
+                pros.append(f"Steady volume: {sum(tgt) / n:.1f} targets a game.")
+            dline = f"The {nickname[o]} rank {ordinal(drank)} of 32 {against}, allowing {dval:.0f} {unit} a game." if drank else ""
+            if drank and drank >= 17:
+                pros.append(dline)
+            for i in [i for i, v in enumerate(vals) if v < ln][:2]:
+                cons.append(f"Missed in Week {labels[i]['wk']} vs {labels[i]['opp'].lstrip('@')} ({vals[i]}).")
+            if top["hit"] == n and vals[lo_i] - ln < max(1, 0.1 * ln):
+                cons.append(f"Closest call: {vals[lo_i]} vs {labels[lo_i]['opp'].lstrip('@')} in Week {labels[lo_i]['wk']}.")
+            if drank and drank <= 16:
+                cons.append(dline)
+            nxt_ln = next((x for x in lines if x > ln), None)
+            if nxt_ln is not None:
+                nh = sum(1 for v in vals if v >= nxt_ln)
+                top_next = {"line": nxt_ln, "hit": nh}
+            else:
+                top_next = None
+            if key != "anyTD" and max(vals) - min(vals) > avg:
+                cons.append(f"Swingy: anywhere from {min(vals)} to {max(vals)} this season.")
+            if st:
+                cons.append(f"On this week's injury report: {st}.")
+            if n >= 4 and key != "anyTD":
+                last2 = sum(vals[-2:]) / 2
+                if last2 < 0.75 * avg:
+                    cons.append(f"Trending down: {last2:.1f} a game over his last two, below his {avg:.1f} average.")
+            if key != "anyTD" and (med - ln) / ln < 0.15:
+                cons.append(f"The line sits close to his median ({med:g}), so there's little cushion.")
+            if n < 6:
+                cons.append(f"Small sample: {n} games.")
+            if not cons and top_next:
+                cons.append(f"The next line up ({top_next['line']}+) hit only {top_next['hit']} of {n}, so the margin isn't huge.")
+            if not cons:
+                cons.append("Nothing in the numbers stands out; one off game is all it takes to lose.")
+            out.append({"team": team, "nick": nickname[team], "player": name, "pos": pos, "cat": cat, "market": label, "key": key,
+                        "games": labels, "vals": vals, "ladder": ladder, "next": top_next, "pros": pros[:4], "cons": cons[:4],
+                        "status": st})
+    out.sort(key=lambda p: (-p["ladder"][-1]["stars"], -p["ladder"][-1]["hit"] / len(p["vals"]), p["team"] != BILLS, p["player"]))
+    return {"asOf": short_date(date.today()), "items": out,
+            "note": f"{SEASON} regular season only. A game counts if the player was on the field for at least one offensive snap "
+                    "(from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, "
+                    "not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. "
+                    "Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, "
+                    "recent games and the injury report."}
+
+
 def build_mountain_live(week26):
     """Current-season touchdowns for the Touchdown Mountain page (td-mountain-<season>.json).
     Everyone already on the page, plus anyone new with 3+ TDs this season (usually rookies)."""
@@ -646,6 +839,77 @@ def build_mountain_live(week26):
                                         "first": {k: v for k, v in first.items() if k in tot}, "players": out})
 
 
+def build_stat_live(week26, sched):
+    """This season for the stat mountains (mountain.html): yards and starter wins, season totals
+    (mtn-live-<season>.json) and week by week (mtn-week-<season>.json)."""
+    base = set()
+    for name in ("mtn-yards.json", "mtn-wins.json"):
+        try:
+            base.update(p["id"] for p in json.load(open(os.path.join(REPO, "data", name)))["players"])
+        except FileNotFoundError:
+            return
+    yd, meta, wk = defaultdict(lambda: [0, 0, 0]), {}, defaultdict(dict)
+    for r in week26:
+        if r.get("season_type") != "REG":
+            continue
+        pid, w = r["player_id"], int(r["week"])
+        py, ry = int(num(r, "passing_yards")), int(num(r, "rushing_yards"))
+        t = yd[pid]; t[0] += py; t[1] += ry; t[2] += 1
+        meta[pid] = (r.get("player_display_name") or pid, {"FB": "RB", "HB": "RB"}.get(r.get("position", ""), r.get("position", "")))
+        if py or ry:
+            wk[pid][w] = [w, py, ry, None]
+    wins = defaultdict(lambda: [0, 0, 0, 0])
+    last_wk, in_prog = 0, False
+    for g in sched:
+        if g["season"] != str(SEASON):
+            continue
+        done = g["home_score"] not in ("", "NA")
+        if g["game_type"] == "REG" and done:
+            last_wk = max(last_wk, int(g["week"]))
+        if not done:
+            continue
+        hs, as_ = int(g["home_score"]), int(g["away_score"])
+        for side, me, op in (("home", hs, as_), ("away", as_, hs)):
+            q = g[side + "_qb_id"]
+            if not q:
+                continue
+            post = g["game_type"] != "REG"
+            wins[q][(2 if post else 0) + (0 if me > op else 1)] += 1
+            meta.setdefault(q, (g[side + "_qb_name"], "QB"))
+            if not post:
+                w = int(g["week"])
+                row = wk[q].setdefault(w, [w, 0, 0, None])
+                row[3] = 1 if me > op else 0
+    in_prog = any(g["home_score"] in ("", "NA") for g in sched if g["season"] == str(SEASON)
+                  and g["game_type"] == "REG" and int(g["week"]) == last_wk)
+    old = load(f"mtn-live-{SEASON}.json") or {}
+    first = dict(old.get("first", {}))
+    notable = lambda pid: yd[pid][0] >= 500 or yd[pid][1] >= 200 or sum(wins[pid][:2]) >= 2
+    new = [pid for pid in set(yd) | set(wins) if pid not in base and pid not in first and notable(pid)]
+    if new:
+        for p in get("players/players.csv"):
+            if p["gsis_id"] in new:
+                first[p["gsis_id"]] = int(p.get("rookie_season") or SEASON)
+    keep = [pid for pid in set(yd) | set(wins) if pid in base or (pid in first and notable(pid))]
+    out = []
+    for pid in sorted(keep):
+        if pid not in meta:
+            continue
+        out.append({"id": pid, "name": meta[pid][0], "pos": meta[pid][1], **({"first": first[pid]} if pid in first else {}),
+                    "y": yd[pid] if pid in yd else [0, 0, 0], "w": wins[pid] if pid in wins else [0, 0, 0, 0]})
+    save(f"mtn-live-{SEASON}.json", {"updated": date.today().isoformat(), "season": SEASON,
+                                     "first": {k: v for k, v in first.items() if k in keep}, "players": out}, rows="players")
+    weeks = []
+    for pid in sorted(wk):
+        if pid not in meta:
+            continue
+        weeks.append({"id": pid, "name": meta[pid][0], "pos": meta[pid][1], "w": [wk[pid][k] for k in sorted(wk[pid])]})
+    bills_wk = {int(g["week"]) for g in sched if g["season"] == str(SEASON) and g["game_type"] == "REG" and BILLS in (g["home_team"], g["away_team"])}
+    bye = [w for w in range(1, last_wk + 1) if w not in bills_wk]
+    save(f"mtn-week-{SEASON}.json", {"updated": date.today().isoformat(), "season": SEASON, "weeks": last_wk,
+                                     "inProgress": in_prog, "billsBye": bye, "players": weeks}, rows="players")
+
+
 def build_season_weeks(week26, sched):
     """This season, week by week, for the Touchdown Mountain "This season" view (td-week-<season>.json).
     Every player with a touchdown this season, with each week he played: [week, pass, rush, rec]."""
@@ -675,9 +939,20 @@ def build_season_weeks(week26, sched):
                                     "inProgress": in_progress, "billsBye": bye, "players": out}, rows="players")
 
 
+def fix_starters(sched):
+    """Official starters where nflverse credits someone else (e.g. Allen's one-snap starts that kept his streak alive)."""
+    fixes = json.load(open(os.path.join(HERE, "starter_fixes.json")))["games"]
+    for g in sched:
+        for team, pid in fixes.get(g["game_id"], {}).items():
+            side = "home" if g["home_team"] == team else "away" if g["away_team"] == team else None
+            if side:
+                g[side + "_qb_id"] = pid
+    return sched
+
+
 def main():
     T = team_table()
-    sched = [g for g in get("schedules/games.csv") if int(g["season"]) >= 1999]
+    sched = fix_starters([g for g in get("schedules/games.csv") if int(g["season"]) >= 1999])
     week26 = get(f"stats_player/stats_player_week_{SEASON}.csv")
     try:
         overrides = json.load(open(os.path.join(REPO, "data", "overrides.json")))
@@ -695,6 +970,10 @@ def main():
         build_season_weeks(week26, sched)
     except Exception as e:
         print("touchdown mountain (this season) skipped:", e)
+    try:
+        build_stat_live(week26, sched)
+    except Exception as e:
+        print("stat mountains (this season) skipped:", e)
     team_rows = get(f"stats_team/stats_team_week_{SEASON}.csv")
     try:
         inj = get(f"injuries/injuries_{SEASON}.csv")
@@ -706,6 +985,15 @@ def main():
             m["watch"] = build_watch(allen, ranks, week26, m)
         except Exception as e:  # never let the watch list block the rest of the page
             print("records watch skipped:", e)
+        try:
+            snaps = get(f"snap_counts/snap_counts_{SEASON}.csv")
+        except Exception as e:
+            print("snap counts unavailable for props:", e); snaps = []
+        try:
+            S = team_stats(team_rows, [g for g in sched if g["season"] == str(SEASON) and g["game_type"] == "REG"])
+            m["props"] = build_props(week26, sched, S, m, snaps)
+        except Exception as e:  # never let the props block the rest of the page
+            print("props skipped:", e)
         save("matchup.json", m)
 
 

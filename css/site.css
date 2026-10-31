@@ -322,3 +322,36 @@ html.mtn-lock,html.mtn-lock body{overflow:hidden}
 .mtn-ctl .mtn-mode button{border:0;background:transparent;font-weight:700}
 .mtn-ctl .mtn-mode button[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
 .mtn-ctl .mtn-mode button:disabled{opacity:.4;cursor:default}
+/* ---- 90%+ props (matchup page) ---- */
+.prop .head h2{font-size:1.1rem}
+.pmeta{font-size:.8rem;color:var(--mute)}
+.pmeta .qst{color:var(--red)}
+.pscore{text-align:right}
+.pscore>span:not(.stars){display:block;font-size:.75rem;color:var(--mute)}
+.pscore .stars{font-size:1.15rem}
+.stars{color:var(--gold);letter-spacing:1px;white-space:nowrap;font-size:1rem}
+.stars .half{background:linear-gradient(90deg,var(--gold) 50%,var(--line) 50%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pchart{position:relative;display:flex;align-items:flex-end;gap:6px;height:130px;margin:14px 0 4px;border-bottom:1px solid var(--line)}
+.pb{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.pb span{font-size:.72rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.pb i{display:block;width:100%;max-width:44px;border-radius:4px 4px 0 0;background:var(--ok)}
+.pb.miss i{background:var(--red)}
+.pthr{position:absolute;left:0;right:0;border-top:2px dashed var(--ink);opacity:.6;pointer-events:none}
+.pthr span{position:absolute;right:0;top:-19px;font-size:.7rem;font-weight:700;background:var(--card);padding:0 4px}
+.pxl{display:flex;gap:6px}
+.pxl div{flex:1;min-width:0;text-align:center;font-size:.66rem;color:var(--mute);line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ptbl{margin:10px 0 4px;border-radius:10px}
+.ptbl td,.ptbl th{text-align:left}
+.ptbl td:last-child,.ptbl th:last-child{text-align:right}
+tr.rung{cursor:pointer}
+tr.rung[aria-selected="true"] td{background:var(--okbg)}
+tr.rung:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+tr.nextup td{color:var(--mute);font-style:italic}
+.pc ul{padding-left:18px}
+.pc li{margin:2px 0}
+.pro li::marker{content:"+ ";color:var(--ok);font-weight:800}
+.con li::marker{content:"\2212  ";color:var(--red);font-weight:800}
+.gamble{border-color:var(--gold);background:var(--chip);color:var(--ink);font-size:.82rem;margin-top:14px}
+.gamble p{margin:0 0 6px}
+.gamble p:last-child{margin:0}
+.gamble a{color:inherit;font-weight:700}

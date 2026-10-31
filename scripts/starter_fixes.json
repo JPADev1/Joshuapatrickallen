@@ -1,0 +1,6 @@
+{"_how": "Games where nflverse names a different starting quarterback than the official record (Pro-Football-Reference / NFL). Usually a starter who took the first snap or two to keep a streak alive. {game_id: {team: nflverse player id of the official starter}}. Used for wins as the starter on the home page and the Win Mountain.",
+ "games": {
+  "2019_17_NYJ_BUF": {"BUF": "00-0034857"},
+  "2024_18_BUF_NE": {"BUF": "00-0034857"},
+  "2025_18_NYJ_BUF": {"BUF": "00-0034857"}
+ }}

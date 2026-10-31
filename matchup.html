@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=24">
+<link rel="stylesheet" href="css/site.css?v=25">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -28,6 +28,18 @@
   <div id="boxes"></div>
   <h2 class="sec">Series and injuries</h2>
   <div class="card" id="extra"></div>
+  <section id="propSec" hidden aria-labelledby="propHead">
+    <h2 class="sec" id="propHead">90%+ props this season</h2>
+    <p class="note" style="margin:0 0 10px" id="propSub"></p>
+    <div class="tabs" id="propTeam" role="group" aria-label="Team"></div>
+    <div class="tabs" id="propCat" role="group" aria-label="Prop type"></div>
+    <div id="props"></div>
+    <p class="note" id="propNote"></p>
+    <div class="card gamble" role="note" aria-label="Gambling disclaimer">
+      <p><b>For entertainment and information only.</b> Nothing on this page is betting advice or a guarantee: hit rates describe past games, and past results do not predict future ones. This site is not a sportsbook, takes no bets and has no affiliation with any sportsbook. Only bet where it is legal for you, and only if you are 21 or older (the legal age where you live may differ). Never bet more than you can afford to lose.</p>
+      <p><b>Gambling problem?</b> Help is free, confidential and available 24/7. Call the National Problem Gambling Helpline at <a href="tel:18006973738">1-800-MY-RESET</a> (1-800-697-3738). In New York, call the HOPEline at <a href="tel:18778467369">1-877-8-HOPENY</a> (1-877-846-7369) or text HOPENY (467369).</p>
+    </div>
+  </section>
   <p class="note" id="srcnote"></p>
 </main>
 <footer id="foot">Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
@@ -93,10 +105,48 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
    +'<div class="lines"><div><h3>Bills injuries'+asof+'</h3>'+pills(inj.bills)+'</div><div><h3>'+esc(nick)+' injuries'+asof+'</h3>'+pills(inj.opp)+'</div></div>'
    +'<p class="note">'+esc(inj.note)+' DNP = did not practice.</p>';
   document.getElementById('srcnote').textContent=m.sources+' Last updated '+m.updated+'.';
+  if(m.props&&m.props.items&&m.props.items.length)props(m);
 }).catch(function(){
   document.getElementById('title').textContent='Next game';
   document.getElementById('when').textContent='The matchup data could not be loaded. Please refresh.';
 });
+// ---------- 90%+ props: game-log bars, ladder of lines, pros and cons, confidence stars ----------
+function props(m){
+  var P=m.props, F={team:'All',cat:'All'}, sel={};
+  function stars(n){var f=Math.floor(n),h=n%1?1:0,s='';for(var i=0;i<5;i++)s+=i<f?'\u2605':(i===f&&h?'<span class="half">\u2605</span>':'\u2606');return '<span class="stars" role="img" aria-label="'+n+' out of 5 stars">'+s+'</span>';}
+  var teams=['All',m.bills.name.replace(/^.* /,''),m.opp.nick||m.opp.name], cats=['All'];
+  P.items.forEach(function(p){if(cats.indexOf(p.cat)<0)cats.push(p.cat);});
+  function tabs(id,list,key){document.getElementById(id).innerHTML=list.map(function(c){var n=P.items.filter(function(p){return (key==='team'?(c==='All'||p.nick===c):(c==='All'||p.cat===c));}).length;
+    return '<button type="button" data-k="'+key+'" data-v="'+esc(c)+'" aria-pressed="'+(F[key]===c)+'"'+(n?'':' disabled')+'>'+esc(c)+' <small>('+n+')</small></button>';}).join('');}
+  function chart(p,i){
+    var L=p.ladder[sel[i]], t=L.line, max=Math.max.apply(null,p.vals.concat([t]))*1.15||1;
+    var bars=p.vals.map(function(v,j){var hit=v>=t;return '<div class="pb'+(hit?'':' miss')+'"><span>'+v+'</span><i style="height:'+Math.max(2,v/max*100)+'%"></i></div>';}).join('');
+    return '<div class="pchart" role="img" aria-label="'+esc(p.player)+' '+esc(p.market.toLowerCase())+' by game: '+p.vals.join(', ')+'. Line '+t+'+.">'+bars
+      +'<div class="pthr" style="bottom:'+(t/max*100)+'%"><span>'+(p.key==='anyTD'?'1+ TD':t+'+')+'</span></div></div>'
+      +'<div class="pxl">'+p.games.map(function(g){return '<div>Wk '+g.wk+'<br>'+esc(g.opp)+'</div>';}).join('')+'</div>';}
+  function render(){
+    tabs('propTeam',teams,'team'); tabs('propCat',cats,'cat');
+    var list=P.items.map(function(p,i){return {p:p,i:i};}).filter(function(o){return (F.team==='All'||o.p.nick===F.team)&&(F.cat==='All'||o.p.cat===F.cat);});
+    document.getElementById('props').innerHTML=list.map(function(o){var p=o.p,i=o.i; if(sel[i]==null)sel[i]=p.ladder.length-1; var n=p.vals.length;
+      var rows=p.ladder.map(function(r,j){return '<tr class="rung" tabindex="0" data-i="'+i+'" data-j="'+j+'" aria-selected="'+(j===sel[i])+'"><td>'+(p.key==='anyTD'?'Anytime TD':r.line+'+ '+esc(p.market.toLowerCase()))+'</td><td>'+r.hit+'/'+n+' &middot; '+Math.round(r.hit/n*100)+'%</td><td>'+stars(r.stars)+'</td></tr>';}).join('')
+        +(p.next?'<tr class="nextup"><td>'+p.next.line+'+ (next line up)</td><td>'+p.next.hit+'/'+n+' &middot; '+Math.round(p.next.hit/n*100)+'%</td><td>under 90%</td></tr>':'');
+      var top=p.ladder[sel[i]];
+      return '<article class="card prop"><div class="head"><div><h2>'+esc(p.player)+'</h2><span class="pmeta">'+esc(p.nick)+' '+esc(p.pos)+' &middot; '+esc(p.market)+(p.status?' &middot; <b class="qst">'+esc(p.status)+'</b>':'')+'</span></div>'
+        +'<div class="pscore">'+stars(top.stars)+'<span>'+Math.round(top.hit/n*100)+'% hit rate</span></div></div>'
+        +chart(p,i)
+        +'<div class="scroll ptbl"><table><thead><tr><th>Line</th><th>2026 hit rate</th><th>Confidence</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+        +'<div class="lines pc"><div><h3>Pros</h3><ul class="pro">'+li(p.pros)+'</ul></div><div><h3>Cons</h3><ul class="con">'+li(p.cons)+'</ul></div></div></article>';
+    }).join('')||'<div class="card"><p class="note" style="margin:0">No props in this group.</p></div>';
+  }
+  document.getElementById('propSec').hidden=false;
+  document.getElementById('propSub').textContent='Every Bills and '+(m.opp.nick||m.opp.name)+' player prop that cleared in at least 90% of his games this season. Green bars cleared the line, red bars missed. Tap a line in a card\u2019s table to move it on the chart.';
+  document.getElementById('propNote').textContent=P.note+' Updated '+P.asOf+'.';
+  var box=document.getElementById('propSec');
+  box.addEventListener('click',function(e){var b=e.target.closest('button[data-k]'); if(b&&!b.disabled){F[b.dataset.k]=b.dataset.v;render();return;}
+    var tr=e.target.closest('tr.rung'); if(tr){sel[+tr.dataset.i]=+tr.dataset.j;render();var r=box.querySelector('tr.rung[data-i="'+tr.dataset.i+'"][data-j="'+tr.dataset.j+'"]');r&&r.focus();}});
+  box.addEventListener('keydown',function(e){var tr=e.target.closest('tr.rung'); if(tr&&(e.key==='Enter'||e.key===' ')){e.preventDefault();tr.click();}});
+  render();
+}
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fe7d153f0dc349558991cb3f797b5fca"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

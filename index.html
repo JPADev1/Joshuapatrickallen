@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
 <meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=24">
+<link rel="stylesheet" href="css/site.css?v=25">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -147,7 +147,7 @@ function applyNow(){
   TILES[1] = [String(pt), "Career passing touchdowns", "through " + th + " of 2026"];
   TILES[2] = [String(rt), "Career rushing touchdowns", "through " + th + " of 2026"];
   TILES[3] = [String(tot), "Career total touchdowns", "passing + rushing + receiving"];
-  var AL=(RANKS&&RANKS._allen)||{wins:92,postWins:8,both:54,afcEast:{titles:5,seasons:"2020-24",billsRank:"#2 in Bills history"}};
+  var AL=(RANKS&&RANKS._allen)||{wins:93,postWins:8,both:54,afcEast:{titles:5,seasons:"2020-24",billsRank:"#2 in Bills history"}};
   TILES[4] = [String(AL.wins), "Career wins", "regular season, as the starter"];
   TILES[5] = [String(AL.postWins), "Playoff wins", "as the starter"];
   TILES[6] = [String(AL.afcEast.titles), "AFC East titles", AL.afcEast.seasons, AL.afcEast.billsRank];
@@ -193,7 +193,10 @@ function build(){
     var above=L.filter(function(v){return v>me;}).length, tie=L.filter(function(v){return v===me;}).length>0;
     return '<em class="rk">'+(tie?'T-':'#')+(above+1)+' in NFL history</em>';}
   document.getElementById('rknote').textContent='NFL all-time ranks are regular season unless the tile says playoffs. Retired players come from Pro-Football-Reference career leader lists and, for wins, Wikipedia\'s list of career quarterback wins leaders; active players\' totals are kept current from nflverse (as of '+NFL.asOf+'). Wins count games as the starting quarterback. The NFL keeps no official list for total touchdowns, so that rank is our count of players whose passing + rushing + receiving touchdowns exceed Allen\'s. Career rushing yards are ranked among quarterbacks. AFC East titles are ranked among Bills quarterbacks (Jim Kelly won 6).';
-  var LINK={"Career total touchdowns":["touchdown-mountain.html","See his climb &rarr;"]};  // tiles that open their own page
+  var GO="See his climb &rarr;", LINK={"Career total touchdowns":["touchdown-mountain.html",GO],  // tiles that open their own mountain page
+    "Career passing touchdowns":["touchdown-mountain.html#td=pass",GO], "Career rushing touchdowns":["touchdown-mountain.html#td=rush",GO],
+    "Career passing yards":["mountain.html#s=yards&k=pass",GO], "Career rushing yards":["mountain.html#s=yards&k=rush&pos=QB",GO],
+    "Career wins":["mountain.html#s=wins",GO], "Playoff wins":["mountain.html#s=wins&k=pw",GO], "AFC East titles":["mountain.html#s=afce",GO]};
   document.getElementById('tiles').innerHTML = TILES.map(function(t){var inner='<b>'+t[0]+'</b><span>'+t[1]+'<br>'+t[2]+'</span>'+rk(t[1],t[3]), L=LINK[t[1]];
     return L?'<a class="tile" href="'+L[0]+'">'+inner+'<span class="go">'+L[1]+'</span></a>':'<div class="tile">'+inner+'</div>';}).join('');
   var T = {g:0,gs:0,c:0,a:0,y:0,t:0,i:0,s:0,ra:0,ry:0,rt:0,rf:0,rl:0}, pr='', rr='';

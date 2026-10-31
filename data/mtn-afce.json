@@ -1,0 +1,21 @@
+{"through": 2025, "note": "AFC East champions since 1970, credited to the quarterback who started the most regular-season games for the champion. Row: [season, title, team, starts].","players":[
+{"id":"w:Bert Jones","name":"Bert Jones","pos":"QB","first":1973,"last":1982,"s":[[1975,1,"IND",14],[1976,1,"IND",14],[1977,1,"IND",14]],"teams":["IND"]},
+{"id":"w:Bob Griese","name":"Bob Griese","pos":"QB","first":1967,"last":1980,"s":[[1971,1,"MIA",13],[1973,1,"MIA",13],[1974,1,"MIA",13],[1979,1,"MIA",12]],"teams":["MIA"]},
+{"id":"00-0019559","name":"Chad Pennington","pos":"QB","first":2000,"last":2010,"s":[[2002,1,"NYJ",12],[2008,1,"MIA",16]],"teams":["NYJ","MIA"]},
+{"id":"00-0010379","name":"Dan Marino","pos":"QB","first":1983,"last":1999,"s":[[1983,1,"MIA",9],[1984,1,"MIA",16],[1985,1,"MIA",16],[1992,1,"MIA",16],[1994,1,"MIA",16]],"teams":["MIA"]},
+{"id":"w:David Woodley","name":"David Woodley","pos":"QB","first":1980,"last":1985,"s":[[1981,1,"MIA",15],[1982,1,"MIA",9]],"teams":["MIA"]},
+{"id":"00-0039851","name":"Drake Maye","pos":"QB","first":2024,"last":2025,"s":[[2025,1,"NE",17]],"teams":["NE"]},
+{"id":"00-0001361","name":"Drew Bledsoe","pos":"QB","first":1993,"last":2006,"s":[[1996,1,"NE",16],[1997,1,"NE",16]],"teams":["NE"]},
+{"id":"w:Earl Morrall","name":"Earl Morrall","pos":"QB","first":1956,"last":1976,"s":[[1972,1,"MIA",9]],"teams":["MIA"]},
+{"id":"w:Jack Trudeau","name":"Jack Trudeau","pos":"QB","first":1986,"last":1995,"s":[[1987,1,"IND",8]],"teams":["IND"]},
+{"id":"00-0005180","name":"Jay Fiedler","pos":"QB","first":1994,"last":2005,"s":[[2000,1,"MIA",14]],"teams":["MIA"]},
+{"id":"w:Jim Kelly","name":"Jim Kelly","pos":"QB","first":1986,"last":1996,"s":[[1988,1,"BUF",16],[1989,1,"BUF",13],[1990,1,"BUF",14],[1991,1,"BUF",15],[1993,1,"BUF",16],[1995,1,"BUF",15]],"teams":["BUF"]},
+{"id":"w:Joe Ferguson","name":"Joe Ferguson","pos":"QB","first":1973,"last":1990,"s":[[1980,1,"BUF",16]],"teams":["BUF"]},
+{"id":"w:Johnny Unitas","name":"Johnny Unitas","pos":"QB","first":1956,"last":1973,"s":[[1970,1,"IND",13]],"teams":["IND"]},
+{"id":"00-0034857","name":"Josh Allen","pos":"QB","first":2018,"last":2025,"s":[[2020,1,"BUF",16],[2021,1,"BUF",17],[2022,1,"BUF",16],[2023,1,"BUF",17],[2024,1,"BUF",16]],"teams":["BUF"]},
+{"id":"00-0010346","name":"Peyton Manning","pos":"QB","first":1998,"last":2015,"s":[[1999,1,"IND",16]],"teams":["IND"]},
+{"id":"w:Steve Grogan","name":"Steve Grogan","pos":"QB","first":1975,"last":1990,"s":[[1978,1,"NE",16]],"teams":["NE"]},
+{"id":"00-0019596","name":"Tom Brady","pos":"QB","first":2000,"last":2022,"s":[[2001,1,"NE",14],[2003,1,"NE",16],[2004,1,"NE",16],[2005,1,"NE",15],[2006,1,"NE",16],[2007,1,"NE",16],[2009,1,"NE",16],[2010,1,"NE",16],[2011,1,"NE",16],[2012,1,"NE",16],[2013,1,"NE",16],[2014,1,"NE",15],[2015,1,"NE",16],[2016,1,"NE",12],[2017,1,"NE",16],[2018,1,"NE",16],[2019,1,"NE",16]],"teams":["NE"]},
+{"id":"w:Tony Eason","name":"Tony Eason","pos":"QB","first":1983,"last":1990,"s":[[1986,1,"NE",14]],"teams":["NE"]},
+{"id":"00-0016193","name":"Vinny Testaverde","pos":"QB","first":1987,"last":2007,"s":[[1998,1,"NYJ",13]],"teams":["NYJ"]}
+]}

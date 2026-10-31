@@ -1,0 +1,397 @@
+{
+"_how": "AFC East champions since the division began in 1970 (Wikipedia's AFC East season-by-season table) and the quarterback who started the most regular-season games for the champion that year (team starting-quarterback lists and player pages on Wikipedia before 1999; nflverse from 1999). Row: [season, team, quarterback, starts, nflverse id]. Add each new champion after the regular season ends.",
+"titles": [
+[
+1970,
+"IND",
+"Johnny Unitas",
+13,
+null
+],
+[
+1971,
+"MIA",
+"Bob Griese",
+13,
+null
+],
+[
+1972,
+"MIA",
+"Earl Morrall",
+9,
+null
+],
+[
+1973,
+"MIA",
+"Bob Griese",
+13,
+null
+],
+[
+1974,
+"MIA",
+"Bob Griese",
+13,
+null
+],
+[
+1975,
+"IND",
+"Bert Jones",
+14,
+null
+],
+[
+1976,
+"IND",
+"Bert Jones",
+14,
+null
+],
+[
+1977,
+"IND",
+"Bert Jones",
+14,
+null
+],
+[
+1978,
+"NE",
+"Steve Grogan",
+16,
+null
+],
+[
+1979,
+"MIA",
+"Bob Griese",
+12,
+null
+],
+[
+1980,
+"BUF",
+"Joe Ferguson",
+16,
+null
+],
+[
+1981,
+"MIA",
+"David Woodley",
+15,
+null
+],
+[
+1982,
+"MIA",
+"David Woodley",
+9,
+null
+],
+[
+1983,
+"MIA",
+"Dan Marino",
+9,
+null
+],
+[
+1984,
+"MIA",
+"Dan Marino",
+16,
+null
+],
+[
+1985,
+"MIA",
+"Dan Marino",
+16,
+null
+],
+[
+1986,
+"NE",
+"Tony Eason",
+14,
+null
+],
+[
+1987,
+"IND",
+"Jack Trudeau",
+8,
+null
+],
+[
+1988,
+"BUF",
+"Jim Kelly",
+16,
+null
+],
+[
+1989,
+"BUF",
+"Jim Kelly",
+13,
+null
+],
+[
+1990,
+"BUF",
+"Jim Kelly",
+14,
+null
+],
+[
+1991,
+"BUF",
+"Jim Kelly",
+15,
+null
+],
+[
+1992,
+"MIA",
+"Dan Marino",
+16,
+null
+],
+[
+1993,
+"BUF",
+"Jim Kelly",
+16,
+null
+],
+[
+1994,
+"MIA",
+"Dan Marino",
+16,
+null
+],
+[
+1995,
+"BUF",
+"Jim Kelly",
+15,
+null
+],
+[
+1996,
+"NE",
+"Drew Bledsoe",
+16,
+null
+],
+[
+1997,
+"NE",
+"Drew Bledsoe",
+16,
+null
+],
+[
+1998,
+"NYJ",
+"Vinny Testaverde",
+13,
+null
+],
+[
+1999,
+"IND",
+"Peyton Manning",
+16,
+"00-0010346"
+],
+[
+2000,
+"MIA",
+"Jay Fiedler",
+14,
+"00-0005180"
+],
+[
+2001,
+"NE",
+"Tom Brady",
+14,
+"00-0019596"
+],
+[
+2002,
+"NYJ",
+"Chad Pennington",
+12,
+"00-0019559"
+],
+[
+2003,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2004,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2005,
+"NE",
+"Tom Brady",
+15,
+"00-0019596"
+],
+[
+2006,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2007,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2008,
+"MIA",
+"Chad Pennington",
+16,
+"00-0019559"
+],
+[
+2009,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2010,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2011,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2012,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2013,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2014,
+"NE",
+"Tom Brady",
+15,
+"00-0019596"
+],
+[
+2015,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2016,
+"NE",
+"Tom Brady",
+12,
+"00-0019596"
+],
+[
+2017,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2018,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2019,
+"NE",
+"Tom Brady",
+16,
+"00-0019596"
+],
+[
+2020,
+"BUF",
+"Josh Allen",
+16,
+"00-0034857"
+],
+[
+2021,
+"BUF",
+"Josh Allen",
+17,
+"00-0034857"
+],
+[
+2022,
+"BUF",
+"Josh Allen",
+16,
+"00-0034857"
+],
+[
+2023,
+"BUF",
+"Josh Allen",
+17,
+"00-0034857"
+],
+[
+2024,
+"BUF",
+"Josh Allen",
+16,
+"00-0034857"
+],
+[
+2025,
+"NE",
+"Drake Maye",
+17,
+"00-0039851"
+]
+]
+}
