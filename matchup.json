@@ -26,67 +26,53 @@
   "week": 8,
   "bills": [
    {
-    "name": "Dee Alford",
-    "pos": "CB",
-    "injury": "Ankle",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Ray Davis",
-    "pos": "RB",
-    "injury": "Illness",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Spencer Brown",
-    "pos": "T",
-    "injury": "Back",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Bradley Chubb",
-    "pos": "LB",
-    "injury": "Chest",
-    "status": "Limited",
-    "game": false
+    "name": "Tyrell Shavers",
+    "pos": "WR",
+    "injury": "Knee",
+    "status": "Out",
+    "game": true
    },
    {
     "name": "DJ Moore",
     "pos": "WR",
     "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "Dalton Kincaid",
     "pos": "TE",
     "injury": "Chest",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
-    "name": "Joe Andreessen",
-    "pos": "LB",
-    "injury": "Knee",
-    "status": "Limited",
-    "game": false
+    "name": "Dee Alford",
+    "pos": "CB",
+    "injury": "Ankle",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Greg Gaines",
+    "pos": "DT",
+    "injury": "Calf",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Spencer Brown",
+    "pos": "T",
+    "injury": "Back",
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "TJ Parker",
     "pos": "LB",
     "injury": "Knee",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Tyrell Shavers",
-    "pos": "WR",
-    "injury": "Knee",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    }
   ],
   "opp": [
@@ -94,39 +80,46 @@
     "name": "Jaylinn Hawkins",
     "pos": "S",
     "injury": "Knee",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "John Simpson",
-    "pos": "G",
-    "injury": "Groin",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Kyle Hamilton",
-    "pos": "S",
-    "injury": "Knee",
-    "status": "Limited",
-    "game": false
+    "status": "Out",
+    "game": true
    },
    {
     "name": "Olaivavega Ioane",
     "pos": "G",
     "injury": "Knee",
-    "status": "Limited",
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Adam Randall",
+    "pos": "RB",
+    "injury": "Neck",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "T.J. Tampa",
+    "pos": "CB",
+    "injury": "Knee",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Calais Campbell",
+    "pos": "DT",
+    "injury": "Not injury related - resting player",
+    "status": "DNP",
     "game": false
    },
    {
-    "name": "Roquan Smith",
-    "pos": "LB",
-    "injury": "Knee",
-    "status": "Limited",
+    "name": "Ronnie Stanley",
+    "pos": "T",
+    "injury": "Toe",
+    "status": "DNP",
     "game": false
    }
   ],
-  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
+  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed."
  },
  "allenVs": {
   "wins": 2,
