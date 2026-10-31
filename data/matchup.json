@@ -655,6 +655,7 @@
      "line": 60,
      "hit": 5
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 50+ in all 6 games.",
      "Averages 104.5 rushing yards a game (median 103).",
@@ -662,6 +663,71 @@
     ],
     "cons": [
      "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Completions",
+    "key": "cmp",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     20,
+     20,
+     16,
+     23,
+     12,
+     23
+    ],
+    "ladder": [
+     {
+      "line": 12,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "next": {
+     "line": 15,
+     "hit": 5
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 12+ in all 6 games.",
+     "Averages 19.0 completions a game (median 20).",
+     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+    ],
+    "cons": [
+     "Closest call: 12 vs LA in Week 5.",
+     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
     ],
     "status": ""
    },
@@ -718,6 +784,7 @@
      "line": 6,
      "hit": 4
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 4+ in all 6 games.",
      "Averages 8.0 rushing attempts a game (median 7).",
@@ -782,6 +849,7 @@
      "line": 60,
      "hit": 5
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 50+ in all 6 games.",
      "Averages 101.3 receiving yards a game (median 101).",
@@ -856,6 +924,7 @@
      "line": 15,
      "hit": 4
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 12+ in all 6 games.",
      "Averages 19.5 rushing attempts a game (median 21.5)."
@@ -872,8 +941,8 @@
     "player": "Josh Allen",
     "pos": "QB",
     "cat": "Passing",
-    "market": "Completions",
-    "key": "cmp",
+    "market": "Passing yards",
+    "key": "passYds",
     "games": [
      {
       "wk": 1,
@@ -901,31 +970,99 @@
      }
     ],
     "vals": [
-     20,
-     20,
-     16,
-     23,
-     12,
-     23
+     334,
+     248,
+     204,
+     253,
+     210,
+     255
     ],
     "ladder": [
      {
-      "line": 12,
+      "line": 150,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 175,
+      "hit": 6,
+      "stars": 5.0
+     },
+     {
+      "line": 200,
       "hit": 6,
       "stars": 4.5
      }
     ],
     "next": {
-     "line": 15,
-     "hit": 5
+     "line": 225,
+     "hit": 4
     },
+    "gameday": 0.5,
     "pros": [
-     "Cleared 12+ in all 6 games.",
-     "Averages 19.0 completions a game (median 20)."
+     "Cleared 200+ in all 6 games.",
+     "Averages 250.7 passing yards a game (median 250.5).",
+     "Starting DB out for the defense: Jaylinn Hawkins (S)."
     ],
     "cons": [
-     "Closest call: 12 vs LA in Week 5.",
+     "Closest call: 204 vs LAC in Week 3.",
      "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Ty Johnson",
+    "pos": "RB",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     4,
+     2,
+     4,
+     2
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 4,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 3,
+     "hit": 2
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 2+ in all 4 games.",
+     "Averages 3.0 receptions a game (median 3).",
+     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+    ],
+    "cons": [
+     "Closest call: 2 vs NE in Week 4.",
+     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game.",
+     "Small sample: 4 games."
     ],
     "status": ""
    },
@@ -987,6 +1124,7 @@
      "line": 50,
      "hit": 6
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 40+ in all 7 games.",
      "Averages 82.7 rushing yards a game (median 73).",
@@ -1067,6 +1205,7 @@
      "line": 18,
      "hit": 4
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 15+ in all 7 games.",
      "Averages 21.0 rushing attempts a game (median 23)."
@@ -1120,6 +1259,7 @@
      "line": 15,
      "hit": 3
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 10+ in all 4 games.",
      "Averages 19.0 rushing yards a game (median 18).",
@@ -1194,6 +1334,7 @@
      "line": 6,
      "hit": 4
     },
+    "gameday": 0.0,
     "pros": [
      "Cleared 5+ in all 6 games.",
      "Averages 6.7 receptions a game (median 7).",
@@ -1204,135 +1345,13 @@
      "Closest call: 5 vs IND in Week 1."
     ],
     "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Passing yards",
-    "key": "passYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     }
-    ],
-    "vals": [
-     334,
-     248,
-     204,
-     253,
-     210,
-     255
-    ],
-    "ladder": [
-     {
-      "line": 150,
-      "hit": 6,
-      "stars": 5.0
-     },
-     {
-      "line": 175,
-      "hit": 6,
-      "stars": 4.5
-     },
-     {
-      "line": 200,
-      "hit": 6,
-      "stars": 4.0
-     }
-    ],
-    "next": {
-     "line": 225,
-     "hit": 4
-    },
-    "pros": [
-     "Cleared 200+ in all 6 games.",
-     "Averages 250.7 passing yards a game (median 250.5)."
-    ],
-    "cons": [
-     "Closest call: 204 vs LAC in Week 3.",
-     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Ty Johnson",
-    "pos": "RB",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     }
-    ],
-    "vals": [
-     4,
-     2,
-     4,
-     2
-    ],
-    "ladder": [
-     {
-      "line": 2,
-      "hit": 4,
-      "stars": 4.0
-     }
-    ],
-    "next": {
-     "line": 3,
-     "hit": 2
-    },
-    "pros": [
-     "Cleared 2+ in all 4 games.",
-     "Averages 3.0 receptions a game (median 3)."
-    ],
-    "cons": [
-     "Closest call: 2 vs NE in Week 4.",
-     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game.",
-     "Small sample: 4 games."
-    ],
-    "status": ""
    }
   ],
-  "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games and the injury report."
+  "weather": null,
+  "conditions": [
+   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
+   "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
+  ],
+  "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
  }
 }

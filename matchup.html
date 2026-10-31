@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=25">
+<link rel="stylesheet" href="css/site.css?v=26">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -31,6 +31,7 @@
   <section id="propSec" hidden aria-labelledby="propHead">
     <h2 class="sec" id="propHead">90%+ props this season</h2>
     <p class="note" style="margin:0 0 10px" id="propSub"></p>
+    <ul class="pcond" id="propCond" hidden></ul>
     <div class="tabs" id="propTeam" role="group" aria-label="Team"></div>
     <div class="tabs" id="propCat" role="group" aria-label="Prop type"></div>
     <div id="props"></div>
@@ -141,6 +142,7 @@ function props(m){
   document.getElementById('propSec').hidden=false;
   document.getElementById('propSub').textContent='Every Bills and '+(m.opp.nick||m.opp.name)+' player prop that cleared in at least 90% of his games this season. Green bars cleared the line, red bars missed. Tap a line in a card\u2019s table to move it on the chart.';
   document.getElementById('propNote').textContent=P.note+' Updated '+P.asOf+'.';
+  if(P.conditions&&P.conditions.length){var pc=document.getElementById('propCond'); pc.innerHTML=li(P.conditions); pc.hidden=false;}
   var box=document.getElementById('propSec');
   box.addEventListener('click',function(e){var b=e.target.closest('button[data-k]'); if(b&&!b.disabled){F[b.dataset.k]=b.dataset.v;render();return;}
     var tr=e.target.closest('tr.rung'); if(tr){sel[+tr.dataset.i]=+tr.dataset.j;render();var r=box.querySelector('tr.rung[data-i="'+tr.dataset.i+'"][data-j="'+tr.dataset.j+'"]');r&&r.focus();}});

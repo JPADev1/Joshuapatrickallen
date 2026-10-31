@@ -606,7 +606,7 @@ MARKETS = [  # key, label, category, value(row), lines, who
     ("cmp", "Completions", "Passing", lambda r: num(r, "completions"), [12, 15, 18, 20, 22, 25], "qb"),
     ("rushYds", "Rushing yards", "Rushing", lambda r: num(r, "rushing_yards"), [10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100], "rush"),
     ("rushAtt", "Rushing attempts", "Rushing", lambda r: num(r, "carries"), [4, 6, 8, 10, 12, 15, 18, 20], "rush"),
-    ("rec", "Receptions", "Receiving", lambda r: num(r, "receptions"), [1, 2, 3, 4, 5, 6, 7, 8], "rec"),
+    ("rec", "Receptions", "Receiving", lambda r: num(r, "receptions"), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "rec"),
     ("recYds", "Receiving yards", "Receiving", lambda r: num(r, "receiving_yards"), [10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100], "rec"),
     ("anyTD", "Anytime TD", "TD", lambda r: num(r, "rushing_tds") + num(r, "receiving_tds"), [1], "td"),
 ]
@@ -622,6 +622,109 @@ def pname(s):
 
 def stars(x):
     return max(1.0, min(5.0, round(x * 2) / 2))
+
+
+# Stadium coordinates for the game-day forecast (Open-Meteo, free, no key). Roof: nflverse "dome" or blank
+# (retractable) means weather doesn't count; unknown stadiums get no weather adjustment.
+STADIUM_LL = {
+    "ATL97": (33.755, -84.401), "BAL00": (39.278, -76.623), "BOS00": (42.091, -71.264), "BUF00": (42.774, -78.787),
+    "CAR00": (35.226, -80.853), "CHI98": (41.862, -87.617), "CIN00": (39.095, -84.516), "CLE00": (41.506, -81.700),
+    "DAL00": (32.748, -97.093), "DEN00": (39.744, -105.020), "DET00": (42.340, -83.046), "GNB00": (44.501, -88.062),
+    "HOU00": (29.685, -95.411), "IND00": (39.760, -86.164), "JAX00": (30.324, -81.637), "KAN00": (39.049, -94.484),
+    "LAX01": (33.953, -118.339), "MIA00": (25.958, -80.239), "MIN01": (44.974, -93.258), "NAS00": (36.166, -86.771),
+    "NOR00": (29.951, -90.081), "NYC01": (40.813, -74.074), "PHI00": (39.901, -75.168), "PHO00": (33.528, -112.263),
+    "PIT00": (40.447, -80.016), "SEA00": (47.595, -122.332), "SFO01": (37.403, -121.970), "TAM00": (27.976, -82.503),
+    "VEG00": (36.091, -115.184), "WAS00": (38.908, -76.864), "LON00": (51.556, -0.280), "LON02": (51.604, -0.066),
+    "MEX00": (19.303, -99.150),
+}
+
+
+def game_weather(g):
+    """Kickoff-window forecast for an outdoor game within a week: {roof, temp, wind, gust, rain, snow, pop} or a roof note."""
+    roof = (g.get("roof") or "").lower()
+    if roof in ("dome", "closed", ""):
+        return {"indoor": True, "roof": "dome" if roof == "dome" else "retractable roof"}
+    ll = STADIUM_LL.get(g.get("stadium_id", ""))
+    if not ll:
+        return None
+    day = date.fromisoformat(g["gameday"])
+    if (day - date.today()).days > 7 or day < date.today():
+        return None
+    q = (f"https://api.open-meteo.com/v1/forecast?latitude={ll[0]}&longitude={ll[1]}"
+         "&hourly=temperature_2m,precipitation,precipitation_probability,snowfall,wind_speed_10m,wind_gusts_10m"
+         "&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York"
+         f"&start_date={g['gameday']}&end_date={g['gameday']}")
+    try:
+        with urllib.request.urlopen(q, timeout=30) as r:
+            h = json.load(r)["hourly"]
+    except Exception as e:
+        print("weather unavailable:", e)
+        return None
+    k = int(g["gametime"].split(":")[0])
+    idx = [i for i, t in enumerate(h["time"]) if k <= int(t[11:13]) <= k + 3]
+    if not idx:
+        return None
+    avg = lambda key: sum(h[key][i] or 0 for i in idx) / len(idx)
+    return {"indoor": False, "temp": round(avg("temperature_2m")), "wind": round(avg("wind_speed_10m")),
+            "gust": round(max(h["wind_gusts_10m"][i] or 0 for i in idx)), "rain": round(sum(h["precipitation"][i] or 0 for i in idx), 2),
+            "snow": round(sum(h["snowfall"][i] or 0 for i in idx), 1), "pop": max(h["precipitation_probability"][i] or 0 for i in idx)}
+
+
+def weather_effects(w):
+    """[(categories, keys or None, star change, pro/con text)] from the forecast."""
+    if not w or w.get("indoor"):
+        return []
+    out = []
+    air = ("Passing", "Receiving")
+    if w["wind"] >= 20 or w["gust"] >= 35:
+        out.append((air, None, -1, f"Forecast wind {w['wind']} mph (gusts to {w['gust']}) at kickoff: hard on passing and catching."))
+    elif w["wind"] >= 15:
+        out.append((air, None, -0.5, f"Forecast wind {w['wind']} mph at kickoff can cut into passing."))
+    wet = w["snow"] >= 0.2 or (w["rain"] >= 0.15 and w["pop"] >= 50)
+    if wet:
+        what = f"snow ({w['snow']} in)" if w["snow"] >= 0.2 else f"rain ({w['pop']}% chance, about {w['rain']} in)"
+        out.append((air, None, -0.5, f"Forecast {what} during the game: a slick ball hurts passing."))
+        out.append((("Rushing",), ("rushAtt",), 0.5, f"Forecast {what}: wet games usually lean on the run."))
+    if w["temp"] <= 20:
+        out.append((air, None, -0.5, f"Forecast {w['temp']}°F at kickoff: very cold games tend to depress passing."))
+    if (w["wind"] >= 15 or wet) and not any(c == ("Rushing",) for c, _, _, _ in out):
+        out.append((("Rushing",), ("rushAtt",), 0.5, "Bad weather usually pushes play-calling toward the run."))
+    return out
+
+
+def injury_effects(m, snaps, teams, games):
+    """Game-status (Out/Doubtful) starters and what they change: [(team, categories, keys, positions, delta, text)].
+    A starter played 60%+ of his team's offensive or defensive snaps in the games he played this season."""
+    share = defaultdict(list)
+    for s in snaps:
+        if s.get("game_type") == "REG" and s["team"] in teams and s["game_id"] in games:
+            share[(s["team"], pname(s["player"]))].append(max(num(s, "offense_pct"), num(s, "defense_pct")))
+    starter = lambda team, nm: bool(share.get((team, pname(nm)))) and sum(share[(team, pname(nm))]) / len(share[(team, pname(nm))]) >= 0.6
+    out = []
+    for side, team in (("bills", BILLS), ("opp", teams[1])):
+        other = teams[1] if team == BILLS else BILLS
+        gone = [x for x in m["injuries"][side] if x["status"] in ("Out", "Doubtful") and starter(team, x["name"])]
+        pos = lambda grp: [x for x in gone if x["pos"] in grp]
+        nm = lambda L: ", ".join(f"{x['name']} ({x['pos']})" for x in L[:3])
+        db, front = pos({"CB", "S", "SS", "FS", "DB"}), pos({"DE", "DT", "NT", "LB", "OLB", "ILB", "MLB", "DL", "EDGE"})
+        if db:  # helps the other team's passing game
+            out.append((other, ("Passing", "Receiving"), None, None, 0.5 if len(db) >= 1 else 0, f"Starting DB{'s' if len(db) > 1 else ''} out for the defense: {nm(db)}."))
+        if front:
+            out.append((other, ("Rushing",), None, None, 0.5 if len(front) >= 2 else 0, f"Starting front-seven player{'s' if len(front) > 1 else ''} out for the defense: {nm(front)}."))
+        rec = pos({"WR", "TE"})
+        if rec:  # more targets for the other pass catchers, fewer weapons for the QB
+            out.append((team, ("Receiving",), None, {"WR", "TE", "RB"}, 0.5, f"Teammate{'s' if len(rec) > 1 else ''} out: {nm(rec)}, freeing up targets."))
+            out.append((team, ("Passing",), None, {"QB"}, -0.5 if len(rec) >= 2 else 0, f"Starting receiver{'s' if len(rec) > 1 else ''} out: {nm(rec)}."))
+        rb = pos({"RB", "FB", "HB"})
+        if rb:
+            out.append((team, ("Rushing", "Receiving"), None, {"RB"}, 0.5, f"Starting back out: {nm(rb)}, so more work for the others."))
+        ol = pos({"T", "G", "C", "OT", "OG", "OL"})
+        if len(ol) >= 2:
+            out.append((team, ("Passing", "Rushing"), None, None, -0.5, f"Two or more starting linemen out: {nm(ol)}."))
+        qb = pos({"QB"})
+        if qb:
+            out.append((team, ("Receiving",), None, None, -1, f"Starting QB out: {nm(qb)}."))
+    return out
 
 
 def build_props(week26, sched, S, m, snaps):
@@ -658,6 +761,21 @@ def build_props(week26, sched, S, m, snaps):
         rank[f + "_v"] = per
     opp_of = {BILLS: teams[1], teams[1]: BILLS}
     nickname = {BILLS: "Bills", teams[1]: m["opp"]["nick"]}
+    nxt = next((g for g in sched if g["game_id"] == m.get("gameId")), None)
+    wx = game_weather(nxt) if nxt else None
+    wfx = weather_effects(wx)
+    ifx = injury_effects(m, snaps, teams, games) if any(x["game"] for x in m["injuries"]["bills"] + m["injuries"]["opp"]) else []
+
+    def context(team, pos, cat, key):
+        """game-day star change plus pro and con lines from weather and the final injury report"""
+        d, pros, cons = 0.0, [], []
+        for cats, keys, delta, text in wfx:
+            if cat in cats and (keys is None or key in keys):
+                d += delta; (pros if delta > 0 else cons).append(text)
+        for t, cats, keys, poss, delta, text in ifx:
+            if t == team and cat in cats and (keys is None or key in keys) and (poss is None or pos in poss):
+                d += delta; (cons if delta < 0 or text.startswith(("Starting receiver", "Starting QB", "Two or more")) else pros).append(text)
+        return d, pros, cons
 
     out = []
     for (team, pid), by_game in rows.items():
@@ -702,6 +820,7 @@ def build_props(week26, sched, S, m, snaps):
             fld, against, unit = DEF_FOR[cat]
             o = opp_of[team]
             drank, dval = rank[fld].get(o), rank[fld + "_v"].get(o, 0)
+            gd, gpros, gcons = context(team, {"FB": "RB", "HB": "RB"}.get(pos, pos), cat, key)
             ladder = []
             for ln, hit in rungs:
                 misses = [i for i, v in enumerate(vals) if v < ln]
@@ -719,6 +838,7 @@ def build_props(week26, sched, S, m, snaps):
                     s -= 1
                 elif st in ("DNP", "Limited"):
                     s -= 0.5
+                s += gd
                 if any(i >= n - 2 for i in misses):
                     s -= 0.5
                 elif key != "anyTD" and sum(vals[-2:]) / 2 < 0.75 * avg:
@@ -767,6 +887,8 @@ def build_props(week26, sched, S, m, snaps):
                 cons.append(f"Swingy: anywhere from {min(vals)} to {max(vals)} this season.")
             if st:
                 cons.append(f"On this week's injury report: {st}.")
+            pros += gpros
+            cons = gcons + cons
             if n >= 4 and key != "anyTD":
                 last2 = sum(vals[-2:]) / 2
                 if last2 < 0.75 * avg:
@@ -780,15 +902,27 @@ def build_props(week26, sched, S, m, snaps):
             if not cons:
                 cons.append("Nothing in the numbers stands out; one off game is all it takes to lose.")
             out.append({"team": team, "nick": nickname[team], "player": name, "pos": pos, "cat": cat, "market": label, "key": key,
-                        "games": labels, "vals": vals, "ladder": ladder, "next": top_next, "pros": pros[:4], "cons": cons[:4],
+                        "games": labels, "vals": vals, "ladder": ladder, "next": top_next, "gameday": gd, "pros": pros[:5], "cons": cons[:5],
                         "status": st})
     out.sort(key=lambda p: (-p["ladder"][-1]["stars"], -p["ladder"][-1]["hit"] / len(p["vals"]), p["team"] != BILLS, p["player"]))
-    return {"asOf": short_date(date.today()), "items": out,
+    if wx and wx.get("indoor"):
+        wtxt = f"Game-day weather: played under a {wx['roof']}, so weather doesn't change the ratings."
+    elif wx:
+        wtxt = (f"Game-day forecast at kickoff: {wx['temp']}°F, wind {wx['wind']} mph (gusts {wx['gust']}), "
+                f"{wx['pop']}% chance of precipitation" + (f", {wx['snow']} in of snow" if wx["snow"] >= 0.1 else "") + ". "
+                + ("Ratings are adjusted for it." if wfx else "Nothing in it changes the ratings."))
+    else:
+        wtxt = "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums)."
+    itxt = ("Final injury report: starters ruled Out or Doubtful are factored into the ratings." if ifx else
+            "Final injury report: no starter is ruled Out or Doubtful in a way that changes the ratings." if any(x["game"] for x in m["injuries"]["bills"] + m["injuries"]["opp"]) else
+            "Final injury report: not out yet (usually Friday); ratings will update with it.")
+    return {"asOf": short_date(date.today()), "items": out, "weather": wx, "conditions": [wtxt, itxt],
             "note": f"{SEASON} regular season only. A game counts if the player was on the field for at least one offensive snap "
                     "(from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, "
                     "not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. "
                     "Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, "
-                    "recent games and the injury report."}
+                    "recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and "
+                    "starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."}
 
 
 def build_mountain_live(week26):

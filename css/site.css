@@ -355,3 +355,5 @@ tr.nextup td{color:var(--mute);font-style:italic}
 .gamble p{margin:0 0 6px}
 .gamble p:last-child{margin:0}
 .gamble a{color:inherit;font-weight:700}
+.pcond{margin:0 0 12px;padding:10px 14px 10px 30px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:.84rem}
+.pcond li{margin:2px 0}
