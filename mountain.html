@@ -347,7 +347,7 @@ function buttons(){
 }
 function render(){ buttons(); var rows=ranking(); placeAll(rows); headline(rows); list(rows); hash(); }
 function hash(){var p=['s='+FAM]; if(S.kind!==F.def)p.push('k='+S.kind); if(S.mode==='season')p.push('m=season'+(S.w!==WK?'&w='+S.w:'')); if(F.pos&&S.pos!=='ALL')p.push('pos='+S.pos); if(S.n&&S.mode!=='season')p.push('n='+S.n); if(!S.st)p.push('stats=off');
-  var h='#'+p.join('&'); if(location.hash!==h)history.replaceState(history.state,'',h);}
+  var h='#'+p.join('&'); try{if(location.hash!==h)history.replaceState(history.state,'',h);}catch(e){}}
 function readFam(){var m=location.hash.match(/(?:^#|&)s=(yards|wins|afce)\b/); FAM=m?m[1]:'yards'; F=FAMS[FAM]; S.kind=F.def;
   var k=location.hash.match(/(?:^#|&)k=(\w+)/); if(k&&F.cols[k[1]])S.kind=k[1];}
 function readHash(){location.hash.slice(1).split('&').forEach(function(kv){var a=kv.split('=');
