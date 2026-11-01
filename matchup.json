@@ -1,267 +1,133 @@
 {
  "updated": "2026-11-01",
- "gameId": "2026_08_BAL_BUF",
- "week": 8,
- "label": "Week 8",
+ "gameId": "2026_09_BUF_MIN",
+ "week": 9,
+ "label": "Week 9",
  "bills": {
   "name": "Buffalo Bills",
-  "record": "5-1"
+  "record": "6-1"
  },
  "opp": {
-  "name": "Baltimore Ravens",
-  "abbr": "BAL",
-  "nick": "Ravens",
-  "record": "4-3"
+  "name": "Minnesota Vikings",
+  "abbr": "MIN",
+  "nick": "Vikings",
+  "record": "6-1"
  },
- "home": true,
- "date": "Sunday, Nov. 1, 2026",
- "time": "1:00 p.m. ET",
- "venue": "Highmark Stadium, Orchard Park",
+ "home": false,
+ "date": "Monday, Nov. 9, 2026",
+ "time": "8:15 p.m. ET",
+ "venue": "U.S. Bank Stadium, Minneapolis",
  "tv": "",
  "series": {
-  "summary": "Bills are 5-7 against the Ravens in the regular season since 1999.",
-  "last": "Last meeting: Sept. 7, 2025, Bills 41, Ravens 40."
+  "summary": "Bills are 4-3 against the Vikings in the regular season since 1999.",
+  "last": "Last meeting: Nov. 13, 2022, Vikings 33, Bills 30."
  },
  "injuries": {
-  "week": 8,
-  "bills": [
-   {
-    "name": "Tyrell Shavers",
-    "pos": "WR",
-    "injury": "Knee",
-    "status": "Out",
-    "game": true
-   },
-   {
-    "name": "DJ Moore",
-    "pos": "WR",
-    "injury": "Shoulder",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Dalton Kincaid",
-    "pos": "TE",
-    "injury": "Chest",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Dee Alford",
-    "pos": "CB",
-    "injury": "Ankle",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Greg Gaines",
-    "pos": "DT",
-    "injury": "Calf",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Spencer Brown",
-    "pos": "T",
-    "injury": "Back",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "TJ Parker",
-    "pos": "LB",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
-   }
-  ],
-  "opp": [
-   {
-    "name": "Jaylinn Hawkins",
-    "pos": "S",
-    "injury": "Knee",
-    "status": "Out",
-    "game": true
-   },
-   {
-    "name": "Olaivavega Ioane",
-    "pos": "G",
-    "injury": "Knee",
-    "status": "Out",
-    "game": true
-   },
-   {
-    "name": "Adam Randall",
-    "pos": "RB",
-    "injury": "Neck",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "T.J. Tampa",
-    "pos": "CB",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Calais Campbell",
-    "pos": "DT",
-    "injury": "Not injury related - resting player",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Ronnie Stanley",
-    "pos": "T",
-    "injury": "Toe",
-    "status": "DNP",
-    "game": false
-   }
-  ],
-  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed."
+  "week": 9,
+  "bills": [],
+  "opp": [],
+  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
  },
  "allenVs": {
-  "wins": 2,
-  "losses": 2,
-  "games": 4,
-  "cmp": 85,
-  "att": 150,
-  "yds": 933,
-  "td": 4,
-  "int": 1,
-  "sacks": 11,
-  "rushAtt": 32,
-  "rushYds": 130,
-  "rushTD": 3,
-  "rating": 81.3,
-  "postWins": 2,
+  "wins": 1,
+  "losses": 1,
+  "games": 2,
+  "cmp": 44,
+  "att": 65,
+  "yds": 526,
+  "td": 2,
+  "int": 2,
+  "sacks": 5,
+  "rushAtt": 16,
+  "rushYds": 123,
+  "rushTD": 2,
+  "rating": 89.6,
+  "postWins": 0,
   "postLosses": 0
  },
  "boxscores": [
   {
-   "gameId": "2025_01_BAL_BUF",
-   "date": "Sept. 7, 2025",
+   "gameId": "2022_10_MIN_BUF",
+   "date": "Nov. 13, 2022",
    "site": "Highmark Stadium, Orchard Park",
-   "week": "Week 1",
+   "week": "Week 10",
    "teams": [
-    "Ravens",
-    "Bills"
-   ],
-   "line": [
-    [
-     3,
-     17,
-     14,
-     6,
-     40
-    ],
-    [
-     7,
-     6,
-     6,
-     22,
-     41
-    ]
-   ],
-   "allen": "33-46, 394 yds, 2 TD, 0 INT, 1 sack, 112.0 rating. 14 carries, 30 yds, 2 TD.",
-   "bills": [
-    "James Cook: 13 carries, 44 yds, 1 TD",
-    "Keon Coleman: 8 rec, 112 yds, 1 TD",
-    "Khalil Shakir: 6 rec, 64 yds",
-    "Josh Palmer: 5 rec, 61 yds"
-   ],
-   "opp": [
-    "Lamar Jackson: 14-19, 209 yds, 2 TD, 0 INT",
-    "Derrick Henry: 18 carries, 169 yds, 2 TD",
-    "Zay Flowers: 7 rec, 143 yds, 1 TD",
-    "DeAndre Hopkins: 2 rec, 35 yds, 1 TD",
-    "Derrick Henry: 1 rec, 13 yds"
-   ],
-   "source": "nflverse"
-  },
-  {
-   "gameId": "2024_20_BAL_BUF",
-   "date": "Jan. 19, 2025",
-   "site": "Highmark Stadium, Orchard Park",
-   "week": "Playoffs",
-   "teams": [
-    "Ravens",
+    "Vikings",
     "Bills"
    ],
    "line": [
     [
      7,
      3,
-     9,
-     6,
-     25
+     7,
+     13,
+     3,
+     33
     ],
     [
-     7,
      14,
+     10,
+     3,
+     3,
      0,
-     6,
-     27
+     30
     ]
    ],
-   "allen": "16-22, 127 yds, 0 TD, 0 INT, 1 sack, 86.7 rating. 10 carries, 20 yds, 2 TD.",
+   "allen": "29-43, 330 yds, 1 TD, 2 INT, 2 sacks, 78.6 rating. 6 carries, 84 yds.",
    "bills": [
-    "James Cook: 17 carries, 67 yds",
-    "Ty Johnson: 5 carries, 31 yds",
-    "Khalil Shakir: 6 rec, 67 yds",
-    "James Cook: 3 rec, 15 yds",
-    "Mack Hollins: 1 rec, 12 yds"
+    "Devin Singletary: 13 carries, 47 yds, 2 TD",
+    "James Cook: 5 carries, 22 yds",
+    "Stefon Diggs: 12 rec, 128 yds",
+    "Gabe Davis: 6 rec, 93 yds, 1 TD",
+    "Dawson Knox: 4 rec, 57 yds"
    ],
    "opp": [
-    "Lamar Jackson: 18-25, 254 yds, 2 TD, 1 INT",
-    "Derrick Henry: 16 carries, 84 yds, 1 TD",
-    "Justice Hill: 6 carries, 50 yds",
-    "Isaiah Likely: 4 rec, 73 yds, 1 TD",
-    "Rashod Bateman: 4 rec, 66 yds, 1 TD",
-    "Mark Andrews: 5 rec, 61 yds"
+    "Kirk Cousins: 30-50, 357 yds, 1 TD, 2 INT",
+    "Dalvin Cook: 14 carries, 119 yds, 1 TD",
+    "Justin Jefferson: 10 rec, 193 yds, 1 TD",
+    "Adam Thielen: 5 rec, 49 yds",
+    "T.J. Hockenson: 7 rec, 45 yds"
    ],
    "source": "nflverse"
   },
   {
-   "gameId": "2024_04_BUF_BAL",
-   "date": "Sept. 29, 2024",
-   "site": "M&T Bank Stadium, Baltimore",
-   "week": "Week 4",
+   "gameId": "2018_03_BUF_MIN",
+   "date": "Sept. 23, 2018",
+   "site": "U.S. Bank Stadium, Minneapolis",
+   "week": "Week 3",
    "teams": [
     "Bills",
-    "Ravens"
+    "Vikings"
    ],
    "line": [
     [
-     3,
+     17,
+     10,
      0,
-     7,
      0,
-     10
+     27
     ],
     [
-     7,
-     14,
-     7,
-     7,
-     35
+     0,
+     0,
+     0,
+     6,
+     6
     ]
    ],
-   "allen": "16-29, 180 yds, 0 TD, 0 INT, 3 sacks, 73.9 rating. 5 carries, 21 yds.",
+   "allen": "15-22, 196 yds, 1 TD, 0 INT, 3 sacks, 111.2 rating. 10 carries, 39 yds, 2 TD.",
    "bills": [
-    "James Cook: 9 carries, 39 yds",
-    "Ray Davis: 7 carries, 11 yds",
-    "Khalil Shakir: 4 rec, 62 yds",
-    "Keon Coleman: 3 rec, 51 yds",
-    "Dalton Kincaid: 5 rec, 47 yds"
+    "Chris Ivory: 20 carries, 56 yds",
+    "Marcus Murphy: 8 carries, 33 yds",
+    "Chris Ivory: 3 rec, 70 yds",
+    "Andre Holmes: 3 rec, 29 yds",
+    "Kelvin Benjamin: 3 rec, 29 yds"
    ],
    "opp": [
-    "Lamar Jackson: 13-18, 156 yds, 2 TD, 0 INT",
-    "Derrick Henry: 24 carries, 199 yds, 1 TD",
-    "Justice Hill: 6 rec, 78 yds, 1 TD",
-    "Isaiah Likely: 1 rec, 26 yds",
-    "Rashod Bateman: 1 rec, 23 yds"
+    "Kirk Cousins: 40-55, 296 yds, 1 TD, 1 INT",
+    "Adam Thielen: 14 rec, 105 yds",
+    "Kyle Rudolph: 5 rec, 48 yds, 1 TD",
+    "C.J. Ham: 5 rec, 47 yds"
    ],
    "source": "nflverse"
   }
@@ -271,88 +137,16 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2019_14_BAL_BUF",
+    "game_id": "2018_03_BUF_MIN",
     "team": "BUF",
-    "completions": "17",
-    "attempts": "39",
-    "passing_yards": "146",
+    "completions": "15",
+    "attempts": "22",
+    "passing_yards": "196",
     "passing_tds": "1",
-    "passing_interceptions": "0",
-    "sacks_suffered": "6",
-    "carries": "2",
-    "rushing_yards": "9",
-    "rushing_tds": "0",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2020_19_BAL_BUF",
-    "team": "BUF",
-    "completions": "23",
-    "attempts": "37",
-    "passing_yards": "206",
-    "passing_tds": "1",
-    "passing_interceptions": "0",
-    "sacks_suffered": "2",
-    "carries": "7",
-    "rushing_yards": "3",
-    "rushing_tds": "0",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2022_04_BUF_BAL",
-    "team": "BUF",
-    "completions": "19",
-    "attempts": "36",
-    "passing_yards": "213",
-    "passing_tds": "1",
-    "passing_interceptions": "1",
-    "sacks_suffered": "1",
-    "carries": "11",
-    "rushing_yards": "70",
-    "rushing_tds": "1",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2024_04_BUF_BAL",
-    "team": "BUF",
-    "completions": "16",
-    "attempts": "29",
-    "passing_yards": "180",
-    "passing_tds": "0",
     "passing_interceptions": "0",
     "sacks_suffered": "3",
-    "carries": "5",
-    "rushing_yards": "21",
-    "rushing_tds": "0",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2024_20_BAL_BUF",
-    "team": "BUF",
-    "completions": "16",
-    "attempts": "22",
-    "passing_yards": "127",
-    "passing_tds": "0",
-    "passing_interceptions": "0",
-    "sacks_suffered": "1",
     "carries": "10",
-    "rushing_yards": "20",
+    "rushing_yards": "39",
     "rushing_tds": "2",
     "receptions": "0",
     "receiving_yards": "0",
@@ -361,17 +155,17 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2025_01_BAL_BUF",
+    "game_id": "2022_10_MIN_BUF",
     "team": "BUF",
-    "completions": "33",
-    "attempts": "46",
-    "passing_yards": "394",
-    "passing_tds": "2",
-    "passing_interceptions": "0",
-    "sacks_suffered": "1",
-    "carries": "14",
-    "rushing_yards": "30",
-    "rushing_tds": "2",
+    "completions": "29",
+    "attempts": "43",
+    "passing_yards": "330",
+    "passing_tds": "1",
+    "passing_interceptions": "2",
+    "sacks_suffered": "2",
+    "carries": "6",
+    "rushing_yards": "84",
+    "rushing_tds": "0",
     "receptions": "0",
     "receiving_yards": "0",
     "receiving_tds": "0"
@@ -388,12 +182,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 33,
+     "v": 39,
      "rank": 1
     },
     "opp": {
-     "v": 24,
-     "rank": 12
+     "v": 23,
+     "rank": 20
     }
    },
    {
@@ -401,12 +195,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 28,
-     "rank": 30
+     "v": 30,
+     "rank": 28
     },
     "opp": {
-     "v": 24,
-     "rank": 18
+     "v": 16,
+     "rank": 1
     }
    },
    {
@@ -418,8 +212,8 @@
      "rank": 11
     },
     "opp": {
-     "v": 242,
-     "rank": 19
+     "v": 181,
+     "rank": 29
     }
    },
    {
@@ -431,8 +225,8 @@
      "rank": 31
     },
     "opp": {
-     "v": 235,
-     "rank": 15
+     "v": 181,
+     "rank": 2
     }
    },
    {
@@ -444,8 +238,8 @@
      "rank": 2
     },
     "opp": {
-     "v": 142,
-     "rank": 4
+     "v": 119,
+     "rank": 12
     }
    },
    {
@@ -457,8 +251,8 @@
      "rank": 15
     },
     "opp": {
-     "v": 97,
-     "rank": 9
+     "v": 98,
+     "rank": 10
     }
    },
    {
@@ -471,7 +265,7 @@
     },
     "opp": {
      "v": 18,
-     "rank": 20
+     "rank": 25
     }
    },
    {
@@ -483,8 +277,8 @@
      "rank": 22
     },
     "opp": {
-     "v": 16,
-     "rank": 16
+     "v": 21,
+     "rank": 1
     }
    },
    {
@@ -497,7 +291,7 @@
     },
     "opp": {
      "v": 2,
-     "rank": 4
+     "rank": 6
     }
    },
    {
@@ -509,58 +303,58 @@
      "rank": 22
     },
     "opp": {
-     "v": 3,
-     "rank": 24
+     "v": 7,
+     "rank": 2
     }
    }
   ]
  },
  "colors": {
   "bills": "#00338D",
-  "opp": "#241773"
+  "opp": "#4F2683"
  },
  "oppSeason": [
   {
    "week": 1,
-   "opp": "Colts",
-   "home": false,
-   "result": "W 41-23"
+   "opp": "Packers",
+   "home": true,
+   "result": "W 39-22"
   },
   {
    "week": 2,
-   "opp": "Saints",
-   "home": true,
-   "result": "L 17-24"
+   "opp": "Bears",
+   "home": false,
+   "result": "W 9-3"
   },
   {
    "week": 3,
-   "opp": "Cowboys",
+   "opp": "Buccaneers",
    "home": false,
-   "result": "W 34-31"
+   "result": "W 23-16"
   },
   {
    "week": 4,
-   "opp": "Titans",
+   "opp": "Dolphins",
    "home": true,
-   "result": "W 24-18"
+   "result": "W 15-10"
   },
   {
    "week": 5,
-   "opp": "Falcons",
+   "opp": "Saints",
    "home": false,
-   "result": "W 30-23"
-  },
-  {
-   "week": 6,
-   "opp": "Browns",
-   "home": false,
-   "result": "L 10-13"
+   "result": "W 23-13"
   },
   {
    "week": 7,
-   "opp": "Bengals",
+   "opp": "Colts",
    "home": true,
-   "result": "L 13-35"
+   "result": "W 16-10"
+  },
+  {
+   "week": 8,
+   "opp": "Lions",
+   "home": false,
+   "result": "L 15-19"
   }
  ],
  "watch": {
@@ -586,8 +380,8 @@
     "detail": "Needs at least one of each to extend his record to 55 (regular season). Next closest: Cam Newton, 45."
    },
    {
-    "title": "Record against the Ravens",
-    "detail": "A win makes him 3-2 as a starter against them in the regular season."
+    "title": "Record against the Vikings",
+    "detail": "A win makes him 2-1 as a starter against them in the regular season."
    },
    {
     "title": "NFL career passing touchdowns",
@@ -662,72 +456,7 @@
      "Steady workload: 19.5 carries a game."
     ],
     "cons": [
-     "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Completions",
-    "key": "cmp",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     }
-    ],
-    "vals": [
-     20,
-     20,
-     16,
-     23,
-     12,
-     23
-    ],
-    "ladder": [
-     {
-      "line": 12,
-      "hit": 6,
-      "stars": 5.0
-     }
-    ],
-    "next": {
-     "line": 15,
-     "hit": 5
-    },
-    "gameday": 0.5,
-    "pros": [
-     "Cleared 12+ in all 6 games.",
-     "Averages 19.0 completions a game (median 20).",
-     "Starting DB out for the defense: Jaylinn Hawkins (S)."
-    ],
-    "cons": [
-     "Closest call: 12 vs LA in Week 5.",
-     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
+     "The Vikings rank 10th of 32 against the run, allowing 98 rushing yards a game."
     ],
     "status": ""
    },
@@ -791,73 +520,8 @@
      "Even his lowest game (5 vs NE) cleared it comfortably."
     ],
     "cons": [
-     "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game.",
+     "The Vikings rank 10th of 32 against the run, allowing 98 rushing yards a game.",
      "Swingy: anywhere from 5 to 14 this season."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BAL",
-    "nick": "Ravens",
-    "player": "Zay Flowers",
-    "pos": "WR",
-    "cat": "Receiving",
-    "market": "Receiving yards",
-    "key": "recYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@IND"
-     },
-     {
-      "wk": 3,
-      "opp": "@DAL"
-     },
-     {
-      "wk": 4,
-      "opp": "TEN"
-     },
-     {
-      "wk": 5,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 6,
-      "opp": "@CLE"
-     },
-     {
-      "wk": 7,
-      "opp": "CIN"
-     }
-    ],
-    "vals": [
-     150,
-     84,
-     118,
-     53,
-     66,
-     137
-    ],
-    "ladder": [
-     {
-      "line": 50,
-      "hit": 6,
-      "stars": 5.0
-     }
-    ],
-    "next": {
-     "line": 60,
-     "hit": 5
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 50+ in all 6 games.",
-     "Averages 101.3 receiving yards a game (median 101).",
-     "Steady volume: 8.8 targets a game.",
-     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 53 vs ATL in Week 5."
     ],
     "status": ""
    },
@@ -931,7 +595,263 @@
     ],
     "cons": [
      "Closest call: 12 vs NE in Week 4.",
-     "The Ravens rank 9th of 32 against the run, allowing 97 rushing yards a game."
+     "The Vikings rank 10th of 32 against the run, allowing 98 rushing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIN",
+    "nick": "Vikings",
+    "player": "Aaron Jones",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "GB"
+     },
+     {
+      "wk": 2,
+      "opp": "@CHI"
+     },
+     {
+      "wk": 3,
+      "opp": "@TB"
+     },
+     {
+      "wk": 4,
+      "opp": "MIA"
+     },
+     {
+      "wk": 5,
+      "opp": "@NO"
+     },
+     {
+      "wk": 7,
+      "opp": "IND"
+     }
+    ],
+    "vals": [
+     12,
+     23,
+     17,
+     20,
+     25,
+     8
+    ],
+    "ladder": [
+     {
+      "line": 8,
+      "hit": 6,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 10,
+     "hit": 5
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 8+ in all 6 games.",
+     "Averages 17.5 rushing attempts a game (median 18.5)."
+    ],
+    "cons": [
+     "Closest call: 8 vs IND in Week 7.",
+     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIN",
+    "nick": "Vikings",
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "GB"
+     },
+     {
+      "wk": 2,
+      "opp": "@CHI"
+     },
+     {
+      "wk": 3,
+      "opp": "@TB"
+     },
+     {
+      "wk": 5,
+      "opp": "@NO"
+     },
+     {
+      "wk": 7,
+      "opp": "IND"
+     }
+    ],
+    "vals": [
+     8,
+     3,
+     2,
+     6,
+     4
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 5,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 3,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 2+ in all 5 games.",
+     "Averages 4.6 receptions a game (median 4).",
+     "Steady volume: 6.2 targets a game.",
+     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 2 vs TB in Week 3.",
+     "Swingy: anywhere from 2 to 8 this season.",
+     "Small sample: 5 games."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIN",
+    "nick": "Vikings",
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receiving yards",
+    "key": "recYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "GB"
+     },
+     {
+      "wk": 2,
+      "opp": "@CHI"
+     },
+     {
+      "wk": 3,
+      "opp": "@TB"
+     },
+     {
+      "wk": 5,
+      "opp": "@NO"
+     },
+     {
+      "wk": 7,
+      "opp": "IND"
+     }
+    ],
+    "vals": [
+     92,
+     55,
+     32,
+     79,
+     44
+    ],
+    "ladder": [
+     {
+      "line": 25,
+      "hit": 5,
+      "stars": 5.0
+     },
+     {
+      "line": 30,
+      "hit": 5,
+      "stars": 4.5
+     }
+    ],
+    "next": {
+     "line": 40,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 30+ in all 5 games.",
+     "Averages 60.4 receiving yards a game (median 55).",
+     "Steady volume: 6.2 targets a game.",
+     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 32 vs TB in Week 3.",
+     "Small sample: 5 games."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Completions",
+    "key": "cmp",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     }
+    ],
+    "vals": [
+     20,
+     20,
+     16,
+     23,
+     12,
+     23
+    ],
+    "ladder": [
+     {
+      "line": 12,
+      "hit": 6,
+      "stars": 4.0
+     }
+    ],
+    "next": {
+     "line": 15,
+     "hit": 5
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 12+ in all 6 games.",
+     "Averages 19.0 completions a game (median 20)."
+    ],
+    "cons": [
+     "Closest call: 12 vs LA in Week 5.",
+     "The Vikings rank 2nd of 32 against the pass, allowing 181 passing yards a game."
     ],
     "status": ""
    },
@@ -981,32 +901,31 @@
      {
       "line": 150,
       "hit": 6,
-      "stars": 5.0
+      "stars": 4.5
      },
      {
       "line": 175,
       "hit": 6,
-      "stars": 5.0
+      "stars": 4.0
      },
      {
       "line": 200,
       "hit": 6,
-      "stars": 4.5
+      "stars": 3.5
      }
     ],
     "next": {
      "line": 225,
      "hit": 4
     },
-    "gameday": 0.5,
+    "gameday": 0.0,
     "pros": [
      "Cleared 200+ in all 6 games.",
-     "Averages 250.7 passing yards a game (median 250.5).",
-     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+     "Averages 250.7 passing yards a game (median 250.5)."
     ],
     "cons": [
      "Closest call: 204 vs LAC in Week 3.",
-     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game."
+     "The Vikings rank 2nd of 32 against the pass, allowing 181 passing yards a game."
     ],
     "status": ""
    },
@@ -1046,319 +965,33 @@
      {
       "line": 2,
       "hit": 4,
-      "stars": 4.5
+      "stars": 3.5
      }
     ],
     "next": {
      "line": 3,
      "hit": 2
     },
-    "gameday": 0.5,
+    "gameday": 0.0,
     "pros": [
      "Cleared 2+ in all 4 games.",
-     "Averages 3.0 receptions a game (median 3).",
-     "Starting DB out for the defense: Jaylinn Hawkins (S)."
+     "Averages 3.0 receptions a game (median 3)."
     ],
     "cons": [
      "Closest call: 2 vs NE in Week 4.",
-     "The Ravens rank 15th of 32 against the pass, allowing 235 passing yards a game.",
+     "The Vikings rank 2nd of 32 against the pass, allowing 181 passing yards a game.",
      "Small sample: 4 games."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BAL",
-    "nick": "Ravens",
-    "player": "Derrick Henry",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing yards",
-    "key": "rushYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@IND"
-     },
-     {
-      "wk": 2,
-      "opp": "NO"
-     },
-     {
-      "wk": 3,
-      "opp": "@DAL"
-     },
-     {
-      "wk": 4,
-      "opp": "TEN"
-     },
-     {
-      "wk": 5,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 6,
-      "opp": "@CLE"
-     },
-     {
-      "wk": 7,
-      "opp": "CIN"
-     }
-    ],
-    "vals": [
-     144,
-     68,
-     89,
-     73,
-     102,
-     58,
-     45
-    ],
-    "ladder": [
-     {
-      "line": 40,
-      "hit": 7,
-      "stars": 4.5
-     }
-    ],
-    "next": {
-     "line": 50,
-     "hit": 6
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 40+ in all 7 games.",
-     "Averages 82.7 rushing yards a game (median 73).",
-     "Steady workload: 21.0 carries a game."
-    ],
-    "cons": [
-     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game.",
-     "Swingy: anywhere from 45 to 144 this season.",
-     "Trending down: 51.5 a game over his last two, below his 82.7 average."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BAL",
-    "nick": "Ravens",
-    "player": "Derrick Henry",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@IND"
-     },
-     {
-      "wk": 2,
-      "opp": "NO"
-     },
-     {
-      "wk": 3,
-      "opp": "@DAL"
-     },
-     {
-      "wk": 4,
-      "opp": "TEN"
-     },
-     {
-      "wk": 5,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 6,
-      "opp": "@CLE"
-     },
-     {
-      "wk": 7,
-      "opp": "CIN"
-     }
-    ],
-    "vals": [
-     24,
-     16,
-     26,
-     23,
-     24,
-     17,
-     17
-    ],
-    "ladder": [
-     {
-      "line": 10,
-      "hit": 7,
-      "stars": 5.0
-     },
-     {
-      "line": 12,
-      "hit": 7,
-      "stars": 5.0
-     },
-     {
-      "line": 15,
-      "hit": 7,
-      "stars": 4.5
-     }
-    ],
-    "next": {
-     "line": 18,
-     "hit": 4
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 15+ in all 7 games.",
-     "Averages 21.0 rushing attempts a game (median 23)."
-    ],
-    "cons": [
-     "Closest call: 16 vs NO in Week 2.",
-     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BAL",
-    "nick": "Ravens",
-    "player": "Tyler Huntley",
-    "pos": "QB",
-    "cat": "Rushing",
-    "market": "Rushing yards",
-    "key": "rushYds",
-    "games": [
-     {
-      "wk": 4,
-      "opp": "TEN"
-     },
-     {
-      "wk": 5,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 6,
-      "opp": "@CLE"
-     },
-     {
-      "wk": 7,
-      "opp": "CIN"
-     }
-    ],
-    "vals": [
-     16,
-     20,
-     28,
-     12
-    ],
-    "ladder": [
-     {
-      "line": 10,
-      "hit": 4,
-      "stars": 4.5
-     }
-    ],
-    "next": {
-     "line": 15,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 10+ in all 4 games.",
-     "Averages 19.0 rushing yards a game (median 18).",
-     "Even his lowest game (12 vs CIN) cleared it comfortably."
-    ],
-    "cons": [
-     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game.",
-     "Small sample: 4 games."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BAL",
-    "nick": "Ravens",
-    "player": "Zay Flowers",
-    "pos": "WR",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@IND"
-     },
-     {
-      "wk": 3,
-      "opp": "@DAL"
-     },
-     {
-      "wk": 4,
-      "opp": "TEN"
-     },
-     {
-      "wk": 5,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 6,
-      "opp": "@CLE"
-     },
-     {
-      "wk": 7,
-      "opp": "CIN"
-     }
-    ],
-    "vals": [
-     5,
-     5,
-     8,
-     8,
-     6,
-     8
-    ],
-    "ladder": [
-     {
-      "line": 3,
-      "hit": 6,
-      "stars": 5.0
-     },
-     {
-      "line": 4,
-      "hit": 6,
-      "stars": 5.0
-     },
-     {
-      "line": 5,
-      "hit": 6,
-      "stars": 4.5
-     }
-    ],
-    "next": {
-     "line": 6,
-     "hit": 4
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 5+ in all 6 games.",
-     "Averages 6.7 receptions a game (median 7).",
-     "Steady volume: 8.8 targets a game.",
-     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 5 vs IND in Week 1."
     ],
     "status": ""
    }
   ],
   "weather": {
-   "indoor": false,
-   "temp": 69,
-   "wind": 6,
-   "gust": 11,
-   "rain": 0,
-   "snow": 0,
-   "pop": 1
+   "indoor": true,
+   "roof": "dome"
   },
   "conditions": [
-   "Game-day forecast at kickoff: 69°F, wind 6 mph (gusts 11), 1% chance of precipitation. Nothing in it changes the ratings.",
-   "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
+   "Game-day weather: played under a dome, so weather doesn't change the ratings.",
+   "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
  }
