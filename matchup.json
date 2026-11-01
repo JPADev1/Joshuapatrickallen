@@ -1349,15 +1349,15 @@
   ],
   "weather": {
    "indoor": false,
-   "temp": 68,
-   "wind": 8,
-   "gust": 12,
+   "temp": 67,
+   "wind": 10,
+   "gust": 14,
    "rain": 0,
    "snow": 0,
    "pop": 3
   },
   "conditions": [
-   "Game-day forecast at kickoff: 68°F, wind 8 mph (gusts 12), 3% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast at kickoff: 67°F, wind 10 mph (gusts 14), 3% chance of precipitation. Nothing in it changes the ratings.",
    "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
