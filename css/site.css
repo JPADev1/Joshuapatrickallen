@@ -357,3 +357,14 @@ tr.nextup td{color:var(--mute);font-style:italic}
 .gamble a{color:inherit;font-weight:700}
 .pcond{margin:0 0 12px;padding:10px 14px 10px 30px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:.84rem}
 .pcond li{margin:2px 0}
+
+/* Live game bar (scripts/live.js) */
+.livebar{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;padding:10px 14px;margin:0 0 18px;font-size:.92rem;line-height:1.45}
+.livebar b{color:var(--red);letter-spacing:.06em;margin-right:4px}
+.livebar .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px;animation:lbp 1.4s ease-in-out infinite}
+.livebar .dot.fin{background:var(--mute);animation:none}
+.livebar .ln{font-weight:700}
+.livebar .lnote{display:block;color:var(--mute);font-size:.74rem;margin-top:4px}
+.livebar .lrel{display:block;margin-top:8px;background:var(--blue);color:#fff;border:0;border-radius:99px;padding:6px 14px;font:inherit;font-weight:700;cursor:pointer}
+@keyframes lbp{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.livebar .dot{animation:none}}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Stat Mountain | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's climb up the NFL's all-time mountains: passing yards, rushing yards, wins, playoff wins and AFC East titles, career or through any number of seasons.">
-<link rel="stylesheet" href="css/site.css?v=26">
+<link rel="stylesheet" href="css/site.css?v=27">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -48,6 +48,8 @@
   <p class="note" id="srcnote"></p>
 </main>
 <footer>Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
+<script>window.JPALIVE_RELOAD=true;</script>
+<script src="scripts/live.js?v=1"></script>
 <script>
 (function(){
 var ALLEN='00-0034857', K=20, KMAX=20;
@@ -407,6 +409,7 @@ window.addEventListener('popstate',function(){if(isMax()){el('mtnCard').classLis
 // History is a static file; this season comes from the hourly stats job on GitHub (no redeploys).
 var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
 function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
+if(window.JPALive) load = JPALive.wrap(load); // adds Allen's live game while the Bills play
 var CACHE={};
 function start(){
   var fam=FAM;

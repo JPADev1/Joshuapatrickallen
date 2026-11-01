@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Touchdown Mountain | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's climb up the all-time touchdown mountain: see where he ranks against the NFL's top 20, career or through any number of seasons.">
-<link rel="stylesheet" href="css/site.css?v=26">
+<link rel="stylesheet" href="css/site.css?v=27">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -47,6 +47,8 @@
   <p class="note" id="srcnote">Regular season only. &ldquo;Through N seasons&rdquo; counts each player's first N seasons in the league, with his rookie year as season 1, whether or not he played much that year. Total touchdowns are passing + rushing + receiving. Positions are each player's main position. 1999 to the present: nflverse (free, open NFL data, CC BY 4.0). Before 1999: Wikipedia player pages (CC BY-SA 4.0), checked against each player's career totals; players whose careers began before 1999 are included if they appear on Wikipedia's career or season touchdown leader lists or had a notable touchdown total. When an older player's Wikipedia page gives a category (often a quarterback's rushing) only as a career total, he appears in that category only in views that cover his whole career. AAFC (1946&ndash;49) statistics are not NFL statistics and are left out, as in the NFL record book.</p>
 </main>
 <footer>Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
+<script>window.JPALIVE_RELOAD=true;</script>
+<script src="scripts/live.js?v=1"></script>
 <script>
 (function(){
 var ALLEN='00-0034857', K=20, KMAX=20;
@@ -344,6 +346,7 @@ window.addEventListener('popstate',function(){if(isMax()){el('mtnCard').classLis
 // History is a static file; the current season comes from the hourly stats job on GitHub (no redeploys).
 var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
 function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
+if(window.JPALive) load = JPALive.wrap(load); // adds Allen's live game while the Bills play
 Promise.all([fetch('data/td-mountain.json').then(function(r){if(!r.ok)throw 0;return r.json();}),
              load('td-mountain-2026.json').catch(function(){return null;}),
              load('allen-2026.json').catch(function(){return null;}),
