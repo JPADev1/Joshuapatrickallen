@@ -127,6 +127,40 @@ var RECORDS = [
  {cat:"Streaks", title:"Consecutive regular-season starts (quarterback)", status:"check", chip:"Longest active QB streak in the NFL", entries:[["Brett Favre (NFL record)",297],["Peyton Manning",208],["Matt Ryan",154],["Josh Allen",127]],
   note:"Allen: 122 entering 2026 plus 5 starts through Week 5. The streak began Nov. 25, 2018, after he missed four games as a rookie. Including playoffs it was 135 as of the 2025 finale. Favre's 297 is from my own knowledge and needs confirming. The Bills' own franchise record for consecutive starts has not been found yet."}
 ];
+// ===== TD combo games (regular season): games with at least P passing and R rushing touchdowns =====
+// Allen's counts through 2025 come from nflverse game logs (1+/1+ matches the official record: 54 through Week 6 of 2026).
+// 2026 games are counted live from the season file (and the in-progress game, if any). Others: nflverse since 1999,
+// plus pre-1999 marks confirmed in press or by NFL Research (see claude/td-combo-records.md in the JPA project).
+var GAMES = [{date:"2026-09-13",td:2,rushTD:2},{date:"2026-09-17",td:3,rushTD:2},{date:"2026-09-27",td:0,rushTD:2},
+  {date:"2026-10-04",td:1,rushTD:1},{date:"2026-10-12",td:1,rushTD:1},{date:"2026-10-18",td:2,rushTD:0}], LIVEG = null;
+var COMBOS = [
+ {p:1,r:1,base:50,status:"verified",others:[["Cam Newton",45],["Aaron Rodgers",32],["Jalen Hurts",29]],
+  extra:"The NFL record for games with a passing and a rushing touchdown."},
+ {p:1,r:2,base:12,status:"check",others:[["Jalen Hurts",9],["Cam Newton",8],["Lamar Jackson",4]],
+  extra:"Others counted from nflverse game logs since 1999; earlier players are not included."},
+ {p:2,r:1,base:29,status:"check",others:[["Cam Newton",22],["Aaron Rodgers",20],["Russell Wilson",17],["Tom Brady",16]],
+  extra:"No official list found; others counted from nflverse game logs since 1999."},
+ {p:2,r:2,base:8,status:"verified",others:[["Steve Young",4],["Cam Newton",3]],
+  extra:"NFL record. Steve Young's 4 (all before 1999) was the mark Allen passed."},
+ {p:3,r:1,base:11,status:"verified",others:[["Tom Brady",9],["Drew Brees",9],["Aaron Rodgers",6]],
+  extra:"NFL record. Per NFL Research, Allen passed Brady and Brees in Week 11 of 2025."},
+ {p:3,r:2,base:3,status:"verified",others:[["Kordell Stewart",2],["Jeff Garcia",1],["Michael Vick",1]],
+  extra:"NFL record. Per NFL Research, Kordell Stewart's 2 was the previous record."},
+ {p:3,r:3,base:2,status:"verified",others:[["Otto Graham (1954)",1]],
+  extra:"NFL record. Otto Graham in 1954 is the only other player with one."},
+ {p:4,r:1,base:3,status:"check",others:[["Drew Brees",4],["Aaron Rodgers",3],["Peyton Manning",2]],
+  extra:"Others counted from nflverse game logs since 1999."}
+];
+COMBOS.forEach(function(c){ RECORDS.push({cat:"TD combos", title:"Games with "+c.p+"+ passing and "+c.r+"+ rushing touchdowns",
+  status:c.status, entries:[["Josh Allen",c.base]].concat(c.others), note:""}); });
+function applyCombos(){
+  var list = GAMES.concat(LIVEG ? [LIVEG] : []);
+  COMBOS.forEach(function(c){
+    var k = list.filter(function(g){ return (g.td||0) >= c.p && (g.rushTD||0) >= c.r; }).length, n = c.base + k;
+    setRec("TD combos","Games with "+c.p+"+ passing and "+c.r+"+ rushing touchdowns", n,
+      "Regular season. Allen: "+n+" ("+c.base+" through 2025, "+k+" in 2026"+(LIVEG?", including today's game, unofficial":"")+"). "+c.extra);
+  });
+}
 var QUEUE = ["Career starts (requested)","Who holds the Bills' overall consecutive-starts record (any position)","Career wins as a starter (Kelly: 101)","Career rushing yards, third place and up","300-yard and 400-yard passing games","Single-season rushing touchdowns by a quarterback","Passer rating, completion percentage, and yards per game"];
 
 // Career base through the end of 2025 (static). Everything shown for 2026 is added on top from data/allen-2026.json.
@@ -220,7 +254,7 @@ function build(){
 }
 function isMe(n){return n.indexOf(ME)===0;}
 function render(){
-  var cats = ["All","Career","Single season","Postseason","Honors","Streaks"];
+  var cats = ["All","Career","TD combos","Single season","Postseason","Honors","Streaks"];
   document.getElementById('tabs').innerHTML = cats.map(function(c){return '<button data-c="' + c + '" aria-pressed="' + (c===cat) + '">' + c + '</button>';}).join('');
   Array.prototype.forEach.call(document.querySelectorAll('#tabs button'), function(b){b.onclick=function(){cat=b.getAttribute('data-c');render();};});
   var list = RECORDS.filter(function(r){return cat==="All"||r.cat===cat;});
@@ -237,14 +271,15 @@ function render(){
   }).join('');
   document.getElementById('queue').innerHTML = QUEUE.map(function(q){return '<li>' + q + '</li>';}).join('');
 }
-function init(){ applyNow(); build(); render(); fillText(); }
+function init(){ applyNow(); applyCombos(); build(); render(); fillText(); }
 init();
 // Live numbers: a GitHub job refreshes these files hourly on the stats-data branch (no Netlify redeploy needed).
 // If GitHub can't be reached, the copies shipped in /data are used; if those fail too, the numbers above stay.
 var SRC=['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/','data/'];
 function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(e){if(i<SRC.length)return next();throw e;});}return next();}
 var G0 = NOW.g;
-function useData(d){ if(d && d.now && d.now.g >= G0){ NOW = d.now; THRU = d.thru || THRU; POST = d.post || null; init(); } }
+function useData(d){ if(d && d.now && d.now.g >= G0){ NOW = d.now; THRU = d.thru || THRU; POST = d.post || null;
+  if(d.games && d.games.length) GAMES = d.games; LIVEG = d.live ? {date:d.live.date, td:d.live.s.td, rushTD:d.live.s.rushTD} : null; init(); } }
 // Live game (scripts/live.js): Allen's in-progress game is added on top while the Bills play, refreshed every 2 minutes.
 function loadAllen(){ return load('allen-2026.json').then(function(d){
   return window.JPALive ? JPALive.ready.then(function(){ useData(JPALive.patch('allen-2026.json', d)); }) : useData(d); }).catch(function(){}); }
