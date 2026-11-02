@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "gameId": "2026_09_BUF_MIN",
  "week": 9,
  "label": "Week 9",
@@ -174,7 +174,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 1, 2026",
+  "asOf": "Nov. 2, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -182,12 +182,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 39,
+     "v": 33,
      "rank": 1
     },
     "opp": {
-     "v": 23,
-     "rank": 20
+     "v": 20,
+     "rank": 27
     }
    },
    {
@@ -195,11 +195,11 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 30,
-     "rank": 28
+     "v": 26,
+     "rank": 24
     },
     "opp": {
-     "v": 16,
+     "v": 13,
      "rank": 1
     }
    },
@@ -208,11 +208,11 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 251,
-     "rank": 11
+     "v": 256,
+     "rank": 9
     },
     "opp": {
-     "v": 181,
+     "v": 185,
      "rank": 29
     }
    },
@@ -221,11 +221,11 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 299,
-     "rank": 31
+     "v": 269,
+     "rank": 30
     },
     "opp": {
-     "v": 181,
+     "v": 180,
      "rank": 2
     }
    },
@@ -234,12 +234,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 149,
-     "rank": 2
+     "v": 148,
+     "rank": 3
     },
     "opp": {
-     "v": 119,
-     "rank": 12
+     "v": 114,
+     "rank": 17
     }
    },
    {
@@ -247,12 +247,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 101,
-     "rank": 15
+     "v": 97,
+     "rank": 10
     },
     "opp": {
-     "v": 98,
-     "rank": 10
+     "v": 117,
+     "rank": 17
     }
    },
    {
@@ -260,12 +260,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 12,
-     "rank": 12
+     "v": 13,
+     "rank": 9
     },
     "opp": {
-     "v": 18,
-     "rank": 25
+     "v": 21,
+     "rank": 27
     }
    },
    {
@@ -273,11 +273,11 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 11,
-     "rank": 22
+     "v": 15,
+     "rank": 18
     },
     "opp": {
-     "v": 21,
+     "v": 25,
      "rank": 1
     }
    },
@@ -286,12 +286,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 4,
-     "rank": 11
+     "v": 5,
+     "rank": 15
     },
     "opp": {
-     "v": 2,
-     "rank": 6
+     "v": 3,
+     "rank": 8
     }
    },
    {
@@ -299,12 +299,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 3,
-     "rank": 22
+     "v": 4,
+     "rank": 17
     },
     "opp": {
-     "v": 7,
-     "rank": 2
+     "v": 8,
+     "rank": 4
     }
    }
   ]
@@ -358,7 +358,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 1, 2026",
+  "asOf": "Nov. 2, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -368,33 +368,33 @@
   },
   "items": [
    {
-    "title": "Bills record: passing TDs, regular season + playoffs",
-    "detail": "Needs 1 passing TD (career high in a game: 5). He has 258; Jim Kelly has 258."
+    "title": "5,000 career rushing yards",
+    "detail": "Needs 9 rushing yards (career high in a game: 135). He'd be the 5th QB ever to reach it, joining Lamar Jackson, Michael Vick, Cam Newton and Russell Wilson."
    },
    {
-    "title": "5,000 career rushing yards",
-    "detail": "Needs 39 rushing yards (career high in a game: 135). He'd be the 5th QB ever to reach it, joining Lamar Jackson, Michael Vick, Cam Newton and Russell Wilson."
+    "title": "NFL career passing touchdowns",
+    "detail": "Needs 1 passing TD (career high in a game: 5). Ties Steve Young (232) for No. 39; 2 passes him."
    },
    {
     "title": "NFL record: games with a passing TD and a rushing TD",
-    "detail": "Needs at least one of each to extend his record to 55 (regular season). Next closest: Cam Newton, 45."
+    "detail": "Needs at least one of each to extend his record to 56 (regular season). Next closest: Cam Newton, 45."
+   },
+   {
+    "title": "NFL career passing yards",
+    "detail": "Needs 177 passing yards (career high in a game: 424). Ties Mark Brunell (32,072) for No. 52; 178 passes him."
    },
    {
     "title": "Record against the Vikings",
     "detail": "A win makes him 2-1 as a starter against them in the regular season."
    },
    {
-    "title": "NFL career passing touchdowns",
-    "detail": "Needs 3 passing TDs (career high in a game: 5). Ties Steve Young (232) for No. 39; 4 passes him."
-   },
-   {
     "title": "NFL career rushing touchdowns",
-    "detail": "Needs 3 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14."
+    "detail": "Needs 2 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14; 3 passes them."
    }
   ]
  },
  "props": {
-  "asOf": "Nov. 1, 2026",
+  "asOf": "Nov. 2, 2026",
   "items": [
    {
     "team": "BUF",
@@ -428,6 +428,10 @@
      {
       "wk": 6,
       "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
      }
     ],
     "vals": [
@@ -436,27 +440,29 @@
      154,
      75,
      111,
-     95
+     95,
+     80
     ],
     "ladder": [
      {
       "line": 50,
-      "hit": 6,
+      "hit": 7,
       "stars": 5.0
      }
     ],
     "next": {
      "line": 60,
-     "hit": 5
+     "hit": 6
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 50+ in all 6 games.",
-     "Averages 104.5 rushing yards a game (median 103).",
-     "Steady workload: 19.5 carries a game."
+     "Cleared 50+ in all 7 games.",
+     "Averages 101.0 rushing yards a game (median 95).",
+     "Steady workload: 19.7 carries a game.",
+     "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
     ],
     "cons": [
-     "The Vikings rank 10th of 32 against the run, allowing 98 rushing yards a game."
+     "The next line up (60+) hit only 6 of 7, so the margin isn't huge."
     ],
     "status": ""
    },
@@ -492,6 +498,10 @@
      {
       "wk": 6,
       "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
      }
     ],
     "vals": [
@@ -500,28 +510,95 @@
      8,
      5,
      10,
-     5
+     5,
+     7
     ],
     "ladder": [
      {
       "line": 4,
-      "hit": 6,
+      "hit": 7,
       "stars": 5.0
      }
     ],
     "next": {
      "line": 6,
-     "hit": 4
+     "hit": 5
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 4+ in all 6 games.",
-     "Averages 8.0 rushing attempts a game (median 7).",
-     "Even his lowest game (5 vs NE) cleared it comfortably."
+     "Cleared 4+ in all 7 games.",
+     "Averages 7.9 rushing attempts a game (median 7).",
+     "Even his lowest game (5 vs NE) cleared it comfortably.",
+     "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
     ],
     "cons": [
-     "The Vikings rank 10th of 32 against the run, allowing 98 rushing yards a game.",
      "Swingy: anywhere from 5 to 14 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIN",
+    "nick": "Vikings",
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "GB"
+     },
+     {
+      "wk": 2,
+      "opp": "@CHI"
+     },
+     {
+      "wk": 3,
+      "opp": "@TB"
+     },
+     {
+      "wk": 5,
+      "opp": "@NO"
+     },
+     {
+      "wk": 7,
+      "opp": "IND"
+     },
+     {
+      "wk": 8,
+      "opp": "@DET"
+     }
+    ],
+    "vals": [
+     8,
+     3,
+     2,
+     6,
+     4,
+     5
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "next": {
+     "line": 3,
+     "hit": 5
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 2+ in all 6 games.",
+     "Averages 4.7 receptions a game (median 4.5).",
+     "Steady volume: 6.7 targets a game.",
+     "The Bills rank 30th of 32 against the pass, allowing 269 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 2 vs TB in Week 3.",
+     "Swingy: anywhere from 2 to 8 this season."
     ],
     "status": ""
    },
@@ -557,6 +634,10 @@
      {
       "wk": 6,
       "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
      }
     ],
     "vals": [
@@ -565,163 +646,38 @@
      24,
      12,
      25,
-     22
+     22,
+     21
     ],
     "ladder": [
      {
       "line": 8,
-      "hit": 6,
+      "hit": 7,
       "stars": 5.0
      },
      {
       "line": 10,
-      "hit": 6,
+      "hit": 7,
       "stars": 5.0
      },
      {
       "line": 12,
-      "hit": 6,
+      "hit": 7,
       "stars": 4.5
      }
     ],
     "next": {
      "line": 15,
-     "hit": 4
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 12+ in all 6 games.",
-     "Averages 19.5 rushing attempts a game (median 21.5)."
-    ],
-    "cons": [
-     "Closest call: 12 vs NE in Week 4.",
-     "The Vikings rank 10th of 32 against the run, allowing 98 rushing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "MIN",
-    "nick": "Vikings",
-    "player": "Aaron Jones",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "GB"
-     },
-     {
-      "wk": 2,
-      "opp": "@CHI"
-     },
-     {
-      "wk": 3,
-      "opp": "@TB"
-     },
-     {
-      "wk": 4,
-      "opp": "MIA"
-     },
-     {
-      "wk": 5,
-      "opp": "@NO"
-     },
-     {
-      "wk": 7,
-      "opp": "IND"
-     }
-    ],
-    "vals": [
-     12,
-     23,
-     17,
-     20,
-     25,
-     8
-    ],
-    "ladder": [
-     {
-      "line": 8,
-      "hit": 6,
-      "stars": 4.5
-     }
-    ],
-    "next": {
-     "line": 10,
      "hit": 5
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 8+ in all 6 games.",
-     "Averages 17.5 rushing attempts a game (median 18.5)."
+     "Cleared 12+ in all 7 games.",
+     "Averages 19.7 rushing attempts a game (median 21).",
+     "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
     ],
     "cons": [
-     "Closest call: 8 vs IND in Week 7.",
-     "The Bills rank 15th of 32 against the run, allowing 101 rushing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "MIN",
-    "nick": "Vikings",
-    "player": "Justin Jefferson",
-    "pos": "WR",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "GB"
-     },
-     {
-      "wk": 2,
-      "opp": "@CHI"
-     },
-     {
-      "wk": 3,
-      "opp": "@TB"
-     },
-     {
-      "wk": 5,
-      "opp": "@NO"
-     },
-     {
-      "wk": 7,
-      "opp": "IND"
-     }
-    ],
-    "vals": [
-     8,
-     3,
-     2,
-     6,
-     4
-    ],
-    "ladder": [
-     {
-      "line": 2,
-      "hit": 5,
-      "stars": 4.5
-     }
-    ],
-    "next": {
-     "line": 3,
-     "hit": 4
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 2+ in all 5 games.",
-     "Averages 4.6 receptions a game (median 4).",
-     "Steady volume: 6.2 targets a game.",
-     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 2 vs TB in Week 3.",
-     "Swingy: anywhere from 2 to 8 this season.",
-     "Small sample: 5 games."
+     "Closest call: 12 vs NE in Week 4."
     ],
     "status": ""
    },
@@ -753,6 +709,10 @@
      {
       "wk": 7,
       "opp": "IND"
+     },
+     {
+      "wk": 8,
+      "opp": "@DET"
      }
     ],
     "vals": [
@@ -760,17 +720,18 @@
      55,
      32,
      79,
-     44
+     44,
+     33
     ],
     "ladder": [
      {
       "line": 25,
-      "hit": 5,
+      "hit": 6,
       "stars": 5.0
      },
      {
       "line": 30,
-      "hit": 5,
+      "hit": 6,
       "stars": 4.5
      }
     ],
@@ -780,14 +741,15 @@
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 30+ in all 5 games.",
-     "Averages 60.4 receiving yards a game (median 55).",
-     "Steady volume: 6.2 targets a game.",
-     "The Bills rank 31st of 32 against the pass, allowing 299 passing yards a game."
+     "Cleared 30+ in all 6 games.",
+     "Averages 55.8 receiving yards a game (median 49.5).",
+     "Steady volume: 6.7 targets a game.",
+     "The Bills rank 30th of 32 against the pass, allowing 269 passing yards a game."
     ],
     "cons": [
      "Closest call: 32 vs TB in Week 3.",
-     "Small sample: 5 games."
+     "Swingy: anywhere from 32 to 92 this season.",
+     "Trending down: 38.5 a game over his last two, below his 55.8 average."
     ],
     "status": ""
    },
@@ -823,6 +785,10 @@
      {
       "wk": 6,
       "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
      }
     ],
     "vals": [
@@ -831,27 +797,28 @@
      16,
      23,
      12,
-     23
+     23,
+     21
     ],
     "ladder": [
      {
       "line": 12,
-      "hit": 6,
+      "hit": 7,
       "stars": 4.0
      }
     ],
     "next": {
      "line": 15,
-     "hit": 5
+     "hit": 6
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 12+ in all 6 games.",
-     "Averages 19.0 completions a game (median 20)."
+     "Cleared 12+ in all 7 games.",
+     "Averages 19.3 completions a game (median 20)."
     ],
     "cons": [
      "Closest call: 12 vs LA in Week 5.",
-     "The Vikings rank 2nd of 32 against the pass, allowing 181 passing yards a game."
+     "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game."
     ],
     "status": ""
    },
@@ -887,6 +854,10 @@
      {
       "wk": 6,
       "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
      }
     ],
     "vals": [
@@ -895,37 +866,38 @@
      204,
      253,
      210,
-     255
+     255,
+     289
     ],
     "ladder": [
      {
       "line": 150,
-      "hit": 6,
+      "hit": 7,
       "stars": 4.5
      },
      {
       "line": 175,
-      "hit": 6,
+      "hit": 7,
       "stars": 4.0
      },
      {
       "line": 200,
-      "hit": 6,
+      "hit": 7,
       "stars": 3.5
      }
     ],
     "next": {
      "line": 225,
-     "hit": 4
+     "hit": 5
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 200+ in all 6 games.",
-     "Averages 250.7 passing yards a game (median 250.5)."
+     "Cleared 200+ in all 7 games.",
+     "Averages 256.1 passing yards a game (median 253)."
     ],
     "cons": [
      "Closest call: 204 vs LAC in Week 3.",
-     "The Vikings rank 2nd of 32 against the pass, allowing 181 passing yards a game."
+     "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game."
     ],
     "status": ""
    },
@@ -953,34 +925,39 @@
      {
       "wk": 6,
       "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
      }
     ],
     "vals": [
      4,
      2,
      4,
-     2
+     2,
+     3
     ],
     "ladder": [
      {
       "line": 2,
-      "hit": 4,
+      "hit": 5,
       "stars": 3.5
      }
     ],
     "next": {
      "line": 3,
-     "hit": 2
+     "hit": 3
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 2+ in all 4 games.",
+     "Cleared 2+ in all 5 games.",
      "Averages 3.0 receptions a game (median 3)."
     ],
     "cons": [
      "Closest call: 2 vs NE in Week 4.",
-     "The Vikings rank 2nd of 32 against the pass, allowing 181 passing yards a game.",
-     "Small sample: 4 games."
+     "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game.",
+     "Small sample: 5 games."
     ],
     "status": ""
    }
