@@ -154,7 +154,20 @@ body.hailee .swap{--bl:#6f9bff;--bm:#1646b8;--bd:#061d57;background:radial-gradi
 .swapwrap .pm.dn{top:calc(100% + 24px)}
 @media (prefers-reduced-motion:reduce){.swap{transition:none}}
 .facts li.mvp{background:#c9a227;color:#1b1b1b;font-weight:800}
-.mvpline{display:inline-block;margin:2px 0 10px;padding:5px 14px;border-radius:99px;background:linear-gradient(90deg,#e8c547,#c9a227);color:#1b1b1b;font-weight:800;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+.mvpline{position:relative;overflow:hidden;isolation:isolate;display:inline-block;margin:2px 0 10px;padding:6px 18px;border-radius:99px;border:1px solid #6e510b;
+  background:linear-gradient(180deg,rgba(255,252,230,.55) 0%,rgba(255,252,230,.12) 42%,rgba(0,0,0,0) 52%,rgba(80,52,0,.18) 100%),
+    linear-gradient(100deg,#8f6b12 0%,#d9b247 14%,#fbe9a0 27%,#e2bb4a 40%,#a9811b 55%,#d6ae3e 68%,#f6dc82 80%,#b38a1e 92%,#8a6610 100%);
+  box-shadow:inset 0 1px 0 rgba(255,250,220,.95),inset 0 -2px 3px rgba(85,55,0,.55),inset 1px 0 1px rgba(255,240,190,.5),inset -1px 0 1px rgba(90,60,0,.4),0 2px 0 #5e450a,0 5px 12px rgba(0,0,0,.45);
+  color:#56390a;text-shadow:0 1px 0 rgba(255,243,195,.9),0 -1px 0 rgba(55,35,0,.6);
+  font-weight:900;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+/* stamped inner rim */
+.mvpline::before{content:"";position:absolute;inset:3px;border-radius:99px;border:1px solid rgba(110,78,8,.45);box-shadow:0 1px 0 rgba(255,245,200,.55),inset 0 1px 0 rgba(255,245,200,.35);pointer-events:none;z-index:-1}
+/* shimmer: a light band that sweeps across now and then (timed at random by the page script) */
+.mvpline::after{content:"";position:absolute;top:-60%;left:-70%;width:32%;height:220%;transform:rotate(18deg);pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,250,220,0) 0%,rgba(255,250,220,.25) 35%,rgba(255,255,245,.8) 50%,rgba(255,250,220,.25) 65%,rgba(255,250,220,0) 100%);opacity:0}
+.mvpline.shine::after{animation:mvpShine 1.1s cubic-bezier(.4,0,.2,1)}
+@keyframes mvpShine{0%{left:-70%;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:130%;opacity:0}}
+@media (prefers-reduced-motion:reduce){.mvpline.shine::after{animation:none}}
 .mvpline[hidden]{display:none}
 .firsts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .firsts li{display:grid;grid-template-columns:96px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:12px 14px}
