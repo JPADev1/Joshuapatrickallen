@@ -56,6 +56,10 @@ var POS=[['ALL','All players'],['QB','Quarterbacks'],['RB','Running backs']];
 var KINDS=[['tot','Total TDs'],['pass','Passing'],['rush','Rushing'],['rec','Receiving']];
 var KIND_WORD={tot:'total touchdowns',pass:'passing touchdowns',rush:'rushing touchdowns',rec:'receiving touchdowns'};
 var POS_WORD={ALL:'all players',QB:'quarterbacks',RB:'running backs'};
+// Quarterbacks + Receiving counts only catches by a QB who started the play lined up behind center.
+// These QBs scored their receiving TDs while playing receiver, so they are left out of that one view.
+var REC_AS_WR={'00-0015700':'Kordell Stewart’s 5 receiving touchdowns (1995–96 and 1999) came while he was playing wide receiver, so they are not counted here.'};
+function qbRec(){return S.pos==='QB'&&S.kind==='rec';}
 var S={mode:'all',pos:'ALL',kind:'tot',n:0,w:0,st:true}; // st: games played and TDs per game on the pills
 try{ if(localStorage.getItem('mtnStats')==='off')S.st=false; }catch(e){} // mode: 'all' (career / through N seasons) or 'season' (this season, through week w); n = 0 means career
 var P=[], ME=null, MAXN=23, AN=9, CUR=2026, playing=null, SP=[], WK=0, WINFO={}; // SP: this season, week by week; WK: latest week played // MAXN: Tom Brady's 23 seasons; AN: Allen's seasons so far
@@ -103,6 +107,7 @@ function ranking(){
   var rows=[];
   P.forEach(function(p){
     if(p.id!==ALLEN&&S.pos!=='ALL'&&p.pos!==S.pos)return;
+    if(qbRec()&&REC_AS_WR[p.id])return;
     // everyone counts with what he has so far; shorter careers (finished or still going) show their seasons in parentheses
     var v=total(p,S.kind,S.n); if(v===null)return;
     // parentheses: seasons played; at Career for everyone, otherwise only for careers shorter than the slider
@@ -237,11 +242,13 @@ function headline(rows){
   var when=!S.n?'in his career':S.n<=AN?'through his first '+(S.n===1?'season':S.n+' seasons'):'in his '+AN+' seasons so far, against everyone else’s first '+S.n;
   var among=S.pos==='ALL'?'all-time':'among '+POS_WORD[S.pos]+' all-time';
   var txt='<b>'+(me.tie?'Tied for ':'')+ord(me.rank)+' '+among+'</b>: Allen’s '+me.v+' '+(me.v===1?KIND_WORD[S.kind].replace(/s$/,''):KIND_WORD[S.kind])+' '+when+'. ';
+  if(qbRec())txt='<b>Josh Allen is '+(me.tie?'tied for ':'')+ord(me.rank)+' in receiving TDs by a quarterback lined up behind center at the start of the play</b>, with '+me.v+' '+when+'. ';
   var above=rows.filter(function(x){return x.v>me.v;});
   if(!above.length)txt+='Nobody has more. He’s on the summit.';
   else{var nx=above[above.length-1]; txt+='Next up: '+esc(nx.p.name)+' with '+nx.v+' ('+(nx.v-me.v)+' more).';}
   if(S.n)txt+=' <span class="mtn-sm">Compared with each player’s first '+(S.n===1?'season':S.n+' seasons')+'; numbers in parentheses are careers shorter than that.'+(S.st?' GP = games played in those seasons; the last number is touchdowns per game.':'')+'</span>';
   else txt+=' <span class="mtn-sm">Numbers in parentheses are seasons played.'+(S.st?' GP = games played; the last number is touchdowns per game.':'')+'</span>';
+  if(qbRec())txt+=' <span class="mtn-sm">'+Object.keys(REC_AS_WR).map(function(k){return REC_AS_WR[k];}).join(' ')+'</span>';
   el('headline').innerHTML=txt;
   el('sub').textContent=S.pos==='ALL'&&S.kind==='tot'&&!S.n?'Where Josh Allen stands among the NFL’s all-time touchdown leaders.':'Josh Allen vs '+(S.pos==='ALL'?'everyone':'all-time '+POS_WORD[S.pos])+': '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+'.';
 }
