@@ -3,7 +3,7 @@
      venmo        your Venmo handle without the @, e.g. "JPA-Stats"
      suggestForm  the share link of your Google Form, e.g. "https://forms.gle/abc123"
    Until they're filled in, the Tip jar and Suggestions pages say "coming soon". */
-var SITE = { venmo: "", suggestForm: "" };
+var SITE = { venmo: "JPADev", suggestForm: "https://forms.gle/Fw46NaV3WLKChEew8" };
 
 (function () {
   var here = location.pathname.replace(/\/$/, "/index.html").split("/").pop() || "index.html";
