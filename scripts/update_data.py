@@ -878,12 +878,16 @@ def build_props(week26, sched, S, m, snaps):
                 cons.append(f"Closest call: {vals[lo_i]} vs {labels[lo_i]['opp'].lstrip('@')} in Week {labels[lo_i]['wk']}.")
             if drank and drank <= 16:
                 cons.append(dline)
-            nxt_ln = next((x for x in lines if x > ln), None)
-            if nxt_ln is not None:
-                nh = sum(1 for v in vals if v >= nxt_ln)
-                top_next = {"line": nxt_ln, "hit": nh}
-            else:
-                top_next = None
+            # Lines above the top rung that still cleared 80%+ of games: clickable on the page (marked as under 90%),
+            # then the first line under 80% as the display-only "next line up"
+            extra, top_next = [], None
+            for x in [x for x in lines if x > ln]:
+                nh = sum(1 for v in vals if v >= x)
+                if nh / n >= 0.8:
+                    extra.append({"line": x, "hit": nh})
+                else:
+                    top_next = {"line": x, "hit": nh}
+                    break
             if key != "anyTD" and max(vals) - min(vals) > avg:
                 cons.append(f"Swingy: anywhere from {min(vals)} to {max(vals)} this season.")
             if st:
@@ -903,7 +907,7 @@ def build_props(week26, sched, S, m, snaps):
             if not cons:
                 cons.append("Nothing in the numbers stands out; one off game is all it takes to lose.")
             out.append({"team": team, "nick": nickname[team], "player": name, "pos": pos, "cat": cat, "market": label, "key": key,
-                        "games": labels, "vals": vals, "ladder": ladder, "next": top_next, "gameday": gd, "pros": pros[:5], "cons": cons[:5],
+                        "games": labels, "vals": vals, "ladder": ladder, "extra": extra, "next": top_next, "gameday": gd, "pros": pros[:5], "cons": cons[:5],
                         "status": st})
     out.sort(key=lambda p: (-p["ladder"][-1]["stars"], -p["ladder"][-1]["hit"] / len(p["vals"]), p["team"] != BILLS, p["player"]))
     if wx and wx.get("indoor"):

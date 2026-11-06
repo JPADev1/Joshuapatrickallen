@@ -482,3 +482,7 @@ td.w .pbar u{background:#1f9d55}td.l .pbar u{background:var(--red)}
 .poswing{margin:10px 0 0;font-size:.95rem}
 .injup{margin:6px 0 8px;font-size:.88rem;background:var(--chip);color:var(--gold);border-radius:10px;padding:6px 10px}
 .injup span{opacity:.85}
+/* props: 80-89% lines are clickable but marked as below the 90% bar */
+tr.rung.low td{color:var(--mute);font-style:italic}
+tr.rung.low[aria-selected="true"] td{color:var(--ink);font-style:normal;background:var(--chip)}
+.pscore .plow{display:block;font-size:.78rem;font-weight:800;color:var(--gold)}

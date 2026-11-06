@@ -228,13 +228,16 @@ function playoffs(m){var P=m.playoffs; if(!P||!P.odds)return;
 // ---------- 90%+ props: game-log bars, ladder of lines, pros and cons, confidence stars ----------
 function props(m){
   var P=m.props, F={team:'All',cat:'All'}, sel={};
+  // Every listed line is clickable: the 90%+ ladder (with stars), then any 80-89% lines, then the next line up (both marked low)
+  function rungs(p){return p.ladder.concat((p.extra||[]).map(function(x){return {line:x.line,hit:x.hit,low:true};}),
+    p.next?[{line:p.next.line,hit:p.next.hit,low:true,next:true}]:[]);}
   function stars(n){var f=Math.floor(n),h=n%1?1:0,s='';for(var i=0;i<5;i++)s+=i<f?'\u2605':(i===f&&h?'<span class="half">\u2605</span>':'\u2606');return '<span class="stars" role="img" aria-label="'+n+' out of 5 stars">'+s+'</span>';}
   var teams=['All',m.bills.name.replace(/^.* /,''),m.opp.nick||m.opp.name], cats=['All'];
   P.items.forEach(function(p){if(cats.indexOf(p.cat)<0)cats.push(p.cat);});
   function tabs(id,list,key){document.getElementById(id).innerHTML=list.map(function(c){var n=P.items.filter(function(p){return (key==='team'?(c==='All'||p.nick===c):(c==='All'||p.cat===c));}).length;
     return '<button type="button" data-k="'+key+'" data-v="'+esc(c)+'" aria-pressed="'+(F[key]===c)+'"'+(n?'':' disabled')+'>'+esc(c)+' <small>('+n+')</small></button>';}).join('');}
   function chart(p,i){
-    var L=p.ladder[sel[i]], t=L.line, max=Math.max.apply(null,p.vals.concat([t]))*1.15||1;
+    var L=rungs(p)[sel[i]], t=L.line, max=Math.max.apply(null,p.vals.concat([t]))*1.15||1;
     var bars=p.vals.map(function(v,j){var hit=v>=t;return '<div class="pb'+(hit?'':' miss')+'"><span>'+v+'</span><i style="height:'+Math.max(2,v/max*100)+'%"></i></div>';}).join('');
     return '<div class="pchart" role="img" aria-label="'+esc(p.player)+' '+esc(p.market.toLowerCase())+' by game: '+p.vals.join(', ')+'. Line '+t+'+.">'+bars
       +'<div class="pthr" style="bottom:'+(t/max*100)+'%"><span>'+(p.key==='anyTD'?'1+ TD':t+'+')+'</span></div></div>'
@@ -243,18 +246,18 @@ function props(m){
     tabs('propTeam',teams,'team'); tabs('propCat',cats,'cat');
     var list=P.items.map(function(p,i){return {p:p,i:i};}).filter(function(o){return (F.team==='All'||o.p.nick===F.team)&&(F.cat==='All'||o.p.cat===F.cat);});
     document.getElementById('props').innerHTML=list.map(function(o){var p=o.p,i=o.i; if(sel[i]==null)sel[i]=p.ladder.length-1; var n=p.vals.length;
-      var rows=p.ladder.map(function(r,j){return '<tr class="rung" tabindex="0" data-i="'+i+'" data-j="'+j+'" aria-selected="'+(j===sel[i])+'"><td>'+(p.key==='anyTD'?'Anytime TD':r.line+'+ '+esc(p.market.toLowerCase()))+'</td><td>'+r.hit+'/'+n+' &middot; '+Math.round(r.hit/n*100)+'%</td><td>'+stars(r.stars)+'</td></tr>';}).join('')
-        +(p.next?'<tr class="nextup"><td>'+p.next.line+'+ (next line up)</td><td>'+p.next.hit+'/'+n+' &middot; '+Math.round(p.next.hit/n*100)+'%</td><td>under 90%</td></tr>':'');
-      var top=p.ladder[sel[i]];
+      var rows=rungs(p).map(function(r,j){var pct=Math.round(r.hit/n*100);
+        return '<tr class="rung'+(r.low?' low':'')+'" tabindex="0" data-i="'+i+'" data-j="'+j+'" aria-selected="'+(j===sel[i])+'"><td>'+(p.key==='anyTD'?'Anytime TD':r.line+'+ '+(r.next?'(next line up)':esc(p.market.toLowerCase())))+'</td><td>'+r.hit+'/'+n+' &middot; '+pct+'%</td><td>'+(r.low?(pct>=80?'under 90%':'under 80%'):stars(r.stars))+'</td></tr>';}).join('');
+      var top=rungs(p)[sel[i]];
       return '<article class="card prop"><div class="head"><div><h2>'+esc(p.player)+'</h2><span class="pmeta">'+esc(p.nick)+' '+esc(p.pos)+' &middot; '+esc(p.market)+(p.status?' &middot; <b class="qst">'+esc(p.status)+'</b>':'')+'</span></div>'
-        +'<div class="pscore">'+stars(top.stars)+'<span>'+Math.round(top.hit/n*100)+'% hit rate</span></div></div>'
+        +'<div class="pscore">'+(top.low?'<span class="plow">Below the 90% bar</span>':stars(top.stars))+'<span>'+Math.round(top.hit/n*100)+'% hit rate</span></div></div>'
         +chart(p,i)
         +'<div class="scroll ptbl"><table><thead><tr><th>Line</th><th>2026 hit rate</th><th>Confidence</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
         +'<div class="lines pc"><div><h3>Pros</h3><ul class="pro">'+li(p.pros)+'</ul></div><div><h3>Cons</h3><ul class="con">'+li(p.cons)+'</ul></div></div></article>';
     }).join('')||'<div class="card"><p class="note" style="margin:0">No props in this group.</p></div>';
   }
   document.getElementById('propSec').hidden=false;
-  document.getElementById('propSub').textContent='Every Bills and '+(m.opp.nick||m.opp.name)+' player prop that cleared in at least 90% of his games this season. Green bars cleared the line, red bars missed. Tap a line in a card\u2019s table to move it on the chart.';
+  document.getElementById('propSub').textContent='Every Bills and '+(m.opp.nick||m.opp.name)+' player prop that cleared in at least 90% of his games this season. Green bars cleared the line, red bars missed. Tap any line in a card\u2019s table to move it on the chart; lines under 90% are marked.';
   document.getElementById('propNote').textContent=P.note+' Updated '+P.asOf+'.';
   if(P.conditions&&P.conditions.length){var pc=document.getElementById('propCond'); pc.innerHTML=li(P.conditions); pc.hidden=false;}
   var box=document.getElementById('propSec');
