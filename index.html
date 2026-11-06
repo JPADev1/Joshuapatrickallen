@@ -256,11 +256,14 @@ var SCOPE = "all", FIRSTS = null;
 var SCOPES = [["all","All"],["bills","Bills franchise"],["nfl","NFL"]];
 function scopeOf(r){ return r.scope || (r.cat==="TD combos"||r.cat==="Streaks" ? "nfl" : "bills"); }
 function inScope(r){ return SCOPE==="all" || scopeOf(r)===SCOPE; }
+// "Regular season" filter: every record counted in regular-season games only (not playoffs, not awards, not combined totals).
+function isRegSeason(r){ return r.season ? r.season==="reg" : !(r.cat==="Postseason"||r.cat==="Honors"||/playoffs/i.test(r.title)); }
+function inCat(r,c){ return c==="All" || (c==="Regular season" ? isRegSeason(r) : r.cat===c); }
 function render(){
   document.getElementById('scopeTabs').innerHTML = SCOPES.map(function(o){return '<button type="button" data-s="'+o[0]+'" aria-pressed="'+(SCOPE===o[0])+'">'+o[1]+'</button>';}).join('');
   Array.prototype.forEach.call(document.querySelectorAll('#scopeTabs button'), function(b){b.onclick=function(){SCOPE=b.getAttribute('data-s'); render(); recHash();};});
-  var order = ["Career","TD combos","Single season","Postseason","Honors","Streaks"];
-  var cats = ["All"].concat(order.filter(function(c){return RECORDS.some(function(r){return r.cat===c&&inScope(r);});}));
+  var order = ["Regular season","Career","TD combos","Single season","Postseason","Honors","Streaks"];
+  var cats = ["All"].concat(order.filter(function(c){return RECORDS.some(function(r){return inCat(r,c)&&inScope(r);});}));
   if(SCOPE!=="bills") cats.push("NFL firsts");
   if(cats.indexOf(cat)<0) cat="All";
   document.getElementById('tabs').innerHTML = cats.map(function(c){var n=c==="NFL firsts"&&FIRSTS?' ('+FIRSTS.length+')':''; return '<button type="button" data-c="' + c + '" aria-pressed="' + (c===cat) + '">' + c + n + '</button>';}).join('');
@@ -272,7 +275,7 @@ function render(){
   document.getElementById('firsts-wrap').hidden = !showFirsts;
   document.getElementById('firsts-h').hidden = cat==="NFL firsts";
   document.getElementById('queuecard').hidden = cat==="NFL firsts";
-  var list = cat==="NFL firsts" ? [] : RECORDS.filter(function(r){return inScope(r)&&(cat==="All"||r.cat===cat);});
+  var list = cat==="NFL firsts" ? [] : RECORDS.filter(function(r){return inScope(r)&&inCat(r,cat);});
   document.getElementById('cards').innerHTML = list.map(function(r){
     var me = r.entries.filter(function(e){return isMe(e[0]);})[0][1];
     var others = r.entries.filter(function(e){return !isMe(e[0]);});
