@@ -388,8 +388,9 @@ tr.nextup td{color:var(--mute);font-style:italic}
 @keyframes lbp{50%{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.livebar .dot{animation:none}}
 /* ---------- Next game page: team cards, primetime, standings, line, playoff chances ---------- */
-.vs{perspective:900px}
-.team.tc{position:relative;overflow:hidden;isolation:isolate;text-align:center;padding:14px 10px 12px;border-radius:16px;color:#fff;
+.vs{perspective:900px;align-items:stretch}
+.vs .at{align-self:center}
+.team.tc{position:relative;overflow:hidden;isolation:isolate;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px 10px 12px;border-radius:16px;color:#fff;
   background:radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,.28),rgba(255,255,255,0) 55%),linear-gradient(160deg,var(--c1) 0%,color-mix(in srgb,var(--c1) 70%,#000) 100%);
   border:1px solid color-mix(in srgb,var(--c1) 55%,#000);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -6px 0 var(--c2),inset 0 -8px 10px rgba(0,0,0,.25),0 10px 0 -4px color-mix(in srgb,var(--c1) 45%,#000),0 16px 26px rgba(0,0,0,.45);
@@ -415,19 +416,26 @@ tr.nextup td{color:var(--mute);font-style:italic}
 .dtab tr.me td{font-weight:800;background:rgba(255,255,255,.14)}
 .dtab tr:last-child td{border-bottom:0}
 @media (max-width:560px){.divs{grid-template-columns:1fr}.dtab th:nth-child(5),.dtab td:nth-child(5){display:none}}
-/* primetime banner */
-.pt{position:relative;overflow:hidden;margin:14px auto 4px;max-width:520px;border-radius:14px;padding:12px 16px 12px;text-align:center;color:#fff;
-  background:radial-gradient(60% 120% at 15% -20%,rgba(255,236,170,.55),transparent 60%),radial-gradient(60% 120% at 85% -20%,rgba(255,236,170,.55),transparent 60%),linear-gradient(180deg,#05070f,#14204a);
-  border:1px solid #c9a227;box-shadow:inset 0 1px 0 rgba(255,240,190,.4),0 0 0 3px rgba(201,162,39,.25),0 10px 24px rgba(0,0,0,.5)}
+/* primetime banner: a billboard lit by three old industrial lights hanging from a steel rail */
+.ptw{position:relative;max-width:520px;margin:12px auto 6px;padding-top:46px}
+.lamps{position:absolute;left:0;right:0;top:0;height:60px;z-index:2;pointer-events:none}
+.lamps .rail{position:absolute;left:3%;right:3%;top:4px;height:7px;border-radius:2px;box-shadow:0 3px 4px rgba(0,0,0,.55);
+  background-image:linear-gradient(180deg,#a3aab4,#5b616b 45%,#2b2f35),radial-gradient(circle,#1c1f24 1.3px,transparent 1.6px);background-size:auto,24px 7px;background-blend-mode:normal}
+.lamp{position:absolute;top:0;width:64px;height:60px;overflow:visible;filter:drop-shadow(0 3px 3px rgba(0,0,0,.6))}
+.lamp.l0{left:17%;transform:translateX(-50%) rotate(-4deg)}.lamp.l1{left:50%;transform:translateX(-50%)}.lamp.l2{left:83%;transform:translateX(-50%) rotate(4deg)}
+.lamp .bulb{filter:blur(1.5px)}
+.pt{position:relative;overflow:hidden;margin:0;border-radius:6px;padding:16px 16px 12px;text-align:center;color:#fff;
+  background:radial-gradient(34% 70% at 17% 0%,rgba(255,236,170,.5),transparent 70%),radial-gradient(34% 70% at 50% 0%,rgba(255,236,170,.5),transparent 70%),radial-gradient(34% 70% at 83% 0%,rgba(255,236,170,.5),transparent 70%),linear-gradient(180deg,#0a0e1c,#14204a);
+  border:3px solid #2a2e35;outline:1px solid #c9a227;outline-offset:-7px;box-shadow:inset 0 0 0 1px #50565f,0 10px 24px rgba(0,0,0,.55)}
 .pt .ptk{display:block;font-size:.66rem;font-weight:900;letter-spacing:.32em;text-transform:uppercase;color:#f2d36b}
 .pt b{display:block;font-size:clamp(1.15rem,5vw,1.6rem);font-weight:900;letter-spacing:.04em;text-transform:uppercase;line-height:1.1;
   background:linear-gradient(180deg,#fff 30%,#f2d36b 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 rgba(0,0,0,.6))}
 .pt .ptn{display:block;font-size:.78rem;opacity:.9;margin-top:2px}
 .ptb{position:absolute;inset:0;pointer-events:none}
-.ptb i{position:absolute;top:-30%;width:40%;height:160%;background:linear-gradient(180deg,rgba(255,244,200,.28),rgba(255,244,200,0) 70%);transform-origin:50% 0;filter:blur(2px)}
-.ptb i:nth-child(1){left:-6%;transform:rotate(-24deg)}.ptb i:nth-child(2){left:30%;transform:rotate(0)}.ptb i:nth-child(3){right:-6%;transform:rotate(24deg)}
-@media (prefers-reduced-motion:no-preference){.ptb i{animation:ptsweep 6s ease-in-out infinite alternate}.ptb i:nth-child(2){animation-delay:-2s}.ptb i:nth-child(3){animation-delay:-4s}}
-@keyframes ptsweep{from{opacity:.55;margin-left:-6%}to{opacity:1;margin-left:6%}}
+.ptb i{position:absolute;top:0;width:44%;height:100%;clip-path:polygon(38% 0,62% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(255,240,190,.42),rgba(255,240,190,.08) 70%,rgba(255,240,190,0))}
+.ptb i:nth-child(1){left:-5%}.ptb i:nth-child(2){left:28%}.ptb i:nth-child(3){left:61%}
+@media (prefers-reduced-motion:no-preference){.ptb i:nth-child(1),.lamp.l0 .bulb{animation:flick 7s infinite}.ptb i:nth-child(3),.lamp.l2 .bulb{animation:flick 11s infinite 3s}}
+@keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.35}94%{opacity:.95}95.5%{opacity:.45}97%{opacity:1}}
 /* what's at stake */
 .stake .sk{border-left:5px solid;border-radius:10px;padding:8px 12px;margin:0 0 10px;background:var(--bg)}
 .stake .sk.w{border-color:#1f9d55}.stake .sk.l{border-color:var(--red)}
