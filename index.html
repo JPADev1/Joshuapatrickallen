@@ -34,20 +34,17 @@
   <div class="scroll"><table id="rush"></table></div>
   <p class="note" id="statnote"></p>
 
-  <div class="views" role="tablist" aria-label="Records">
-    <button type="button" role="tab" id="v-rec" aria-selected="true" aria-controls="rec-view">Franchise records</button>
-    <button type="button" role="tab" id="v-first" aria-selected="false" aria-controls="firsts-view">NFL firsts</button>
-  </div>
-  <section id="rec-view" role="tabpanel" aria-labelledby="v-rec">
-    <p class="note" style="margin:0 0 12px">Every Buffalo Bills franchise record Allen can be measured against.</p>
-    <div class="tabs" id="tabs"></div>
-    <div id="cards"></div>
-    <div class="card queue"><h2>Being researched</h2><ul id="queue"></ul></div>
-  </section>
-  <section id="firsts-view" role="tabpanel" aria-labelledby="v-first" hidden>
+  <h2 class="sec rec-h" id="records">Records</h2>
+  <p class="note" style="margin:0 0 12px" id="rec-sub"></p>
+  <div class="tabs scope" id="scopeTabs" role="group" aria-label="Record type"></div>
+  <div class="tabs" id="tabs" role="group" aria-label="Category"></div>
+  <div id="cards"></div>
+  <section id="firsts-wrap" hidden>
+    <h2 class="sec" id="firsts-h">NFL firsts</h2>
     <p class="note" style="margin:0 0 12px" id="firsts-sub">Every time Allen did something no player or quarterback had done before, newest first.</p>
     <ol class="firsts" id="firsts"></ol>
   </section>
+  <div class="card queue" id="queuecard"><h2>Being researched</h2><ul id="queue"></ul></div>
 </main>
 <main id="hailee-view" hidden>
   <div class="tiles" id="h-tiles"></div>
@@ -253,11 +250,29 @@ function build(){
   document.getElementById('statnote').textContent = "Season lines from nflverse, checked against official totals (2018 uses the official 2,074 passing yards). 2025 games and starts include the Week 18 start in which Allen took one snap to keep his streak alive. *2026: through " + THRU + ", from nflverse game logs, refreshed automatically.";
 }
 function isMe(n){return n.indexOf(ME)===0;}
+// Records: one section. Scope row (All / Bills franchise / NFL), then a category row.
+// TD combos and the starts streak are NFL records; the rest are Bills franchise records; NFL firsts are their own list.
+var SCOPE = "all", FIRSTS = null;
+var SCOPES = [["all","All"],["bills","Bills franchise"],["nfl","NFL"]];
+function scopeOf(r){ return r.scope || (r.cat==="TD combos"||r.cat==="Streaks" ? "nfl" : "bills"); }
+function inScope(r){ return SCOPE==="all" || scopeOf(r)===SCOPE; }
 function render(){
-  var cats = ["All","Career","TD combos","Single season","Postseason","Honors","Streaks"];
-  document.getElementById('tabs').innerHTML = cats.map(function(c){return '<button data-c="' + c + '" aria-pressed="' + (c===cat) + '">' + c + '</button>';}).join('');
-  Array.prototype.forEach.call(document.querySelectorAll('#tabs button'), function(b){b.onclick=function(){cat=b.getAttribute('data-c');render();};});
-  var list = RECORDS.filter(function(r){return cat==="All"||r.cat===cat;});
+  document.getElementById('scopeTabs').innerHTML = SCOPES.map(function(o){return '<button type="button" data-s="'+o[0]+'" aria-pressed="'+(SCOPE===o[0])+'">'+o[1]+'</button>';}).join('');
+  Array.prototype.forEach.call(document.querySelectorAll('#scopeTabs button'), function(b){b.onclick=function(){SCOPE=b.getAttribute('data-s'); render(); recHash();};});
+  var order = ["Career","TD combos","Single season","Postseason","Honors","Streaks"];
+  var cats = ["All"].concat(order.filter(function(c){return RECORDS.some(function(r){return r.cat===c&&inScope(r);});}));
+  if(SCOPE!=="bills") cats.push("NFL firsts");
+  if(cats.indexOf(cat)<0) cat="All";
+  document.getElementById('tabs').innerHTML = cats.map(function(c){var n=c==="NFL firsts"&&FIRSTS?' ('+FIRSTS.length+')':''; return '<button type="button" data-c="' + c + '" aria-pressed="' + (c===cat) + '">' + c + n + '</button>';}).join('');
+  Array.prototype.forEach.call(document.querySelectorAll('#tabs button'), function(b){b.onclick=function(){cat=b.getAttribute('data-c');render();recHash();};});
+  document.getElementById('rec-sub').textContent = SCOPE==="bills" ? "Every Buffalo Bills franchise record Allen can be measured against."
+    : SCOPE==="nfl" ? "NFL records Allen holds or is chasing, and every time he did something no one had done before."
+    : "Bills franchise records and NFL records Allen holds or is chasing, plus his NFL firsts.";
+  var showFirsts = SCOPE!=="bills" && (cat==="All"||cat==="NFL firsts");
+  document.getElementById('firsts-wrap').hidden = !showFirsts;
+  document.getElementById('firsts-h').hidden = cat==="NFL firsts";
+  document.getElementById('queuecard').hidden = cat==="NFL firsts";
+  var list = cat==="NFL firsts" ? [] : RECORDS.filter(function(r){return inScope(r)&&(cat==="All"||r.cat===cat);});
   document.getElementById('cards').innerHTML = list.map(function(r){
     var me = r.entries.filter(function(e){return isMe(e[0]);})[0][1];
     var others = r.entries.filter(function(e){return !isMe(e[0]);});
@@ -267,7 +282,8 @@ function render(){
     var st = r.status==="verified" ? '<span class="chip ok">Verified</span>' : '<span class="chip chk">Needs a second check</span>';
     // Highest value on top, so the record holder (Allen included) always leads; ties keep their listed order.
     var rows = r.entries.slice().sort(function(a,b){return b[1]-a[1];}).map(function(e){return '<div class="row' + (isMe(e[0])?' me':'') + '"><span>' + e[0] + '</span><span class="bar"><u style="width:' + (e[1]/top*100) + '%"></u></span><b>' + fmt(e[1]) + '</b></div>';}).join('');
-    return '<div class="card"><div class="head"><h2>' + r.cat + ': ' + r.title + '</h2><div class="chips">' + chip + st + '</div></div>' + rows + '<p class="note">' + r.note + '</p></div>';
+    var sc = scopeOf(r)==="nfl" ? '<span class="chip scope nfl">NFL</span>' : '<span class="chip scope bills">Bills</span>';
+    return '<div class="card"><div class="head"><h2>' + r.cat + ': ' + r.title + '</h2><div class="chips">' + sc + chip + st + '</div></div>' + rows + '<p class="note">' + r.note + '</p></div>';
   }).join('');
   document.getElementById('queue').innerHTML = QUEUE.map(function(q){return '<li>' + q + '</li>';}).join('');
 }
@@ -285,23 +301,19 @@ function loadAllen(){ return load('allen-2026.json').then(function(d){
   return window.JPALive ? JPALive.ready.then(function(){ useData(JPALive.patch('allen-2026.json', d)); }) : useData(d); }).catch(function(){}); }
 loadAllen();
 if(window.JPALive) JPALive.onChange(loadAllen);
-// Records area: "Franchise records" (default) or "NFL firsts". #firsts in the address opens the firsts view.
+// NFL firsts list (shown under Records > NFL). Old links: #firsts opens NFL > NFL firsts; #nfl and #bills pick the scope.
+function recHash(){ var h = cat==="NFL firsts" ? '#firsts' : SCOPE!=="all" ? '#'+SCOPE : '';
+  if(location.hash!==h && (h || /^#(firsts|nfl|bills)$/.test(location.hash))){ try{history.replaceState(null,'',h||location.pathname+location.search);}catch(e){} } }
+if(location.hash==='#firsts'){SCOPE='nfl'; cat='NFL firsts'; render(); document.getElementById('records').scrollIntoView();}
+else if(location.hash==='#nfl'||location.hash==='#bills'){SCOPE=location.hash.slice(1); render(); document.getElementById('records').scrollIntoView();}
 (function(){
   var M=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'];
   function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function when(d){if(/^\d{4}$/.test(d))return d+' season';var p=d.split('-');return M[+p[1]-1]+' '+(+p[2])+', '+p[0];}
-  var rec=document.getElementById('v-rec'), fir=document.getElementById('v-first');
-  function show(f){
-    rec.setAttribute('aria-selected',f?'false':'true'); fir.setAttribute('aria-selected',f?'true':'false');
-    document.getElementById('rec-view').hidden=f; document.getElementById('firsts-view').hidden=!f;
-    try{history.replaceState(null,'',f?'#firsts':location.pathname+location.search);}catch(e){}
-  }
-  rec.onclick=function(){show(false);}; fir.onclick=function(){show(true);};
-  [rec,fir].forEach(function(b,i){b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var o=i?rec:fir;o.focus();o.click();}});});
-  if(location.hash==='#firsts'){show(true);}
   load('firsts.json').then(function(d){
     if(!d||!d.items||!d.items.length)return;
-    fir.textContent='NFL firsts ('+d.items.length+')';
+    FIRSTS=d.items; render();
+    document.getElementById('firsts-h').textContent='NFL firsts ('+d.items.length+')';
     document.getElementById('firsts').innerHTML=d.items.map(function(f){
       return '<li><div class="fwhen">'+esc(when(f.date))+'</div><div class="fbody"><b>'+esc(f.text)+'</b>'
         +(f.line?'<span class="fline">'+esc(f.line)+'</span>':'')
