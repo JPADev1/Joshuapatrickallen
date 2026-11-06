@@ -85,13 +85,33 @@
     return d;
   }
 
+  // Idle teaser: every few seconds (at random) a gold light runs once around its border.
+  var sweeping = false;
+  function sweep(){
+    if(sweeping || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    sweeping = true;
+    (function go(){
+      var el = document.getElementById('livebar');
+      if(!el || !el.classList.contains('idle')){ sweeping = false; return; }
+      if(!document.hidden){ el.classList.remove('sweep'); void el.offsetWidth; el.classList.add('sweep');
+        setTimeout(function(){ el.classList.remove('sweep'); }, 2800); }
+      setTimeout(go, 5000 + Math.random() * 6000);
+    })();
+  }
+
   // Small "LIVE" bar at the top of the page.
   function bar(){
-    var L = use(), el = document.getElementById('livebar');
-    if(!L){ if(el) el.hidden = true; return; }
-    if(!el){ el = document.createElement('div'); el.id = 'livebar'; el.className = 'livebar'; el.setAttribute('role','status');
-      var slot = document.getElementById('livebar-slot'), m = document.querySelector('main');
+    var L = use(), el = document.getElementById('livebar'), slot = document.getElementById('livebar-slot');
+    var idle = !L && slot && slot.hasAttribute('data-idle');
+    if(!L && !idle){ if(el) el.hidden = true; return; }
+    if(!el){ el = document.createElement('div'); el.id = 'livebar'; el.setAttribute('role','status');
+      var m = document.querySelector('main');
       if(slot) slot.appendChild(el); else if(m) m.insertBefore(el, m.firstChild); else document.body.insertBefore(el, document.body.firstChild); }
+    el.className = idle ? 'livebar idle' : 'livebar';
+    if(idle){ // No game on: hold the spot with a teaser (pages opt in with data-idle on #livebar-slot)
+      el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br><span class="ln">Check back on gameday to watch records broken live.</span>' +
+        '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every 2 minutes.</span>';
+      el.hidden = false; sweep(); return; }
     var s = L.s, parts = [];
     if(s.att) parts.push(s.cmp + '/' + s.att + ', ' + s.yds + ' yds, ' + s.td + ' TD' + (s.int ? ', ' + s.int + ' INT' : ''));
     if(s.rushAtt || s.rushTD) parts.push(s.rushAtt + ' rush, ' + s.rushYds + ' yds' + (s.rushTD ? ', ' + s.rushTD + ' TD' : ''));

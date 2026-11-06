@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=30">
+<link rel="stylesheet" href="css/site.css?v=31">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -17,6 +17,7 @@
   <div class="divs" id="divs" hidden></div>
 </div></header>
 <main class="panel">
+  <div id="livebar-slot" data-idle></div>
   <section id="stakeSec" hidden aria-labelledby="stakeHead">
     <h2 class="sec" id="stakeHead">What's at stake</h2>
     <div class="card stake" id="stake"></div>
@@ -58,7 +59,7 @@
   <p class="note" id="srcnote"></p>
 </main>
 <footer id="foot">Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
-<script src="scripts/live.js?v=1"></script>
+<script src="scripts/live.js?v=2"></script>
 <script>
 function fmt(n){return n.toLocaleString('en-US');}
 function td(v){return '<td>'+v+'</td>';}
