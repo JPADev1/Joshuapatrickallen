@@ -442,22 +442,34 @@ tr.nextup td{color:var(--mute);font-style:italic}
 .stake .skt{display:block;font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 .stake .sk p{margin:2px 0 0;font-size:1rem;font-weight:600}
 .stake .skodds{margin:4px 0 0;font-weight:700;color:var(--blue)}
-/* the line */
-.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.lbox{background:var(--bg);border-radius:12px;padding:10px;text-align:center}
-.lbox .ll{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:700}
-.lbox b{display:block;font-size:1.35rem;color:var(--blue);line-height:1.2}
-.lbox small{display:block;font-size:.72rem;color:var(--mute)}
-.lbox .mv{display:inline-block;margin-top:4px;font-size:.72rem;font-weight:700;color:var(--gold);background:var(--chip);border-radius:99px;padding:1px 8px}
-.lbox .mv.same{background:transparent;color:var(--mute);font-weight:500}
-.lcharts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px}
-.lc{margin:0;background:var(--bg);border-radius:12px;padding:8px}
-.lc figcaption{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
-.lc svg{width:100%;height:auto;max-height:140px;display:block}
-.lc .ax{stroke:var(--line);stroke-width:1}.lc .ln{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-linejoin:round}
-.lc circle{fill:var(--card);stroke:var(--blue);stroke-width:2}.lc circle:last-of-type{fill:var(--red);stroke:var(--red)}
-.lc text{font-size:10px;fill:var(--mute)}
-@media (max-width:560px){.lgrid{grid-template-columns:1fr 1fr 1fr;gap:6px}.lbox b{font-size:1.05rem}}
+/* the line: sportsbook odds board in the page's navy and gold, each team in its own colors */
+#line{padding:0;overflow:hidden;border:0;background:transparent}
+.oddsboard{position:relative;border-radius:14px;overflow:hidden;color:#fff;background:linear-gradient(180deg,#0d1a3f,#091128);
+  border:3px solid #2a2e35;box-shadow:inset 0 0 0 1px #50565f,inset 0 1px 0 rgba(255,255,255,.12),0 10px 24px rgba(0,0,0,.35)}
+.oddsboard::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#8f6b12,#fbe9a0,#c9a227,#fbe9a0,#8f6b12)}
+.ob-top{display:flex;justify-content:space-between;align-items:baseline;padding:12px 14px 6px}
+.ob-k{font-size:.72rem;font-weight:900;letter-spacing:.28em;text-transform:uppercase;color:#f2d36b}
+.ob-book{font-size:.72rem;opacity:.7}
+.ob-r{display:grid;grid-template-columns:minmax(84px,1.1fr) repeat(3,1fr);gap:6px;padding:0 10px 6px}
+.ob-h div{font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.6;text-align:center}
+.ob-t{display:flex;align-items:center;gap:8px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem}
+.ob-sw{width:10px;height:30px;border-radius:3px;background:linear-gradient(180deg,var(--c1) 0 62%,var(--c2) 62%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.ob-c{text-align:center;border-radius:8px;padding:7px 4px 6px;background:linear-gradient(180deg,#1b2a5a,#111c40);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -2px 0 rgba(0,0,0,.35),inset 3px 0 0 var(--c1)}
+.ob-c b{display:block;font-size:1.25rem;font-weight:900;font-variant-numeric:tabular-nums;color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.5)}
+.ob-mv{display:block;font-style:normal;font-size:.66rem;font-weight:700;min-height:1em;opacity:.85}
+.ob-mv.same{opacity:.55;font-weight:500}.ob-mv.moved{color:#f2d36b;opacity:1}
+.ob-charts{margin:8px 10px 0;border-top:1px solid rgba(255,255,255,.1);padding-top:8px}
+.ob-tabs{display:flex;gap:6px;justify-content:center;margin-bottom:4px}
+.ob-tabs button{font:inherit;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#cfd6ea;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:4px 12px;cursor:pointer}
+.ob-tabs button[aria-pressed="true"]{background:#c9a227;border-color:#c9a227;color:#1b1b1b}
+.ob-chart svg{width:100%;height:auto;display:block}
+.ob-chart .gr{stroke:rgba(255,255,255,.08);stroke-width:1}
+.ob-chart .ln{fill:none;stroke:#f2d36b;stroke-width:3;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(242,211,107,.55))}
+.ob-chart .pt{fill:#0d1a3f;stroke:#f2d36b;stroke-width:2}.ob-chart .now{fill:#c60c30;stroke:#fff;stroke-width:2}
+.ob-chart text{font-size:12px;fill:#aab4d0;font-weight:700}.ob-chart .nowl{fill:#fff}
+.ob-empty{text-align:center;font-size:.8rem;opacity:.7;margin:18px 0}
+.ob-foot{margin:2px 0 10px;text-align:center;font-size:.7rem;opacity:.6}
+@media (max-width:480px){.ob-c b{font-size:1.02rem}.ob-t{font-size:.8rem}.ob-r{grid-template-columns:72px repeat(3,1fr);gap:4px}}
 /* playoff chances */
 .potbl table td{white-space:nowrap}
 .potbl td b{display:inline-block;min-width:36px}

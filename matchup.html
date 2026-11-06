@@ -165,37 +165,53 @@ function stakes(m){var S=m.significance; if(!S)return;
   document.getElementById('stake').innerHTML='<div class="sk w"><span class="skt">With a win</span><p>'+esc(S.win)+'</p></div>'
     +'<div class="sk l"><span class="skt">With a loss</span><p>'+esc(S.loss)+'</p></div>'
     +(S.odds?'<p class="skodds">'+esc(S.odds)+'</p>':'')+'<p class="note">'+esc(S.note)+' Updated automatically after every game.</p>';}
-// Betting line: current vs opening, and a chart of every move the stats job has recorded
+// Betting line as a sportsbook odds board: one row per team in its colors, open vs now, and a movement chart
 function lines(m){var L=m.lines; if(!L||!L.cur)return;
   document.getElementById('lineSec').hidden=false;
-  var c=L.cur,o=L.open||{}, nick=m.opp.nick||m.opp.name, fav=c.spread<0?'Bills':c.spread>0?nick:'Pick\u2019em';
-  function box(lbl,now,was,fmtf,unit){var mv=(was!=null&&now!=null&&was!==now)?'<span class="mv">opened '+fmtf(was)+'</span>':'<span class="mv same">'+(was!=null?'unchanged since open':'')+'</span>';
-    return '<div class="lbox"><span class="ll">'+lbl+'</span><b>'+fmtf(now)+'</b>'+(unit?'<small>'+unit+'</small>':'')+mv+'</div>';}
-  var h='<div class="lgrid">'+box('Spread',c.spread,o.spread,function(v){return v==null?'&ndash;':v===0?'PK':'Bills '+sgn(v);})
-    +box('Over/under',c.total,o.total,function(v){return v==null?'&ndash;':String(v);},'total points')
-    +box('Moneyline',c.ml,o.ml,function(v){return 'Bills '+ml(v);},(c.oppMl!=null?esc(nick)+' '+ml(c.oppMl):''))+'</div>';
-  var H=(L.history||[]).filter(function(x){return x.spread!=null;});
-  h+='<div class="lcharts">'+chartLine(H,'spread','Spread (Bills)',function(v){return v===0?'PK':sgn(v);},true)+chartLine(H,'total','Over/under',String,false)
-    +chartLine(H,'ml','Moneyline (Bills)',function(v){return ml(v);},true)+'</div>';
-  var moves=Math.max(0,H.length-1);
-  h+='<p class="note">'+(fav==='Pick\u2019em'?'A pick\u2019em: no favorite.':'Favorite: '+esc(fav)+'.')+' Lines from '+esc(L.book||'the sportsbooks')+', checked every hour; '
-    +(moves?moves+' move'+(moves===1?'':'s')+' recorded since the line opened.':'no moves recorded yet; the chart fills in as the line changes.')
-    +' For information only, not betting advice. 21+ only, where legal. Gambling problem? Call 1-800-MY-RESET.</p>';
-  document.getElementById('line').innerHTML=h;}
+  var c=L.cur,o=L.open||{}, TC=m.teamColors||{}, bn='Bills', on=m.opp.nick||m.opp.name;
+  var away=m.home?{n:on,c:TC.opp,me:false}:{n:bn,c:TC.bills,me:true}, home=m.home?{n:bn,c:TC.bills,me:true}:{n:on,c:TC.opp,me:false};
+  function sp(v){return v==null?'&ndash;':v===0?'PK':sgn(v);}
+  function mv(now,was,fmtf){ if(was==null||now==null)return '<i class="ob-mv"></i>'; if(now===was)return '<i class="ob-mv same">since open</i>';
+    return '<i class="ob-mv moved">opened '+fmtf(was)+'</i>';}
+  function cell(main,sub){return '<div class="ob-c"><b>'+main+'</b>'+sub+'</div>';}
+  function row(t){var mine=t.me, s=mine?c.spread:(c.spread==null?null:-c.spread), os=mine?o.spread:(o.spread==null?null:-o.spread),
+      ml1=mine?c.ml:c.oppMl, oml=mine?o.ml:o.oppMl, tot=mine?'O ':'U ';
+    var c1=(t.c&&t.c[0])||'#2b3a67', c2=(t.c&&t.c[1])||'#8a95b5';
+    return '<div class="ob-r" style="--c1:'+c1+';--c2:'+c2+'"><div class="ob-t"><span class="ob-sw"></span>'+esc(t.n)+'</div>'
+      +cell(sp(s),mv(s,os,sp))
+      +cell(c.total==null?'&ndash;':tot+c.total,mine?mv(c.total,o.total,String):'<i class="ob-mv"></i>')
+      +cell(ml(ml1),mv(ml1,oml,ml))+'</div>';}
+  var H=(L.history||[]).filter(function(x){return x.spread!=null;}), moves=Math.max(0,H.length-1);
+  var h='<div class="oddsboard"><div class="ob-top"><span class="ob-k">Game line</span><span class="ob-book">'+esc(L.book||'')+'</span></div>'
+    +'<div class="ob-r ob-h"><div></div><div>Spread</div><div>Total</div><div>Moneyline</div></div>'+row(away)+row(home)
+    +'<div class="ob-charts" role="group" aria-label="Line movement"><div class="ob-tabs">'
+    +[['spread','Spread'],['total','Total'],['ml','Moneyline']].map(function(k,i){return '<button type="button" data-k="'+k[0]+'" aria-pressed="'+(i===0)+'">'+k[1]+'</button>';}).join('')
+    +'</div><div class="ob-chart" id="obChart"></div></div>'
+    +'<p class="ob-foot">'+(moves?moves+' move'+(moves===1?'':'s')+' since the line opened':'No moves yet; the chart fills in as the line changes')+' &middot; checked hourly</p></div>'
+    +'<p class="note">Lines are from the Bills’ side unless marked. For information only, not betting advice. 21+ only, where legal. Gambling problem? Call 1-800-MY-RESET.</p>';
+  var box=document.getElementById('line'); box.innerHTML=h;
+  var draw=function(k){document.getElementById('obChart').innerHTML=k==='spread'?chartLine(H,'spread','Bills spread',sp,true):k==='total'?chartLine(H,'total','Total points',String,false):chartLine(H,'ml','Bills moneyline',ml,true);};
+  box.querySelector('.ob-tabs').addEventListener('click',function(e){var b=e.target.closest('button'); if(!b)return;
+    Array.prototype.forEach.call(this.children,function(x){x.setAttribute('aria-pressed',x===b);}); draw(b.dataset.k);});
+  var first=['spread','ml','total'].filter(function(k){return o[k]!=null&&c[k]!=null&&o[k]!==c[k];})[0]||'spread';
+  Array.prototype.forEach.call(box.querySelectorAll('.ob-tabs button'),function(x){x.setAttribute('aria-pressed',x.dataset.k===first);});
+  draw(first);}
 function chartLine(H,k,title,lab,invert){
-  var pts=H.filter(function(x){return x[k]!=null;}); if(!pts.length)return '';
+  var pts=H.filter(function(x){return x[k]!=null;}); if(!pts.length)return '<p class="ob-empty">No '+esc(title.toLowerCase())+' posted yet.</p>';
   if(pts.length===1)pts=[pts[0],pts[0]];
-  var W=300,Hh=110,pl=34,pr=10,pt=12,pb=22, vals=pts.map(function(x){return x[k];}), lo=Math.min.apply(null,vals), hi=Math.max.apply(null,vals);
-  if(hi-lo<1){lo-=1;hi+=1;} var pad=(hi-lo)*.15; lo-=pad; hi+=pad;
-  var X=function(i){return pl+(W-pl-pr)*(pts.length===1?0:i/(pts.length-1));}, Y=function(v){var f=(v-lo)/(hi-lo); if(invert)f=1-f; return pt+(Hh-pt-pb)*(1-f);};
+  var W=600,Hh=150,pl=46,pr=16,pt=16,pb=26, vals=pts.map(function(x){return x[k];}), lo=Math.min.apply(null,vals), hi=Math.max.apply(null,vals);
+  if(hi-lo<1){lo-=1;hi+=1;} var pad=(hi-lo)*.2; lo-=pad; hi+=pad;
+  var X=function(i){return pl+(W-pl-pr)*i/(pts.length-1);}, Y=function(v){var f=(v-lo)/(hi-lo); if(invert)f=1-f; return pt+(Hh-pt-pb)*(1-f);};
   var d=pts.map(function(x,i){return (i?'L':'M')+X(i).toFixed(1)+','+Y(x[k]).toFixed(1)+(i<pts.length-1?' L'+X(i+1).toFixed(1)+','+Y(x[k]).toFixed(1):'');}).join(' ');
-  var dots=pts.map(function(x,i){return '<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(x[k]).toFixed(1)+'" r="'+(i===pts.length-1?4:2.5)+'"/>';}).join('');
+  var area=d+' L'+X(pts.length-1).toFixed(1)+','+(Hh-pb)+' L'+pl+','+(Hh-pb)+' Z';
+  var grid=[0,.5,1].map(function(f){var y=(pt+(Hh-pt-pb)*f).toFixed(1);return '<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+y+'" y2="'+y+'" class="gr"/>';}).join('');
+  var dots=pts.map(function(x,i){var last=i===pts.length-1;return '<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(x[k]).toFixed(1)+'" r="'+(last?5:3)+'" class="'+(last?'now':'pt')+'"/>';}).join('');
   var first=pts[0][k], last=pts[pts.length-1][k];
-  var labs='<text x="'+(pl-6)+'" y="'+(Y(first)+4).toFixed(1)+'" text-anchor="end">'+lab(first)+'</text>'+(last!==first?'<text x="'+(pl-6)+'" y="'+(Y(last)+4).toFixed(1)+'" text-anchor="end">'+lab(last)+'</text>':'');
+  var labs='<text x="'+(pl-8)+'" y="'+(Y(first)+4).toFixed(1)+'" text-anchor="end">'+lab(first)+'</text>'+(last!==first?'<text x="'+(W-pr)+'" y="'+(Y(last)-10).toFixed(1)+'" text-anchor="end" class="nowl">'+lab(last)+'</text>':'');
   var when=function(x){if(!x.t)return 'Open';var t=new Date(x.t.replace('Z',':00Z'));return (t.getMonth()+1)+'/'+t.getDate();};
-  var xl='<text x="'+pl+'" y="'+(Hh-6)+'">'+when(pts[0])+'</text><text x="'+(W-pr)+'" y="'+(Hh-6)+'" text-anchor="end">Now</text>';
-  return '<figure class="lc"><figcaption>'+esc(title)+'</figcaption><svg viewBox="0 0 '+W+' '+Hh+'" role="img" aria-label="'+esc(title)+': '+pts.map(function(x){return lab(x[k]);}).join(', ')+'">'
-    +'<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+(Hh-pb)+'" y2="'+(Hh-pb)+'" class="ax"/><path d="'+d+'" class="ln"/>'+dots+labs+xl+'</svg></figure>';}
+  var xl='<text x="'+pl+'" y="'+(Hh-8)+'">'+when(pts[0])+'</text><text x="'+(W-pr)+'" y="'+(Hh-8)+'" text-anchor="end">Now</text>';
+  return '<svg viewBox="0 0 '+W+' '+Hh+'" role="img" aria-label="'+esc(title)+' since the line opened: '+pts.map(function(x){return lab(x[k]);}).join(', ')+'"><defs><linearGradient id="obg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2d36b" stop-opacity=".35"/><stop offset="1" stop-color="#f2d36b" stop-opacity="0"/></linearGradient></defs>'
+    +grid+'<path d="'+area+'" fill="url(#obg)"/><path d="'+d+'" class="ln"/>'+dots+labs+xl+'</svg>';}
 // Playoff chances from the stats job's simulation: now, with a win, with a loss
 function playoffs(m){var P=m.playoffs; if(!P||!P.odds)return;
   document.getElementById('poSec').hidden=false;
