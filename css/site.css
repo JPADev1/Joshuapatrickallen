@@ -387,3 +387,78 @@ tr.nextup td{color:var(--mute);font-style:italic}
 .livebar .lrel{display:block;margin-top:8px;background:var(--blue);color:#fff;border:0;border-radius:99px;padding:6px 14px;font:inherit;font-weight:700;cursor:pointer}
 @keyframes lbp{50%{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.livebar .dot{animation:none}}
+/* ---------- Next game page: team cards, primetime, standings, line, playoff chances ---------- */
+.vs{perspective:900px}
+.team.tc{position:relative;overflow:hidden;isolation:isolate;text-align:center;padding:14px 10px 12px;border-radius:16px;color:#fff;
+  background:radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,.28),rgba(255,255,255,0) 55%),linear-gradient(160deg,var(--c1) 0%,color-mix(in srgb,var(--c1) 70%,#000) 100%);
+  border:1px solid color-mix(in srgb,var(--c1) 55%,#000);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -6px 0 var(--c2),inset 0 -8px 10px rgba(0,0,0,.25),0 10px 0 -4px color-mix(in srgb,var(--c1) 45%,#000),0 16px 26px rgba(0,0,0,.45);
+  transform:rotateX(6deg);transform-origin:50% 100%;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.team.tc::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;background:repeating-linear-gradient(135deg,var(--c2) 0 2px,transparent 2px 14px)}
+.team.tc::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--c2);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.team.tc.lite{color:#111;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.team.tc .tcity{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.9;margin-top:4px}
+.team.tc b{display:block;font-size:clamp(1.35rem,6vw,2.1rem);font-weight:900;letter-spacing:.02em;text-transform:uppercase;line-height:1.05;margin:2px 0}
+.team.tc .trec{display:inline-block;font-weight:900;font-size:1.05rem;background:rgba(0,0,0,.28);border-radius:99px;padding:1px 12px;margin:2px 0 4px}
+.team.tc.lite .trec{background:rgba(255,255,255,.4)}
+.team.tc .tplace{display:block;font-size:.74rem;opacity:.95;line-height:1.25;margin-bottom:6px}
+.at{font-size:1rem;font-weight:900;opacity:.95;text-transform:uppercase;letter-spacing:.08em}
+@media (prefers-reduced-motion:no-preference){.team.tc{transition:transform .3s}.team.tc:hover{transform:rotateX(0) translateY(-2px)}}
+/* division standings under each team card */
+.divs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 0;text-align:left}
+.dtab{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:8px 8px 4px;backdrop-filter:blur(2px)}
+.dtab h3{margin:0 0 4px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;opacity:.9}
+.dtab table{width:100%;border-collapse:collapse;font-size:.76rem;color:inherit;background:transparent}
+.dtab th,.dtab td{padding:3px 4px;border-bottom:1px solid rgba(255,255,255,.14);text-align:right;position:static;background:transparent;color:inherit}
+.dtab th:first-child,.dtab td:first-child{text-align:left}
+.dtab thead th{font-size:.62rem;opacity:.75;color:inherit}
+.dtab tr.me td{font-weight:800;background:rgba(255,255,255,.14)}
+.dtab tr:last-child td{border-bottom:0}
+@media (max-width:560px){.divs{grid-template-columns:1fr}.dtab th:nth-child(5),.dtab td:nth-child(5){display:none}}
+/* primetime banner */
+.pt{position:relative;overflow:hidden;margin:14px auto 4px;max-width:520px;border-radius:14px;padding:12px 16px 12px;text-align:center;color:#fff;
+  background:radial-gradient(60% 120% at 15% -20%,rgba(255,236,170,.55),transparent 60%),radial-gradient(60% 120% at 85% -20%,rgba(255,236,170,.55),transparent 60%),linear-gradient(180deg,#05070f,#14204a);
+  border:1px solid #c9a227;box-shadow:inset 0 1px 0 rgba(255,240,190,.4),0 0 0 3px rgba(201,162,39,.25),0 10px 24px rgba(0,0,0,.5)}
+.pt .ptk{display:block;font-size:.66rem;font-weight:900;letter-spacing:.32em;text-transform:uppercase;color:#f2d36b}
+.pt b{display:block;font-size:clamp(1.15rem,5vw,1.6rem);font-weight:900;letter-spacing:.04em;text-transform:uppercase;line-height:1.1;
+  background:linear-gradient(180deg,#fff 30%,#f2d36b 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 rgba(0,0,0,.6))}
+.pt .ptn{display:block;font-size:.78rem;opacity:.9;margin-top:2px}
+.ptb{position:absolute;inset:0;pointer-events:none}
+.ptb i{position:absolute;top:-30%;width:40%;height:160%;background:linear-gradient(180deg,rgba(255,244,200,.28),rgba(255,244,200,0) 70%);transform-origin:50% 0;filter:blur(2px)}
+.ptb i:nth-child(1){left:-6%;transform:rotate(-24deg)}.ptb i:nth-child(2){left:30%;transform:rotate(0)}.ptb i:nth-child(3){right:-6%;transform:rotate(24deg)}
+@media (prefers-reduced-motion:no-preference){.ptb i{animation:ptsweep 6s ease-in-out infinite alternate}.ptb i:nth-child(2){animation-delay:-2s}.ptb i:nth-child(3){animation-delay:-4s}}
+@keyframes ptsweep{from{opacity:.55;margin-left:-6%}to{opacity:1;margin-left:6%}}
+/* what's at stake */
+.stake .sk{border-left:5px solid;border-radius:10px;padding:8px 12px;margin:0 0 10px;background:var(--bg)}
+.stake .sk.w{border-color:#1f9d55}.stake .sk.l{border-color:var(--red)}
+.stake .skt{display:block;font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.stake .sk p{margin:2px 0 0;font-size:1rem;font-weight:600}
+.stake .skodds{margin:4px 0 0;font-weight:700;color:var(--blue)}
+/* the line */
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.lbox{background:var(--bg);border-radius:12px;padding:10px;text-align:center}
+.lbox .ll{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:700}
+.lbox b{display:block;font-size:1.35rem;color:var(--blue);line-height:1.2}
+.lbox small{display:block;font-size:.72rem;color:var(--mute)}
+.lbox .mv{display:inline-block;margin-top:4px;font-size:.72rem;font-weight:700;color:var(--gold);background:var(--chip);border-radius:99px;padding:1px 8px}
+.lbox .mv.same{background:transparent;color:var(--mute);font-weight:500}
+.lcharts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px}
+.lc{margin:0;background:var(--bg);border-radius:12px;padding:8px}
+.lc figcaption{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.lc svg{width:100%;height:auto;max-height:140px;display:block}
+.lc .ax{stroke:var(--line);stroke-width:1}.lc .ln{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-linejoin:round}
+.lc circle{fill:var(--card);stroke:var(--blue);stroke-width:2}.lc circle:last-of-type{fill:var(--red);stroke:var(--red)}
+.lc text{font-size:10px;fill:var(--mute)}
+@media (max-width:560px){.lgrid{grid-template-columns:1fr 1fr 1fr;gap:6px}.lbox b{font-size:1.05rem}}
+/* playoff chances */
+.potbl table td{white-space:nowrap}
+.potbl td b{display:inline-block;min-width:36px}
+.potbl td small{margin-left:4px;font-size:.7rem;font-weight:800}
+.potbl small.up{color:#1f9d55}.potbl small.dn{color:var(--red)}
+.pbar{display:inline-block;vertical-align:middle;width:52px;height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-right:6px}
+.pbar u{display:block;height:100%;background:var(--blue);text-decoration:none}
+td.w .pbar u{background:#1f9d55}td.l .pbar u{background:var(--red)}
+@media (max-width:560px){.pbar{display:none}}
+.poswing{margin:10px 0 0;font-size:.95rem}
+.injup{margin:6px 0 8px;font-size:.88rem;background:var(--chip);color:var(--gold);border-radius:10px;padding:6px 10px}
+.injup span{opacity:.85}

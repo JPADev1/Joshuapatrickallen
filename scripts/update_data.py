@@ -3,7 +3,8 @@
 Writes three files into the output folder (default: data/):
   allen-2026.json  Josh Allen's 2026 season, game by game, plus career playoff totals
   matchup.json     the Bills' next game: opponent, kickoff, records, team comparison,
-                   Allen's history against them, past box scores, injury report
+                   Allen's history against them, past box scores, injury report, plus (from
+                   matchup_extras.py) standings, betting lines and their movement, playoff odds
   nfl-ranks.json   NFL all-time leader lists with active players' totals kept current
 
 Runs on GitHub Actions, no API key. Standard library only.
@@ -1128,6 +1129,14 @@ def main():
             m["props"] = build_props(week26, sched, S, m, snaps)
         except Exception as e:  # never let the props block the rest of the page
             print("props skipped:", e)
+        try:  # standings, lines, primetime, playoff odds, what a win would mean (scripts/matchup_extras.py)
+            import matchup_extras
+            old = load("matchup.json")
+            m.update(matchup_extras.build_extras(m, sched, get("teams/teams_colors_logos.csv"), SEASON, old))
+            key, changed, iso = matchup_extras.injury_stamp(m["injuries"], old if old and old.get("gameId") == m["gameId"] else None)
+            m["injuries"].update({"hash": key, "changed": changed, "changedIso": iso})
+        except Exception as e:  # never let the extras block the rest of the page
+            print("matchup extras skipped:", e)
         save("matchup.json", m)
 
 

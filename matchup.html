@@ -5,16 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=28">
+<link rel="stylesheet" href="css/site.css?v=29">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
   <nav class="nav"><a href="/">Stats &amp; records</a><a href="matchup.html" aria-current="page">Next game</a></nav>
   <h1 id="title">Next game</h1>
+  <div class="pt" id="pt" hidden></div>
   <div class="vs" id="vs"></div>
   <p class="when" id="when"></p>
+  <div class="divs" id="divs" hidden></div>
 </div></header>
 <main class="panel">
+  <section id="stakeSec" hidden aria-labelledby="stakeHead">
+    <h2 class="sec" id="stakeHead">What's at stake</h2>
+    <div class="card stake" id="stake"></div>
+  </section>
+  <section id="lineSec" hidden aria-labelledby="lineHead">
+    <h2 class="sec" id="lineHead">The line</h2>
+    <div class="card" id="line"></div>
+  </section>
+  <section id="poSec" hidden aria-labelledby="poHead">
+    <h2 class="sec" id="poHead">Playoff chances</h2>
+    <div class="card" id="po"></div>
+  </section>
   <h2 class="sec" id="watchHead" hidden>Records watch</h2>
   <div class="card watch" id="watch" hidden></div>
   <div class="card" id="vsAllen"></div>
@@ -57,9 +71,20 @@ function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{
 Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   var m=res[0], a=res[1];
   document.getElementById('title').textContent=(m.label||('Week '+m.week))+': '+(m.home?'vs':'at')+' the '+m.opp.name;
-  var b='<div class="team"><b>'+esc(m.bills.name)+'</b><span>'+esc(m.bills.record)+'</span></div>';
-  var o='<div class="team"><b>'+esc(m.opp.name)+'</b><span>'+esc(m.opp.record)+'</span></div>';
+  var TC=m.teamColors||{}, ST=m.standings||{};
+  function card(t,cols,place){
+    var c1=(cols&&cols[0])||'#2b3a67', c2=(cols&&cols[1])||'#8a95b5', city=t.name.replace(/ \S+$/,''), nick=t.name.replace(/^.* /,'');
+    return '<div class="team tc'+(lum(c1)>0.55?' lite':'')+'" style="--c1:'+c1+';--c2:'+c2+'"><span class="tcity">'+esc(city)+'</span><b>'+esc(nick)+'</b><span class="trec">'+esc(t.record)+'</span>'
+      +(place?'<span class="tplace">'+esc(place)+'</span>':'')+'</div>';}
+  var b=card(m.bills,TC.bills,ST.billsPlace), o=card(m.opp,TC.opp,ST.oppPlace);
   document.getElementById('vs').innerHTML = (m.home ? o+'<div class="at">at</div>'+b : b+'<div class="at">at</div>'+o);
+  if(ST.bills&&ST.opp){var D=document.getElementById('divs'); D.hidden=false;
+    D.innerHTML=(m.home?[ST.opp,ST.bills]:[ST.bills,ST.opp]).map(function(d){var me=d===ST.bills?'BUF':m.opp.abbr;
+      return '<div class="dtab"><h3>'+esc(d.name)+'</h3><table><thead><tr><th>Team</th><th>W-L</th><th>GB</th><th>Div</th><th>Strk</th></tr></thead><tbody>'
+        +d.rows.map(function(r){return '<tr'+(r.abbr===me?' class="me"':'')+'><td>'+esc(r.nick)+'</td><td>'+esc(r.rec)+'</td><td>'+esc(r.gb)+'</td><td>'+esc(r.div)+'</td><td>'+esc(r.strk)+'</td></tr>';}).join('')+'</tbody></table></div>';}).join('');}
+  if(m.primetime){var P=document.getElementById('pt'); P.hidden=false;
+    P.innerHTML='<span class="ptb" aria-hidden="true"><i></i><i></i><i></i></span><span class="ptk">Primetime</span><b>'+esc(m.primetime.title)+'</b>'+(m.primetime.sub||m.tv?'<span class="ptn">'+esc(m.primetime.sub||m.tv)+' &middot; '+esc(m.time)+'</span>':'');}
+  stakes(m); lines(m); playoffs(m);
   document.getElementById('when').textContent=[m.date,m.time,m.venue,m.tv].filter(Boolean).join(' · ');
   var T=m.teamStats, L=m.home?m.opp:m.bills, R=m.home?m.bills:m.opp, lk=m.home?'opp':'bills', rk=m.home?'bills':'opp';
   document.getElementById('cmp').innerHTML='<div class="cmphead"><b>'+esc(L.name)+'</b><b>'+esc(R.name)+'</b></div>'+T.cats.map(function(c){
@@ -103,15 +128,73 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
     return L.map(function(x){ if(typeof x==='string')return '<span class="pill">'+esc(x)+'</span>';
       return '<span class="pill">'+esc(x.name)+' ('+esc(x.pos)+')'+(x.injury?', '+esc(x.injury):'')+': <b>'+esc(x.status)+'</b></span>';}).join('');}
   var asof=inj.asOf?' ('+esc(inj.asOf)+')':(inj.week?' (Week '+inj.week+' report)':'');
+  var fresh=inj.changed?'<p class="injup"><b>Injury report last changed:</b> '+esc(inj.changed)+' <span>'+esc(ago(inj.changedIso))+'</span></p>':'';
   document.getElementById('extra').innerHTML='<p style="margin:0 0 6px"><b>'+esc(m.series.summary)+'</b> '+esc(m.series.last)+'</p>'
-   +'<div class="lines"><div><h3>Bills injuries'+asof+'</h3>'+pills(inj.bills)+'</div><div><h3>'+esc(nick)+' injuries'+asof+'</h3>'+pills(inj.opp)+'</div></div>'
-   +'<p class="note">'+esc(inj.note)+' DNP = did not practice.</p>';
+   +fresh+'<div class="lines"><div><h3>Bills injuries'+asof+'</h3>'+pills(inj.bills)+'</div><div><h3>'+esc(nick)+' injuries'+asof+'</h3>'+pills(inj.opp)+'</div></div>'
+   +'<p class="note">'+esc(inj.note)+' DNP = did not practice. The report is checked every hour.</p>';
   document.getElementById('srcnote').textContent=m.sources+' Last updated '+m.updated+'.';
   if(m.props&&m.props.items&&m.props.items.length)props(m);
 }).catch(function(){
   document.getElementById('title').textContent='Next game';
   document.getElementById('when').textContent='The matchup data could not be loaded. Please refresh.';
 });
+
+// ---------- helpers for the new panels ----------
+function lum(h){h=String(h).replace('#','');if(h.length<6)return .3;var r=parseInt(h.substr(0,2),16)/255,g=parseInt(h.substr(2,2),16)/255,b=parseInt(h.substr(4,2),16)/255;return .2126*r+.7152*g+.0722*b;}
+function ago(iso){if(!iso)return '';var t=new Date(iso.replace(' ','T')+(/[zZ]|[+-]\d\d:?\d\d$/.test(iso)?'':'-05:00')).getTime();if(isNaN(t))return '';
+  var h=Math.round((Date.now()-t)/36e5); return h<1?'(less than an hour ago)':h<48?'('+h+' hour'+(h===1?'':'s')+' ago)':'('+Math.round(h/24)+' days ago)';}
+function sgn(v){return v>0?'+'+v:String(v);}
+function ml(v){return v==null?'&ndash;':(v>0?'+':'')+Math.round(v);}
+// What a win (or loss) would mean, built by the stats job from the standings after every game
+function stakes(m){var S=m.significance; if(!S)return;
+  document.getElementById('stakeSec').hidden=false;
+  document.getElementById('stake').innerHTML='<div class="sk w"><span class="skt">With a win</span><p>'+esc(S.win)+'</p></div>'
+    +'<div class="sk l"><span class="skt">With a loss</span><p>'+esc(S.loss)+'</p></div>'
+    +(S.odds?'<p class="skodds">'+esc(S.odds)+'</p>':'')+'<p class="note">'+esc(S.note)+' Updated automatically after every game.</p>';}
+// Betting line: current vs opening, and a chart of every move the stats job has recorded
+function lines(m){var L=m.lines; if(!L||!L.cur)return;
+  document.getElementById('lineSec').hidden=false;
+  var c=L.cur,o=L.open||{}, nick=m.opp.nick||m.opp.name, fav=c.spread<0?'Bills':c.spread>0?nick:'Pick\u2019em';
+  function box(lbl,now,was,fmtf,unit){var mv=(was!=null&&now!=null&&was!==now)?'<span class="mv">opened '+fmtf(was)+'</span>':'<span class="mv same">'+(was!=null?'unchanged since open':'')+'</span>';
+    return '<div class="lbox"><span class="ll">'+lbl+'</span><b>'+fmtf(now)+'</b>'+(unit?'<small>'+unit+'</small>':'')+mv+'</div>';}
+  var h='<div class="lgrid">'+box('Spread',c.spread,o.spread,function(v){return v==null?'&ndash;':v===0?'PK':'Bills '+sgn(v);})
+    +box('Over/under',c.total,o.total,function(v){return v==null?'&ndash;':String(v);},'total points')
+    +box('Moneyline',c.ml,o.ml,function(v){return 'Bills '+ml(v);},(c.oppMl!=null?esc(nick)+' '+ml(c.oppMl):''))+'</div>';
+  var H=(L.history||[]).filter(function(x){return x.spread!=null;});
+  h+='<div class="lcharts">'+chartLine(H,'spread','Spread (Bills)',function(v){return v===0?'PK':sgn(v);},true)+chartLine(H,'total','Over/under',String,false)
+    +chartLine(H,'ml','Moneyline (Bills)',function(v){return ml(v);},true)+'</div>';
+  var moves=Math.max(0,H.length-1);
+  h+='<p class="note">'+(fav==='Pick\u2019em'?'A pick\u2019em: no favorite.':'Favorite: '+esc(fav)+'.')+' Lines from '+esc(L.book||'the sportsbooks')+', checked every hour; '
+    +(moves?moves+' move'+(moves===1?'':'s')+' recorded since the line opened.':'no moves recorded yet; the chart fills in as the line changes.')
+    +' For information only, not betting advice. 21+ only, where legal. Gambling problem? Call 1-800-MY-RESET.</p>';
+  document.getElementById('line').innerHTML=h;}
+function chartLine(H,k,title,lab,invert){
+  var pts=H.filter(function(x){return x[k]!=null;}); if(!pts.length)return '';
+  if(pts.length===1)pts=[pts[0],pts[0]];
+  var W=300,Hh=110,pl=34,pr=10,pt=12,pb=22, vals=pts.map(function(x){return x[k];}), lo=Math.min.apply(null,vals), hi=Math.max.apply(null,vals);
+  if(hi-lo<1){lo-=1;hi+=1;} var pad=(hi-lo)*.15; lo-=pad; hi+=pad;
+  var X=function(i){return pl+(W-pl-pr)*(pts.length===1?0:i/(pts.length-1));}, Y=function(v){var f=(v-lo)/(hi-lo); if(invert)f=1-f; return pt+(Hh-pt-pb)*(1-f);};
+  var d=pts.map(function(x,i){return (i?'L':'M')+X(i).toFixed(1)+','+Y(x[k]).toFixed(1)+(i<pts.length-1?' L'+X(i+1).toFixed(1)+','+Y(x[k]).toFixed(1):'');}).join(' ');
+  var dots=pts.map(function(x,i){return '<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(x[k]).toFixed(1)+'" r="'+(i===pts.length-1?4:2.5)+'"/>';}).join('');
+  var first=pts[0][k], last=pts[pts.length-1][k];
+  var labs='<text x="'+(pl-6)+'" y="'+(Y(first)+4).toFixed(1)+'" text-anchor="end">'+lab(first)+'</text>'+(last!==first?'<text x="'+(pl-6)+'" y="'+(Y(last)+4).toFixed(1)+'" text-anchor="end">'+lab(last)+'</text>':'');
+  var when=function(x){if(!x.t)return 'Open';var t=new Date(x.t.replace('Z',':00Z'));return (t.getMonth()+1)+'/'+t.getDate();};
+  var xl='<text x="'+pl+'" y="'+(Hh-6)+'">'+when(pts[0])+'</text><text x="'+(W-pr)+'" y="'+(Hh-6)+'" text-anchor="end">Now</text>';
+  return '<figure class="lc"><figcaption>'+esc(title)+'</figcaption><svg viewBox="0 0 '+W+' '+Hh+'" role="img" aria-label="'+esc(title)+': '+pts.map(function(x){return lab(x[k]);}).join(', ')+'">'
+    +'<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+(Hh-pb)+'" y2="'+(Hh-pb)+'" class="ax"/><path d="'+d+'" class="ln"/>'+dots+labs+xl+'</svg></figure>';}
+// Playoff chances from the stats job's simulation: now, with a win, with a loss
+function playoffs(m){var P=m.playoffs; if(!P||!P.odds)return;
+  document.getElementById('poSec').hidden=false;
+  var rows=[['playoffs','Make the playoffs'],['division','Win the AFC East'],['seed1','No. 1 seed (first-round bye)'],['conf','Win the AFC'],['sb','Win the Super Bowl']];
+  function cell(v,cls){return '<td class="'+cls+'"><span class="pbar"><u style="width:'+Math.max(1,v)+'%"></u></span><b>'+(v<1&&v>0?'<1':Math.round(v))+'%</b></td>';}
+  function diff(a,b){var d=Math.round(a-b);return d?'<small class="'+(d>0?'up':'dn')+'">'+(d>0?'+':'')+d+'</small>':'';}
+  var h='<div class="scroll potbl"><table><thead><tr><th>Bills chance to&hellip;</th><th>Now</th><th>With a win</th><th>With a loss</th></tr></thead><tbody>'
+    +rows.map(function(r){var o=P.odds[r[0]]; if(!o)return ''; return '<tr><td>'+r[1]+'</td>'+cell(o.now,'n')+cell(o.win,'w').replace('</b>','</b>'+diff(o.win,o.now))+cell(o.loss,'l').replace('</b>','</b>'+diff(o.loss,o.now))+'</tr>';}).join('')
+    +'</tbody></table></div>';
+  var sw=P.odds.playoffs, swing=Math.round(P.odds.seed1.win-P.odds.seed1.loss);
+  h+='<p class="poswing">This game is worth <b>'+swing+' points</b> of No. 1 seed chance: '+Math.round(P.odds.seed1.win)+'% with a win, '+Math.round(P.odds.seed1.loss)+'% with a loss.</p>';
+  h+='<p class="note">From '+P.sims.toLocaleString('en-US')+' simulations of the rest of the season, '+esc(P.asOf)+'. Each remaining game is played out using the betting line when there is one, otherwise each team\u2019s scoring margin this season adjusted for opponents; this game uses the moneyline ('+P.winProb+'% Bills). Seeding uses a simplified version of the NFL tiebreakers. Recalculated automatically after every game.</p>';
+  document.getElementById('po').innerHTML=h;}
 // ---------- 90%+ props: game-log bars, ladder of lines, pros and cons, confidence stars ----------
 function props(m){
   var P=m.props, F={team:'All',cat:'All'}, sel={};
