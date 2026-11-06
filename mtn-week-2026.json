@@ -1,4 +1,4 @@
-{"updated": "2026-11-03", "season": 2026, "weeks": 8, "inProgress": false, "billsBye": [7],"players":[
+{"updated": "2026-11-06", "season": 2026, "weeks": 9, "inProgress": true, "billsBye": [7],"players":[
 {"id":"00-0023459","name":"Aaron Rodgers","pos":"QB","w":[[1,221,-3,1],[2,187,5,0],[3,292,10,1],[4,299,0,0],[5,235,6,1],[6,253,-1,1],[7,212,6,1],[8,172,0,1]]},
 {"id":"00-0026498","name":"Matthew Stafford","pos":"QB","w":[[1,155,-1,0],[2,327,-1,1],[3,390,13,0],[4,317,10,1],[5,383,0,0],[6,222,0,0],[7,195,-3,1],[8,157,0,1]]},
 {"id":"00-0028118","name":"Tyrod Taylor","pos":"QB","w":[[5,0,-2,null]]},
@@ -83,7 +83,7 @@
 {"id":"00-0036919","name":"Kenny Gainwell","pos":"RB","w":[[1,0,15,null],[2,0,10,null],[3,0,-4,null],[4,0,5,null],[5,0,18,null],[6,0,17,null],[7,0,88,null],[8,0,140,null]]},
 {"id":"00-0036924","name":"Michael Carter","pos":"RB","w":[[7,0,7,null]]},
 {"id":"00-0036963","name":"Amon-Ra St. Brown","pos":"WR","w":[[7,0,-1,null],[8,0,10,null]]},
-{"id":"00-0036971","name":"Trevor Lawrence","pos":"QB","w":[[1,245,3,1],[2,189,6,0],[3,182,25,1],[4,227,0,1],[5,331,25,1],[6,306,11,0],[8,210,10,1]]},
+{"id":"00-0036971","name":"Trevor Lawrence","pos":"QB","w":[[1,245,3,1],[2,189,6,0],[3,182,25,1],[4,227,0,1],[5,331,25,1],[6,306,11,0],[8,210,10,1],[9,0,0,1]]},
 {"id":"00-0036972","name":"Mac Jones","pos":"QB","w":[[2,0,-2,null]]},
 {"id":"00-0036973","name":"Travis Etienne","pos":"RB","w":[[1,0,46,null],[2,0,25,null],[3,0,57,null]]},
 {"id":"00-0036997","name":"Javonte Williams","pos":"RB","w":[[1,0,41,null],[2,0,30,null],[3,0,98,null],[4,0,62,null],[5,0,45,null],[6,0,41,null],[7,0,155,null],[8,0,56,null]]},
@@ -230,7 +230,7 @@
 {"id":"00-0040878","name":"Mike Washington Jr.","pos":"RB","w":[[1,0,41,null],[2,0,7,null],[3,0,54,null],[4,0,18,null],[5,0,5,null],[6,0,43,null],[7,0,27,null],[8,0,83,null]]},
 {"id":"00-0040886","name":"Nicholas Singleton","pos":"RB","w":[[2,0,10,null],[4,0,2,null]]},
 {"id":"00-0040894","name":"Malik Benson","pos":"WR","w":[[1,0,-8,null]]},
-{"id":"00-0040981","name":"Joe Fagnano","pos":"QB","w":[[8,91,3,null]]},
+{"id":"00-0040981","name":"Joe Fagnano","pos":"QB","w":[[8,91,3,null],[9,0,0,0]]},
 {"id":"00-0041013","name":"Emmett Johnson","pos":"RB","w":[[1,0,24,null],[2,0,15,null],[3,0,17,null],[6,0,6,null],[8,0,15,null]]},
 {"id":"00-0041027","name":"Jeremiyah Love","pos":"RB","w":[[1,0,41,null],[2,0,29,null],[3,0,90,null],[4,0,63,null],[5,0,22,null],[8,0,23,null]]},
 {"id":"00-0041032","name":"Kenyon Sadiq","pos":"TE","w":[[1,0,3,null]]},
