@@ -24,8 +24,143 @@
  },
  "injuries": {
   "week": 9,
-  "bills": [],
-  "opp": [],
+  "bills": [
+   {
+    "name": "Alec Anderson",
+    "pos": "G",
+    "injury": "Ankle",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Dion Dawkins",
+    "pos": "T",
+    "injury": "Rib",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Greg Gaines",
+    "pos": "DT",
+    "injury": "Calf",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Josh Palmer",
+    "pos": "WR",
+    "injury": "Hamstring",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Ty Johnson",
+    "pos": "RB",
+    "injury": "Illness",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "DJ Moore",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "injury": "Chest",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Jordan Hancock",
+    "pos": "CB",
+    "injury": "Hamstring",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Keon Coleman",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Spencer Brown",
+    "pos": "T",
+    "injury": "Back",
+    "status": "Limited",
+    "game": false
+   }
+  ],
+  "opp": [
+   {
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "injury": "Hamstring",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Theo Jackson",
+    "pos": "S",
+    "injury": "Quadricep",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Andrew Van Ginkel",
+    "pos": "LB",
+    "injury": "Chest",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Christian Darrisaw",
+    "pos": "T",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Demond Claiborne",
+    "pos": "RB",
+    "injury": "Knee",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Isaiah Rodgers",
+    "pos": "CB",
+    "injury": "Ankle",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Jake Golday",
+    "pos": "LB",
+    "injury": "Calf",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Jauan Jennings",
+    "pos": "WR",
+    "injury": "Calf",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Jay Ward",
+    "pos": "S",
+    "injury": "Knee",
+    "status": "Limited",
+    "game": false
+   }
+  ],
   "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
  },
  "allenVs": {
@@ -261,7 +396,7 @@
     "dec": 0,
     "bills": {
      "v": 13,
-     "rank": 9
+     "rank": 10
     },
     "opp": {
      "v": 21,
@@ -291,7 +426,7 @@
     },
     "opp": {
      "v": 3,
-     "rank": 8
+     "rank": 7
     }
    },
    {
@@ -942,7 +1077,7 @@
      {
       "line": 2,
       "hit": 5,
-      "stars": 3.5
+      "stars": 3.0
      }
     ],
     "next": {
@@ -957,9 +1092,10 @@
     "cons": [
      "Closest call: 2 vs NE in Week 4.",
      "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game.",
+     "On this week's injury report: DNP.",
      "Small sample: 5 games."
     ],
-    "status": ""
+    "status": "DNP"
    }
   ],
   "weather": {
