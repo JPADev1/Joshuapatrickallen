@@ -1237,8 +1237,8 @@
   "cur": {
    "spread": -3.0,
    "total": 43.5,
-   "ml": -170.0,
-   "oppMl": 142.0
+   "ml": -175.0,
+   "oppMl": 145.0
   },
   "open": {
    "spread": -3.0,
@@ -1259,6 +1259,12 @@
     "spread": -3.0,
     "total": 43.5,
     "ml": -170.0
+   },
+   {
+    "t": "2026-11-08T16:59Z",
+    "spread": -3.0,
+    "total": 43.5,
+    "ml": -175.0
    }
   ]
  },
@@ -1270,32 +1276,32 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 96.7,
-    "win": 98.2,
-    "loss": 94.3
+    "now": 97.0,
+    "win": 98.3,
+    "loss": 94.9
    },
    "division": {
     "now": 72.0,
-    "win": 78.3,
-    "loss": 62.8
+    "win": 78.5,
+    "loss": 62.1
    },
    "seed1": {
-    "now": 26.5,
-    "win": 32.4,
-    "loss": 17.8
+    "now": 25.9,
+    "win": 31.7,
+    "loss": 17.0
    },
    "conf": {
-    "now": 17.7,
-    "win": 18.5,
-    "loss": 16.5
+    "now": 17.8,
+    "win": 19.0,
+    "loss": 16.1
    },
    "sb": {
     "now": 9.1,
-    "win": 9.3,
-    "loss": 8.8
+    "win": 9.5,
+    "loss": 8.5
    }
   },
-  "winProb": 60.4,
+  "winProb": 60.9,
   "sims": 10000,
   "asOf": "through the games of Nov. 5, 2026"
  },
@@ -1309,6 +1315,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 32% of the time with a win and 18% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 32% of the time with a win and 17% with a loss."
  }
 }
