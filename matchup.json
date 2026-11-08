@@ -307,7 +307,7 @@
     "dec": 0,
     "bills": {
      "v": 33,
-     "rank": 1
+     "rank": 2
     },
     "opp": {
      "v": 20,
@@ -320,7 +320,7 @@
     "dec": 0,
     "bills": {
      "v": 26,
-     "rank": 23
+     "rank": 22
     },
     "opp": {
      "v": 13,
@@ -1276,34 +1276,34 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 97.0,
-    "win": 98.3,
-    "loss": 94.9
+    "now": 96.6,
+    "win": 98.4,
+    "loss": 93.7
    },
    "division": {
-    "now": 72.0,
+    "now": 72.1,
     "win": 78.5,
-    "loss": 62.1
+    "loss": 62.2
    },
    "seed1": {
-    "now": 25.9,
-    "win": 31.7,
-    "loss": 17.0
+    "now": 23.6,
+    "win": 30.0,
+    "loss": 13.7
    },
    "conf": {
-    "now": 17.8,
-    "win": 19.0,
-    "loss": 16.1
+    "now": 16.7,
+    "win": 18.5,
+    "loss": 13.9
    },
    "sb": {
-    "now": 9.1,
-    "win": 9.5,
-    "loss": 8.5
+    "now": 8.9,
+    "win": 9.8,
+    "loss": 7.6
    }
   },
   "winProb": 60.9,
   "sims": 10000,
-  "asOf": "through the games of Nov. 5, 2026"
+  "asOf": "through the games of Nov. 8, 2026"
  },
  "significance": {
   "win": "A win would make the Bills 7-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 2 games over the Patriots. It would also hand the 6-1 Vikings just their second loss.",
@@ -1315,6 +1315,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 32% of the time with a win and 17% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 30% of the time with a win and 14% with a loss."
  }
 }
