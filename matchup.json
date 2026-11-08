@@ -17,16 +17,140 @@
  "date": "Monday, Nov. 9, 2026",
  "time": "8:15 p.m. ET",
  "venue": "U.S. Bank Stadium, Minneapolis",
- "tv": "",
+ "tv": "ESPN, ABC",
  "series": {
   "summary": "Bills are 4-3 against the Vikings in the regular season since 1999.",
   "last": "Last meeting: Nov. 13, 2022, Vikings 33, Bills 30."
  },
  "injuries": {
   "week": 9,
-  "bills": [],
-  "opp": [],
-  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed."
+  "bills": [
+   {
+    "name": "Josh Palmer",
+    "pos": "WR",
+    "injury": "Hamstring",
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Alec Anderson",
+    "pos": "G",
+    "injury": "Ankle",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Dion Dawkins",
+    "pos": "T",
+    "injury": "Rib",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Greg Gaines",
+    "pos": "DT",
+    "injury": "Calf",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Jordan Hancock",
+    "pos": "CB",
+    "injury": "Hamstring",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Tyrell Shavers",
+    "pos": "WR",
+    "injury": "Knee",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Ed Oliver",
+    "pos": "DE",
+    "injury": "Knee",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Terrel Bernard",
+    "pos": "LB",
+    "injury": "Not injury related - resting player",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "DJ Moore",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   },
+   {
+    "name": "Keon Coleman",
+    "pos": "WR",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
+   }
+  ],
+  "opp": [
+   {
+    "name": "Demond Claiborne",
+    "pos": "RB",
+    "injury": "Knee",
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Jauan Jennings",
+    "pos": "WR",
+    "injury": "Calf",
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "injury": "Hamstring",
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Jay Ward",
+    "pos": "S",
+    "injury": "Knee",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Theo Jackson",
+    "pos": "S",
+    "injury": "Quadricep",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Christian Darrisaw",
+    "pos": "T",
+    "injury": "Shoulder",
+    "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Harrison Smith",
+    "pos": "S",
+    "injury": "Not injury related - resting player",
+    "status": "Limited",
+    "game": false
+   }
+  ],
+  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed.",
+  "hash": "8499fd767bb4",
+  "changed": "Sun. Nov. 8, 6:05 a.m. ET",
+  "changedIso": "2026-11-08T06:05-05:00"
  },
  "allenVs": {
   "wins": 1,
@@ -548,78 +672,6 @@
     "status": ""
    },
    {
-    "team": "MIN",
-    "nick": "Vikings",
-    "player": "Justin Jefferson",
-    "pos": "WR",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "GB"
-     },
-     {
-      "wk": 2,
-      "opp": "@CHI"
-     },
-     {
-      "wk": 3,
-      "opp": "@TB"
-     },
-     {
-      "wk": 5,
-      "opp": "@NO"
-     },
-     {
-      "wk": 7,
-      "opp": "IND"
-     },
-     {
-      "wk": 8,
-      "opp": "@DET"
-     }
-    ],
-    "vals": [
-     8,
-     3,
-     2,
-     6,
-     4,
-     5
-    ],
-    "ladder": [
-     {
-      "line": 2,
-      "hit": 6,
-      "stars": 5.0
-     }
-    ],
-    "extra": [
-     {
-      "line": 3,
-      "hit": 5
-     }
-    ],
-    "next": {
-     "line": 4,
-     "hit": 4
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 2+ in all 6 games.",
-     "Averages 4.7 receptions a game (median 4.5).",
-     "Steady volume: 6.7 targets a game.",
-     "The Bills rank 30th of 32 against the pass, allowing 269 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 2 vs TB in Week 3.",
-     "Swingy: anywhere from 2 to 8 this season."
-    ],
-    "status": ""
-   },
-   {
     "team": "BUF",
     "nick": "Bills",
     "player": "James Cook",
@@ -705,8 +757,8 @@
     "player": "Justin Jefferson",
     "pos": "WR",
     "cat": "Receiving",
-    "market": "Receiving yards",
-    "key": "recYds",
+    "market": "Receptions",
+    "key": "rec",
     "games": [
      {
       "wk": 1,
@@ -734,41 +786,42 @@
      }
     ],
     "vals": [
-     92,
-     55,
-     32,
-     79,
-     44,
-     33
+     8,
+     3,
+     2,
+     6,
+     4,
+     5
     ],
     "ladder": [
      {
-      "line": 25,
-      "hit": 6,
-      "stars": 5.0
-     },
-     {
-      "line": 30,
+      "line": 2,
       "hit": 6,
       "stars": 4.5
      }
     ],
-    "extra": [],
+    "extra": [
+     {
+      "line": 3,
+      "hit": 5
+     }
+    ],
     "next": {
-     "line": 40,
+     "line": 4,
      "hit": 4
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
-     "Cleared 30+ in all 6 games.",
-     "Averages 55.8 receiving yards a game (median 49.5).",
+     "Cleared 2+ in all 6 games.",
+     "Averages 4.7 receptions a game (median 4.5).",
      "Steady volume: 6.7 targets a game.",
-     "The Bills rank 30th of 32 against the pass, allowing 269 passing yards a game."
+     "The Bills rank 30th of 32 against the pass, allowing 269 passing yards a game.",
+     "Teammate out: Jauan Jennings (WR), freeing up targets."
     ],
     "cons": [
-     "Closest call: 32 vs TB in Week 3.",
-     "Swingy: anywhere from 32 to 92 this season.",
-     "Trending down: 38.5 a game over his last two, below his 55.8 average."
+     "Starting QB out: Kyler Murray (QB).",
+     "Closest call: 2 vs TB in Week 3.",
+     "Swingy: anywhere from 2 to 8 this season."
     ],
     "status": ""
    },
@@ -844,6 +897,81 @@
     "cons": [
      "Closest call: 12 vs LA in Week 5.",
      "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIN",
+    "nick": "Vikings",
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receiving yards",
+    "key": "recYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "GB"
+     },
+     {
+      "wk": 2,
+      "opp": "@CHI"
+     },
+     {
+      "wk": 3,
+      "opp": "@TB"
+     },
+     {
+      "wk": 5,
+      "opp": "@NO"
+     },
+     {
+      "wk": 7,
+      "opp": "IND"
+     },
+     {
+      "wk": 8,
+      "opp": "@DET"
+     }
+    ],
+    "vals": [
+     92,
+     55,
+     32,
+     79,
+     44,
+     33
+    ],
+    "ladder": [
+     {
+      "line": 25,
+      "hit": 6,
+      "stars": 4.5
+     },
+     {
+      "line": 30,
+      "hit": 6,
+      "stars": 4.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 40,
+     "hit": 4
+    },
+    "gameday": -0.5,
+    "pros": [
+     "Cleared 30+ in all 6 games.",
+     "Averages 55.8 receiving yards a game (median 49.5).",
+     "Steady volume: 6.7 targets a game.",
+     "The Bills rank 30th of 32 against the pass, allowing 269 passing yards a game.",
+     "Teammate out: Jauan Jennings (WR), freeing up targets."
+    ],
+    "cons": [
+     "Starting QB out: Kyler Murray (QB).",
+     "Closest call: 32 vs TB in Week 3.",
+     "Swingy: anywhere from 32 to 92 this season.",
+     "Trending down: 38.5 a game over his last two, below his 55.8 average."
     ],
     "status": ""
    },
@@ -995,8 +1123,192 @@
   },
   "conditions": [
    "Game-day weather: played under a dome, so weather doesn't change the ratings.",
-   "Final injury report: not out yet (usually Friday); ratings will update with it."
+   "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
+ },
+ "teamColors": {
+  "bills": [
+   "#00338D",
+   "#C60C30"
+  ],
+  "opp": [
+   "#4F2683",
+   "#FFC62F"
+  ]
+ },
+ "standings": {
+  "bills": {
+   "name": "AFC East",
+   "rows": [
+    {
+     "abbr": "BUF",
+     "nick": "Bills",
+     "rec": "6-1",
+     "gb": "—",
+     "div": "0-1",
+     "strk": "W3",
+     "pf": 233,
+     "pa": 181
+    },
+    {
+     "abbr": "NE",
+     "nick": "Patriots",
+     "rec": "5-3",
+     "gb": "1.5",
+     "div": "3-0",
+     "strk": "W1",
+     "pf": 184,
+     "pa": 162
+    },
+    {
+     "abbr": "NYJ",
+     "nick": "Jets",
+     "rec": "2-6",
+     "gb": "4.5",
+     "div": "0-2",
+     "strk": "L3",
+     "pf": 170,
+     "pa": 188
+    },
+    {
+     "abbr": "MIA",
+     "nick": "Dolphins",
+     "rec": "1-6",
+     "gb": "5",
+     "div": "1-1",
+     "strk": "L1",
+     "pf": 117,
+     "pa": 181
+    }
+   ]
+  },
+  "opp": {
+   "name": "NFC North",
+   "rows": [
+    {
+     "abbr": "MIN",
+     "nick": "Vikings",
+     "rec": "6-1",
+     "gb": "—",
+     "div": "2-1",
+     "strk": "L1",
+     "pf": 140,
+     "pa": 93
+    },
+    {
+     "abbr": "CHI",
+     "nick": "Bears",
+     "rec": "6-2",
+     "gb": "0.5",
+     "div": "0-2",
+     "strk": "W3",
+     "pf": 214,
+     "pa": 160
+    },
+    {
+     "abbr": "DET",
+     "nick": "Lions",
+     "rec": "5-2",
+     "gb": "1",
+     "div": "2-0",
+     "strk": "W3",
+     "pf": 203,
+     "pa": 180
+    },
+    {
+     "abbr": "GB",
+     "nick": "Packers",
+     "rec": "5-3",
+     "gb": "1.5",
+     "div": "1-2",
+     "strk": "W1",
+     "pf": 171,
+     "pa": 164
+    }
+   ]
+  },
+  "billsPlace": "1st in the AFC East, 1.5 games ahead",
+  "oppPlace": "1st in the NFC North, 0.5 games ahead"
+ },
+ "lines": {
+  "gameId": "2026_09_BUF_MIN",
+  "book": "DraftKings",
+  "cur": {
+   "spread": -3.0,
+   "total": 43.5,
+   "ml": -170.0,
+   "oppMl": 142.0
+  },
+  "open": {
+   "spread": -3.0,
+   "total": 48.5,
+   "ml": -155.0,
+   "oppMl": 130.0
+  },
+  "history": [
+   {
+    "t": null,
+    "spread": -3.0,
+    "total": 48.5,
+    "ml": -155.0,
+    "open": true
+   },
+   {
+    "t": "2026-11-08T11:05Z",
+    "spread": -3.0,
+    "total": 43.5,
+    "ml": -170.0
+   }
+  ]
+ },
+ "primetime": {
+  "kind": "Primetime",
+  "title": "Monday Night Football",
+  "sub": "ESPN, ABC"
+ },
+ "playoffs": {
+  "odds": {
+   "playoffs": {
+    "now": 96.7,
+    "win": 98.5,
+    "loss": 93.9
+   },
+   "division": {
+    "now": 71.7,
+    "win": 78.4,
+    "loss": 61.5
+   },
+   "seed1": {
+    "now": 26.1,
+    "win": 31.7,
+    "loss": 17.6
+   },
+   "conf": {
+    "now": 17.8,
+    "win": 19.4,
+    "loss": 15.4
+   },
+   "sb": {
+    "now": 9.1,
+    "win": 9.7,
+    "loss": 8.2
+   }
+  },
+  "winProb": 60.4,
+  "sims": 10000,
+  "asOf": "through the games of Nov. 5, 2026"
+ },
+ "significance": {
+  "win": "A win would make the Bills 7-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 2 games over the Patriots. It would also hand the 6-1 Vikings just their second loss.",
+  "loss": "A loss would drop them to 6-2 and out of the No. 1 seed (to No. 2). They would still lead the AFC East by 1 game.",
+  "note": "Based on the standings right now; other games this week can still change it.",
+  "now": {
+   "rec": "6-1",
+   "seed": 1
+  },
+  "seedWin": 1,
+  "seedLoss": 2,
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 32% of the time with a win and 18% with a loss."
  }
 }
