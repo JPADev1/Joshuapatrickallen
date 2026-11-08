@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "gameId": "2026_09_BUF_MIN",
  "week": 9,
  "label": "Week 9",
@@ -291,7 +291,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 7, 2026",
+  "asOf": "Nov. 8, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -475,7 +475,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 7, 2026",
+  "asOf": "Nov. 8, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -511,7 +511,7 @@
   ]
  },
  "props": {
-  "asOf": "Nov. 7, 2026",
+  "asOf": "Nov. 8, 2026",
   "items": [
    {
     "team": "BUF",
@@ -1277,29 +1277,29 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 96.9,
-    "win": 98.5,
-    "loss": 94.5
+    "now": 96.7,
+    "win": 98.3,
+    "loss": 94.3
    },
    "division": {
-    "now": 71.4,
-    "win": 78.0,
-    "loss": 61.1
+    "now": 71.6,
+    "win": 77.8,
+    "loss": 62.0
    },
    "seed1": {
-    "now": 25.7,
-    "win": 31.7,
-    "loss": 16.4
+    "now": 26.3,
+    "win": 32.0,
+    "loss": 17.5
    },
    "conf": {
-    "now": 17.9,
-    "win": 19.7,
-    "loss": 15.1
+    "now": 17.7,
+    "win": 19.1,
+    "loss": 15.7
    },
    "sb": {
     "now": 9.1,
-    "win": 10.0,
-    "loss": 7.6
+    "win": 9.6,
+    "loss": 8.3
    }
   },
   "winProb": 60.4,
@@ -1316,6 +1316,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 32% of the time with a win and 16% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 32% of the time with a win and 18% with a loss."
  }
 }
