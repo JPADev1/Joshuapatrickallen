@@ -307,11 +307,11 @@
     "dec": 0,
     "bills": {
      "v": 33,
-     "rank": 2
+     "rank": 1
     },
     "opp": {
      "v": 20,
-     "rank": 28
+     "rank": 27
     }
    },
    {
@@ -320,7 +320,7 @@
     "dec": 0,
     "bills": {
      "v": 26,
-     "rank": 19
+     "rank": 25
     },
     "opp": {
      "v": 13,
@@ -363,7 +363,7 @@
     },
     "opp": {
      "v": 114,
-     "rank": 17
+     "rank": 16
     }
    },
    {
@@ -372,7 +372,7 @@
     "dec": 0,
     "bills": {
      "v": 97,
-     "rank": 10
+     "rank": 9
     },
     "opp": {
      "v": 117,
@@ -385,11 +385,11 @@
     "dec": 0,
     "bills": {
      "v": 13,
-     "rank": 10
+     "rank": 11
     },
     "opp": {
      "v": 21,
-     "rank": 27
+     "rank": 25
     }
    },
    {
@@ -398,7 +398,7 @@
     "dec": 0,
     "bills": {
      "v": 15,
-     "rank": 19
+     "rank": 18
     },
     "opp": {
      "v": 25,
@@ -411,11 +411,11 @@
     "dec": 0,
     "bills": {
      "v": 5,
-     "rank": 16
+     "rank": 17
     },
     "opp": {
      "v": 3,
-     "rank": 7
+     "rank": 6
     }
    },
    {
@@ -424,7 +424,7 @@
     "dec": 0,
     "bills": {
      "v": 4,
-     "rank": 18
+     "rank": 22
     },
     "opp": {
      "v": 8,
@@ -1237,8 +1237,8 @@
   "cur": {
    "spread": -3.0,
    "total": 43.5,
-   "ml": -175.0,
-   "oppMl": 145.0
+   "ml": -170.0,
+   "oppMl": 142.0
   },
   "open": {
    "spread": -3.0,
@@ -1265,6 +1265,12 @@
     "spread": -3.0,
     "total": 43.5,
     "ml": -175.0
+   },
+   {
+    "t": "2026-11-08T22:57Z",
+    "spread": -3.0,
+    "total": 43.5,
+    "ml": -170.0
    }
   ]
  },
@@ -1276,32 +1282,32 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 96.7,
-    "win": 98.3,
-    "loss": 94.1
+    "now": 96.9,
+    "win": 98.4,
+    "loss": 94.5
    },
    "division": {
-    "now": 72.0,
-    "win": 78.1,
-    "loss": 62.4
+    "now": 71.9,
+    "win": 77.8,
+    "loss": 63.1
    },
    "seed1": {
-    "now": 22.9,
-    "win": 28.6,
-    "loss": 13.9
+    "now": 22.5,
+    "win": 28.4,
+    "loss": 13.5
    },
    "conf": {
-    "now": 15.6,
-    "win": 16.5,
-    "loss": 14.1
+    "now": 15.7,
+    "win": 16.8,
+    "loss": 14.0
    },
    "sb": {
-    "now": 8.2,
-    "win": 8.7,
+    "now": 8.4,
+    "win": 9.0,
     "loss": 7.5
    }
   },
-  "winProb": 60.9,
+  "winProb": 60.4,
   "sims": 10000,
   "asOf": "through the games of Nov. 8, 2026"
  },
@@ -1315,6 +1321,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 29% of the time with a win and 14% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 28% of the time with a win and 14% with a loss."
  }
 }
