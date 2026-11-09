@@ -166,18 +166,18 @@
   // The records watch block inside the card. Live numbers only apply when the watch is for the game being played.
   function watchHtml(L, dark){
     var W = match && match.watch; // only on the two pages with a gameday spot (stats, Next game)
-    if(!document.getElementById('livebar-gameday') || !W || !W.items || !W.items.length) return {html:'', close:false};
-    var forThis = L && gameDate(match) === L.date, close = false;
+    if(!document.getElementById('livebar-gameday') || !W || !W.items || !W.items.length) return {html:'', close:false, broke:false};
+    var forThis = L && gameDate(match) === L.date, close = false, broke = false;
     var rows = W.items.map(function(x){
       var r = forThis ? liveItem(x, L) : null;
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
-      if(r.cls === 'close') close = true;
+      if(r.cls === 'close') close = true; if(r.cls === 'done') broke = true;
       return '<li class="' + r.cls + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Done' : 'Done today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">So close</em>' : '') + '</b><span>' + r.html + '</span></li>';
     }).join('');
     var note = forThis ? (L.final ? 'Final numbers are unofficial until the official stats are in.' : 'Counts down live with Allen’s numbers today (unofficial).')
       : 'Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated ' + esc(W.asOf) + '.';
-    return {close: close && L && !L.final,
+    return {close: close && L && !L.final, broke: broke,
       html: '<div class="lw"><div class="lwh">Records watch' + (match.opp && match.opp.nick ? ' <span>' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp.nick) + '</span>' : '') + '</div>'
         + '<ol class="wlist">' + rows + '</ol><p class="lwn">' + note + '</p></div>'};
   }
@@ -198,7 +198,7 @@
       if(mn) mn.insertBefore(el, mn.firstChild); else document.body.insertBefore(el, document.body.firstChild); }
     if(up) up.hidden = !(gd && el.parentNode === up);
     var w = watchHtml(L, idle);
-    el.className = (idle ? 'livebar idle' : 'livebar') + (gd ? ' gd' : '') + (w.close ? ' lit' : '');
+    el.className = (idle ? 'livebar idle' : 'livebar') + (gd ? ' gd' : '') + (w.close ? ' lit' : '') + (w.broke ? ' gold' : '');
     if(idle){ // No game on: hold the spot with a teaser (pages opt in with data-idle on #livebar-slot)
       var pre = gd && match;
       el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br>' + (pre
@@ -211,7 +211,7 @@
     if(s.att) parts.push(s.cmp + '/' + s.att + ', ' + s.yds + ' yds, ' + s.td + ' TD' + (s.int ? ', ' + s.int + ' INT' : ''));
     if(s.rushAtt || s.rushTD) parts.push(s.rushAtt + ' rush, ' + s.rushYds + ' yds' + (s.rushTD ? ', ' + s.rushTD + ' TD' : ''));
     var score = (L.bills !== '' && L.bills != null) ? ' · Bills ' + L.bills + ', ' + L.opp + ' ' + L.them : ' vs ' + L.opp;
-    el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') +
+    el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') + (w.broke ? '<span class="sr">A record fell today.</span>' : '') +
       '<span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
       (!L.final && L.clock ? ' · ' + L.clock : '') + '<br><span class="ln">Allen today: ' + (parts.join(' · ') || 'no stats yet') +
       '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + w.html + '<span class="lnote">Live numbers are unofficial and update every 2 minutes. They are checked against the official stats after the game.</span>';
