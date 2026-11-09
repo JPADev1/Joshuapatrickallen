@@ -14,6 +14,7 @@
   "record": "6-1"
  },
  "home": false,
+ "gameday": "2026-11-09",
  "date": "Monday, Nov. 9, 2026",
  "time": "8:15 p.m. ET",
  "venue": "U.S. Bank Stadium, Minneapolis",
@@ -490,30 +491,126 @@
    "rushTD": 3,
    "totalTD": 6
   },
+  "gameday": "2026-11-09",
   "items": [
    {
     "title": "5,000 career rushing yards",
-    "detail": "Needs 9 rushing yards (career high in a game: 135). He'd be the 5th QB ever to reach it, joining Lamar Jackson, Michael Vick, Cam Newton and Russell Wilson."
+    "detail": "Needs 9 rushing yards (career high in a game: 135). He'd be the 5th QB ever to reach it, joining Lamar Jackson, Michael Vick, Cam Newton and Russell Wilson.",
+    "k": "rushYds",
+    "need": 9,
+    "goal": "to reach 5,000",
+    "ctx": "He'd be the 5th QB ever to reach it, joining Lamar Jackson, Michael Vick, Cam Newton and Russell Wilson.",
+    "done": "He reached 5,000 career rushing yards, the 5th QB ever to get there."
    },
    {
     "title": "NFL career passing touchdowns",
-    "detail": "Needs 1 passing TD (career high in a game: 5). Ties Steve Young (232) for No. 39; 2 passes him."
+    "detail": "Needs 1 passing TD (career high in a game: 5). Ties Steve Young (232) for No. 39; 2 passes him.",
+    "k": "passTD",
+    "need": 1,
+    "goal": "to tie Steve Young (232) for No. 39",
+    "done": "He tied Steve Young (232) for No. 39.",
+    "next": [
+     {
+      "who": "Donovan McNabb (234)",
+      "spot": 38,
+      "tie": 3,
+      "pass": 4
+     },
+     {
+      "who": "the No. 37 mark (236)",
+      "spot": 37,
+      "tie": 5,
+      "pass": 6
+     },
+     {
+      "who": "Jim Kelly (237)",
+      "spot": 36,
+      "tie": 6,
+      "pass": 7
+     }
+    ],
+    "need2": 2,
+    "goal2": "to pass him",
+    "done2": "He passed Steve Young (232) and moved up to No. 39."
    },
    {
     "title": "NFL record: games with a passing TD and a rushing TD",
-    "detail": "Needs at least one of each to extend his record to 56 (regular season). Next closest: Cam Newton, 45."
+    "detail": "Needs at least one of each to extend his record to 56 (regular season). Next closest: Cam Newton, 45.",
+    "k": "both",
+    "need": 1,
+    "goal": "to extend his record to 56",
+    "ctx": "Next closest: Cam Newton, 45.",
+    "done": "Record extended to 56 games (regular season). Next closest: Cam Newton, 45."
    },
    {
     "title": "NFL career passing yards",
-    "detail": "Needs 177 passing yards (career high in a game: 424). Ties Mark Brunell (32,072) for No. 52; 178 passes him."
+    "detail": "Needs 177 passing yards (career high in a game: 424). Ties Mark Brunell (32,072) for No. 52; 178 passes him.",
+    "k": "passYds",
+    "need": 177,
+    "goal": "to tie Mark Brunell (32,072) for No. 52",
+    "done": "He tied Mark Brunell (32,072) for No. 52.",
+    "next": [
+     {
+      "who": "Sonny Jurgensen (32,224)",
+      "spot": 51,
+      "tie": 329,
+      "pass": 330
+     },
+     {
+      "who": "Kurt Warner (32,344)",
+      "spot": 50,
+      "tie": 449,
+      "pass": 450
+     },
+     {
+      "who": "Cam Newton (32,382)",
+      "spot": 49,
+      "tie": 487,
+      "pass": 488
+     }
+    ],
+    "need2": 178,
+    "goal2": "to pass him",
+    "done2": "He passed Mark Brunell (32,072) and moved up to No. 52."
    },
    {
     "title": "Record against the Vikings",
-    "detail": "A win makes him 2-1 as a starter against them in the regular season."
+    "detail": "A win makes him 2-1 as a starter against them in the regular season.",
+    "k": "win",
+    "need": 1,
+    "goal": "to go 2-1 against them",
+    "done": "Win! He's 2-1 as a starter against the Vikings in the regular season."
    },
    {
     "title": "NFL career rushing touchdowns",
-    "detail": "Needs 2 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14; 3 passes them."
+    "detail": "Needs 2 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14; 3 passes them.",
+    "k": "rushTD",
+    "need": 2,
+    "goal": "to tie Curtis Martin and Eric Dickerson (90) for No. 14",
+    "done": "He tied Curtis Martin and Eric Dickerson (90) for No. 14.",
+    "next": [
+     {
+      "who": "Franco Harris and Jerome Bettis (91)",
+      "spot": 12,
+      "tie": 3,
+      "pass": 4
+     },
+     {
+      "who": "the No. 11 mark (99)",
+      "spot": 11,
+      "tie": 11,
+      "pass": 12
+     },
+     {
+      "who": "the No. 9 mark (100)",
+      "spot": 9,
+      "tie": 12,
+      "pass": 13
+     }
+    ],
+    "need2": 3,
+    "goal2": "to pass them",
+    "done2": "He passed Curtis Martin and Eric Dickerson (90) and moved up to No. 14."
    }
   ]
  },
@@ -1336,29 +1433,29 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 97.8,
-    "win": 99.1,
-    "loss": 95.5
+    "now": 97.9,
+    "win": 98.9,
+    "loss": 96.0
    },
    "division": {
-    "now": 85.9,
-    "win": 90.6,
-    "loss": 77.6
+    "now": 86.3,
+    "win": 89.9,
+    "loss": 79.8
    },
    "seed1": {
-    "now": 24.0,
-    "win": 29.5,
-    "loss": 14.4
+    "now": 23.6,
+    "win": 28.3,
+    "loss": 15.2
    },
    "conf": {
-    "now": 16.6,
-    "win": 18.1,
-    "loss": 14.0
+    "now": 16.0,
+    "win": 17.3,
+    "loss": 13.6
    },
    "sb": {
-    "now": 8.4,
+    "now": 8.2,
     "win": 9.0,
-    "loss": 7.3
+    "loss": 6.9
    }
   },
   "winProb": 63.7,
@@ -1375,6 +1472,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 30% of the time with a win and 14% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 28% of the time with a win and 15% with a loss."
  }
 }
