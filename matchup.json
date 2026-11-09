@@ -1233,7 +1233,7 @@
  },
  "lines": {
   "gameId": "2026_09_BUF_MIN",
-  "book": "Draft Kings",
+  "book": "DraftKings",
   "cur": {
    "spread": -3.0,
    "total": 43.5,
@@ -1294,29 +1294,29 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 97.6,
-    "win": 98.7,
+    "now": 97.7,
+    "win": 98.9,
     "loss": 95.9
    },
    "division": {
     "now": 85.7,
-    "win": 90.2,
-    "loss": 78.7
+    "win": 90.4,
+    "loss": 78.5
    },
    "seed1": {
-    "now": 23.9,
-    "win": 29.8,
-    "loss": 15.0
+    "now": 24.0,
+    "win": 29.9,
+    "loss": 15.1
    },
    "conf": {
-    "now": 15.9,
-    "win": 16.9,
-    "loss": 14.4
+    "now": 15.8,
+    "win": 16.8,
+    "loss": 14.1
    },
    "sb": {
-    "now": 8.1,
-    "win": 8.6,
-    "loss": 7.3
+    "now": 8.0,
+    "win": 8.7,
+    "loss": 6.9
    }
   },
   "winProb": 60.4,
