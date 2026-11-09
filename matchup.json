@@ -1197,6 +1197,16 @@
      "pa": 93
     },
     {
+     "abbr": "CHI",
+     "nick": "Bears",
+     "rec": "7-2",
+     "gb": "0",
+     "div": "0-2",
+     "strk": "W4",
+     "pf": 241,
+     "pa": 184
+    },
+    {
      "abbr": "DET",
      "nick": "Lions",
      "rec": "6-2",
@@ -1205,16 +1215,6 @@
      "strk": "W4",
      "pf": 222,
      "pa": 189
-    },
-    {
-     "abbr": "CHI",
-     "nick": "Bears",
-     "rec": "6-2",
-     "gb": "0.5",
-     "div": "0-2",
-     "strk": "W3",
-     "pf": 214,
-     "pa": 160
     },
     {
      "abbr": "GB",
@@ -1229,7 +1229,7 @@
    ]
   },
   "billsPlace": "1st in the AFC East, 2 games ahead",
-  "oppPlace": "1st in the NFC North, 0.5 games ahead"
+  "oppPlace": "1st in the NFC North, tied at the top (wins the tiebreaker)"
  },
  "lines": {
   "gameId": "2026_09_BUF_MIN",
@@ -1237,8 +1237,8 @@
   "cur": {
    "spread": -3.0,
    "total": 43.5,
-   "ml": -170.0,
-   "oppMl": 142.0
+   "ml": -175.0,
+   "oppMl": 145.0
   },
   "open": {
    "spread": -3.0,
@@ -1283,6 +1283,12 @@
     "spread": -3.0,
     "total": 43.5,
     "ml": -170.0
+   },
+   {
+    "t": "2026-11-09T06:29Z",
+    "spread": -3.0,
+    "total": 43.5,
+    "ml": -175.0
    }
   ]
  },
@@ -1294,45 +1300,45 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 97.7,
-    "win": 98.9,
-    "loss": 95.9
+    "now": 97.5,
+    "win": 98.7,
+    "loss": 95.8
    },
    "division": {
-    "now": 85.7,
-    "win": 90.4,
-    "loss": 78.5
+    "now": 85.8,
+    "win": 90.0,
+    "loss": 79.4
    },
    "seed1": {
-    "now": 24.0,
-    "win": 29.9,
-    "loss": 15.1
+    "now": 23.6,
+    "win": 29.2,
+    "loss": 14.8
    },
    "conf": {
-    "now": 15.8,
-    "win": 16.8,
-    "loss": 14.1
+    "now": 16.4,
+    "win": 18.1,
+    "loss": 13.7
    },
    "sb": {
-    "now": 8.0,
-    "win": 8.7,
-    "loss": 6.9
+    "now": 8.3,
+    "win": 9.4,
+    "loss": 6.6
    }
   },
-  "winProb": 60.4,
+  "winProb": 60.9,
   "sims": 10000,
   "asOf": "through the games of Nov. 8, 2026"
  },
  "significance": {
   "win": "A win would make the Bills 7-1, tied for the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 2.5 games over the Patriots. It would also hand the 6-1 Vikings just their second loss.",
   "loss": "A loss would drop them to 6-2 and out of the No. 1 seed (to No. 2). They would still lead the AFC East by 1.5 games.",
-  "note": "Based on the standings right now; other games this week can still change it.",
+  "note": "Based on every other result this week.",
   "now": {
    "rec": "6-1",
    "seed": 1
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 30% of the time with a win and 15% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 29% of the time with a win and 15% with a loss."
  }
 }
