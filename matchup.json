@@ -1233,12 +1233,12 @@
  },
  "lines": {
   "gameId": "2026_09_BUF_MIN",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
    "spread": -3.0,
    "total": 43.5,
-   "ml": -175.0,
-   "oppMl": 145.0
+   "ml": -170.0,
+   "oppMl": 142.0
   },
   "open": {
    "spread": -3.0,
@@ -1277,6 +1277,12 @@
     "spread": -3.0,
     "total": 43.5,
     "ml": -175.0
+   },
+   {
+    "t": "2026-11-09T03:12Z",
+    "spread": -3.0,
+    "total": 43.5,
+    "ml": -170.0
    }
   ]
  },
@@ -1288,32 +1294,32 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 97.8,
-    "win": 98.9,
-    "loss": 96.0
+    "now": 97.6,
+    "win": 98.7,
+    "loss": 95.9
    },
    "division": {
-    "now": 85.4,
-    "win": 90.1,
-    "loss": 78.1
+    "now": 85.7,
+    "win": 90.2,
+    "loss": 78.7
    },
    "seed1": {
-    "now": 24.2,
-    "win": 30.2,
-    "loss": 15.1
+    "now": 23.9,
+    "win": 29.8,
+    "loss": 15.0
    },
    "conf": {
-    "now": 16.0,
-    "win": 17.0,
-    "loss": 14.3
+    "now": 15.9,
+    "win": 16.9,
+    "loss": 14.4
    },
    "sb": {
     "now": 8.1,
     "win": 8.6,
-    "loss": 7.2
+    "loss": 7.3
    }
   },
-  "winProb": 60.9,
+  "winProb": 60.4,
   "sims": 10000,
   "asOf": "through the games of Nov. 8, 2026"
  },
