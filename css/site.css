@@ -429,6 +429,8 @@ body.hailee #livebar-gameday{display:none}
 .livebar .lhead{margin:-10px -14px 0;padding:10px 14px 11px;border-radius:0 11px 0 0;
   background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 13%,var(--card)),color-mix(in srgb,var(--blue) 6%,var(--card)));
   border-bottom:1px solid color-mix(in srgb,var(--blue) 22%,var(--line));box-shadow:0 4px 8px -4px rgba(0,20,60,.28);position:relative}
+.livebar .lhead{font-size:1.08rem;font-weight:700;line-height:1.4}
+.livebar .lhead .ln{font-weight:800;font-size:1.04rem}
 .livebar .lhead + .lw{margin-top:0;padding-top:12px;border-top:0}
 /* Records watch inside the card */
 .livebar .lw{margin-top:10px;padding-top:9px;border-top:1px solid var(--line)}
