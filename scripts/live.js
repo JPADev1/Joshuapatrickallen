@@ -172,7 +172,7 @@
       var r = forThis ? liveItem(x, L) : null;
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
       if(r.cls === 'close') close = true; if(r.cls === 'done') broke = true;
-      return '<li class="' + r.cls + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Done' : 'Done today') + '</em>'
+      return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Done' : 'Done today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">So close</em>' : '') + '</b><span>' + r.html + '</span></li>';
     }).join('');
     var note = forThis ? (L.final ? 'Final numbers are unofficial until the official stats are in.' : 'Counts down live with Allen’s numbers today (unofficial).')
@@ -182,7 +182,9 @@
         + '<ol class="wlist">' + rows + '</ol><p class="lwn">' + note + '</p></div>'};
   }
   // Two spinning goal lights on top of the card when a record is within reach.
-  var LIGHTS = '<div class="glights" aria-hidden="true"><span class="gl l"><b></b><i></i></span><span class="gl r"><b></b><i></i></span></div>';
+  // Each: beam (b), the turning mirror and bulb inside (.mech), a see-through colored cover (.cov), and the base.
+  function light(side, color){ return '<span class="gl ' + side + ' ' + color + '"><b></b><span class="mech"><i class="mir"></i><i class="bulb"></i></span><i class="cov"></i></span>'; }
+  var LIGHTS = '<div class="glights" aria-hidden="true">' + light('l', 'red') + light('r', 'blue') + '</div>';
 
   // The Gameday live card. Normal spot: #livebar-slot. On gameday it moves up to #livebar-gameday
   // (stats page: under the social links; Next game page: under the team cards) and goes back the next day.
@@ -198,7 +200,7 @@
       if(mn) mn.insertBefore(el, mn.firstChild); else document.body.insertBefore(el, document.body.firstChild); }
     if(up) up.hidden = !(gd && el.parentNode === up);
     var w = watchHtml(L, idle);
-    el.className = (idle ? 'livebar idle' : 'livebar') + (gd ? ' gd' : '') + (w.close ? ' lit' : '') + (w.broke ? ' gold' : '');
+    el.className = (idle ? 'livebar idle' : 'livebar') + (gd ? ' gd' : '') + (w.close ? ' lit' : '');
     if(idle){ // No game on: hold the spot with a teaser (pages opt in with data-idle on #livebar-slot)
       var pre = gd && match;
       el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br>' + (pre

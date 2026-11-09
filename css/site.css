@@ -444,38 +444,51 @@ body.hailee #livebar-gameday{display:none}
 .livebar .lwn{margin:8px 0 0;font-size:.74rem;color:var(--mute)}
 .livebar.idle .lwn{color:rgba(255,255,255,.75)}
 .livebar .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-/* Goal lights: two orange beacons on top of the card while a record is within reach.
-   Shape: an upside-down pint carton (narrow flat top, wider bottom) on a dark base. */
-.livebar.lit{margin-top:42px;isolation:isolate;border-color:color-mix(in srgb,#ff8a00 60%,var(--line))}
-#livebar-gameday .livebar.lit{margin-top:44px}
+/* Goal lights: two beacons on top of the card while a record is within reach, one red and one blue.
+   Shape: an upside-down pint carton (narrow flat top, wider bottom). The colored cover is see-through, so the
+   mirror turning around the bulb inside shows; the beam it throws turns with it. */
+.livebar.lit{margin-top:50px;isolation:isolate}
+#livebar-gameday .livebar.lit{margin-top:52px}
 .glights{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none}
-.gl{position:absolute;top:-40px;width:42px;height:40px;filter:drop-shadow(0 0 8px rgba(255,140,0,.85)) drop-shadow(0 0 3px rgba(255,190,90,.9))}
+.gl{--c:255,40,40;--d:#7a0a0a;position:absolute;top:-48px;width:46px;height:48px}
+.gl.blue{--c:40,120,255;--d:#0a2a7a}
 .gl.l{left:14px}.gl.r{right:14px}
-.gl::after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;border-radius:1px 1px 3px 3px;background:linear-gradient(#5a5f6b,#23262e)}
-.gl i{position:absolute;left:4px;right:4px;bottom:7px;height:31px;overflow:hidden;
-  clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);
-  background:linear-gradient(90deg,#b84a00,#ff8a00 30%,#ffb347 50%,#ff8a00 70%,#b84a00)}
-/* the carton's rim (its bottom, now on top) */
-.gl i::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(#ffcf8a,#d96a00)}
-/* the reflector spinning inside */
-.gl i::before{content:"";position:absolute;inset:-10% -70%;background:linear-gradient(90deg,transparent 32%,rgba(255,250,220,.95) 47%,#fff 50%,rgba(255,250,220,.95) 53%,transparent 68%);
-  animation:glspin .9s linear infinite}
-/* the beam it throws around */
-.gl b{position:absolute;left:50%;top:55%;width:250px;height:250px;margin:-125px 0 0 -125px;z-index:-1;border-radius:50%;opacity:.55;
-  background:conic-gradient(from 0deg,transparent 0 40deg,rgba(255,140,0,.8) 52deg,rgba(255,140,0,0) 66deg,transparent 220deg,rgba(255,140,0,.8) 232deg,rgba(255,140,0,0) 246deg,transparent 360deg);
-  -webkit-mask:radial-gradient(closest-side,#000 15%,transparent);mask:radial-gradient(closest-side,#000 15%,transparent);
-  animation:glbeam 1.8s linear infinite}
-.gl.r b,.gl.r i::before{animation-delay:-.45s}
-@keyframes glspin{0%{transform:translateX(-55%) scaleX(.6)}50%{transform:translateX(0) scaleX(1)}100%{transform:translateX(55%) scaleX(.6)}}
+/* base: dark metal with a lip */
+.gl::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;border-radius:2px 2px 3px 3px;
+  background:linear-gradient(#8a9099,#3b3f47 45%,#1c1e23);box-shadow:0 2px 3px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+/* inside: the mirror turning around the bulb */
+.gl .mech{position:absolute;left:5px;right:5px;bottom:8px;height:38px;perspective:60px;display:flex;align-items:center;justify-content:center}
+.gl .mir{position:absolute;width:24px;height:24px;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,#fff 0 10%,rgba(var(--c),1) 22%,#e6e9ef 40%,#9aa1ad 64%,#5d636e 80%,#2b2e34);
+  box-shadow:0 0 8px rgba(var(--c),.9);animation:glmir 1s linear infinite}
+.gl .bulb{position:absolute;width:7px;height:12px;border-radius:45% 45% 40% 40%;background:radial-gradient(circle at 50% 40%,#fff,#fff6d0 45%,rgba(var(--c),.9));
+  box-shadow:0 0 6px 2px rgba(255,255,230,.9),0 0 12px 4px rgba(var(--c),.7)}
+.gl .mech::after{content:"";position:absolute;bottom:0;left:50%;width:4px;height:9px;margin-left:-2px;background:linear-gradient(90deg,#555,#bbb,#555)}
+/* the see-through cover */
+.gl .cov{position:absolute;left:5px;right:5px;bottom:8px;height:38px;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);
+  background:linear-gradient(90deg,rgba(var(--c),.55),rgba(var(--c),.18) 26%,rgba(255,255,255,.28) 34%,rgba(var(--c),.14) 42%,rgba(var(--c),.2) 70%,rgba(var(--c),.6)),
+    repeating-linear-gradient(90deg,rgba(255,255,255,0) 0 5px,rgba(255,255,255,.08) 5px 6px);
+  animation:glcov 1s linear infinite}
+/* top rim of the cover */
+.gl .cov::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(rgba(255,255,255,.55),rgba(var(--c),.6))}
+/* the beam */
+.gl b{position:absolute;left:50%;top:50%;width:260px;height:260px;margin:-130px 0 0 -130px;z-index:-1;border-radius:50%;opacity:.6;
+  background:conic-gradient(from 0deg,transparent 0 76deg,rgba(var(--c),.85) 90deg,rgba(var(--c),0) 104deg,transparent 360deg);
+  -webkit-mask:radial-gradient(closest-side,#000 12%,transparent);mask:radial-gradient(closest-side,#000 12%,transparent);
+  animation:glbeam 1s linear infinite}
+.gl.r b,.gl.r .mir,.gl.r .cov{animation-delay:-.5s}
+/* mirror turns edge-on and back; it flashes when it faces you, and the cover glows with it */
+@keyframes glmir{0%{transform:rotateY(0deg);filter:brightness(1.7)}25%{filter:brightness(.8)}50%{transform:rotateY(180deg);filter:brightness(.6)}75%{filter:brightness(.8)}100%{transform:rotateY(360deg);filter:brightness(1.7)}}
+@keyframes glcov{0%,100%{filter:brightness(1.6) drop-shadow(0 0 7px rgba(var(--c),.95))}50%{filter:brightness(.95) drop-shadow(0 0 3px rgba(var(--c),.6))}}
 @keyframes glbeam{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.gl i::before,.gl b{animation:none}.gl b{opacity:.3}}
-/* Record broken today: the card glows gold, and the broken records are gold */
-.livebar.gold{border-color:#e9b949;animation:goldglow 2.4s ease-in-out infinite}
-@keyframes goldglow{0%,100%{box-shadow:0 0 14px 2px rgba(240,190,60,.55),0 0 40px 8px rgba(240,190,60,.25)}
-  50%{box-shadow:0 0 26px 7px rgba(255,210,80,.9),0 0 80px 26px rgba(240,190,60,.45)}}
-@media (prefers-reduced-motion:reduce){.livebar.gold{animation:none;box-shadow:0 0 22px 5px rgba(240,190,60,.7)}}
-.livebar.gold .wlist li.done{background:linear-gradient(100deg,rgba(240,190,60,.2),rgba(255,225,140,.32) 50%,rgba(240,190,60,.2));box-shadow:inset 0 0 0 1px rgba(214,160,30,.55)}
-.livebar.gold li.done .wtag{background:linear-gradient(180deg,#f7d774,#c9961e);color:#3a2700}
+@media (prefers-reduced-motion:reduce){.gl .mir,.gl .cov,.gl b{animation:none}.gl b{opacity:.3}}
+/* Record broken today: that record's box glows gold */
+.livebar .wlist li.done.gold{background:linear-gradient(100deg,rgba(240,190,60,.2),rgba(255,225,140,.32) 50%,rgba(240,190,60,.2));
+  box-shadow:inset 0 0 0 1px rgba(214,160,30,.6);animation:goldglow 2.4s ease-in-out infinite}
+@keyframes goldglow{0%,100%{box-shadow:inset 0 0 0 1px rgba(214,160,30,.6),0 0 8px 1px rgba(240,190,60,.45)}
+  50%{box-shadow:inset 0 0 0 1px rgba(214,160,30,.8),0 0 18px 5px rgba(255,205,70,.85)}}
+@media (prefers-reduced-motion:reduce){.livebar .wlist li.done.gold{animation:none}}
+.livebar li.done.gold .wtag{background:linear-gradient(180deg,#f7d774,#c9961e);color:#3a2700}
 /* ---------- Next game page: team cards, primetime, standings, line, playoff chances ---------- */
 .vs{perspective:900px;align-items:stretch}
 .vs .at{align-self:center}
