@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=32">
+<link rel="stylesheet" href="css/site.css?v=33">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -123,12 +123,17 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   function pills(L){
     if(!L.length)return '<p class="note" style="margin:4px 0">No one listed yet.</p>';
     return L.map(function(x){ if(typeof x==='string')return '<span class="pill">'+esc(x)+'</span>';
-      return '<span class="pill">'+esc(x.name)+' ('+esc(x.pos)+')'+(x.injury?', '+esc(x.injury):'')+': <b>'+esc(x.status)+'</b></span>';}).join('');}
+      var cls=x.status==='Inactive'?' ia':x.status==='Active'?' act':'';
+      return '<span class="pill'+cls+'">'+esc(x.name)+(x.pos?' ('+esc(x.pos)+')':'')+(x.injury?', '+esc(x.injury):'')+': <b>'+esc(x.status)+'</b>'+(x.was&&x.status!==x.was?' <i>(was '+esc(x.was)+')</i>':'')+'</span>';}).join('');}
   var asof=inj.asOf?' ('+esc(inj.asOf)+')':(inj.week?' (Week '+inj.week+' report)':'');
+  // Official gameday inactives (once a team posts its list, its injury report turns into it)
+  var IA=inj.inactives||{};
+  function head(side,team){ var p=IA[side];
+    return p ? esc(team)+' official inactives'+(p.posted?' <span class="iapost">posted '+esc(p.posted)+'</span>':'') : esc(team)+' injuries'+asof; }
   var fresh=inj.changed?'<p class="injup"><b>Injury report last changed:</b> '+esc(inj.changed)+' <span>'+esc(ago(inj.changedIso))+'</span></p>':'';
   document.getElementById('extra').innerHTML='<p style="margin:0 0 6px"><b>'+esc(m.series.summary)+'</b> '+esc(m.series.last)+'</p>'
-   +fresh+'<div class="lines"><div><h3>Bills injuries'+asof+'</h3>'+pills(inj.bills)+'</div><div><h3>'+esc(nick)+' injuries'+asof+'</h3>'+pills(inj.opp)+'</div></div>'
-   +'<p class="note">'+esc(inj.note)+' DNP = did not practice. The report is checked every hour.</p>';
+   +fresh+'<div class="lines"><div><h3>'+head('bills','Bills')+'</h3>'+pills(inj.bills)+'</div><div><h3>'+head('opp',nick)+'</h3>'+pills(inj.opp)+'</div></div>'
+   +'<p class="note">'+esc(inj.note)+(IA.bills&&IA.opp?'':' DNP = did not practice.')+(IA.bills||IA.opp?' Inactives are added as soon as each team posts them.':' The report is checked every hour.')+'</p>';
   document.getElementById('srcnote').textContent=m.sources+' Last updated '+m.updated+'.';
   if(m.props&&m.props.items&&m.props.items.length)props(m);
 }).catch(function(){

@@ -427,7 +427,7 @@ def build_matchup(sched, team_rows, week26, inj, T, overrides):
                 continue
             out.append({"name": r["full_name"], "pos": r["position"], "injury": hurt, "status": game or prac,
                         "game": bool(game)})
-        order = {"Out": 0, "Doubtful": 1, "Questionable": 2, "DNP": 3, "Limited": 4}
+        order = {"Inactive": 0, "Out": 0, "Doubtful": 1, "Questionable": 2, "DNP": 3, "Limited": 4}
         return sorted(out, key=lambda x: (order.get(x["status"], 5), x["name"]))
     bi, oi = injuries(BILLS), injuries(opp)
     any_game = any(x["game"] for x in bi + oi)
@@ -509,6 +509,43 @@ def build_ranks(week26, sched):
     allen = {"wins": reg[ALLEN], "postWins": post[ALLEN], "both": both,
              "afcEast": wb["afcEast"]}
     return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists, "allen": allen}
+
+
+# ---------- Official gameday inactives (stats-data/inactives.json) ----------
+# Teams post their inactives about 90 minutes before kickoff; nflverse never has them. inactives.json holds them:
+#   {"gameId": "...", "bills": {"posted": "6:44 p.m. ET", "source": "...", "players": [{"name": "...", "pos": "..."}]},
+#    "opp": {...}}
+# Once a team's list is in, its injury report turns into the official word: listed players are Inactive, players who
+# were on the report but are not on the list are Active (anyone already Out stays Out), and healthy scratches are added.
+def apply_inactives(m, ia):
+    if not ia or ia.get("gameId") != m.get("gameId"):
+        return
+    inj = m["injuries"]; posted = {}
+    for side in ("bills", "opp"):
+        t = ia.get(side) or {}
+        L = t.get("players") or []
+        if not L:
+            continue
+        posted[side] = {"posted": t.get("posted", ""), "source": t.get("source", "")}
+        key = {pname(x["name"]): x for x in L}
+        seen = set(); rows = []
+        for x in inj[side]:
+            k = pname(x["name"])
+            if k in key:
+                seen.add(k); rows.append(dict(x, status="Inactive", game=True, was=x["status"]))
+            elif x["status"] == "Out":
+                rows.append(x)
+            else:
+                rows.append(dict(x, status="Active", game=True, was=x["status"]))
+        for k, x in key.items():
+            if k not in seen:
+                rows.append({"name": x["name"], "pos": x.get("pos", ""), "injury": x.get("injury", ""), "status": "Inactive", "game": True})
+        order = {"Inactive": 0, "Out": 1, "Active": 2}
+        inj[side] = sorted(rows, key=lambda x: (order.get(x["status"], 3), x["name"]))
+    if posted:
+        inj["inactives"] = posted
+        inj["note"] = ("Official gameday inactives, posted by the teams about 90 minutes before kickoff, replace the injury report. "
+                       "Active = was on the injury report but is playing. ")
 
 
 # ---------- 4. Records watch (Next game page) ----------
@@ -725,7 +762,7 @@ def injury_effects(m, snaps, teams, games):
     out = []
     for side, team in (("bills", BILLS), ("opp", teams[1])):
         other = teams[1] if team == BILLS else BILLS
-        gone = [x for x in m["injuries"][side] if x["status"] in ("Out", "Doubtful") and starter(team, x["name"])]
+        gone = [x for x in m["injuries"][side] if x["status"] in ("Out", "Doubtful", "Inactive") and starter(team, x["name"])]
         pos = lambda grp: [x for x in gone if x["pos"] in grp]
         nm = lambda L: ", ".join(f"{x['name']} ({x['pos']})" for x in L[:3])
         db, front = pos({"CB", "S", "SS", "FS", "DB"}), pos({"DE", "DT", "NT", "LB", "OLB", "ILB", "MLB", "DL", "EDGE"})
@@ -806,7 +843,7 @@ def build_props(week26, sched, S, m, snaps):
             continue  # needs 4+ games and to have played in one of the team's last two
         name = names[("name", pid)]
         st = status.get((team, pname(name)), "")
-        if st in ("Out", "Doubtful"):
+        if st in ("Out", "Doubtful", "Inactive"):
             continue
         pos = names[("pos", pid)]
         zero = defaultdict(float)
@@ -1141,6 +1178,10 @@ def main():
         print(e); inj = []
     m = build_matchup(sched, team_rows, week26, inj, T, overrides)
     if m:
+        try:
+            apply_inactives(m, load("inactives.json"))
+        except Exception as e:  # never let the inactives block the rest of the page
+            print("inactives skipped:", e)
         try:
             m["watch"] = build_watch(allen, ranks, week26, m)
         except Exception as e:  # never let the watch list block the rest of the page
