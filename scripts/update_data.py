@@ -442,7 +442,7 @@ def build_matchup(sched, team_rows, week26, inj, T, overrides):
         "updated": date.today().isoformat(), "gameId": nxt["game_id"], "week": int(nxt["week"]), "label": label,
         "bills": {"name": T[BILLS]["name"], "record": record(reg26_for(reg26, BILLS), BILLS)},
         "opp": {"name": T[opp]["name"], "abbr": opp, "nick": nick, "record": record(reg26_for(reg26, opp), opp)},
-        "home": home, "date": short_date(when, weekday=True), "time": kickoff(nxt["gametime"]),
+        "home": home, "gameday": nxt["gameday"], "date": short_date(when, weekday=True), "time": kickoff(nxt["gametime"]),
         "venue": stadium(nxt) + (f", {city}" if city else ""), "tv": ov.get("tv", ""),
         "series": {"summary": summary, "last": last_txt},
         "injuries": {"week": wk, "bills": bi, "opp": oi,
@@ -529,7 +529,9 @@ def build_watch(allen, ranks, week26, m):
            "rushYds": A["rushYds"] + now["rushYds"]}
     cur["totalTD"] = cur["passTD"] + cur["rushTD"] + A["recTD"] + now.get("recTD", 0)
     nick = m["opp"]["nick"]
-    items = []  # (difficulty 0-1, title, detail)
+    items = []  # (difficulty 0-1, title, detail, live) -- live: what the page needs to count down during the game
+    # live keys: k = stat (passTD, rushTD, passYds, rushYds, totalTD, both, win); need = amount in this game for the
+    # first mark, goal/done = text before/after it; need2/goal2/done2 = an optional second mark; ctx = a line that stays true.
     unit = {"passYds": ("passing yard", "passing yards"), "passTD": ("passing TD", "passing TDs"),
             "rushYds": ("rushing yard", "rushing yards"), "rushTD": ("rushing TD", "rushing TDs"), "totalTD": ("total TD", "total TDs")}
     def needs(k, n):
@@ -542,7 +544,9 @@ def build_watch(allen, ranks, week26, m):
         n = kelly["v"] + 1 - combo
         if n <= hi["passTD"]:
             items.append((n / hi["passTD"], "Bills record: passing TDs, regular season + playoffs",
-                          f"{needs('passTD', n)} He has {combo}; {kelly['name']} has {kelly['v']}."))
+                          f"{needs('passTD', n)} He has {combo}; {kelly['name']} has {kelly['v']}.",
+                          {"k": "passTD", "need": n, "goal": f"to pass {kelly['name']} ({kelly['v']}) for the Bills record",
+                           "done": f"Bills record! He passed {kelly['name']} ({kelly['v']})."}))
 
     # QB rushing yards: next 1,000-yard milestone and the next QB ahead
     qbs = list(W["qbRushYds"]["fixed"])
@@ -554,18 +558,23 @@ def build_watch(allen, ranks, week26, m):
     if n <= hi["rushYds"]:
         club = sorted([q for q in qbs if q["v"] >= mile], key=lambda q: -q["v"])
         names = ", ".join(q["name"] for q in club[:-1]) + (" and " if len(club) > 1 else "") + (club[-1]["name"] if club else "")
-        items.append((n / hi["rushYds"], f"{mile:,} career rushing yards",
-                      f"{needs('rushYds', n)} He'd be the {ordinal(len(club) + 1)} QB ever to reach it" + (f", joining {names}." if club else ".")))
+        club_txt = f"He'd be the {ordinal(len(club) + 1)} QB ever to reach it" + (f", joining {names}." if club else ".")
+        items.append((n / hi["rushYds"], f"{mile:,} career rushing yards", f"{needs('rushYds', n)} {club_txt}",
+                      {"k": "rushYds", "need": n, "goal": f"to reach {mile:,}", "ctx": club_txt,
+                       "done": f"He reached {mile:,} career rushing yards, the {ordinal(len(club) + 1)} QB ever to get there."}))
     ahead = sorted([q for q in qbs if q["v"] > cur["rushYds"]], key=lambda q: q["v"])
     if ahead and ahead[0]["v"] + 1 - cur["rushYds"] <= hi["rushYds"]:
         q = ahead[0]; n = q["v"] + 1 - cur["rushYds"]
-        items.append((n / hi["rushYds"], "NFL career rushing yards by a QB", f"{needs('rushYds', n)} Passes {q['name']} ({q['v']:,})."))
+        items.append((n / hi["rushYds"], "NFL career rushing yards by a QB", f"{needs('rushYds', n)} Passes {q['name']} ({q['v']:,}).",
+                      {"k": "rushYds", "need": n, "goal": f"to pass {q['name']} ({q['v']:,})", "done": f"He passed {q['name']} ({q['v']:,})."}))
 
     # His NFL record: games with a passing TD and a rushing TD
     both = A["bothGamesReg"] + sum(1 for g in allen["games"] if g["td"] >= 1 and g["rushTD"] >= 1)
     nx = W["bothGamesNext"]
     items.append((0.34, "NFL record: games with a passing TD and a rushing TD",
-                  f"Needs at least one of each to extend his record to {both + 1} (regular season). Next closest: {nx['name']}, {nx['v']}."))
+                  f"Needs at least one of each to extend his record to {both + 1} (regular season). Next closest: {nx['name']}, {nx['v']}.",
+                  {"k": "both", "need": 1, "goal": f"to extend his record to {both + 1}", "ctx": f"Next closest: {nx['name']}, {nx['v']}.",
+                   "done": f"Record extended to {both + 1} games (regular season). Next closest: {nx['name']}, {nx['v']}."}))
 
     # NFL all-time leader lists
     keymap = {"Career passing touchdowns": "passTD", "Career rushing touchdowns": "rushTD",
@@ -585,18 +594,23 @@ def build_watch(allen, ranks, week26, m):
         tied = sum(1 for x in L if x == v)
         label = f"{who} ({v:,})" if who else f"{v:,}"
         detail = f"{needs(k, tie)} Ties {label} for No. {spot}"
+        them = 'them' if tied > 1 else ('him' if who else 'that mark')
+        live = {"k": k, "need": tie, "goal": f"to tie {label} for No. {spot}", "done": f"He tied {label} for No. {spot}."}
         if tie + 1 <= hi[k]:
-            detail += f"; {tie + 1:,} passes {'them' if tied > 1 else ('him' if who else 'that mark')}"
-        items.append((tie / hi[k], f"NFL career {title.split('Career ')[1]}", detail + "."))
+            detail += f"; {tie + 1:,} passes {them}"
+            live.update({"need2": tie + 1, "goal2": f"to pass {them}", "done2": f"He passed {label} and moved up to No. {spot}."})
+        items.append((tie / hi[k], f"NFL career {title.split('Career ')[1]}", detail + ".", live))
 
     # Record against this opponent
     v = m.get("allenVs", {})
     if v.get("games"):
-        items.append((0.5, f"Record against the {nick}", f"A win makes him {v['wins'] + 1}-{v['losses']} as a starter against them in the regular season."))
+        items.append((0.5, f"Record against the {nick}", f"A win makes him {v['wins'] + 1}-{v['losses']} as a starter against them in the regular season.",
+                      {"k": "win", "need": 1, "goal": f"to go {v['wins'] + 1}-{v['losses']} against them",
+                       "done": f"Win! He's {v['wins'] + 1}-{v['losses']} as a starter against the {nick} in the regular season."}))
 
     items.sort(key=lambda x: x[0])
-    return {"asOf": short_date(date.today()), "highs": hi,
-            "items": [{"title": t, "detail": d} for _, t, d in items]}
+    return {"asOf": short_date(date.today()), "highs": hi, "gameday": m.get("gameday"),
+            "items": [dict({"title": t, "detail": d}, **lv) for _, t, d, lv in items]}
 
 
 # ---------- 5. 90%+ props (Next game page) ----------

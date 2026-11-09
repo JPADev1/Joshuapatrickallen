@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Next Game | Joshua Patrick Allen</title>
 <meta name="description" content="Josh Allen's next opponent: game details, his career history against them, and box scores from past meetings.">
-<link rel="stylesheet" href="css/site.css?v=31">
+<link rel="stylesheet" href="css/site.css?v=32">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -13,6 +13,7 @@
   <h1 id="title">Next game</h1>
   <div class="ptw" id="pt" hidden></div>
   <div class="vs" id="vs"></div>
+  <div id="livebar-gameday" hidden></div>
   <p class="when" id="when"></p>
   <div class="divs" id="divs" hidden></div>
 </div></header>
@@ -30,8 +31,6 @@
     <h2 class="sec" id="poHead">Playoff chances</h2>
     <div class="card" id="po"></div>
   </section>
-  <h2 class="sec" id="watchHead" hidden>Records watch</h2>
-  <div class="card watch" id="watch" hidden></div>
   <div class="card" id="vsAllen"></div>
   <h2 class="sec">Team comparison, 2026</h2>
   <div class="card" id="cmp"></div>
@@ -59,7 +58,7 @@
   <p class="note" id="srcnote"></p>
 </main>
 <footer id="foot">Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
-<script src="scripts/live.js?v=2"></script>
+<script src="scripts/live.js?v=3"></script>
 <script>
 function fmt(n){return n.toLocaleString('en-US');}
 function td(v){return '<td>'+v+'</td>';}
@@ -100,11 +99,7 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
   document.getElementById('billsSeasonHead').textContent='Buffalo this season (Allen\'s game log)';
   document.getElementById('oppSeasonHead').textContent=m.opp.name.replace(/ \S+$/,'')+' this season';
   document.getElementById('oppSeason').innerHTML='<thead><tr><th>Wk</th><th>Opp</th><th>Result</th></tr></thead><tbody>'+m.oppSeason.map(function(g){var w=/^W/.test(g.result);return '<tr>'+td(g.week)+td((g.home?'':'@ ')+g.opp)+td('<span class="res '+(w?'w':'l')+'">'+g.result+'</span>')+'</tr>';}).join('')+'</tbody>';
-  if(m.watch&&m.watch.items&&m.watch.items.length){
-    document.getElementById('watchHead').hidden=false; var W=document.getElementById('watch'); W.hidden=false;
-    W.innerHTML='<ol class="wlist">'+m.watch.items.map(function(x){return '<li><b>'+esc(x.title)+'</b><span>'+esc(x.detail)+'</span></li>';}).join('')+'</ol>'
-      +'<p class="note">Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated '+esc(m.watch.asOf)+'.</p>';
-  }
+  // Records watch: lives in the Gameday live card (scripts/live.js), which counts it down during the game.
   var v=m.allenVs;
   document.getElementById('vsAllen').innerHTML='<div class="head"><h2>Allen against the '+esc(m.opp.name)+'</h2><div class="chips"><span class="chip hold">'+v.wins+'-'+v.losses+' regular season</span>'+((v.postWins||v.postLosses)?'<span class="chip hold">'+v.postWins+'-'+v.postLosses+' playoffs</span>':'')+'</div></div>'
    +'<div class="stats">'+stat(v.games,'Games')+stat(v.cmp+'-'+v.att,'Cmp-Att')+stat(fmt(v.yds),'Pass yards')+stat(v.td,'Pass TD')+stat(v.int,'INT')+stat(v.rating.toFixed(1),'Passer rating')+stat(v.rushAtt+' / '+v.rushYds,'Rush att / yds')+stat(v.rushTD,'Rush TD')+'</div>'

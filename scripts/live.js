@@ -99,26 +99,122 @@
     })();
   }
 
-  // Small "LIVE" bar at the top of the page.
+  // ---------- Records watch (from matchup.json, built hourly by update_data.py) ----------
+  var SRC = ['https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/', 'data/'];
+  var match = null; // the Next game file: date, opponent, kickoff, records watch
+  function loadMatch(){
+    var i = 0;
+    function next(){ var u = SRC[i++] + 'matchup.json';
+      return fetch(u, {cache:'no-cache'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+        .catch(function(e){ if(i < SRC.length) return next(); return null; }); }
+    return next().then(function(m){ match = m; });
+  }
+  function today(){ // YYYY-MM-DD in Buffalo
+    try { return new Date().toLocaleDateString('en-CA', {timeZone:'America/New_York'}); }
+    catch(e){ var d = new Date(); return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  }
+  function gameDate(m){ // ISO kickoff date of the Next game file ("gameday", or parsed from "Sunday, Nov. 1, 2026")
+    if(!m) return '';
+    if(m.gameday) return m.gameday;
+    var d = new Date(String(m.date || '').replace(/^[A-Za-z]+,\s*/, '').replace(/\./g, ''));
+    return isNaN(d) ? '' : d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+  }
+  // Gameday: a Bills game is on today (or one is live / just finished). The card moves up the page for the day.
+  function isGameday(){ var L = use(); return !!L || (match && gameDate(match) === today()); }
+
+  function esc(x){ return String(x == null ? '' : x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function fmt(v){ return Number(v).toLocaleString('en-US'); }
+  var UNIT = { passTD:['passing TD','passing TDs'], rushTD:['rushing TD','rushing TDs'], totalTD:['total TD','total TDs'],
+    passYds:['passing yard','passing yards'], rushYds:['rushing yard','rushing yards'] };
+  // "Very close": this many or fewer left (lights come on)
+  var CLOSE = { passTD:1, rushTD:1, totalTD:1, passYds:30, rushYds:15 };
+  function u(k, n){ return UNIT[k][n === 1 ? 0 : 1]; }
+  function liveVal(k, s){
+    if(k === 'totalTD') return s.td + s.rushTD + (s.recTD || 0);
+    return { passTD:s.td, rushTD:s.rushTD, passYds:s.yds, rushYds:s.rushYds }[k] || 0;
+  }
+  // One records-watch line during (or after) the game: {cls: 'done'|'close'|'', html}
+  function liveItem(x, L){
+    var s = L.s, k = x.k, ctx = x.ctx ? ' <i>' + esc(x.ctx) + '</i>' : '';
+    if(k === 'both'){
+      var p = s.td >= 1, r = s.rushTD >= 1;
+      if(p && r) return {cls:'done', html: esc(x.done)};
+      var st = 'Passing TD ' + (p ? '&#10003;' : '&ndash;') + ' &middot; Rushing TD ' + (r ? '&#10003;' : '&ndash;');
+      if(L.final) return {cls:'', html: st + '. Not this time.'};
+      return {cls: (p || r) ? 'close' : '', html: st + '. Needs ' + (p ? 'a rushing TD' : r ? 'a passing TD' : 'one of each') + ' ' + esc(x.goal) + '.' + ctx};
+    }
+    if(k === 'win'){
+      var b = parseInt(L.bills, 10), t = parseInt(L.them, 10), sc = isNaN(b) || isNaN(t) ? '' : b + '-' + t;
+      if(L.final) return b > t ? {cls:'done', html: esc(x.done)} : {cls:'', html: (b === t ? 'Tie, ' : 'Loss, ') + sc + '.'};
+      if(!sc) return {cls:'', html: 'A win ' + esc(x.goal) + '.'};
+      return {cls:'', html: (b > t ? 'Bills lead ' : b < t ? 'Bills trail ' : 'Tied ') + sc + '. A win ' + esc(x.goal) + '.'};
+    }
+    if(!UNIT[k] || x.need == null) return null;
+    var v = liveVal(k, s), left = x.need - v, left2 = x.need2 != null ? x.need2 - v : null;
+    var today_ = ' Today: ' + fmt(v) + ' ' + u(k, v) + '.';
+    if(left2 != null && left2 <= 0) return {cls:'done', html: esc(x.done2) + today_};
+    if(left <= 0){
+      if(left2 == null) return {cls:'done', html: esc(x.done) + today_};
+      return {cls: (!L.final && left2 <= CLOSE[k]) ? 'close' : 'done',
+        html: esc(x.done) + (L.final ? '' : ' ' + fmt(left2) + ' more ' + u(k, left2) + ' ' + esc(x.goal2) + '.') + today_};
+    }
+    if(L.final) return {cls:'', html: 'Fell ' + fmt(left) + ' ' + u(k, left) + ' short.' + today_};
+    var h = 'Needs ' + fmt(left) + ' more ' + u(k, left) + ' ' + esc(x.goal);
+    if(left2 != null) h += '; ' + fmt(left2) + ' ' + esc(x.goal2);
+    return {cls: left <= CLOSE[k] ? 'close' : '', html: h + '.' + today_ + ctx};
+  }
+  // The records watch block inside the card. Live numbers only apply when the watch is for the game being played.
+  function watchHtml(L, dark){
+    var W = match && match.watch; // only on the two pages with a gameday spot (stats, Next game)
+    if(!document.getElementById('livebar-gameday') || !W || !W.items || !W.items.length) return {html:'', close:false};
+    var forThis = L && gameDate(match) === L.date, close = false;
+    var rows = W.items.map(function(x){
+      var r = forThis ? liveItem(x, L) : null;
+      if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
+      if(r.cls === 'close') close = true;
+      return '<li class="' + r.cls + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Done' : 'Done today') + '</em>'
+        : r.cls === 'close' ? ' <em class="wtag">So close</em>' : '') + '</b><span>' + r.html + '</span></li>';
+    }).join('');
+    var note = forThis ? (L.final ? 'Final numbers are unofficial until the official stats are in.' : 'Counts down live with Allen’s numbers today (unofficial).')
+      : 'Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated ' + esc(W.asOf) + '.';
+    return {close: close && L && !L.final,
+      html: '<div class="lw"><div class="lwh">Records watch' + (match.opp && match.opp.nick ? ' <span>' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp.nick) + '</span>' : '') + '</div>'
+        + '<ol class="wlist">' + rows + '</ol><p class="lwn">' + note + '</p></div>'};
+  }
+  // Two spinning goal lights on top of the card when a record is within reach.
+  var LIGHTS = '<div class="glights" aria-hidden="true"><span class="gl l"><b></b><i></i></span><span class="gl r"><b></b><i></i></span></div>';
+
+  // The Gameday live card. Normal spot: #livebar-slot. On gameday it moves up to #livebar-gameday
+  // (stats page: under the social links; Next game page: under the team cards) and goes back the next day.
   function bar(){
     var L = use(), el = document.getElementById('livebar'), slot = document.getElementById('livebar-slot');
+    var up = document.getElementById('livebar-gameday'), gd = isGameday();
     var idle = !L && slot && slot.hasAttribute('data-idle');
     if(!L && !idle){ if(el) el.hidden = true; return; }
-    if(!el){ el = document.createElement('div'); el.id = 'livebar'; el.setAttribute('role','status');
-      var m = document.querySelector('main');
-      if(slot) slot.appendChild(el); else if(m) m.insertBefore(el, m.firstChild); else document.body.insertBefore(el, document.body.firstChild); }
-    el.className = idle ? 'livebar idle' : 'livebar';
+    if(!el){ el = document.createElement('div'); el.id = 'livebar'; el.setAttribute('role','status'); }
+    var home = gd && up ? up : slot;
+    if(home && el.parentNode !== home) home.appendChild(el);
+    else if(!home && !el.parentNode){ var mn = document.querySelector('main');
+      if(mn) mn.insertBefore(el, mn.firstChild); else document.body.insertBefore(el, document.body.firstChild); }
+    if(up) up.hidden = !(gd && el.parentNode === up);
+    var w = watchHtml(L, idle);
+    el.className = (idle ? 'livebar idle' : 'livebar') + (gd ? ' gd' : '') + (w.close ? ' lit' : '');
     if(idle){ // No game on: hold the spot with a teaser (pages opt in with data-idle on #livebar-slot)
-      el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br><span class="ln">Check back on gameday to watch records broken live.</span>' +
-        '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every 2 minutes.</span>';
+      var pre = gd && match;
+      el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br>' + (pre
+        ? '<span class="ln">It’s gameday: Bills ' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp && match.opp.nick) + (match.time ? ', ' + esc(match.time) : '') + '.</span>'
+          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and the records watch counts down live, every 2 minutes.</span>'
+        : '<span class="ln">Check back on gameday to watch records broken live.</span>'
+          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every 2 minutes.</span>') + w.html;
       el.hidden = false; sweep(); return; }
     var s = L.s, parts = [];
     if(s.att) parts.push(s.cmp + '/' + s.att + ', ' + s.yds + ' yds, ' + s.td + ' TD' + (s.int ? ', ' + s.int + ' INT' : ''));
     if(s.rushAtt || s.rushTD) parts.push(s.rushAtt + ' rush, ' + s.rushYds + ' yds' + (s.rushTD ? ', ' + s.rushTD + ' TD' : ''));
     var score = (L.bills !== '' && L.bills != null) ? ' · Bills ' + L.bills + ', ' + L.opp + ' ' + L.them : ' vs ' + L.opp;
-    el.innerHTML = '<span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
+    el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') +
+      '<span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
       (!L.final && L.clock ? ' · ' + L.clock : '') + '<br><span class="ln">Allen today: ' + (parts.join(' · ') || 'no stats yet') +
-      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '<span class="lnote">Live numbers are unofficial and update every 2 minutes. They are checked against the official stats after the game.</span>';
+      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + w.html + '<span class="lnote">Live numbers are unofficial and update every 2 minutes. They are checked against the official stats after the game.</span>';
     el.hidden = false;
   }
 
@@ -127,17 +223,18 @@
     return fetch('https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/allen-2026.json', {cache:'no-cache'})
       .then(function(r){ return r.ok ? r.json() : null; }).then(noteOfficial).catch(function(){});
   }
-  var ready = Promise.all([get(), loadOfficial()]).then(function(r){ state = r[0]; sig = JSON.stringify(state); return state; });
+  var ready = Promise.all([get(), loadOfficial(), loadMatch()]).then(function(r){ state = r[0]; sig = JSON.stringify(state); return state; });
   function poll(){
     if(document.hidden) return;
     get().then(function(L){
       var s2 = JSON.stringify(L);
       if(s2 !== sig){ state = L; sig = s2; changed = true; loadOfficial().then(function(){ bar(); listeners.forEach(function(f){ try{ f(); }catch(e){} }); }); }
 
-      if(!L || L.final){ clearInterval(timer); timer = null; } // nothing left to follow
+      if(L ? L.final : !isGameday()){ clearInterval(timer); timer = null; } // nothing left to follow
     });
   }
-  ready.then(function(L){ bar(); if(L && !L.final) timer = setInterval(poll, EVERY); });
+  // Poll during the game, and on gameday before kickoff so the card goes live without a reload.
+  ready.then(function(L){ bar(); if(L ? !L.final : isGameday()) timer = setInterval(poll, EVERY); });
   document.addEventListener('visibilitychange', function(){ if(!document.hidden && timer) poll(); });
 
   window.JPALive = {

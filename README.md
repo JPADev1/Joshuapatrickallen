@@ -45,3 +45,12 @@ Each has career vs through-N-seasons, a play button, full screen, and (yards, wi
 `update_data.py` adds `props` to matchup.json every hour: every Bills and opponent prop (common alternate lines) that hit in
 90%+ of the player's games this season, with game-log bars, a 1-5 star confidence rating and pros and cons. Games come
 from snap counts, so a game on the field without a stat counts as a miss. A gambling disclaimer sits under the section.
+
+## Gameday live card (`scripts/live.js`)
+Holds Allen's in-game line and the **Records watch** (from `watch` in matchup.json) on the stats page and the Next game page.
+- Normal spot: `#livebar-slot`. On gameday (the Next game's date, or while a game is live) it moves to `#livebar-gameday`:
+  under the social links on the stats page, under the team cards on the Next game page. It goes back the next day.
+- During the game each watch item counts down from Allen's live numbers (`k`, `need`, `goal`, `done`, optional `need2`/`goal2`/`done2`,
+  written by `build_watch` in update_data.py). Items get a "So close" or "Done today" tag.
+- When any record is very close (1 TD, 15 rushing yards or 30 passing yards away, or half of the pass-and-rush TD game), two spinning
+  goal lights show on top of the card.

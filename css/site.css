@@ -418,6 +418,54 @@ tr.nextup td{color:var(--mute);font-style:italic}
   100%{opacity:0;transform:translate(-50%,-50%) scale(1.9)}}
 @keyframes lbrun{0%,40%{--lbr:0%;opacity:0}46%{opacity:1}84%{--lbr:62%;opacity:1}100%{--lbr:62%;opacity:0}}
 @media (prefers-reduced-motion:reduce){.livebar .dot{animation:none}}
+/* Gameday spot: the card moves up the page on gameday (stats page: under the social links; Next game: under the team cards) */
+#livebar-gameday{max-width:680px;margin:20px auto 4px;text-align:left}
+#livebar-gameday .livebar{margin:0}
+.hero.slim #livebar-gameday{margin:16px auto 10px}
+body.hailee #livebar-gameday{display:none}
+.livebar{position:relative;color:var(--ink)}
+.livebar.gd:not(.idle){box-shadow:0 8px 22px rgba(0,0,0,.3)}
+/* Records watch inside the card */
+.livebar .lw{margin-top:10px;padding-top:9px;border-top:1px solid var(--line)}
+.livebar.idle .lw{border-top-color:rgba(255,255,255,.22)}
+.livebar .lwh{font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.livebar .lwh span{font-weight:600;letter-spacing:.02em;text-transform:none;opacity:.75;margin-left:4px}
+.livebar .wlist{gap:8px;font-size:.88rem}
+.livebar .wlist b{color:inherit;letter-spacing:0;margin:0}
+.livebar .wlist span{font-size:.84rem}
+.livebar .wlist span i{font-style:normal;opacity:.85}
+.livebar.idle .wlist span{color:rgba(255,255,255,.84)}
+.livebar.idle .wlist li::marker{color:#f2d36b}
+.livebar .wlist li.close{background:color-mix(in srgb,var(--red) 10%,transparent);border-radius:8px;padding:5px 8px;margin-left:-4px}
+.livebar .wlist li.done{background:color-mix(in srgb,var(--ok) 12%,transparent);border-radius:8px;padding:5px 8px;margin-left:-4px}
+.livebar .wlist li.done span{color:var(--ink)}
+.livebar .wtag{display:inline-block;font-style:normal;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:99px;padding:1px 8px;margin-left:6px;vertical-align:2px;color:#fff;background:var(--red)}
+.livebar li.done .wtag{background:var(--ok);color:#fff}
+.livebar .lwn{margin:8px 0 0;font-size:.74rem;color:var(--mute)}
+.livebar.idle .lwn{color:rgba(255,255,255,.75)}
+.livebar .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Goal lights: two red beacons on top of the card while a record is within reach */
+.livebar.lit{margin-top:38px;isolation:isolate;border-color:color-mix(in srgb,var(--red) 55%,var(--line))}
+#livebar-gameday .livebar.lit{margin-top:40px}
+.glights{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none}
+.gl{position:absolute;top:-36px;width:40px;height:36px}
+.gl.l{left:14px}.gl.r{right:14px}
+.gl::after{content:"";position:absolute;left:2px;right:2px;bottom:0;height:8px;border-radius:2px 2px 3px 3px;background:linear-gradient(#5a5f6b,#23262e);box-shadow:0 1px 2px rgba(0,0,0,.5)}
+.gl i{position:absolute;left:5px;right:5px;bottom:7px;height:28px;border-radius:15px 15px 3px 3px;overflow:hidden;
+  background:radial-gradient(60% 70% at 50% 60%,#ff5a5a,#d0101a 55%,#7a0008);box-shadow:0 0 14px 3px rgba(255,40,40,.65),inset 0 2px 3px rgba(255,255,255,.35)}
+/* the reflector spinning inside the dome */
+.gl i::before{content:"";position:absolute;inset:-20% -60%;background:linear-gradient(90deg,transparent 30%,rgba(255,255,220,.95) 47%,#fff 50%,rgba(255,255,220,.95) 53%,transparent 70%);
+  animation:glspin .9s linear infinite}
+.gl i::after{content:"";position:absolute;left:22%;top:12%;width:30%;height:22%;border-radius:50%;background:rgba(255,255,255,.55);filter:blur(1px)}
+/* the beam it throws around */
+.gl b{position:absolute;left:50%;top:60%;width:240px;height:240px;margin:-120px 0 0 -120px;z-index:-1;border-radius:50%;opacity:.55;
+  background:conic-gradient(from 0deg,transparent 0 40deg,rgba(255,40,40,.75) 52deg,rgba(255,40,40,0) 66deg,transparent 220deg,rgba(255,40,40,.75) 232deg,rgba(255,40,40,0) 246deg,transparent 360deg);
+  -webkit-mask:radial-gradient(closest-side,#000 15%,transparent);mask:radial-gradient(closest-side,#000 15%,transparent);
+  animation:glbeam 1.8s linear infinite}
+.gl.r b,.gl.r i::before{animation-delay:-.45s}
+@keyframes glspin{0%{transform:translateX(-55%) scaleX(.6)}50%{transform:translateX(0) scaleX(1)}100%{transform:translateX(55%) scaleX(.6)}}
+@keyframes glbeam{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.gl i::before,.gl b{animation:none}.gl b{opacity:.3}}
 /* ---------- Next game page: team cards, primetime, standings, line, playoff chances ---------- */
 .vs{perspective:900px;align-items:stretch}
 .vs .at{align-self:center}
