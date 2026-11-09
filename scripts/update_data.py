@@ -565,8 +565,10 @@ def build_watch(allen, ranks, week26, m):
     ahead = sorted([q for q in qbs if q["v"] > cur["rushYds"]], key=lambda q: q["v"])
     if ahead and ahead[0]["v"] + 1 - cur["rushYds"] <= hi["rushYds"]:
         q = ahead[0]; n = q["v"] + 1 - cur["rushYds"]
+        nxt = [{"who": f"{x['name']} ({x['v']:,})", "tie": x["v"] - cur["rushYds"], "pass": x["v"] + 1 - cur["rushYds"]} for x in ahead[1:4]]
         items.append((n / hi["rushYds"], "NFL career rushing yards by a QB", f"{needs('rushYds', n)} Passes {q['name']} ({q['v']:,}).",
-                      {"k": "rushYds", "need": n, "goal": f"to pass {q['name']} ({q['v']:,})", "done": f"He passed {q['name']} ({q['v']:,})."}))
+                      {"k": "rushYds", "need": n, "goal": f"to pass {q['name']} ({q['v']:,})", "done": f"He passed {q['name']} ({q['v']:,}).",
+                       "next": nxt}))
 
     # His NFL record: games with a passing TD and a rushing TD
     both = A["bothGamesReg"] + sum(1 for g in allen["games"] if g["td"] >= 1 and g["rushTD"] >= 1)
@@ -596,9 +598,14 @@ def build_watch(allen, ranks, week26, m):
         detail = f"{needs(k, tie)} Ties {label} for No. {spot}"
         them = 'them' if tied > 1 else ('him' if who else 'that mark')
         live = {"k": k, "need": tie, "goal": f"to tie {label} for No. {spot}", "done": f"He tied {label} for No. {spot}."}
+        nxt = []  # the next names up the list, for "Next up" once he passes this one
+        for rv in above[1:4]:
+            rw = W["names"].get(title, {}).get(str(rv)); rs = 1 + sum(1 for x in L if x > rv)
+            nxt.append({"who": f"{rw} ({rv:,})" if rw else f"the No. {rs} mark ({rv:,})", "spot": rs, "tie": rv - me, "pass": rv + 1 - me})
+        live["next"] = nxt
         if tie + 1 <= hi[k]:
             detail += f"; {tie + 1:,} passes {them}"
-            live.update({"need2": tie + 1, "goal2": f"to pass {them}", "done2": f"He passed {label} and moved up to No. {spot}."})
+        live.update({"need2": tie + 1, "goal2": f"to pass {them}", "done2": f"He passed {label} and moved up to No. {spot}."})
         items.append((tie / hi[k], f"NFL career {title.split('Career ')[1]}", detail + ".", live))
 
     # Record against this opponent

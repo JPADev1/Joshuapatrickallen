@@ -152,6 +152,21 @@
     if(!UNIT[k] || x.need == null) return null;
     var v = liveVal(k, s), left = x.need - v, left2 = x.need2 != null ? x.need2 - v : null;
     var today_ = ' Today: ' + fmt(v) + ' ' + u(k, v) + '.';
+    // Stepped records: once he passes this name, show who he passed since and who's next up the list.
+    function nextUp(){
+      var nx = x.next || [], passed = [], h = ''; near = false;
+      for(var i=0;i<nx.length;i++){
+        var r = nx[i];
+        if(v >= r.pass){ passed.push(r.who); continue; }
+        var spot = r.spot ? ' for No. ' + r.spot : ''; near = !L.final && r.pass - v <= CLOSE[k];
+        h = ' <span class="nup">Next up: ' + esc(r.who) + '. ' + (v >= r.tie ? 'Tied' + spot + '; ' + fmt(r.pass - v) + ' more to pass.'
+          : fmt(r.tie - v) + ' more ' + u(k, r.tie - v) + ' to tie' + spot + ', ' + fmt(r.pass - v) + ' to pass.') + '</span>';
+        break;
+      }
+      return (passed.length ? ' Also passed ' + esc(passed.join(', ')) + '.' : '') + (L.final ? '' : h);
+    }
+    var near = false, passedIt = left2 != null ? left2 <= 0 : left <= 0;
+    if(passedIt && x.next){ var nu = nextUp(); return {cls:'done', near: near, html: esc(left2 != null ? x.done2 : x.done) + nu + today_}; }
     if(left2 != null && left2 <= 0) return {cls:'done', html: esc(x.done2) + today_};
     if(left <= 0){
       if(left2 == null) return {cls:'done', html: esc(x.done) + today_};
@@ -171,7 +186,7 @@
     var rows = W.items.map(function(x){
       var r = forThis ? liveItem(x, L) : null;
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
-      if(r.cls === 'close') close = true; if(r.cls === 'done') broke = true;
+      if(r.cls === 'close' || r.near) close = true; if(r.cls === 'done') broke = true;
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span></li>';
     }).join('');
