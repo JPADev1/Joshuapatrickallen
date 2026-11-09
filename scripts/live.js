@@ -173,7 +173,7 @@
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
       if(r.cls === 'close') close = true; if(r.cls === 'done') broke = true;
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
-        : r.cls === 'close' ? ' <em class="wtag">So close</em>' : '') + '</b><span>' + r.html + '</span></li>';
+        : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span></li>';
     }).join('');
     var note = forThis ? (L.final ? 'Final numbers are unofficial until the official stats are in.' : 'Counts down live with Allen’s numbers today (unofficial).')
       : 'Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated ' + esc(W.asOf) + '.';
