@@ -27,6 +27,51 @@
   "week": 9,
   "bills": [
    {
+    "name": "Alec Anderson",
+    "pos": "G",
+    "injury": "Ankle",
+    "status": "Inactive",
+    "game": true,
+    "was": "Questionable"
+   },
+   {
+    "name": "Dion Dawkins",
+    "pos": "T",
+    "injury": "Rib",
+    "status": "Inactive",
+    "game": true,
+    "was": "Questionable"
+   },
+   {
+    "name": "Greg Gaines",
+    "pos": "DT",
+    "injury": "Calf",
+    "status": "Inactive",
+    "game": true,
+    "was": "Questionable"
+   },
+   {
+    "name": "Jalon Kilgore",
+    "pos": "S",
+    "injury": "",
+    "status": "Inactive",
+    "game": true
+   },
+   {
+    "name": "Mike Danna",
+    "pos": "OLB",
+    "injury": "",
+    "status": "Inactive",
+    "game": true
+   },
+   {
+    "name": "Skyler Bell",
+    "pos": "WR",
+    "injury": "",
+    "status": "Inactive",
+    "game": true
+   },
+   {
     "name": "Josh Palmer",
     "pos": "WR",
     "injury": "Hamstring",
@@ -34,67 +79,52 @@
     "game": true
    },
    {
-    "name": "Alec Anderson",
-    "pos": "G",
-    "injury": "Ankle",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Dion Dawkins",
-    "pos": "T",
-    "injury": "Rib",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Greg Gaines",
-    "pos": "DT",
-    "injury": "Calf",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Jordan Hancock",
-    "pos": "CB",
-    "injury": "Hamstring",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Tyrell Shavers",
+    "name": "DJ Moore",
     "pos": "WR",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
+    "injury": "Shoulder",
+    "status": "Active",
+    "game": true,
+    "was": "Limited"
    },
    {
     "name": "Ed Oliver",
     "pos": "DE",
     "injury": "Knee",
-    "status": "DNP",
-    "game": false
+    "status": "Active",
+    "game": true,
+    "was": "DNP"
    },
    {
-    "name": "Terrel Bernard",
-    "pos": "LB",
-    "injury": "Not injury related - resting player",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "DJ Moore",
-    "pos": "WR",
-    "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
+    "name": "Jordan Hancock",
+    "pos": "CB",
+    "injury": "Hamstring",
+    "status": "Active",
+    "game": true,
+    "was": "Questionable"
    },
    {
     "name": "Keon Coleman",
     "pos": "WR",
     "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
+    "status": "Active",
+    "game": true,
+    "was": "Limited"
+   },
+   {
+    "name": "Terrel Bernard",
+    "pos": "LB",
+    "injury": "Not injury related - resting player",
+    "status": "Active",
+    "game": true,
+    "was": "DNP"
+   },
+   {
+    "name": "Tyrell Shavers",
+    "pos": "WR",
+    "injury": "Knee",
+    "status": "Active",
+    "game": true,
+    "was": "Questionable"
    }
   ],
   "opp": [
@@ -148,10 +178,16 @@
     "game": false
    }
   ],
-  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed.",
-  "hash": "8499fd767bb4",
-  "changed": "Sun. Nov. 8, 6:05 a.m. ET",
-  "changedIso": "2026-11-08T06:05-05:00"
+  "note": "Official gameday inactives, posted by the teams about 90 minutes before kickoff, replace the injury report. Active = was on the injury report but is playing. ",
+  "inactives": {
+   "bills": {
+    "posted": "6:44 p.m. ET",
+    "source": "buffalobills.com"
+   }
+  },
+  "hash": "c1b497d2a123",
+  "changed": "Mon. Nov. 9, 6:59 p.m. ET",
+  "changedIso": "2026-11-09T18:59-05:00"
  },
  "allenVs": {
   "wins": 1,
@@ -668,7 +704,7 @@
      {
       "line": 50,
       "hit": 7,
-      "stars": 5.0
+      "stars": 4.5
      }
     ],
     "extra": [
@@ -685,7 +721,7 @@
      "line": 80,
      "hit": 5
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 50+ in all 7 games.",
      "Averages 101.0 rushing yards a game (median 95).",
@@ -693,7 +729,7 @@
      "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
     ],
     "cons": [
-     "The next line up (80+) hit only 5 of 7, so the margin isn't huge."
+     "Two or more starting linemen out: Alec Anderson (G), Dion Dawkins (T)."
     ],
     "status": ""
    },
@@ -748,7 +784,7 @@
      {
       "line": 4,
       "hit": 7,
-      "stars": 5.0
+      "stars": 4.5
      }
     ],
     "extra": [],
@@ -756,7 +792,7 @@
      "line": 6,
      "hit": 5
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 4+ in all 7 games.",
      "Averages 7.9 rushing attempts a game (median 7).",
@@ -764,87 +800,8 @@
      "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
     ],
     "cons": [
+     "Two or more starting linemen out: Alec Anderson (G), Dion Dawkins (T).",
      "Swingy: anywhere from 5 to 14 this season."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "James Cook",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     }
-    ],
-    "vals": [
-     13,
-     21,
-     24,
-     12,
-     25,
-     22,
-     21
-    ],
-    "ladder": [
-     {
-      "line": 8,
-      "hit": 7,
-      "stars": 5.0
-     },
-     {
-      "line": 10,
-      "hit": 7,
-      "stars": 5.0
-     },
-     {
-      "line": 12,
-      "hit": 7,
-      "stars": 4.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 15,
-     "hit": 5
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 12+ in all 7 games.",
-     "Averages 19.7 rushing attempts a game (median 21).",
-     "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
-    ],
-    "cons": [
-     "Closest call: 12 vs NE in Week 4."
     ],
     "status": ""
    },
@@ -925,11 +882,11 @@
    {
     "team": "BUF",
     "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Completions",
-    "key": "cmp",
+    "player": "James Cook",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
     "games": [
      {
       "wk": 1,
@@ -961,39 +918,45 @@
      }
     ],
     "vals": [
-     20,
-     20,
-     16,
-     23,
+     13,
+     21,
+     24,
      12,
-     23,
+     25,
+     22,
      21
     ],
     "ladder": [
+     {
+      "line": 8,
+      "hit": 7,
+      "stars": 4.5
+     },
+     {
+      "line": 10,
+      "hit": 7,
+      "stars": 4.5
+     },
      {
       "line": 12,
       "hit": 7,
       "stars": 4.0
      }
     ],
-    "extra": [
-     {
-      "line": 15,
-      "hit": 6
-     }
-    ],
+    "extra": [],
     "next": {
-     "line": 18,
+     "line": 15,
      "hit": 5
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 12+ in all 7 games.",
-     "Averages 19.3 completions a game (median 20)."
+     "Averages 19.7 rushing attempts a game (median 21).",
+     "The Vikings rank 17th of 32 against the run, allowing 117 rushing yards a game."
     ],
     "cons": [
-     "Closest call: 12 vs LA in Week 5.",
-     "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game."
+     "Two or more starting linemen out: Alec Anderson (G), Dion Dawkins (T).",
+     "Closest call: 12 vs NE in Week 4."
     ],
     "status": ""
    },
@@ -1078,8 +1041,8 @@
     "player": "Josh Allen",
     "pos": "QB",
     "cat": "Passing",
-    "market": "Passing yards",
-    "key": "passYds",
+    "market": "Completions",
+    "key": "cmp",
     "games": [
      {
       "wk": 1,
@@ -1111,43 +1074,39 @@
      }
     ],
     "vals": [
-     334,
-     248,
-     204,
-     253,
-     210,
-     255,
-     289
+     20,
+     20,
+     16,
+     23,
+     12,
+     23,
+     21
     ],
     "ladder": [
      {
-      "line": 150,
-      "hit": 7,
-      "stars": 4.5
-     },
-     {
-      "line": 175,
-      "hit": 7,
-      "stars": 4.0
-     },
-     {
-      "line": 200,
+      "line": 12,
       "hit": 7,
       "stars": 3.5
      }
     ],
-    "extra": [],
+    "extra": [
+     {
+      "line": 15,
+      "hit": 6
+     }
+    ],
     "next": {
-     "line": 225,
+     "line": 18,
      "hit": 5
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
-     "Cleared 200+ in all 7 games.",
-     "Averages 256.1 passing yards a game (median 253)."
+     "Cleared 12+ in all 7 games.",
+     "Averages 19.3 completions a game (median 20)."
     ],
     "cons": [
-     "Closest call: 204 vs LAC in Week 3.",
+     "Two or more starting linemen out: Alec Anderson (G), Dion Dawkins (T).",
+     "Closest call: 12 vs LA in Week 5.",
      "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game."
     ],
     "status": ""
@@ -1210,6 +1169,87 @@
      "Closest call: 2 vs NE in Week 4.",
      "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game.",
      "Small sample: 5 games."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Passing yards",
+    "key": "passYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
+     }
+    ],
+    "vals": [
+     334,
+     248,
+     204,
+     253,
+     210,
+     255,
+     289
+    ],
+    "ladder": [
+     {
+      "line": 150,
+      "hit": 7,
+      "stars": 4.0
+     },
+     {
+      "line": 175,
+      "hit": 7,
+      "stars": 3.5
+     },
+     {
+      "line": 200,
+      "hit": 7,
+      "stars": 3.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 225,
+     "hit": 5
+    },
+    "gameday": -0.5,
+    "pros": [
+     "Cleared 200+ in all 7 games.",
+     "Averages 256.1 passing yards a game (median 253)."
+    ],
+    "cons": [
+     "Two or more starting linemen out: Alec Anderson (G), Dion Dawkins (T).",
+     "Closest call: 204 vs LAC in Week 3.",
+     "The Vikings rank 2nd of 32 against the pass, allowing 180 passing yards a game."
     ],
     "status": ""
    }
