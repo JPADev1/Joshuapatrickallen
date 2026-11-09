@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "gameId": "2026_09_BUF_MIN",
  "week": 9,
  "label": "Week 9",
@@ -298,7 +298,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 8, 2026",
+  "asOf": "Nov. 9, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -311,7 +311,7 @@
     },
     "opp": {
      "v": 20,
-     "rank": 27
+     "rank": 26
     }
    },
    {
@@ -320,7 +320,7 @@
     "dec": 0,
     "bills": {
      "v": 26,
-     "rank": 25
+     "rank": 24
     },
     "opp": {
      "v": 13,
@@ -333,7 +333,7 @@
     "dec": 0,
     "bills": {
      "v": 256,
-     "rank": 9
+     "rank": 10
     },
     "opp": {
      "v": 185,
@@ -363,7 +363,7 @@
     },
     "opp": {
      "v": 114,
-     "rank": 16
+     "rank": 17
     }
    },
    {
@@ -385,7 +385,7 @@
     "dec": 0,
     "bills": {
      "v": 13,
-     "rank": 11
+     "rank": 10
     },
     "opp": {
      "v": 21,
@@ -398,11 +398,11 @@
     "dec": 0,
     "bills": {
      "v": 15,
-     "rank": 18
+     "rank": 16
     },
     "opp": {
      "v": 25,
-     "rank": 1
+     "rank": 2
     }
    },
    {
@@ -482,7 +482,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 8, 2026",
+  "asOf": "Nov. 9, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -518,7 +518,7 @@
   ]
  },
  "props": {
-  "asOf": "Nov. 8, 2026",
+  "asOf": "Nov. 9, 2026",
   "items": [
    {
     "team": "BUF",
@@ -1154,12 +1154,12 @@
     {
      "abbr": "NE",
      "nick": "Patriots",
-     "rec": "5-3",
-     "gb": "1.5",
+     "rec": "5-4",
+     "gb": "2",
      "div": "3-0",
-     "strk": "W1",
-     "pf": 184,
-     "pa": 162
+     "strk": "L1",
+     "pf": 211,
+     "pa": 207
     },
     {
      "abbr": "NYJ",
@@ -1219,16 +1219,16 @@
     {
      "abbr": "GB",
      "nick": "Packers",
-     "rec": "5-3",
-     "gb": "1.5",
+     "rec": "6-3",
+     "gb": "1",
      "div": "1-2",
-     "strk": "W1",
-     "pf": 171,
-     "pa": 164
+     "strk": "W2",
+     "pf": 216,
+     "pa": 191
     }
    ]
   },
-  "billsPlace": "1st in the AFC East, 1.5 games ahead",
+  "billsPlace": "1st in the AFC East, 2 games ahead",
   "oppPlace": "1st in the NFC North, 0.5 games ahead"
  },
  "lines": {
@@ -1288,28 +1288,28 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 97.1,
-    "win": 98.7,
-    "loss": 94.7
+    "now": 97.8,
+    "win": 98.9,
+    "loss": 96.0
    },
    "division": {
-    "now": 73.5,
-    "win": 79.9,
-    "loss": 63.9
+    "now": 85.4,
+    "win": 90.1,
+    "loss": 78.1
    },
    "seed1": {
-    "now": 23.9,
-    "win": 29.9,
-    "loss": 14.7
+    "now": 24.2,
+    "win": 30.2,
+    "loss": 15.1
    },
    "conf": {
-    "now": 15.9,
-    "win": 17.3,
-    "loss": 13.7
+    "now": 16.0,
+    "win": 17.0,
+    "loss": 14.3
    },
    "sb": {
-    "now": 8.2,
-    "win": 8.8,
+    "now": 8.1,
+    "win": 8.6,
     "loss": 7.2
    }
   },
@@ -1318,8 +1318,8 @@
   "asOf": "through the games of Nov. 8, 2026"
  },
  "significance": {
-  "win": "A win would make the Bills 7-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 2 games over the Patriots. It would also hand the 6-1 Vikings just their second loss.",
-  "loss": "A loss would drop them to 6-2 and out of the No. 1 seed (to No. 2). They would still lead the AFC East by 1 game.",
+  "win": "A win would make the Bills 7-1, tied for the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 2.5 games over the Patriots. It would also hand the 6-1 Vikings just their second loss.",
+  "loss": "A loss would drop them to 6-2 and out of the No. 1 seed (to No. 2). They would still lead the AFC East by 1.5 games.",
   "note": "Based on the standings right now; other games this week can still change it.",
   "now": {
    "rec": "6-1",
