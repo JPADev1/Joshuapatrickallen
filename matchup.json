@@ -1593,7 +1593,7 @@
  },
  "lines": {
   "gameId": "2026_10_BUF_NYJ",
-  "book": "Draft Kings",
+  "book": "DraftKings",
   "cur": {
    "spread": -8.5,
    "total": 50.5,
@@ -1637,29 +1637,29 @@
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 99.5,
+    "now": 99.4,
     "win": 99.7,
-    "loss": 98.5
+    "loss": 98.4
    },
    "division": {
-    "now": 93.0,
+    "now": 93.1,
     "win": 94.6,
-    "loss": 86.8
+    "loss": 86.9
    },
    "seed1": {
-    "now": 38.5,
-    "win": 42.6,
+    "now": 38.6,
+    "win": 42.8,
     "loss": 21.8
    },
    "conf": {
-    "now": 23.2,
-    "win": 24.3,
-    "loss": 18.7
+    "now": 23.4,
+    "win": 24.6,
+    "loss": 18.8
    },
    "sb": {
     "now": 13.3,
     "win": 14.0,
-    "loss": 10.6
+    "loss": 10.5
    }
   },
   "winProb": 80.4,
