@@ -1,1 +1,63 @@
-{"gameId": "2026_09_BUF_MIN", "bills": {"posted": "6:44 p.m. ET", "source": "buffalobills.com", "players": [{"name": "Skyler Bell", "pos": "WR"}, {"name": "Jalon Kilgore", "pos": "S"}, {"name": "Mike Danna", "pos": "OLB"}, {"name": "Alec Anderson", "pos": "G"}, {"name": "Dion Dawkins", "pos": "T"}, {"name": "Greg Gaines", "pos": "DT"}]}}
+{
+ "gameId": "2026_09_BUF_MIN",
+ "bills": {
+  "posted": "6:44 p.m. ET",
+  "source": "buffalobills.com",
+  "players": [
+   {
+    "name": "Skyler Bell",
+    "pos": "WR"
+   },
+   {
+    "name": "Jalon Kilgore",
+    "pos": "S"
+   },
+   {
+    "name": "Mike Danna",
+    "pos": "OLB"
+   },
+   {
+    "name": "Alec Anderson",
+    "pos": "G"
+   },
+   {
+    "name": "Dion Dawkins",
+    "pos": "T"
+   },
+   {
+    "name": "Greg Gaines",
+    "pos": "DT"
+   }
+  ]
+ },
+ "opp": {
+  "posted": "6:45 p.m. ET",
+  "source": "vikings.com",
+  "players": [
+   {
+    "name": "Kyler Murray",
+    "pos": "QB"
+   },
+   {
+    "name": "Jakobe Thomas",
+    "pos": "S"
+   },
+   {
+    "name": "Jauan Jennings",
+    "pos": "WR"
+   },
+   {
+    "name": "Chuck Demmings",
+    "pos": "CB"
+   },
+   {
+    "name": "Demond Claiborne",
+    "pos": "RB"
+   },
+   {
+    "name": "Caleb Banks",
+    "pos": "DL"
+   }
+  ]
+ }
+}
