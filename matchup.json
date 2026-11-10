@@ -1644,28 +1644,28 @@
   "odds": {
    "playoffs": {
     "now": 99.5,
-    "win": 99.8,
+    "win": 99.7,
     "loss": 98.5
    },
    "division": {
-    "now": 93.6,
+    "now": 93.7,
     "win": 95.1,
-    "loss": 88.0
+    "loss": 88.5
    },
    "seed1": {
-    "now": 40.4,
-    "win": 45.3,
-    "loss": 22.6
+    "now": 40.5,
+    "win": 45.1,
+    "loss": 23.1
    },
    "conf": {
-    "now": 23.6,
+    "now": 23.5,
     "win": 24.5,
-    "loss": 20.2
+    "loss": 19.8
    },
    "sb": {
     "now": 13.2,
-    "win": 13.8,
-    "loss": 11.2
+    "win": 13.6,
+    "loss": 11.8
    }
   },
   "winProb": 79.6,
