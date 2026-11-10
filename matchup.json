@@ -129,53 +129,81 @@
   ],
   "opp": [
    {
+    "name": "Caleb Banks",
+    "pos": "DL",
+    "injury": "",
+    "status": "Inactive",
+    "game": true
+   },
+   {
+    "name": "Chuck Demmings",
+    "pos": "CB",
+    "injury": "",
+    "status": "Inactive",
+    "game": true
+   },
+   {
     "name": "Demond Claiborne",
     "pos": "RB",
     "injury": "Knee",
-    "status": "Out",
+    "status": "Inactive",
+    "game": true,
+    "was": "Out"
+   },
+   {
+    "name": "Jakobe Thomas",
+    "pos": "S",
+    "injury": "",
+    "status": "Inactive",
     "game": true
    },
    {
     "name": "Jauan Jennings",
     "pos": "WR",
     "injury": "Calf",
-    "status": "Out",
-    "game": true
+    "status": "Inactive",
+    "game": true,
+    "was": "Out"
    },
    {
     "name": "Kyler Murray",
     "pos": "QB",
     "injury": "Hamstring",
-    "status": "Out",
-    "game": true
-   },
-   {
-    "name": "Jay Ward",
-    "pos": "S",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Theo Jackson",
-    "pos": "S",
-    "injury": "Quadricep",
-    "status": "Questionable",
-    "game": true
+    "status": "Inactive",
+    "game": true,
+    "was": "Out"
    },
    {
     "name": "Christian Darrisaw",
     "pos": "T",
     "injury": "Shoulder",
-    "status": "DNP",
-    "game": false
+    "status": "Active",
+    "game": true,
+    "was": "DNP"
    },
    {
     "name": "Harrison Smith",
     "pos": "S",
     "injury": "Not injury related - resting player",
-    "status": "Limited",
-    "game": false
+    "status": "Active",
+    "game": true,
+    "was": "Limited"
+   },
+   {
+    "name": "Jay Ward",
+    "pos": "S",
+    "injury": "Knee",
+    "status": "Active",
+    "game": true,
+    "was": "Questionable"
+   },
+   {
+    "name": "Theo Jackson",
+    "pos": "S",
+    "injury": "Quadricep",
+    "status": "Active",
+    "game": true,
+    "was": "Questionable"
    }
   ],
   "note": "Official gameday inactives, posted by the teams about 90 minutes before kickoff, replace the injury report. Active = was on the injury report but is playing. ",
@@ -183,11 +211,15 @@
    "bills": {
     "posted": "6:44 p.m. ET",
     "source": "buffalobills.com"
+   },
+   "opp": {
+    "posted": "6:45 p.m. ET",
+    "source": "vikings.com"
    }
   },
-  "hash": "c1b497d2a123",
-  "changed": "Mon. Nov. 9, 6:59 p.m. ET",
-  "changedIso": "2026-11-09T18:59-05:00"
+  "hash": "9ac4824b0ba5",
+  "changed": "Mon. Nov. 9, 7:02 p.m. ET",
+  "changedIso": "2026-11-09T19:02-05:00"
  },
  "allenVs": {
   "wins": 1,
@@ -1370,7 +1402,7 @@
  },
  "lines": {
   "gameId": "2026_09_BUF_MIN",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
    "spread": -3.5,
    "total": 45.5,
