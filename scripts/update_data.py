@@ -653,8 +653,71 @@ def build_watch(allen, ranks, week26, m):
                        "done": f"Win! He's {v['wins'] + 1}-{v['losses']} as a starter against the {nick} in the regular season."}))
 
     items.sort(key=lambda x: x[0])
-    return {"asOf": short_date(date.today()), "highs": hi, "gameday": m.get("gameday"),
+    return {"asOf": short_date(date.today()), "highs": hi, "gameday": m.get("gameday"), "gameId": m.get("gameId"),
+            "opp": nick, "home": m.get("home"),
             "items": [dict({"title": t, "detail": d}, **lv) for _, t, d, lv in items]}
+
+
+def pending_game(sched, week26, max_days=4):
+    """The Bills' last finished game, while nflverse's player stats don't have Allen's line from it yet
+    (the schedule gets the final score within the hour; player stats usually come the next day).
+    None once the stats are in, or if they still aren't after max_days (so a missed game can't freeze the watch)."""
+    done = sorted([g for g in sched if g["season"] == str(SEASON) and BILLS in (g["home_team"], g["away_team"])
+                   and g["home_score"] not in ("", "NA")], key=lambda g: (g["gameday"], g["gametime"]))
+    if not done:
+        return None
+    last = done[-1]
+    if any(r["player_id"] == ALLEN and r.get("game_id") == last["game_id"] for r in week26):
+        return None
+    if (date.today() - date.fromisoformat(last["gameday"])).days > max_days:
+        return None
+    return last
+
+
+def unplayed(sched, game):
+    """The schedule as it stood before this game was played (its score blanked)."""
+    return [dict(g, home_score="", away_score="") if g["game_id"] == game["game_id"] else g for g in sched]
+
+
+def espn_final(game):
+    """Allen's unofficial final line from ESPN's free box score, so the held records watch can show how the game
+    ended even after the live Worker has moved on. Same shape as scripts/live.js's live line. None if unavailable."""
+    eid = game.get("espn", "")
+    if not eid:
+        return None
+    req = urllib.request.Request("https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=" + eid,
+                                 headers={"User-Agent": "joshuapatrickallen.com stats job"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        j = json.loads(r.read().decode("utf-8"))
+    s = {k: 0 for k in ("cmp", "att", "yds", "td", "int", "sk", "rushAtt", "rushYds", "rushTD", "recTD", "fum", "fumLost")}
+    found = False
+    for team in (j.get("boxscore") or {}).get("players", []):
+        for grp in team.get("statistics", []):
+            keys = grp.get("keys") or []
+            for a in grp.get("athletes", []):
+                if (a.get("athlete") or {}).get("displayName") != "Josh Allen":
+                    continue
+                v = dict(zip(keys, a.get("stats") or []))
+                n = lambda x: int(float(str(x).split("-")[0].split("/")[0])) if str(x).strip() not in ("", "--") else 0
+                name = grp.get("name")
+                if name == "passing":
+                    ca = str(v.get("completions/passingAttempts", "0/0")).split("/")
+                    s.update(cmp=n(ca[0]), att=n(ca[1] if len(ca) > 1 else 0), yds=n(v.get("passingYards")),
+                             td=n(v.get("passingTouchdowns")), int=n(v.get("interceptions")), sk=n(v.get("sacks-sackYardsLost")))
+                    found = True
+                elif name == "rushing":
+                    s.update(rushAtt=n(v.get("rushingAttempts")), rushYds=n(v.get("rushingYards")), rushTD=n(v.get("rushingTouchdowns")))
+                    found = True
+                elif name == "receiving":
+                    s["recTD"] = n(v.get("receivingTouchdowns"))
+                elif name == "fumbles":
+                    s.update(fum=n(v.get("fumbles")), fumLost=n(v.get("fumblesLost")))
+    if not found:
+        return None
+    home = game["home_team"] == BILLS
+    return {"date": game["gameday"], "final": True, "opp": game["away_team"] if home else game["home_team"],
+            "bills": int(game["home_score"] if home else game["away_score"]), "them": int(game["away_score"] if home else game["home_score"]),
+            "status": "Final", "s": s, "source": "ESPN box score (unofficial)"}
 
 
 # ---------- 5. 90%+ props (Next game page) ----------
@@ -1183,7 +1246,23 @@ def main():
         except Exception as e:  # never let the inactives block the rest of the page
             print("inactives skipped:", e)
         try:
-            m["watch"] = build_watch(allen, ranks, week26, m)
+            # Records watch. Right after a game the schedule moves on to the next opponent within the hour, but Allen's
+            # official stats lag (usually until the next day). Until they're in, keep the watch on the game just played,
+            # built exactly as it stood before kickoff, so the page keeps showing how that game ended (live.js applies
+            # the final numbers) instead of a next-game watch built on totals that are missing a game.
+            held = pending_game(sched, week26)
+            if held:
+                prev = build_matchup(unplayed(sched, held), team_rows, week26, inj, T, overrides)
+                w = build_watch(allen, ranks, week26, prev)
+                w["held"] = True
+                try:
+                    w["final"] = espn_final(held)
+                except Exception as e:
+                    print("ESPN final line unavailable:", e)
+                print(f"records watch: holding on {held['game_id']} until Allen's official stats from it are in")
+            else:
+                w = build_watch(allen, ranks, week26, m)
+            m["watch"] = w
         except Exception as e:  # never let the watch list block the rest of the page
             print("records watch skipped:", e)
         try:

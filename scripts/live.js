@@ -182,7 +182,13 @@
   function watchHtml(L, dark){
     var W = match && match.watch; // only on the two pages with a gameday spot (stats, Next game)
     if(!document.getElementById('livebar-gameday') || !W || !W.items || !W.items.length) return {html:'', close:false, broke:false};
-    var forThis = L && gameDate(match) === L.date, close = false, broke = false;
+    // The watch belongs to one game (W.gameday). Right after a game it stays on that game until Allen's official
+    // stats are in (update_data.py holds it), even though the page has moved on to the next opponent. Its final
+    // numbers come from the live Worker, or, once the Worker has moved on, from the box score saved with the watch.
+    var wDate = W.gameday || gameDate(match);
+    if(!(L && L.date === wDate)) L = (W.final && W.final.date === wDate && !official[wDate]) ? W.final : null;
+    var forThis = !!L, close = false, broke = false;
+    var oppNick = W.opp || (match.opp && match.opp.nick), oppHome = W.opp ? W.home : match.home;
     var rows = W.items.map(function(x){
       var r = forThis ? liveItem(x, L) : null;
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
@@ -190,10 +196,10 @@
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span></li>';
     }).join('');
-    var note = forThis ? (L.final ? 'Final numbers are unofficial until the official stats are in.' : 'Counts down live with Allen’s numbers today (unofficial).')
+    var note = forThis ? (L.final ? 'Final numbers are unofficial. The records watch for the next game appears once the official stats are in, usually the day after the game.' : 'Counts down live with Allen’s numbers today (unofficial).')
       : 'Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated ' + esc(W.asOf) + '.';
     return {close: close && L && !L.final, broke: broke,
-      html: '<div class="lw"><div class="lwh">Records watch' + (match.opp && match.opp.nick ? ' <span>' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp.nick) + '</span>' : '') + '</div>'
+      html: '<div class="lw"><div class="lwh">Records watch' + (oppNick ? ' <span>' + (oppHome ? 'vs' : 'at') + ' the ' + esc(oppNick) + '</span>' : '') + '</div>'
         + '<ol class="wlist">' + rows + '</ol><p class="lwn">' + note + '</p></div>'};
   }
   // Two spinning goal lights on top of the card when a record is within reach.
