@@ -1,5 +1,5 @@
 """Build data/td-mountain.json: season-by-season touchdowns for everyone who could appear on the
-Touchdown Mountain page (top 30 in any view, through any number of seasons), plus Josh Allen.
+Touchdown Mountain page (top 50 in any view, through any number of seasons), plus Josh Allen.
 
 Sources
   1999 to last season: nflverse season stats (every player)                      -> complete
@@ -17,7 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.argv = [sys.argv[0], os.path.join(os.path.dirname(HERE), "data")]
 import update_data as U  # noqa: E402
 
-TOP = 30          # keep anyone in the top 30 of any view
+TOP = 50          # keep anyone in the top 50 of any view (Allen sits outside the top 30 in some views)
 MAX_N = 30        # through 1..30 seasons, plus career
 VIEWS_POS = ("ALL", "QB", "RB")
 KINDS = ("tot", "pass", "rush", "rec")
@@ -150,6 +150,17 @@ def main():
                                          "games": {y: games.get(y) for y in seasons},
                                          "miss": h.get("missing", []), "car": h.get("career", {})}
             hist_only += 1
+
+    # Hand corrections so career totals match the official leader lists the rest of the site uses
+    # (nfl-ranks.json, Pro-Football-Reference):
+    #  - Y. A. Tittle: his Wikipedia season table leaves out his 1948-49 AAFC seasons, so passing and rushing
+    #    were flagged without a career total and he dropped off the mountain. PFR counts the AAFC: 242 pass, 39 rush.
+    #  - Donovan McNabb: nflverse has 17 passing TDs in 2006; the official total is 18 (career 234).
+    for p in people.values():
+        if p["name"] == "Y. A. Tittle":
+            p.setdefault("car", {}).update({"pass": 242, "rush": 39})
+        if p["name"] == "Donovan McNabb" and 2006 in p["seasons"] and p["seasons"][2006][0] == 17:
+            p["seasons"][2006][0] = 18
 
     # Players who started before 1999 but have no history: their early seasons are unknown, so they
     # can't be placed fairly. Leave them out, and report the biggest ones so nobody notable is lost.

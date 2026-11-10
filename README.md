@@ -18,7 +18,7 @@ the record since 1999.
 ## Touchdown Mountain (`touchdown-mountain.html`)
 Opened from the "Career total touchdowns" tile. Allen vs the NFL's top 20 in total, passing, rushing or receiving
 touchdowns, among all players, quarterbacks or running backs, career or through his first N seasons.
-- `data/td-mountain.json`: everyone who reaches a top 30 in any view, season by season. Built by
+- `data/td-mountain.json`: everyone who reaches a top 50 in any view, season by season. Built by
   `python scripts/build_mountain.py` from nflverse (1999 on) and `scripts/history_pre1999.json` (before 1999).
 - `scripts/history_pre1999.json` was built once from Wikipedia player pages by the job on the `history-build` branch;
   every player's seasons were checked against the career totals on his page.
