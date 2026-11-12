@@ -1760,27 +1760,27 @@
   "odds": {
    "playoffs": {
     "now": 99.5,
-    "win": 99.8,
-    "loss": 98.5
+    "win": 99.7,
+    "loss": 98.7
    },
    "division": {
-    "now": 93.9,
-    "win": 95.4,
-    "loss": 88.8
+    "now": 94.0,
+    "win": 95.5,
+    "loss": 89.0
    },
    "seed1": {
-    "now": 40.8,
-    "win": 45.4,
-    "loss": 24.2
+    "now": 39.9,
+    "win": 44.9,
+    "loss": 22.7
    },
    "conf": {
-    "now": 23.2,
-    "win": 24.1,
-    "loss": 20.2
+    "now": 23.4,
+    "win": 24.6,
+    "loss": 19.5
    },
    "sb": {
-    "now": 12.7,
-    "win": 13.1,
+    "now": 13.1,
+    "win": 13.6,
     "loss": 11.4
    }
   },
@@ -1798,6 +1798,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 45% of the time with a win and 24% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 45% of the time with a win and 23% with a loss."
  }
 }
