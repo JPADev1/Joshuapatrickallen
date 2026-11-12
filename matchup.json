@@ -1593,7 +1593,7 @@
  },
  "lines": {
   "gameId": "2026_10_BUF_NYJ",
-  "book": "Draft Kings",
+  "book": "DraftKings",
   "cur": {
    "spread": -8.5,
    "total": 50.5,
@@ -1678,24 +1678,24 @@
     "loss": 98.5
    },
    "division": {
-    "now": 93.8,
-    "win": 95.2,
-    "loss": 88.7
+    "now": 93.9,
+    "win": 95.4,
+    "loss": 88.8
    },
    "seed1": {
-    "now": 40.6,
-    "win": 45.3,
-    "loss": 23.5
+    "now": 40.8,
+    "win": 45.4,
+    "loss": 24.2
    },
    "conf": {
-    "now": 23.4,
-    "win": 24.4,
-    "loss": 19.8
+    "now": 23.2,
+    "win": 24.1,
+    "loss": 20.2
    },
    "sb": {
-    "now": 12.9,
-    "win": 13.4,
-    "loss": 11.2
+    "now": 12.7,
+    "win": 13.1,
+    "loss": 11.4
    }
   },
   "winProb": 78.2,
