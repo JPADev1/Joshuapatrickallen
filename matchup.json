@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "gameId": "2026_10_BUF_NYJ",
  "week": 10,
  "label": "Week 10",
@@ -440,7 +440,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 11, 2026",
+  "asOf": "Nov. 12, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -636,7 +636,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 11, 2026",
+  "asOf": "Nov. 12, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -762,7 +762,7 @@
   ]
  },
  "props": {
-  "asOf": "Nov. 11, 2026",
+  "asOf": "Nov. 12, 2026",
   "items": [
    {
     "team": "BUF",
@@ -1474,15 +1474,15 @@
   ],
   "weather": {
    "indoor": false,
-   "temp": 49,
-   "wind": 13,
+   "temp": 47,
+   "wind": 14,
    "gust": 16,
    "rain": 0,
    "snow": 0,
    "pop": 0
   },
   "conditions": [
-   "Game-day forecast at kickoff: 49°F, wind 13 mph (gusts 16), 0% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast at kickoff: 47°F, wind 14 mph (gusts 16), 0% chance of precipitation. Nothing in it changes the ratings.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1593,7 +1593,7 @@
  },
  "lines": {
   "gameId": "2026_10_BUF_NYJ",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
    "spread": -8.5,
    "total": 50.5,
@@ -1675,27 +1675,27 @@
    "playoffs": {
     "now": 99.5,
     "win": 99.8,
-    "loss": 98.6
+    "loss": 98.5
    },
    "division": {
-    "now": 93.2,
-    "win": 95.0,
-    "loss": 86.4
+    "now": 93.8,
+    "win": 95.2,
+    "loss": 88.7
    },
    "seed1": {
-    "now": 40.2,
-    "win": 44.9,
-    "loss": 23.3
+    "now": 40.6,
+    "win": 45.3,
+    "loss": 23.5
    },
    "conf": {
-    "now": 23.7,
-    "win": 24.7,
-    "loss": 19.9
+    "now": 23.4,
+    "win": 24.4,
+    "loss": 19.8
    },
    "sb": {
-    "now": 13.0,
-    "win": 13.6,
-    "loss": 10.9
+    "now": 12.9,
+    "win": 13.4,
+    "loss": 11.2
    }
   },
   "winProb": 78.2,
@@ -1712,6 +1712,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 45% of the time with a win and 23% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 45% of the time with a win and 24% with a loss."
  }
 }
