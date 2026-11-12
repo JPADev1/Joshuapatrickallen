@@ -54,6 +54,7 @@
       c.fill(); c.fillStyle = '#fff'; c.textAlign = 'center'; c.textBaseline = 'middle';
       c.fillText(d.chip, x1 - cw / 2, 67); c.textAlign = 'left'; c.textBaseline = 'top';
     }
+    if(d.items && d.items.length){ list(c, d); return cv; }
     // Text block, stacked up from the bottom
     var cx = W / 2, wide = W - 120;
     var kick = d.kicker ? fit(c, d.kicker, 1, 500, 44, 30, wide, 1) : null;
@@ -75,6 +76,35 @@
     if(d.foot){ c.font = F(0, 500, 24); c.fillStyle = MUTE; c.fillText(d.foot, cx, 1300); }
     return cv;
   }
+  // List card (records watch): heading, then up to 5 items (gold title + one or two lines of detail), left-aligned.
+  function list(c, d){
+    var x = 64, wide = W - 128, items = d.items.slice(0, 5);
+    var g = c.createLinearGradient(0, 0, 0, H); // extra shade so the list reads over the jersey
+    g.addColorStop(.32, 'rgba(4,14,48,0)'); g.addColorStop(.48, 'rgba(4,14,48,.78)'); g.addColorStop(1, 'rgba(4,14,48,.96)');
+    c.fillStyle = g; c.fillRect(0, 0, W, H);
+    var parts = items.map(function(it){
+      return {t: fit(c, it.t, 0, 700, 36, 26, wide - 40, 1), d: it.d ? fit(c, it.d, 1, 500, 26, 20, wide - 40, 2) : null, done: it.done};
+    });
+    var kick = d.kicker ? fit(c, d.kicker, 1, 500, 36, 26, wide, 1) : null, title = fit(c, d.title || 'Records watch', 0, 700, 60, 40, wide, 1);
+    var h = (kick ? kick.lh + 4 : 0) + title.lh + 34 + parts.reduce(function(a, p){ return a + p.t.lh + (p.d ? p.d.lines.length * p.d.lh : 0) + 18; }, 0);
+    var y = Math.max(560, 1266 - h);
+    c.textAlign = 'left';
+    if(kick){ shadowed(c, function(){ c.font = F(1, 500, kick.size); c.fillStyle = SOFT; c.fillText(kick.lines[0], x, y); }); y += kick.lh + 4; }
+    shadowed(c, function(){ c.font = F(0, 700, title.size); c.fillStyle = '#fff'; c.fillText(title.lines[0], x, y); });
+    y += title.lh + 8;
+    c.strokeStyle = GOLD; c.lineWidth = 2; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 300, y); c.stroke();
+    y += 26;
+    parts.forEach(function(p, i){
+      shadowed(c, function(){
+        c.font = F(0, 700, 30); c.fillStyle = GOLD; c.fillText(p.done ? '\u2713' : String(i + 1), x, y + (p.t.size - 30) / 2);
+        c.font = F(0, 700, p.t.size); c.fillStyle = p.done ? GOLD : '#fff'; c.fillText(p.t.lines[0], x + 40, y);
+      });
+      y += p.t.lh;
+      if(p.d){ c.font = F(1, 500, p.d.size); c.fillStyle = SOFT; p.d.lines.forEach(function(l){ c.fillText(l, x + 40, y); y += p.d.lh; }); }
+      y += 18;
+    });
+    if(d.foot){ c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE; c.fillText(d.foot, W / 2, 1300); }
+  }
   // ---------- Full-screen viewer ----------
   var box = null, cur = null;
   function close(){ if(box){ box.hidden = true; document.documentElement.classList.remove('shr-open'); if(cur && cur.url) URL.revokeObjectURL(cur.url); cur = null; } }
@@ -91,7 +121,7 @@
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !box.hidden) close(); });
     box.querySelector('.shr-go').onclick = function(){
       if(!cur) return;
-      var text = cur.d.title + (cur.d.big ? ': ' + cur.d.big : '') + '. More Josh Allen records at ' + cur.link;
+      var text = (cur.d.share || cur.d.title + (cur.d.big ? ': ' + cur.d.big : '')) + '. More Josh Allen records at ' + cur.link;
       var file = new File([cur.blob], cur.name, {type:'image/png'});
       var data = {files:[file], title:'Josh Allen: ' + cur.d.title, text:text};
       if(navigator.canShare && navigator.canShare(data)) navigator.share(data).catch(function(){});

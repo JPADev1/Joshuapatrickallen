@@ -189,8 +189,11 @@
     if(!(L && L.date === wDate)) L = (W.final && W.final.date === wDate && !official[wDate]) ? W.final : null;
     var forThis = !!L, close = false, broke = false;
     var oppNick = W.opp || (match.opp && match.opp.nick), oppHome = W.opp ? W.home : match.home;
+    var shareItems = [];
+    function plain(h){ return String(h).replace(/<[^>]+>/g, '').replace(/&#10003;/g, '\u2713').replace(/&ndash;/g, '\u2013').replace(/&middot;/g, '\u00b7').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(); }
     var rows = W.items.map(function(x){
       var r = forThis ? liveItem(x, L) : null;
+      shareItems.push({t: x.title, d: plain(r ? r.html : x.detail).replace(/ \(career high in a game: \d+\)/g, '').replace(/ Today: .*$/, function(m){ return r && r.cls !== 'done' ? '' : m; }), done: !!(r && r.cls === 'done')});
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
       if(r.cls === 'close' || r.near) close = true; if(r.cls === 'done') broke = true;
       var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : ''),
@@ -201,8 +204,15 @@
     }).join('');
     var note = forThis ? (L.final ? 'Final numbers are unofficial. The records watch for the next game appears once the official stats are in, usually the day after the game.' : 'Counts down live with Allen’s numbers today (unofficial).')
       : 'Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated ' + esc(W.asOf) + '.';
+    var vs = oppNick ? (oppHome ? 'vs' : 'at') + ' the ' + oppNick : '';
+    var gday = match.date && wDate === gameDate(match) ? String(match.date).replace(/, \d{4}$/, '') : '';
+    var shareAll = window.JPAShare ? JPAShare.btn({chip: forThis ? (L.final ? 'Final' : 'Live') : 'Next Game',
+      kicker: forThis ? (L.final ? 'How it went' : 'Counting down live') + (vs ? ', ' + vs : '') : 'What Josh Allen could break' + (vs ? ' ' + vs : ''),
+      title: 'Records watch' + (gday && !forThis ? ': ' + gday : ''), items: shareItems,
+      foot: forThis ? 'Live numbers are unofficial' : 'Updated ' + W.asOf, url: location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '',
+      share: 'Josh Allen records watch' + (vs ? ' ' + vs : '')}, 'Records watch') : '';
     return {close: close && L && !L.final, broke: broke,
-      html: '<div class="lw"><div class="lwh">Records watch' + (oppNick ? ' <span>' + (oppHome ? 'vs' : 'at') + ' the ' + esc(oppNick) + '</span>' : '') + '</div>'
+      html: '<div class="lw"><div class="lwh">Records watch' + (oppNick ? ' <span>' + (oppHome ? 'vs' : 'at') + ' the ' + esc(oppNick) + '</span>' : '') + shareAll + '</div>'
         + '<ol class="wlist">' + rows + '</ol><p class="lwn">' + note + '</p></div>'};
   }
   // Two spinning goal lights on top of the card when a record is within reach.

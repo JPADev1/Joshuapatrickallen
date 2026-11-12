@@ -654,3 +654,6 @@ html.shr-open{overflow:hidden}
 .shr-btns>*{font:inherit;font-weight:800;font-size:.95rem;padding:10px 18px;border-radius:99px;border:0;cursor:pointer;text-decoration:none}
 .shr-go{background:#c60c30;color:#fff}.shr-dl{background:#fff;color:#0b1f4f}.shr-x{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)!important}
 .shr-tip{font-size:.78rem;opacity:.7;margin:8px 0 0}
+.lwh .shr{float:right;margin:-3px 0 0 8px;text-transform:none;letter-spacing:0}
+.livebar .lwh .shr{opacity:1}
+.livebar .lwh .shr span{margin:0;opacity:1}
