@@ -3,9 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Joshua Patrick Allen | Your #1 place for Josh Allen stat tracking</title>
-<meta name="description" content="Josh Allen career stats season by season, plus how he measures up against every Buffalo Bills franchise record.">
-<link rel="stylesheet" href="css/site.css?v=33">
+<title>Josh Allen Stats &amp; Records Tracker | Live Bills and NFL Records</title>
+<meta name="description" content="Live Josh Allen stats and records tracker: season-by-season career stats, every Bills franchise and NFL record he holds or is chasing, his NFL firsts, and a live records watch on game day.">
+<link rel="canonical" href="https://joshuapatrickallen.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Joshua Patrick Allen">
+<meta property="og:title" content="Josh Allen Stats &amp; Records Tracker | Live Bills and NFL Records">
+<meta property="og:description" content="Live Josh Allen stats and records tracker: season-by-season career stats, every Bills franchise and NFL record he holds or is chasing, his NFL firsts, and a live records watch on game day.">
+<meta property="og:url" content="https://joshuapatrickallen.com/">
+<meta property="og:image" content="https://joshuapatrickallen.com/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Josh Allen Stats &amp; Records Tracker">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://joshuapatrickallen.com/#site","url":"https://joshuapatrickallen.com/","name":"Joshua Patrick Allen","alternateName":"Josh Allen Stats & Records Tracker","description":"Live Josh Allen stats and records tracker: season-by-season career stats, every Bills franchise and NFL record he holds or is chasing, his NFL firsts, and a live records watch on game day.","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joshuapatrickallen.com/#page","url":"https://joshuapatrickallen.com/","name":"Josh Allen Stats & Records Tracker | Live Bills and NFL Records","isPartOf":{"@id":"https://joshuapatrickallen.com/#site"},"about":{"@type":"Person","name":"Josh Allen","alternateName":"Joshua Patrick Allen","jobTitle":"Quarterback","memberOf":{"@type":"SportsTeam","name":"Buffalo Bills"},"sameAs":["https://en.wikipedia.org/wiki/Josh_Allen_(quarterback)"]},"primaryImageOfPage":"https://joshuapatrickallen.com/images/og.jpg"}]}</script>
+<link rel="stylesheet" href="css/site.css?v=34">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -61,7 +73,8 @@
   <p class="note" id="h-notes"></p>
 </main>
 <footer id="foot"></footer>
-<script src="scripts/live.js?v=4"></script>
+<script src="scripts/share.js?v=1"></script>
+<script src="scripts/live.js?v=5"></script>
 <script>
 // ===== DATA (edit here after each game) =====
 // Season rows (2018-2025): nflverse regular-season totals, matching official totals except 2018 passing, which uses the official 2,074 yards.
@@ -231,7 +244,8 @@ function build(){
     "Career passing touchdowns":["touchdown-mountain.html#td=pass",GO], "Career rushing touchdowns":["touchdown-mountain.html#td=rush",GO],
     "Career passing yards":["mountain.html#s=yards&k=pass",GO], "Career rushing yards":["mountain.html#s=yards&k=rush&pos=QB",GO],
     "Career wins":["mountain.html#s=wins",GO], "Playoff wins":["mountain.html#s=wins&k=pw",GO], "AFC East titles":["mountain.html#s=afce",GO]};
-  document.getElementById('tiles').innerHTML = TILES.map(function(t){var inner='<b>'+t[0]+'</b><span>'+t[1]+'<br>'+t[2]+'</span>'+rk(t[1],t[3]), L=LINK[t[1]];
+  document.getElementById('tiles').innerHTML = TILES.map(function(t){var r=rk(t[1],t[3]), inner='<b>'+t[0]+'</b><span>'+t[1]+'<br>'+t[2]+'</span>'+r, L=LINK[t[1]];
+    inner += shareBtn({chip:"Career", kicker:r.replace(/<[^>]+>/g,'')||t[2], title:t[1], big:t[0], line:t[2], foot:shareFoot(), url:""}, t[1]);
     return L?'<a class="tile" href="'+L[0]+'">'+inner+'<span class="go">'+L[1]+'</span></a>':'<div class="tile">'+inner+'</div>';}).join('');
   var T = {g:0,gs:0,c:0,a:0,y:0,t:0,i:0,s:0,ra:0,ry:0,rt:0,rf:0,rl:0}, pr='', rr='';
   SEASONS.forEach(function(s){
@@ -260,6 +274,18 @@ function inScope(r){ return SCOPE==="all" || scopeOf(r)===SCOPE; }
 // "Regular season" filter: every record counted in regular-season games only (not playoffs, not awards, not combined totals).
 function isRegSeason(r){ return r.season ? r.season==="reg" : !(r.cat==="Postseason"||r.cat==="Honors"||/playoffs/i.test(r.title)); }
 function inCat(r,c){ return c==="All" || (c==="Regular season" ? isRegSeason(r) : r.cat===c); }
+// Share cards (scripts/share.js): what each card's image says.
+function shareFoot(){ return "Through " + THRU.split(" (")[0] + ", 2026"; }
+function shareBtn(d,label){ return window.JPAShare ? JPAShare.btn(d,label) : ''; }
+function recShare(r,me,best,others){
+  var nfl = scopeOf(r)==="nfl", held = me >= best;
+  var KIND = {"Career":"career","Single season":"single-season","Postseason":"postseason","Honors":"honors","TD combos":"regular-season","Streaks":"streak"};
+  var kick = (held ? (me===best && others.length ? "Tied for the " : "") : "Chasing the ") + (nfl ? "NFL " : "Bills ") + (KIND[r.cat]||"") + " record";
+  var top = others.slice().sort(function(a,b){return b[1]-a[1];}).slice(0,3).map(function(e){return e[0]+" "+fmt(e[1]);}).join("  \u00b7  ");
+  var line = held ? top : fmt(best-me)+" to tie, "+fmt(best-me+1)+" to break  \u00b7  "+top;
+  var big = (r.cat==="Honors" && me===1 && r.chip) ? r.chip.replace(/^\d{4} NFL /,'') : fmt(me);
+  return {chip: held ? (nfl ? "NFL Record" : "Bills Record") : "Record Chase", kicker: kick, title: r.title, big: big, line: line, foot: shareFoot(), url: "#records"};
+}
 function render(){
   document.getElementById('scopeTabs').innerHTML = SCOPES.map(function(o){return '<button type="button" data-s="'+o[0]+'" aria-pressed="'+(SCOPE===o[0])+'">'+o[1]+'</button>';}).join('');
   Array.prototype.forEach.call(document.querySelectorAll('#scopeTabs button'), function(b){b.onclick=function(){SCOPE=b.getAttribute('data-s'); render(); recHash();};});
@@ -287,7 +313,7 @@ function render(){
     // Highest value on top, so the record holder (Allen included) always leads; ties keep their listed order.
     var rows = r.entries.slice().sort(function(a,b){return b[1]-a[1];}).map(function(e){return '<div class="row' + (isMe(e[0])?' me':'') + '"><span>' + e[0] + '</span><span class="bar"><u style="width:' + (e[1]/top*100) + '%"></u></span><b>' + fmt(e[1]) + '</b></div>';}).join('');
     var sc = scopeOf(r)==="nfl" ? '<span class="chip scope nfl">NFL</span>' : '<span class="chip scope bills">Bills</span>';
-    return '<div class="card"><div class="head"><h2>' + r.cat + ': ' + r.title + '</h2><div class="chips">' + sc + chip + st + '</div></div>' + rows + '<p class="note">' + r.note + '</p></div>';
+    return '<div class="card"><div class="head"><h2>' + r.cat + ': ' + r.title + '</h2><div class="chips">' + sc + chip + st + shareBtn(recShare(r,me,best,others), r.title) + '</div></div>' + rows + '<p class="note">' + r.note + '</p></div>';
   }).join('');
   document.getElementById('queue').innerHTML = QUEUE.map(function(q){return '<li>' + q + '</li>';}).join('');
 }
@@ -319,7 +345,7 @@ else if(location.hash==='#nfl'||location.hash==='#bills'){SCOPE=location.hash.sl
     FIRSTS=d.items; render();
     document.getElementById('firsts-h').textContent='NFL firsts ('+d.items.length+')';
     document.getElementById('firsts').innerHTML=d.items.map(function(f){
-      return '<li><div class="fwhen">'+esc(when(f.date))+'</div><div class="fbody"><b>'+esc(f.text)+'</b>'
+      return '<li><div class="fwhen">'+esc(when(f.date))+shareBtn({chip:"NFL First", kicker:when(f.date), title:f.text, line:f.line||f.game||'', foot:"Every Josh Allen NFL first, on the site", url:"#firsts"}, f.text)+'</div><div class="fbody"><b>'+esc(f.text)+'</b>'
         +(f.line?'<span class="fline">'+esc(f.line)+'</span>':'')
         +'<span class="fmeta">'+esc(f.game)+(f.url?' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener noreferrer">'+esc(f.source)+'</a>':'')+'</span></div></li>';}).join('');
   }).catch(function(){ document.getElementById('firsts').innerHTML='<li><div class="fbody">The NFL firsts list could not be loaded. Please refresh.</div></li>'; });

@@ -193,8 +193,11 @@
       var r = forThis ? liveItem(x, L) : null;
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
       if(r.cls === 'close' || r.near) close = true; if(r.cls === 'done') broke = true;
+      var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : ''),
+        title: x.title, line: String(r.html).replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(),
+        foot: L.final ? 'Unofficial until the official stats are in' : 'Live, unofficial', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '')}, x.title) : '';
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
-        : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span></li>';
+        : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span>' + sh + '</li>';
     }).join('');
     var note = forThis ? (L.final ? 'Final numbers are unofficial. The records watch for the next game appears once the official stats are in, usually the day after the game.' : 'Counts down live with Allen’s numbers today (unofficial).')
       : 'Only records Allen could reach with a performance at or below his best single game. Most likely first. Updated ' + esc(W.asOf) + '.';
