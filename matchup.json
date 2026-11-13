@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "gameId": "2026_10_BUF_NYJ",
  "week": 10,
  "label": "Week 10",
@@ -526,7 +526,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 12, 2026",
+  "asOf": "Nov. 13, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -722,7 +722,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 12, 2026",
+  "asOf": "Nov. 13, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -848,7 +848,7 @@
   ]
  },
  "props": {
-  "asOf": "Nov. 12, 2026",
+  "asOf": "Nov. 13, 2026",
   "items": [
    {
     "team": "BUF",
@@ -1004,11 +1004,12 @@
      "line": 15,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": 0.5,
     "pros": [
      "Cleared 12+ in all 8 games.",
      "Averages 21.1 rushing attempts a game (median 21.5).",
-     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game."
+     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game.",
+     "Bad weather usually pushes play-calling toward the run."
     ],
     "cons": [
      "Closest call: 12 vs NE in Week 4."
@@ -1079,15 +1080,73 @@
      "line": 6,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": 0.5,
     "pros": [
      "Cleared 4+ in all 8 games.",
      "Averages 7.6 rushing attempts a game (median 6.5).",
      "Even his lowest game (5 vs NE) cleared it comfortably.",
-     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game."
+     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game.",
+     "Bad weather usually pushes play-calling toward the run."
     ],
     "cons": [
      "Swingy: anywhere from 5 to 14 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "NYJ",
+    "nick": "Jets",
+    "player": "Breece Hall",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing yards",
+    "key": "rushYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@TEN"
+     },
+     {
+      "wk": 2,
+      "opp": "GB"
+     },
+     {
+      "wk": 3,
+      "opp": "@DET"
+     },
+     {
+      "wk": 9,
+      "opp": "@KC"
+     }
+    ],
+    "vals": [
+     102,
+     29,
+     32,
+     61
+    ],
+    "ladder": [
+     {
+      "line": 25,
+      "hit": 4,
+      "stars": 4.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 30,
+     "hit": 3
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 25+ in all 4 games.",
+     "Averages 56.0 rushing yards a game (median 46.5).",
+     "Steady workload: 16.5 carries a game."
+    ],
+    "cons": [
+     "The Bills rank 7th of 32 against the run, allowing 92 rushing yards a game.",
+     "Swingy: anywhere from 29 to 102 this season.",
+     "Small sample: 4 games."
     ],
     "status": ""
    },
@@ -1127,7 +1186,7 @@
      {
       "line": 2,
       "hit": 4,
-      "stars": 4.5
+      "stars": 4.0
      }
     ],
     "extra": [],
@@ -1135,13 +1194,14 @@
      "line": 3,
      "hit": 3
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 2+ in all 4 games.",
      "Averages 3.2 receptions a game (median 3).",
      "The Bills rank 27th of 32 against the pass, allowing 253 passing yards a game."
     ],
     "cons": [
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 2 vs TEN in Week 1.",
      "Small sample: 4 games."
     ],
@@ -1183,7 +1243,7 @@
      {
       "line": 15,
       "hit": 4,
-      "stars": 4.5
+      "stars": 4.0
      }
     ],
     "extra": [],
@@ -1191,13 +1251,14 @@
      "line": 20,
      "hit": 3
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 15+ in all 4 games.",
      "Averages 32.0 receiving yards a game (median 24.5).",
      "The Bills rank 27th of 32 against the pass, allowing 253 passing yards a game."
     ],
     "cons": [
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 16 vs TEN in Week 1.",
      "Swingy: anywhere from 16 to 63 this season.",
      "Small sample: 4 games."
@@ -1260,7 +1321,7 @@
      {
       "line": 12,
       "hit": 8,
-      "stars": 4.0
+      "stars": 3.5
      }
     ],
     "extra": [
@@ -1273,12 +1334,13 @@
      "line": 18,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 12+ in all 8 games.",
      "Averages 19.5 completions a game (median 20.5)."
     ],
     "cons": [
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 12 vs LA in Week 5.",
      "The Jets rank 5th of 32 against the pass, allowing 212 passing yards a game."
     ],
@@ -1290,8 +1352,8 @@
     "player": "Breece Hall",
     "pos": "RB",
     "cat": "Rushing",
-    "market": "Rushing yards",
-    "key": "rushYds",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
     "games": [
      {
       "wk": 1,
@@ -1311,32 +1373,42 @@
      }
     ],
     "vals": [
-     102,
-     29,
-     32,
-     61
+     22,
+     16,
+     13,
+     15
     ],
     "ladder": [
      {
-      "line": 25,
+      "line": 8,
       "hit": 4,
-      "stars": 4.0
+      "stars": 4.5
+     },
+     {
+      "line": 10,
+      "hit": 4,
+      "stars": 4.5
+     },
+     {
+      "line": 12,
+      "hit": 4,
+      "stars": 3.5
      }
     ],
     "extra": [],
     "next": {
-     "line": 30,
+     "line": 15,
      "hit": 3
     },
-    "gameday": 0.0,
+    "gameday": 0.5,
     "pros": [
-     "Cleared 25+ in all 4 games.",
-     "Averages 56.0 rushing yards a game (median 46.5).",
-     "Steady workload: 16.5 carries a game."
+     "Cleared 12+ in all 4 games.",
+     "Averages 16.5 rushing attempts a game (median 15.5).",
+     "Bad weather usually pushes play-calling toward the run."
     ],
     "cons": [
+     "Closest call: 13 vs DET in Week 3.",
      "The Bills rank 7th of 32 against the run, allowing 92 rushing yards a game.",
-     "Swingy: anywhere from 29 to 102 this season.",
      "Small sample: 4 games."
     ],
     "status": ""
@@ -1397,17 +1469,17 @@
      {
       "line": 150,
       "hit": 8,
-      "stars": 4.5
+      "stars": 4.0
      },
      {
       "line": 175,
       "hit": 8,
-      "stars": 4.0
+      "stars": 3.5
      },
      {
       "line": 200,
       "hit": 8,
-      "stars": 3.5
+      "stars": 3.0
      }
     ],
     "extra": [],
@@ -1415,12 +1487,13 @@
      "line": 225,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 200+ in all 8 games.",
      "Averages 253.4 passing yards a game (median 250.5)."
     ],
     "cons": [
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 204 vs LAC in Week 3.",
      "The Jets rank 5th of 32 against the pass, allowing 212 passing yards a game."
     ],
@@ -1472,7 +1545,7 @@
      {
       "line": 2,
       "hit": 6,
-      "stars": 3.5
+      "stars": 3.0
      }
     ],
     "extra": [],
@@ -1480,95 +1553,30 @@
      "line": 3,
      "hit": 3
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 2+ in all 6 games.",
      "Averages 2.8 receptions a game (median 2.5)."
     ],
     "cons": [
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 2 vs NE in Week 4.",
      "The Jets rank 5th of 32 against the pass, allowing 212 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "NYJ",
-    "nick": "Jets",
-    "player": "Breece Hall",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@TEN"
-     },
-     {
-      "wk": 2,
-      "opp": "GB"
-     },
-     {
-      "wk": 3,
-      "opp": "@DET"
-     },
-     {
-      "wk": 9,
-      "opp": "@KC"
-     }
-    ],
-    "vals": [
-     22,
-     16,
-     13,
-     15
-    ],
-    "ladder": [
-     {
-      "line": 8,
-      "hit": 4,
-      "stars": 4.0
-     },
-     {
-      "line": 10,
-      "hit": 4,
-      "stars": 4.0
-     },
-     {
-      "line": 12,
-      "hit": 4,
-      "stars": 3.0
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 15,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 12+ in all 4 games.",
-     "Averages 16.5 rushing attempts a game (median 15.5)."
-    ],
-    "cons": [
-     "Closest call: 13 vs DET in Week 3.",
-     "The Bills rank 7th of 32 against the run, allowing 92 rushing yards a game.",
-     "Small sample: 4 games."
     ],
     "status": ""
    }
   ],
   "weather": {
    "indoor": false,
-   "temp": 47,
-   "wind": 13,
+   "temp": 46,
+   "wind": 15,
    "gust": 22,
    "rain": 0,
    "snow": 0,
    "pop": 0
   },
   "conditions": [
-   "Game-day forecast at kickoff: 47°F, wind 13 mph (gusts 22), 0% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast at kickoff: 46°F, wind 15 mph (gusts 22), 0% chance of precipitation. Ratings are adjusted for it.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
