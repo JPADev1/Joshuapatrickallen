@@ -1574,15 +1574,15 @@
   ],
   "weather": {
    "indoor": false,
-   "temp": 48,
-   "wind": 14,
-   "gust": 20,
+   "temp": 49,
+   "wind": 13,
+   "gust": 18,
    "rain": 0,
    "snow": 0,
    "pop": 0
   },
   "conditions": [
-   "Game-day forecast at kickoff: 48°F, wind 14 mph (gusts 20), 0% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast at kickoff: 49°F, wind 13 mph (gusts 18), 0% chance of precipitation. Nothing in it changes the ratings.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1697,8 +1697,8 @@
   "cur": {
    "spread": -8.5,
    "total": 50.5,
-   "ml": -440.0,
-   "oppMl": 340.0
+   "ml": -425.0,
+   "oppMl": 330.0
   },
   "open": {
    "spread": -7.0,
@@ -1767,38 +1767,44 @@
     "spread": -8.5,
     "total": 50.5,
     "ml": -440.0
+   },
+   {
+    "t": "2026-11-13T12:16Z",
+    "spread": -8.5,
+    "total": 50.5,
+    "ml": -425.0
    }
   ]
  },
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 99.6,
+    "now": 99.5,
     "win": 99.9,
     "loss": 98.5
    },
    "division": {
     "now": 93.5,
-    "win": 94.9,
-    "loss": 88.5
+    "win": 95.1,
+    "loss": 88.2
    },
    "seed1": {
-    "now": 40.5,
-    "win": 45.3,
-    "loss": 23.7
+    "now": 40.4,
+    "win": 45.4,
+    "loss": 23.6
    },
    "conf": {
-    "now": 23.5,
-    "win": 24.1,
-    "loss": 21.3
+    "now": 23.6,
+    "win": 24.4,
+    "loss": 21.1
    },
    "sb": {
     "now": 12.6,
-    "win": 12.8,
-    "loss": 12.0
+    "win": 12.9,
+    "loss": 11.7
    }
   },
-  "winProb": 78.2,
+  "winProb": 77.7,
   "sims": 10000,
   "asOf": "through the games of Nov. 12, 2026"
  },
