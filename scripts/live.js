@@ -207,10 +207,11 @@
     var vs = oppNick ? (oppHome ? 'vs' : 'at') + ' the ' + oppNick : '';
     var gday = match.date && wDate === gameDate(match) ? String(match.date).replace(/, \d{4}$/, '') : '';
     var shareAll = window.JPAShare ? JPAShare.btn({chip: forThis ? (L.final ? 'Final' : 'Live') : 'Next Game',
-      kicker: forThis ? (L.final ? 'How it went' : 'Counting down live') + (vs ? ', ' + vs : '') : 'What Josh Allen could break' + (vs ? ' ' + vs : ''),
-      title: 'Records watch' + (gday && !forThis ? ': ' + gday : ''), items: shareItems,
+      kicker: forThis ? (L.final ? 'How it went' : 'Counting down live') + (vs ? ', ' + vs : '')
+        : 'NFL/franchise records and career milestones Allen could achieve this week' + (oppNick ? ' against the ' + oppNick : ''),
+      title: 'Milestone watch' + (gday && !forThis ? ': ' + gday : ''), items: shareItems,
       foot: forThis ? 'Live numbers are unofficial' : 'Updated ' + W.asOf, url: location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '',
-      share: 'Josh Allen records watch' + (vs ? ' ' + vs : '')}, 'Records watch') : '';
+      share: 'Josh Allen milestone watch' + (vs ? ' ' + vs : '')}, 'Milestone watch') : '';
     return {close: close && L && !L.final, broke: broke,
       html: '<div class="lw"><div class="lwh">Records watch' + (oppNick ? ' <span>' + (oppHome ? 'vs' : 'at') + ' the ' + esc(oppNick) + '</span>' : '') + shareAll + '</div>'
         + '<ol class="wlist">' + rows + '</ol><p class="lwn">' + note + '</p></div>'};

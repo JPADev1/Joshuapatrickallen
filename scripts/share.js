@@ -85,11 +85,11 @@
     var parts = items.map(function(it){
       return {t: fit(c, it.t, 0, 700, 36, 26, wide - 40, 1), d: it.d ? fit(c, it.d, 1, 500, 26, 20, wide - 40, 2) : null, done: it.done};
     });
-    var kick = d.kicker ? fit(c, d.kicker, 1, 500, 36, 26, wide, 1) : null, title = fit(c, d.title || 'Records watch', 0, 700, 60, 40, wide, 1);
-    var h = (kick ? kick.lh + 4 : 0) + title.lh + 34 + parts.reduce(function(a, p){ return a + p.t.lh + (p.d ? p.d.lines.length * p.d.lh : 0) + 18; }, 0);
+    var kick = d.kicker ? fit(c, d.kicker, 1, 500, 34, 26, wide, 2) : null, title = fit(c, d.title || 'Milestone watch', 0, 700, 60, 40, wide, 1);
+    var h = (kick ? kick.lines.length * kick.lh + 4 : 0) + title.lh + 34 + parts.reduce(function(a, p){ return a + p.t.lh + (p.d ? p.d.lines.length * p.d.lh : 0) + 18; }, 0);
     var y = Math.max(560, 1266 - h);
     c.textAlign = 'left';
-    if(kick){ shadowed(c, function(){ c.font = F(1, 500, kick.size); c.fillStyle = SOFT; c.fillText(kick.lines[0], x, y); }); y += kick.lh + 4; }
+    if(kick){ shadowed(c, function(){ c.font = F(1, 500, kick.size); c.fillStyle = SOFT; kick.lines.forEach(function(l, i){ c.fillText(l, x, y + i * kick.lh); }); }); y += kick.lines.length * kick.lh + 4; }
     shadowed(c, function(){ c.font = F(0, 700, title.size); c.fillStyle = '#fff'; c.fillText(title.lines[0], x, y); });
     y += title.lh + 8;
     c.strokeStyle = GOLD; c.lineWidth = 2; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 300, y); c.stroke();
