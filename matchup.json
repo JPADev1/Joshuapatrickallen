@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "gameId": "2026_10_BUF_NYJ",
  "week": 10,
  "label": "Week 10",
@@ -540,7 +540,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 13, 2026",
+  "asOf": "Nov. 14, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -736,7 +736,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 13, 2026",
+  "asOf": "Nov. 14, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -862,7 +862,7 @@
   ]
  },
  "props": {
-  "asOf": "Nov. 13, 2026",
+  "asOf": "Nov. 14, 2026",
   "items": [
    {
     "team": "BUF",
