@@ -1707,12 +1707,12 @@
  },
  "lines": {
   "gameId": "2026_10_BUF_NYJ",
-  "book": "Draft Kings",
+  "book": "DraftKings",
   "cur": {
-   "spread": -8.5,
+   "spread": -7.5,
    "total": 50.5,
-   "ml": -425.0,
-   "oppMl": 330.0
+   "ml": -395.0,
+   "oppMl": 310.0
   },
   "open": {
    "spread": -7.0,
@@ -1787,38 +1787,44 @@
     "spread": -8.5,
     "total": 50.5,
     "ml": -425.0
+   },
+   {
+    "t": "2026-11-14T19:59Z",
+    "spread": -7.5,
+    "total": 50.5,
+    "ml": -395.0
    }
   ]
  },
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 99.6,
+    "now": 99.5,
     "win": 99.8,
-    "loss": 98.8
+    "loss": 98.5
    },
    "division": {
-    "now": 94.1,
-    "win": 95.6,
-    "loss": 89.0
+    "now": 93.8,
+    "win": 95.7,
+    "loss": 87.6
    },
    "seed1": {
-    "now": 40.8,
-    "win": 45.6,
-    "loss": 23.9
+    "now": 41.0,
+    "win": 46.2,
+    "loss": 23.8
    },
    "conf": {
-    "now": 24.1,
-    "win": 24.7,
-    "loss": 21.9
+    "now": 24.3,
+    "win": 24.9,
+    "loss": 22.5
    },
    "sb": {
-    "now": 13.1,
-    "win": 13.5,
+    "now": 13.2,
+    "win": 13.7,
     "loss": 11.8
    }
   },
-  "winProb": 77.7,
+  "winProb": 76.6,
   "sims": 10000,
   "asOf": "through the games of Nov. 12, 2026"
  },
