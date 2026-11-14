@@ -1572,17 +1572,9 @@
     "status": ""
    }
   ],
-  "weather": {
-   "indoor": false,
-   "temp": 48,
-   "wind": 13,
-   "gust": 18,
-   "rain": 0,
-   "snow": 0,
-   "pop": 0
-  },
+  "weather": null,
   "conditions": [
-   "Game-day forecast at kickoff: 48°F, wind 13 mph (gusts 18), 0% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1693,7 +1685,7 @@
  },
  "lines": {
   "gameId": "2026_10_BUF_NYJ",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
    "spread": -8.5,
    "total": 50.5,
@@ -1781,27 +1773,27 @@
    "playoffs": {
     "now": 99.6,
     "win": 99.9,
-    "loss": 98.6
+    "loss": 98.7
    },
    "division": {
-    "now": 93.8,
-    "win": 95.1,
-    "loss": 89.1
+    "now": 93.9,
+    "win": 95.3,
+    "loss": 89.0
    },
    "seed1": {
-    "now": 40.7,
-    "win": 45.4,
-    "loss": 23.8
+    "now": 40.8,
+    "win": 45.8,
+    "loss": 23.9
    },
    "conf": {
-    "now": 23.7,
-    "win": 24.4,
-    "loss": 21.3
+    "now": 23.9,
+    "win": 24.5,
+    "loss": 22.1
    },
    "sb": {
-    "now": 12.8,
-    "win": 13.0,
-    "loss": 12.0
+    "now": 12.9,
+    "win": 13.1,
+    "loss": 12.1
    }
   },
   "winProb": 77.7,
@@ -1818,6 +1810,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 45% of the time with a win and 24% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 46% of the time with a win and 24% with a loss."
  }
 }
