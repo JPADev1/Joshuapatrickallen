@@ -1572,9 +1572,17 @@
     "status": ""
    }
   ],
-  "weather": null,
+  "weather": {
+   "indoor": false,
+   "temp": 46,
+   "wind": 9,
+   "gust": 20,
+   "rain": 0,
+   "snow": 0,
+   "pop": 0
+  },
   "conditions": [
-   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
+   "Game-day forecast at kickoff: 46°F, wind 9 mph (gusts 20), 0% chance of precipitation. Nothing in it changes the ratings.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1685,7 +1693,7 @@
  },
  "lines": {
   "gameId": "2026_10_BUF_NYJ",
-  "book": "Draft Kings",
+  "book": "DraftKings",
   "cur": {
    "spread": -8.5,
    "total": 50.5,
