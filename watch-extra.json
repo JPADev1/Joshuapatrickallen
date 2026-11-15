@@ -1,0 +1,10 @@
+{
+ "_how": "Hand-added records watch items. Each: title, k (passTD, rushTD, totalTD, passYds, rushYds), target (the career total that sets the mark), goal (text before), done (text after it happens), optional detail ({need} and {have} fill in), optional top (false = list it last). Items drop off once his official total reaches the target. Editing this file never redeploys the site.",
+ "items": [
+  {"title": "NFL record: most total TDs in a player's first 10 seasons",
+   "k": "totalTD", "target": 323,
+   "goal": "to pass Peyton Manning (322) for the most total TDs in a player's first 10 seasons",
+   "done": "He passed Peyton Manning (322) for the most total TDs in a player's first 10 seasons, and he did it in his 9th.",
+   "detail": "Needs {need} total TD (passing, rushing or receiving). He has {have} in his 9th season; Peyton Manning had 322 through his first 10, the most by anyone."}
+ ]
+}

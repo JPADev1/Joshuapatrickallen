@@ -764,6 +764,14 @@
   "home": false,
   "items": [
    {
+    "title": "NFL record: most total TDs in a player's first 10 seasons",
+    "k": "totalTD",
+    "need": 1,
+    "goal": "to pass Peyton Manning (322) for the most total TDs in a player's first 10 seasons",
+    "done": "He passed Peyton Manning (322) for the most total TDs in a player's first 10 seasons, and he did it in his 9th.",
+    "detail": "Needs 1 total TD (passing, rushing or receiving). He has 322 in his 9th season; Peyton Manning had 322 through his first 10, the most by anyone."
+   },
+   {
     "title": "NFL career passing yards",
     "detail": "Needs 95 passing yards (career high in a game: 424). Ties Sonny Jurgensen (32,224) for No. 51; 96 passes him.",
     "k": "passYds",
