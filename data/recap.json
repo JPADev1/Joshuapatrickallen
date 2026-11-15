@@ -9,16 +9,9 @@
   {
    "tag": "NFL record",
    "scope": "nfl",
-   "title": "Most total touchdowns in a player's first 10 seasons",
-   "text": "He passed Peyton Manning (322), and he did it in his 9th season.",
-   "line": "3 total TDs at the Jets · 325 for his career"
-  },
-  {
-   "tag": "NFL record",
-   "scope": "nfl",
-   "title": "Most total touchdowns by a quarterback in his first 10 seasons",
-   "text": "Peyton Manning's 322 was also the quarterback mark. Allen has 325, in his 9th season.",
-   "line": "233 passing + 90 rushing + 2 receiving"
+   "title": "Most total touchdowns in a player's first 10 seasons, at any position",
+   "text": "He passed Peyton Manning (322) and has 325, in his 9th season.",
+   "line": "233 passing + 90 rushing + 2 receiving · 3 total TDs at the Jets"
   },
   {
    "tag": "NFL first",
