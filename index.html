@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="Josh Allen Stats &amp; Records Tracker">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://notjoshingaround.com/#site","url":"https://notjoshingaround.com/","name":"Not Joshing Around","alternateName":["NJA","Josh Allen Stats & Records Tracker"],"description":"Live Josh Allen stats and records tracker: season-by-season career stats, every Bills franchise and NFL record he holds or is chasing, his NFL firsts, and a live records watch on game day.","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://notjoshingaround.com/#page","url":"https://notjoshingaround.com/","name":"Josh Allen Stats & Records Tracker | Live Bills and NFL Records","isPartOf":{"@id":"https://notjoshingaround.com/#site"},"about":{"@type":"Person","name":"Josh Allen","alternateName":"Joshua Patrick Allen","jobTitle":"Quarterback","memberOf":{"@type":"SportsTeam","name":"Buffalo Bills"},"sameAs":["https://en.wikipedia.org/wiki/Josh_Allen_(quarterback)"]},"primaryImageOfPage":"https://notjoshingaround.com/images/og.jpg"}]}</script>
-<link rel="stylesheet" href="css/site.css?v=38">
+<link rel="stylesheet" href="css/site.css?v=39">
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -45,6 +45,7 @@
 <main id="josh-view">
   <div class="tiles" id="tiles"></div>
   <div id="livebar-slot" data-idle></div>
+  <section id="recap" aria-labelledby="recap-h" hidden></section>
   <p class="note" id="rknote"></p>
 
   <h2 class="sec">Passing, season by season</h2>
@@ -327,7 +328,7 @@ function render(){
   }).join('');
   document.getElementById('queue').innerHTML = QUEUE.map(function(q){return '<li>' + q + '</li>';}).join('');
 }
-function init(){ applyNow(); applyCombos(); build(); render(); fillText(); }
+function init(){ applyNow(); applyCombos(); build(); render(); fillText(); renderRecap(); }
 init();
 // Live numbers: a GitHub job refreshes these files hourly on the stats-data branch (no Netlify redeploy needed).
 // If GitHub can't be reached, the copies shipped in /data are used; if those fail too, the numbers above stay.
@@ -360,6 +361,34 @@ else if(location.hash==='#nfl'||location.hash==='#bills'){SCOPE=location.hash.sl
         +'<span class="fmeta">'+esc(f.game)+(f.url?' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener noreferrer">'+esc(f.source)+'</a>':'')+'</span></div></li>';}).join('');
   }).catch(function(){ document.getElementById('firsts').innerHTML='<li><div class="fbody">The NFL firsts list could not be loaded. Please refresh.</div></li>'; });
 })();
+// Weekly Record Recap: only the records and milestones Allen reached in his most recent game.
+// It is written by hand after each game and published as recap.json on the stats-data branch (no Netlify deploy).
+// Hidden when the file is missing or empty, and as soon as a newer Bills game is live or in the official stats.
+var RECAP = null;
+function renderRecap(){
+  var el = document.getElementById('recap'); if(!el) return;
+  var R = RECAP, ok = R && R.date && R.items && R.items.length;
+  if(ok && (GAMES.some(function(g){ return g.date > R.date; }) || (LIVEG && LIVEG.date > R.date))) ok = false;
+  if(!ok){ el.hidden = true; el.innerHTML = ''; return; }
+  function esc(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  var M=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'], p=R.date.split('-');
+  var when = M[+p[1]-1]+' '+(+p[2])+', '+p[0], game = R.game + (R.result ? ' (' + R.result + ')' : '');
+  var foot = R.official ? 'Checked against the official stats' : 'Unofficial until the official stats are in';
+  var all = shareBtn({chip:'Record Recap', kicker:game + ' · ' + when, title:'Weekly Record Recap',
+    items:R.items.slice(0,5).map(function(x){ return {t:x.title, d:x.text, done:true}; }),
+    foot:R.items.length > 5 ? 'Plus ' + (R.items.length - 5) + ' more on the site' : foot, share:'Josh Allen record recap: ' + R.game, url:'#recap'}, 'Weekly Record Recap');
+  el.innerHTML = '<div class="recap-top"><h2 class="sec" id="recap-h">Weekly Record Recap</h2>' + all + '</div>'
+    + '<p class="note recap-sub"><b>' + esc(game) + '</b> &middot; ' + esc(when) + (R.allen ? '<br>Allen: ' + esc(R.allen) : '') + '</p>'
+    + '<ol class="firsts recap">' + R.items.map(function(x){
+      var sc = x.scope === 'nfl' ? ' scope nfl' : x.scope === 'bills' ? ' scope bills' : '';
+      return '<li><div class="fwhen"><span class="chip' + sc + '">' + esc(x.tag || 'Milestone') + '</span>'
+        + shareBtn({chip:x.tag || 'Milestone', kicker:game + ' · ' + when, title:x.title, big:x.big || '', line:x.text || '', foot:foot, url:'#recap'}, x.title) + '</div>'
+        + '<div class="fbody"><b>' + esc(x.title) + '</b>' + (x.text ? '<span class="fline">' + esc(x.text) + '</span>' : '')
+        + (x.line ? '<span class="fmeta">' + esc(x.line) + '</span>' : '') + '</div></li>'; }).join('') + '</ol>'
+    + '<p class="note">Only what he did in this game. ' + (R.official ? 'Checked against the official stats.' : 'Numbers are unofficial until the official stats are in.') + '</p>';
+  el.hidden = false;
+}
+load('recap.json').then(function(d){ RECAP = d; renderRecap(); if(location.hash==='#recap'){ var r=document.getElementById('recap'); if(!r.hidden) r.scrollIntoView(); } }).catch(function(){});
 load('nfl-ranks.json').then(function(d){
   if(d && d.lists){ RANKS = {asOf:d.asOf, _allen:d.allen||null}; for(var k in d.lists){ RANKS[k]=d.lists[k]; } applyNow(); build(); }
 }).catch(function(){});

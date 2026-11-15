@@ -664,3 +664,13 @@ html.shr-open{overflow:hidden}
 .nja-brand{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));left:12px;z-index:5;width:52px;height:52px;border-radius:50%;box-shadow:0 3px 10px rgba(0,0,0,.35)}
 .nja-brand img{display:block;width:100%;height:100%;border-radius:50%}
 @media (max-width:420px){.nja-brand{width:44px;height:44px}}
+/* ---------- Weekly Record Recap (stats page) ---------- */
+#recap{margin:0 0 26px}
+.recap-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.recap-top h2.sec{margin:6px 0 4px}
+.recap-sub{margin:0 0 12px;font-size:.86rem;line-height:1.5}
+.recap-sub b{color:var(--ink)}
+.firsts.recap li{border-left-color:var(--gold);grid-template-columns:124px 1fr}
+.firsts.recap .fwhen{text-transform:none;letter-spacing:0}
+.firsts.recap .chip{display:inline-block;white-space:normal;text-align:center;line-height:1.25}
+@media (max-width:520px){.firsts.recap li{grid-template-columns:1fr;gap:8px}.firsts.recap .fwhen{display:flex;align-items:center;justify-content:space-between;gap:8px}.firsts.recap .fwhen .shr{margin-top:0}}

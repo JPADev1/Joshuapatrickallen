@@ -54,3 +54,10 @@ Holds Allen's in-game line and the **Records watch** (from `watch` in matchup.js
   written by `build_watch` in update_data.py). Items get an "Almost there" or "Achieved today" tag.
 - When any record is very close (1 TD, 15 rushing yards or 30 passing yards away, or half of the pass-and-rush TD game), two spinning
   goal lights show on top of the card.
+
+## Weekly Record Recap (stats page)
+Sits under the career tiles. Shows only the records and milestones Allen reached in his most recent game.
+- Written by hand after each game, reviewed, then published as `recap.json` on the **stats-data** branch, so it goes live
+  with no Netlify deploy. `data/recap.json` on main is only the fallback.
+- Fields: `date`, `game`, `result`, `allen` (his line), `official`, `items` (`tag`, `scope` nfl/bills/blank, `title`, `text`, `line`).
+- It hides itself when `items` is empty, and as soon as a newer Bills game is live or in the official stats.
