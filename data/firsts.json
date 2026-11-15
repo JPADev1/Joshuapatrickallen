@@ -2,6 +2,12 @@
  "_how": "NFL firsts shown on the stats page, newest first. The live copy is on the stats-data branch (edit there to add one without a Netlify deploy); this copy on main is the fallback.",
  "items": [
   {
+   "date": "2026-11-15",
+   "game": "Week 10 at Jets",
+   "text": "First quarterback in NFL history with 11 rushing touchdowns through his team's first nine games of a season.",
+   "line": "11 rushing TDs in 9 games · Kyler Murray had 10 in 2020"
+  },
+  {
    "date": "2026-10-12",
    "game": "Week 5 at Rams (W 37-34, OT)",
    "text": "First player in NFL history to pass for 200+ yards on fewer than 20 attempts and run for 100+ yards on 10 or fewer carries in the same game.",
