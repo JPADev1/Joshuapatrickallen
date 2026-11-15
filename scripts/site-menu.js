@@ -62,3 +62,10 @@ var SITE = { venmo: "JPADev", suggestForm: "https://forms.gle/Fw46NaV3WLKChEew8"
       : '<p class="soon">The suggestion form is coming soon.</p>';
   }
 })();
+// NJA logo in the top-left corner of every page's header, linking home.
+(function(){
+  var h = document.querySelector("header.hero"); if(!h || h.querySelector(".nja-brand")) return;
+  var a = document.createElement("a"); a.className = "nja-brand"; a.href = "/"; a.setAttribute("aria-label", "Not Joshing Around home");
+  a.innerHTML = '<img src="images/logo.webp" width="52" height="52" alt="" decoding="async">';
+  h.insertBefore(a, h.firstChild);
+})();

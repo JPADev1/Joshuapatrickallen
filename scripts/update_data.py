@@ -1,4 +1,4 @@
-"""Refresh every changing number on joshuapatrickallen.com from free nflverse data.
+"""Refresh every changing number on notjoshingaround.com from free nflverse data.
 
 Writes three files into the output folder (default: data/):
   allen-2026.json  Josh Allen's 2026 season, game by game, plus career playoff totals
@@ -686,7 +686,7 @@ def espn_final(game):
     if not eid:
         return None
     req = urllib.request.Request("https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=" + eid,
-                                 headers={"User-Agent": "joshuapatrickallen.com stats job"})
+                                 headers={"User-Agent": "notjoshingaround.com stats job"})
     with urllib.request.urlopen(req, timeout=30) as r:
         j = json.loads(r.read().decode("utf-8"))
     s = {k: 0 for k in ("cmp", "att", "yds", "td", "int", "sk", "rushAtt", "rushYds", "rushTD", "recTD", "fum", "fumLost")}

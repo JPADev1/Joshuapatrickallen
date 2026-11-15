@@ -1,0 +1,10 @@
+# Old and alternate domains go to the same page on notjoshingaround.com (permanent).
+https://joshuapatrickallen.com/*      https://notjoshingaround.com/:splat  301!
+https://www.joshuapatrickallen.com/*  https://notjoshingaround.com/:splat  301!
+http://joshuapatrickallen.com/*       https://notjoshingaround.com/:splat  301!
+http://www.joshuapatrickallen.com/*   https://notjoshingaround.com/:splat  301!
+https://notjoshinaround.com/*         https://notjoshingaround.com/:splat  301!
+https://www.notjoshinaround.com/*     https://notjoshingaround.com/:splat  301!
+http://notjoshinaround.com/*          https://notjoshingaround.com/:splat  301!
+http://www.notjoshinaround.com/*      https://notjoshingaround.com/:splat  301!
+https://www.notjoshingaround.com/*    https://notjoshingaround.com/:splat  301!

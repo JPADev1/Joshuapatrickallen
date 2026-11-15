@@ -5,18 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Josh Allen Career Rankings: Yards, Wins &amp; AFC East Titles | Stat Mountain</title>
 <meta name="description" content="Josh Allen's climb up the NFL's all-time mountains: passing yards, rushing yards, wins, playoff wins and AFC East titles, career or through any number of seasons.">
-<link rel="canonical" href="https://joshuapatrickallen.com/mountain.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="canonical" href="https://notjoshingaround.com/mountain.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Joshua Patrick Allen">
+<meta property="og:site_name" content="Not Joshing Around">
 <meta property="og:title" content="Josh Allen Career Rankings: Yards, Wins &amp; AFC East Titles | Stat Mountain">
 <meta property="og:description" content="Josh Allen's climb up the NFL's all-time mountains: passing yards, rushing yards, wins, playoff wins and AFC East titles, career or through any number of seasons.">
-<meta property="og:url" content="https://joshuapatrickallen.com/mountain.html">
-<meta property="og:image" content="https://joshuapatrickallen.com/images/og.jpg">
+<meta property="og:url" content="https://notjoshingaround.com/mountain.html">
+<meta property="og:image" content="https://notjoshingaround.com/images/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Josh Allen Stats &amp; Records Tracker">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="css/site.css?v=37">
+<link rel="stylesheet" href="css/site.css?v=38">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -60,7 +63,7 @@
 </main>
 <footer>Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
 <script>window.JPALIVE_RELOAD=true;</script>
-<script src="scripts/share.js?v=4"></script>
+<script src="scripts/share.js?v=5"></script>
 <script src="scripts/live.js?v=7"></script>
 <script>
 (function(){
@@ -427,7 +430,7 @@ function start(){
   var fam=FAM;
   S.mode='all'; S.pos='ALL'; S.n=0; WK=0; SP=[]; WINFO={};
   Object.keys(pillEls).forEach(function(id){var d=pillEls[id]; if(d.parentNode)d.parentNode.removeChild(d); delete pillEls[id];});
-  document.title=F.title+' | Joshua Patrick Allen'; el('h1').textContent=F.title; el('srcnote').textContent=F.srcnote;
+  document.title=F.title+' | Not Joshing Around'; el('h1').textContent=F.title; el('srcnote').textContent=F.srcnote;
   el('headline').textContent='Loading…';
   var get=CACHE[fam]||(CACHE[fam]=Promise.all([fetch('data/'+F.file).then(function(r){if(!r.ok)throw 0;return r.json();}),
     F.live?load('mtn-live-2026.json').catch(function(){return null;}):Promise.resolve(null),
@@ -458,7 +461,7 @@ function start(){
 readFam(); start();
 })();
 </script>
-<script src="scripts/site-menu.js?v=2"></script>
+<script src="scripts/site-menu.js?v=3"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fe7d153f0dc349558991cb3f797b5fca"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

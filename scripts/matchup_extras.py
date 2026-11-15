@@ -15,7 +15,7 @@ from collections import defaultdict
 from datetime import datetime, timezone, timedelta
 
 BILLS = "BUF"
-UA = {"User-Agent": "joshuapatrickallen.com stats job"}
+UA = {"User-Agent": "notjoshingaround.com stats job"}
 ET = timezone(timedelta(hours=-5))  # display only; NFL kickoffs in the schedule are already Eastern
 
 

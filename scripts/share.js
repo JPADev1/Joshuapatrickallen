@@ -2,16 +2,19 @@
 // Clicking it draws a 1080x1350 image (Lora type on images/share-bg.webp), shows it full screen, and offers
 // the phone's share sheet (image + a link back to the site) or a download. Everything runs in the browser.
 (function(){
-  var W = 1080, H = 1350, SITE = 'https://joshuapatrickallen.com';
+  var W = 1080, H = 1350, SITE = 'https://notjoshingaround.com';
   var GOLD = '#e9c46a', SOFT = '#e1e6f8', MUTE = '#a0afd7', RED = '#c60c30';
-  var ready = null;
+  var ready = null, LOGO = null, LOGO_IMG = null;
   function assets(){
     if(ready) return ready;
     var fonts = [new FontFace('LoraShare', 'url(fonts/lora.woff)', {weight:'400 700'}),
                  new FontFace('LoraShare', 'url(fonts/lora-italic.woff)', {weight:'400 700', style:'italic'})];
-    var img = new Image(); img.decoding = 'async';
-    var pic = new Promise(function(ok, no){ img.onload = function(){ ok(img); }; img.onerror = no; img.src = 'images/share-bg.webp'; });
-    ready = Promise.all(fonts.map(function(f){ return f.load().then(function(x){ document.fonts.add(x); }); })).then(function(){ return pic; });
+    function pic(src){ var img = new Image(); img.decoding = 'async';
+      return new Promise(function(ok, no){ img.onload = function(){ ok(img); }; img.onerror = no; img.src = src; }); }
+    var bg = pic('images/share-bg.webp');
+    LOGO = pic('images/logo.webp').catch(function(){ return null; }); // the card still works without the logo
+    ready = Promise.all(fonts.map(function(f){ return f.load().then(function(x){ document.fonts.add(x); }); })).then(function(){ return bg; })
+      .then(function(img){ return LOGO.then(function(l){ LOGO_IMG = l; return img; }); });
     ready.catch(function(){ ready = null; });
     return ready;
   }
@@ -42,11 +45,14 @@
     g.addColorStop(.5, 'rgba(4,14,48,0)'); g.addColorStop(.72, 'rgba(4,14,48,.82)'); g.addColorStop(1, 'rgba(4,14,48,.97)');
     c.fillStyle = g; c.fillRect(0, 0, W, H);
     c.textBaseline = 'top';
-    // Header: site name (left), chip (right)
-    c.fillStyle = 'rgba(255,255,255,.92)'; c.font = F(0, 600, 24);
-    if('letterSpacing' in c) c.letterSpacing = '3px';
-    c.fillText('JOSHUAPATRICKALLEN.COM', 56, 52);
-    if('letterSpacing' in c) c.letterSpacing = '0px';
+    // Header: NJA logo + site address (left), chip (right)
+    var tx = 56;
+    if(LOGO_IMG){ c.save(); c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = 16; c.shadowOffsetY = 4;
+      c.drawImage(LOGO_IMG, 40, 30, 112, 112); c.restore(); tx = 166; }
+    shadowed(c, function(){ c.fillStyle = '#fff'; c.font = F(0, 700, 26);
+      if('letterSpacing' in c) c.letterSpacing = '2px';
+      c.fillText('NOTJOSHINGAROUND.COM', tx, LOGO_IMG ? 73 : 52);
+      if('letterSpacing' in c) c.letterSpacing = '0px'; });
     if(d.chip){
       c.font = F(1, 700, 28); var cw = c.measureText(d.chip).width + 40, x1 = W - 56;
       c.fillStyle = RED; c.beginPath();

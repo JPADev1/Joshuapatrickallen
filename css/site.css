@@ -659,3 +659,8 @@ html.shr-open{overflow:hidden}
 .livebar .lwh .shr span{margin:0;opacity:1}
 .mtn-max.mtn-shr{left:54px;right:auto}
 .mtn-max.mtn-shr svg{stroke-width:2.4}
+/* NJA logo, top-left of the header */
+.hero{position:relative}
+.nja-brand{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));left:12px;z-index:5;width:52px;height:52px;border-radius:50%;box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.nja-brand img{display:block;width:100%;height:100%;border-radius:50%}
+@media (max-width:420px){.nja-brand{width:44px;height:44px}}

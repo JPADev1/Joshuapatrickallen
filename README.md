@@ -1,4 +1,4 @@
-# joshuapatrickallen.com
+# notjoshingaround.com
 
 Fan site tracking Josh Allen's stats and Bills franchise records.
 
