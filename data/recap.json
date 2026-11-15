@@ -6,23 +6,52 @@
  "allen": "11 of 21, 196 yards, 1 TD, 1 INT · 2 rushing TDs",
  "official": false,
  "items": [
-  {"tag": "NFL record", "scope": "nfl", "title": "Most total touchdowns in a player's first 10 seasons",
+  {
+   "tag": "NFL record",
+   "scope": "nfl",
+   "title": "Most total touchdowns in a player's first 10 seasons",
    "text": "He passed Peyton Manning (322), and he did it in his 9th season.",
-   "line": "3 total TDs at the Jets · 325 for his career"},
-  {"tag": "NFL first", "scope": "nfl", "title": "First QB with 11 rushing touchdowns through his team's first nine games",
+   "line": "3 total TDs at the Jets · 325 for his career"
+  },
+  {
+   "tag": "NFL record",
+   "scope": "nfl",
+   "title": "Most total touchdowns by a quarterback in his first 10 seasons",
+   "text": "Peyton Manning's 322 was also the quarterback mark. Allen has 325, in his 9th season.",
+   "line": "233 passing + 90 rushing + 2 receiving"
+  },
+  {
+   "tag": "NFL first",
+   "scope": "nfl",
+   "title": "First QB with 11 rushing touchdowns through his team's first nine games",
    "text": "His 10th and 11th rushing TDs of 2026 passed Kyler Murray's 10 in 2020.",
-   "line": "2 rushing TDs at the Jets"},
-  {"tag": "NFL record extended", "scope": "nfl", "title": "Games with a passing TD and a rushing TD",
+   "line": "2 rushing TDs at the Jets"
+  },
+  {
+   "tag": "NFL record extended",
+   "scope": "nfl",
+   "title": "Games with a passing TD and a rushing TD",
    "text": "His own record is now 56 games (regular season). Next closest: Cam Newton, 45.",
-   "line": "45-yard TD pass plus two 1-yard TD runs"},
-  {"tag": "NFL record extended", "scope": "nfl", "title": "Games in which two teammates each ran for a touchdown",
+   "line": "45-yard TD pass plus two 1-yard TD runs"
+  },
+  {
+   "tag": "NFL record extended",
+   "scope": "nfl",
+   "title": "Games in which two teammates each ran for a touchdown",
    "text": "Allen and James Cook made it 17. Next closest: Dak Prescott and Ezekiel Elliott, 15.",
-   "line": "Allen ran for two, Cook for a 74-yarder"},
-  {"tag": "Moved up", "title": "NFL career rushing touchdowns: tied for No. 14",
+   "line": "Allen ran for two, Cook for a 74-yarder"
+  },
+  {
+   "tag": "Moved up",
+   "title": "NFL career rushing touchdowns: tied for No. 14",
    "text": "He tied Curtis Martin and Eric Dickerson with 90, among all players, not just quarterbacks.",
-   "line": "One more ties Franco Harris and Jerome Bettis (91)"},
-  {"tag": "Moved up", "title": "NFL career passing yards: up to No. 51",
+   "line": "One more ties Franco Harris and Jerome Bettis (91)"
+  },
+  {
+   "tag": "Moved up",
+   "title": "NFL career passing yards: up to No. 51",
    "text": "He passed Sonny Jurgensen (32,224) and now has 32,325.",
-   "line": "Next up: Kurt Warner (32,344), 19 yards away"}
+   "line": "Next up: Kurt Warner (32,344), 19 yards away"
+  }
  ]
 }
