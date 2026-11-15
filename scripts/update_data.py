@@ -553,6 +553,33 @@ def ordinal(n):
     return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
 
 
+def add_extra_watch(w, allen, extra):
+    """Records added by hand in watch-extra.json (stats-data branch), each {title, k, target, goal, done, detail?, top?}.
+    k is a career stat (passTD, rushTD, totalTD, passYds, rushYds); target is the career total that sets the mark.
+    The item counts down live like the others, and drops off on its own once his official total reaches the target."""
+    if not extra or not extra.get("items"):
+        return
+    A, now = json.load(open(os.path.join(HERE, "watch_base.json")))["allen"], allen["now"]
+    cur = {"passYds": A["passYds"] + now["yds"], "passTD": A["passTD"] + now["td"], "rushTD": A["rushTD"] + now["rushTD"],
+           "rushYds": A["rushYds"] + now["rushYds"]}
+    cur["totalTD"] = cur["passTD"] + cur["rushTD"] + A["recTD"] + now.get("recTD", 0)
+    unit = {"passYds": ("passing yard", "passing yards"), "passTD": ("passing TD", "passing TDs"),
+            "rushYds": ("rushing yard", "rushing yards"), "rushTD": ("rushing TD", "rushing TDs"), "totalTD": ("total TD", "total TDs")}
+    add = []
+    for x in extra["items"]:
+        k = x.get("k")
+        if k not in cur or x.get("target") is None:
+            continue
+        need = int(x["target"]) - cur[k]
+        if need <= 0:
+            continue  # already his (official numbers)
+        it = {"title": x["title"], "k": k, "need": need, "goal": x["goal"], "done": x["done"],
+              "detail": x.get("detail") or f"Needs {need:,} {unit[k][0] if need == 1 else unit[k][1]} {x['goal']}. He has {cur[k]:,}."}
+        it["detail"] = it["detail"].replace("{need}", f"{need:,}").replace("{have}", f"{cur[k]:,}")
+        add.append((x.get("top", True), it))
+    w["items"] = [i for t, i in add if t] + w.get("items", []) + [i for t, i in add if not t]
+
+
 def build_watch(allen, ranks, week26, m):
     """Records Allen can realistically reach in the next game: only marks within his best single game."""
     W = json.load(open(os.path.join(HERE, "watch_base.json")))
@@ -1262,6 +1289,10 @@ def main():
                 print(f"records watch: holding on {held['game_id']} until Allen's official stats from it are in")
             else:
                 w = build_watch(allen, ranks, week26, m)
+            try:  # hand-added records (watch-extra.json on the stats-data branch; editing it never redeploys the site)
+                add_extra_watch(w, allen, load("watch-extra.json"))
+            except Exception as e:
+                print("extra watch items skipped:", e)
             m["watch"] = w
         except Exception as e:  # never let the watch list block the rest of the page
             print("records watch skipped:", e)
