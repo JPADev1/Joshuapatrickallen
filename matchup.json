@@ -1,297 +1,180 @@
 {
- "updated": "2026-11-15",
- "gameId": "2026_10_BUF_NYJ",
- "week": 10,
- "label": "Week 10",
+ "updated": "2026-11-16",
+ "gameId": "2026_11_MIA_BUF",
+ "week": 11,
+ "label": "Week 11",
  "bills": {
   "name": "Buffalo Bills",
-  "record": "7-1"
+  "record": "8-1"
  },
  "opp": {
-  "name": "New York Jets",
-  "abbr": "NYJ",
-  "nick": "Jets",
-  "record": "2-7"
+  "name": "Miami Dolphins",
+  "abbr": "MIA",
+  "nick": "Dolphins",
+  "record": "1-8"
  },
- "home": false,
- "gameday": "2026-11-15",
- "date": "Sunday, Nov. 15, 2026",
+ "home": true,
+ "gameday": "2026-11-22",
+ "date": "Sunday, Nov. 22, 2026",
  "time": "1:00 p.m. ET",
- "venue": "MetLife Stadium, East Rutherford",
+ "venue": "Highmark Stadium, Orchard Park",
  "tv": "CBS",
  "series": {
-  "summary": "Bills are 29-25 against the Jets in the regular season since 1999.",
-  "last": "Last meeting: Jan. 4, 2026, Bills 35, Jets 8."
+  "summary": "Bills are 34-20 against the Dolphins in the regular season since 1999.",
+  "last": "Last meeting: Nov. 9, 2025, Dolphins 30, Bills 13."
  },
  "injuries": {
-  "week": 10,
-  "bills": [
-   {
-    "name": "Spencer Brown",
-    "pos": "T",
-    "injury": "Ankle",
-    "status": "Doubtful",
-    "game": true
-   },
-   {
-    "name": "Christian Benford",
-    "pos": "CB",
-    "injury": "Wrist",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Jordan Hancock",
-    "pos": "CB",
-    "injury": "Hamstring",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Sam Franklin Jr.",
-    "pos": "S",
-    "injury": "Shoulder",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Tyrell Shavers",
-    "pos": "WR",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Ed Oliver",
-    "pos": "DE",
-    "injury": "Not injury related - resting player",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Terrel Bernard",
-    "pos": "LB",
-    "injury": "Not injury related - resting player",
-    "status": "DNP",
-    "game": false
-   }
-  ],
-  "opp": [
-   {
-    "name": "Trevin Wallace",
-    "pos": "LB",
-    "injury": "Groin",
-    "status": "Out",
-    "game": true
-   },
-   {
-    "name": "Adonai Mitchell",
-    "pos": "WR",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Garrett Wilson",
-    "pos": "WR",
-    "injury": "Concussion",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Harrison Phillips",
-    "pos": "DT",
-    "injury": "Ankle",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Jarvis Brownlee Jr.",
-    "pos": "CB",
-    "injury": "Illness",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Joseph Ossai",
-    "pos": "DE",
-    "injury": "Ankle",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Nahshon Wright",
-    "pos": "CB",
-    "injury": "Back",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "Omar Cooper Jr.",
-    "pos": "WR",
-    "injury": "Ankle",
-    "status": "Questionable",
-    "game": true
-   },
-   {
-    "name": "VJ Payne",
-    "pos": "S",
-    "injury": "Knee",
-    "status": "Questionable",
-    "game": true
-   }
-  ],
-  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed.",
-  "hash": "d0c46a21ae85",
-  "changed": "Sat. Nov. 14, 2:31 a.m. ET",
-  "changedIso": "2026-11-14T02:31-05:00"
+  "week": 11,
+  "bills": [],
+  "opp": [],
+  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed.",
+  "hash": "6146ae8aa29f",
+  "changed": "Sun. Nov. 15, 7:45 p.m. ET",
+  "changedIso": "2026-11-15T19:45-05:00"
  },
  "allenVs": {
-  "wins": 11,
-  "losses": 4,
-  "games": 15,
-  "cmp": 285,
-  "att": 451,
-  "yds": 3097,
-  "td": 16,
-  "int": 11,
-  "sacks": 28,
-  "rushAtt": 101,
-  "rushYds": 601,
-  "rushTD": 8,
-  "rating": 85.0,
-  "postWins": 0,
+  "wins": 13,
+  "losses": 3,
+  "games": 16,
+  "cmp": 366,
+  "att": 545,
+  "yds": 4256,
+  "td": 42,
+  "int": 9,
+  "sacks": 25,
+  "rushAtt": 97,
+  "rushYds": 703,
+  "rushTD": 5,
+  "rating": 109.4,
+  "postWins": 1,
   "postLosses": 0
  },
  "boxscores": [
   {
-   "gameId": "2025_18_NYJ_BUF",
-   "date": "Jan. 4, 2026",
-   "site": "Highmark Stadium, Orchard Park",
-   "week": "Week 18",
-   "teams": [
-    "Jets",
-    "Bills"
-   ],
-   "line": [
-    [
-     0,
-     0,
-     0,
-     8,
-     8
-    ],
-    [
-     7,
-     14,
-     8,
-     6,
-     35
-    ]
-   ],
-   "allen": "",
-   "bills": [
-    "Mitchell Trubisky: 22-29, 259 yds, 4 TD, 0 INT",
-    "Ray Davis: 21 carries, 151 yds",
-    "Ty Johnson: 13 carries, 36 yds, 1 TD",
-    "Keon Coleman: 2 rec, 49 yds",
-    "Dalton Kincaid: 3 rec, 48 yds",
-    "Gabe Davis: 5 rec, 41 yds, 1 TD"
-   ],
-   "opp": [
-    "Brady Cook: 11-22, 60 yds, 1 TD, 0 INT",
-    "Khalil Herbert: 12 carries, 42 yds",
-    "Kene Nwangwu: 7 carries, 18 yds",
-    "Isaiah Williams: 5 rec, 24 yds",
-    "John Metchie III: 3 rec, 20 yds",
-    "Quentin Skinner: 1 rec, 10 yds"
-   ],
-   "source": "nflverse"
-  },
-  {
-   "gameId": "2025_02_BUF_NYJ",
-   "date": "Sept. 14, 2025",
-   "site": "MetLife Stadium, East Rutherford",
-   "week": "Week 2",
+   "gameId": "2025_10_BUF_MIA",
+   "date": "Nov. 9, 2025",
+   "site": "Hard Rock Stadium, Miami Gardens",
+   "week": "Week 10",
    "teams": [
     "Bills",
-    "Jets"
+    "Dolphins"
    ],
    "line": [
     [
-     10,
-     10,
-     3,
-     7,
-     30
+     0,
+     0,
+     0,
+     13,
+     13
     ],
     [
-     0,
-     3,
-     0,
      7,
-     10
+     9,
+     0,
+     14,
+     30
     ]
    ],
-   "allen": "14-25, 148 yds, 0 TD, 0 INT, 1 sack, 73.4 rating. 6 carries, 59 yds.",
+   "allen": "28-40, 306 yds, 2 TD, 1 INT, 3 sacks, 98.5 rating. 4 carries, 31 yds.",
    "bills": [
-    "James Cook: 21 carries, 132 yds, 2 TD",
-    "Ray Davis: 9 carries, 24 yds",
-    "Josh Palmer: 2 rec, 47 yds",
-    "Dalton Kincaid: 4 rec, 37 yds",
-    "Elijah Moore: 1 rec, 31 yds"
+    "James Cook: 13 carries, 53 yds",
+    "Khalil Shakir: 7 rec, 58 yds",
+    "Keon Coleman: 3 rec, 46 yds, 1 TD",
+    "Dawson Knox: 3 rec, 37 yds"
    ],
    "opp": [
-    "Tyrod Taylor: 7-11, 56 yds, 1 TD, 0 INT",
-    "Justin Fields: 3-11, 27 yds, 0 TD, 0 INT",
-    "Breece Hall: 10 carries, 29 yds",
-    "Garrett Wilson: 4 rec, 50 yds",
-    "Breece Hall: 2 rec, 9 yds",
-    "Arian Smith: 1 rec, 8 yds"
+    "Tua Tagovailoa: 15-21, 173 yds, 2 TD, 2 INT",
+    "De'Von Achane: 22 carries, 174 yds, 2 TD",
+    "Jaylen Wright: 5 carries, 17 yds",
+    "Jaylen Waddle: 5 rec, 84 yds, 1 TD",
+    "De'Von Achane: 6 rec, 51 yds",
+    "Greg Dulcich: 1 rec, 22 yds"
    ],
    "source": "nflverse"
   },
   {
-   "gameId": "2024_17_NYJ_BUF",
-   "date": "Dec. 29, 2024",
+   "gameId": "2025_03_MIA_BUF",
+   "date": "Sept. 18, 2025",
    "site": "Highmark Stadium, Orchard Park",
-   "week": "Week 17",
+   "week": "Week 3",
    "teams": [
-    "Jets",
+    "Dolphins",
     "Bills"
    ],
    "line": [
     [
+     7,
+     7,
      0,
-     0,
-     0,
-     14,
-     14
+     7,
+     21
     ],
     [
      7,
-     5,
-     21,
      7,
-     40
+     7,
+     10,
+     31
     ]
    ],
-   "allen": "16-27, 182 yds, 2 TD, 0 INT, 0 sacks, 104.2 rating. 5 carries, 17 yds, 1 TD.",
+   "allen": "22-28, 213 yds, 3 TD, 0 INT, 2 sacks, 134.1 rating. 4 carries, 25 yds.",
    "bills": [
-    "James Cook: 15 carries, 53 yds, 1 TD",
-    "Ty Johnson: 4 carries, 16 yds",
-    "Tyrell Shavers: 1 rec, 69 yds, 1 TD",
-    "Amari Cooper: 3 rec, 56 yds, 1 TD",
-    "Mack Hollins: 2 rec, 33 yds"
+    "James Cook: 19 carries, 108 yds, 1 TD",
+    "Ty Johnson: 3 carries, 13 yds",
+    "Dalton Kincaid: 5 rec, 66 yds, 1 TD",
+    "Khalil Shakir: 4 rec, 45 yds, 1 TD",
+    "Elijah Moore: 2 rec, 30 yds"
    ],
    "opp": [
-    "Aaron Rodgers: 12-18, 112 yds, 0 TD, 2 INT",
-    "Tyrod Taylor: 11-14, 83 yds, 2 TD, 0 INT",
-    "Breece Hall: 10 carries, 45 yds",
-    "Isaiah Davis: 3 carries, 35 yds",
-    "Garrett Wilson: 7 rec, 66 yds, 1 TD",
-    "Tyler Conklin: 8 rec, 57 yds, 1 TD",
-    "Davante Adams: 5 rec, 47 yds"
+    "Tua Tagovailoa: 22-34, 146 yds, 2 TD, 1 INT",
+    "De'Von Achane: 12 carries, 62 yds",
+    "Ollie Gordon II: 9 carries, 38 yds, 1 TD",
+    "Tyreek Hill: 5 rec, 49 yds, 1 TD",
+    "Jaylen Waddle: 5 rec, 39 yds, 1 TD",
+    "De'Von Achane: 7 rec, 29 yds"
+   ],
+   "source": "nflverse"
+  },
+  {
+   "gameId": "2024_09_MIA_BUF",
+   "date": "Nov. 3, 2024",
+   "site": "Highmark Stadium, Orchard Park",
+   "week": "Week 9",
+   "teams": [
+    "Dolphins",
+    "Bills"
+   ],
+   "line": [
+    [
+     3,
+     7,
+     3,
+     14,
+     27
+    ],
+    [
+     3,
+     3,
+     14,
+     10,
+     30
+    ]
+   ],
+   "allen": "25-39, 235 yds, 3 TD, 1 INT, 1 sack, 95.6 rating. 2 carries, 7 yds.",
+   "bills": [
+    "James Cook: 10 carries, 44 yds",
+    "Ty Johnson: 3 carries, 23 yds",
+    "Ray Davis: 2 rec, 70 yds, 1 TD",
+    "Khalil Shakir: 6 rec, 50 yds",
+    "Dalton Kincaid: 4 rec, 32 yds"
+   ],
+   "opp": [
+    "Tua Tagovailoa: 25-28, 231 yds, 2 TD, 0 INT",
+    "De'Von Achane: 12 carries, 63 yds, 1 TD",
+    "Raheem Mostert: 10 carries, 56 yds",
+    "Tyreek Hill: 4 rec, 80 yds",
+    "De'Von Achane: 8 rec, 58 yds, 1 TD",
+    "Jonnu Smith: 5 rec, 46 yds"
    ],
    "source": "nflverse"
   }
@@ -301,52 +184,16 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2018_14_NYJ_BUF",
+    "game_id": "2018_13_BUF_MIA",
     "team": "BUF",
     "completions": "18",
-    "attempts": "36",
-    "passing_yards": "206",
-    "passing_tds": "0",
+    "attempts": "33",
+    "passing_yards": "231",
+    "passing_tds": "2",
     "passing_interceptions": "2",
-    "sacks_suffered": "3",
+    "sacks_suffered": "2",
     "carries": "9",
-    "rushing_yards": "101",
-    "rushing_tds": "1",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2019_01_BUF_NYJ",
-    "team": "BUF",
-    "completions": "24",
-    "attempts": "37",
-    "passing_yards": "254",
-    "passing_tds": "1",
-    "passing_interceptions": "2",
-    "sacks_suffered": "1",
-    "carries": "10",
-    "rushing_yards": "38",
-    "rushing_tds": "1",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2019_17_NYJ_BUF",
-    "team": "BUF",
-    "completions": "3",
-    "attempts": "5",
-    "passing_yards": "5",
-    "passing_tds": "0",
-    "passing_interceptions": "0",
-    "sacks_suffered": "0",
-    "carries": "0",
-    "rushing_yards": "0",
+    "rushing_yards": "135",
     "rushing_tds": "0",
     "receptions": "0",
     "receiving_yards": "0",
@@ -355,34 +202,34 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2020_01_NYJ_BUF",
+    "game_id": "2018_17_MIA_BUF",
     "team": "BUF",
-    "completions": "33",
-    "attempts": "46",
-    "passing_yards": "312",
+    "completions": "17",
+    "attempts": "26",
+    "passing_yards": "224",
+    "passing_tds": "3",
+    "passing_interceptions": "1",
+    "sacks_suffered": "1",
+    "carries": "9",
+    "rushing_yards": "95",
+    "rushing_tds": "2",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2019_07_MIA_BUF",
+    "team": "BUF",
+    "completions": "16",
+    "attempts": "26",
+    "passing_yards": "202",
     "passing_tds": "2",
     "passing_interceptions": "0",
-    "sacks_suffered": "3",
-    "carries": "14",
-    "rushing_yards": "57",
-    "rushing_tds": "1",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2020_07_BUF_NYJ",
-    "team": "BUF",
-    "completions": "30",
-    "attempts": "43",
-    "passing_yards": "307",
-    "passing_tds": "0",
-    "passing_interceptions": "0",
     "sacks_suffered": "2",
-    "carries": "11",
-    "rushing_yards": "61",
+    "carries": "4",
+    "rushing_yards": "32",
     "rushing_tds": "0",
     "receptions": "0",
     "receiving_yards": "0",
@@ -391,14 +238,50 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2021_10_BUF_NYJ",
+    "game_id": "2019_11_BUF_MIA",
     "team": "BUF",
     "completions": "21",
-    "attempts": "28",
-    "passing_yards": "366",
-    "passing_tds": "2",
+    "attempts": "33",
+    "passing_yards": "256",
+    "passing_tds": "3",
+    "passing_interceptions": "0",
+    "sacks_suffered": "0",
+    "carries": "7",
+    "rushing_yards": "56",
+    "rushing_tds": "1",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2020_02_BUF_MIA",
+    "team": "BUF",
+    "completions": "24",
+    "attempts": "35",
+    "passing_yards": "415",
+    "passing_tds": "4",
+    "passing_interceptions": "0",
+    "sacks_suffered": "1",
+    "carries": "4",
+    "rushing_yards": "19",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2020_17_MIA_BUF",
+    "team": "BUF",
+    "completions": "18",
+    "attempts": "25",
+    "passing_yards": "224",
+    "passing_tds": "3",
     "passing_interceptions": "1",
-    "sacks_suffered": "2",
+    "sacks_suffered": "1",
     "carries": "2",
     "rushing_yards": "3",
     "rushing_tds": "0",
@@ -409,88 +292,16 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2021_18_NYJ_BUF",
+    "game_id": "2021_02_BUF_MIA",
     "team": "BUF",
-    "completions": "24",
-    "attempts": "45",
-    "passing_yards": "239",
+    "completions": "17",
+    "attempts": "33",
+    "passing_yards": "179",
     "passing_tds": "2",
-    "passing_interceptions": "0",
-    "sacks_suffered": "0",
-    "carries": "5",
-    "rushing_yards": "63",
-    "rushing_tds": "0",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2022_09_BUF_NYJ",
-    "team": "BUF",
-    "completions": "18",
-    "attempts": "34",
-    "passing_yards": "205",
-    "passing_tds": "0",
-    "passing_interceptions": "2",
-    "sacks_suffered": "5",
-    "carries": "9",
-    "rushing_yards": "86",
-    "rushing_tds": "2",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2022_14_NYJ_BUF",
-    "team": "BUF",
-    "completions": "16",
-    "attempts": "27",
-    "passing_yards": "147",
-    "passing_tds": "1",
-    "passing_interceptions": "0",
-    "sacks_suffered": "3",
-    "carries": "10",
-    "rushing_yards": "47",
-    "rushing_tds": "1",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2023_01_BUF_NYJ",
-    "team": "BUF",
-    "completions": "29",
-    "attempts": "41",
-    "passing_yards": "236",
-    "passing_tds": "1",
-    "passing_interceptions": "3",
-    "sacks_suffered": "5",
-    "carries": "6",
-    "rushing_yards": "36",
-    "rushing_tds": "0",
-    "receptions": "0",
-    "receiving_yards": "0",
-    "receiving_tds": "0"
-   },
-   {
-    "player_id": "00-0034857",
-    "player_display_name": "Josh Allen",
-    "game_id": "2023_11_NYJ_BUF",
-    "team": "BUF",
-    "completions": "20",
-    "attempts": "32",
-    "passing_yards": "275",
-    "passing_tds": "3",
     "passing_interceptions": "1",
     "sacks_suffered": "1",
     "carries": "5",
-    "rushing_yards": "15",
+    "rushing_yards": "35",
     "rushing_tds": "0",
     "receptions": "0",
     "receiving_yards": "0",
@@ -499,16 +310,16 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2024_06_BUF_NYJ",
+    "game_id": "2021_08_MIA_BUF",
     "team": "BUF",
-    "completions": "19",
-    "attempts": "25",
-    "passing_yards": "215",
+    "completions": "29",
+    "attempts": "42",
+    "passing_yards": "249",
     "passing_tds": "2",
     "passing_interceptions": "0",
-    "sacks_suffered": "2",
-    "carries": "9",
-    "rushing_yards": "18",
+    "sacks_suffered": "0",
+    "carries": "8",
+    "rushing_yards": "55",
     "rushing_tds": "1",
     "receptions": "0",
     "receiving_yards": "0",
@@ -517,15 +328,69 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2024_17_NYJ_BUF",
+    "game_id": "2022_03_BUF_MIA",
     "team": "BUF",
-    "completions": "16",
-    "attempts": "27",
-    "passing_yards": "182",
+    "completions": "42",
+    "attempts": "63",
+    "passing_yards": "400",
     "passing_tds": "2",
     "passing_interceptions": "0",
-    "sacks_suffered": "0",
-    "carries": "5",
+    "sacks_suffered": "4",
+    "carries": "8",
+    "rushing_yards": "47",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2022_15_MIA_BUF",
+    "team": "BUF",
+    "completions": "25",
+    "attempts": "40",
+    "passing_yards": "304",
+    "passing_tds": "4",
+    "passing_interceptions": "0",
+    "sacks_suffered": "2",
+    "carries": "10",
+    "rushing_yards": "77",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2022_19_MIA_BUF",
+    "team": "BUF",
+    "completions": "23",
+    "attempts": "39",
+    "passing_yards": "352",
+    "passing_tds": "3",
+    "passing_interceptions": "2",
+    "sacks_suffered": "7",
+    "carries": "4",
+    "rushing_yards": "20",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2023_04_MIA_BUF",
+    "team": "BUF",
+    "completions": "21",
+    "attempts": "25",
+    "passing_yards": "320",
+    "passing_tds": "4",
+    "passing_interceptions": "0",
+    "sacks_suffered": "2",
+    "carries": "4",
     "rushing_yards": "17",
     "rushing_tds": "1",
     "receptions": "0",
@@ -535,16 +400,88 @@
    {
     "player_id": "00-0034857",
     "player_display_name": "Josh Allen",
-    "game_id": "2025_02_BUF_NYJ",
+    "game_id": "2023_18_BUF_MIA",
     "team": "BUF",
-    "completions": "14",
-    "attempts": "25",
-    "passing_yards": "148",
-    "passing_tds": "0",
+    "completions": "30",
+    "attempts": "38",
+    "passing_yards": "359",
+    "passing_tds": "2",
+    "passing_interceptions": "2",
+    "sacks_suffered": "3",
+    "carries": "15",
+    "rushing_yards": "67",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2024_02_BUF_MIA",
+    "team": "BUF",
+    "completions": "13",
+    "attempts": "19",
+    "passing_yards": "139",
+    "passing_tds": "1",
     "passing_interceptions": "0",
+    "sacks_suffered": "0",
+    "carries": "2",
+    "rushing_yards": "2",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2024_09_MIA_BUF",
+    "team": "BUF",
+    "completions": "25",
+    "attempts": "39",
+    "passing_yards": "235",
+    "passing_tds": "3",
+    "passing_interceptions": "1",
     "sacks_suffered": "1",
-    "carries": "6",
-    "rushing_yards": "59",
+    "carries": "2",
+    "rushing_yards": "7",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2025_03_MIA_BUF",
+    "team": "BUF",
+    "completions": "22",
+    "attempts": "28",
+    "passing_yards": "213",
+    "passing_tds": "3",
+    "passing_interceptions": "0",
+    "sacks_suffered": "2",
+    "carries": "4",
+    "rushing_yards": "25",
+    "rushing_tds": "0",
+    "receptions": "0",
+    "receiving_yards": "0",
+    "receiving_tds": "0"
+   },
+   {
+    "player_id": "00-0034857",
+    "player_display_name": "Josh Allen",
+    "game_id": "2025_10_BUF_MIA",
+    "team": "BUF",
+    "completions": "28",
+    "attempts": "40",
+    "passing_yards": "306",
+    "passing_tds": "2",
+    "passing_interceptions": "1",
+    "sacks_suffered": "3",
+    "carries": "4",
+    "rushing_yards": "31",
     "rushing_tds": "0",
     "receptions": "0",
     "receiving_yards": "0",
@@ -554,7 +491,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 15, 2026",
+  "asOf": "Nov. 16, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -563,11 +500,11 @@
     "dec": 0,
     "bills": {
      "v": 32,
-     "rank": 2
+     "rank": 1
     },
     "opp": {
-     "v": 20,
-     "rank": 25
+     "v": 16,
+     "rank": 30
     }
    },
    {
@@ -575,12 +512,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 23,
+     "v": 22,
      "rank": 15
     },
     "opp": {
      "v": 25,
-     "rank": 18
+     "rank": 21
     }
    },
    {
@@ -588,12 +525,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 253,
-     "rank": 12
+     "v": 247,
+     "rank": 14
     },
     "opp": {
-     "v": 231,
-     "rank": 21
+     "v": 187,
+     "rank": 29
     }
    },
    {
@@ -601,12 +538,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 253,
+     "v": 256,
      "rank": 27
     },
     "opp": {
      "v": 212,
-     "rank": 5
+     "rank": 6
     }
    },
    {
@@ -614,12 +551,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 147,
+     "v": 153,
      "rank": 2
     },
     "opp": {
-     "v": 105,
-     "rank": 20
+     "v": 113,
+     "rank": 16
     }
    },
    {
@@ -627,12 +564,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 92,
-     "rank": 7
+     "v": 94,
+     "rank": 8
     },
     "opp": {
-     "v": 128,
-     "rank": 26
+     "v": 118,
+     "rank": 17
     }
    },
    {
@@ -640,12 +577,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 17,
-     "rank": 14
+     "v": 18,
+     "rank": 12
     },
     "opp": {
-     "v": 28,
-     "rank": 27
+     "v": 27,
+     "rank": 25
     }
    },
    {
@@ -653,12 +590,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 17,
-     "rank": 16
+     "v": 21,
+     "rank": 12
     },
     "opp": {
-     "v": 22,
-     "rank": 13
+     "v": 13,
+     "rank": 32
     }
    },
    {
@@ -666,12 +603,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 6,
-     "rank": 16
+     "v": 7,
+     "rank": 20
     },
     "opp": {
-     "v": 3,
-     "rank": 3
+     "v": 6,
+     "rank": 12
     }
    },
    {
@@ -679,78 +616,78 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 6,
-     "rank": 14
+     "v": 7,
+     "rank": 11
     },
     "opp": {
-     "v": 1,
-     "rank": 32
+     "v": 7,
+     "rank": 11
     }
    }
   ]
  },
  "colors": {
   "bills": "#00338D",
-  "opp": "#003F2D"
+  "opp": "#008E97"
  },
  "oppSeason": [
   {
    "week": 1,
-   "opp": "Titans",
+   "opp": "Raiders",
    "home": false,
-   "result": "W 23-10"
+   "result": "L 13-27"
   },
   {
    "week": 2,
-   "opp": "Packers",
-   "home": true,
-   "result": "L 17-20"
+   "opp": "49ers",
+   "home": false,
+   "result": "L 13-35"
   },
   {
    "week": 3,
-   "opp": "Lions",
-   "home": false,
-   "result": "L 24-31"
+   "opp": "Chiefs",
+   "home": true,
+   "result": "L 10-24"
   },
   {
    "week": 4,
-   "opp": "Bears",
+   "opp": "Vikings",
    "home": false,
-   "result": "L 12-23"
+   "result": "L 10-15"
   },
   {
    "week": 5,
-   "opp": "Browns",
+   "opp": "Bengals",
    "home": true,
-   "result": "W 17-12"
-  },
-  {
-   "week": 6,
-   "opp": "Patriots",
-   "home": false,
-   "result": "L 19-26"
+   "result": "L 24-31"
   },
   {
    "week": 7,
-   "opp": "Dolphins",
-   "home": true,
-   "result": "L 25-28"
+   "opp": "Jets",
+   "home": false,
+   "result": "W 28-25"
   },
   {
    "week": 8,
-   "opp": "Raiders",
+   "opp": "Patriots",
    "home": true,
-   "result": "L 33-38"
+   "result": "L 19-24"
   },
   {
    "week": 9,
-   "opp": "Chiefs",
+   "opp": "Lions",
+   "home": true,
+   "result": "L 9-19"
+  },
+  {
+   "week": 10,
+   "opp": "Colts",
    "home": false,
-   "result": "L 12-35"
+   "result": "L 22-24"
   }
  ],
  "watch": {
-  "asOf": "Nov. 15, 2026",
+  "asOf": "Nov. 16, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -758,133 +695,125 @@
    "rushTD": 3,
    "totalTD": 6
   },
-  "gameday": "2026-11-15",
-  "gameId": "2026_10_BUF_NYJ",
-  "opp": "Jets",
-  "home": false,
+  "gameday": "2026-11-22",
+  "gameId": "2026_11_MIA_BUF",
+  "opp": "Dolphins",
+  "home": true,
   "items": [
    {
-    "title": "NFL record: most total TDs in a player's first 10 seasons",
-    "k": "totalTD",
-    "need": 1,
-    "goal": "to pass Peyton Manning (322) for the most total TDs in a player's first 10 seasons",
-    "done": "He passed Peyton Manning (322) for the most total TDs in a player's first 10 seasons, and he did it in his 9th.",
-    "detail": "Needs 1 total TD (passing, rushing or receiving). He has 322 in his 9th season; Peyton Manning had 322 through his first 10, the most by anyone."
-   },
-   {
     "title": "NFL career passing yards",
-    "detail": "Needs 95 passing yards (career high in a game: 424). Ties Sonny Jurgensen (32,224) for No. 51; 96 passes him.",
+    "detail": "Needs 19 passing yards (career high in a game: 424). Ties Kurt Warner (32,344) for No. 50; 20 passes him.",
     "k": "passYds",
-    "need": 95,
-    "goal": "to tie Sonny Jurgensen (32,224) for No. 51",
-    "done": "He tied Sonny Jurgensen (32,224) for No. 51.",
+    "need": 19,
+    "goal": "to tie Kurt Warner (32,344) for No. 50",
+    "done": "He tied Kurt Warner (32,344) for No. 50.",
     "next": [
-     {
-      "who": "Kurt Warner (32,344)",
-      "spot": 50,
-      "tie": 215,
-      "pass": 216
-     },
      {
       "who": "Cam Newton (32,382)",
       "spot": 49,
-      "tie": 253,
-      "pass": 254
+      "tie": 57,
+      "pass": 58
      },
      {
       "who": "the No. 48 mark (32,838)",
       "spot": 48,
-      "tie": 709,
-      "pass": 710
+      "tie": 513,
+      "pass": 514
+     },
+     {
+      "who": "the No. 47 mark (32,942)",
+      "spot": 47,
+      "tie": 617,
+      "pass": 618
      }
     ],
-    "need2": 96,
+    "need2": 20,
     "goal2": "to pass him",
-    "done2": "He passed Sonny Jurgensen (32,224) and moved up to No. 51."
-   },
-   {
-    "title": "NFL record: games with a passing TD and a rushing TD",
-    "detail": "Needs at least one of each to extend his record to 56 (regular season). Next closest: Cam Newton, 45.",
-    "k": "both",
-    "need": 1,
-    "goal": "to extend his record to 56",
-    "ctx": "Next closest: Cam Newton, 45.",
-    "done": "Record extended to 56 games (regular season). Next closest: Cam Newton, 45."
+    "done2": "He passed Kurt Warner (32,344) and moved up to No. 50."
    },
    {
     "title": "NFL career passing touchdowns",
-    "detail": "Needs 2 passing TDs (career high in a game: 5). Ties Donovan McNabb (234) for No. 38; 3 passes him.",
+    "detail": "Needs 1 passing TD (career high in a game: 5). Ties Donovan McNabb (234) for No. 38; 2 passes him.",
     "k": "passTD",
-    "need": 2,
+    "need": 1,
     "goal": "to tie Donovan McNabb (234) for No. 38",
     "done": "He tied Donovan McNabb (234) for No. 38.",
     "next": [
      {
       "who": "the No. 37 mark (236)",
       "spot": 37,
-      "tie": 4,
-      "pass": 5
-     },
-     {
-      "who": "Jim Kelly (237)",
-      "spot": 36,
-      "tie": 5,
-      "pass": 6
-     },
-     {
-      "who": "the No. 35 mark (239)",
-      "spot": 35,
-      "tie": 7,
-      "pass": 8
-     }
-    ],
-    "need2": 3,
-    "goal2": "to pass him",
-    "done2": "He passed Donovan McNabb (234) and moved up to No. 38."
-   },
-   {
-    "title": "Record against the Jets",
-    "detail": "A win makes him 12-4 as a starter against them in the regular season.",
-    "k": "win",
-    "need": 1,
-    "goal": "to go 12-4 against them",
-    "done": "Win! He's 12-4 as a starter against the Jets in the regular season."
-   },
-   {
-    "title": "NFL career rushing touchdowns",
-    "detail": "Needs 2 rushing TDs (career high in a game: 3). Ties Curtis Martin and Eric Dickerson (90) for No. 14; 3 passes them.",
-    "k": "rushTD",
-    "need": 2,
-    "goal": "to tie Curtis Martin and Eric Dickerson (90) for No. 14",
-    "done": "He tied Curtis Martin and Eric Dickerson (90) for No. 14.",
-    "next": [
-     {
-      "who": "Franco Harris and Jerome Bettis (91)",
-      "spot": 12,
       "tie": 3,
       "pass": 4
      },
      {
+      "who": "Jim Kelly (237)",
+      "spot": 36,
+      "tie": 4,
+      "pass": 5
+     },
+     {
+      "who": "the No. 35 mark (239)",
+      "spot": 35,
+      "tie": 6,
+      "pass": 7
+     }
+    ],
+    "need2": 2,
+    "goal2": "to pass him",
+    "done2": "He passed Donovan McNabb (234) and moved up to No. 38."
+   },
+   {
+    "title": "NFL career rushing touchdowns",
+    "detail": "Needs 1 rushing TD (career high in a game: 3). Ties Franco Harris and Jerome Bettis (91) for No. 12; 2 passes them.",
+    "k": "rushTD",
+    "need": 1,
+    "goal": "to tie Franco Harris and Jerome Bettis (91) for No. 12",
+    "done": "He tied Franco Harris and Jerome Bettis (91) for No. 12.",
+    "next": [
+     {
       "who": "the No. 11 mark (99)",
       "spot": 11,
-      "tie": 11,
-      "pass": 12
+      "tie": 9,
+      "pass": 10
      },
      {
       "who": "the No. 9 mark (100)",
       "spot": 9,
-      "tie": 12,
-      "pass": 13
+      "tie": 10,
+      "pass": 11
+     },
+     {
+      "who": "the No. 8 mark (104)",
+      "spot": 8,
+      "tie": 14,
+      "pass": 15
      }
     ],
-    "need2": 3,
+    "need2": 2,
     "goal2": "to pass them",
-    "done2": "He passed Curtis Martin and Eric Dickerson (90) and moved up to No. 14."
+    "done2": "He passed Franco Harris and Jerome Bettis (91) and moved up to No. 12."
+   },
+   {
+    "title": "NFL record: games with a passing TD and a rushing TD",
+    "detail": "Needs at least one of each to extend his record to 57 (regular season). Next closest: Cam Newton, 45.",
+    "k": "both",
+    "need": 1,
+    "goal": "to extend his record to 57",
+    "ctx": "Next closest: Cam Newton, 45.",
+    "done": "Record extended to 57 games (regular season). Next closest: Cam Newton, 45."
+   },
+   {
+    "title": "Record against the Dolphins",
+    "detail": "A win makes him 14-3 as a starter against them in the regular season.",
+    "k": "win",
+    "need": 1,
+    "goal": "to go 14-3 against them",
+    "done": "Win! He's 14-3 as a starter against the Dolphins in the regular season."
    }
   ]
  },
  "props": {
-  "asOf": "Nov. 15, 2026",
+  "asOf": "Nov. 16, 2026",
   "items": [
    {
     "team": "BUF",
@@ -926,6 +855,10 @@
      {
       "wk": 9,
       "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
      }
     ],
     "vals": [
@@ -936,38 +869,274 @@
      111,
      95,
      80,
-     107
+     107,
+     157
     ],
     "ladder": [
      {
       "line": 50,
-      "hit": 8,
+      "hit": 9,
       "stars": 5.0
      }
     ],
     "extra": [
      {
       "line": 60,
-      "hit": 7
+      "hit": 8
      },
      {
       "line": 70,
-      "hit": 7
+      "hit": 8
      }
     ],
     "next": {
      "line": 80,
+     "hit": 7
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 50+ in all 9 games.",
+     "Averages 107.9 rushing yards a game (median 107).",
+     "Steady workload: 20.8 carries a game.",
+     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game."
+    ],
+    "cons": [
+     "The next line up (80+) hit only 7 of 9, so the margin isn't huge."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
+     },
+     {
+      "wk": 9,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
+     }
+    ],
+    "vals": [
+     6,
+     14,
+     8,
+     5,
+     10,
+     5,
+     7,
+     6,
+     5
+    ],
+    "ladder": [
+     {
+      "line": 4,
+      "hit": 9,
+      "stars": 5.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 6,
      "hit": 6
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 50+ in all 8 games.",
-     "Averages 101.8 rushing yards a game (median 101).",
-     "Steady workload: 21.1 carries a game.",
-     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game."
+     "Cleared 4+ in all 9 games.",
+     "Averages 7.3 rushing attempts a game (median 6).",
+     "Even his lowest game (5 vs NE) cleared it comfortably.",
+     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game."
     ],
     "cons": [
-     "The next line up (80+) hit only 6 of 8, so the margin isn't huge."
+     "Swingy: anywhere from 5 to 14 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIA",
+    "nick": "Dolphins",
+    "player": "Caleb Douglas",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@LV"
+     },
+     {
+      "wk": 2,
+      "opp": "@SF"
+     },
+     {
+      "wk": 7,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 8,
+      "opp": "NE"
+     },
+     {
+      "wk": 9,
+      "opp": "DET"
+     },
+     {
+      "wk": 10,
+      "opp": "@IND"
+     }
+    ],
+    "vals": [
+     5,
+     2,
+     2,
+     4,
+     6,
+     3
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 3,
+     "hit": 4
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 2+ in all 6 games.",
+     "Averages 3.7 receptions a game (median 3.5).",
+     "Steady volume: 5.8 targets a game.",
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 2 vs SF in Week 2.",
+     "Swingy: anywhere from 2 to 6 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIA",
+    "nick": "Dolphins",
+    "player": "Malik Washington",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receiving yards",
+    "key": "recYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@LV"
+     },
+     {
+      "wk": 2,
+      "opp": "@SF"
+     },
+     {
+      "wk": 3,
+      "opp": "KC"
+     },
+     {
+      "wk": 4,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 5,
+      "opp": "CIN"
+     },
+     {
+      "wk": 7,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 8,
+      "opp": "NE"
+     },
+     {
+      "wk": 9,
+      "opp": "DET"
+     },
+     {
+      "wk": 10,
+      "opp": "@IND"
+     }
+    ],
+    "vals": [
+     53,
+     43,
+     56,
+     67,
+     43,
+     27,
+     40,
+     21,
+     50
+    ],
+    "ladder": [
+     {
+      "line": 20,
+      "hit": 9,
+      "stars": 5.0
+     }
+    ],
+    "extra": [
+     {
+      "line": 25,
+      "hit": 8
+     }
+    ],
+    "next": {
+     "line": 30,
+     "hit": 7
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 20+ in all 9 games.",
+     "Averages 44.4 receiving yards a game (median 43).",
+     "Steady volume: 5.7 targets a game.",
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
+    ],
+    "cons": [
+     "Closest call: 21 vs DET in Week 9.",
+     "Swingy: anywhere from 21 to 67 this season."
     ],
     "status": ""
    },
@@ -1011,6 +1180,10 @@
      {
       "wk": 9,
       "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
      }
     ],
     "vals": [
@@ -1021,30 +1194,31 @@
      25,
      22,
      21,
-     31
+     31,
+     18
     ],
     "ladder": [
      {
       "line": 10,
-      "hit": 8,
+      "hit": 9,
       "stars": 5.0
      },
      {
       "line": 12,
-      "hit": 8,
-      "stars": 5.0
+      "hit": 9,
+      "stars": 4.5
      }
     ],
     "extra": [],
     "next": {
      "line": 15,
-     "hit": 6
+     "hit": 7
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 12+ in all 8 games.",
-     "Averages 21.1 rushing attempts a game (median 21.5).",
-     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game."
+     "Cleared 12+ in all 9 games.",
+     "Averages 20.8 rushing attempts a game (median 21).",
+     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game."
     ],
     "cons": [
      "Closest call: 12 vs NE in Week 4."
@@ -1052,328 +1226,89 @@
     "status": ""
    },
    {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     }
-    ],
-    "vals": [
-     6,
-     14,
-     8,
-     5,
-     10,
-     5,
-     7,
-     6
-    ],
-    "ladder": [
-     {
-      "line": 4,
-      "hit": 8,
-      "stars": 5.0
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 6,
-     "hit": 6
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 4+ in all 8 games.",
-     "Averages 7.6 rushing attempts a game (median 6.5).",
-     "Even his lowest game (5 vs NE) cleared it comfortably.",
-     "The Jets rank 26th of 32 against the run, allowing 128 rushing yards a game."
-    ],
-    "cons": [
-     "Swingy: anywhere from 5 to 14 this season."
-    ],
-    "status": ""
-   },
-   {
-    "team": "NYJ",
-    "nick": "Jets",
-    "player": "Breece Hall",
-    "pos": "RB",
+    "team": "MIA",
+    "nick": "Dolphins",
+    "player": "Malik Washington",
+    "pos": "WR",
     "cat": "Receiving",
     "market": "Receptions",
     "key": "rec",
     "games": [
      {
       "wk": 1,
-      "opp": "@TEN"
+      "opp": "@LV"
      },
      {
       "wk": 2,
-      "opp": "GB"
+      "opp": "@SF"
      },
      {
       "wk": 3,
-      "opp": "@DET"
+      "opp": "KC"
+     },
+     {
+      "wk": 4,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 5,
+      "opp": "CIN"
+     },
+     {
+      "wk": 7,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 8,
+      "opp": "NE"
      },
      {
       "wk": 9,
-      "opp": "@KC"
+      "opp": "DET"
+     },
+     {
+      "wk": 10,
+      "opp": "@IND"
      }
     ],
     "vals": [
-     2,
-     5,
      3,
+     4,
+     5,
+     5,
+     6,
+     3,
+     5,
+     2,
      3
     ],
     "ladder": [
      {
       "line": 2,
-      "hit": 4,
+      "hit": 9,
       "stars": 4.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 3,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 2+ in all 4 games.",
-     "Averages 3.2 receptions a game (median 3).",
-     "The Bills rank 27th of 32 against the pass, allowing 253 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 2 vs TEN in Week 1.",
-     "Small sample: 4 games."
-    ],
-    "status": ""
-   },
-   {
-    "team": "NYJ",
-    "nick": "Jets",
-    "player": "Breece Hall",
-    "pos": "RB",
-    "cat": "Receiving",
-    "market": "Receiving yards",
-    "key": "recYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@TEN"
-     },
-     {
-      "wk": 2,
-      "opp": "GB"
-     },
-     {
-      "wk": 3,
-      "opp": "@DET"
-     },
-     {
-      "wk": 9,
-      "opp": "@KC"
-     }
-    ],
-    "vals": [
-     16,
-     63,
-     23,
-     26
-    ],
-    "ladder": [
-     {
-      "line": 15,
-      "hit": 4,
-      "stars": 4.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 20,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 15+ in all 4 games.",
-     "Averages 32.0 receiving yards a game (median 24.5).",
-     "The Bills rank 27th of 32 against the pass, allowing 253 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 16 vs TEN in Week 1.",
-     "Swingy: anywhere from 16 to 63 this season.",
-     "Small sample: 4 games."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Completions",
-    "key": "cmp",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     }
-    ],
-    "vals": [
-     20,
-     20,
-     16,
-     23,
-     12,
-     23,
-     21,
-     21
-    ],
-    "ladder": [
-     {
-      "line": 12,
-      "hit": 8,
-      "stars": 4.0
      }
     ],
     "extra": [
      {
-      "line": 15,
-      "hit": 7
+      "line": 3,
+      "hit": 8
      }
     ],
     "next": {
-     "line": 18,
-     "hit": 6
+     "line": 4,
+     "hit": 5
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 12+ in all 8 games.",
-     "Averages 19.5 completions a game (median 20.5)."
+     "Cleared 2+ in all 9 games.",
+     "Averages 4.0 receptions a game (median 4).",
+     "Steady volume: 5.7 targets a game.",
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
-     "Closest call: 12 vs LA in Week 5.",
-     "The Jets rank 5th of 32 against the pass, allowing 212 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "NYJ",
-    "nick": "Jets",
-    "player": "Breece Hall",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing yards",
-    "key": "rushYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@TEN"
-     },
-     {
-      "wk": 2,
-      "opp": "GB"
-     },
-     {
-      "wk": 3,
-      "opp": "@DET"
-     },
-     {
-      "wk": 9,
-      "opp": "@KC"
-     }
-    ],
-    "vals": [
-     102,
-     29,
-     32,
-     61
-    ],
-    "ladder": [
-     {
-      "line": 25,
-      "hit": 4,
-      "stars": 4.0
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 30,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 25+ in all 4 games.",
-     "Averages 56.0 rushing yards a game (median 46.5).",
-     "Steady workload: 16.5 carries a game."
-    ],
-    "cons": [
-     "The Bills rank 7th of 32 against the run, allowing 92 rushing yards a game.",
-     "Swingy: anywhere from 29 to 102 this season.",
-     "Small sample: 4 games."
+     "Closest call: 2 vs DET in Week 9.",
+     "Trending down: 2.5 a game over his last two, below his 4.0 average."
     ],
     "status": ""
    },
@@ -1417,6 +1352,10 @@
      {
       "wk": 9,
       "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
      }
     ],
     "vals": [
@@ -1427,185 +1366,46 @@
      210,
      255,
      289,
-     234
+     234,
+     196
     ],
     "ladder": [
      {
       "line": 150,
-      "hit": 8,
+      "hit": 9,
       "stars": 4.5
      },
      {
       "line": 175,
-      "hit": 8,
+      "hit": 9,
       "stars": 4.0
-     },
-     {
-      "line": 200,
-      "hit": 8,
-      "stars": 3.5
      }
     ],
-    "extra": [],
+    "extra": [
+     {
+      "line": 200,
+      "hit": 8
+     }
+    ],
     "next": {
      "line": 225,
      "hit": 6
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 200+ in all 8 games.",
-     "Averages 253.4 passing yards a game (median 250.5)."
+     "Cleared 175+ in all 9 games.",
+     "Averages 247.0 passing yards a game (median 248)."
     ],
     "cons": [
-     "Closest call: 204 vs LAC in Week 3.",
-     "The Jets rank 5th of 32 against the pass, allowing 212 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Ty Johnson",
-    "pos": "RB",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     }
-    ],
-    "vals": [
-     4,
-     2,
-     4,
-     2,
-     3,
-     2
-    ],
-    "ladder": [
-     {
-      "line": 2,
-      "hit": 6,
-      "stars": 3.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 3,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 2+ in all 6 games.",
-     "Averages 2.8 receptions a game (median 2.5)."
-    ],
-    "cons": [
-     "Closest call: 2 vs NE in Week 4.",
-     "The Jets rank 5th of 32 against the pass, allowing 212 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "NYJ",
-    "nick": "Jets",
-    "player": "Breece Hall",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@TEN"
-     },
-     {
-      "wk": 2,
-      "opp": "GB"
-     },
-     {
-      "wk": 3,
-      "opp": "@DET"
-     },
-     {
-      "wk": 9,
-      "opp": "@KC"
-     }
-    ],
-    "vals": [
-     22,
-     16,
-     13,
-     15
-    ],
-    "ladder": [
-     {
-      "line": 8,
-      "hit": 4,
-      "stars": 4.0
-     },
-     {
-      "line": 10,
-      "hit": 4,
-      "stars": 4.0
-     },
-     {
-      "line": 12,
-      "hit": 4,
-      "stars": 3.0
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 15,
-     "hit": 3
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 12+ in all 4 games.",
-     "Averages 16.5 rushing attempts a game (median 15.5)."
-    ],
-    "cons": [
-     "Closest call: 13 vs DET in Week 3.",
-     "The Bills rank 7th of 32 against the run, allowing 92 rushing yards a game.",
-     "Small sample: 4 games."
+     "The Dolphins rank 6th of 32 against the pass, allowing 212 passing yards a game."
     ],
     "status": ""
    }
   ],
-  "weather": {
-   "indoor": false,
-   "temp": 50,
-   "wind": 11,
-   "gust": 19,
-   "rain": 0,
-   "snow": 0,
-   "pop": 0
-  },
+  "weather": null,
   "conditions": [
-   "Game-day forecast at kickoff: 50°F, wind 11 mph (gusts 19), 0% chance of precipitation. Nothing in it changes the ratings.",
-   "Final injury report: no starter is ruled Out or Doubtful in a way that changes the ratings."
+   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
+   "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
  },
@@ -1615,8 +1415,8 @@
    "#C60C30"
   ],
   "opp": [
-   "#003F2D",
-   "#000000"
+   "#008E97",
+   "#F58220"
   ]
  },
  "standings": {
@@ -1626,18 +1426,18 @@
     {
      "abbr": "BUF",
      "nick": "Bills",
-     "rec": "7-1",
+     "rec": "8-1",
      "gb": "—",
-     "div": "0-1",
-     "strk": "W4",
-     "pf": 256,
-     "pa": 187
+     "div": "1-1",
+     "strk": "W5",
+     "pf": 287,
+     "pa": 199
     },
     {
      "abbr": "NE",
      "nick": "Patriots",
      "rec": "5-5",
-     "gb": "3",
+     "gb": "3.5",
      "div": "3-0",
      "strk": "L2",
      "pf": 221,
@@ -1646,22 +1446,22 @@
     {
      "abbr": "NYJ",
      "nick": "Jets",
-     "rec": "2-7",
-     "gb": "5.5",
-     "div": "0-2",
-     "strk": "L4",
-     "pf": 182,
-     "pa": 223
+     "rec": "2-8",
+     "gb": "6.5",
+     "div": "0-3",
+     "strk": "L5",
+     "pf": 194,
+     "pa": 254
     },
     {
      "abbr": "MIA",
      "nick": "Dolphins",
-     "rec": "1-7",
-     "gb": "6",
+     "rec": "1-8",
+     "gb": "7",
      "div": "1-1",
-     "strk": "L2",
-     "pf": 126,
-     "pa": 200
+     "strk": "L3",
+     "pf": 148,
+     "pa": 224
     }
    ]
   },
@@ -1671,18 +1471,18 @@
     {
      "abbr": "BUF",
      "nick": "Bills",
-     "rec": "7-1",
+     "rec": "8-1",
      "gb": "—",
-     "div": "0-1",
-     "strk": "W4",
-     "pf": 256,
-     "pa": 187
+     "div": "1-1",
+     "strk": "W5",
+     "pf": 287,
+     "pa": 199
     },
     {
      "abbr": "NE",
      "nick": "Patriots",
      "rec": "5-5",
-     "gb": "3",
+     "gb": "3.5",
      "div": "3-0",
      "strk": "L2",
      "pf": 221,
@@ -1691,226 +1491,101 @@
     {
      "abbr": "NYJ",
      "nick": "Jets",
-     "rec": "2-7",
-     "gb": "5.5",
-     "div": "0-2",
-     "strk": "L4",
-     "pf": 182,
-     "pa": 223
+     "rec": "2-8",
+     "gb": "6.5",
+     "div": "0-3",
+     "strk": "L5",
+     "pf": 194,
+     "pa": 254
     },
     {
      "abbr": "MIA",
      "nick": "Dolphins",
-     "rec": "1-7",
-     "gb": "6",
+     "rec": "1-8",
+     "gb": "7",
      "div": "1-1",
-     "strk": "L2",
-     "pf": 126,
-     "pa": 200
+     "strk": "L3",
+     "pf": 148,
+     "pa": 224
     }
    ]
   },
-  "billsPlace": "1st in the AFC East, 3 games ahead",
-  "oppPlace": "3rd in the AFC East, 5.5 games back"
+  "billsPlace": "1st in the AFC East, 3.5 games ahead",
+  "oppPlace": "4th in the AFC East, 7 games back"
  },
  "lines": {
-  "gameId": "2026_10_BUF_NYJ",
-  "book": "consensus (nflverse)",
+  "gameId": "2026_11_MIA_BUF",
+  "book": "Draft Kings",
   "cur": {
-   "spread": -8.5,
-   "total": 50.5,
-   "ml": -485.0,
-   "oppMl": 370.0
+   "spread": -16.5,
+   "total": 46.5,
+   "ml": -1600.0,
+   "oppMl": 900.0
   },
   "open": {
-   "spread": -7.0,
-   "total": 46.5,
-   "ml": -340.0
+   "spread": -11.5,
+   "total": 47.5,
+   "ml": -600.0,
+   "oppMl": 440.0
   },
   "history": [
    {
     "t": null,
-    "spread": -7.0,
-    "total": 46.5,
-    "ml": -340.0,
+    "spread": -11.5,
+    "total": 47.5,
+    "ml": -600.0,
     "open": true
    },
    {
-    "t": "2026-11-10T05:18Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -535.0
-   },
-   {
-    "t": "2026-11-10T11:13Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -550.0
-   },
-   {
-    "t": "2026-11-10T13:30Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -520.0
-   },
-   {
-    "t": "2026-11-10T17:15Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -485.0
-   },
-   {
-    "t": "2026-11-10T23:55Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -500.0
-   },
-   {
-    "t": "2026-11-11T01:29Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -395.0
-   },
-   {
-    "t": "2026-11-11T03:14Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -410.0
-   },
-   {
-    "t": "2026-11-11T12:17Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -395.0
-   },
-   {
-    "t": "2026-11-11T21:54Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -440.0
-   },
-   {
-    "t": "2026-11-13T12:16Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -425.0
-   },
-   {
-    "t": "2026-11-14T19:59Z",
-    "spread": -7.5,
-    "total": 50.5,
-    "ml": -395.0
-   },
-   {
-    "t": "2026-11-15T03:11Z",
-    "spread": -7.5,
-    "total": 51.5,
-    "ml": -395.0
-   },
-   {
-    "t": "2026-11-15T05:20Z",
-    "spread": -7.5,
-    "total": 51.5,
-    "ml": -380.0
-   },
-   {
-    "t": "2026-11-15T07:34Z",
-    "spread": -7.5,
-    "total": 50.5,
-    "ml": -380.0
-   },
-   {
-    "t": "2026-11-15T09:10Z",
-    "spread": -7.5,
-    "total": 51.5,
-    "ml": -380.0
-   },
-   {
-    "t": "2026-11-15T10:10Z",
-    "spread": -8.5,
-    "total": 51.5,
-    "ml": -455.0
-   },
-   {
-    "t": "2026-11-15T12:02Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -455.0
-   },
-   {
-    "t": "2026-11-15T13:22Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -470.0
-   },
-   {
-    "t": "2026-11-15T14:16Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -455.0
-   },
-   {
-    "t": "2026-11-15T16:01Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -485.0
-   },
-   {
-    "t": "2026-11-15T17:03Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -500.0
-   },
-   {
-    "t": "2026-11-15T17:57Z",
-    "spread": -8.5,
-    "total": 50.5,
-    "ml": -485.0
+    "t": "2026-11-16T00:45Z",
+    "spread": -16.5,
+    "total": 46.5,
+    "ml": -1600.0
    }
   ]
  },
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 99.7,
+    "now": 99.9,
     "win": 99.9,
-    "loss": 98.9
+    "loss": 99.7
    },
    "division": {
-    "now": 97.4,
-    "win": 98.2,
-    "loss": 94.4
+    "now": 98.9,
+    "win": 99.1,
+    "loss": 97.2
    },
    "seed1": {
-    "now": 40.7,
-    "win": 45.3,
-    "loss": 23.5
+    "now": 48.0,
+    "win": 50.2,
+    "loss": 27.5
    },
    "conf": {
-    "now": 24.5,
-    "win": 25.8,
-    "loss": 19.7
+    "now": 28.7,
+    "win": 29.4,
+    "loss": 22.2
    },
    "sb": {
-    "now": 13.4,
-    "win": 14.1,
-    "loss": 10.4
+    "now": 16.3,
+    "win": 16.7,
+    "loss": 12.4
    }
   },
-  "winProb": 79.6,
+  "winProb": 90.4,
   "sims": 10000,
   "asOf": "through the games of Nov. 15, 2026"
  },
  "significance": {
-  "win": "A win would make the Bills 8-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 3.5 games over the Patriots.",
-  "loss": "A loss would drop them to 7-2 and out of the No. 1 seed (to No. 2). They would still lead the AFC East by 2.5 games.",
+  "win": "A win would make the Bills 9-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 4 games over the Patriots.",
+  "loss": "A loss would drop them to 8-2. They would still lead the AFC East by 3 games.",
   "note": "Based on the standings right now; other games this week can still change it.",
   "now": {
-   "rec": "7-1",
+   "rec": "8-1",
    "seed": 1
   },
   "seedWin": 1,
-  "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 45% of the time with a win and 24% with a loss."
+  "seedLoss": 1,
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 50% of the time with a win and 28% with a loss."
  }
 }
