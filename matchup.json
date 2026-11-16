@@ -539,7 +539,7 @@
     "dec": 0,
     "bills": {
      "v": 256,
-     "rank": 27
+     "rank": 26
     },
     "opp": {
      "v": 212,
@@ -617,11 +617,11 @@
     "dec": 0,
     "bills": {
      "v": 7,
-     "rank": 12
+     "rank": 11
     },
     "opp": {
      "v": 7,
-     "rank": 12
+     "rank": 11
     }
    }
   ]
@@ -908,6 +908,92 @@
    {
     "team": "BUF",
     "nick": "Bills",
+    "player": "James Cook",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing attempts",
+    "key": "rushAtt",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
+     },
+     {
+      "wk": 9,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
+     }
+    ],
+    "vals": [
+     13,
+     21,
+     24,
+     12,
+     25,
+     22,
+     21,
+     31,
+     18
+    ],
+    "ladder": [
+     {
+      "line": 10,
+      "hit": 9,
+      "stars": 5.0
+     },
+     {
+      "line": 12,
+      "hit": 9,
+      "stars": 5.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 15,
+     "hit": 7
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 12+ in all 9 games.",
+     "Averages 20.8 rushing attempts a game (median 21).",
+     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game.",
+     "Bad weather usually pushes play-calling toward the run."
+    ],
+    "cons": [
+     "Closest call: 12 vs NE in Week 4."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
     "player": "Josh Allen",
     "pos": "QB",
     "cat": "Rushing",
@@ -974,12 +1060,13 @@
      "line": 6,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": 0.5,
     "pros": [
      "Cleared 4+ in all 9 games.",
      "Averages 7.3 rushing attempts a game (median 6).",
      "Even his lowest game (5 vs NE) cleared it comfortably.",
-     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game."
+     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game.",
+     "Bad weather usually pushes play-calling toward the run."
     ],
     "cons": [
      "Swingy: anywhere from 5 to 14 this season."
@@ -1032,7 +1119,7 @@
      {
       "line": 2,
       "hit": 6,
-      "stars": 5.0
+      "stars": 4.5
      }
     ],
     "extra": [],
@@ -1040,14 +1127,15 @@
      "line": 3,
      "hit": 4
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 2+ in all 6 games.",
      "Averages 3.7 receptions a game (median 3.5).",
      "Steady volume: 5.8 targets a game.",
-     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
+     "Forecast wind 18 mph at kickoff can cut into passing.",
      "Closest call: 2 vs SF in Week 2.",
      "Swingy: anywhere from 2 to 6 this season."
     ],
@@ -1114,7 +1202,7 @@
      {
       "line": 20,
       "hit": 9,
-      "stars": 5.0
+      "stars": 4.5
      }
     ],
     "extra": [
@@ -1127,101 +1215,17 @@
      "line": 30,
      "hit": 7
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 20+ in all 9 games.",
      "Averages 44.4 receiving yards a game (median 43).",
      "Steady volume: 5.7 targets a game.",
-     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
+     "Forecast wind 18 mph at kickoff can cut into passing.",
      "Closest call: 21 vs DET in Week 9.",
      "Swingy: anywhere from 21 to 67 this season."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "James Cook",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing attempts",
-    "key": "rushAtt",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     },
-     {
-      "wk": 10,
-      "opp": "@NYJ"
-     }
-    ],
-    "vals": [
-     13,
-     21,
-     24,
-     12,
-     25,
-     22,
-     21,
-     31,
-     18
-    ],
-    "ladder": [
-     {
-      "line": 10,
-      "hit": 9,
-      "stars": 5.0
-     },
-     {
-      "line": 12,
-      "hit": 9,
-      "stars": 4.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 15,
-     "hit": 7
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 12+ in all 9 games.",
-     "Averages 20.8 rushing attempts a game (median 21).",
-     "The Dolphins rank 17th of 32 against the run, allowing 118 rushing yards a game."
-    ],
-    "cons": [
-     "Closest call: 12 vs NE in Week 4."
     ],
     "status": ""
    },
@@ -1286,7 +1290,7 @@
      {
       "line": 2,
       "hit": 9,
-      "stars": 4.5
+      "stars": 4.0
      }
     ],
     "extra": [
@@ -1299,14 +1303,15 @@
      "line": 4,
      "hit": 5
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 2+ in all 9 games.",
      "Averages 4.0 receptions a game (median 4).",
      "Steady volume: 5.7 targets a game.",
-     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
+     "Forecast wind 18 mph at kickoff can cut into passing.",
      "Closest call: 2 vs DET in Week 9.",
      "Trending down: 2.5 a game over his last two, below his 4.0 average."
     ],
@@ -1373,12 +1378,12 @@
      {
       "line": 150,
       "hit": 9,
-      "stars": 4.5
+      "stars": 4.0
      },
      {
       "line": 175,
       "hit": 9,
-      "stars": 4.0
+      "stars": 3.5
      }
     ],
     "extra": [
@@ -1391,20 +1396,29 @@
      "line": 225,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": -0.5,
     "pros": [
      "Cleared 175+ in all 9 games.",
      "Averages 247.0 passing yards a game (median 248)."
     ],
     "cons": [
+     "Forecast wind 18 mph at kickoff can cut into passing.",
      "The Dolphins rank 6th of 32 against the pass, allowing 212 passing yards a game."
     ],
     "status": ""
    }
   ],
-  "weather": null,
+  "weather": {
+   "indoor": false,
+   "temp": 53,
+   "wind": 18,
+   "gust": 27,
+   "rain": 0,
+   "snow": 0,
+   "pop": 15
+  },
   "conditions": [
-   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
+   "Game-day forecast at kickoff: 53°F, wind 18 mph (gusts 27), 15% chance of precipitation. Ratings are adjusted for it.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1549,27 +1563,27 @@
    "playoffs": {
     "now": 99.9,
     "win": 100.0,
-    "loss": 99.5
+    "loss": 99.6
    },
    "division": {
-    "now": 99.1,
+    "now": 99.0,
     "win": 99.3,
-    "loss": 97.6
+    "loss": 96.8
    },
    "seed1": {
-    "now": 48.0,
-    "win": 50.4,
-    "loss": 26.2
+    "now": 44.9,
+    "win": 47.1,
+    "loss": 24.1
    },
    "conf": {
-    "now": 27.7,
-    "win": 28.1,
-    "loss": 23.5
+    "now": 27.1,
+    "win": 27.6,
+    "loss": 23.0
    },
    "sb": {
-    "now": 16.0,
-    "win": 16.3,
-    "loss": 13.2
+    "now": 15.4,
+    "win": 15.5,
+    "loss": 14.4
    }
   },
   "winProb": 90.4,
@@ -1586,6 +1600,6 @@
   },
   "seedWin": 1,
   "seedLoss": 1,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 50% of the time with a win and 26% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 47% of the time with a win and 24% with a loss."
  }
 }
