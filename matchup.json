@@ -1135,7 +1135,7 @@
      "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 18 mph at kickoff can cut into passing.",
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 2 vs SF in Week 2.",
      "Swingy: anywhere from 2 to 6 this season."
     ],
@@ -1223,7 +1223,7 @@
      "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 18 mph at kickoff can cut into passing.",
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 21 vs DET in Week 9.",
      "Swingy: anywhere from 21 to 67 this season."
     ],
@@ -1311,7 +1311,7 @@
      "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 18 mph at kickoff can cut into passing.",
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "Closest call: 2 vs DET in Week 9.",
      "Trending down: 2.5 a game over his last two, below his 4.0 average."
     ],
@@ -1402,7 +1402,7 @@
      "Averages 247.0 passing yards a game (median 248)."
     ],
     "cons": [
-     "Forecast wind 18 mph at kickoff can cut into passing.",
+     "Forecast wind 15 mph at kickoff can cut into passing.",
      "The Dolphins rank 6th of 32 against the pass, allowing 212 passing yards a game."
     ],
     "status": ""
@@ -1410,15 +1410,15 @@
   ],
   "weather": {
    "indoor": false,
-   "temp": 53,
-   "wind": 18,
-   "gust": 27,
-   "rain": 0,
+   "temp": 57,
+   "wind": 15,
+   "gust": 31,
+   "rain": 0.02,
    "snow": 0,
-   "pop": 15
+   "pop": 23
   },
   "conditions": [
-   "Game-day forecast at kickoff: 53°F, wind 18 mph (gusts 27), 15% chance of precipitation. Ratings are adjusted for it.",
+   "Game-day forecast at kickoff: 57°F, wind 15 mph (gusts 31), 23% chance of precipitation. Ratings are adjusted for it.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1529,12 +1529,12 @@
  },
  "lines": {
   "gameId": "2026_11_MIA_BUF",
-  "book": "Draft Kings",
+  "book": "DraftKings",
   "cur": {
    "spread": -16.5,
-   "total": 46.5,
-   "ml": -1600.0,
-   "oppMl": 900.0
+   "total": 45.5,
+   "ml": -1450.0,
+   "oppMl": 850.0
   },
   "open": {
    "spread": -11.5,
@@ -1555,6 +1555,12 @@
     "spread": -16.5,
     "total": 46.5,
     "ml": -1600.0
+   },
+   {
+    "t": "2026-11-16T18:42Z",
+    "spread": -16.5,
+    "total": 45.5,
+    "ml": -1450.0
    }
   ]
  },
@@ -1563,30 +1569,30 @@
    "playoffs": {
     "now": 99.9,
     "win": 100.0,
-    "loss": 99.6
+    "loss": 99.7
    },
    "division": {
-    "now": 99.0,
-    "win": 99.3,
+    "now": 99.1,
+    "win": 99.4,
     "loss": 96.8
    },
    "seed1": {
-    "now": 44.9,
-    "win": 47.1,
-    "loss": 24.1
+    "now": 45.8,
+    "win": 48.2,
+    "loss": 24.9
    },
    "conf": {
-    "now": 27.1,
-    "win": 27.6,
-    "loss": 23.0
+    "now": 27.7,
+    "win": 28.3,
+    "loss": 22.1
    },
    "sb": {
-    "now": 15.4,
-    "win": 15.5,
-    "loss": 14.4
+    "now": 15.8,
+    "win": 16.2,
+    "loss": 12.0
    }
   },
-  "winProb": 90.4,
+  "winProb": 89.9,
   "sims": 10000,
   "asOf": "through the games of Nov. 15, 2026"
  },
@@ -1600,6 +1606,6 @@
   },
   "seedWin": 1,
   "seedLoss": 1,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 47% of the time with a win and 24% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 48% of the time with a win and 25% with a loss."
  }
 }
