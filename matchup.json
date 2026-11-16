@@ -556,7 +556,7 @@
     },
     "opp": {
      "v": 113,
-     "rank": 16
+     "rank": 17
     }
    },
    {
@@ -591,7 +591,7 @@
     "dec": 0,
     "bills": {
      "v": 21,
-     "rank": 12
+     "rank": 13
     },
     "opp": {
      "v": 13,
@@ -617,11 +617,11 @@
     "dec": 0,
     "bills": {
      "v": 7,
-     "rank": 11
+     "rank": 12
     },
     "opp": {
      "v": 7,
-     "rank": 11
+     "rank": 12
     }
    }
   ]
@@ -1548,28 +1548,28 @@
   "odds": {
    "playoffs": {
     "now": 99.9,
-    "win": 99.9,
-    "loss": 99.7
+    "win": 100.0,
+    "loss": 99.5
    },
    "division": {
-    "now": 98.9,
-    "win": 99.1,
-    "loss": 97.2
+    "now": 99.1,
+    "win": 99.3,
+    "loss": 97.6
    },
    "seed1": {
     "now": 48.0,
-    "win": 50.2,
-    "loss": 27.5
+    "win": 50.4,
+    "loss": 26.2
    },
    "conf": {
-    "now": 28.7,
-    "win": 29.4,
-    "loss": 22.2
+    "now": 27.7,
+    "win": 28.1,
+    "loss": 23.5
    },
    "sb": {
-    "now": 16.3,
-    "win": 16.7,
-    "loss": 12.4
+    "now": 16.0,
+    "win": 16.3,
+    "loss": 13.2
    }
   },
   "winProb": 90.4,
@@ -1586,6 +1586,6 @@
   },
   "seedWin": 1,
   "seedLoss": 1,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 50% of the time with a win and 28% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 50% of the time with a win and 26% with a loss."
  }
 }
