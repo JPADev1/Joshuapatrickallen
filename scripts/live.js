@@ -344,7 +344,7 @@
   }
   // SVG chart. Above the 50% line is shaded Bills blue, below in the opponent's color; dashed stretches are
   // ones this browser didn't see (page closed, or joined mid-game), drawn straight between the known points.
-  var WP = {W:600, H:190, l:40, r:52, t:14, b:24};
+  var WP = {W:600, H:190, l:10, r:62, t:14, b:24};
   function wpX(x){ return WP.l + x * (WP.W - WP.l - WP.r); }
   function wpY(p){ return WP.t + (1 - p) * (WP.H - WP.t - WP.b); }
   function wpPct(p){ return p >= .995 && p < 1 ? '>99' : p <= .005 && p > 0 ? '<1' : String(Math.round(p * 100)); }
@@ -371,11 +371,11 @@
     [.25, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + wpY(v) + '" y2="' + wpY(v) + '"/>'; });
     [.25, .5, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(v) + '" x2="' + wpX(v) + '" y1="' + WP.t + '" y2="' + (WP.H - WP.b) + '"/>'; });
     ['Q1','Q2','Q3','Q4'].forEach(function(q, i){ lab += '<text class="wpt" x="' + wpX(i / 4 + .125) + '" y="' + (WP.H - 7) + '" text-anchor="middle">' + q + '</text>'; });
-    lab += '<text class="wpt" x="' + (WP.l - 6) + '" y="' + (wpY(1) + 4) + '" text-anchor="end">100%</text>'
-      + '<text class="wpt" x="' + (WP.l - 6) + '" y="' + (y50 + 4) + '" text-anchor="end">50%</text>'
-      + '<text class="wpt" x="' + (WP.l - 6) + '" y="' + (wpY(0) + 4) + '" text-anchor="end">0%</text>'
-      + '<text class="wpt wps" x="' + (WP.l - 6) + '" y="' + (wpY(.75) + 4) + '" text-anchor="end">BUF</text>'
-      + '<text class="wpt wps" x="' + (WP.l - 6) + '" y="' + (wpY(.25) + 4) + '" text-anchor="end">' + oppAb + '</text>';
+    // Axis on the right: 100% Win at the top, 50% in the middle, 100% Lose at the bottom (Bills' side)
+    var ax = wpX(1) + 8;
+    lab += '<text class="wpt" x="' + ax + '" y="' + (wpY(1) + 4) + '">100%</text><text class="wpt wps wpw" x="' + ax + '" y="' + (wpY(1) + 15) + '">Win</text>'
+      + '<text class="wpt" x="' + ax + '" y="' + (y50 + 4) + '">50%</text>'
+      + '<text class="wpt" x="' + ax + '" y="' + (wpY(0) - 7) + '">100%</text><text class="wpt wps" x="' + ax + '" y="' + (wpY(0) + 4) + '">Lose</text>';
     var marks = '', hasTO = false, hasSc = false;
     pts.forEach(function(q, i){ if(!q[5] || q[5] === 'end' || i === n - 1) return; var X = wpX(q[0]).toFixed(1), Y = wpY(q[1]).toFixed(1), a = pts[i - 1] || q;
       if(q[5] === 'to'){ hasTO = true; marks += '<circle class="wpmk wpto" cx="' + X + '" cy="' + Y + '" r="4"/>'; return; }
@@ -390,7 +390,6 @@
       + (dash ? '<path class="wpline wpdash" d="' + dash + '"/>' : '') + (solid ? '<path class="wpline" d="' + solid + '"/>' : '') + anim
       + marks
       + '<circle class="wpdot' + (L.final ? '' : ' wplive') + (anim ? ' wpwait' + (seen ? '' : ' wpslow') : '') + '" cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="5" fill="' + dotC + '"/>'
-      + '<text class="wpv" x="' + (cx + 9) + '" y="' + (Math.max(WP.t + 10, Math.min(WP.H - WP.b - 2, cy + 4))) + '">' + wpPct(cur[1]) + '%</text>'
       + '<line class="wpx" x1="0" x2="0" y1="' + WP.t + '" y2="' + (WP.H - WP.b) + '" visibility="hidden"/>'
       + '<circle class="wphov" r="5" visibility="hidden"/>'
       + '<rect class="wphit" x="' + WP.l + '" y="0" width="' + (WP.W - WP.l - WP.r) + '" height="' + WP.H + '" fill="transparent"/></svg>';

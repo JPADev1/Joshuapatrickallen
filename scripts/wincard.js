@@ -102,13 +102,18 @@
   function chart(c, all, shown, box, d, sw, alpha){
     var oc = lift(d.oppColor), oa = d.oppAb || 'OPP';
     var X = function(t){ return box.x + Math.min(1, t / 3600) * box.w; }, Y = function(p){ return box.y + (1 - p) * box.h; }, y50 = Y(.5), lane = 112;
-    c.fillStyle = 'rgba(255,255,255,.04)'; rr(c, box.x - 24, box.y - 24 - lane, box.w + 48, box.h + 72 + lane, 22); c.fill();
+    c.fillStyle = 'rgba(255,255,255,.04)'; rr(c, box.x - 24, box.y - 24 - lane, box.w + 130, box.h + 72 + lane, 22); c.fill();
     c.strokeStyle = 'rgba(255,255,255,.12)'; c.lineWidth = 2;
     [900, 1800, 2700].forEach(function(t){ c.beginPath(); c.moveTo(X(t), box.y); c.lineTo(X(t), box.y + box.h); c.stroke(); });
     c.font = F(0, 600, 24); c.fillStyle = MUTE; c.textAlign = 'center';
     ['Q1','Q2','Q3','Q4'].forEach(function(q, i){ c.fillText(q, X(i * 900 + 450), box.y + box.h + 14); });
-    c.textAlign = 'left'; c.font = F(0, 700, 22); c.fillStyle = 'rgba(255,255,255,.55)'; if('letterSpacing' in c) c.letterSpacing = '2px';
-    c.fillText('BILLS', box.x + 8, box.y + 8); c.fillText(oa, box.x + 8, box.y + box.h - 30); if('letterSpacing' in c) c.letterSpacing = '0px';
+    // Axis on the right: 100% Win at the top, 50% in the middle, 100% Lose at the bottom (Bills' side)
+    c.textAlign = 'left'; c.textBaseline = 'middle'; var ax = box.x + box.w + 34;
+    [[1, '100%', 'Win'], [.75, '75%', ''], [.5, '50%', ''], [.25, '75%', ''], [0, '100%', 'Lose']].forEach(function(r){
+      if(r[0] === .75 || r[0] === .25){ c.strokeStyle = 'rgba(255,255,255,.07)'; c.lineWidth = 2; c.beginPath(); c.moveTo(box.x, Y(r[0])); c.lineTo(box.x + box.w, Y(r[0])); c.stroke(); return; }
+      c.font = F(0, 700, 22); c.fillStyle = r[0] === .5 ? 'rgba(255,255,255,.7)' : MUTE; c.fillText(r[1], ax, Y(r[0]) - (r[2] ? 11 : 0));
+      if(r[2]){ c.font = F(1, 600, 20); c.fillStyle = r[0] === 1 ? GOLD : lift(d.oppColor); c.fillText(r[2], ax, Y(r[0]) + 13); } });
+    c.textBaseline = 'top';
     var last = shown[shown.length - 1];
     if(shown.length > 1){
       var area = function(){ c.beginPath(); c.moveTo(X(shown[0][0]), y50); shown.forEach(function(p){ c.lineTo(X(p[0]), Y(p[1])); }); c.lineTo(X(last[0]), y50); c.closePath(); };
@@ -129,7 +134,7 @@
         c.font = F(0, 700, 34); var w1 = c.measureText(num).width; c.font = F(1, 500, 24); var w2 = c.measureText(s.cap).width;
         var fs = 24; while(fs > 18 && w2 + 32 > 300){ fs -= 1; c.font = F(1, 500, fs); w2 = c.measureText(s.cap).width; } // shrink to fit, don't cut
         return {s: s, px: X(q[0]), py: Y(q[1]), num: num, fs: fs, w: Math.min(Math.max(w1, w2) + 32, 300), h: 82, a: alpha(s)}; });
-      var left = box.x - 12, right = box.x + box.w + 12, xs = L.map(function(l){ return Math.max(left, Math.min(right - l.w, l.px - l.w / 2)); });
+      var left = box.x - 12, right = box.x + box.w + 78, xs = L.map(function(l){ return Math.max(left, Math.min(right - l.w, l.px - l.w / 2)); });
       for(var i = 1; i < xs.length; i++) xs[i] = Math.max(xs[i], xs[i - 1] + L[i - 1].w + 12);
       for(i = xs.length - 1; i >= 0; i--) xs[i] = Math.min(xs[i], (i === xs.length - 1 ? right : xs[i + 1] - 12) - L[i].w);
       var by = box.y - lane - 6;
@@ -169,8 +174,9 @@
     base(c, logo);
     var lastP = all[all.length - 1], b = lastP[2], o = lastP[3];
     if(fin){
-      chip(c, 'FINAL', b > o ? OK : b < o ? RED : '#555c70');
-      var res = b > o ? 'Bills win, ' + b + '-' + o : b < o ? 'Bills fall, ' + o + '-' + b : 'Tie, ' + b + '-' + o;
+      // While the line draws (video), the chip, headline and score are for that moment; the result comes at the end.
+      chip(c, done ? 'FINAL' : clock(cur[0]), done ? (b > o ? OK : b < o ? RED : '#555c70') : '#2a3c78');
+      var res = !done ? 'Bills ' + cur[2] + ', ' + opp + ' ' + cur[3] : b > o ? 'Bills win, ' + b + '-' + o : b < o ? 'Bills fall, ' + o + '-' + b : 'Tie, ' + b + '-' + o;
       center(c, res, 0, 700, 66, '#fff', 172, W - 120);
       var lo = all.reduce(function(a, p){ return p[1] < a[1] ? p : a; }), hi = all.reduce(function(a, p){ return p[1] > a[1] ? p : a; });
       var from = b > o ? (lo[1] < .35 ? lo : all[0]) : b < o ? (hi[1] > .65 ? hi : all[0]) : all[0];
@@ -179,9 +185,9 @@
         return 'with ' + Math.floor(l / 60) + ':' + ('0' + Math.round(l % 60)).slice(-2) + ' left in the ' + ['', '1st', '2nd', '3rd', '4th'][q]; }
       var sub = b > o ? (lo[1] < .35 ? 'Down to a ' + pct(lo[1]) + ' win chance ' + when(lo[0]) : 'From ' + pct(all[0][1]) + ' at kickoff, never below ' + pct(lo[1]))
         : b < o ? (hi[1] > .65 ? 'Up to a ' + pct(hi[1]) + ' win chance ' + when(hi[0]) : 'From ' + pct(all[0][1]) + ' at kickoff') : 'Overtime ends tied';
-      center(c, sub, 1, 500, 32, SOFT, 418, W - 120);
+      center(c, done ? sub : clock(cur[0]) + '  \u00b7  Bills win chance ' + pct(cur[1]), 1, 500, 32, SOFT, 418, W - 120);
       rule(c, 474);
-      chart(c, all, shown, {x: 90, y: 680, w: 900, h: 500}, d, sw, alpha);
+      chart(c, all, shown, {x: 80, y: 680, w: 812, h: 500}, d, sw, alpha);
       c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE; c.fillText('Unofficial win chance, play by play' + (d.game ? '  ·  ' + d.game : ''), W / 2, 1296);
     } else {
       chip(c, 'LIVE · ' + clock(cur[0]));
@@ -191,7 +197,7 @@
       var ln = 'Bills ' + cur[2] + ', ' + opp + ' ' + cur[3] + '  ·  ' + clock(cur[0]) + (done && d.sit ? '  ·  ' + d.sit : '');
       center(c, ln, 1, 500, 30, SOFT, 482, W - 100);
       rule(c, 538);
-      chart(c, all, shown, {x: 90, y: 720, w: 900, h: 460}, d, sw, alpha);
+      chart(c, all, shown, {x: 80, y: 720, w: 812, h: 460}, d, sw, alpha);
       c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE;
       c.fillText('Live and unofficial. Every play: score, time, possession, down, distance, field position.', W / 2, 1296);
     }

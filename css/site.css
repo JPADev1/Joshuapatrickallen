@@ -731,3 +731,4 @@ html.shr-open{overflow:hidden}
 .shr-in video{display:block;width:100%;aspect-ratio:4/5;border-radius:10px;background:#0b1f4f;box-shadow:0 10px 40px rgba(0,0,0,.5)}
 .shr-in video[hidden],.shr-in img[hidden]{display:none}
 .shr-btns button:disabled{opacity:.5;cursor:default}
+.wpw{fill:var(--blue)}
