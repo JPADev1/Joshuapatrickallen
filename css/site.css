@@ -714,3 +714,7 @@ html.shr-open{overflow:hidden}
 @keyframes wphold{0%{opacity:0}100%{opacity:1}}
 @keyframes wppulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
 @media (prefers-reduced-motion:reduce){.livebar .wplive,.livebar .wpnew,.livebar .wpdot.wpwait{animation:none}}
+.livebar .wpmk{stroke:var(--card);stroke-width:1.5}
+.livebar .wpmk.wpto{fill:var(--card);stroke:var(--ink);stroke-width:2}
+.livebar .wptip{white-space:normal;max-width:260px}
+.livebar .wptx{display:block;margin-top:3px;color:var(--mute);font-size:.72rem}

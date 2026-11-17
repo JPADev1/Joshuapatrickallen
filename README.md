@@ -61,3 +61,15 @@ Sits under the career tiles. Shows only the records and milestones Allen reached
   with no Netlify deploy. `data/recap.json` on main is only the fallback.
 - Fields: `date`, `game`, `result`, `allen` (his line), `official`, `items` (`tag`, `scope` nfl/bills/blank, `title`, `text`, `line`).
 - It hides itself when `items` is empty, and as soon as a newer Bills game is live or in the official stats.
+
+## Win chance chart (Gameday live card)
+Bills chance to win, drawn from kickoff to the final whistle inside the Gameday live card on both pages.
+- Built by the **jpa-live Cloudflare Worker** (source kept in `worker/jpa-live.js`; deploy by pasting it into the Worker's
+  code editor in Cloudflare). The same 2-minute Tank01 box-score call includes play-by-play, and the Worker scores every play
+  (score, time left, who has the ball, down, distance, field position, pregame spread from matchup.json) and saves the curve in KV,
+  so every visitor sees the whole game.
+- Model: `scripts/winprob/fit_model.py`, fitted on nflverse play-by-play 2021-2025. Refit after a season and paste the new
+  coefficients (EPC, WPC) into the Worker.
+- If Tank01 sends no plays, the Worker falls back to one point per update; with no Worker curve at all, `live.js` builds a simple
+  score-and-clock curve in the browser.
+- `/?replay` on the Worker: a one-time check of Tank01's play-by-play format on the last saved game (one Tank01 request, then cached in KV).
