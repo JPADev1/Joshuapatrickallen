@@ -215,7 +215,7 @@
   function record(d){
     var my = ++job, type = vidType(); if(!type) return Promise.reject('no video');
     var cv = document.createElement('canvas'); cv.width = W; cv.height = H; var c = cv.getContext('2d');
-    var DRAW = 6000, HOLD = 2500, rec, chunks = [];
+    var DRAW = 17000, HOLD = 3000, rec, chunks = [];
     JPAWinCard.draw(c, d, 0, LOGO_IMG);
     var stream = cv.captureStream(30);
     try { rec = new MediaRecorder(stream, {mimeType: type, videoBitsPerSecond: 8e6}); } catch(e){ return Promise.reject(e); }
@@ -228,7 +228,7 @@
       (function frame(){
         if(my !== job){ rec.stop(); return; }
         var ms = performance.now() - t0, e = Math.min(1, ms / DRAW);
-        JPAWinCard.draw(c, d, 1 - Math.pow(1 - e, 1.6), LOGO_IMG); // eases out toward the end
+        JPAWinCard.draw(c, d, e, LOGO_IMG); // even pace: about 4 seconds a quarter
         msg('Making your video\u2026 ' + Math.max(0, Math.ceil((DRAW + HOLD - ms) / 1000)) + 's');
         if(ms < DRAW + HOLD) setTimeout(frame, 1000 / 30); else rec.stop();
       })();
