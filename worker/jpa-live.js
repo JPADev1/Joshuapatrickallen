@@ -64,12 +64,24 @@ function wpPos(diff, e, mu, secLeft) { // diff, e, mu all from the side of the t
   return 1 / (1 + Math.exp(-z));
 }
 const KO = ep(1, 10, 75); // after a kickoff: about 1st and 10 at the receiving team's 25
+const ko = secLeft => KO * Math.min(1, Math.max(0, secLeft) / 90); // with seconds left, getting the ball is worth less
 // Bills chance. lead/mu are from the Bills' side; who: "BUF" | "OPP" | null (unknown: average of both).
 function billsWP(lead, mu, secLeft, who, e) {
   if (secLeft <= 0 && lead !== 0) return lead > 0 ? 1 : 0;         // time's up: the lead decides
   if (who === "BUF") return wpPos(lead, e, mu, secLeft);
   if (who === "OPP") return 1 - wpPos(-lead, e, -mu, secLeft);
-  return (wpPos(lead, KO, mu, secLeft) + 1 - wpPos(-lead, KO, -mu, secLeft)) / 2;
+  return (wpPos(lead, ko(secLeft), mu, secLeft) + 1 - wpPos(-lead, ko(secLeft), -mu, secLeft)) / 2;
+}
+// Last 40 seconds with the trailing side on offense: the fitted model is thin here, so use what's still possible
+// from where the ball is (a field goal try, a shot at the end zone, or a Hail Mary).
+function endgame(p, lead, who, yl, secLeft) {
+  if (secLeft > 40 || !who || yl == null) return p;
+  const need = who === "BUF" ? -lead : lead; if (need <= 0) return p;
+  let q = who === "BUF" ? p : 1 - p;                                   // chance for the team with the ball
+  if (need <= 3 && yl <= 35) q = Math.max(q, yl <= 25 ? .9 : .8);     // in field-goal range: kick it to win or tie
+  if (secLeft <= 15) q = need <= 3 ? (yl <= 35 ? Math.max(q, .8) : yl <= 45 ? .45 : yl <= 60 ? .06 : .02)
+    : need <= 8 ? (yl <= 5 ? .5 : yl <= 20 ? .25 : yl <= 60 ? .04 : .015) : .001;
+  return who === "BUF" ? q : 1 - q;
 }
 // Pregame Bills edge in points, from the line in matchup.json (spread first, then no-vig moneylines).
 function pregameMu(mf, gameId) {
@@ -122,15 +134,23 @@ function buildCurve(b, mu) {
     if (h == null || a == null) { h = 0; a = 0; for (const s of scores) if (s.t <= t) { h = s.h; a = s.a; } }
     const text = String(first(pl, ["play", "playDescription", "description", "text"]) || "");
     const team = teamOf(pl), sit = situation(first(pl, ["downAndDistance", "downDistance", "situation", "down_and_distance"]));
-    let who = null, e = 0;
+    let who = null, e = 0, yl = null;
     if (sit && team) {
-      const yl = sit.side == null ? 50 : sit.side === team ? 100 - sit.yard : sit.yard;
+      yl = sit.side == null ? 50 : sit.side === team ? 100 - sit.yard : sit.yard;
       who = team === "BUF" ? "BUF" : "OPP"; e = ep(sit.down, sit.dist == null ? yl : sit.dist, Math.max(1, Math.min(99, yl)));
-    } else if (team && /kicks/i.test(text)) { who = team === "BUF" ? "OPP" : "BUF"; e = KO; } // kickoff: other side gets it
+    } else if (team && /kicks/i.test(text)) { who = team === "BUF" ? "OPP" : "BUF"; e = ko(3600 - t); yl = 75; } // kickoff: other side gets it
     const bills = billsHome ? h : a, them = billsHome ? a : h;
-    const p = billsWP(bills - them, mu, 3600 - t, who, who ? e : 0);
+    // A scoring play: the down and distance are from before the snap, but the score already counts the points,
+    // so use what comes next instead (the other side receives the kickoff; a try is still to come after a TD).
+    const gain = h + a - seen.h - seen.a; let lead = bills - them;
+    if (gain > 0) {
+      const billsScored = bills > (billsHome ? seen.h : seen.a);
+      if (gain === 6) lead += billsScored ? .95 : -.95;
+      who = billsScored ? "OPP" : "BUF"; e = ko(3600 - t); yl = 75;
+    }
+    const p = endgame(billsWP(lead, mu, 3600 - t, who, who ? e : 0), lead, who, yl, 3600 - t);
     // Marks: touchdowns, field goals, and turnovers (the ball changing sides on scrimmage plays with no kick or score between)
-    const kind = (h + a - seen.h - seen.a) >= 6 ? "td" : (h + a - seen.h - seen.a) === 3 ? "fg"
+    const kind = gain >= 6 ? "td" : gain === 3 ? "fg"
       : who && sit && lastWho && who !== lastWho && !/punt|kick|field goal|extra point|two-point|end of (half|quarter)/i.test(lastText) ? "to" : "";
     seen.h = h; seen.a = a;
     if (who && sit) lastWho = who; else if (who) lastWho = null; lastText = text;
