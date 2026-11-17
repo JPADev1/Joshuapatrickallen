@@ -674,3 +674,43 @@ html.shr-open{overflow:hidden}
 .firsts.recap .fwhen{text-transform:none;letter-spacing:0}
 .firsts.recap .chip{display:inline-block;white-space:normal;text-align:center;line-height:1.25}
 @media (max-width:520px){.firsts.recap li{grid-template-columns:1fr;gap:8px}.firsts.recap .fwhen{display:flex;align-items:center;justify-content:space-between;gap:8px}.firsts.recap .fwhen .shr{margin-top:0}}
+/* Win chance chart in the Gameday live card (scripts/live.js) */
+.livebar .wp{margin:12px 0 2px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.livebar .wp + .lw{border-top:0;margin-top:4px}
+.livebar .wph{font-weight:800;font-size:.95rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.livebar .wph .wpbig{color:var(--blue);font-size:1.5rem;letter-spacing:-.01em;margin:0;line-height:1}
+.livebar .wpd{font-size:.76rem;font-weight:700;color:var(--mute)}
+.livebar .wpd.up::first-letter{color:var(--ok)}
+.livebar .wpd.dn::first-letter{color:var(--red)}
+.livebar .wpc{position:relative;margin-top:6px}
+.livebar .wpc svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.livebar .wpg{stroke:var(--line);stroke-width:1;opacity:.7}
+.livebar .wpmid{stroke:var(--mute);stroke-width:1;stroke-dasharray:3 4;opacity:.8}
+.livebar .wpt{fill:var(--mute);font-size:11px;font-family:inherit}
+.livebar .wps{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.livebar .wpline{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.livebar .wpdash{stroke-dasharray:4 5;opacity:.55}
+.livebar .wpv{fill:var(--ink);font-size:13px;font-weight:800;font-family:inherit}
+.livebar .wpdot,.livebar .wphov{stroke:var(--card);stroke-width:2}
+.livebar .wplive{animation:wppulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.livebar .wpx{stroke:var(--mute);stroke-width:1}
+.livebar .wphit{cursor:crosshair}
+.livebar .wptip{position:absolute;z-index:3;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;
+  padding:5px 9px;font-size:.76rem;line-height:1.35;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.livebar .wptip b{color:inherit;margin:0;letter-spacing:0}
+.livebar .wpn{margin:6px 0 0;font-size:.72rem;color:var(--mute)}
+.livebar .wptab{margin-top:4px;font-size:.74rem;color:var(--mute)}
+.livebar .wptab summary{cursor:pointer}
+.livebar .wptab table{margin-top:4px;font-size:.76rem}
+.livebar .wptab th,.livebar .wptab td{padding:3px 8px}
+/* Draw-in: the solid line waits while the new stretch draws over it */
+.livebar .wpnew{stroke-dasharray:1;stroke-dashoffset:1;animation:wpdraw 1.4s ease-out forwards}
+.livebar .wpnew.wpall{animation-duration:2.6s}
+.livebar .wpdot.wpwait{animation:wphold 1.4s step-end}
+.livebar .wpdot.wpwait.wpslow{animation-duration:2.6s}
+.livebar .wpdot.wpwait.wplive{animation:wphold 1.4s step-end,wppulse 1.6s ease-in-out 1.4s infinite}
+.livebar .wpdot.wpwait.wpslow.wplive{animation:wphold 2.6s step-end,wppulse 1.6s ease-in-out 2.6s infinite}
+@keyframes wpdraw{to{stroke-dashoffset:0}}
+@keyframes wphold{0%{opacity:0}100%{opacity:1}}
+@keyframes wppulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@media (prefers-reduced-motion:reduce){.livebar .wplive,.livebar .wpnew,.livebar .wpdot.wpwait{animation:none}}

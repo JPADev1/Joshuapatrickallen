@@ -37,6 +37,7 @@
     var opp = j.home === 'BUF' ? j.away : j.home;
     var fin = /final|completed/i.test(st);
     return { date: y, week: weekOf(ymd), opp: opp, final: fin, status: st, clock: j.clock || '',
+      period: String(j.period || j.currentPeriod || j.quarter || ''),
       bills: j.home === 'BUF' ? j.homePts : j.awayPts, them: j.home === 'BUF' ? j.awayPts : j.homePts, s: line(j.allen) };
   }
   function get(){
@@ -221,6 +222,160 @@
   function light(side, color){ return '<span class="gl ' + side + ' ' + color + '"><b></b><span class="mech"><i class="mir"></i><i class="bulb"></i></span><i class="cov"></i></span>'; }
   var LIGHTS = '<div class="glights" aria-hidden="true">' + light('l', 'red') + light('r', 'blue') + '</div>';
 
+  // ---------- Win chance chart ----------
+  // Bills chance to win, rebuilt from the live score and game clock every 2 minutes and drawn as a line that
+  // grows from kickoff (0%) to the final whistle (100% of the game). The model is the classic one for the NFL:
+  // the final margin is roughly normal around (current lead + the pregame edge for the time left), with a
+  // spread of 13.45 points over a full game that shrinks with the square root of the time left. The pregame
+  // edge comes from the betting line already in matchup.json (no-vig moneylines, or the spread).
+  // It doesn't know who has the ball or where, so it moves on scores, not drives.
+  var SIG = 13.45, GAME = 3600;
+  function Phi(z){ var t = 1 / (1 + .2316419 * Math.abs(z)), d = .3989423 * Math.exp(-z * z / 2),
+    q = d * t * (.3193815 + t * (-.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z > 0 ? 1 - q : q; }
+  function PhiInv(p){ var lo = -8, hi = 8; for(var i=0;i<60;i++){ var m = (lo + hi) / 2; if(Phi(m) < p) lo = m; else hi = m; } return (lo + hi) / 2; }
+  function implied(ml){ ml = parseFloat(ml); if(!ml) return null; return ml < 0 ? -ml / (-ml + 100) : 100 / (ml + 100); }
+  // Pregame edge for the game on `date`: {mu: expected Bills margin, p: kickoff chance, book}
+  function pregame(date){
+    var m = match, ln = m && m.lines; if(!ln || gameDate(m) !== date || (ln.gameId && m.gameId && ln.gameId !== m.gameId)) return null;
+    var c = ln.cur || ln.open || {}, a = implied(c.ml), b = implied(c.oppMl);
+    if(a != null && b != null){ var p = a / (a + b); return {p: p, mu: SIG * PhiInv(p), book: ln.book || ''}; }
+    if(c.spread != null && !isNaN(+c.spread)){ var mu = -c.spread; return {p: Phi(mu / SIG), mu: mu, book: ln.book || ''}; }
+    return null;
+  }
+  // Kickoff as a timestamp (Buffalo time), for when the Worker gives no usable clock
+  function kickoff(m){
+    var d = gameDate(m), t = /(\d{1,2}):(\d{2})\s*([ap])/i.exec(String(m && m.time || ''));
+    if(!d || !t) return null;
+    var h = +t[1] % 12 + (/p/i.test(t[3]) ? 12 : 0), base = Date.UTC(+d.slice(0,4), +d.slice(5,7)-1, +d.slice(8,10), h, +t[2]);
+    var dst = /EDT/.test(new Date(base + 5 * 36e5).toLocaleString('en-US', {timeZone:'America/New_York', timeZoneName:'short'}));
+    return base + (dst ? 4 : 5) * 36e5;
+  }
+  // Where the game is: {x: share of the game played 0-1, left: regulation seconds left, ot: OT seconds left or null, lab}
+  function gameTime(L){
+    var txt = (L.period + ' ' + L.clock + ' ' + L.status).toLowerCase();
+    if(L.final) return {x:1, left:0, ot:null, lab:'Final'};
+    var mm = /(\d{1,2}):(\d{2})/.exec(txt), sec = mm ? +mm[1] * 60 + +mm[2] : null, q = null, k;
+    if(/\b(ot|overtime)\b/.test(txt)) q = 5;
+    else if((k = /\b([1-4])(?:st|nd|rd|th)\b/.exec(txt) || /\bq(?:uarter)?\s*([1-4])\b/.exec(txt) || /quarter\s*([1-4])/.exec(txt))) q = +k[1];
+    if(/half\s*time|halftime/.test(txt) || (/\bhalf\b/.test(txt) && !q)) return {x:.5, left:1800, ot:null, lab:'Halftime'};
+    if(/end of/.test(txt)) sec = 0;
+    if(q === 5) return {x:.99, left:0, ot: sec == null ? 300 : sec, lab:'OT' + (mm ? ' ' + mm[0] : '')};
+    if(q){ if(sec == null) sec = 450; sec = Math.min(900, sec);
+      var left = (4 - q) * 900 + sec; return {x: Math.min(.985, 1 - left / GAME), left: left, ot:null, lab:'Q' + q + (mm ? ' ' + mm[0] : '')}; }
+    // No usable clock: estimate from the wall clock (a game runs about 3 hours 10 minutes)
+    var k0 = gameDate(match) === L.date ? kickoff(match) : null; if(!k0) return null;
+    var x = Math.max(.01, Math.min(.97, (Date.now() - k0) / (190 * 6e4)));
+    return {x: x, left: Math.round((1 - x) * GAME), ot:null, lab:'Q' + Math.min(4, Math.floor(x * 4) + 1) + ' (est.)'};
+  }
+  function winP(lead, t, mu){
+    if(t.x >= 1 && t.lab === 'Final') return lead > 0 ? 1 : lead < 0 ? 0 : .5;
+    var r = t.ot != null ? Math.max(t.ot, 1) / GAME : t.left / GAME;
+    if(r <= 0) return lead > 0 ? 1 : lead < 0 ? 0 : Phi(mu * Math.sqrt(600 / GAME) / SIG); // tied at the end of regulation: OT
+    // Plus about one score's worth of doubt that grows late (it can't see who has the ball); none at kickoff.
+    return Math.min(.995, Math.max(.005, Phi((lead + mu * r) / Math.sqrt(SIG * SIG * r + 16 * (1 - r)))));
+  }
+  // The curve is kept in this browser (localStorage) for the game, so a refresh doesn't lose it.
+  var wpMem = {}, wpShown = {};
+  function wpLoad(date){ try{ return JSON.parse(localStorage.getItem('jpa-wp-' + date)); }catch(e){ return null; } }
+  function wpSave(date, rec){ try{
+    for(var i = localStorage.length - 1; i >= 0; i--){ var k = localStorage.key(i); if(k && k.indexOf('jpa-wp-') === 0 && k !== 'jpa-wp-' + date) localStorage.removeItem(k); }
+    localStorage.setItem('jpa-wp-' + date, JSON.stringify(rec)); }catch(e){} }
+  function wpTrack(L){
+    var rec = wpMem[L.date] || wpLoad(L.date) || {pts: []};
+    if(rec.mu == null){ var pg = pregame(L.date); rec.mu = pg ? pg.mu : 0; rec.p0 = pg ? pg.p : .5; rec.book = pg ? pg.book : ''; rec.line = !!pg; }
+    var b = parseInt(L.bills, 10), o = parseInt(L.them, 10); if(isNaN(b) || isNaN(o)){ b = 0; o = 0; }
+    var t = gameTime(L); if(!t){ wpMem[L.date] = rec; return rec; }
+    var last = rec.pts[rec.pts.length - 1], x = last ? Math.max(t.x, last[0]) : t.x; // never runs backwards
+    var p = Math.round(winP(b - o, t, rec.mu) * 1000) / 1000;
+    if(!last || x > last[0] + .0005 || last[2] !== b || last[3] !== o || last[4] !== t.lab){
+      if(last && x === last[0] && last[2] === b && last[3] === o) rec.pts.pop(); // same moment, newer label
+      rec.pts.push([Math.round(x * 10000) / 10000, p, b, o, t.lab]);
+    }
+    wpMem[L.date] = rec; wpSave(L.date, rec); return rec;
+  }
+  function hexRGB(h){ var m = /^#?([0-9a-f]{6})$/i.exec(String(h || '')); if(!m) return null; var v = parseInt(m[1], 16); return [v >> 16, v >> 8 & 255, v & 255]; }
+  function oppColor(){
+    var tc = match && (match.teamColors && match.teamColors.opp && match.teamColors.opp[0] || match.colors && match.colors.opp), c = hexRGB(tc), bills = [0, 51, 141];
+    if(!c) return 'var(--red)';
+    var d = Math.sqrt(Math.pow(c[0]-bills[0],2) + Math.pow(c[1]-bills[1],2) + Math.pow(c[2]-bills[2],2));
+    return d < 90 ? '#8b93a7' : tc; // navy opponents would blend into Bills blue
+  }
+  // SVG chart. Above the 50% line is shaded Bills blue, below in the opponent's color; dashed stretches are
+  // ones this browser didn't see (page closed, or joined mid-game), drawn straight between the known points.
+  var WP = {W:600, H:190, l:40, r:52, t:14, b:24};
+  function wpX(x){ return WP.l + x * (WP.W - WP.l - WP.r); }
+  function wpY(p){ return WP.t + (1 - p) * (WP.H - WP.t - WP.b); }
+  function wpPct(p){ return p >= .995 && p < 1 ? '>99' : p <= .005 && p > 0 ? '<1' : String(Math.round(p * 100)); }
+  function wpHtml(L){
+    var rec = wpTrack(L), oppAb = esc(L.opp || (match && match.opp && match.opp.abbr) || 'OPP');
+    var pts = [[0, rec.p0, 0, 0, 'Kickoff']].concat(rec.pts), n = pts.length, cur = pts[n - 1], prev = pts[n - 2];
+    if(n < 2) return '';
+    // Draw-in: the whole line the first time it shows on this page, then just the newest stretch.
+    var seen = wpShown[L.date] || 0, motion = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var drawFrom = motion && n > seen ? Math.max(1, seen) : n, anim = '';
+    var GAP = .08, solid = '', dash = '', area = 'M' + wpX(0) + ' ' + wpY(.5);
+    pts.forEach(function(q, i){
+      var X = wpX(q[0]).toFixed(1), Y = wpY(q[1]).toFixed(1); area += ' L' + X + ' ' + Y;
+      if(!i) return; var a = pts[i - 1], seg = 'M' + wpX(a[0]).toFixed(1) + ' ' + wpY(a[1]).toFixed(1) + ' L' + X + ' ' + Y + ' ';
+      if(i >= drawFrom){ anim += (anim ? ' L' + X + ' ' + Y : seg); return; }
+      if(q[0] - a[0] > GAP) dash += seg; else solid += seg;
+    });
+    if(anim) anim = '<path class="wpline wpnew' + (seen ? '' : ' wpall') + '" pathLength="1" d="' + anim + '"/>';
+    wpShown[L.date] = n;
+    area += ' L' + wpX(cur[0]).toFixed(1) + ' ' + wpY(.5) + ' Z';
+    var oc = oppColor(), y50 = wpY(.5), grid = '', lab = '';
+    [.25, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + wpY(v) + '" y2="' + wpY(v) + '"/>'; });
+    [.25, .5, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(v) + '" x2="' + wpX(v) + '" y1="' + WP.t + '" y2="' + (WP.H - WP.b) + '"/>'; });
+    ['Q1','Q2','Q3','Q4'].forEach(function(q, i){ lab += '<text class="wpt" x="' + wpX(i / 4 + .125) + '" y="' + (WP.H - 7) + '" text-anchor="middle">' + q + '</text>'; });
+    lab += '<text class="wpt" x="' + (WP.l - 6) + '" y="' + (wpY(1) + 4) + '" text-anchor="end">100%</text>'
+      + '<text class="wpt" x="' + (WP.l - 6) + '" y="' + (y50 + 4) + '" text-anchor="end">50%</text>'
+      + '<text class="wpt" x="' + (WP.l - 6) + '" y="' + (wpY(0) + 4) + '" text-anchor="end">0%</text>'
+      + '<text class="wpt wps" x="' + (WP.l - 6) + '" y="' + (wpY(.75) + 4) + '" text-anchor="end">BUF</text>'
+      + '<text class="wpt wps" x="' + (WP.l - 6) + '" y="' + (wpY(.25) + 4) + '" text-anchor="end">' + oppAb + '</text>';
+    var cx = wpX(cur[0]), cy = wpY(cur[1]), dotC = cur[1] >= .5 ? 'var(--blue)' : oc;
+    var svg = '<svg viewBox="0 0 ' + WP.W + ' ' + WP.H + '" role="img" aria-label="Bills win chance through the game, now ' + wpPct(cur[1]) + ' percent">'
+      + '<defs><clipPath id="wpA"><rect x="0" y="0" width="' + WP.W + '" height="' + y50 + '"/></clipPath>'
+      + '<clipPath id="wpB"><rect x="0" y="' + y50 + '" width="' + WP.W + '" height="' + (WP.H - y50) + '"/></clipPath></defs>'
+      + grid + '<path d="' + area + '" fill="var(--blue)" fill-opacity=".16" clip-path="url(#wpA)"/>'
+      + '<path d="' + area + '" fill="' + oc + '" fill-opacity=".22" clip-path="url(#wpB)"/>'
+      + '<line class="wpmid" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + y50 + '" y2="' + y50 + '"/>' + lab
+      + (dash ? '<path class="wpline wpdash" d="' + dash + '"/>' : '') + (solid ? '<path class="wpline" d="' + solid + '"/>' : '') + anim
+      + '<circle class="wpdot' + (L.final ? '' : ' wplive') + (anim ? ' wpwait' + (seen ? '' : ' wpslow') : '') + '" cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="5" fill="' + dotC + '"/>'
+      + '<text class="wpv" x="' + (cx + 9) + '" y="' + (Math.max(WP.t + 10, Math.min(WP.H - WP.b - 2, cy + 4))) + '">' + wpPct(cur[1]) + '%</text>'
+      + '<line class="wpx" x1="0" x2="0" y1="' + WP.t + '" y2="' + (WP.H - WP.b) + '" visibility="hidden"/>'
+      + '<circle class="wphov" r="5" visibility="hidden"/>'
+      + '<rect class="wphit" x="' + WP.l + '" y="0" width="' + (WP.W - WP.l - WP.r) + '" height="' + WP.H + '" fill="transparent"/></svg>';
+    var ch = prev ? Math.round(cur[1] * 100) - Math.round(prev[1] * 100) : 0;
+    var delta = L.final ? '' : ch ? ' <span class="wpd ' + (ch > 0 ? 'up' : 'dn') + '">' + (ch > 0 ? '&#9650; ' : '&#9660; ') + Math.abs(ch) + ' since ' + (n === 2 ? 'kickoff' : 'last update') + '</span>' : '';
+    var head = L.final ? (cur[2] > cur[3] ? 'Bills win' : cur[2] < cur[3] ? 'Bills lose' : 'Tie') + ', ' + cur[2] + '-' + cur[3]
+      : 'Bills win chance <b class="wpbig">' + wpPct(cur[1]) + '%</b>' + delta;
+    var rows = pts.map(function(q){ return '<tr><td>' + esc(q[4]) + '</td><td>' + q[2] + '-' + q[3] + '</td><td>' + wpPct(q[1]) + '%</td></tr>'; }).join('');
+    return '<div class="wp" data-opp="' + oppAb + '" data-pts="' + esc(JSON.stringify(pts)) + '"><div class="wph">' + head + '</div>'
+      + '<div class="wpc">' + svg + '<div class="wptip" hidden></div></div>'
+      + '<p class="wpn">Kickoff: ' + wpPct(rec.p0) + '%' + (rec.line ? ' (' + (rec.book ? esc(rec.book) + ' ' : '') + 'betting line)' : ' (no betting line found, so even odds)')
+      + '. Updates every 2 minutes from the score and the time left; it doesn&rsquo;t know who has the ball, so it moves on scores, not drives.'
+      + (dash ? ' Dashed stretches are times this page wasn&rsquo;t open.' : '') + ' Unofficial, for fun.</p>'
+      + '<details class="wptab"><summary>Show as a table</summary><table><thead><tr><th>When</th><th>Score</th><th>Bills win</th></tr></thead><tbody>' + rows + '</tbody></table></details></div>';
+  }
+  // Hover / touch: crosshair, dot and a tooltip on the nearest point.
+  function wpWire(root){
+    var box = root.querySelector('.wp'); if(!box) return;
+    var pts = JSON.parse(box.getAttribute('data-pts')), svg = box.querySelector('svg'), tip = box.querySelector('.wptip'),
+      vx = svg.querySelector('.wpx'), hv = svg.querySelector('.wphov'), hit = svg.querySelector('.wphit'), oc = oppColor();
+    function show(ev){
+      var r = svg.getBoundingClientRect(), x = ((ev.touches ? ev.touches[0].clientX : ev.clientX) - r.left) / r.width * WP.W;
+      var best = pts[0]; pts.forEach(function(q){ if(Math.abs(wpX(q[0]) - x) < Math.abs(wpX(best[0]) - x)) best = q; });
+      var X = wpX(best[0]), Y = wpY(best[1]);
+      vx.setAttribute('x1', X); vx.setAttribute('x2', X); vx.setAttribute('visibility', 'visible');
+      hv.setAttribute('cx', X); hv.setAttribute('cy', Y); hv.setAttribute('fill', best[1] >= .5 ? 'var(--blue)' : oc); hv.setAttribute('visibility', 'visible');
+      tip.innerHTML = '<b>' + esc(best[4]) + '</b> &middot; Bills ' + best[2] + ', ' + esc(box.getAttribute('data-opp')) + ' ' + best[3] + '<br>Bills win chance: <b>' + wpPct(best[1]) + '%</b>';
+      tip.hidden = false; var px = X / WP.W * r.width; tip.style.left = Math.max(4, Math.min(r.width - tip.offsetWidth - 4, px - tip.offsetWidth / 2)) + 'px';
+      tip.style.top = Math.max(0, Y / WP.H * r.height - tip.offsetHeight - 12) + 'px';
+    }
+    function hide(){ vx.setAttribute('visibility', 'hidden'); hv.setAttribute('visibility', 'hidden'); tip.hidden = true; }
+    hit.addEventListener('pointermove', show); hit.addEventListener('pointerdown', show); hit.addEventListener('pointerleave', hide);
+  }
+
   // The Gameday live card. Normal spot: #livebar-slot. On gameday it moves up to #livebar-gameday
   // (stats page: under the social links; Next game page: under the team cards) and goes back the next day.
   function bar(){
@@ -241,6 +396,7 @@
       el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br>' + (pre
         ? '<span class="ln">It’s gameday: Bills ' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp && match.opp.nick) + (match.time ? ', ' + esc(match.time) : '') + '.</span>'
           + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and the records watch counts down live, every 2 minutes.</span>'
+          + (function(){ var pg = pregame(gameDate(match)); return pg ? '<span class="lnote">Bills win chance at kickoff: <b>' + wpPct(pg.p) + '%</b> (' + (pg.book ? esc(pg.book) + ' ' : '') + 'betting line). A live win-chance chart builds here as the game goes.</span>' : ''; })()
         : '<span class="ln">Check back on gameday to watch records broken live.</span>'
           + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every 2 minutes.</span>') + w.html;
       el.hidden = false; sweep(); return; }
@@ -251,7 +407,8 @@
     el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') + (w.broke ? '<span class="sr">A record fell today.</span>' : '') +
       '<div class="lhead"><span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
       (!L.final && L.clock ? ' · ' + L.clock : '') + '<br><span class="ln">Allen today: ' + (parts.join(' · ') || 'no stats yet') +
-      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + w.html + '<span class="lnote">Live numbers are unofficial and update every 2 minutes. They are checked against the official stats after the game.</span>';
+      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + wpHtml(L) + w.html + '<span class="lnote">Live numbers are unofficial and update every 2 minutes. They are checked against the official stats after the game.</span>';
+    wpWire(el);
     el.hidden = false;
   }
 
@@ -264,6 +421,7 @@
   function poll(){
     if(document.hidden) return;
     get().then(function(L){
+      if(!L && state && !state.final) return; // one missed or slow reply mid-game: keep the last numbers
       var s2 = JSON.stringify(L);
       if(s2 !== sig){ state = L; sig = s2; changed = true; loadOfficial().then(function(){ bar(); listeners.forEach(function(f){ try{ f(); }catch(e){} }); }); }
 
