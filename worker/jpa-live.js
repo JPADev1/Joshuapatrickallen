@@ -53,14 +53,14 @@ const EPC = [6.5829,-0.07112,0.01272,-0.00403,-0.55559,-1.18414,-2.96698,-0.4038
 const WPC = [-0.01677,0.07734,0.06745,0.13647,0.02848,0.02646,0.01488,-0.0327,0.3486,0.13238,0.33756];
 function ep(down, dist, yl) {
   dist = Math.max(1, Math.min(40, dist)); const ld = Math.log(dist), c = EPC;
-  return c[0] + c[1]*yl + c[2]*yl*yl/100 + c[3]*yl*yl*yl/1e4 + c[4]*(down===2) + c[5]*(down===3) + c[6]*(down===4)
-    + c[7]*ld + c[8]*(down===3)*ld + c[9]*(down===4)*ld + c[10]*(down===4)*(yl<=35) + c[11]*Math.min(yl,10);
+  return c[0] + c[1]*yl + c[2]*yl*yl/100 + c[3]*yl*yl*yl/1e4 + c[4]*(down === 2 ? 1 : 0) + c[5]*(down === 3 ? 1 : 0) + c[6]*(down === 4 ? 1 : 0)
+    + c[7]*ld + c[8]*(down === 3 ? ld : 0) + c[9]*(down === 4 ? ld : 0) + c[10]*(down === 4 && yl <= 35 ? 1 : 0) + c[11]*Math.min(yl,10);
 }
 function wpPos(diff, e, mu, secLeft) { // diff, e, mu all from the side of the team with the ball
   const r = Math.max(0, secLeft) / 3600, s = Math.sqrt(r + .0025), c = WPC;
   const L = diff > 0 && secLeft <= 120 ? 1 : 0, t = (120 - Math.min(120, Math.max(0, secLeft))) / 120;
-  const z = c[0] + c[1]*diff/s + c[2]*e/s + c[3]*mu*s + c[4]*diff + c[5]*e + c[6]*mu + c[7]*(diff+e)*(r<.05)
-    + c[8]*L + c[9]*L*t + c[10]*L*(diff<=8);
+  const z = c[0] + c[1]*diff/s + c[2]*e/s + c[3]*mu*s + c[4]*diff + c[5]*e + c[6]*mu + c[7]*(r < .05 ? diff + e : 0)
+    + c[8]*L + c[9]*L*t + c[10]*(diff <= 8 ? L : 0);
   return 1 / (1 + Math.exp(-z));
 }
 const KO = ep(1, 10, 75); // after a kickoff: about 1st and 10 at the receiving team's 25
@@ -144,13 +144,13 @@ function buildCurve(b, mu) {
 async function tick(env) {
   const now = Date.now();
   // Kickoffs: the built-in schedule, with the matchup file's time winning when it covers the same game (flex) or adds one (playoffs).
-  const games = SCHEDULE.map(([id, t]) => [id, etToUTC(+t.slice(0, 4), +t.slice(5, 7) - 1, +t.slice(8, 10), +t.slice(11, 13), +t.slice(14, 16))]);
+  const games = SCHEDULE.map(([id, t]) => ({ id: String(id), k: etToUTC(+t.slice(0, 4), +t.slice(5, 7) - 1, +t.slice(8, 10), +t.slice(11, 13), +t.slice(14, 16)) }));
   const mf = await fetch(MATCHUP, { cf: { cacheTtl: 60 } }).then(r => (r.ok ? r.json() : null)).catch(() => null); // free (GitHub)
   const mk = mf && mf.gameId && kickoff(mf);
-  if (mk) { const i = games.findIndex(([id]) => id === mf.gameId); if (i >= 0) games[i][1] = mk; else games.push([mf.gameId, mk]); }
-  const g = games.find(([, k]) => now >= k - BEFORE && now <= k + AFTER);
+  if (mk) { const i = games.findIndex(x => x.id === mf.gameId); if (i >= 0) games[i].k = mk; else games.push({ id: String(mf.gameId), k: mk }); }
+  const g = games.find(x => now >= x.k - BEFORE && now <= x.k + AFTER);
   if (!g) return;                                                     // not game time: no Tank01 call
-  const m = { gameId: g[0] }, k = g[1];
+  const m = { gameId: g.id }, k = g.k;
   const prev = await env.LIVE.get("game", { type: "json" });
   if (prev && prev.nflGame === m.gameId && /final|completed/i.test(prev.status)) return; // final already saved
 
