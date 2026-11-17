@@ -214,20 +214,21 @@
   }
   // Preferred: encode every frame with the browser's own H.264 encoder into a normal MP4 (right length, slider works,
   // and much faster than real time). Fallback: record the canvas live, then repair the MP4 so it isn't "3 seconds".
-  var DRAW = 17000, HOLD = 3000, FPS = 30;
+  var DRAW = 17000, HOLD = 3000, FPS = 30, VFPS = 24; // live recording stays at 30; encoded video is 24 frames a second
   function frameAt(c, d, ms){ JPAWinCard.draw(c, d, Math.min(1, ms / DRAW), LOGO_IMG); } // even pace: about 4 seconds a quarter
-  function record(d){
+  function record(d, prog){
     var my = ++job, cv = document.createElement('canvas'); cv.width = W; cv.height = H; var c = cv.getContext('2d');
     var n = Math.round((DRAW + HOLD) / 1000 * FPS);
     var fast = window.JPAMp4 ? JPAMp4.supported(W, H, FPS) : Promise.resolve(false);
     return fast.then(function(ok){
-      if(!ok) return live(d, my, cv, c);
-      return JPAMp4.encode(cv, function(e){ frameAt(c, d, e * (DRAW + HOLD)); }, n, FPS,
-        function(f){ msg('Making your video\u2026 ' + Math.round(f * 100) + '%'); }, function(){ return my !== job; })
-        .catch(function(err){ if(err === 'cancelled') throw err; return live(d, my, cv, c); });
+      if(!ok) return live(d, my, cv, c, prog);
+      var nd = Math.round(DRAW / 1000 * VFPS) + 1; // the line drawing in; the 3-second hold is one long last frame
+      return JPAMp4.encode(cv, function(e){ frameAt(c, d, e * DRAW); }, nd, VFPS,
+        function(f){ prog(Math.round(f * 100)); }, function(){ return my !== job; }, {hold: HOLD})
+        .catch(function(err){ if(err === 'cancelled') throw err; return live(d, my, cv, c, prog); });
     });
   }
-  function live(d, my, cv, c){
+  function live(d, my, cv, c, prog){
     var type = vidType(); if(!type) return Promise.reject('no video');
     var rec, chunks = [];
     frameAt(c, d, 0);
@@ -245,22 +246,32 @@
         if(my !== job){ rec.stop(); return; }
         var ms = performance.now() - t0;
         frameAt(c, d, ms);
-        msg('Making your video\u2026 ' + Math.max(0, Math.ceil((DRAW + HOLD - ms) / 1000)) + 's');
+        prog(Math.min(99, Math.round(ms / (DRAW + HOLD) * 100)));
         if(ms < DRAW + HOLD) setTimeout(frame, 1000 / FPS); else rec.stop();
       })();
     });
   }
+  // The video starts building as soon as the card opens (in the background), so it's often ready by the time it's picked.
+  function vbtn(t){ var b = box.querySelector('.shr-mode [data-m=vid]'); if(b) b.textContent = t; }
+  function startVideo(){
+    if(!cur || cur.vidP) return;
+    var me = cur;
+    me.vidP = record(me.d, function(p){ if(cur !== me) return; vbtn('Video ' + p + '%'); if(me.want === 'vid') msg('Making your video\u2026 ' + p + '%'); });
+    me.vidP.then(function(blob){ me.vid = blob; me.vurl = URL.createObjectURL(blob); if(cur !== me) return; vbtn('Video'); if(me.want === 'vid') mode('vid'); },
+      function(err){ if(err === 'cancelled' || cur !== me) return; me.vidErr = true; vbtn('Video');
+        if(me.want === 'vid'){ msg('Video isn\u2019t available on this device. The image works everywhere.'); box.querySelector('.shr-dl').hidden = false; box.querySelector('.shr-go').disabled = false; } });
+  }
   function mode(m){
     var im = box.querySelector('img'), v = box.querySelector('video'), dl = box.querySelector('.shr-dl'), base = cur.name.replace(/\.\w+$/, '');
+    cur.want = m;
     [].forEach.call(box.querySelectorAll('.shr-mode button'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-m') === m)); });
-    if(m === 'img'){ job++; v.pause(); v.hidden = true; im.hidden = false; cur.blob = cur.img; cur.name = base + '.png'; dl.href = cur.url; dl.download = cur.name; dl.textContent = 'Save image'; msg(''); return; }
-    if(cur.vid){ show(); return; }
-    im.hidden = false; v.hidden = true; dl.hidden = true; box.querySelector('.shr-go').disabled = true;
-    record(cur.d).then(function(blob){ cur.vid = blob; cur.vurl = URL.createObjectURL(blob); show(); }, function(err){
-      if(err === 'cancelled') return; msg('Video isn\u2019t available on this device. The image works everywhere.'); dl.hidden = false; box.querySelector('.shr-go').disabled = false; });
-    function show(){ im.hidden = true; v.hidden = false; v.src = cur.vurl; v.play().catch(function(){});
+    if(m === 'img'){ v.pause(); v.hidden = true; im.hidden = false; cur.blob = cur.img; cur.name = base + '.png'; dl.hidden = false; dl.href = cur.url; dl.download = cur.name; dl.textContent = 'Save image'; box.querySelector('.shr-go').disabled = false; msg(''); return; }
+    if(cur.vid){ im.hidden = true; v.hidden = false; if(v.src !== cur.vurl) v.src = cur.vurl; v.play().catch(function(){});
       cur.blob = cur.vid; cur.name = base + (/mp4/.test(cur.vid.type) ? '.mp4' : '.webm');
-      dl.hidden = false; dl.href = cur.vurl; dl.download = cur.name; dl.textContent = 'Save video'; box.querySelector('.shr-go').disabled = false; msg(''); }
+      dl.hidden = false; dl.href = cur.vurl; dl.download = cur.name; dl.textContent = 'Save video'; box.querySelector('.shr-go').disabled = false; msg(''); return; }
+    if(cur.vidErr){ msg('Video isn\u2019t available on this device. The image works everywhere.'); return; }
+    im.hidden = false; v.hidden = true; dl.hidden = true; box.querySelector('.shr-go').disabled = true; msg('Making your video\u2026');
+    startVideo();
   }
   function viewer(){
     if(box) return box;
@@ -297,7 +308,8 @@
         var name = 'josh-allen-' + String(d.title).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) + '.png';
         if(cur && cur.url) URL.revokeObjectURL(cur.url);
         cur = {d:d, blob:blob, img:blob, name:name, url:URL.createObjectURL(blob), link:SITE + '/' + (d.url || '')};
-        var md = box.querySelector('.shr-mode'); md.hidden = !(d.wp && (vidType() || window.VideoEncoder));
+        var md = box.querySelector('.shr-mode'); md.hidden = !(d.wp && (vidType() || window.VideoEncoder)); vbtn('Video');
+        if(d.wp && window.VideoEncoder && window.JPAMp4) setTimeout(startVideo, 300);
         [].forEach.call(md.querySelectorAll('button'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-m') === 'img')); });
         var vv = box.querySelector('video'); vv.hidden = true; vv.pause(); im.hidden = false; box.querySelector('.shr-dl').textContent = 'Save image';
         im.src = cur.url; im.alt = 'Share card: ' + d.title;

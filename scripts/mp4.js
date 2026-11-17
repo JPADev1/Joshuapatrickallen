@@ -20,10 +20,11 @@
   var MATRIX = [].concat(u32(0x10000), u32(0), u32(0), u32(0), u32(0x10000), u32(0), u32(0), u32(0), u32(0x40000000));
   // samples: [{size, key}] in decode order, all `delta` long in a `scale` timescale; avcC: the H.264 decoder config
   function moov(w, h, samples, avcC, scale, delta, mdatStart){
-    var n = samples.length, durT = n * delta, durMs = Math.round(durT / scale * 1000);
+    var n = samples.length, durT = 0; samples.forEach(function(s){ durT += s.dur || delta; }); var durMs = Math.round(durT / scale * 1000);
+    var runs = []; samples.forEach(function(s){ var dd = s.dur || delta, r = runs[runs.length - 1]; if(r && r[1] === dd) r[0]++; else runs.push([1, dd]); });
     var avc1 = box('avc1', [0,0,0,0,0,0], u16(1), u16(0), u16(0), u32(0), u32(0), u32(0), u16(w), u16(h),
       u32(0x480000), u32(0x480000), u32(0), u16(1), new Uint8Array(32), u16(0x18), u16(0xffff), box('avcC', avcC));
-    var stts = full('stts', 0, 0, u32(1), u32(n), u32(delta));
+    var stts = full('stts', 0, 0, u32(runs.length), cat(runs.map(function(r){ return cat([u32(r[0]), u32(r[1])]); })));
     var keys = []; samples.forEach(function(s, i){ if(s.key) keys.push(i + 1); });
     var stss = full('stss', 0, 0, u32(keys.length), cat(keys.map(function(k){ return u32(k); })));
     var stsc = full('stsc', 0, 0, u32(1), u32(1), u32(n), u32(1));            // one chunk holds every sample
@@ -39,9 +40,9 @@
     return box('moov', mvhd, box('trak', tkhd, mdia));
   }
   // datas: Uint8Array per sample (decode order). Index first ("fast start"), so it streams and seeks anywhere.
-  function write(w, h, datas, keysArr, avcC, scale, delta){
+  function write(w, h, datas, keysArr, avcC, scale, delta, durs){
     var ftyp = box('ftyp', str('isom'), u32(512), str('isomiso2avc1mp41'));
-    var samples = datas.map(function(d, i){ return {size: d.length, key: keysArr[i]}; });
+    var samples = datas.map(function(d, i){ return {size: d.length, key: keysArr[i], dur: durs && durs[i]}; });
     var size = 0; datas.forEach(function(d){ size += d.length; });
     var m = moov(w, h, samples, avcC, scale, delta, 0);
     m = moov(w, h, samples, avcC, scale, delta, ftyp.length + m.length + 8);  // same size, now with the real data offset
@@ -50,21 +51,26 @@
 
   // ---------- Encode with WebCodecs ----------
   var CODECS = ['avc1.640028', 'avc1.4d0028', 'avc1.42e028', 'avc1.640033', 'avc1.42001f'];
-  function pick(w, h, fps){
+  function pick(w, h, fps, fast){
     if(!window.VideoEncoder || !window.VideoFrame || !VideoEncoder.isConfigSupported) return Promise.resolve(null);
     var i = 0;
     function next(){
       if(i >= CODECS.length) return null;
-      var cfg = {codec: CODECS[i++], width: w, height: h, bitrate: 6e6, framerate: fps, avc: {format: 'avc'}};
-      return VideoEncoder.isConfigSupported(cfg).then(function(r){ return r && r.supported ? cfg : next(); }, next);
+      var cfg = {codec: CODECS[i], width: w, height: h, bitrate: 6e6, framerate: fps, avc: {format: 'avc'}};
+      if(fast){ cfg.latencyMode = 'realtime'; cfg.hardwareAcceleration = 'prefer-hardware'; } // faster: less effort per frame
+      return VideoEncoder.isConfigSupported(cfg).then(function(r){
+        if(r && r.supported) return cfg;
+        if(fast){ fast = false; return next(); } // retry this codec without the speed hints
+        i++; return next(); }, function(){ i++; return next(); });
     }
     return Promise.resolve(next());
   }
   function supported(w, h, fps){ return pick(w, h, fps).then(function(c){ return !!c; }); }
   // draw(e) paints frame e (0..1) on `canvas`; n frames at fps; progress(f) for 0..1
-  function encode(canvas, draw, n, fps, progress, cancelled){
-    var w = canvas.width, h = canvas.height;
-    return pick(w, h, fps).then(function(cfg){
+  // opts.hold: ms to show the last frame (encoded once, as one long frame)
+  function encode(canvas, draw, n, fps, progress, cancelled, opts){
+    var w = canvas.width, h = canvas.height, hold = opts && opts.hold || 0;
+    return pick(w, h, fps, true).then(function(cfg){
       if(!cfg) throw 'no-webcodecs';
       return new Promise(function(ok, no){
         var datas = [], keys = [], ts = [], avcC = null, failed = null;
@@ -79,24 +85,26 @@
           error: function(e){ failed = e; }
         });
         enc.configure(cfg);
-        var i = 0, step = 1e6 / fps;
+        var i = 0, step = 1e6 / fps, extra = hold ? Math.ceil(hold / 500) : 0, total = n + extra; // hold: the last frame again every half second
         (function more(){
           if(failed){ try { enc.close(); } catch(e){} return no(failed); }
           if(cancelled && cancelled()){ try { enc.close(); } catch(e){} return no('cancelled'); }
           var t0 = performance.now();
-          while(i < n && enc.encodeQueueSize < 6 && performance.now() - t0 < 40){ // keep the page responsive
-            draw(n > 1 ? i / (n - 1) : 1);
-            var f = new VideoFrame(canvas, {timestamp: Math.round(i * step), duration: Math.round(step)});
-            enc.encode(f, {keyFrame: i % (fps * 2) === 0}); f.close(); i++;
+          while(i < total && enc.encodeQueueSize < 6 && performance.now() - t0 < 40){ // keep the page responsive
+            if(i < n) draw(n > 1 ? i / (n - 1) : 1);
+            var at = i < n ? i * step : (n - 1) * step + step + (i - n) * 5e5, len = i < n ? step : 5e5;
+            var f = new VideoFrame(canvas, {timestamp: Math.round(at), duration: Math.round(len)});
+            enc.encode(f, {keyFrame: i % (fps * 2) === 0 || i === n}); f.close(); i++;
           }
-          if(progress) progress(i / n);
-          if(i < n) return setTimeout(more, 0);
+          if(progress) progress(i / total);
+          if(i < total) return setTimeout(more, 0);
           enc.flush().then(function(){
             enc.close();
             if(failed) return no(failed);
-            if(!avcC || datas.length !== n) return no('encoder output incomplete');
+            if(!avcC || datas.length !== total) return no('encoder output incomplete');
             for(var k = 1; k < ts.length; k++) if(ts[k] < ts[k - 1]) return no('reordered frames'); // (no B-frames expected)
-            ok(write(w, h, datas, keys, avcC, fps * 1000, 1000));
+            var durs = datas.map(function(x, k){ return k < n ? 1000 : fps * 500; }); // timescale fps*1000: a frame is 1000, half a second fps*500
+            ok(write(w, h, datas, keys, avcC, fps * 1000, 1000, durs));
           }, no);
         })();
       });
