@@ -4,7 +4,7 @@
 // official nflverse line takes over. Nothing here touches Netlify: the Worker is polled from the visitor's browser.
 (function(){
   var WORKER = 'https://jpa-live.sterryrochester.workers.dev/';
-  var EVERY = 120000;          // 2 minutes, same as the Worker's own Tank01 timer
+  var EVERY = 60000;           // 1 minute; the Worker can ask for more or less with "poll" (seconds)
   var ALLEN = '00-0034857';
   var state = null, listeners = [], sig = '', timer = null, changed = false;
 
@@ -40,12 +40,17 @@
       period: String(j.period || j.currentPeriod || j.quarter || ''), wp: j.wp && j.wp.pts ? j.wp : null,
       home: j.home === 'BUF', bills: j.home === 'BUF' ? j.homePts : j.awayPts, them: j.home === 'BUF' ? j.awayPts : j.homePts, s: line(j.allen) };
   }
+  // The Worker says how often to check (seconds); follow it, between 30 seconds and 5 minutes.
+  function pace(j){
+    var s = j && +j.poll; if(!s) return; var ms = Math.max(30, Math.min(300, s)) * 1000;
+    if(ms !== EVERY){ EVERY = ms; if(timer){ clearInterval(timer); timer = setInterval(poll, EVERY); } }
+  }
   function get(){
     var ctl = window.AbortController ? new AbortController() : null;
     var t = setTimeout(function(){ if(ctl) ctl.abort(); }, 5000);
     return fetch(WORKER, {cache:'no-store', signal: ctl ? ctl.signal : undefined})
       .then(function(r){ return r.ok ? r.json() : null; })
-      .then(function(j){ clearTimeout(t); return parse(j); })
+      .then(function(j){ clearTimeout(t); pace(j); return parse(j); })
       .catch(function(){ clearTimeout(t); return null; });
   }
 
@@ -223,7 +228,7 @@
   var LIGHTS = '<div class="glights" aria-hidden="true">' + light('l', 'red') + light('r', 'blue') + '</div>';
 
   // ---------- Win chance chart ----------
-  // Bills chance to win, rebuilt from the live score and game clock every 2 minutes and drawn as a line that
+  // Bills chance to win, rebuilt from the live score and game clock every minute and drawn as a line that
   // grows from kickoff (0%) to the final whistle (100% of the game). The model is the classic one for the NFL:
   // the final margin is roughly normal around (current lead + the pregame edge for the time left), with a
   // spread of 13.45 points over a full game that shrinks with the square root of the time left. The pregame
@@ -406,7 +411,7 @@
       + '<div class="wpc">' + svg + '<div class="wptip" hidden></div></div>'
       + '<p class="wpn">Kickoff: ' + wpPct(rec.p0) + '%' + (rec.line ? ' (' + (rec.book ? esc(rec.book) + ' ' : '') + 'betting line)' : ' (no betting line found, so even odds)')
       + (rec.worker ? '. Every play counts: the score, time left, who has the ball, down, distance and field position. Model fitted on five seasons of NFL play-by-play.'
-        : '. Updates every 2 minutes from the score and the time left.')
+        : '. Updates every minute from the score and the time left.')
       + (hasSc || hasTO ? ' Dots: ' + (hasSc ? 'scores (filled, in the scoring team&rsquo;s color)' : '') + (hasSc && hasTO ? ', ' : '') + (hasTO ? 'turnovers (rings)' : '') + '.' : '')
       + (dash ? ' Dashed stretches are times this page wasn&rsquo;t open.' : '') + ' Unofficial, for fun.</p>'
       + '<details class="wptab"><summary>Show as a table</summary><table><thead><tr><th>When</th><th>Score</th><th>Bills win</th></tr></thead><tbody>' + rows + '</tbody></table></details></div>';
@@ -449,10 +454,10 @@
       var pre = gd && match;
       el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br>' + (pre
         ? '<span class="ln">It’s gameday: Bills ' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp && match.opp.nick) + (match.time ? ', ' + esc(match.time) : '') + '.</span>'
-          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and the records watch counts down live, every 2 minutes.</span>'
+          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and the records watch counts down live, every minute.</span>'
           + (function(){ var pg = pregame(gameDate(match)); return pg ? '<span class="lnote">Bills win chance at kickoff: <b>' + wpPct(pg.p) + '%</b> (' + (pg.book ? esc(pg.book) + ' ' : '') + 'betting line). A live win-chance chart builds here as the game goes.</span>' : ''; })()
         : '<span class="ln">Check back on gameday to watch records broken live.</span>'
-          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every 2 minutes.</span>') + w.html;
+          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every minute.</span>') + w.html;
       el.hidden = false; sweep(); return; }
     var s = L.s, parts = [];
     if(s.att) parts.push(s.cmp + '/' + s.att + ', ' + s.yds + ' yds, ' + s.td + ' TD' + (s.int ? ', ' + s.int + ' INT' : ''));
@@ -461,7 +466,7 @@
     el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') + (w.broke ? '<span class="sr">A record fell today.</span>' : '') +
       '<div class="lhead"><span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
       (!L.final && L.clock ? ' · ' + L.clock : '') + '<br><span class="ln">Allen today: ' + (parts.join(' · ') || 'no stats yet') +
-      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + wpHtml(L) + w.html + '<span class="lnote">Live numbers are unofficial and update every 2 minutes. They are checked against the official stats after the game.</span>';
+      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + wpHtml(L) + w.html + '<span class="lnote">Live numbers are unofficial and update every minute. They are checked against the official stats after the game.</span>';
     wpWire(el);
     el.hidden = false;
   }

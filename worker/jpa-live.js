@@ -1,6 +1,10 @@
-// jpa-live v3: Josh Allen live stats from Tank01 for notjoshingaround.com
-// Tank01 is called ONLY by the Worker's own 2-minute timer, and ONLY from 10 minutes before a Bills kickoff
-// until the game is final. Visitors read the saved copy (KV), so page views never use Tank01 requests.
+// jpa-live v4: Josh Allen live stats from Tank01 for notjoshingaround.com
+// Tank01 is called ONLY by the Worker's own timer, and ONLY from 10 minutes before a Bills kickoff until the game is
+// final. Visitors read the saved copy (KV), so page views never use Tank01 requests.
+// v4: the timer runs every minute (Cloudflare: Settings > Triggers > Cron "* * * * *"), and the Worker picks how often
+// to actually call Tank01: every minute while the ball is in play, every 5 minutes before kickoff and at halftime,
+// and slower if the free plan's monthly calls (1,000, reset on the 1st) run short for the games left that month.
+// Check it any time at /?quota.
 // v3: the same box-score call now includes play-by-play, and the Worker builds the Bills win-chance curve from
 // every play (score, time left, who has the ball, down, distance, field position, pregame line), so every
 // visitor gets the whole curve from kickoff. Also passes the quarter, which v2 left out.
@@ -33,9 +37,13 @@ function kickoff(m) { // "Sunday, Nov. 1, 2026" + "1:00 p.m. ET" -> UTC millisec
 function etToUTC(y, mo, d, h, mi) { const g = Date.UTC(y, mo, d, h, mi); return g + (g - etWall(g)); }
 function ymdET(ms) { const d = new Date(etWall(ms)); return d.toISOString().slice(0, 10).replaceAll("-", ""); }
 
+let QUOTA = null, CALLS = 0; // what RapidAPI said about the monthly quota on the last call, and calls made this run
 async function tank(path, env) {
   const r = await fetch("https://" + HOST + path, {
     headers: { "x-rapidapi-key": env.TANK01_KEY, "x-rapidapi-host": HOST } });
+  CALLS++;
+  const lim = r.headers.get("x-ratelimit-requests-limit"), rem = r.headers.get("x-ratelimit-requests-remaining"), rs = r.headers.get("x-ratelimit-requests-reset");
+  if (rem != null) QUOTA = { limit: +lim || null, remaining: +rem, resetsAt: rs != null ? new Date(Date.now() + +rs * 1000).toISOString() : null, at: new Date().toISOString() };
   if (!r.ok) throw new Error("Tank01 answered " + r.status);
   const j = await r.json();
   return j && typeof j.body === "object" ? j.body : null;
@@ -168,8 +176,32 @@ function buildCurve(b, mu) {
   return { opp: opp, pts: out, sit: sitNow };
 }
 
-async function tick(env) {
-  const now = Date.now();
+// ---------------- How often to call Tank01 ----------------
+const GAME_MIN = 200;   // minutes of calls per game: 10 before kickoff + about 3 hours 10 minutes
+const PER_GAME = 175;   // calls a game at the normal pace (1 a minute in play, every 5 before kickoff and at halftime)
+function monthKey(ms) { return new Date(ms).toISOString().slice(0, 7); } // the free quota resets on the 1st
+// Remaining calls this month: RapidAPI's own count when we have it (and it is this month's), else 1,000 less our own count.
+function remaining(prev, now) {
+  const q = prev && prev.quota, u = prev && prev.usage;
+  if (q && q.remaining != null && monthKey(Date.parse(q.at)) === monthKey(now)) return q.remaining;
+  return 1000 - (u && u.month === monthKey(now) ? u.n : 0);
+}
+// Minutes between calls right now: 1 in play; 5 before kickoff and at halftime; slower if the month's calls are short.
+function cadence(now, k, prev, games) {
+  const st = prev ? (prev.status + " " + prev.period + " " + prev.clock) : "";
+  const base = now < k ? 5 : /half/i.test(st) && !/2nd half|1st half/i.test(st) ? 5 : 1;
+  const left = remaining(prev, now);
+  if (left <= 5) return 0;                                            // nearly out: stop, keep the last numbers
+  const later = games.filter(x => x.k > now + 3600e3 && monthKey(x.k) === monthKey(now)).length;
+  const share = left / (later + 1);                                  // split what's left evenly with the games still to come
+  const mins = Math.max(10, k + GAME_MIN * 60e3 - now) / 60e3;
+  for (const c of [base, 2, 3, 5, 10]) if (c >= base && mins / c * .9 <= share) return c;
+  return later ? Math.max(base, Math.ceil(mins / Math.max(1, left / (later + 1)))) : 10;
+}
+
+async function tick(env, when) {
+  const now = when || Date.now();
+  CALLS = 0; QUOTA = null;
   // Kickoffs: the built-in schedule, with the matchup file's time winning when it covers the same game (flex) or adds one (playoffs).
   const games = SCHEDULE.map(([id, t]) => ({ id: String(id), k: etToUTC(+t.slice(0, 4), +t.slice(5, 7) - 1, +t.slice(8, 10), +t.slice(11, 13), +t.slice(14, 16)) }));
   const mf = await fetch(MATCHUP, { cf: { cacheTtl: 60 } }).then(r => (r.ok ? r.json() : null)).catch(() => null); // free (GitHub)
@@ -180,6 +212,8 @@ async function tick(env) {
   const m = { gameId: g.id }, k = g.k;
   const prev = await env.LIVE.get("game", { type: "json" });
   if (prev && prev.nflGame === m.gameId && /final|completed/i.test(prev.status)) return; // final already saved
+  const every = cadence(now, k, prev && prev.nflGame === m.gameId ? prev : (prev ? { quota: prev.quota, usage: prev.usage, status: "", period: "", clock: "" } : null), games);
+  if (!every || Math.floor(now / 60e3) % every !== 0) return;         // not this minute (the timer fires every minute)
 
   const p = m.gameId.split("_"), away = TEAM[p[2]] || p[2], home = TEAM[p[3]] || p[3];
   let id = (prev && prev.nflGame === m.gameId && prev.gameID) || ymdET(k) + "_" + away + "@" + home;
@@ -198,6 +232,10 @@ async function tick(env) {
   const rec = { live: true, nflGame: m.gameId, gameID: id, status: b.gameStatus || "", clock: b.gameClock || "",
     period: b.currentPeriod || b.gamePeriod || b.quarter || "",
     away: b.away, awayPts: b.awayPts, home: b.home, homePts: b.homePts, allen };
+  const mo = monthKey(now), pu = prev && prev.usage && prev.usage.month === mo ? prev.usage.n : 0;
+  rec.usage = { month: mo, n: pu + CALLS };                          // our own count of Tank01 calls this month
+  rec.quota = QUOTA || (prev && prev.quota) || null;                  // RapidAPI's count, from the response headers
+  rec.every = every; rec.poll = Number(env.CLIENT_POLL) || 60;        // seconds between visitors' checks (CLIENT_POLL to change)
   rec.wp = winCurve(b, prev && prev.nflGame === m.gameId ? prev.wp : null, pregameMu(mf, m.gameId), rec);
   if (JSON.stringify(prev && { ...prev, fetched: undefined }) !== JSON.stringify(rec)) {
     rec.fetched = new Date().toISOString();
@@ -228,7 +266,7 @@ function winCurve(b, old, mu, rec) {
 }
 
 export default {
-  async scheduled(event, env, ctx) { ctx.waitUntil(tick(env)); },      // the 2-minute timer
+  async scheduled(event, env, ctx) { ctx.waitUntil(tick(env, event.scheduledTime)); }, // the 1-minute timer
   async fetch(request, env) {                                          // visitors: read the saved copy only
     const url = new URL(request.url);
     // One-time check of Tank01's play-by-play format on the last saved game (uses ONE Tank01 request, ever;
@@ -238,6 +276,7 @@ export default {
       if (!out) {
         const prev = await env.LIVE.get("game", { type: "json" });
         if (!prev || !prev.gameID) return json({ error: "no saved game to replay" });
+        QUOTA = null;
         const b = await box(prev.gameID, env).catch(e => ({ error: String(e) }));
         if (!b || b.error) return json({ error: (b && b.error) || "no box score" });
         const plays = list(first(b, ["allPlayByPlay", "playByPlay", "plays"]));
@@ -247,13 +286,29 @@ export default {
           scoringSample: list(b.scoringPlays).slice(0, 2),
           wp: winCurve(b, null, pregameMu(mf, prev.nflGame), { status: b.gameStatus || "", period: b.currentPeriod || "", clock: b.gameClock || "" }) };
         await env.LIVE.put("replay", JSON.stringify(out));
+        if (QUOTA) { prev.quota = QUOTA; await env.LIVE.put("game", JSON.stringify(prev)); } // so /?quota shows RapidAPI's real count
       }
       return json(out);
     }
+    if (url.searchParams.has("quota")) { // how the free plan is holding up
+      const rec = await env.LIVE.get("game", { type: "json" }), now = Date.now();
+      const games = SCHEDULE.map(([id, t]) => ({ id, k: etToUTC(+t.slice(0, 4), +t.slice(5, 7) - 1, +t.slice(8, 10), +t.slice(11, 13), +t.slice(14, 16)) }));
+      const next = games.filter(x => x.k > now - AFTER).slice(0, 3);
+      const left = remaining(rec, now), later = games.filter(x => x.k > now && monthKey(x.k) === monthKey(now)).length;
+      return json({ month: monthKey(now), callsLeft: left, fromRapidAPI: !!(rec && rec.quota && monthKey(Date.parse(rec.quota.at)) === monthKey(now)),
+        rapidapi: rec && rec.quota || null, workerCallsThisMonth: rec && rec.usage && rec.usage.month === monthKey(now) ? rec.usage.n : 0,
+        billsGamesLeftThisMonth: later, callsPerGameAtFullSpeed: PER_GAME,
+        onTrack: left >= later * PER_GAME ? "Yes: every minute for every game left this month" : "Tight: the Worker will slow down to stay under the cap",
+        lastGame: rec ? { game: rec.nflGame, status: rec.status, minutesBetweenCalls: rec.every || null, updated: rec.fetched || null } : null,
+        nextGames: next.map(x => ({ game: x.id, kickoffUTC: new Date(x.k).toISOString() })) });
+    }
+    if (MEMO && Date.now() - MEMO.t < 15e3) return json(MEMO.rec);    // busy games: serve the copy read in the last 15s
     const rec = await env.LIVE.get("game", { type: "json" });
-    return json(rec || { live: false, note: "No Bills game data yet" });
+    MEMO = { t: Date.now(), rec: rec || { live: false, note: "No Bills game data yet" } };
+    return json(MEMO.rec);
   },
 };
+let MEMO = null; // last copy read from KV in this Worker instance (fewer KV reads when lots of fans are watching)
 function json(o) {
   return new Response(JSON.stringify(o, null, 2), {
     headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json", "Cache-Control": "no-store" } });

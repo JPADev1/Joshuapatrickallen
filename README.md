@@ -65,7 +65,7 @@ Sits under the career tiles. Shows only the records and milestones Allen reached
 ## Win chance chart (Gameday live card)
 Bills chance to win, drawn from kickoff to the final whistle inside the Gameday live card on both pages.
 - Built by the **jpa-live Cloudflare Worker** (source kept in `worker/jpa-live.js`; deploy by pasting it into the Worker's
-  code editor in Cloudflare). The same 2-minute Tank01 box-score call includes play-by-play, and the Worker scores every play
+  code editor in Cloudflare). The same Tank01 box-score call includes play-by-play, and the Worker scores every play
   (score, time left, who has the ball, down, distance, field position, pregame spread from matchup.json) and saves the curve in KV,
   so every visitor sees the whole game.
 - Model: `scripts/winprob/fit_model.py`, fitted on nflverse play-by-play 2021-2025. Refit after a season and paste the new
@@ -73,3 +73,11 @@ Bills chance to win, drawn from kickoff to the final whistle inside the Gameday 
 - If Tank01 sends no plays, the Worker falls back to one point per update; with no Worker curve at all, `live.js` builds a simple
   score-and-clock curve in the browser.
 - `/?replay` on the Worker: a one-time check of Tank01's play-by-play format on the last saved game (one Tank01 request, then cached in KV).
+
+## Tank01 calls (free plan: 1,000 a month, resets on the 1st)
+The Worker's timer fires every minute (Cloudflare: jpa-live > Settings > Triggers > Cron `* * * * *`). It calls Tank01 only
+during Bills games: every minute while the ball is in play, every 5 minutes before kickoff and at halftime (about 180 a game),
+and it slows down if the month's remaining calls run short for the Bills games left that month (stops at 5 left).
+- Check it: `https://jpa-live.sterryrochester.workers.dev/?quota` (calls left from RapidAPI's own count, games left, pace).
+- Visitors' pages check the Worker every 60 seconds (`poll` in its answer). To ease Cloudflare's free 100,000 requests a day
+  on a huge day, add a `CLIENT_POLL` variable (seconds, e.g. 120) in the Worker's settings; no code change needed.

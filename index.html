@@ -82,7 +82,7 @@
 <footer id="foot"></footer>
 <script src="scripts/wincard.js?v=5"></script>
 <script src="scripts/share.js?v=8"></script>
-<script src="scripts/live.js?v=12"></script>
+<script src="scripts/live.js?v=13"></script>
 <script>
 // ===== DATA (edit here after each game) =====
 // Season rows (2018-2025): nflverse regular-season totals, matching official totals except 2018 passing, which uses the official 2,074 yards.
@@ -338,7 +338,7 @@ function load(name){var i=0;function next(){var u=SRC[i++]+name;return fetch(u,{
 var G0 = NOW.g;
 function useData(d){ if(d && d.now && d.now.g >= G0){ NOW = d.now; THRU = d.thru || THRU; POST = d.post || null;
   if(d.games && d.games.length) GAMES = d.games; LIVEG = d.live ? {date:d.live.date, td:d.live.s.td, rushTD:d.live.s.rushTD} : null; init(); } }
-// Live game (scripts/live.js): Allen's in-progress game is added on top while the Bills play, refreshed every 2 minutes.
+// Live game (scripts/live.js): Allen's in-progress game is added on top while the Bills play, refreshed every minute.
 function loadAllen(){ return load('allen-2026.json').then(function(d){
   return window.JPALive ? JPALive.ready.then(function(){ useData(JPALive.patch('allen-2026.json', d)); }) : useData(d); }).catch(function(){}); }
 loadAllen();
