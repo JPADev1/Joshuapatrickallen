@@ -212,25 +212,41 @@
     for(var i = 0; i < t.length; i++) if(MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t[i])) return t[i];
     return '';
   }
+  // Preferred: encode every frame with the browser's own H.264 encoder into a normal MP4 (right length, slider works,
+  // and much faster than real time). Fallback: record the canvas live, then repair the MP4 so it isn't "3 seconds".
+  var DRAW = 17000, HOLD = 3000, FPS = 30;
+  function frameAt(c, d, ms){ JPAWinCard.draw(c, d, Math.min(1, ms / DRAW), LOGO_IMG); } // even pace: about 4 seconds a quarter
   function record(d){
-    var my = ++job, type = vidType(); if(!type) return Promise.reject('no video');
-    var cv = document.createElement('canvas'); cv.width = W; cv.height = H; var c = cv.getContext('2d');
-    var DRAW = 17000, HOLD = 3000, rec, chunks = [];
-    JPAWinCard.draw(c, d, 0, LOGO_IMG);
-    var stream = cv.captureStream(30);
+    var my = ++job, cv = document.createElement('canvas'); cv.width = W; cv.height = H; var c = cv.getContext('2d');
+    var n = Math.round((DRAW + HOLD) / 1000 * FPS);
+    var fast = window.JPAMp4 ? JPAMp4.supported(W, H, FPS) : Promise.resolve(false);
+    return fast.then(function(ok){
+      if(!ok) return live(d, my, cv, c);
+      return JPAMp4.encode(cv, function(e){ frameAt(c, d, e * (DRAW + HOLD)); }, n, FPS,
+        function(f){ msg('Making your video\u2026 ' + Math.round(f * 100) + '%'); }, function(){ return my !== job; })
+        .catch(function(err){ if(err === 'cancelled') throw err; return live(d, my, cv, c); });
+    });
+  }
+  function live(d, my, cv, c){
+    var type = vidType(); if(!type) return Promise.reject('no video');
+    var rec, chunks = [];
+    frameAt(c, d, 0);
+    var stream = cv.captureStream(FPS);
     try { rec = new MediaRecorder(stream, {mimeType: type, videoBitsPerSecond: 8e6}); } catch(e){ return Promise.reject(e); }
     return new Promise(function(ok, no){
       rec.ondataavailable = function(e){ if(e.data && e.data.size) chunks.push(e.data); };
       rec.onstop = function(){ stream.getTracks().forEach(function(t){ t.stop(); }); if(my !== job) return no('cancelled');
-        ok(new Blob(chunks, {type: type.split(';')[0]})); };
+        var blob = new Blob(chunks, {type: type.split(';')[0]});
+        if(!/mp4/.test(blob.type) || !window.JPAMp4) return ok(blob);
+        blob.arrayBuffer().then(function(ab){ ok(JPAMp4.defrag(ab) || blob); }, function(){ ok(blob); }); };
       rec.start(250);
       var t0 = performance.now();
       (function frame(){
         if(my !== job){ rec.stop(); return; }
-        var ms = performance.now() - t0, e = Math.min(1, ms / DRAW);
-        JPAWinCard.draw(c, d, e, LOGO_IMG); // even pace: about 4 seconds a quarter
+        var ms = performance.now() - t0;
+        frameAt(c, d, ms);
         msg('Making your video\u2026 ' + Math.max(0, Math.ceil((DRAW + HOLD - ms) / 1000)) + 's');
-        if(ms < DRAW + HOLD) setTimeout(frame, 1000 / 30); else rec.stop();
+        if(ms < DRAW + HOLD) setTimeout(frame, 1000 / FPS); else rec.stop();
       })();
     });
   }
@@ -281,7 +297,7 @@
         var name = 'josh-allen-' + String(d.title).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) + '.png';
         if(cur && cur.url) URL.revokeObjectURL(cur.url);
         cur = {d:d, blob:blob, img:blob, name:name, url:URL.createObjectURL(blob), link:SITE + '/' + (d.url || '')};
-        var md = box.querySelector('.shr-mode'); md.hidden = !(d.wp && vidType());
+        var md = box.querySelector('.shr-mode'); md.hidden = !(d.wp && (vidType() || window.VideoEncoder));
         [].forEach.call(md.querySelectorAll('button'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-m') === 'img')); });
         var vv = box.querySelector('video'); vv.hidden = true; vv.pause(); im.hidden = false; box.querySelector('.shr-dl').textContent = 'Save image';
         im.src = cur.url; im.alt = 'Share card: ' + d.title;
