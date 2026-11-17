@@ -677,44 +677,57 @@ html.shr-open{overflow:hidden}
 /* Win chance chart in the Gameday live card (scripts/live.js) */
 .livebar .wp{margin:12px 0 2px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .livebar .wp + .lw{border-top:0;margin-top:4px}
-.livebar .wph{font-weight:800;font-size:.95rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
-.livebar .wph .wpbig{color:var(--blue);font-size:1.5rem;letter-spacing:-.01em;margin:0;line-height:1}
-.livebar .wpd{font-size:.76rem;font-weight:700;color:var(--mute)}
-.livebar .wpd.up::first-letter{color:var(--ok)}
-.livebar .wpd.dn::first-letter{color:var(--red)}
-.livebar .wpc{position:relative;margin-top:6px}
-.livebar .wpc svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
-.livebar .wpg{stroke:var(--line);stroke-width:1;opacity:.7}
-.livebar .wpmid{stroke:var(--mute);stroke-width:1;stroke-dasharray:3 4;opacity:.8}
-.livebar .wpt{fill:var(--mute);font-size:11px;font-family:inherit}
-.livebar .wps{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
-.livebar .wpline{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
-.livebar .wpdash{stroke-dasharray:4 5;opacity:.55}
-.livebar .wpv{fill:var(--ink);font-size:13px;font-weight:800;font-family:inherit}
-.livebar .wpdot,.livebar .wphov{stroke:var(--card);stroke-width:2}
-.livebar .wplive{animation:wppulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.livebar .wpx{stroke:var(--mute);stroke-width:1}
-.livebar .wphit{cursor:crosshair}
-.livebar .wptip{position:absolute;z-index:3;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;
+.wph{font-weight:800;font-size:.95rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.wph .wpbig{color:var(--blue);font-size:1.5rem;letter-spacing:-.01em;margin:0;line-height:1}
+.wpd{font-size:.76rem;font-weight:700;color:var(--mute)}
+.wpd.up::first-letter{color:var(--ok)}
+.wpd.dn::first-letter{color:var(--red)}
+.wpc{position:relative;margin-top:6px}
+.wpc svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.wpg{stroke:var(--line);stroke-width:1;opacity:.7}
+.wpmid{stroke:var(--mute);stroke-width:1;stroke-dasharray:3 4;opacity:.8}
+.wpt{fill:var(--mute);font-size:11px;font-family:inherit}
+.wps{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+.wpline{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.wpdash{stroke-dasharray:4 5;opacity:.55}
+.wpv{fill:var(--ink);font-size:13px;font-weight:800;font-family:inherit}
+.wpdot,.wphov{stroke:var(--card);stroke-width:2}
+.wplive{animation:wppulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.wpx{stroke:var(--mute);stroke-width:1}
+.wphit{cursor:crosshair}
+.wptip{position:absolute;z-index:3;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;
   padding:5px 9px;font-size:.76rem;line-height:1.35;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.18)}
-.livebar .wptip b{color:inherit;margin:0;letter-spacing:0}
-.livebar .wpn{margin:6px 0 0;font-size:.72rem;color:var(--mute)}
-.livebar .wptab{margin-top:4px;font-size:.74rem;color:var(--mute)}
-.livebar .wptab summary{cursor:pointer}
-.livebar .wptab table{margin-top:4px;font-size:.76rem}
-.livebar .wptab th,.livebar .wptab td{padding:3px 8px}
+.wptip b{color:inherit;margin:0;letter-spacing:0}
+.wpn{margin:6px 0 0;font-size:.72rem;color:var(--mute)}
+.wptab{margin-top:4px;font-size:.74rem;color:var(--mute)}
+.wptab summary{cursor:pointer}
+.wptab table{margin-top:4px;font-size:.76rem}
+.wptab th,.wptab td{padding:3px 8px}
 /* Draw-in: the solid line waits while the new stretch draws over it */
-.livebar .wpnew{stroke-dasharray:1;stroke-dashoffset:1;animation:wpdraw 1.4s ease-out forwards}
-.livebar .wpnew.wpall{animation-duration:2.6s}
-.livebar .wpdot.wpwait{animation:wphold 1.4s step-end}
-.livebar .wpdot.wpwait.wpslow{animation-duration:2.6s}
-.livebar .wpdot.wpwait.wplive{animation:wphold 1.4s step-end,wppulse 1.6s ease-in-out 1.4s infinite}
-.livebar .wpdot.wpwait.wpslow.wplive{animation:wphold 2.6s step-end,wppulse 1.6s ease-in-out 2.6s infinite}
+.wpnew{stroke-dasharray:1;stroke-dashoffset:1;animation:wpdraw 1.4s ease-out forwards}
+.wpnew.wpall{animation-duration:2.6s}
+.wpdot.wpwait{animation:wphold 1.4s step-end}
+.wpdot.wpwait.wpslow{animation-duration:2.6s}
+.wpdot.wpwait.wplive{animation:wphold 1.4s step-end,wppulse 1.6s ease-in-out 1.4s infinite}
+.wpdot.wpwait.wpslow.wplive{animation:wphold 2.6s step-end,wppulse 1.6s ease-in-out 2.6s infinite}
 @keyframes wpdraw{to{stroke-dashoffset:0}}
 @keyframes wphold{0%{opacity:0}100%{opacity:1}}
 @keyframes wppulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
-@media (prefers-reduced-motion:reduce){.livebar .wplive,.livebar .wpnew,.livebar .wpdot.wpwait{animation:none}}
-.livebar .wpmk{stroke:var(--card);stroke-width:1.5}
-.livebar .wpmk.wpto{fill:var(--card);stroke:var(--ink);stroke-width:2}
-.livebar .wptip{white-space:normal;max-width:260px}
-.livebar .wptx{display:block;margin-top:3px;color:var(--mute);font-size:.72rem}
+@media (prefers-reduced-motion:reduce){.wplive,.wpnew,.wpdot.wpwait{animation:none}}
+.wpmk{stroke:var(--card);stroke-width:1.5}
+.wpmk.wpto{fill:var(--card);stroke:var(--ink);stroke-width:2}
+.wptip{white-space:normal;max-width:260px}
+.wptx{display:block;margin-top:3px;color:var(--mute);font-size:.72rem}
+.wph .wpht{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.wph{align-items:center !important;justify-content:space-between}
+.wph .wpshr{margin-left:auto;align-self:center}
+#recap .wp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px 10px;margin:0 0 14px}
+#recap .wp .wph{font-size:1.02rem}
+/* Win-chance share: Image / Video choice and the video preview */
+.shr-mode{display:inline-flex;gap:0;margin:0 0 10px;border:1px solid rgba(255,255,255,.3);border-radius:99px;overflow:hidden}
+.shr-mode[hidden]{display:none}
+.shr-mode button{font:inherit;font-weight:800;font-size:.9rem;padding:7px 18px;border:0;background:transparent;color:#e1e6f8;cursor:pointer}
+.shr-mode button[aria-pressed="true"]{background:#e9c46a;color:#040e30}
+.shr-in video{display:block;width:100%;aspect-ratio:4/5;border-radius:10px;background:#0b1f4f;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.shr-in video[hidden],.shr-in img[hidden]{display:none}
+.shr-btns button:disabled{opacity:.5;cursor:default}

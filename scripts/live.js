@@ -38,7 +38,7 @@
     var fin = /final|completed/i.test(st);
     return { date: y, week: weekOf(ymd), opp: opp, final: fin, status: st, clock: j.clock || '',
       period: String(j.period || j.currentPeriod || j.quarter || ''), wp: j.wp && j.wp.pts ? j.wp : null,
-      bills: j.home === 'BUF' ? j.homePts : j.awayPts, them: j.home === 'BUF' ? j.awayPts : j.homePts, s: line(j.allen) };
+      home: j.home === 'BUF', bills: j.home === 'BUF' ? j.homePts : j.awayPts, them: j.home === 'BUF' ? j.awayPts : j.homePts, s: line(j.allen) };
   }
   function get(){
     var ctl = window.AbortController ? new AbortController() : null;
@@ -275,7 +275,24 @@
     return Math.min(.995, Math.max(.005, Phi((lead + mu * r) / Math.sqrt(SIG * SIG * r + 16 * (1 - r)))));
   }
   // The curve is kept in this browser (localStorage) for the game, so a refresh doesn't lose it.
-  var wpMem = {}, wpShown = {}, wpLastP = {};
+  var wpMem = {}, wpShown = {}, wpLastP = {}, wpReg = {};
+  // Share data for the win-chance card (scripts/wincard.js): the curve in game seconds, plus who and where.
+  function wpShare(key){
+    var r = wpReg[key]; if(!r) return null; var L = r.L, rec = r.rec;
+    var pts = L.wp && L.wp.pts && L.wp.pts.length ? L.wp.pts
+      : rec.pts.map(function(q){ return [Math.round(q[0] * 3600), q[1], q[2], q[3], q[5] || '', q[6] || '']; });
+    if(L.final && pts.length && pts[pts.length - 1][4] !== 'end'){ var z = pts[pts.length - 1], b = parseInt(L.bills, 10), o = parseInt(L.them, 10);
+      if(!isNaN(b) && !isNaN(o)) pts = pts.concat([[Math.max(3600, z[0]), b > o ? 1 : b < o ? 0 : .5, b, o, 'end', 'Final']]); }
+    var nick = oppNick(L), vs = (L.home ? 'vs' : 'at') + ' the ' + nick;
+    return {wp: {pts: pts, p0: rec.p0}, final: !!L.final, oppNick: nick, oppAb: L.opp || 'OPP', oppColor: oppHex(L), home: !!L.home,
+      sit: L.sit || (L.wp && L.wp.sit) || '', game: L.game || '', title: 'Bills win chance ' + vs,
+      share: 'Bills win chance ' + vs + (L.final ? ', play by play' : ', live'), url: L.recap ? '#recap' : (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '')};
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('.wpshr'); if(!b) return;
+    e.preventDefault(); e.stopPropagation();
+    var d = wpShare(b.getAttribute('data-wpk')); if(d && window.JPAShare) JPAShare.open(d);
+  }, true);
   function wpLoad(date){ try{ return JSON.parse(localStorage.getItem('jpa-wp-' + date)); }catch(e){ return null; } }
   function wpSave(date, rec){ try{
     for(var i = localStorage.length - 1; i >= 0; i--){ var k = localStorage.key(i); if(k && k.indexOf('jpa-wp-') === 0 && k !== 'jpa-wp-' + date) localStorage.removeItem(k); }
@@ -312,8 +329,15 @@
     wpMem[L.date] = rec; wpSave(L.date, rec); return rec;
   }
   function hexRGB(h){ var m = /^#?([0-9a-f]{6})$/i.exec(String(h || '')); if(!m) return null; var v = parseInt(m[1], 16); return [v >> 16, v >> 8 & 255, v & 255]; }
-  function oppColor(){
-    var tc = match && (match.teamColors && match.teamColors.opp && match.teamColors.opp[0] || match.colors && match.colors.opp), c = hexRGB(tc), bills = [0, 51, 141];
+  function oppHex(L){ // the opponent's main color: given (recap), or from the Next game file when it's that game
+    if(L && L.oppColor) return L.oppColor;
+    if(L && L.opp && match && match.opp && match.opp.abbr && match.opp.abbr !== L.opp) return '';
+    return match && (match.teamColors && match.teamColors.opp && match.teamColors.opp[0] || match.colors && match.colors.opp) || '';
+  }
+  function oppNick(L){ return L.oppNick || (match && match.opp && (!L.opp || match.opp.abbr === L.opp) ? match.opp.nick : '') || L.opp || 'Opponent'; }
+  function oppColor(L){
+    var tc = oppHex(L), c = hexRGB(tc), bills = [0, 51, 141];
+    if(!tc) return '#8b93a7';
     if(!c) return 'var(--red)';
     var d = Math.sqrt(Math.pow(c[0]-bills[0],2) + Math.pow(c[1]-bills[1],2) + Math.pow(c[2]-bills[2],2));
     return d < 90 ? '#8b93a7' : tc; // navy opponents would blend into Bills blue
@@ -343,7 +367,7 @@
     if(anim) anim = '<path class="wpline wpnew' + (seen ? '' : ' wpall') + '" pathLength="1" d="' + anim + '"/>';
     wpShown[L.date] = n;
     area += ' L' + wpX(cur[0]).toFixed(1) + ' ' + wpY(.5) + ' Z';
-    var oc = oppColor(), y50 = wpY(.5), grid = '', lab = '';
+    var oc = oppColor(L), y50 = wpY(.5), grid = '', lab = '';
     [.25, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + wpY(v) + '" y2="' + wpY(v) + '"/>'; });
     [.25, .5, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(v) + '" x2="' + wpX(v) + '" y1="' + WP.t + '" y2="' + (WP.H - WP.b) + '"/>'; });
     ['Q1','Q2','Q3','Q4'].forEach(function(q, i){ lab += '<text class="wpt" x="' + wpX(i / 4 + .125) + '" y="' + (WP.H - 7) + '" text-anchor="middle">' + q + '</text>'; });
@@ -375,7 +399,11 @@
     var head = L.final ? (cur[2] > cur[3] ? 'Bills win' : cur[2] < cur[3] ? 'Bills lose' : 'Tie') + ', ' + cur[2] + '-' + cur[3]
       : 'Bills win chance <b class="wpbig">' + wpPct(cur[1]) + '%</b>' + delta;
     var rows = pts.map(function(q){ return '<tr><td>' + esc(q[4]) + '</td><td>' + q[2] + '-' + q[3] + '</td><td>' + wpPct(q[1]) + '%</td></tr>'; }).join('');
-    return '<div class="wp" data-opp="' + oppAb + '" data-pts="' + esc(JSON.stringify(pts)) + '"><div class="wph">' + head + '</div>'
+    // Share: the card (image or video) is drawn by scripts/wincard.js from the whole curve so far
+    var key = (L.recap ? 'r' : 'l') + L.date; wpReg[key] = {L: L, rec: rec};
+    var shr = window.JPAShare && window.JPAWinCard ? '<button type="button" class="shr wpshr" data-wpk="' + esc(key) + '" aria-label="Share the win chance chart">'
+      + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>Share</button>' : '';
+    return '<div class="wp" data-opp="' + oppAb + '" data-oc="' + esc(oc) + '" data-pts="' + esc(JSON.stringify(pts)) + '"><div class="wph"><span class="wpht">' + head + '</span>' + shr + '</div>'
       + '<div class="wpc">' + svg + '<div class="wptip" hidden></div></div>'
       + '<p class="wpn">Kickoff: ' + wpPct(rec.p0) + '%' + (rec.line ? ' (' + (rec.book ? esc(rec.book) + ' ' : '') + 'betting line)' : ' (no betting line found, so even odds)')
       + (rec.worker ? '. Every play counts: the score, time left, who has the ball, down, distance and field position. Model fitted on five seasons of NFL play-by-play.'
@@ -387,8 +415,8 @@
   // Hover / touch: crosshair, dot and a tooltip on the nearest point.
   function wpWire(root){
     var box = root.querySelector('.wp'); if(!box) return;
-    var pts = JSON.parse(box.getAttribute('data-pts')), svg = box.querySelector('svg'), tip = box.querySelector('.wptip'),
-      vx = svg.querySelector('.wpx'), hv = svg.querySelector('.wphov'), hit = svg.querySelector('.wphit'), oc = oppColor();
+    var pts = JSON.parse(box.getAttribute('data-pts')), svg = box.querySelector('.wpc svg'), tip = box.querySelector('.wptip'),
+      vx = svg.querySelector('.wpx'), hv = svg.querySelector('.wphov'), hit = svg.querySelector('.wphit'), oc = box.getAttribute('data-oc') || '#8b93a7';
     function show(ev){
       var r = svg.getBoundingClientRect(), x = ((ev.touches ? ev.touches[0].clientX : ev.clientX) - r.left) / r.width * WP.W;
       var best = pts[0]; pts.forEach(function(q){ if(Math.abs(wpX(q[0]) - x) < Math.abs(wpX(best[0]) - x)) best = q; });
@@ -464,6 +492,13 @@
     patch: patch,
     // Wrap a page's load(name): fetch, then add the live game once the Worker has answered (or timed out).
     wrap: function(load){ return function(name){ return load(name).then(function(d){ return ready.then(function(){ return patch(name, d); }); }); }; },
-    onChange: function(f){ listeners.push(f); }
+    onChange: function(f){ listeners.push(f); },
+    // A finished game's chart (Weekly Record Recap): g = {date, opp (abbr), oppNick, oppColor, home, bills, them, game, wp: {pts, p0, mu}}
+    chart: function(el, g){
+      if(!el || !g || !g.wp || !g.wp.pts || !g.wp.pts.length) return false;
+      var L = {date: g.date, final: true, recap: true, opp: g.opp, oppNick: g.oppNick, oppColor: g.oppColor, home: !!g.home,
+        bills: g.bills, them: g.them, game: g.game || '', wp: g.wp, s: {}};
+      el.innerHTML = wpHtml(L); wpWire(el); return true;
+    }
   };
 })();

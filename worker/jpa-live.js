@@ -126,16 +126,18 @@ function buildCurve(b, mu) {
     h: pts(s, "home"), a: pts(s, "away") })).filter(s => s.t != null && s.h != null && s.a != null).sort((x, y) => x.t - y.t);
   const plays = list(first(b, ["allPlayByPlay", "playByPlay", "plays"]));
   const out = [], seen = { h: 0, a: 0 };
-  let last = null, lastWho = null, lastText = "";
+  let last = null, lastWho = null, lastText = "", sitNow = "";
   plays.forEach(pl => {
     const t = elapsed(quarter(first(pl, ["playPeriod", "period", "quarter", "qtr"])), first(pl, ["playClock", "clock", "gameClock", "time"]));
     if (t == null) return;
     let h = pts(pl, "home"), a = pts(pl, "away");
     if (h == null || a == null) { h = 0; a = 0; for (const s of scores) if (s.t <= t) { h = s.h; a = s.a; } }
     const text = String(first(pl, ["play", "playDescription", "description", "text"]) || "");
+    if (/^\s*(timeout|two-minute warning|end (of )?(the )?(quarter|half|game)|end quarter|end game)/i.test(text)) return; // not a play
     const team = teamOf(pl), sit = situation(first(pl, ["downAndDistance", "downDistance", "situation", "down_and_distance"]));
     let who = null, e = 0, yl = null;
     if (sit && team) {
+      sitNow = team + " ball, " + String(first(pl, ["downAndDistance", "downDistance", "situation", "down_and_distance"])).trim();
       yl = sit.side == null ? 50 : sit.side === team ? 100 - sit.yard : sit.yard;
       who = team === "BUF" ? "BUF" : "OPP"; e = ep(sit.down, sit.dist == null ? yl : sit.dist, Math.max(1, Math.min(99, yl)));
     } else if (/kicks/i.test(text)) { // kickoff: the side kicking is named in the text ("kicks 58 yards from BUF 35")
@@ -160,10 +162,10 @@ function buildCurve(b, mu) {
     if (who && sit) lastWho = who; else if (who) lastWho = null; lastText = text;
     const pt = [t, Math.round(p * 1000) / 1000, bills, them, kind, text.replace(/\s+/g, " ").slice(0, 90)];
     if (last && last[0] === t) { // same game time (a score, its try, the kickoff): one point with the latest state, keeping the mark
-      if (last[4] && !kind) { pt[4] = last[4]; pt[5] = last[5]; } out.pop(); }
+      if (last[4] && !kind) { pt[4] = last[4]; if (!/field goal|touchdown|safety/i.test(text)) pt[5] = last[5]; } out.pop(); }
     out.push(pt); last = pt;
   });
-  return { opp: opp, pts: out };
+  return { opp: opp, pts: out, sit: sitNow };
 }
 
 async function tick(env) {
@@ -222,7 +224,7 @@ function winCurve(b, old, mu, rec) {
   }
   if (fin) { const end = Math.max(3600, pts.length ? pts[pts.length - 1][0] : 3600);
     pts = pts.concat([[end, lb > lo ? 1 : lb < lo ? 0 : .5, lb, lo, "end", "Final"]]); }
-  return { mu: Math.round(mu * 10) / 10, p0: p0, src: src, pts: pts };
+  return { mu: Math.round(mu * 10) / 10, p0: p0, src: src, sit: fin || src !== "plays" ? "" : c.sit, pts: pts };
 }
 
 export default {

@@ -1,9 +1,9 @@
 {
- "_how": "Weekly Record Recap on the stats page: only records and milestones from Allen's most recent game. The live copy is recap.json on the stats-data branch (publish there, no Netlify deploy); this copy on main is the fallback. Fields: date (YYYY-MM-DD of the game), game, result, allen (his line), official (true once checked against the official stats), items [{tag, scope (nfl, bills or blank), title, text, line}]. The section hides itself when items is empty or once a newer game starts.",
+ "_how": "Weekly Record Recap on the stats page: only records and milestones from Allen's most recent game. The live copy is recap.json on the stats-data branch (publish there, no Netlify deploy); this copy on main is the fallback. Fields: date (YYYY-MM-DD of the game), game, result, allen (his line), official (true once checked against the official stats), items [{tag, scope (nfl, bills or blank), title, text, line}]. The section hides itself when items is empty or once a newer game starts. Win-chance chart (optional): wp {pts, p0, mu} copied from the jpa-live Worker after the game, with opp (abbr), oppNick, oppColor, home, bills, them.",
  "date": "2026-11-15",
  "game": "Week 10 at Jets",
  "result": "W 31-12",
- "allen": "11 of 21, 196 yards, 1 TD, 1 INT · 2 rushing TDs",
+ "allen": "11 of 21, 196 yards, 1 TD, 1 INT \u00b7 2 rushing TDs",
  "official": true,
  "items": [
   {
@@ -11,7 +11,7 @@
    "scope": "nfl",
    "title": "Most total touchdowns in a player's first 10 seasons, at any position",
    "text": "He passed Peyton Manning (322) and has 325, in his 9th season.",
-   "line": "233 passing + 90 rushing + 2 receiving · 3 total TDs at the Jets"
+   "line": "233 passing + 90 rushing + 2 receiving \u00b7 3 total TDs at the Jets"
   },
   {
    "tag": "NFL first",
@@ -46,5 +46,1234 @@
    "text": "He passed Sonny Jurgensen (32,224) and now has 32,325.",
    "line": "Next up: Kurt Warner (32,344), 19 yards away"
   }
- ]
+ ],
+ "opp": "NYJ",
+ "oppNick": "Jets",
+ "oppColor": "#125740",
+ "home": false,
+ "bills": 31,
+ "them": 12,
+ "wp": {
+  "pts": [
+   [
+    0,
+    0.797,
+    0,
+    0,
+    "",
+    "47-A.Beck kicks 63 yards from NYJ 35 to BUF 2. 19-G.Dortch to BUF 28 for 26 yards (32-I.Da"
+   ],
+   [
+    5,
+    0.8,
+    0,
+    0,
+    "",
+    "(14:55) 2-D.Moore right end to BUF 32 for 4 yards (44-J.Sherwood; 6-D.Belton)."
+   ],
+   [
+    42,
+    0.797,
+    0,
+    0,
+    "",
+    "(14:18) 4-J.Cook right guard to BUF 36 for 4 yards (97-H.Phillips)."
+   ],
+   [
+    86,
+    0.796,
+    0,
+    0,
+    "",
+    "(13:34) 4-J.Cook left end to BUF 37 for 1 yard (21-B.Stephens)."
+   ],
+   [
+    120,
+    0.773,
+    0,
+    0,
+    "",
+    "(13:00) 17-J.Allen left guard to BUF 39 for 2 yards (97-H.Phillips; 6-D.Belton)."
+   ],
+   [
+    157,
+    0.806,
+    0,
+    0,
+    "",
+    "(12:23) 17-J.Allen pass short left to 10-K.Shakir to NYJ 48 for 13 yards (44-J.Sherwood)."
+   ],
+   [
+    197,
+    0.817,
+    0,
+    0,
+    "",
+    "(11:43) 4-J.Cook up the middle to NYJ 44 for 4 yards (97-H.Phillips)."
+   ],
+   [
+    232,
+    0.815,
+    0,
+    0,
+    "",
+    "(11:08) (Shotgun) 17-J.Allen pass incomplete short right to 10-K.Shakir (31-D.Bailey)."
+   ],
+   [
+    235,
+    0.804,
+    0,
+    0,
+    "",
+    "(11:05) (Shotgun) 17-J.Allen pass incomplete deep left to 2-D.Moore."
+   ],
+   [
+    240,
+    0.782,
+    0,
+    0,
+    "",
+    "(11:00) 39-T.Doman punts 34 yards to NYJ 10, Center-69-R.Ferguson, fair catch by 18-I.Will"
+   ],
+   [
+    247,
+    0.777,
+    0,
+    0,
+    "",
+    "(10:53) (Shotgun) 7-G.Smith pass short right to 16-K.Sadiq to NYJ 13 for 3 yards (8-T.Bern"
+   ],
+   [
+    287,
+    0.78,
+    0,
+    0,
+    "",
+    "(10:13) 20-B.Hall left guard to NYJ 14 for 1 yard (91-E.Oliver)."
+   ],
+   [
+    332,
+    0.788,
+    0,
+    0,
+    "",
+    "(9:28) (Shotgun) 7-G.Smith pass incomplete deep left to 15-A.Mitchell (47-C.Benford)."
+   ],
+   [
+    338,
+    0.799,
+    0,
+    0,
+    "",
+    "(9:22) 14-A.McNamara punts 44 yards to BUF 37, Center-42-T.Hennessy, out of bounds."
+   ],
+   [
+    344,
+    0.8,
+    0,
+    0,
+    "",
+    "(9:16) 17-J.Allen pass short right to 88-D.Knox to BUF 44 for 7 yards (56-D.Davis)."
+   ],
+   [
+    380,
+    0.804,
+    0,
+    0,
+    "",
+    "(8:40) 4-J.Cook right guard to BUF 46 for 2 yards (96-J.Heflin; 97-H.Phillips). (Virtual M"
+   ],
+   [
+    412,
+    0.803,
+    0,
+    0,
+    "",
+    "(8:08) 4-J.Cook right tackle to NYJ 43 for 11 yards (29-M.Fitzpatrick)."
+   ],
+   [
+    451,
+    0.816,
+    0,
+    0,
+    "",
+    "(7:29) 10-K.Shakir left end pushed ob at NYJ 30 for 13 yards (21-B.Stephens)."
+   ],
+   [
+    480,
+    0.827,
+    0,
+    0,
+    "",
+    "(7:00) 17-J.Allen pass incomplete short right to 88-D.Knox (31-D.Bailey)."
+   ],
+   [
+    484,
+    0.819,
+    0,
+    0,
+    "",
+    "(6:56) (Shotgun) 10-K.Shakir left end to NYJ 25 for 5 yards (44-J.Sherwood)."
+   ],
+   [
+    517,
+    0.817,
+    0,
+    0,
+    "",
+    "(6:23) (Shotgun) 17-J.Allen pass short right to 26-T.Johnson to NYJ 21 for 4 yards (95-D.J"
+   ],
+   [
+    553,
+    0.809,
+    0,
+    0,
+    "",
+    "(5:47) 17-J.Allen up the middle to NYJ 19 for 2 yards (1-A.Thomas; 56-D.Davis)."
+   ],
+   [
+    595,
+    0.835,
+    0,
+    0,
+    "",
+    "(5:05) 4-J.Cook right guard to NYJ 20 for -1 yards (27-M.Moore)."
+   ],
+   [
+    635,
+    0.825,
+    0,
+    0,
+    "",
+    "(4:25) (Shotgun) 17-J.Allen pass incomplete deep left to 86-D.Kincaid. PENALTY on NYJ-27-M"
+   ],
+   [
+    640,
+    0.854,
+    0,
+    0,
+    "",
+    "(4:20) 7-R.Davis right tackle to NYJ 2 for 1 yard (97-H.Phillips; 95-D.Jackson)."
+   ],
+   [
+    682,
+    0.849,
+    0,
+    0,
+    "",
+    "(3:38) 4-J.Cook right guard to NYJ 1 for 1 yard (56-D.Davis)."
+   ],
+   [
+    724,
+    0.845,
+    0,
+    0,
+    "",
+    "(2:56) 63-A.Corbett reported in as eligible. 17-J.Allen pass incomplete short right to 88-"
+   ],
+   [
+    730,
+    0.867,
+    6,
+    0,
+    "td",
+    "(2:50) 17-J.Allen left guard for 1 yard, TOUCHDOWN."
+   ],
+   [
+    731,
+    0.86,
+    7,
+    0,
+    "",
+    "(2:49) (Shotgun) 7-G.Smith pass incomplete short left to 15-A.Mitchell."
+   ],
+   [
+    734,
+    0.867,
+    7,
+    0,
+    "",
+    "(2:46) 7-G.Smith pass short left to 20-B.Hall to BUF 49 for 16 yards (24-C.Bishop; 8-T.Ber"
+   ],
+   [
+    780,
+    0.847,
+    7,
+    0,
+    "",
+    "(2:00) (Shotgun) 7-G.Smith pass incomplete short right to 18-I.Williams (90-D.Carter)."
+   ],
+   [
+    784,
+    0.855,
+    7,
+    0,
+    "",
+    "(1:56) 20-B.Hall up the middle to BUF 45 for 4 yards (42-D.Williams; 98-T.Sanders)."
+   ],
+   [
+    828,
+    0.857,
+    7,
+    0,
+    "",
+    "(1:12) (Shotgun) 7-G.Smith pass incomplete deep right to 5-G.Wilson."
+   ],
+   [
+    833,
+    0.865,
+    7,
+    0,
+    "",
+    "(1:07) Direct snap to 47-A.Beck. 47-A.Beck up the middle to BUF 38 for 2 yards (42-D.Willi"
+   ],
+   [
+    877,
+    0.836,
+    7,
+    0,
+    "",
+    "(:23) 0-B.Allen right guard to BUF 32 for 6 yards (96-D.Walker; 91-E.Oliver)."
+   ],
+   [
+    900,
+    0.833,
+    7,
+    0,
+    "",
+    "(15:00) (Shotgun) 0-B.Allen up the middle to BUF 27 for 5 yards (94-L.Jackson; 96-D.Walker"
+   ],
+   [
+    940,
+    0.825,
+    7,
+    0,
+    "",
+    "(14:20) 0-B.Allen right guard to BUF 25 for 2 yards (96-D.Walker; 9-B.Chubb)."
+   ],
+   [
+    981,
+    0.829,
+    7,
+    0,
+    "",
+    "(13:39) 7-G.Smith sacked at BUF 31 for -6 yards (42-D.Williams). NYJ-64-D.Parham was injur"
+   ],
+   [
+    1012,
+    0.849,
+    7,
+    0,
+    "",
+    "(13:08) (Shotgun) 7-G.Smith pass short right to 85-M.Taylor to BUF 23 for 8 yards (24-C.Bi"
+   ],
+   [
+    1055,
+    0.843,
+    7,
+    3,
+    "fg",
+    "(12:25) 19-J.Sanders 41 yard field goal is GOOD, Center-42-T.Hennessy, Holder-14-A.McNamar"
+   ],
+   [
+    1060,
+    0.843,
+    7,
+    3,
+    "",
+    "47-A.Beck kicks 65 yards from NYJ 35 to BUF 0. 7-R.Davis to BUF 22 for 22 yards (50-T.Reed"
+   ],
+   [
+    1066,
+    0.84,
+    7,
+    3,
+    "",
+    "(12:14) 4-J.Cook right guard to BUF 26 for 4 yards (97-H.Phillips; 95-D.Jackson)."
+   ],
+   [
+    1102,
+    0.838,
+    7,
+    3,
+    "",
+    "(11:38) 17-J.Allen pass short left to 0-K.Coleman to BUF 37 for 11 yards (21-B.Stephens)."
+   ],
+   [
+    1145,
+    0.852,
+    7,
+    3,
+    "",
+    "(10:55) (Shotgun) 17-J.Allen pass short left to 86-D.Kincaid to BUF 41 for 4 yards (44-J.S"
+   ],
+   [
+    1184,
+    0.85,
+    7,
+    3,
+    "",
+    "(10:16) 4-J.Cook left guard to 50 for 9 yards (1-A.Thomas)."
+   ],
+   [
+    1219,
+    0.861,
+    7,
+    3,
+    "",
+    "(9:41) 4-J.Cook up the middle to NYJ 43 for 7 yards (6-D.Belton; 44-J.Sherwood)."
+   ],
+   [
+    1259,
+    0.866,
+    7,
+    3,
+    "",
+    "(9:01) PENALTY on BUF-88-D.Knox, False Start, 5 yards, enforced at NYJ 43 - No Play."
+   ],
+   [
+    1280,
+    0.856,
+    7,
+    3,
+    "",
+    "(8:40) 17-J.Allen pass deep right to 2-D.Moore to NYJ 16 for 32 yards (21-B.Stephens)."
+   ],
+   [
+    1332,
+    0.887,
+    7,
+    3,
+    "",
+    "(7:48) 4-J.Cook right tackle to NYJ 14 for 2 yards (97-H.Phillips; 96-J.Heflin)."
+   ],
+   [
+    1375,
+    0.883,
+    7,
+    3,
+    "",
+    "(7:05) (Shotgun) 17-J.Allen pass incomplete short left to 4-J.Cook."
+   ],
+   [
+    1379,
+    0.874,
+    7,
+    3,
+    "",
+    "(7:01) (Shotgun) 17-J.Allen pass incomplete short right to 86-D.Kincaid (6-D.Belton)."
+   ],
+   [
+    1382,
+    0.897,
+    10,
+    3,
+    "fg",
+    "(6:58) 16-T.Bass 37 yard field goal is GOOD, Center-69-R.Ferguson, Holder-39-T.Doman."
+   ],
+   [
+    1387,
+    0.861,
+    10,
+    3,
+    "",
+    "39-T.Doman kicks 60 yards from BUF 35 to NYJ 5. 3-K.Nwangwu to NYJ 28 for 23 yards (44-J.A"
+   ],
+   [
+    1392,
+    0.859,
+    10,
+    3,
+    "",
+    "(6:48) (Shotgun) 7-G.Smith pass short right to 20-B.Hall pushed ob at NYJ 45 for 17 yards "
+   ],
+   [
+    1426,
+    0.844,
+    10,
+    3,
+    "",
+    "(6:14) 7-G.Smith pass deep right to 5-G.Wilson to BUF 36 for 19 yards (24-C.Bishop). PENAL"
+   ],
+   [
+    1452,
+    0.856,
+    10,
+    3,
+    "",
+    "(5:48) (Shotgun) 7-G.Smith pass incomplete short middle to 18-I.Williams (22-A.Hooker)."
+   ],
+   [
+    1456,
+    0.87,
+    10,
+    3,
+    "",
+    "(5:44) (Shotgun) 7-G.Smith pass short middle to 5-G.Wilson to NYJ 37 for 8 yards (99-T.Par"
+   ],
+   [
+    1497,
+    0.872,
+    10,
+    3,
+    "",
+    "(5:03) (Shotgun) 7-G.Smith pass short right to 18-I.Williams to NYJ 44 for 7 yards (52-K.E"
+   ],
+   [
+    1515,
+    0.879,
+    10,
+    3,
+    "",
+    "(4:45) 14-A.McNamara punts 40 yards to BUF 16, Center-42-T.Hennessy, fair catch by 19-G.Do"
+   ],
+   [
+    1522,
+    0.877,
+    10,
+    3,
+    "",
+    "(4:38) (Shotgun) 4-J.Cook left guard to BUF 22 for 6 yards (6-D.Belton)."
+   ],
+   [
+    1563,
+    0.879,
+    10,
+    3,
+    "",
+    "(3:57) (Shotgun) 4-J.Cook right tackle to BUF 28 for 6 yards (56-D.Davis; 95-D.Jackson)."
+   ],
+   [
+    1604,
+    0.885,
+    10,
+    3,
+    "",
+    "(3:16) 17-J.Allen pass incomplete deep right to 0-K.Coleman [9-W.McDonald]."
+   ],
+   [
+    1608,
+    0.878,
+    10,
+    3,
+    "",
+    "(3:12) (Shotgun) 7-R.Davis right tackle to BUF 33 for 5 yards (44-J.Sherwood; 56-D.Davis)."
+   ],
+   [
+    1651,
+    0.877,
+    10,
+    3,
+    "",
+    "(2:29) (Shotgun) 17-J.Allen pass incomplete short left to 88-D.Knox (23-D.Ponds)."
+   ],
+   [
+    1657,
+    0.858,
+    10,
+    3,
+    "",
+    "(2:23) 39-T.Doman punts 51 yards to NYJ 16, Center-69-R.Ferguson, fair catch by 18-I.Willi"
+   ],
+   [
+    1665,
+    0.866,
+    10,
+    3,
+    "",
+    "(2:15) (Shotgun) 0-B.Allen right tackle to NYJ 25 for 9 yards (99-T.Parker; 24-C.Bishop)."
+   ],
+   [
+    1680,
+    0.854,
+    10,
+    3,
+    "",
+    "(2:00) (Shotgun) 0-B.Allen right guard to NYJ 31 for 6 yards (98-T.Sanders)."
+   ],
+   [
+    1697,
+    0.854,
+    10,
+    3,
+    "",
+    "(1:43) (No Huddle, Shotgun) 7-G.Smith pass short right to 18-I.Williams to BUF 24 for 45 y"
+   ],
+   [
+    1707,
+    0.854,
+    10,
+    3,
+    "",
+    "(1:33) (Shotgun) 7-G.Smith pass deep left to 5-G.Wilson to BUF 36 for 33 yards (37-J.Hanco"
+   ],
+   [
+    1733,
+    0.821,
+    10,
+    3,
+    "",
+    "(1:07) (No Huddle, Shotgun) 0-B.Allen right guard to BUF 30 for 6 yards (8-T.Bernard; 42-D"
+   ],
+   [
+    1759,
+    0.817,
+    10,
+    3,
+    "",
+    "(:41) (No Huddle, Shotgun) 7-G.Smith pass short left to 5-G.Wilson pushed ob at BUF 15 for"
+   ],
+   [
+    1765,
+    0.794,
+    10,
+    3,
+    "",
+    "(:35) (Shotgun) 7-G.Smith pass incomplete short left to 5-G.Wilson."
+   ],
+   [
+    1770,
+    0.805,
+    10,
+    3,
+    "",
+    "(:30) (Shotgun) 7-G.Smith pass short middle to 18-I.Williams to BUF 9 for 6 yards (42-D.Wi"
+   ],
+   [
+    1775,
+    0.804,
+    10,
+    3,
+    "",
+    "(:25) (Shotgun) 7-G.Smith pass incomplete short middle [99-T.Parker]. NYJ-7-G.Smith was in"
+   ],
+   [
+    1784,
+    0.834,
+    10,
+    6,
+    "fg",
+    "(:16) 19-J.Sanders 27 yard field goal is GOOD, Center-42-T.Hennessy, Holder-14-A.McNamara."
+   ],
+   [
+    1788,
+    0.833,
+    10,
+    6,
+    "",
+    "47-A.Beck kicks 51 yards from NYJ 35 to BUF 14. 19-G.Dortch pushed ob at BUF 30 for 16 yar"
+   ],
+   [
+    1792,
+    0.838,
+    10,
+    6,
+    "",
+    "(:08) 17-J.Allen kneels to BUF 29 for -1 yards."
+   ],
+   [
+    1800,
+    0.8,
+    10,
+    6,
+    "",
+    "39-T.Doman kicks 60 yards from BUF 35 to NYJ 5. 32-I.Davis to NYJ 35 for 30 yards (44-J.An"
+   ],
+   [
+    1806,
+    0.788,
+    10,
+    6,
+    "",
+    "(14:54) 20-B.Hall left guard to NYJ 39 for 4 yards (42-D.Williams; 9-B.Chubb)."
+   ],
+   [
+    1848,
+    0.79,
+    10,
+    6,
+    "",
+    "(14:12) (Shotgun) 10-C.Klubnik pass deep right to 5-G.Wilson to BUF 32 for 29 yards (22-A."
+   ],
+   [
+    1866,
+    0.742,
+    10,
+    6,
+    "",
+    "(13:54) 20-B.Hall right tackle to BUF 27 for 5 yards (9-B.Chubb)."
+   ],
+   [
+    1908,
+    0.739,
+    10,
+    6,
+    "",
+    "(13:12) 20-B.Hall up the middle to BUF 28 for -1 yards (8-T.Bernard, 22-A.Hooker)."
+   ],
+   [
+    1951,
+    0.758,
+    10,
+    6,
+    "",
+    "(12:29) (Shotgun) 10-C.Klubnik scrambles right end ran ob at BUF 20 for 8 yards (24-C.Bish"
+   ],
+   [
+    1990,
+    0.717,
+    10,
+    6,
+    "",
+    "(11:50) 10-C.Klubnik scrambles right end to BUF 9 for 11 yards (94-L.Jackson)."
+   ],
+   [
+    2024,
+    0.695,
+    10,
+    6,
+    "",
+    "(11:16) PENALTY on NYJ, Offensive Too Many Men on Field, 5 yards, enforced at BUF 9 - No P"
+   ],
+   [
+    2039,
+    0.708,
+    10,
+    6,
+    "",
+    "(11:01) (Shotgun) 10-C.Klubnik pass incomplete short left to 5-G.Wilson (23-D.Alford). BUF"
+   ],
+   [
+    2045,
+    0.722,
+    10,
+    6,
+    "",
+    "(10:55) (Shotgun) 10-C.Klubnik pass short right to 20-B.Hall to BUF 4 for 10 yards (8-T.Be"
+   ],
+   [
+    2084,
+    0.71,
+    10,
+    6,
+    "",
+    "(10:16) (Shotgun) 10-C.Klubnik pass incomplete short left to 16-K.Sadiq (42-D.Williams) [4"
+   ],
+   [
+    2095,
+    0.759,
+    10,
+    9,
+    "fg",
+    "(10:05) 19-J.Sanders 22 yard field goal is GOOD, Center-42-T.Hennessy, Holder-14-A.McNamar"
+   ],
+   [
+    2098,
+    0.759,
+    10,
+    9,
+    "",
+    "47-A.Beck kicks 63 yards from NYJ 35 to BUF 2. 19-G.Dortch pushed ob at BUF 38 for 36 yard"
+   ],
+   [
+    2106,
+    0.776,
+    10,
+    9,
+    "",
+    "(9:54) (Shotgun) 17-J.Allen pass deep right to 86-D.Kincaid pushed ob at NYJ 8 for 54 yard"
+   ],
+   [
+    2133,
+    0.846,
+    10,
+    9,
+    "",
+    "(9:27) (No Huddle) 4-J.Cook right tackle to NYJ 7 for 1 yard (52-K.Enagbare; 95-D.Jackson)"
+   ],
+   [
+    2170,
+    0.838,
+    10,
+    9,
+    "",
+    "(8:50) (Shotgun) 17-J.Allen pass short middle to 2-D.Moore to NYJ 1 for 6 yards (44-J.Sher"
+   ],
+   [
+    2213,
+    0.874,
+    16,
+    9,
+    "td",
+    "(8:07) (Shotgun) 17-J.Allen left guard for 1 yard, TOUCHDOWN."
+   ],
+   [
+    2218,
+    0.875,
+    17,
+    9,
+    "",
+    "39-T.Doman kicks 54 yards from BUF 35 to NYJ 11. 32-I.Davis to NYJ 35 for 24 yards (83-K.L"
+   ],
+   [
+    2226,
+    0.866,
+    17,
+    9,
+    "",
+    "(7:54) (Shotgun) 7-G.Smith pass short left to 18-I.Williams to NYJ 42 for 7 yards (42-D.Wi"
+   ],
+   [
+    2266,
+    0.861,
+    17,
+    9,
+    "",
+    "(7:14) 0-B.Allen right tackle to NYJ 42 for no gain (96-D.Walker; 21-D.Igbinosun)."
+   ],
+   [
+    2306,
+    0.872,
+    17,
+    9,
+    "",
+    "(6:34) (Shotgun) 7-G.Smith pass short left to 15-A.Mitchell pushed ob at BUF 33 for 25 yar"
+   ],
+   [
+    2346,
+    0.831,
+    17,
+    9,
+    "",
+    "(5:54) 7-G.Smith pass short right to 85-M.Taylor to BUF 37 for -4 yards (21-D.Igbinosun)."
+   ],
+   [
+    2390,
+    0.849,
+    17,
+    9,
+    "",
+    "(5:10) (Shotgun) 7-G.Smith pass short middle to 85-M.Taylor to BUF 30 for 7 yards (22-A.Ho"
+   ],
+   [
+    2431,
+    0.85,
+    17,
+    9,
+    "",
+    "(4:29) (Shotgun) 7-G.Smith pass incomplete short left to 5-G.Wilson [24-C.Bishop]."
+   ],
+   [
+    2434,
+    0.851,
+    17,
+    12,
+    "fg",
+    "(4:26) 19-J.Sanders 48 yard field goal is GOOD, Center-42-T.Hennessy, Holder-14-A.McNamara"
+   ],
+   [
+    2439,
+    0.851,
+    17,
+    12,
+    "",
+    "47-A.Beck kicks 54 yards from NYJ 35 to BUF 11. 7-R.Davis to BUF 34 for 23 yards (84-M.McC"
+   ],
+   [
+    2443,
+    0.861,
+    17,
+    12,
+    "",
+    "(4:17) (Shotgun) 4-J.Cook up the middle pushed ob at NYJ 45 for 21 yards (1-A.Thomas)."
+   ],
+   [
+    2470,
+    0.933,
+    23,
+    12,
+    "td",
+    "(3:50) (No Huddle, Shotgun) 17-J.Allen pass deep middle to 2-D.Moore for 45 yards, TOUCHDO"
+   ],
+   [
+    2478,
+    0.933,
+    24,
+    12,
+    "",
+    "39-T.Doman kicks 59 yards from BUF 35 to NYJ 6. 32-I.Davis to NYJ 42 for 36 yards (55-M.Ho"
+   ],
+   [
+    2485,
+    0.938,
+    24,
+    12,
+    "",
+    "(3:35) (Shotgun) 10-C.Klubnik pass short middle to 85-M.Taylor to NYJ 25 for 9 yards (42-D"
+   ],
+   [
+    2520,
+    0.931,
+    24,
+    12,
+    "",
+    "(3:00) 20-B.Hall up the middle to NYJ 27 for 2 yards (22-A.Hooker; 42-D.Williams)."
+   ],
+   [
+    2561,
+    0.934,
+    24,
+    12,
+    "",
+    "(2:19) (Shotgun) 10-C.Klubnik pass deep right intended for 5-G.Wilson INTERCEPTED by 21-D."
+   ],
+   [
+    2580,
+    0.937,
+    24,
+    12,
+    "",
+    "(2:00) 20-B.Hall right tackle to NYJ 26 for 3 yards (96-D.Walker)."
+   ],
+   [
+    2619,
+    0.94,
+    24,
+    12,
+    "",
+    "(1:21) (Shotgun) 20-B.Hall right guard to NYJ 25 for -1 yards (24-C.Bishop)."
+   ],
+   [
+    2662,
+    0.949,
+    24,
+    12,
+    "",
+    "(:38) (Shotgun) 10-C.Klubnik pass incomplete deep right to 18-I.Williams [15-G.Rousseau]."
+   ],
+   [
+    2668,
+    0.958,
+    24,
+    12,
+    "",
+    "(:32) 14-A.McNamara punts 49 yards to BUF 26, Center-42-T.Hennessy. 19-G.Dortch to BUF 25 "
+   ],
+   [
+    2680,
+    0.951,
+    24,
+    12,
+    "",
+    "(:20) (Shotgun) 17-J.Allen pass short right to 2-D.Moore to BUF 27 for 7 yards (1-A.Thomas"
+   ],
+   [
+    2700,
+    0.952,
+    24,
+    12,
+    "",
+    "(15:00) (Shotgun) 17-J.Allen pass short left to 10-K.Shakir to BUF 40 for 13 yards (44-J.S"
+   ],
+   [
+    2735,
+    0.962,
+    24,
+    12,
+    "",
+    "(14:25) 4-J.Cook right guard to BUF 43 for 3 yards (97-H.Phillips; 31-D.Bailey)."
+   ],
+   [
+    2774,
+    0.962,
+    24,
+    12,
+    "",
+    "(13:46) (Shotgun) 17-J.Allen pass incomplete deep right to 2-D.Moore."
+   ],
+   [
+    2783,
+    0.957,
+    24,
+    12,
+    "",
+    "(13:37) (Shotgun) 17-J.Allen pass deep left to 0-K.Coleman to NYJ 41 for 16 yards (29-M.Fi"
+   ],
+   [
+    2810,
+    0.954,
+    24,
+    12,
+    "",
+    "(13:10) (Shotgun) 17-J.Allen pass deep left intended for 19-G.Dortch INTERCEPTED by 1-A.Th"
+   ],
+   [
+    2820,
+    0.948,
+    24,
+    12,
+    "to",
+    "(13:00) 0-B.Allen left tackle to NYJ 23 for 6 yards (22-A.Hooker; 99-T.Parker)."
+   ],
+   [
+    2851,
+    0.948,
+    24,
+    12,
+    "",
+    "(12:29) (Shotgun) 20-B.Hall right tackle to NYJ 30 for 7 yards (52-K.Elarms-Orr; 37-J.Hanc"
+   ],
+   [
+    2890,
+    0.945,
+    24,
+    12,
+    "",
+    "(11:50) 10-C.Klubnik sacked at NYJ 26 for -4 yards (99-T.Parker)."
+   ],
+   [
+    2941,
+    0.955,
+    24,
+    12,
+    "",
+    "(10:59) (Shotgun) 10-C.Klubnik pass short left to 15-A.Mitchell to NYJ 39 for 13 yards (1-"
+   ],
+   [
+    2945,
+    0.961,
+    24,
+    12,
+    "",
+    "(10:55) (Shotgun) 10-C.Klubnik sacked at NYJ 21 for -5 yards (99-T.Parker)."
+   ],
+   [
+    2990,
+    0.972,
+    24,
+    12,
+    "",
+    "(10:10) 14-A.McNamara punts 51 yards to BUF 28, Center-42-T.Hennessy. 19-G.Dortch to BUF 3"
+   ],
+   [
+    3001,
+    0.97,
+    24,
+    12,
+    "",
+    "(9:59) (Shotgun) 10-K.Shakir left end pushed ob at BUF 43 for 11 yards (56-D.Davis). ** In"
+   ],
+   [
+    3033,
+    0.975,
+    24,
+    12,
+    "",
+    "(9:27) 4-J.Cook left tackle to BUF 45 for 2 yards (97-H.Phillips)."
+   ],
+   [
+    3076,
+    0.975,
+    24,
+    12,
+    "",
+    "(8:44) (Shotgun) 17-J.Allen pass incomplete deep left to 0-K.Coleman."
+   ],
+   [
+    3081,
+    0.972,
+    24,
+    12,
+    "",
+    "(8:39) (Shotgun) 17-J.Allen sacked at BUF 37 for -8 yards (9-W.McDonald)."
+   ],
+   [
+    3132,
+    0.962,
+    24,
+    12,
+    "",
+    "(7:48) 39-T.Doman punts 54 yards to NYJ 9, Center-69-R.Ferguson, downed by BUF-28-S.Frankl"
+   ],
+   [
+    3144,
+    0.97,
+    24,
+    12,
+    "",
+    "(7:36) (Shotgun) 10-C.Klubnik pass short right to 15-A.Mitchell to NYJ 23 for 14 yards (8-"
+   ],
+   [
+    3178,
+    0.967,
+    24,
+    12,
+    "",
+    "(7:02) (Shotgun) 10-C.Klubnik pass short right to 5-G.Wilson to NYJ 36 for 13 yards (21-D."
+   ],
+   [
+    3218,
+    0.964,
+    24,
+    12,
+    "",
+    "(6:22) (Shotgun) 10-C.Klubnik pass incomplete deep right to 15-A.Mitchell (21-D.Igbinosun)"
+   ],
+   [
+    3223,
+    0.969,
+    24,
+    12,
+    "",
+    "(6:17) (Shotgun) 10-C.Klubnik pass short right to 20-B.Hall to BUF 40 for 24 yards (9-B.Ch"
+   ],
+   [
+    3250,
+    0.954,
+    24,
+    12,
+    "",
+    "(5:50) (No Huddle, Shotgun) 20-B.Hall left guard to BUF 31 for 9 yards (55-M.Hoecht; 8-T.B"
+   ],
+   [
+    3275,
+    0.946,
+    24,
+    12,
+    "",
+    "(5:25) (Shotgun) 20-B.Hall right guard to BUF 23 for 8 yards (3-D.Hamlin). Penalty on BUF-"
+   ],
+   [
+    3301,
+    0.948,
+    24,
+    12,
+    "",
+    "(4:59) (Shotgun) 10-C.Klubnik pass short left to 5-G.Wilson to BUF 19 for 4 yards (56-J.So"
+   ],
+   [
+    3308,
+    0.997,
+    30,
+    12,
+    "td",
+    "(4:52) 4-J.Cook right tackle for 74 yards, TOUCHDOWN."
+   ],
+   [
+    3318,
+    0.997,
+    31,
+    12,
+    "",
+    "39-T.Doman kicks 61 yards from BUF 35 to NYJ 4. 3-K.Nwangwu to NYJ 35 for 31 yards (83-K.L"
+   ],
+   [
+    3326,
+    0.997,
+    31,
+    12,
+    "",
+    "(4:34) (Shotgun) 10-C.Klubnik pass short left to 18-I.Williams to NYJ 39 for 4 yards (8-T."
+   ],
+   [
+    3348,
+    0.998,
+    31,
+    12,
+    "",
+    "(4:12) (No Huddle, Shotgun) 10-C.Klubnik pass incomplete deep left to 15-A.Mitchell."
+   ],
+   [
+    3353,
+    0.998,
+    31,
+    12,
+    "",
+    "(4:07) (Shotgun) 10-C.Klubnik scrambles up the middle to NYJ 46 for 7 yards (3-D.Hamlin)."
+   ],
+   [
+    3375,
+    0.998,
+    31,
+    12,
+    "",
+    "(3:45) (No Huddle, Shotgun) 10-C.Klubnik pass short left to 0-B.Allen to BUF 48 for 6 yard"
+   ],
+   [
+    3403,
+    0.998,
+    31,
+    12,
+    "",
+    "(3:17) (No Huddle, Shotgun) 10-C.Klubnik pass deep left to 15-A.Mitchell to BUF 28 for 20 "
+   ],
+   [
+    3430,
+    0.997,
+    31,
+    12,
+    "",
+    "(2:50) (No Huddle, Shotgun) 10-C.Klubnik pass short right to 5-G.Wilson to BUF 21 for 7 ya"
+   ],
+   [
+    3450,
+    0.998,
+    31,
+    12,
+    "",
+    "(2:30) (Shotgun) 10-C.Klubnik sacked at BUF 29 for -3 yards (55-M.Hoecht). ** Injury Updat"
+   ],
+   [
+    3478,
+    0.999,
+    31,
+    12,
+    "",
+    "(2:02) (No Huddle, Shotgun) 10-C.Klubnik pass incomplete deep right to 5-G.Wilson [90-D.Ca"
+   ],
+   [
+    3486,
+    1,
+    31,
+    12,
+    "",
+    "(1:54) (Shotgun) 10-C.Klubnik pass incomplete short left to 5-G.Wilson [3-D.Hamlin]."
+   ],
+   [
+    3489,
+    1,
+    31,
+    12,
+    "to",
+    "(1:51) PENALTY on BUF-85-J.Hawes, False Start, 5 yards, enforced at BUF 30 - No Play."
+   ],
+   [
+    3533,
+    1,
+    31,
+    12,
+    "",
+    "(1:07) 11-K.Allen kneels to BUF 26 for -1 yards."
+   ],
+   [
+    3562,
+    1,
+    31,
+    12,
+    "",
+    "(:38) 11-K.Allen kneels to BUF 25 for -1 yards."
+   ],
+   [
+    3600,
+    1,
+    31,
+    12,
+    "end",
+    "Final"
+   ]
+  ],
+  "p0": 0.783,
+  "mu": 8.5,
+  "src": "plays"
+ }
 }

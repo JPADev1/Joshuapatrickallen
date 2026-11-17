@@ -80,8 +80,9 @@
   <p class="note" id="h-notes"></p>
 </main>
 <footer id="foot"></footer>
-<script src="scripts/share.js?v=5"></script>
-<script src="scripts/live.js?v=9"></script>
+<script src="scripts/wincard.js?v=3"></script>
+<script src="scripts/share.js?v=6"></script>
+<script src="scripts/live.js?v=11"></script>
 <script>
 // ===== DATA (edit here after each game) =====
 // Season rows (2018-2025): nflverse regular-season totals, matching official totals except 2018 passing, which uses the official 2,074 yards.
@@ -379,6 +380,7 @@ function renderRecap(){
     foot:R.items.length > 5 ? 'Plus ' + (R.items.length - 5) + ' more on the site' : foot, share:'Josh Allen record recap: ' + R.game, url:'#recap'}, 'Weekly Record Recap');
   el.innerHTML = '<div class="recap-top"><h2 class="sec" id="recap-h">Weekly Record Recap</h2>' + all + '</div>'
     + '<p class="note recap-sub"><b>' + esc(game) + '</b> &middot; ' + esc(when) + (R.allen ? '<br>Allen: ' + esc(R.allen) : '') + '</p>'
+    + (R.wp ? '<div id="recap-wp"></div>' : '')
     + '<ol class="firsts recap">' + R.items.map(function(x){
       var sc = x.scope === 'nfl' ? ' scope nfl' : x.scope === 'bills' ? ' scope bills' : '';
       return '<li><div class="fwhen"><span class="chip' + sc + '">' + esc(x.tag || 'Milestone') + '</span>'
@@ -387,6 +389,10 @@ function renderRecap(){
         + (x.line ? '<span class="fmeta">' + esc(x.line) + '</span>' : '') + '</div></li>'; }).join('') + '</ol>'
     + '<p class="note">Only what he did in this game. ' + (R.official ? 'Checked against the official stats.' : 'Numbers are unofficial until the official stats are in.') + '</p>';
   el.hidden = false;
+  // The full game's win-chance chart (scripts/live.js draws it; its Share button makes the image or video)
+  var wpEl = document.getElementById('recap-wp');
+  if(wpEl && !(window.JPALive && JPALive.chart(wpEl, {date:R.date, opp:R.opp, oppNick:R.oppNick, oppColor:R.oppColor, home:R.home,
+    bills:R.bills, them:R.them, game:R.game, wp:R.wp}))) wpEl.remove();
 }
 load('recap.json').then(function(d){ RECAP = d; renderRecap(); if(location.hash==='#recap'){ var r=document.getElementById('recap'); if(!r.hidden) r.scrollIntoView(); } }).catch(function(){});
 load('nfl-ranks.json').then(function(d){

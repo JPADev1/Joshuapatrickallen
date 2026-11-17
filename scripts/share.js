@@ -37,6 +37,7 @@
   function draw(d, img){
     var cv = document.createElement('canvas'); cv.width = W; cv.height = H;
     var c = cv.getContext('2d');
+    if(d.wp && window.JPAWinCard){ JPAWinCard.draw(c, d, 1, LOGO_IMG); return cv; } // win-chance card: its own navy card, no photo
     var s = Math.max(W / img.width, H / img.height), iw = img.width * s, ih = img.height * s;
     c.drawImage(img, (W - iw) / 2, (H - ih) / 2, iw, ih);
     // Shade: light at the top for the header, deep at the bottom for the text
@@ -201,22 +202,67 @@
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addMtnButton); else addMtnButton();
   // ---------- Full-screen viewer ----------
   var box = null, cur = null;
-  function close(){ if(box){ box.hidden = true; document.documentElement.classList.remove('shr-open'); if(cur && cur.url) URL.revokeObjectURL(cur.url); cur = null; } }
+  function close(){ if(box){ box.hidden = true; document.documentElement.classList.remove('shr-open'); job++;
+    var v = box.querySelector('video'); v.pause(); v.removeAttribute('src'); if(cur && cur.url) URL.revokeObjectURL(cur.url); if(cur && cur.vurl) URL.revokeObjectURL(cur.vurl); cur = null; } }
+  // ---------- Video (win-chance card): the line draws in from kickoff, recorded from the canvas in the browser ----------
+  var job = 0;
+  function vidType(){
+    if(!window.MediaRecorder || !document.createElement('canvas').captureStream) return '';
+    var t = ['video/mp4;codecs=avc1.42E01E', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm'];
+    for(var i = 0; i < t.length; i++) if(MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t[i])) return t[i];
+    return '';
+  }
+  function record(d){
+    var my = ++job, type = vidType(); if(!type) return Promise.reject('no video');
+    var cv = document.createElement('canvas'); cv.width = W; cv.height = H; var c = cv.getContext('2d');
+    var DRAW = 6000, HOLD = 2500, rec, chunks = [];
+    JPAWinCard.draw(c, d, 0, LOGO_IMG);
+    var stream = cv.captureStream(30);
+    try { rec = new MediaRecorder(stream, {mimeType: type, videoBitsPerSecond: 8e6}); } catch(e){ return Promise.reject(e); }
+    return new Promise(function(ok, no){
+      rec.ondataavailable = function(e){ if(e.data && e.data.size) chunks.push(e.data); };
+      rec.onstop = function(){ stream.getTracks().forEach(function(t){ t.stop(); }); if(my !== job) return no('cancelled');
+        ok(new Blob(chunks, {type: type.split(';')[0]})); };
+      rec.start(250);
+      var t0 = performance.now();
+      (function frame(){
+        if(my !== job){ rec.stop(); return; }
+        var ms = performance.now() - t0, e = Math.min(1, ms / DRAW);
+        JPAWinCard.draw(c, d, 1 - Math.pow(1 - e, 1.6), LOGO_IMG); // eases out toward the end
+        msg('Making your video\u2026 ' + Math.max(0, Math.ceil((DRAW + HOLD - ms) / 1000)) + 's');
+        if(ms < DRAW + HOLD) setTimeout(frame, 1000 / 30); else rec.stop();
+      })();
+    });
+  }
+  function mode(m){
+    var im = box.querySelector('img'), v = box.querySelector('video'), dl = box.querySelector('.shr-dl'), base = cur.name.replace(/\.\w+$/, '');
+    [].forEach.call(box.querySelectorAll('.shr-mode button'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-m') === m)); });
+    if(m === 'img'){ job++; v.pause(); v.hidden = true; im.hidden = false; cur.blob = cur.img; cur.name = base + '.png'; dl.href = cur.url; dl.download = cur.name; dl.textContent = 'Save image'; msg(''); return; }
+    if(cur.vid){ show(); return; }
+    im.hidden = false; v.hidden = true; dl.hidden = true; box.querySelector('.shr-go').disabled = true;
+    record(cur.d).then(function(blob){ cur.vid = blob; cur.vurl = URL.createObjectURL(blob); show(); }, function(err){
+      if(err === 'cancelled') return; msg('Video isn\u2019t available on this device. The image works everywhere.'); dl.hidden = false; box.querySelector('.shr-go').disabled = false; });
+    function show(){ im.hidden = true; v.hidden = false; v.src = cur.vurl; v.play().catch(function(){});
+      cur.blob = cur.vid; cur.name = base + (/mp4/.test(cur.vid.type) ? '.mp4' : '.webm');
+      dl.hidden = false; dl.href = cur.vurl; dl.download = cur.name; dl.textContent = 'Save video'; box.querySelector('.shr-go').disabled = false; msg(''); }
+  }
   function viewer(){
     if(box) return box;
     box = document.createElement('div'); box.className = 'shr-box'; box.hidden = true;
     box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Share this record');
-    box.innerHTML = '<div class="shr-in"><img alt=""><p class="shr-msg" aria-live="polite"></p><div class="shr-btns">'
+    box.innerHTML = '<div class="shr-in"><div class="shr-mode" role="group" aria-label="Share as" hidden><button type="button" data-m="img" aria-pressed="true">Image</button>'
+      + '<button type="button" data-m="vid" aria-pressed="false">Video</button></div><img alt=""><video muted playsinline loop hidden></video><p class="shr-msg" aria-live="polite"></p><div class="shr-btns">'
       + '<button type="button" class="shr-go">Share</button><a class="shr-dl" download>Save image</a><button type="button" class="shr-x">Close</button></div>'
       + '<p class="shr-tip">Or press and hold the image to save it.</p></div>';
     document.body.appendChild(box);
     box.addEventListener('click', function(e){ if(e.target === box) close(); });
     box.querySelector('.shr-x').onclick = close;
+    [].forEach.call(box.querySelectorAll('.shr-mode button'), function(b){ b.onclick = function(){ if(cur && cur.d) mode(b.getAttribute('data-m')); }; });
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !box.hidden) close(); });
     box.querySelector('.shr-go').onclick = function(){
       if(!cur) return;
       var text = (cur.d.share || cur.d.title + (cur.d.big ? ': ' + cur.d.big : '')) + '. More Josh Allen records at ' + cur.link;
-      var file = new File([cur.blob], cur.name, {type:'image/png'});
+      var file = new File([cur.blob], cur.name, {type: cur.blob.type || 'image/png'});
       var data = {files:[file], title:'Josh Allen: ' + cur.d.title, text:text};
       if(navigator.canShare && navigator.canShare(data)) navigator.share(data).catch(function(){});
       else if(navigator.share) navigator.share({title:data.title, text:text, url:cur.link}).catch(function(){});
@@ -234,7 +280,10 @@
         if(!blob){ msg('Sorry, the card could not be made on this device.'); return; }
         var name = 'josh-allen-' + String(d.title).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) + '.png';
         if(cur && cur.url) URL.revokeObjectURL(cur.url);
-        cur = {d:d, blob:blob, name:name, url:URL.createObjectURL(blob), link:SITE + '/' + (d.url || '')};
+        cur = {d:d, blob:blob, img:blob, name:name, url:URL.createObjectURL(blob), link:SITE + '/' + (d.url || '')};
+        var md = box.querySelector('.shr-mode'); md.hidden = !(d.wp && vidType());
+        [].forEach.call(md.querySelectorAll('button'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-m') === 'img')); });
+        var vv = box.querySelector('video'); vv.hidden = true; vv.pause(); im.hidden = false; box.querySelector('.shr-dl').textContent = 'Save image';
         im.src = cur.url; im.alt = 'Share card: ' + d.title;
         var a = box.querySelector('.shr-dl'); a.href = cur.url; a.download = name;
         msg(''); box.querySelector('.shr-x').focus();
