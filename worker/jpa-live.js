@@ -138,7 +138,10 @@ function buildCurve(b, mu) {
     if (sit && team) {
       yl = sit.side == null ? 50 : sit.side === team ? 100 - sit.yard : sit.yard;
       who = team === "BUF" ? "BUF" : "OPP"; e = ep(sit.down, sit.dist == null ? yl : sit.dist, Math.max(1, Math.min(99, yl)));
-    } else if (team && /kicks/i.test(text)) { who = team === "BUF" ? "OPP" : "BUF"; e = ko(3600 - t); yl = 75; } // kickoff: other side gets it
+    } else if (/kicks/i.test(text)) { // kickoff: the side kicking is named in the text ("kicks 58 yards from BUF 35")
+      const kf = /kicks.*?from ([A-Za-z]{2,3}) \d+/i.exec(text), kicker = kf ? (TEAM[kf[1].toUpperCase()] || kf[1].toUpperCase()) : null;
+      if (kicker || team) { who = (kicker ? kicker === "BUF" : team !== "BUF") ? "OPP" : "BUF"; e = ko(3600 - t); yl = 75; }
+    }
     const bills = billsHome ? h : a, them = billsHome ? a : h;
     // A scoring play: the down and distance are from before the snap, but the score already counts the points,
     // so use what comes next instead (the other side receives the kickoff; a try is still to come after a TD).
@@ -148,14 +151,16 @@ function buildCurve(b, mu) {
       if (gain === 6) lead += billsScored ? .95 : -.95;
       who = billsScored ? "OPP" : "BUF"; e = ko(3600 - t); yl = 75;
     }
-    const p = endgame(billsWP(lead, mu, 3600 - t, who, who ? e : 0), lead, who, yl, 3600 - t);
+    if (!who) { lastText = text; return; } // no snap, kickoff or score (a missed try, timeout, end of quarter): no point
+    const p = endgame(billsWP(lead, mu, 3600 - t, who, e), lead, who, yl, 3600 - t);
     // Marks: touchdowns, field goals, and turnovers (the ball changing sides on scrimmage plays with no kick or score between)
     const kind = gain >= 6 ? "td" : gain === 3 ? "fg"
       : who && sit && lastWho && who !== lastWho && !/punt|kick|field goal|extra point|two-point|end of (half|quarter)/i.test(lastText) ? "to" : "";
     seen.h = h; seen.a = a;
     if (who && sit) lastWho = who; else if (who) lastWho = null; lastText = text;
     const pt = [t, Math.round(p * 1000) / 1000, bills, them, kind, text.replace(/\s+/g, " ").slice(0, 90)];
-    if (last && last[0] === t && !kind && !last[4]) out.pop(); // same moment: keep the later state
+    if (last && last[0] === t) { // same game time (a score, its try, the kickoff): one point with the latest state, keeping the mark
+      if (last[4] && !kind) { pt[4] = last[4]; pt[5] = last[5]; } out.pop(); }
     out.push(pt); last = pt;
   });
   return { opp: opp, pts: out };
