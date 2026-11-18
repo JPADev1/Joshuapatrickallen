@@ -66,6 +66,24 @@ var SITE = { venmo: "JPADev", suggestForm: "https://forms.gle/Fw46NaV3WLKChEew8"
 (function(){
   var h = document.querySelector("header.hero"); if(!h || h.querySelector(".nja-brand")) return;
   var a = document.createElement("a"); a.className = "nja-brand"; a.href = "/"; a.setAttribute("aria-label", "Not Joshing Around home");
-  a.innerHTML = '<img src="images/logo.webp" width="52" height="52" alt="" decoding="async">';
+  a.innerHTML = '<img src="images/nja-logo.webp" width="52" height="52" alt="" decoding="async"><span class="nja-glint"></span><span class="nja-star"></span><span class="nja-star"></span>';
   h.insertBefore(a, h.firstChild);
+  // Shimmer: a light sweep runs across the mirror tiles every 4-9 seconds, and small star glints
+  // twinkle on the bright spots. Off for "reduce motion" visitors and while the tab is in the background.
+  if(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  a.addEventListener("animationend", function(e){ if(e.target.className === "nja-glint") a.classList.remove("shine"); });
+  function sweep(){ if(!document.hidden){ a.classList.remove("shine"); void a.offsetWidth; a.classList.add("shine"); }
+    setTimeout(sweep, 4000 + Math.random() * 5000); }
+  setTimeout(sweep, 700 + Math.random() * 900);
+  // where the logo's own sparkles and brightest tiles sit (percent across, percent down)
+  var SPOTS = [[24,9],[85,18],[5,33],[95,58],[84,83],[53,95],[30,72],[42,40],[70,28],[62,62],[16,58]];
+  [].forEach.call(a.querySelectorAll(".nja-star"), function(st, i){
+    st.addEventListener("animationend", function(){ st.classList.remove("on"); });
+    function twinkle(){
+      if(!document.hidden){ var p = SPOTS[Math.floor(Math.random() * SPOTS.length)];
+        st.style.left = p[0] + "%"; st.style.top = p[1] + "%"; st.classList.remove("on"); void st.offsetWidth; st.classList.add("on"); }
+      setTimeout(twinkle, 1400 + Math.random() * 2600);
+    }
+    setTimeout(twinkle, 400 + i * 1100 + Math.random() * 800);
+  });
 })();

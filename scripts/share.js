@@ -12,7 +12,7 @@
     function pic(src){ var img = new Image(); img.decoding = 'async';
       return new Promise(function(ok, no){ img.onload = function(){ ok(img); }; img.onerror = no; img.src = src; }); }
     var bg = pic('images/share-bg.webp');
-    LOGO = pic('images/logo.webp').catch(function(){ return null; }); // the card still works without the logo
+    LOGO = pic('images/nja-logo.webp').catch(function(){ return null; }); // the card still works without the logo
     ready = Promise.all(fonts.map(function(f){ return f.load().then(function(x){ document.fonts.add(x); }); })).then(function(){ return bg; })
       .then(function(img){ return LOGO.then(function(l){ LOGO_IMG = l; return img; }); });
     ready.catch(function(){ ready = null; });
