@@ -3,9 +3,25 @@
  "items": [
   {
    "date": "2026-11-15",
+   "game": "Week 10 at Jets (W 31-12)",
+   "text": "First quarterback in NFL history with 5,000 career rushing yards and 90 career rushing touchdowns.",
+   "line": "5,011 rushing yds · 90 rushing TDs (no other QB has more than 75)",
+   "source": "Pro Football Hall of Fame",
+   "url": "https://www.profootballhof.com/news/josh-allen-and-the-evolution-of-rushing-quarterbacks"
+  },
+  {
+   "date": "2026-11-15",
    "game": "Week 10 at Jets",
    "text": "First quarterback in NFL history with 11 rushing touchdowns through his team's first nine games of a season.",
    "line": "11 rushing TDs in 9 games · Kyler Murray had 10 in 2020"
+  },
+  {
+   "date": "2026-11-09",
+   "game": "Week 9 at Vikings (W 23-6)",
+   "text": "First teammates in NFL history to reach 5,000 career rushing yards in the same game (with James Cook).",
+   "line": "Allen 4,991 → 5,006 · Cook 4,966 → 5,073, on Monday Night Football",
+   "source": "Buffalo Rumblings (via STACKED)",
+   "url": "https://www.stackedfantasy.com/nfl/news/insights/1497013"
   },
   {
    "date": "2026-11-01",
