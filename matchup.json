@@ -41,9 +41,9 @@
     "game": false
    },
    {
-    "name": "Dee Alford",
-    "pos": "CB",
-    "injury": "Concussion",
+    "name": "Damar Hamlin",
+    "pos": "S",
+    "injury": "Toe",
     "status": "DNP",
     "game": false
    },
@@ -55,13 +55,6 @@
     "game": false
    },
    {
-    "name": "O'Cyrus Torrence",
-    "pos": "G",
-    "injury": "Not injury related - personal matter",
-    "status": "DNP",
-    "game": false
-   },
-   {
     "name": "Amani Hooker",
     "pos": "S",
     "injury": "Knee",
@@ -69,16 +62,9 @@
     "game": false
    },
    {
-    "name": "Cole Bishop",
-    "pos": "S",
-    "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Damar Hamlin",
-    "pos": "S",
-    "injury": "Toe",
+    "name": "Dee Alford",
+    "pos": "CB",
+    "injury": "Concussion",
     "status": "Limited",
     "game": false
    },
@@ -95,16 +81,16 @@
     "injury": "Hamstring",
     "status": "Limited",
     "game": false
+   },
+   {
+    "name": "T.J. Sanders",
+    "pos": "DE",
+    "injury": "Shoulder",
+    "status": "Limited",
+    "game": false
    }
   ],
   "opp": [
-   {
-    "name": "Aaron Brewer",
-    "pos": "C",
-    "injury": "Concussion",
-    "status": "DNP",
-    "game": false
-   },
    {
     "name": "Bradley Pinion",
     "pos": "P",
@@ -131,6 +117,13 @@
     "pos": "CB",
     "injury": "Knee",
     "status": "DNP",
+    "game": false
+   },
+   {
+    "name": "Aaron Brewer",
+    "pos": "C",
+    "injury": "Concussion",
+    "status": "Limited",
     "game": false
    },
    {
@@ -170,9 +163,9 @@
    }
   ],
   "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed.",
-  "hash": "218514f53815",
-  "changed": "Thu. Nov. 19, 6:56 a.m. ET",
-  "changedIso": "2026-11-19T06:56-05:00"
+  "hash": "5b9c05e82414",
+  "changed": "Fri. Nov. 20, 6:57 a.m. ET",
+  "changedIso": "2026-11-20T06:57-05:00"
  },
  "allenVs": {
   "wins": 13,
@@ -681,7 +674,7 @@
     "dec": 0,
     "bills": {
      "v": 256,
-     "rank": 26
+     "rank": 27
     },
     "opp": {
      "v": 212,
@@ -1207,7 +1200,7 @@
      "Cleared 20+ in all 9 games.",
      "Averages 44.4 receiving yards a game (median 43).",
      "Steady volume: 5.7 targets a game.",
-     "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
      "Closest call: 21 vs DET in Week 9.",
@@ -1359,7 +1352,7 @@
      "Cleared 2+ in all 6 games.",
      "Averages 3.7 receptions a game (median 3.5).",
      "Steady volume: 5.8 targets a game.",
-     "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
      "Closest call: 2 vs SF in Week 2.",
@@ -1447,7 +1440,7 @@
      "Cleared 2+ in all 9 games.",
      "Averages 4.0 receptions a game (median 4).",
      "Steady volume: 5.7 targets a game.",
-     "The Bills rank 26th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
     ],
     "cons": [
      "Closest call: 2 vs DET in Week 9.",
@@ -1545,9 +1538,17 @@
     "status": ""
    }
   ],
-  "weather": null,
+  "weather": {
+   "indoor": false,
+   "temp": 63,
+   "wind": 8,
+   "gust": 17,
+   "rain": 0,
+   "snow": 0,
+   "pop": 9
+  },
   "conditions": [
-   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
+   "Game-day forecast at kickoff: 63°F, wind 8 mph (gusts 17), 9% chance of precipitation. Nothing in it changes the ratings.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1662,8 +1663,8 @@
   "cur": {
    "spread": -16.5,
    "total": 44.5,
-   "ml": -1440.0,
-   "oppMl": 850.0
+   "ml": -1500.0,
+   "oppMl": 960.0
   },
   "open": {
    "spread": -11.5,
@@ -1714,40 +1715,46 @@
     "spread": -16.5,
     "total": 44.5,
     "ml": -1440.0
+   },
+   {
+    "t": "2026-11-20T11:57Z",
+    "spread": -16.5,
+    "total": 44.5,
+    "ml": -1500.0
    }
   ]
  },
  "playoffs": {
   "odds": {
    "playoffs": {
-    "now": 100.0,
+    "now": 99.9,
     "win": 100.0,
-    "loss": 99.7
+    "loss": 99.3
    },
    "division": {
-    "now": 99.4,
-    "win": 99.5,
-    "loss": 98.6
+    "now": 99.2,
+    "win": 99.4,
+    "loss": 97.7
    },
    "seed1": {
-    "now": 45.5,
-    "win": 48.0,
-    "loss": 23.9
+    "now": 46.7,
+    "win": 48.6,
+    "loss": 27.6
    },
    "conf": {
-    "now": 26.9,
-    "win": 27.4,
-    "loss": 23.1
+    "now": 27.4,
+    "win": 27.9,
+    "loss": 22.1
    },
    "sb": {
-    "now": 15.3,
-    "win": 15.6,
-    "loss": 12.5
+    "now": 15.7,
+    "win": 16.1,
+    "loss": 12.3
    }
   },
-  "winProb": 89.9,
+  "winProb": 90.9,
   "sims": 10000,
-  "asOf": "through the games of Nov. 16, 2026"
+  "asOf": "through the games of Nov. 19, 2026"
  },
  "significance": {
   "win": "A win would make the Bills 9-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 4 games over the Patriots.",
@@ -1759,6 +1766,6 @@
   },
   "seedWin": 1,
   "seedLoss": 1,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 48% of the time with a win and 24% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 49% of the time with a win and 28% with a loss."
  }
 }
