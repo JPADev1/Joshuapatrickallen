@@ -30,63 +30,49 @@
     "name": "Christian Benford",
     "pos": "CB",
     "injury": "Groin",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Dalton Kincaid",
-    "pos": "TE",
-    "injury": "Thumb",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Damar Hamlin",
-    "pos": "S",
-    "injury": "Toe",
-    "status": "DNP",
-    "game": false
+    "status": "Out",
+    "game": true
    },
    {
     "name": "Dorian Williams",
     "pos": "LB",
     "injury": "Calf",
-    "status": "DNP",
-    "game": false
+    "status": "Out",
+    "game": true
    },
    {
-    "name": "Amani Hooker",
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "injury": "Thumb",
+    "status": "Doubtful",
+    "game": true
+   },
+   {
+    "name": "Damar Hamlin",
     "pos": "S",
-    "injury": "Knee",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Dee Alford",
-    "pos": "CB",
-    "injury": "Concussion",
-    "status": "Limited",
-    "game": false
+    "injury": "Toe",
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "Jackson Hawes",
     "pos": "TE",
     "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Ray Davis",
-    "pos": "RB",
-    "injury": "Hamstring",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "T.J. Sanders",
     "pos": "DE",
     "injury": "Shoulder",
-    "status": "Limited",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Terrel Bernard",
+    "pos": "LB",
+    "injury": "Not injury related - resting player",
+    "status": "DNP",
     "game": false
    }
   ],
@@ -95,64 +81,50 @@
     "name": "Bradley Pinion",
     "pos": "P",
     "injury": "Groin",
-    "status": "DNP",
-    "game": false
-   },
-   {
-    "name": "Dante Trader Jr.",
-    "pos": "S",
-    "injury": "Shoulder",
-    "status": "DNP",
-    "game": false
+    "status": "Out",
+    "game": true
    },
    {
     "name": "Jared Wayne",
     "pos": "WR",
     "injury": "Quadricep",
-    "status": "DNP",
-    "game": false
+    "status": "Out",
+    "game": true
+   },
+   {
+    "name": "Dante Trader Jr.",
+    "pos": "S",
+    "injury": "Shoulder",
+    "status": "Doubtful",
+    "game": true
    },
    {
     "name": "Jaylin Simpson",
     "pos": "CB",
     "injury": "Knee",
-    "status": "DNP",
-    "game": false
+    "status": "Doubtful",
+    "game": true
    },
    {
     "name": "Aaron Brewer",
     "pos": "C",
     "injury": "Concussion",
-    "status": "Limited",
-    "game": false
+    "status": "Questionable",
+    "game": true
    },
    {
-    "name": "Andrew Meyer",
-    "pos": "C",
-    "injury": "Neck",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Caleb Douglas",
-    "pos": "WR",
-    "injury": "Shoulder",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Chris Bell",
-    "pos": "WR",
-    "injury": "Knee",
-    "status": "Limited",
-    "game": false
-   },
-   {
-    "name": "Julius Brents",
+    "name": "Darrell Baker Jr.",
     "pos": "CB",
-    "injury": "Neck",
-    "status": "Limited",
-    "game": false
+    "injury": "Knee",
+    "status": "Questionable",
+    "game": true
+   },
+   {
+    "name": "Marcellas Dial Jr.",
+    "pos": "CB",
+    "injury": "Toe",
+    "status": "Questionable",
+    "game": true
    },
    {
     "name": "Tucker Addington",
@@ -162,10 +134,10 @@
     "game": false
    }
   ],
-  "note": "Practice participation this week; game status (Out, Doubtful, Questionable) is added when the final report comes out, usually Friday. Full participants without a game status are not listed.",
-  "hash": "5b9c05e82414",
-  "changed": "Fri. Nov. 20, 6:57 a.m. ET",
-  "changedIso": "2026-11-20T06:57-05:00"
+  "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed.",
+  "hash": "72af9a9f7422",
+  "changed": "Sat. Nov. 21, 6:29 a.m. ET",
+  "changedIso": "2026-11-21T06:29-05:00"
  },
  "allenVs": {
   "wins": 13,
@@ -1124,6 +1096,162 @@
    {
     "team": "MIA",
     "nick": "Dolphins",
+    "player": "Caleb Douglas",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@LV"
+     },
+     {
+      "wk": 2,
+      "opp": "@SF"
+     },
+     {
+      "wk": 7,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 8,
+      "opp": "NE"
+     },
+     {
+      "wk": 9,
+      "opp": "DET"
+     },
+     {
+      "wk": 10,
+      "opp": "@IND"
+     }
+    ],
+    "vals": [
+     5,
+     2,
+     2,
+     4,
+     6,
+     3
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 6,
+      "stars": 5.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 3,
+     "hit": 4
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 2+ in all 6 games.",
+     "Averages 3.7 receptions a game (median 3.5).",
+     "Steady volume: 5.8 targets a game.",
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game.",
+     "Starting DB out for the defense: Christian Benford (CB)."
+    ],
+    "cons": [
+     "Closest call: 2 vs SF in Week 2.",
+     "Swingy: anywhere from 2 to 6 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIA",
+    "nick": "Dolphins",
+    "player": "Malik Washington",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@LV"
+     },
+     {
+      "wk": 2,
+      "opp": "@SF"
+     },
+     {
+      "wk": 3,
+      "opp": "KC"
+     },
+     {
+      "wk": 4,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 5,
+      "opp": "CIN"
+     },
+     {
+      "wk": 7,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 8,
+      "opp": "NE"
+     },
+     {
+      "wk": 9,
+      "opp": "DET"
+     },
+     {
+      "wk": 10,
+      "opp": "@IND"
+     }
+    ],
+    "vals": [
+     3,
+     4,
+     5,
+     5,
+     6,
+     3,
+     5,
+     2,
+     3
+    ],
+    "ladder": [
+     {
+      "line": 2,
+      "hit": 9,
+      "stars": 5.0
+     }
+    ],
+    "extra": [
+     {
+      "line": 3,
+      "hit": 8
+     }
+    ],
+    "next": {
+     "line": 4,
+     "hit": 5
+    },
+    "gameday": 0.5,
+    "pros": [
+     "Cleared 2+ in all 9 games.",
+     "Averages 4.0 receptions a game (median 4).",
+     "Steady volume: 5.7 targets a game.",
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game.",
+     "Starting DB out for the defense: Christian Benford (CB)."
+    ],
+    "cons": [
+     "Closest call: 2 vs DET in Week 9.",
+     "Trending down: 2.5 a game over his last two, below his 4.0 average."
+    ],
+    "status": ""
+   },
+   {
+    "team": "MIA",
+    "nick": "Dolphins",
     "player": "Malik Washington",
     "pos": "WR",
     "cat": "Receiving",
@@ -1195,12 +1323,13 @@
      "line": 30,
      "hit": 7
     },
-    "gameday": 0.0,
+    "gameday": 0.5,
     "pros": [
      "Cleared 20+ in all 9 games.",
      "Averages 44.4 receiving yards a game (median 43).",
      "Steady volume: 5.7 targets a game.",
-     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
+     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game.",
+     "Starting DB out for the defense: Christian Benford (CB)."
     ],
     "cons": [
      "Closest call: 21 vs DET in Week 9.",
@@ -1294,161 +1423,6 @@
     "status": ""
    },
    {
-    "team": "MIA",
-    "nick": "Dolphins",
-    "player": "Caleb Douglas",
-    "pos": "WR",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@LV"
-     },
-     {
-      "wk": 2,
-      "opp": "@SF"
-     },
-     {
-      "wk": 7,
-      "opp": "@NYJ"
-     },
-     {
-      "wk": 8,
-      "opp": "NE"
-     },
-     {
-      "wk": 9,
-      "opp": "DET"
-     },
-     {
-      "wk": 10,
-      "opp": "@IND"
-     }
-    ],
-    "vals": [
-     5,
-     2,
-     2,
-     4,
-     6,
-     3
-    ],
-    "ladder": [
-     {
-      "line": 2,
-      "hit": 6,
-      "stars": 4.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 3,
-     "hit": 4
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 2+ in all 6 games.",
-     "Averages 3.7 receptions a game (median 3.5).",
-     "Steady volume: 5.8 targets a game.",
-     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 2 vs SF in Week 2.",
-     "Swingy: anywhere from 2 to 6 this season.",
-     "On this week's injury report: Limited."
-    ],
-    "status": "Limited"
-   },
-   {
-    "team": "MIA",
-    "nick": "Dolphins",
-    "player": "Malik Washington",
-    "pos": "WR",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@LV"
-     },
-     {
-      "wk": 2,
-      "opp": "@SF"
-     },
-     {
-      "wk": 3,
-      "opp": "KC"
-     },
-     {
-      "wk": 4,
-      "opp": "@MIN"
-     },
-     {
-      "wk": 5,
-      "opp": "CIN"
-     },
-     {
-      "wk": 7,
-      "opp": "@NYJ"
-     },
-     {
-      "wk": 8,
-      "opp": "NE"
-     },
-     {
-      "wk": 9,
-      "opp": "DET"
-     },
-     {
-      "wk": 10,
-      "opp": "@IND"
-     }
-    ],
-    "vals": [
-     3,
-     4,
-     5,
-     5,
-     6,
-     3,
-     5,
-     2,
-     3
-    ],
-    "ladder": [
-     {
-      "line": 2,
-      "hit": 9,
-      "stars": 4.5
-     }
-    ],
-    "extra": [
-     {
-      "line": 3,
-      "hit": 8
-     }
-    ],
-    "next": {
-     "line": 4,
-     "hit": 5
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 2+ in all 9 games.",
-     "Averages 4.0 receptions a game (median 4).",
-     "Steady volume: 5.7 targets a game.",
-     "The Bills rank 27th of 32 against the pass, allowing 256 passing yards a game."
-    ],
-    "cons": [
-     "Closest call: 2 vs DET in Week 9.",
-     "Trending down: 2.5 a game over his last two, below his 4.0 average."
-    ],
-    "status": ""
-   },
-   {
     "team": "BUF",
     "nick": "Bills",
     "player": "Josh Allen",
@@ -1509,12 +1483,12 @@
      {
       "line": 150,
       "hit": 9,
-      "stars": 4.5
+      "stars": 5.0
      },
      {
       "line": 175,
       "hit": 9,
-      "stars": 4.0
+      "stars": 4.5
      }
     ],
     "extra": [
@@ -1527,12 +1501,14 @@
      "line": 225,
      "hit": 6
     },
-    "gameday": 0.0,
+    "gameday": 0.5,
     "pros": [
      "Cleared 175+ in all 9 games.",
-     "Averages 247.0 passing yards a game (median 248)."
+     "Averages 247.0 passing yards a game (median 248).",
+     "Starting DB out for the defense: Dante Trader Jr. (S)."
     ],
     "cons": [
+     "Starting receiver out: Dalton Kincaid (TE).",
      "The Dolphins rank 6th of 32 against the pass, allowing 212 passing yards a game."
     ],
     "status": ""
@@ -1541,15 +1517,15 @@
   "weather": {
    "indoor": false,
    "temp": 66,
-   "wind": 12,
-   "gust": 21,
+   "wind": 11,
+   "gust": 20,
    "rain": 0,
    "snow": 0,
-   "pop": 2
+   "pop": 1
   },
   "conditions": [
-   "Game-day forecast at kickoff: 66°F, wind 12 mph (gusts 21), 2% chance of precipitation. Nothing in it changes the ratings.",
-   "Final injury report: not out yet (usually Friday); ratings will update with it."
+   "Game-day forecast at kickoff: 66°F, wind 11 mph (gusts 20), 1% chance of precipitation. Nothing in it changes the ratings.",
+   "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
  },
@@ -1659,7 +1635,7 @@
  },
  "lines": {
   "gameId": "2026_11_MIA_BUF",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
    "spread": -16.5,
    "total": 44.5,
