@@ -22,6 +22,7 @@ import update_data as U  # noqa: E402
 from build_mountain import pos_code, norm, NOT_NFL  # noqa: E402
 
 TOP = 30
+BELOW = 15  # places kept below Allen in any view where he ranks outside the top TOP
 MAX_N = 30
 
 
@@ -54,8 +55,12 @@ def keep_top(people, views):
                 if v > 0:
                     score.append((v, p["id"]))
             score.sort(reverse=True)
+            # keep the top TOP, and when Allen ranks below that, everyone down to BELOW places past him,
+            # so his own rank is always right (it was #42 instead of #50 in career passing yards when the
+            # QBs ranked 31st-49th were cut) and players he can catch or who can catch him this season are there
+            deep = next((r for r, (v, i) in enumerate(score) if i == U.ALLEN), -1) + 1 + BELOW
             if len(score) >= TOP:
-                cut = score[TOP - 1][0]
+                cut = score[min(len(score), max(TOP, deep)) - 1][0]
                 keep.update(i for v, i in score if v >= cut)
             else:
                 keep.update(i for v, i in score)
@@ -123,10 +128,9 @@ def main():
                 s[6 if post else 4] += 1
 
     # merge pre-1999 history onto players who continued past 1998
-    by_name = defaultdict(list)
+    by_name, by_late = defaultdict(list), defaultdict(list)
     for pid, p in people.items():
-        if p["first"] < 1999:
-            by_name[norm(p["name"])].append(pid)
+        (by_name if p["first"] < 1999 else by_late)[norm(p["name"])].append(pid)
     problems = []
     for h in hist:
         if h["name"] in NOT_NFL:
@@ -134,6 +138,12 @@ def main():
         seasons = {s[0]: [s[1], s[2], s[5], s[3], s[6], s[4], s[7]] for s in h["seasons"]}
         cands = by_name.get(norm(h["name"]), [])
         matches = cands if len(cands) == 1 else [pid for pid in cands if abs(people[pid]["first"] - h["first"]) <= 1]
+        if h["last"] >= 1999 and not matches:
+            # nflverse has the whole career when he began in 1999 or later (Matt Hasselbeck: a 1998 practice-squad
+            # row with no stats; Quincy Carter: a 1998 row from college) -> keep nflverse, drop the history rows
+            late = [pid for pid in by_late.get(norm(h["name"]), []) if people[pid]["pos"] in ("QB", h["pos"])]
+            if len(late) == 1:
+                continue
         if h["last"] >= 1999 and matches:
             p = people[matches[0]]
             p["seasons"].update(seasons)
