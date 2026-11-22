@@ -675,9 +675,40 @@ def build_watch(allen, ranks, week26, m):
     # Record against this opponent
     v = m.get("allenVs", {})
     if v.get("games"):
-        items.append((0.5, f"Record against the {nick}", f"A win makes him {v['wins'] + 1}-{v['losses']} as a starter against them in the regular season.",
-                      {"k": "win", "need": 1, "goal": f"to go {v['wins'] + 1}-{v['losses']} against them",
-                       "done": f"Win! He's {v['wins'] + 1}-{v['losses']} as a starter against the {nick} in the regular season."}))
+        w1, l1 = v["wins"] + 1, v["losses"]
+        try:  # hand-entered in data/overrides.json "vsBest": best career win % vs this team (min games) and the runner-up
+            best = json.load(open(os.path.join(REPO, "data", "overrides.json"))).get("vsBest", {}).get(m.get("opp", {}).get("abbr"))
+        except Exception:
+            best = None
+        if best and best.get("playoffs"):  # count playoff games too
+            g0, w0, l0 = v["games"] + v.get("postWins", 0) + v.get("postLosses", 0), v["wins"] + v.get("postWins", 0), v["losses"] + v.get("postLosses", 0)
+        else:
+            g0, w0, l0 = v["games"], v["wins"], v["losses"]
+        if best and g0 + 1 >= best.get("min", 0):
+            P = lambda w, l: f"{int(w * 1000 / (w + l) + 0.5) / 10:.1f}%"  # round half up (13-3 = 81.3%)
+            w1, l1 = w0 + 1, l0
+            crit = f"min. {best['min']} games" + (", incl. playoffs" if best.get("playoffs") else "")
+            nb = best["next"]; npct = P(nb["w"], nb["l"]); holds = g0 >= best["min"]
+            ctx = f"{nb['name']} is 2nd: {nb['w']}-{nb['l']} ({npct})."
+            lead = f"extending his league-leading career win percentage against the {nick} to {P(w1, l1)}" if holds \
+                else f"the best career win percentage against the {nick} by any QB: {P(w1, l1)}"
+            items.append((0.5, f"Record against the {nick}",
+                          f"A win moves him to {w1}-{l1} against the {nick}, {lead} ({crit}).",
+                          {"k": "win", "need": 1, "goal": f"moves him to {w1}-{l1} against the {nick}, {lead} ({crit})", "ctx": ctx,
+                           "bg": best.get("bg", ""),
+                           # share cards: st/sb/sk/sl once achieved; wst/wsb/wsk/wsl for the Record Watch card before
+                           "st": f"Best career win percentage against the {nick} by any QB ({crit})", "sb": P(w1, l1),
+                           "sk": f"{w1}-{l1} career", "sl": ctx[:-1],
+                           "wst": (f"A win extends his league-leading win percentage against the {nick} ({crit})" if holds
+                                   else f"A win gives him the best career win percentage against the {nick} ({crit})"),
+                           "wsb": P(w1, l1), "wsk": f"Josh Allen vs the {nick} today",
+                           "wsl": (f"Now {w0}-{l0} ({P(w0, l0)}), a win makes it {w1}-{l1}" if holds else f"A win makes him {w1}-{l1}") + f" · {nb['name']} is 2nd: {nb['w']}-{nb['l']}",
+                           "done": f"Win! He's {w1}-{l1} against the {nick}, " + (f"extending his league-leading career win percentage against them to {P(w1, l1)}" if holds else f"the best career win percentage against them by any QB: {P(w1, l1)}") + f" ({crit}). {ctx}"}))
+        else:
+            w1, l1 = v["wins"] + 1, v["losses"]
+            items.append((0.5, f"Record against the {nick}", f"A win makes him {w1}-{l1} as a starter against them in the regular season.",
+                          {"k": "win", "need": 1, "goal": f"to go {w1}-{l1} against them",
+                           "done": f"Win! He's {w1}-{l1} as a starter against the {nick} in the regular season."}))
 
     items.sort(key=lambda x: x[0])
     return {"asOf": short_date(date.today()), "highs": hi, "gameday": m.get("gameday"), "gameId": m.get("gameId"),

@@ -152,8 +152,8 @@
     if(k === 'win'){
       var b = parseInt(L.bills, 10), t = parseInt(L.them, 10), sc = isNaN(b) || isNaN(t) ? '' : b + '-' + t;
       if(L.final) return b > t ? {cls:'done', html: esc(x.done)} : {cls:'', html: (b === t ? 'Tie, ' : 'Loss, ') + sc + '.'};
-      if(!sc) return {cls:'', html: 'A win ' + esc(x.goal) + '.'};
-      return {cls:'', html: (b > t ? 'Bills lead ' : b < t ? 'Bills trail ' : 'Tied ') + sc + '. A win ' + esc(x.goal) + '.'};
+      if(!sc) return {cls:'', html: 'A win ' + esc(x.goal) + '.' + ctx};
+      return {cls:'', html: (b > t ? 'Bills lead ' : b < t ? 'Bills trail ' : 'Tied ') + sc + '. A win ' + esc(x.goal) + '.' + ctx};
     }
     if(!UNIT[k] || x.need == null) return null;
     var v = liveVal(k, s), left = x.need - v, left2 = x.need2 != null ? x.need2 - v : null;
@@ -197,14 +197,25 @@
     var oppNick = W.opp || (match.opp && match.opp.nick), oppHome = W.opp ? W.home : match.home;
     var shareItems = [];
     function plain(h){ return String(h).replace(/<[^>]+>/g, '').replace(/&#10003;/g, '\u2713').replace(/&ndash;/g, '\u2013').replace(/&middot;/g, '\u00b7').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(); }
+    // Items with their own watch card (wst/wsb/wsk/wsl) get a Record Watch share button before the record falls
+    // Record Watch share card for one record. Items with their own card (wst...) use it; before kickoff every record gets one.
+    function watchBtn(x, pre){
+      if(!window.JPAShare || !(x.wst || pre)) return '';
+      var url = location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '';
+      if(x.wst) return JPAShare.btn({chip: 'Record Watch', kicker: x.wsk || '', title: x.wst, big: x.wsb || '', line: x.wsl || '',
+        foot: 'Follow it live at notjoshingaround.com', url: url, bg: x.bg || ''}, x.title);
+      return JPAShare.btn({chip: 'Record Watch', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : '') + ', next game',
+        title: x.title, line: String(x.detail || '').replace(/ \(career high in a game: \d+\)/, '') + (x.ctx && x.k === 'win' ? ' ' + x.ctx : ''),
+        foot: 'Follow it live at notjoshingaround.com', url: url, bg: x.bg || ''}, x.title);
+    }
     var rows = W.items.map(function(x){
       var r = forThis ? liveItem(x, L) : null;
       shareItems.push({t: x.title, d: plain(r ? r.html : x.detail).replace(/ \(career high in a game: \d+\)/g, '').replace(/ Today: .*$/, function(m){ return r && r.cls !== 'done' ? '' : m; }), done: !!(r && r.cls === 'done')});
-      if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + '</span></li>';
+      if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + (x.ctx && x.k === 'win' ? ' <i>' + esc(x.ctx) + '</i>' : '') + '</span>' + watchBtn(x, true) + '</li>';
       if(r.cls === 'close' || r.near) close = true; if(r.cls === 'done') broke = true;
-      var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : ''),
-        title: x.title, line: String(r.html).replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(),
-        foot: L.final ? 'Unofficial until the official stats are in' : 'Live, unofficial', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '')}, x.title) : '';
+      var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : '') + (x.sk ? ' \u00b7 ' + x.sk : ''),
+        title: x.st || x.title, big: x.sb || '', line: x.sl || String(r.html).replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(),
+        foot: L.final ? 'Unofficial until the official stats are in' : 'Live, unofficial', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : ''), bg: x.bg || ''}, x.title) : (L.final ? '' : watchBtn(x));
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span>' + sh + '</li>';
     }).join('');

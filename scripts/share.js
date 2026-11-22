@@ -1,4 +1,4 @@
-// Share cards: any element with data-share='{"chip","kicker","title","big","line","foot","url"}' gets a Share button.
+// Share cards: any element with data-share='{"chip","kicker","title","big","line","foot","url","bg"}' gets a Share button.
 // Clicking it draws a 1080x1350 image (Lora type on images/share-bg.webp), shows it full screen, and offers
 // the phone's share sheet (image + a link back to the site) or a download. Everything runs in the browser.
 (function(){
@@ -17,6 +17,15 @@
       .then(function(img){ return LOGO.then(function(l){ LOGO_IMG = l; return img; }); });
     ready.catch(function(){ ready = null; });
     return ready;
+  }
+  // Share image library: a card can name its own background with d.bg, a key from share-images.json
+  // (e.g. "mia-bottle-feed"). Images live in images/share/ on the stats-data branch, so adding one needs no Netlify deploy.
+  var LIB = 'https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/images/share/', BGS = {};
+  function cardBg(d, fallback){
+    if(!d.bg || !/^[a-z0-9-]+$/.test(d.bg)) return Promise.resolve(fallback);
+    if(!BGS[d.bg]) BGS[d.bg] = new Promise(function(ok, no){ var img = new Image(); img.crossOrigin = 'anonymous';
+      img.onload = function(){ ok(img); }; img.onerror = no; img.src = LIB + d.bg + '.webp'; });
+    return BGS[d.bg].catch(function(){ delete BGS[d.bg]; return fallback; }); // missing image: use the usual background
   }
   function F(style, weight, size){ return (style ? 'italic ' : '') + weight + ' ' + size + 'px LoraShare, Georgia, serif'; }
   // Split text into at most `max` lines that fit `width`; shrink the size until it fits.
@@ -302,7 +311,7 @@
     viewer(); msg('Making your card…'); box.hidden = false; document.documentElement.classList.add('shr-open');
     var im = box.querySelector('img'); im.removeAttribute('src');
     box.querySelector('.shr-go').hidden = !navigator.share && !navigator.clipboard;
-    assets().then(function(img){
+    assets().then(function(img){ return cardBg(d, img); }).then(function(img){
       draw(d, img).toBlob(function(blob){
         if(!blob){ msg('Sorry, the card could not be made on this device.'); return; }
         var name = 'josh-allen-' + String(d.title).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) + '.png';
