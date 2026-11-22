@@ -55,6 +55,13 @@
     "game": true
    },
    {
+    "name": "Ed Oliver",
+    "pos": "DT",
+    "injury": "Oblique",
+    "status": "Questionable",
+    "game": true
+   },
+   {
     "name": "Jackson Hawes",
     "pos": "TE",
     "injury": "Shoulder",
@@ -135,9 +142,9 @@
    }
   ],
   "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed.",
-  "hash": "72af9a9f7422",
-  "changed": "Sat. Nov. 21, 6:29 a.m. ET",
-  "changedIso": "2026-11-21T06:29-05:00"
+  "hash": "fc819726d5d3",
+  "changed": "Sat. Nov. 21, 10:30 p.m. ET",
+  "changedIso": "2026-11-21T22:30-05:00"
  },
  "allenVs": {
   "wins": 13,
