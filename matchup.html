@@ -104,8 +104,12 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
       return '<div class="dtab"><h3>'+esc(d.name)+'</h3><table><thead><tr><th>Team</th><th>W-L</th><th>GB</th><th>Div</th><th>Strk</th></tr></thead><tbody>'
         +d.rows.map(function(r){return '<tr'+(r.abbr===me?' class="me"':'')+'><td>'+esc(r.nick)+'</td><td>'+esc(r.rec)+'</td><td>'+esc(r.gb)+'</td><td>'+esc(r.div)+'</td><td>'+esc(r.strk)+'</td></tr>';}).join('')+'</tbody></table></div>';}).join('');}
   if(m.primetime){var P=document.getElementById('pt'); P.hidden=false;
+    // Thanksgiving: the matchup as the title, and a Thanksgiving dinner table across the bottom of the billboard
+    var tg=m.primetime.kind==='Thanksgiving', night=/^([7-9]|1[01]):\d\d p\.m\./.test(m.time||''), oppN=(m.opp&&m.opp.nick)||'';
+    var ptk=tg?(night?'Thanksgiving Primetime':'Thanksgiving'):'Primetime', ptt=tg&&oppN?(m.home?oppN+' at Bills':'Bills at '+oppN):m.primetime.title;
     P.innerHTML='<div class="lamps" aria-hidden="true"><span class="rail"></span>'+[0,1,2].map(lamp).join('')+'</div>'
-      +'<div class="pt"><span class="ptb" aria-hidden="true"><i></i><i></i><i></i></span><span class="ptk">Primetime</span><b>'+esc(m.primetime.title)+'</b>'+(m.primetime.sub||m.tv?'<span class="ptn">'+esc(m.primetime.sub||m.tv)+' &middot; '+esc(m.time)+'</span>':'')+'</div>';}
+      +'<div class="pt'+(tg?' tg':'')+'"><span class="ptb" aria-hidden="true"><i></i><i></i><i></i></span><span class="ptk">'+ptk+'</span><b>'+esc(ptt)+'</b>'+(m.primetime.sub||m.tv?'<span class="ptn">'+esc(m.primetime.sub||m.tv)+' &middot; '+esc(m.time)+'</span>':'')
+      +(tg?'<img class="tgtable" src="/images/thanksgiving-table.webp" alt="" width="1040" height="313" decoding="async">':'')+'</div>';}
   stakes(m); lines(m); playoffs(m);
   document.getElementById('when').textContent=[m.date,m.time,m.venue,m.tv].filter(Boolean).join(' · ');
   var T=m.teamStats, L=m.home?m.opp:m.bills, R=m.home?m.bills:m.opp, lk=m.home?'opp':'bills', rk=m.home?'bills':'opp';

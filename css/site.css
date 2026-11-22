@@ -549,6 +549,11 @@ body.hailee #livebar-gameday{display:none}
 .ptb i:nth-child(1){left:-5%}.ptb i:nth-child(2){left:28%}.ptb i:nth-child(3){left:61%}
 @media (prefers-reduced-motion:no-preference){.ptb i:nth-child(1),.lamp.l0 .bulb{animation:flick 7s infinite}.ptb i:nth-child(3),.lamp.l2 .bulb{animation:flick 11s infinite 3s}}
 @keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.35}94%{opacity:.95}95.5%{opacity:.45}97%{opacity:1}}
+/* Thanksgiving: a dinner table photo across the bottom of the billboard, its top fading into the sign */
+.pt.tg{padding-bottom:0}
+.pt.tg .tgtable{display:block;width:calc(100% + 32px);height:auto;margin:-14px -16px 0;position:relative;z-index:0;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
+.pt.tg .ptk,.pt.tg b,.pt.tg .ptn{position:relative;z-index:1}
 /* what's at stake */
 .stake .sk{border-left:5px solid;border-radius:10px;padding:8px 12px;margin:0 0 10px;background:var(--bg)}
 .stake .sk.w{border-color:#1f9d55}.stake .sk.l{border-color:var(--red)}
