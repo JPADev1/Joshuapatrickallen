@@ -919,11 +919,21 @@
    },
    {
     "title": "Record against the Dolphins",
-    "detail": "A win makes him 14-3 as a starter against them in the regular season.",
+    "detail": "A win moves him to 14-3 against the Dolphins, extending his league-leading career win percentage against the Dolphins to 82.4% (min. 16 games).",
     "k": "win",
     "need": 1,
-    "goal": "to go 14-3 against them",
-    "done": "Win! He's 14-3 as a starter against the Dolphins in the regular season."
+    "goal": "moves him to 14-3 against the Dolphins, extending his league-leading career win percentage against the Dolphins to 82.4% (min. 16 games)",
+    "ctx": "Tom Brady is 2nd: 24-12 (66.7%).",
+    "bg": "mia-bottle-feed",
+    "st": "Best career win percentage against the Dolphins by any QB (min. 16 games)",
+    "sb": "82.4%",
+    "sk": "14-3 career",
+    "sl": "Tom Brady is 2nd: 24-12 (66.7%)",
+    "wst": "A win extends his league-leading win percentage against the Dolphins (min. 16 games)",
+    "wsb": "82.4%",
+    "wsk": "Josh Allen vs the Dolphins today",
+    "wsl": "Now 13-3 (81.3%), a win makes it 14-3 · Tom Brady is 2nd: 24-12",
+    "done": "Win! He's 14-3 against the Dolphins, extending his league-leading career win percentage against them to 82.4% (min. 16 games). Tom Brady is 2nd: 24-12 (66.7%)."
    }
   ]
  },
@@ -1522,17 +1532,9 @@
     "status": ""
    }
   ],
-  "weather": {
-   "indoor": false,
-   "temp": 67,
-   "wind": 12,
-   "gust": 23,
-   "rain": 0,
-   "snow": 0,
-   "pop": 1
-  },
+  "weather": null,
   "conditions": [
-   "Game-day forecast at kickoff: 67°F, wind 12 mph (gusts 23), 1% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
    "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1647,8 +1649,8 @@
   "cur": {
    "spread": -16.5,
    "total": 44.5,
-   "ml": -1480.0,
-   "oppMl": 860.0
+   "ml": -1560.0,
+   "oppMl": 890.0
   },
   "open": {
    "spread": -11.5,
@@ -1729,6 +1731,12 @@
     "spread": -16.5,
     "total": 44.5,
     "ml": -1480.0
+   },
+   {
+    "t": "2026-11-22T15:18Z",
+    "spread": -16.5,
+    "total": 44.5,
+    "ml": -1560.0
    }
   ]
  },
@@ -1736,31 +1744,31 @@
   "odds": {
    "playoffs": {
     "now": 99.9,
-    "win": 100.0,
-    "loss": 99.6
+    "win": 99.9,
+    "loss": 99.3
    },
    "division": {
     "now": 99.2,
     "win": 99.4,
-    "loss": 97.4
+    "loss": 97.0
    },
    "seed1": {
-    "now": 45.7,
-    "win": 48.1,
-    "loss": 23.8
+    "now": 46.3,
+    "win": 48.5,
+    "loss": 24.4
    },
    "conf": {
-    "now": 27.0,
-    "win": 27.5,
-    "loss": 22.0
+    "now": 26.9,
+    "win": 27.4,
+    "loss": 22.6
    },
    "sb": {
     "now": 15.7,
-    "win": 16.1,
-    "loss": 12.3
+    "win": 15.9,
+    "loss": 13.6
    }
   },
-  "winProb": 90.0,
+  "winProb": 90.3,
   "sims": 10000,
   "asOf": "through the games of Nov. 19, 2026"
  },
