@@ -1,0 +1,6 @@
+{
+    "_how": "Share-card theme by game date (America/New_York). Dates in \"rivalry\" use the white rivalry-jersey look: <key>-rivalry.webp backgrounds, icy white fade, royal-blue type, jersey-style numerals. Remove the date (or leave it; it only matches that day) to go back to the usual look.",
+    "rivalry": [
+        "2026-11-22"
+    ]
+}

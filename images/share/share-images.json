@@ -7,6 +7,20 @@
    "use": "Records against the Dolphins",
    "added": "2026-11-22",
    "notes": "Nike swooshes removed from both shoulders."
+  },
+  "share-bg-rivalry": {
+   "team": "BUF",
+   "subject": "Default Allen image recolored to the white rivalry jersey (royal trim, silver numbers, gray cracked-ice shoulders and backdrop)",
+   "use": "Default background on rivalry-theme days",
+   "added": "2026-11-22",
+   "notes": "Generated from images/share-bg.webp; no logos."
+  },
+  "mia-bottle-feed-rivalry": {
+   "team": "MIA",
+   "subject": "Dolphin bottle-feed image recolored to the white rivalry jersey",
+   "use": "Dolphins records on rivalry-theme days",
+   "added": "2026-11-22",
+   "notes": "Generated from mia-bottle-feed.webp; navy bottom strip whitened."
   }
  }
 }
