@@ -1,10 +1,21 @@
 {
  "_how": "Hand-added records watch items. Each: title, k (passTD, rushTD, totalTD, passYds, rushYds), target (the career total that sets the mark), goal (text before), done (text after it happens), optional detail ({need} and {have} fill in), optional top (false = list it last). Items drop off once his official total reaches the target. Editing this file never redeploys the site.",
  "items": [
-  {"title": "NFL record: most total TDs in a player's first 10 seasons",
-   "k": "totalTD", "target": 323,
+  {
+   "title": "NFL record: most total TDs in a player's first 10 seasons",
+   "k": "totalTD",
+   "target": 323,
    "goal": "to pass Peyton Manning (322) for the most total TDs in a player's first 10 seasons",
    "done": "He passed Peyton Manning (322) for the most total TDs in a player's first 10 seasons, and he did it in his 9th.",
-   "detail": "Needs {need} total TD (passing, rushing or receiving). He has {have} in his 9th season; Peyton Manning had 322 through his first 10, the most by anyone."}
+   "detail": "Needs {need} total TD (passing, rushing or receiving). He has {have} in his 9th season; Peyton Manning had 322 through his first 10, the most by anyone."
+  },
+  {
+   "title": "NFL first: 12+ rushing TDs in 4 straight seasons by a QB",
+   "k": "rushTD",
+   "target": 91,
+   "goal": "for his 12th rushing TD this season, making him the first QB with 12+ in 4 straight seasons",
+   "done": "12th rushing TD of the season! He's the first QB ever with 12+ rushing TDs in 4 straight seasons (15, 12, 14 and 12).",
+   "detail": "Needs {need} rushing TD for his 12th this season. He'd be the first QB with 12+ in 4 straight seasons (15 in 2023, 12 in 2024, 14 in 2025). No other QB has done it even 3 years in a row."
+  }
  ]
 }
