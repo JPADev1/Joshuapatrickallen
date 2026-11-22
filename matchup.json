@@ -55,6 +55,13 @@
     "game": true
    },
    {
+    "name": "Ed Oliver",
+    "pos": "DT",
+    "injury": "Oblique",
+    "status": "Questionable",
+    "game": true
+   },
+   {
     "name": "Jackson Hawes",
     "pos": "TE",
     "injury": "Shoulder",
@@ -135,9 +142,9 @@
    }
   ],
   "note": "Game status (Out, Doubtful, Questionable) is from the final injury report. Full participants without a game status are not listed.",
-  "hash": "72af9a9f7422",
-  "changed": "Sun. Nov. 22, 3:18 a.m. ET",
-  "changedIso": "2026-11-22T03:18-05:00"
+  "hash": "fc819726d5d3",
+  "changed": "Sun. Nov. 22, 10:27 a.m. ET",
+  "changedIso": "2026-11-22T10:27-05:00"
  },
  "allenVs": {
   "wins": 13,
@@ -1532,17 +1539,9 @@
     "status": ""
    }
   ],
-  "weather": {
-   "indoor": false,
-   "temp": 67,
-   "wind": 12,
-   "gust": 21,
-   "rain": 0,
-   "snow": 0,
-   "pop": 1
-  },
+  "weather": null,
   "conditions": [
-   "Game-day forecast at kickoff: 67°F, wind 12 mph (gusts 21), 1% chance of precipitation. Nothing in it changes the ratings.",
+   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
    "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -1653,11 +1652,11 @@
  },
  "lines": {
   "gameId": "2026_11_MIA_BUF",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
    "spread": -16.5,
    "total": 44.5,
-   "ml": -1560.0,
+   "ml": -1540.0,
    "oppMl": 890.0
   },
   "open": {
@@ -1745,6 +1744,12 @@
     "spread": -16.5,
     "total": 44.5,
     "ml": -1560.0
+   },
+   {
+    "t": "2026-11-22T15:27Z",
+    "spread": -16.5,
+    "total": 44.5,
+    "ml": -1540.0
    }
   ]
  },
