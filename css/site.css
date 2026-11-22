@@ -690,6 +690,10 @@ html.shr-open{overflow:hidden}
 @media (max-width:520px){.firsts.recap li{grid-template-columns:1fr;gap:8px}.firsts.recap .fwhen{display:flex;align-items:center;justify-content:space-between;gap:8px}.firsts.recap .fwhen .shr{margin-top:0}}
 /* Win chance chart in the Gameday live card (scripts/live.js) */
 .livebar .wp{margin:12px 0 2px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.livebar.idle .wp{border-bottom:0;border-top:1px solid rgba(255,255,255,.22);padding-top:10px}
+.livebar.idle .wph{color:#fff}.livebar.idle .wpg{stroke:rgba(255,255,255,.22)}.livebar.idle .wpmid{stroke:rgba(255,255,255,.55)}
+.livebar.idle .wpt{fill:rgba(255,255,255,.82)}.livebar.idle .wpline{stroke:#fff}.livebar.idle .wpn{color:rgba(255,255,255,.84)}
+.livebar.idle .wpdot{fill:#f2d36b;stroke:#fff}
 .livebar .wp + .lw{border-top:0;margin-top:4px}
 .wph{font-weight:800;font-size:.95rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
 .wph .wpbig{color:var(--blue);font-size:1.5rem;letter-spacing:-.01em;margin:0;line-height:1}

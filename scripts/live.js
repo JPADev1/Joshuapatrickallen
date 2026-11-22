@@ -353,6 +353,24 @@
   function wpX(x){ return WP.l + x * (WP.W - WP.l - WP.r); }
   function wpY(p){ return WP.t + (1 - p) * (WP.H - WP.t - WP.b); }
   function wpPct(p){ return p >= .995 && p < 1 ? '>99' : p <= .005 && p > 0 ? '<1' : String(Math.round(p * 100)); }
+  // Before kickoff: the empty chart, with the betting-line chance at kickoff, under the records watch
+  function preWpHtml(pg){
+    if(!pg) return '';
+    var oc = oppColor({}), y50 = wpY(.5), grid = '', lab = '', ax = wpX(1) + 8, y = wpY(pg.p).toFixed(1);
+    [.25, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + wpY(v) + '" y2="' + wpY(v) + '"/>'; });
+    [.25, .5, .75].forEach(function(v){ grid += '<line class="wpg" x1="' + wpX(v) + '" x2="' + wpX(v) + '" y1="' + WP.t + '" y2="' + (WP.H - WP.b) + '"/>'; });
+    ['Q1','Q2','Q3','Q4'].forEach(function(q, i){ lab += '<text class="wpt" x="' + wpX(i / 4 + .125) + '" y="' + (WP.H - 7) + '" text-anchor="middle">' + q + '</text>'; });
+    lab += '<text class="wpt" x="' + ax + '" y="' + (wpY(1) + 4) + '">100%</text><text class="wpt wps wpw" x="' + ax + '" y="' + (wpY(1) + 15) + '">Win</text>'
+      + '<text class="wpt" x="' + ax + '" y="' + (y50 + 4) + '">50%</text>'
+      + '<text class="wpt" x="' + ax + '" y="' + (wpY(0) - 7) + '">100%</text><text class="wpt wps" x="' + ax + '" y="' + (wpY(0) + 4) + '">Lose</text>';
+    var svg = '<svg viewBox="0 0 ' + WP.W + ' ' + WP.H + '" role="img" aria-label="Pregame Bills win probability ' + wpPct(pg.p) + ' percent">' + grid
+      + '<line class="wpmid" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + y50 + '" y2="' + y50 + '"/>' + lab
+      + '<line class="wpline wpdash" x1="' + wpX(0) + '" x2="' + wpX(1) + '" y1="' + y + '" y2="' + y + '" opacity=".45"/>'
+      + '<circle class="wpdot wplive" cx="' + wpX(0) + '" cy="' + y + '" r="5" fill="' + (pg.p >= .5 ? 'var(--blue)' : oc) + '"/></svg>';
+    return '<div class="wp wppre"><div class="wph"><span class="wpht">Pregame win probability <b class="wpbig">' + wpPct(pg.p) + '%</b></span></div>'
+      + '<div class="wpc">' + svg + '</div>'
+      + '<p class="wpn">From the ' + (pg.book ? esc(pg.book) + ' ' : '') + 'betting line. At kickoff the line builds here, play by play.</p></div>';
+  }
   function wpHtml(L){
     var rec = wpTrack(L), oppAb = esc(L.opp || (match && match.opp && match.opp.abbr) || 'OPP');
     var pts = (rec.pts.length && rec.pts[0][0] === 0 ? [] : [[0, rec.p0, 0, 0, 'Kickoff']]).concat(rec.pts), n = pts.length, cur = pts[n - 1];
@@ -455,9 +473,9 @@
       el.innerHTML = '<span class="dot"></span><b>GAMEDAY LIVE</b><br>' + (pre
         ? '<span class="ln">It’s gameday: Bills ' + (match.home ? 'vs' : 'at') + ' the ' + esc(match.opp && match.opp.nick) + (match.time ? ', ' + esc(match.time) : '') + '.</span>'
           + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and the records watch counts down live, every minute.</span>'
-          + (function(){ var pg = pregame(gameDate(match)); return pg ? '<span class="lnote">Bills win chance at kickoff: <b>' + wpPct(pg.p) + '%</b> (' + (pg.book ? esc(pg.book) + ' ' : '') + 'betting line). A live win-chance chart builds here as the game goes.</span>' : ''; })()
         : '<span class="ln">Check back on gameday to watch records broken live.</span>'
-          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every minute.</span>') + w.html;
+          + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every minute.</span>') + w.html
+        + (pre ? preWpHtml(pregame(gameDate(match))) : '');
       el.hidden = false; sweep(); return; }
     var s = L.s, parts = [];
     if(s.att) parts.push(s.cmp + '/' + s.att + ', ' + s.yds + ' yds, ' + s.td + ' TD' + (s.int ? ', ' + s.int + ' INT' : ''));
@@ -466,7 +484,7 @@
     el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') + (w.broke ? '<span class="sr">A record fell today.</span>' : '') +
       '<div class="lhead"><span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
       (!L.final && L.clock ? ' · ' + L.clock : '') + '<br><span class="ln">Allen today: ' + (parts.join(' · ') || 'no stats yet') +
-      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + wpHtml(L) + w.html + '<span class="lnote">Live numbers are unofficial and update every minute. They are checked against the official stats after the game.</span>';
+      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + w.html + wpHtml(L) + '<span class="lnote">Live numbers are unofficial and update every minute. They are checked against the official stats after the game.</span>';
     wpWire(el);
     el.hidden = false;
   }
