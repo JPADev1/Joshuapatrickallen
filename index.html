@@ -358,7 +358,7 @@ else if(location.hash==='#nfl'||location.hash==='#bills'){SCOPE=location.hash.sl
     FIRSTS=d.items; render();
     document.getElementById('firsts-h').textContent='NFL firsts ('+d.items.length+')';
     document.getElementById('firsts').innerHTML=d.items.map(function(f){
-      return '<li><div class="fwhen">'+esc(when(f.date))+shareBtn({chip:"NFL First", kicker:when(f.date), title:f.text, line:f.line||f.game||'', foot:"Every Josh Allen NFL first, on the site", url:"#firsts"}, f.text)+'</div><div class="fbody"><b>'+esc(f.text)+'</b>'
+      return '<li><div class="fwhen">'+esc(when(f.date))+shareBtn({chip:"NFL First", kicker:when(f.date), title:f.text, line:f.line||f.game||'', foot:"Every Josh Allen NFL first, on the site", url:"#firsts", bg:f.bg||""}, f.text)+'</div><div class="fbody"><b>'+esc(f.text)+'</b>'
         +(f.line?'<span class="fline">'+esc(f.line)+'</span>':'')
         +'<span class="fmeta">'+esc(f.game)+(f.url?' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener noreferrer">'+esc(f.source)+'</a>':'')+'</span></div></li>';}).join('');
   }).catch(function(){ document.getElementById('firsts').innerHTML='<li><div class="fbody">The NFL firsts list could not be loaded. Please refresh.</div></li>'; });
@@ -385,7 +385,7 @@ function renderRecap(){
     + '<ol class="firsts recap">' + R.items.map(function(x){
       var sc = x.scope === 'nfl' ? ' scope nfl' : x.scope === 'bills' ? ' scope bills' : '';
       return '<li><div class="fwhen"><span class="chip' + sc + '">' + esc(x.tag || 'Milestone') + '</span>'
-        + shareBtn({chip:x.tag || 'Milestone', kicker:game + ' · ' + when, title:x.title, big:x.big || '', line:x.text || '', foot:foot, url:'#recap'}, x.title) + '</div>'
+        + shareBtn({chip:x.tag || 'Milestone', kicker:game + ' · ' + when, title:x.title, big:x.big || '', line:x.text || '', foot:foot, url:'#recap', bg:x.bg || ''}, x.title) + '</div>'
         + '<div class="fbody"><b>' + esc(x.title) + '</b>' + (x.text ? '<span class="fline">' + esc(x.text) + '</span>' : '')
         + (x.line ? '<span class="fmeta">' + esc(x.line) + '</span>' : '') + '</div></li>'; }).join('') + '</ol>'
     + '<p class="note">Only what he did in this game. ' + (R.official ? 'Checked against the official stats.' : 'Numbers are unofficial until the official stats are in.') + '</p>';
