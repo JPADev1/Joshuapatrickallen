@@ -353,7 +353,38 @@
   function wpX(x){ return WP.l + x * (WP.W - WP.l - WP.r); }
   function wpY(p){ return WP.t + (1 - p) * (WP.H - WP.t - WP.b); }
   function wpPct(p){ return p >= .995 && p < 1 ? '>99' : p <= .005 && p > 0 ? '<1' : String(Math.round(p * 100)); }
-  // Before kickoff: the empty chart, with the betting-line chance at kickoff, under the records watch
+  // ---------- Win probability card: its own card just under the Gameday live card ----------
+  // Before kickoff: "Pregame win probability" (the betting line) so pregamers can start their chart now;
+  // during and after the game: the live chart. Either way, "Customize your gameday chart" opens scripts/reactions.js.
+  var rxGet = null;
+  function kickMin(m){ var t = /(\d{1,2}):(\d{2})\s*([ap])/i.exec(String(m && m.time || '')); return t ? (+t[1] % 12 + (/p/i.test(t[3]) ? 12 : 0)) * 60 + +t[2] : null; }
+  function wpCard(el, L, pre){
+    var card = document.getElementById('wpcard');
+    var pg = match ? pregame(gameDate(match)) : null;
+    var html = L ? wpHtml(L) : pre && pg ? preWpHtml(pg) : '';
+    if(!el || !html){ if(card) card.hidden = true; rxGet = null; return; }
+    if(!card){ card = document.createElement('div'); card.id = 'wpcard'; card.className = 'wpcard'; }
+    if(card.previousSibling !== el) el.parentNode.insertBefore(card, el.nextSibling);
+    var date = L ? L.date : gameDate(match), mine = window.JPAReact && JPAReact.has(date);
+    card.innerHTML = html + (window.JPAReact && window.JPAWinCard ? '<button type="button" class="rxgo">🍻 ' + (mine ? 'Keep building your gameday chart' : 'Customize your gameday chart') + '</button>'
+      + '<p class="rxsub">' + (L ? 'Add your beers, wings, thrown remotes and more right on the chart, then share it as an image or a 20-second video.'
+        : 'Pregaming? Start now: mark when the tailgate started and drop your first reactions. Keep adding during the game, then share it.') + '</p>' : '');
+    card.hidden = false;
+    if(L) wpWire(card);
+    rxGet = function(){
+      if(L){ var k = (L.recap ? 'r' : 'l') + L.date, d = wpShare(k); if(!d) return null;
+        return {D: d, date: L.date, kick: kickMin(match && gameDate(match) === L.date ? match : null), analyst: match && match.analyst || ''}; }
+      var p = pregame(gameDate(match));
+      return {D: {wp: {pts: [[0, p ? p.p : .5, 0, 0, '', 'Kickoff']], p0: p ? p.p : .5}, final: false, oppNick: match.opp && match.opp.nick || 'Opponent', oppAb: match.opp && match.opp.abbr || 'OPP',
+        oppColor: oppHex({}), home: !!match.home, game: match.label || ''}, date: gameDate(match), kick: kickMin(match), analyst: match.analyst || ''};
+    };
+    if(window.JPAReact) JPAReact.update();
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest && e.target.closest('.rxgo'); if(!b || !rxGet || !window.JPAReact) return;
+    e.preventDefault(); JPAReact.open(function(){ return rxGet ? rxGet() : null; });
+  });
+  // Before kickoff: the empty chart, with the betting-line chance at kickoff
   function preWpHtml(pg){
     if(!pg) return '';
     var oc = oppColor({}), y50 = wpY(.5), grid = '', lab = '', ax = wpX(1) + 8, y = wpY(pg.p).toFixed(1);
@@ -459,7 +490,7 @@
     var L = use(), el = document.getElementById('livebar'), slot = document.getElementById('livebar-slot');
     var up = document.getElementById('livebar-gameday'), gd = isGameday();
     var idle = !L && slot && slot.hasAttribute('data-idle');
-    if(!L && !idle){ if(el) el.hidden = true; return; }
+    if(!L && !idle){ if(el) el.hidden = true; wpCard(null); return; }
     if(!el){ el = document.createElement('div'); el.id = 'livebar'; el.setAttribute('role','status'); }
     var home = gd && up ? up : slot;
     if(home && el.parentNode !== home) home.appendChild(el);
@@ -475,8 +506,8 @@
           + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and the records watch counts down live, every minute.</span>'
         : '<span class="ln">Check back on gameday to watch records broken live.</span>'
           + '<span class="lnote">Once the Bills kick off, Allen&rsquo;s stats show up right here and update every minute.</span>') + w.html
-        + (pre ? preWpHtml(pregame(gameDate(match))) : '');
-      el.hidden = false; sweep(); return; }
+;
+      el.hidden = false; sweep(); wpCard(el, null, !!pre); return; }
     var s = L.s, parts = [];
     if(s.att) parts.push(s.cmp + '/' + s.att + ', ' + s.yds + ' yds, ' + s.td + ' TD' + (s.int ? ', ' + s.int + ' INT' : ''));
     if(s.rushAtt || s.rushTD) parts.push(s.rushAtt + ' rush, ' + s.rushYds + ' yds' + (s.rushTD ? ', ' + s.rushTD + ' TD' : ''));
@@ -484,9 +515,9 @@
     el.innerHTML = (w.close ? LIGHTS + '<span class="sr">A record is within reach.</span>' : '') + (w.broke ? '<span class="sr">A record fell today.</span>' : '') +
       '<div class="lhead"><span class="dot' + (L.final ? ' fin' : '') + '"></span><b>' + (L.final ? 'FINAL' : 'LIVE') + '</b>' + score +
       (!L.final && L.clock ? ' · ' + L.clock : '') + '<br><span class="ln">Allen today: ' + (parts.join(' · ') || 'no stats yet') +
-      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + w.html + wpHtml(L) + '<span class="lnote">Live numbers are unofficial and update every minute. They are checked against the official stats after the game.</span>';
-    wpWire(el);
+      '</span>' + (window.JPALIVE_RELOAD && changed ? '<button type="button" class="lrel" onclick="location.reload()">New numbers: tap to update</button>' : '') + '</div>' + w.html + '<span class="lnote">Live numbers are unofficial and update every minute. They are checked against the official stats after the game.</span>';
     el.hidden = false;
+    wpCard(el, L, false);
   }
 
   // Which games nflverse already has (from the hourly file), so the live line is never counted twice.

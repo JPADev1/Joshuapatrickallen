@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -8 172 128">
+  <g transform="rotate(-6 80 60)">
+    <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round">
+      <rect x="18" y="14" width="124" height="78" rx="6"/><path d="M66 92 L60 108 H100 L94 92 Z"/>
+    </g>
+    <path d="M66 92 L60 108 H100 L94 92 Z" fill="#3a4152" stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="18" y="14" width="124" height="78" rx="6" fill="#3a4152" stroke="#0b1b3a" stroke-width="5"/>
+    <rect x="26" y="21" width="108" height="63" rx="2" fill="#10183a"/>
+    <path d="M26 21 L70 21 L40 84 L26 84 Z" fill="#1f4fbf" opacity=".35"/>
+    <!-- spiderweb crack from the impact point -->
+    <g stroke="#e1e6f8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M92 46 L80 38 L72 32 L60 22 M92 46 L104 36 L116 33 L128 24 M92 46 L108 50 L120 56 L132 60 M92 46 L100 60 L106 70 L114 84 M92 46 L86 58 L78 66 L72 84 M92 46 L74 47 L56 52 L32 54 M92 46 L95 34 L100 21"/>
+      <path d="M80 38 L95 34 L104 36 L108 50 L100 60 L86 58 L74 47 Z" stroke-width="2.4"/>
+      <path d="M56 52 L62 62 M116 33 L122 40 M106 70 L114 68 M72 32 L66 38" stroke-width="2.2"/>
+    </g>
+    <circle cx="92" cy="46" r="4" fill="#fff"/>
+  </g>
+  <!-- flying shards -->
+  <g fill="#e1e6f8" stroke="#0b1b3a" stroke-width="2"><path d="M140 10 L150 6 L146 18 Z"/><path d="M148 30 L158 30 L152 38 Z"/><path d="M8 30 L16 24 L16 36 Z"/></g>
+  <g stroke="#e9c46a" stroke-width="5" stroke-linecap="round"><path d="M120 4 L124 -6 M154 50 L162 54 M4 50 L-4 48"/></g>
+</svg>

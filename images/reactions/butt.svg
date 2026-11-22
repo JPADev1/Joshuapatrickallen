@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -6 160 120">
+  <defs>
+    <g id="b">
+      <!-- seat of the pants: two cheeks in green football pants with a white side stripe -->
+      <path d="M22 22 H118 C124 44 128 62 126 78 C124 100 104 108 90 104 C80 101 74 96 70 90 C66 96 60 101 50 104 C36 108 16 100 14 78 C12 62 16 44 22 22 Z"/>
+    </g>
+    <g id="ball">
+      <ellipse cx="0" cy="0" rx="22" ry="13"/>
+    </g>
+  </defs>
+  <!-- white sticker outline -->
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round">
+    <use href="#b"/>
+    <g transform="translate(136 30) rotate(-35)"><use href="#ball"/></g>
+  </g>
+  <!-- pants -->
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <use href="#b" fill="#1e7a3c"/>
+  </g>
+  <path d="M70 40 C70 60 70 76 70 90" stroke="#0b1b3a" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M24 34 H116" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M22 22 H118" stroke="#0b1b3a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M24 46 C21 60 20 72 21 84 M116 46 C119 60 120 72 119 84" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M38 70 C42 80 50 86 58 86" stroke="#5fbf7a" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"/>
+  <path d="M84 72 C88 82 96 87 104 86" stroke="#5fbf7a" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"/>
+  <!-- impact burst where the ball bounced off -->
+  <g stroke="#e9c46a" stroke-width="4.5" stroke-linecap="round">
+    <path d="M110 14 L104 2 M120 22 L130 16 M100 18 L90 10"/>
+  </g>
+  <!-- football popping loose -->
+  <g transform="translate(136 30) rotate(-35)">
+    <use href="#ball" fill="#8a4b22" stroke="#0b1b3a" stroke-width="4.5"/>
+    <path d="M-10 0 H10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-5 -4 V4 M0 -4 V4 M5 -4 V4" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M-17 -6 C-15 -9 -12 -10 -9 -10 M17 -6 C15 -9 12 -10 9 -10" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <!-- motion lines -->
+  <g stroke="#e1e6f8" stroke-width="3.5" stroke-linecap="round" opacity=".9">
+    <path d="M146 54 L154 60 M138 58 L144 66"/>
+  </g>
+</svg>

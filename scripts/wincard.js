@@ -187,8 +187,18 @@
         : b < o ? (hi[1] > .65 ? 'Up to a ' + pct(hi[1]) + ' win chance ' + when(hi[0]) : 'From ' + pct(all[0][1]) + ' at kickoff') : 'Overtime ends tied';
       center(c, done ? sub : clock(cur[0]) + '  \u00b7  Bills win chance ' + pct(cur[1]), 1, 500, 32, SOFT, 418, W - 120);
       rule(c, 474);
-      chart(c, all, shown, {x: 80, y: 680, w: 812, h: 500}, d, sw, alpha);
+      chart(c, all, shown, d.box || {x: 80, y: 680, w: 812, h: 500}, d, sw, alpha);
       c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE; c.fillText('Unofficial win chance, play by play' + (d.game ? '  ·  ' + d.game : ''), W / 2, 1296);
+    } else if(all.length < 2){ // before kickoff: the betting-line chance, and an empty game for reactions (scripts/reactions.js)
+      chip(c, 'PREGAME', '#8a6d1c');
+      center(c, 'Bills ' + (d.home ? 'vs' : 'at') + ' the ' + opp, 1, 500, 38, SOFT, 178);
+      center(c, 'Pregame win probability', 0, 700, 58, '#fff', 228, W - 120);
+      center(c, pct(all[0][1]), 0, 700, 170, GOLD, 292);
+      center(c, (d.kickText ? 'Kickoff ' + d.kickText + '  ·  ' : '') + 'from the betting line', 1, 500, 30, SOFT, 482, W - 100);
+      rule(c, 538);
+      chart(c, all, shown, d.box || {x: 80, y: 720, w: 812, h: 460}, d, [], alpha);
+      c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE;
+      c.fillText('The line builds play by play from kickoff.', W / 2, 1296);
     } else {
       chip(c, 'LIVE · ' + clock(cur[0]));
       center(c, 'Bills ' + (d.home ? 'vs' : 'at') + ' the ' + opp, 1, 500, 38, SOFT, 178);
@@ -197,11 +207,13 @@
       var ln = 'Bills ' + cur[2] + ', ' + opp + ' ' + cur[3] + '  ·  ' + clock(cur[0]) + (done && d.sit ? '  ·  ' + d.sit : '');
       center(c, ln, 1, 500, 30, SOFT, 482, W - 100);
       rule(c, 538);
-      chart(c, all, shown, {x: 80, y: 720, w: 812, h: 460}, d, sw, alpha);
+      chart(c, all, shown, d.box || {x: 80, y: 720, w: 812, h: 460}, d, sw, alpha);
       c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE;
       c.fillText('Live and unofficial. Every play: score, time, possession, down, distance, field position.', W / 2, 1296);
     }
     c.textAlign = 'left';
   }
-  window.JPAWinCard = {draw: draw, swings: swings, caption: caption, W: W, H: H};
+    // Where the chart sits on the card for this game state (reactions.js lines its taps up with it)
+  function box(d){ return d.final ? {x: 80, y: 680, w: 812, h: 500} : {x: 80, y: 720, w: 812, h: 460}; }
+  window.JPAWinCard = {draw: draw, swings: swings, caption: caption, box: box, W: W, H: H};
 })();

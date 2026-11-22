@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 160">
+  <defs>
+    <g id="turf"><rect x="10" y="132" width="130" height="18" rx="9"/></g>
+    <g id="ball"><path d="M88 22 C110 40 114 100 88 132 C62 100 66 40 88 22 Z"/></g>
+    <g id="hand">
+      <path d="M-20 34 H34 V62 H-20 Z"/>
+      <path d="M30 30 C40 26 54 28 58 36 C60 44 56 56 46 60 L32 62 Z"/>
+      <path d="M50 30 C60 26 72 22 84 20 C90 19 94 22 92 27 C90 31 84 32 78 33 L56 40 Z"/>
+    </g>
+  </defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#turf"/><use href="#ball"/><use href="#hand"/></g>
+  <use href="#turf" fill="#2e8b3e" stroke="#0b1b3a" stroke-width="5"/>
+  <g stroke="#5fbf7a" stroke-width="3" stroke-linecap="round"><path d="M24 138 V144 M44 138 V144 M120 138 V144"/></g>
+  <use href="#ball" fill="#8b4a2b" stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M78 36 C72 56 72 96 80 116" stroke="#b06a3f" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- laces facing out -->
+  <g stroke="#fff" stroke-linecap="round">
+    <path d="M88 50 V102" stroke-width="5"/>
+    <path d="M80 56 H96 M80 64 H96 M80 72 H96 M80 80 H96 M80 88 H96 M80 96 H96" stroke-width="4.5"/>
+  </g>
+  <g stroke="#0b1b3a" stroke-width="4.5" stroke-linejoin="round" fill="#f4bf94">
+    <path d="M-20 34 H34 V62 H-20 Z" fill="#e3a275"/>
+    <path d="M30 30 C40 26 54 28 58 36 C60 44 56 56 46 60 L32 62 Z"/>
+    <path d="M50 30 C60 26 72 22 84 20 C90 19 94 22 92 27 C90 31 84 32 78 33 L56 40 Z" fill="#f9cfa8"/>
+  </g>
+  <g stroke="#e9c46a" stroke-width="5" stroke-linecap="round"><path d="M126 52 L140 46 M128 70 L144 70 M126 88 L140 94"/></g>
+</svg>

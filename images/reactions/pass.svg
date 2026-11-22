@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 160 128">
+  <defs>
+    <g id="guyL"><circle cx="40" cy="52" r="17"/><path d="M12 116 C12 88 22 74 40 74 C58 74 68 88 68 116 Z"/></g>
+    <g id="guyR"><circle cx="120" cy="52" r="17"/><path d="M92 116 C92 88 102 74 120 74 C138 74 148 88 148 116 Z"/></g>
+    <path id="heart" d="M80 46 C80 46 60 34 60 20 C60 10 68 4 75 4 C79 4 80 7 80 7 C80 7 81 4 85 4 C92 4 100 10 100 20 C100 34 80 46 80 46 Z"/>
+  </defs>
+  <!-- white sticker outline -->
+  <g fill="#fff" stroke="#fff" stroke-width="12" stroke-linejoin="round"><use href="#guyL"/><use href="#guyR"/><use href="#heart"/></g>
+  <!-- left guy: fan in a red hoodie -->
+  <g stroke="#0b1b3a" stroke-width="4.5" stroke-linejoin="round">
+    <path d="M12 116 C12 88 22 74 40 74 C58 74 68 88 68 116 Z" fill="#c60c30"/>
+    <circle cx="40" cy="52" r="17" fill="#f2c79e"/>
+    <path d="M24 46 C26 34 36 30 46 32 C54 34 58 40 57 47 C50 42 36 41 24 46 Z" fill="#6b4226"/>
+    <!-- right guy: QB in a blue jersey, no number or logo -->
+    <path d="M92 116 C92 88 102 74 120 74 C138 74 148 88 148 116 Z" fill="#2f6bff"/>
+    <circle cx="120" cy="52" r="17" fill="#f2c79e"/>
+    <path d="M103 49 C102 36 110 30 121 31 C132 32 138 39 137 49 C130 44 112 44 103 49 Z" fill="#3a2a1e"/>
+  </g>
+  <path d="M108 86 L120 96 L132 86" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 86 L40 92 L50 86" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+  <!-- faces: both smiling toward each other -->
+  <g fill="#0b1b3a"><circle cx="45" cy="53" r="2.4"/><circle cx="114" cy="53" r="2.4"/></g>
+  <g stroke="#0b1b3a" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M42 60 C45 63 49 62 51 59"/><path d="M109 59 C111 62 115 63 118 60"/></g>
+  <!-- heart -->
+  <use href="#heart" fill="#e0262e" stroke="#0b1b3a" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M68 16 C68 12 71 10 74 10" stroke="#ff8a90" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
