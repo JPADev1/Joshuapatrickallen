@@ -1,7 +1,10 @@
 {
- "_how": "Hand-entered facts that have no free data feed. The update script reads this file. 'series' = all-time regular-season record vs a team through the end of the 'thru' season (games after that are added automatically). 'games' = extras for one game, keyed by nflverse game id (e.g. TV network).",
+ "_how": "Hand-entered facts that have no free data feed. The update script reads this file. 'series' = all-time regular-season record vs a team through the end of the 'thru' season (games after that are added automatically). 'games' = extras for one game, keyed by nflverse game id (e.g. TV network). 'vsBest' = Allen holds the best career win % vs a team among QBs with at least 'min' regular-season games; 'next' is the runner-up (regular season), 'bg' the share image key. It shows on the records watch once his games vs them (counting the next one) reach 'min'.",
  "series": {
   "LV": {"w": 20, "l": 21, "t": 0, "thru": 2025}
+ },
+ "vsBest": {
+  "MIA": {"min": 17, "next": {"name": "Tom Brady", "w": 24, "l": 12}, "bg": "mia-bottle-feed"}
  },
  "games": {
   "2026_06_BUF_LV": {"tv": "CBS"}

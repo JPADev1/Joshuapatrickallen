@@ -675,9 +675,25 @@ def build_watch(allen, ranks, week26, m):
     # Record against this opponent
     v = m.get("allenVs", {})
     if v.get("games"):
-        items.append((0.5, f"Record against the {nick}", f"A win makes him {v['wins'] + 1}-{v['losses']} as a starter against them in the regular season.",
-                      {"k": "win", "need": 1, "goal": f"to go {v['wins'] + 1}-{v['losses']} against them",
-                       "done": f"Win! He's {v['wins'] + 1}-{v['losses']} as a starter against the {nick} in the regular season."}))
+        w1, l1 = v["wins"] + 1, v["losses"]
+        try:  # hand-entered in data/overrides.json "vsBest": best career win % vs this team (min games) and the runner-up
+            best = json.load(open(os.path.join(REPO, "data", "overrides.json"))).get("vsBest", {}).get(m.get("opp", {}).get("abbr"))
+        except Exception:
+            best = None
+        if best and v["games"] + 1 >= best.get("min", 0):
+            pct = f"{w1 / (w1 + l1) * 100:.1f}%"
+            nb = best["next"]; npct = f"{nb['w'] / (nb['w'] + nb['l']) * 100:.1f}%"
+            claim = f"the best career win percentage against the {nick} by any QB (min. {best['min']} games)"
+            ctx = f"{nb['name']} is 2nd: {nb['w']}-{nb['l']} ({npct}) against them."
+            items.append((0.5, f"Record against the {nick}",
+                          f"A win moves him to {w1}-{l1} against the {nick} ({pct}), {claim}.",
+                          {"k": "win", "need": 1, "goal": f"moves him to {w1}-{l1} against the {nick} ({pct}), {claim}", "ctx": ctx,
+                           "bg": best.get("bg", ""),
+                           "done": f"Win! He's {w1}-{l1} against the {nick} ({pct}), {claim}. {ctx}"}))
+        else:
+            items.append((0.5, f"Record against the {nick}", f"A win makes him {w1}-{l1} as a starter against them in the regular season.",
+                          {"k": "win", "need": 1, "goal": f"to go {w1}-{l1} against them",
+                           "done": f"Win! He's {w1}-{l1} as a starter against the {nick} in the regular season."}))
 
     items.sort(key=lambda x: x[0])
     return {"asOf": short_date(date.today()), "highs": hi, "gameday": m.get("gameday"), "gameId": m.get("gameId"),
