@@ -204,7 +204,7 @@
       var url = location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : '';
       if(x.wst) return JPAShare.btn({chip: 'Record Watch', kicker: x.wsk || '', title: x.wst, big: x.wsb || '', line: x.wsl || '',
         foot: 'Follow it live at notjoshingaround.com', url: url, bg: x.bg || ''}, x.title);
-      return JPAShare.btn({chip: 'Record Watch', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : '') + ', next game',
+      return JPAShare.btn({chip: 'Record Watch', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : '') + (isGameday() ? ' today' : ', next game'),
         title: x.title, line: String(x.detail || '').replace(/ \(career high in a game: \d+\)/, '') + (x.ctx && x.k === 'win' ? ' ' + x.ctx : ''),
         foot: 'Follow it live at notjoshingaround.com', url: url, bg: x.bg || ''}, x.title);
     }
