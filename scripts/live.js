@@ -197,14 +197,17 @@
     var oppNick = W.opp || (match.opp && match.opp.nick), oppHome = W.opp ? W.home : match.home;
     var shareItems = [];
     function plain(h){ return String(h).replace(/<[^>]+>/g, '').replace(/&#10003;/g, '\u2713').replace(/&ndash;/g, '\u2013').replace(/&middot;/g, '\u00b7').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(); }
+    // Items with their own watch card (wst/wsb/wsk/wsl) get a Record Watch share button before the record falls
+    function watchBtn(x){ return (x.wst && window.JPAShare) ? JPAShare.btn({chip: 'Record Watch', kicker: x.wsk || '', title: x.wst, big: x.wsb || '', line: x.wsl || '',
+      foot: 'Follow it live at notjoshingaround.com', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : ''), bg: x.bg || ''}, x.title) : ''; }
     var rows = W.items.map(function(x){
       var r = forThis ? liveItem(x, L) : null;
       shareItems.push({t: x.title, d: plain(r ? r.html : x.detail).replace(/ \(career high in a game: \d+\)/g, '').replace(/ Today: .*$/, function(m){ return r && r.cls !== 'done' ? '' : m; }), done: !!(r && r.cls === 'done')});
-      if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + (x.ctx && x.k === 'win' ? ' <i>' + esc(x.ctx) + '</i>' : '') + '</span></li>';
+      if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + (x.ctx && x.k === 'win' ? ' <i>' + esc(x.ctx) + '</i>' : '') + '</span>' + watchBtn(x) + '</li>';
       if(r.cls === 'close' || r.near) close = true; if(r.cls === 'done') broke = true;
       var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : '') + (x.sk ? ' \u00b7 ' + x.sk : ''),
         title: x.st || x.title, big: x.sb || '', line: x.sl || String(r.html).replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(),
-        foot: L.final ? 'Unofficial until the official stats are in' : 'Live, unofficial', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : ''), bg: x.bg || ''}, x.title) : '';
+        foot: L.final ? 'Unofficial until the official stats are in' : 'Live, unofficial', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : ''), bg: x.bg || ''}, x.title) : (L.final ? '' : watchBtn(x));
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span>' + sh + '</li>';
     }).join('');
