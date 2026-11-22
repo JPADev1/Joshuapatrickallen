@@ -689,7 +689,7 @@ def build_watch(allen, ranks, week26, m):
                           f"A win moves him to {w1}-{l1} against the {nick} ({pct}), {claim}.",
                           {"k": "win", "need": 1, "goal": f"moves him to {w1}-{l1} against the {nick} ({pct}), {claim}", "ctx": ctx,
                            "bg": best.get("bg", ""),  # share card: st title, sb big gold number, sk kicker add-on, sl line
-                           "st": claim[0].upper() + claim[1:].replace("the best", "best", 1) if claim.startswith("the best") else claim,
+                           "st": "Best" + claim[len("the best"):],
                            "sb": pct, "sk": f"{w1}-{l1} career", "sl": f"{nb['name']} is 2nd: {nb['w']}-{nb['l']} ({npct})",
                            "done": f"Win! He's {w1}-{l1} against the {nick} ({pct}), {claim}. {ctx}"}))
         else:
