@@ -511,6 +511,26 @@ def build_ranks(week26, sched):
     return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists, "allen": allen}
 
 
+# ---------- Late injury report additions (stats-data/injury-adds.json) ----------
+# nflverse's injury feed stops at Friday's final report, so a Saturday addition (a player added as Questionable the
+# day before the game) never shows up. injury-adds.json holds those by hand, and editing it never redeploys the site:
+#   {"gameId": "...", "bills": [{"name": "...", "pos": "...", "injury": "...", "status": "Questionable"}], "opp": [...]}
+# A listed player replaces his row from the feed (or is added). Ignored once the next game comes up.
+def apply_injury_adds(m, adds):
+    if not adds or adds.get("gameId") != m.get("gameId"):
+        return
+    order = {"Inactive": 0, "Out": 0, "Doubtful": 1, "Questionable": 2, "DNP": 3, "Limited": 4}
+    for side in ("bills", "opp"):
+        L = adds.get(side) or []
+        if not L:
+            continue
+        keys = {pname(x["name"]) for x in L}
+        rows = [x for x in m["injuries"][side] if pname(x["name"]) not in keys]
+        rows += [{"name": x["name"], "pos": x.get("pos", ""), "injury": x.get("injury", ""),
+                  "status": x.get("status", "Questionable"), "game": True} for x in L]
+        m["injuries"][side] = sorted(rows, key=lambda x: (order.get(x["status"], 5), x["name"]))
+
+
 # ---------- Official gameday inactives (stats-data/inactives.json) ----------
 # Teams post their inactives about 90 minutes before kickoff; nflverse never has them. inactives.json holds them:
 #   {"gameId": "...", "bills": {"posted": "6:44 p.m. ET", "source": "...", "players": [{"name": "...", "pos": "..."}]},
@@ -1299,6 +1319,10 @@ def main():
         print(e); inj = []
     m = build_matchup(sched, team_rows, week26, inj, T, overrides)
     if m:
+        try:
+            apply_injury_adds(m, load("injury-adds.json"))
+        except Exception as e:  # never let the late additions block the rest of the page
+            print("injury report additions skipped:", e)
         try:
             apply_inactives(m, load("inactives.json"))
         except Exception as e:  # never let the inactives block the rest of the page
