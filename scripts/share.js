@@ -5,13 +5,27 @@
   var W = 1080, H = 1350, SITE = 'https://notjoshingaround.com';
   var GOLD = '#e9c46a', SOFT = '#e1e6f8', MUTE = '#a0afd7', RED = '#c60c30';
   var ready = null, LOGO = null, LOGO_IMG = null;
+  // Rivalry theme (white rivalry jersey look): on for the dates listed in images/share/theme.json on the stats-data
+  // branch, e.g. {"rivalry":["2026-11-22"]}, so it can be switched on for a game with no Netlify deploy.
+  // Uses the recolored backgrounds share-bg-rivalry.webp and <key>-rivalry.webp; ?theme=rivalry previews it.
+  var RIV = false, ROY = '#1446c8', NAVY = '#0c2a86', SLATE = '#2c3a5a';
+  function theme(){
+    if(/[?&]theme=rivalry\b/.test(location.search)) return Promise.resolve(true);
+    var today = new Date().toLocaleDateString('en-CA', {timeZone:'America/New_York'});
+    return fetch(LIB + 'theme.json', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : {}; })
+      .then(function(j){ return (j.rivalry || []).indexOf(today) >= 0; }).catch(function(){ return false; });
+  }
   function assets(){
     if(ready) return ready;
     var fonts = [new FontFace('LoraShare', 'url(fonts/lora.woff)', {weight:'400 700'}),
                  new FontFace('LoraShare', 'url(fonts/lora-italic.woff)', {weight:'400 700', style:'italic'})];
     function pic(src){ var img = new Image(); img.decoding = 'async';
       return new Promise(function(ok, no){ img.onload = function(){ ok(img); }; img.onerror = no; img.src = src; }); }
-    var bg = pic('images/share-bg.webp');
+    var bg = theme().then(function(on){ RIV = on;
+      if(!on) return pic('images/share-bg.webp');
+      return new Promise(function(ok, no){ var img = new Image(); img.crossOrigin = 'anonymous';
+        img.onload = function(){ ok(img); }; img.onerror = no; img.src = LIB + 'share-bg-rivalry.webp'; })
+        .catch(function(){ RIV = false; return pic('images/share-bg.webp'); }); });
     LOGO = pic('images/nja-logo.webp').catch(function(){ return null; }); // the card still works without the logo
     ready = Promise.all(fonts.map(function(f){ return f.load().then(function(x){ document.fonts.add(x); }); })).then(function(){ return bg; })
       .then(function(img){ return LOGO.then(function(l){ LOGO_IMG = l; return img; }); });
@@ -23,6 +37,7 @@
   var LIB = 'https://raw.githubusercontent.com/JPADev1/Joshuapatrickallen/stats-data/images/share/', BGS = {};
   function cardBg(d, fallback){
     if(!d.bg || !/^[a-z0-9-]+$/.test(d.bg)) return Promise.resolve(fallback);
+    if(RIV && !/-rivalry$/.test(d.bg)) return cardBg({bg: d.bg + '-rivalry'}, null).then(function(img){ return img || cardBg({bg: d.bg}, fallback); });
     if(!BGS[d.bg]) BGS[d.bg] = new Promise(function(ok, no){ var img = new Image(); img.crossOrigin = 'anonymous';
       img.onload = function(){ ok(img); }; img.onerror = no; img.src = LIB + d.bg + '.webp'; });
     return BGS[d.bg].catch(function(){ delete BGS[d.bg]; return fallback; }); // missing image: use the usual background
@@ -51,23 +66,29 @@
     c.drawImage(img, (W - iw) / 2, (H - ih) / 2, iw, ih);
     // Shade: light at the top for the header, deep at the bottom for the text
     var g = c.createLinearGradient(0, 0, 0, H);
+    if(RIV && !d.mtn){ // icy white fade instead of navy
+      g.addColorStop(0, 'rgba(248,250,253,.35)'); g.addColorStop(.09, 'rgba(248,250,253,0)');
+      g.addColorStop(.5, 'rgba(248,250,253,0)'); g.addColorStop(.7, 'rgba(248,250,253,.86)'); g.addColorStop(1, 'rgba(248,250,253,.97)');
+    } else {
     g.addColorStop(0, 'rgba(4,14,48,.6)'); g.addColorStop(.1, 'rgba(4,14,48,0)');
-    g.addColorStop(.5, 'rgba(4,14,48,0)'); g.addColorStop(.72, 'rgba(4,14,48,.82)'); g.addColorStop(1, 'rgba(4,14,48,.97)');
+    g.addColorStop(.5, 'rgba(4,14,48,0)'); g.addColorStop(.72, 'rgba(4,14,48,.82)'); g.addColorStop(1, 'rgba(4,14,48,.97)'); }
     c.fillStyle = g; c.fillRect(0, 0, W, H);
+    var R = RIV && !d.mtn, glow = function(fn){ if(R){ c.save(); c.shadowColor = 'rgba(255,255,255,.95)'; c.shadowBlur = 12; fn(); c.restore(); } else shadowed(c, fn); };
     c.textBaseline = 'top';
     // Header: NJA logo + site address (left), chip (right)
     var tx = 56;
-    if(LOGO_IMG){ c.save(); c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = 16; c.shadowOffsetY = 4;
+    if(LOGO_IMG){ c.save(); c.shadowColor = R ? 'rgba(12,42,134,.35)' : 'rgba(0,0,0,.55)'; c.shadowBlur = 16; c.shadowOffsetY = 4;
       c.drawImage(LOGO_IMG, 40, 30, 112, 112); c.restore(); tx = 166; }
-    shadowed(c, function(){ c.fillStyle = '#fff'; c.font = F(0, 700, 26);
+    glow(function(){ c.fillStyle = R ? ROY : '#fff'; c.font = F(0, 700, 26);
       if('letterSpacing' in c) c.letterSpacing = '2px';
       c.fillText('NOTJOSHINGAROUND.COM', tx, LOGO_IMG ? 73 : 52);
       if('letterSpacing' in c) c.letterSpacing = '0px'; });
     if(d.chip){
       c.font = F(1, 700, 28); var cw = c.measureText(d.chip).width + 40, x1 = W - 56;
-      c.fillStyle = RED; c.beginPath();
+      c.fillStyle = R ? ROY : RED; c.beginPath();
       if(c.roundRect) c.roundRect(x1 - cw, 40, cw, 52, 26); else c.rect(x1 - cw, 40, cw, 52);
-      c.fill(); c.fillStyle = '#fff'; c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fill(); if(R && c.roundRect){ c.strokeStyle = 'rgba(255,255,255,.9)'; c.lineWidth = 3; c.beginPath(); c.roundRect(x1 - cw + 5, 45, cw - 10, 42, 21); c.stroke(); }
+      c.fillStyle = '#fff'; c.textAlign = 'center'; c.textBaseline = 'middle';
       c.fillText(d.chip, x1 - cw / 2, 67); c.textAlign = 'left'; c.textBaseline = 'top';
     }
     if(d.items && d.items.length){ list(c, d); return cv; }
@@ -81,23 +102,31 @@
     var h = (kick ? kick.lh + 10 : 0) + title.lines.length * title.lh + (big ? big.size * 1.02 + 10 : 24) + 26 + (line ? line.lines.length * line.lh : 0);
     var y = Math.min(1268 - h, 1010);
     c.textAlign = 'center';
-    if(kick){ shadowed(c, function(){ c.font = F(1, 500, kick.size); c.fillStyle = SOFT; c.fillText(kick.lines[0], cx, y); }); y += kick.lh + 10; }
-    shadowed(c, function(){ c.font = F(0, 700, title.size); c.fillStyle = '#fff';
+    if(kick){ glow(function(){ c.font = F(1, 500, kick.size); c.fillStyle = R ? ROY : SOFT; c.fillText(kick.lines[0], cx, y); }); y += kick.lh + 10; }
+    glow(function(){ c.font = F(0, 700, title.size); c.fillStyle = R ? NAVY : '#fff';
       title.lines.forEach(function(l, i){ c.fillText(l, cx, y + i * title.lh); }); });
     y += title.lines.length * title.lh;
-    if(big){ y += 6; shadowed(c, function(){ c.font = F(0, 700, big.size); c.fillStyle = GOLD; c.fillText(big.lines[0], cx, y); }); y += big.size * 1.02 + 4; }
+    if(big){ y += 6;
+      if(R){ c.font = F(0, 700, big.size); c.lineJoin = 'round'; // jersey numerals: silver fill, white gap, royal outline
+        c.save(); c.shadowColor = 'rgba(12,42,134,.35)'; c.shadowBlur = 18; c.shadowOffsetY = 6; c.strokeStyle = ROY; c.lineWidth = 20; c.strokeText(big.lines[0], cx, y); c.restore();
+        c.strokeStyle = '#fff'; c.lineWidth = 8; c.strokeText(big.lines[0], cx, y);
+        var sg = c.createLinearGradient(0, y, 0, y + big.size); sg.addColorStop(0, '#e8edf3'); sg.addColorStop(1, '#b7c1cd'); c.fillStyle = sg; c.fillText(big.lines[0], cx, y); }
+      else shadowed(c, function(){ c.font = F(0, 700, big.size); c.fillStyle = GOLD; c.fillText(big.lines[0], cx, y); });
+      y += big.size * 1.02 + 4; }
     else y += 18;
-    c.strokeStyle = GOLD; c.lineWidth = 2; c.beginPath(); c.moveTo(cx - 220, y + 8); c.lineTo(cx + 220, y + 8); c.stroke();
+    c.strokeStyle = R ? ROY : GOLD; c.lineWidth = R ? 3 : 2; c.beginPath(); c.moveTo(cx - 220, y + 8); c.lineTo(cx + 220, y + 8); c.stroke();
     y += 26;
-    if(line){ c.font = F(1, 500, line.size); c.fillStyle = SOFT; line.lines.forEach(function(l, i){ c.fillText(l, cx, y + i * line.lh); }); }
-    if(d.foot){ c.font = F(0, 500, 24); c.fillStyle = MUTE; c.fillText(d.foot, cx, 1300); }
+    if(line){ c.font = F(1, 500, line.size); c.fillStyle = R ? SLATE : SOFT; line.lines.forEach(function(l, i){ c.fillText(l, cx, y + i * line.lh); }); }
+    if(d.foot){ c.font = F(0, 500, 24); c.fillStyle = R ? '#5d6d8e' : MUTE; c.fillText(d.foot, cx, 1300); }
     return cv;
   }
   // List card (records watch): heading, then up to 5 items (gold title + one or two lines of detail), left-aligned.
   function list(c, d){
     var x = 64, wide = W - 128, items = d.items.slice(0, 5);
+    var R = RIV, glow = function(fn){ if(R){ c.save(); c.shadowColor = 'rgba(255,255,255,.95)'; c.shadowBlur = 10; fn(); c.restore(); } else shadowed(c, fn); };
     var g = c.createLinearGradient(0, 0, 0, H); // extra shade so the list reads over the jersey
-    g.addColorStop(.32, 'rgba(4,14,48,0)'); g.addColorStop(.48, 'rgba(4,14,48,.78)'); g.addColorStop(1, 'rgba(4,14,48,.96)');
+    if(R){ g.addColorStop(.32, 'rgba(248,250,253,0)'); g.addColorStop(.46, 'rgba(248,250,253,.9)'); g.addColorStop(1, 'rgba(248,250,253,.97)'); }
+    else { g.addColorStop(.32, 'rgba(4,14,48,0)'); g.addColorStop(.48, 'rgba(4,14,48,.78)'); g.addColorStop(1, 'rgba(4,14,48,.96)'); }
     c.fillStyle = g; c.fillRect(0, 0, W, H);
     var parts = items.map(function(it){
       return {t: fit(c, it.t, 0, 700, 36, 26, wide - 40, 1), d: it.d ? fit(c, it.d, 1, 500, 26, 20, wide - 40, 2) : null, done: it.done};
@@ -106,21 +135,21 @@
     var h = (kick ? kick.lines.length * kick.lh + 4 : 0) + title.lh + 34 + parts.reduce(function(a, p){ return a + p.t.lh + (p.d ? p.d.lines.length * p.d.lh : 0) + 18; }, 0);
     var y = Math.max(560, 1266 - h);
     c.textAlign = 'left';
-    if(kick){ shadowed(c, function(){ c.font = F(1, 500, kick.size); c.fillStyle = SOFT; kick.lines.forEach(function(l, i){ c.fillText(l, x, y + i * kick.lh); }); }); y += kick.lines.length * kick.lh + 4; }
-    shadowed(c, function(){ c.font = F(0, 700, title.size); c.fillStyle = '#fff'; c.fillText(title.lines[0], x, y); });
+    if(kick){ glow(function(){ c.font = F(1, 500, kick.size); c.fillStyle = R ? ROY : SOFT; kick.lines.forEach(function(l, i){ c.fillText(l, x, y + i * kick.lh); }); }); y += kick.lines.length * kick.lh + 4; }
+    glow(function(){ c.font = F(0, 700, title.size); c.fillStyle = R ? NAVY : '#fff'; c.fillText(title.lines[0], x, y); });
     y += title.lh + 8;
-    c.strokeStyle = GOLD; c.lineWidth = 2; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 300, y); c.stroke();
+    c.strokeStyle = R ? ROY : GOLD; c.lineWidth = 2; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 300, y); c.stroke();
     y += 26;
     parts.forEach(function(p, i){
-      shadowed(c, function(){
-        c.font = F(0, 700, 30); c.fillStyle = GOLD; c.fillText(p.done ? '\u2713' : String(i + 1), x, y + (p.t.size - 30) / 2);
-        c.font = F(0, 700, p.t.size); c.fillStyle = p.done ? GOLD : '#fff'; c.fillText(p.t.lines[0], x + 40, y);
+      glow(function(){
+        c.font = F(0, 700, 30); c.fillStyle = R ? ROY : GOLD; c.fillText(p.done ? '\u2713' : String(i + 1), x, y + (p.t.size - 30) / 2);
+        c.font = F(0, 700, p.t.size); c.fillStyle = R ? (p.done ? ROY : NAVY) : (p.done ? GOLD : '#fff'); c.fillText(p.t.lines[0], x + 40, y);
       });
       y += p.t.lh;
-      if(p.d){ c.font = F(1, 500, p.d.size); c.fillStyle = SOFT; p.d.lines.forEach(function(l){ c.fillText(l, x + 40, y); y += p.d.lh; }); }
+      if(p.d){ c.font = F(1, 500, p.d.size); c.fillStyle = R ? SLATE : SOFT; p.d.lines.forEach(function(l){ c.fillText(l, x + 40, y); y += p.d.lh; }); }
       y += 18;
     });
-    if(d.foot){ c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = MUTE; c.fillText(d.foot, W / 2, 1300); }
+    if(d.foot){ c.textAlign = 'center'; c.font = F(0, 500, 24); c.fillStyle = R ? '#5d6d8e' : MUTE; c.fillText(d.foot, W / 2, 1300); }
   }
   // Mountain card (Touchdown Mountain and the stat mountains): snow-capped peak with a flag, #1 at the summit,
   // every other player between Allen and the top along the ridge, Allen in gold.
