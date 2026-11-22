@@ -812,8 +812,8 @@
     "k": "rushTD",
     "need": 1,
     "goal": "for his 12th rushing TD this season, making him the first QB with 12+ in 4 straight seasons",
-    "done": "12th rushing TD of the season! He's the first QB ever with 12+ rushing TDs in 4 straight seasons (15, 12, 14 and 12).",
-    "detail": "Needs 1 rushing TD for his 12th this season. He'd be the first QB with 12+ in 4 straight seasons (15 in 2023, 12 in 2024, 14 in 2025). No other QB has done it even 3 years in a row."
+    "done": "12th rushing TD of the season! He's the first QB ever with 12+ rushing TDs in 4 straight seasons (15, 12, 14 and 12), passing Jalen Hurts' 3 straight (2022-24).",
+    "detail": "Needs 1 rushing TD for his 12th this season. He'd be the first QB with 12+ in 4 straight seasons (15 in 2023, 12 in 2024, 14 in 2025), passing Jalen Hurts, who had 3 straight (13, 15 and 14 in 2022-24)."
    },
    {
     "title": "NFL career passing yards",
@@ -1532,9 +1532,17 @@
     "status": ""
    }
   ],
-  "weather": null,
+  "weather": {
+   "indoor": false,
+   "temp": 67,
+   "wind": 12,
+   "gust": 21,
+   "rain": 0,
+   "snow": 0,
+   "pop": 1
+  },
   "conditions": [
-   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
+   "Game-day forecast at kickoff: 67°F, wind 12 mph (gusts 21), 1% chance of precipitation. Nothing in it changes the ratings.",
    "Final injury report: starters ruled Out or Doubtful are factored into the ratings."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
