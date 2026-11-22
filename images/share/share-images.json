@@ -1,0 +1,12 @@
+{
+ "_how": "Share image library. Each key is a 1080x1350 background in this folder (<key>.webp), served from the stats-data branch so adding one needs no Netlify deploy. Give a recap or NFL-first item \"bg\": \"<key>\" to use it behind that share card. Text sits on the bottom ~25%, so keep faces and the gag above that. originals/ holds the full-size cleaned source. No Bills, NFL or brand logos.",
+ "images": {
+  "mia-bottle-feed": {
+   "team": "MIA",
+   "subject": "Allen bottle-feeding a baby dolphin",
+   "use": "Records against the Dolphins",
+   "added": "2026-11-22",
+   "notes": "Nike swooshes removed from both shoulders."
+  }
+ }
+}
