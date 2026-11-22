@@ -159,20 +159,29 @@
     var v = liveVal(k, s), left = x.need - v, left2 = x.need2 != null ? x.need2 - v : null;
     var today_ = ' Today: ' + fmt(v) + ' ' + u(k, v) + '.';
     // Stepped records: once he passes this name, show who he passed since and who's next up the list.
-    function nextUp(){
-      var nx = x.next || [], passed = [], h = ''; near = false;
+    // Returns the "He passed ... and moved up to No. N." line (rank taken from the LAST name passed) plus "Next up".
+    function nextUp(base){
+      var nx = x.next || [], passed = [], lastSpot = null, h = ''; near = false;
       for(var i=0;i<nx.length;i++){
         var r = nx[i];
-        if(v >= r.pass){ passed.push(r.who); continue; }
+        if(v >= r.pass){ passed.push(r.who); if(r.spot) lastSpot = r.spot; continue; }
         var spot = r.spot ? ' for No. ' + r.spot : ''; near = !L.final && r.pass - v <= CLOSE[k];
         h = ' <span class="nup">Next up: ' + esc(r.who) + '. ' + (v >= r.tie ? 'Tied' + spot + '; ' + fmt(r.pass - v) + ' more to pass.'
           : fmt(r.tie - v) + ' more ' + u(k, r.tie - v) + ' to tie' + spot + ', ' + fmt(r.pass - v) + ' to pass.') + '</span>';
         break;
       }
-      return (passed.length ? ' Also passed ' + esc(passed.join(', ')) + '.' : '') + (L.final ? '' : h);
+      var m = passed.length && lastSpot ? /^He passed (.+) and moved up to No\. \d+\.$/.exec(base) : null;
+      if(m){
+        var all = [m[1]].concat(passed);
+        var list = all.length === 2 ? all.join(' and ') : all.slice(0, -1).join(', ') + ' and ' + all[all.length - 1];
+        base = 'He passed ' + list + ' and moved up to No. ' + lastSpot + '.';
+      } else if(passed.length){
+        base += ' Also passed ' + passed.join(', ') + '.';
+      }
+      return esc(base) + (L.final ? '' : h);
     }
     var near = false, passedIt = left2 != null ? left2 <= 0 : left <= 0;
-    if(passedIt && x.next){ var nu = nextUp(); return {cls:'done', near: near, html: esc(left2 != null ? x.done2 : x.done) + nu + today_}; }
+    if(passedIt && x.next){ var nu = nextUp(left2 != null ? x.done2 : x.done); return {cls:'done', near: near, html: nu + today_}; }
     if(left2 != null && left2 <= 0) return {cls:'done', html: esc(x.done2) + today_};
     if(left <= 0){
       if(left2 == null) return {cls:'done', html: esc(x.done) + today_};
