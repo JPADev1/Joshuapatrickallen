@@ -202,8 +202,8 @@
       shareItems.push({t: x.title, d: plain(r ? r.html : x.detail).replace(/ \(career high in a game: \d+\)/g, '').replace(/ Today: .*$/, function(m){ return r && r.cls !== 'done' ? '' : m; }), done: !!(r && r.cls === 'done')});
       if(!r) return '<li><b>' + esc(x.title) + '</b><span>' + esc(x.detail) + (x.ctx && x.k === 'win' ? ' <i>' + esc(x.ctx) + '</i>' : '') + '</span></li>';
       if(r.cls === 'close' || r.near) close = true; if(r.cls === 'done') broke = true;
-      var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : ''),
-        title: x.title, line: String(r.html).replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(),
+      var sh = (r.cls === 'done' && window.JPAShare) ? JPAShare.btn({chip: L.final ? 'Achieved' : 'Achieved Today', kicker: 'Josh Allen' + (oppNick ? (oppHome ? ' vs the ' : ' at the ') + oppNick : '') + (x.sk ? ' \u00b7 ' + x.sk : ''),
+        title: x.st || x.title, big: x.sb || '', line: x.sl || String(r.html).replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim(),
         foot: L.final ? 'Unofficial until the official stats are in' : 'Live, unofficial', url: (location.pathname.indexOf('matchup') >= 0 ? 'matchup.html' : ''), bg: x.bg || ''}, x.title) : '';
       return '<li class="' + r.cls + (r.cls === 'done' ? ' gold' : '') + '"><b>' + esc(x.title) + (r.cls === 'done' ? ' <em class="wtag">' + (L.final ? 'Achieved' : 'Achieved today') + '</em>'
         : r.cls === 'close' ? ' <em class="wtag">Almost there</em>' : '') + '</b><span>' + r.html + '</span>' + sh + '</li>';
