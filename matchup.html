@@ -107,7 +107,9 @@ Promise.all([load('matchup.json'),load('allen-2026.json')]).then(function(res){
     // Thanksgiving: the matchup as the title, and a Thanksgiving dinner table across the bottom of the billboard
     var tg=m.primetime.kind==='Thanksgiving', night=/^([7-9]|1[01]):\d\d p\.m\./.test(m.time||''), oppN=(m.opp&&m.opp.nick)||'';
     var ptk=tg?(night?'Thanksgiving Primetime':'Thanksgiving'):'Primetime', ptt=tg&&oppN?(m.home?oppN+' at Bills':'Bills at '+oppN):m.primetime.title;
-    P.innerHTML='<div class="lamps" aria-hidden="true"><span class="rail"></span>'+[0,1,2].map(lamp).join('')+'</div>'
+    P.innerHTML=(tg?'<img class="tggar b" src="/images/garland-back.webp" alt="" width="1040" height="160">':'')
+      +'<div class="lamps" aria-hidden="true"><span class="rail"></span>'+[0,1,2].map(lamp).join('')+'</div>'
+      +(tg?'<img class="tggar f" src="/images/garland-front.webp" alt="" width="1040" height="160">':'')
       +'<div class="pt'+(tg?' tg':'')+'"><span class="ptb" aria-hidden="true"><i></i><i></i><i></i></span><span class="ptk">'+ptk+'</span><b>'+esc(ptt)+'</b>'+(m.primetime.sub||m.tv?'<span class="ptn">'+esc(m.primetime.sub||m.tv)+' &middot; '+esc(m.time)+'</span>':'')
       +(tg?'<img class="tgtable" src="/images/thanksgiving-table.webp" alt="" width="1040" height="313" decoding="async">':'')+'</div>';}
   stakes(m); lines(m); playoffs(m);
