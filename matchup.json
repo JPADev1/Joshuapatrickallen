@@ -371,7 +371,7 @@
     "dec": 0,
     "bills": {
      "v": 31,
-     "rank": 2
+     "rank": 1
     },
     "opp": {
      "v": 27,
@@ -397,7 +397,7 @@
     "dec": 0,
     "bills": {
      "v": 256,
-     "rank": 10
+     "rank": 11
     },
     "opp": {
      "v": 271,
@@ -466,7 +466,7 @@
     },
     "opp": {
      "v": 19,
-     "rank": 25
+     "rank": 26
     }
    },
    {
@@ -2104,10 +2104,10 @@
    "gust": 35,
    "rain": 0.09,
    "snow": 0,
-   "pop": 81
+   "pop": 90
   },
   "conditions": [
-   "Game-day forecast at kickoff: 40°F, wind 13 mph (gusts 35), 81% chance of precipitation. Ratings are adjusted for it.",
+   "Game-day forecast at kickoff: 40°F, wind 13 mph (gusts 35), 90% chance of precipitation. Ratings are adjusted for it.",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -2220,10 +2220,10 @@
   "gameId": "2026_12_KC_BUF",
   "book": "DraftKings",
   "cur": {
-   "spread": -2.5,
+   "spread": -3.0,
    "total": 50.5,
-   "ml": -150.0,
-   "oppMl": 126.0
+   "ml": -153.0,
+   "oppMl": 129.0
   },
   "open": {
    "spread": -2.5,
@@ -2256,6 +2256,12 @@
     "spread": -2.5,
     "total": 50.5,
     "ml": -150.0
+   },
+   {
+    "t": "2026-11-23T03:51Z",
+    "spread": -3.0,
+    "total": 50.5,
+    "ml": -153.0
    }
   ]
  },
@@ -2272,27 +2278,27 @@
     "loss": 100.0
    },
    "division": {
-    "now": 99.6,
+    "now": 99.7,
     "win": 99.9,
-    "loss": 99.2
+    "loss": 99.4
    },
    "seed1": {
-    "now": 51.6,
-    "win": 68.0,
-    "loss": 28.5
+    "now": 51.5,
+    "win": 68.4,
+    "loss": 27.8
    },
    "conf": {
-    "now": 30.1,
-    "win": 33.0,
-    "loss": 26.0
+    "now": 29.8,
+    "win": 33.3,
+    "loss": 25.0
    },
    "sb": {
-    "now": 17.8,
-    "win": 19.8,
-    "loss": 14.9
+    "now": 17.7,
+    "win": 19.9,
+    "loss": 14.6
    }
   },
-  "winProb": 57.6,
+  "winProb": 58.1,
   "sims": 10000,
   "asOf": "through the games of Nov. 22, 2026"
  },
