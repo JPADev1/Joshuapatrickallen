@@ -479,11 +479,13 @@ def build_ranks(week26, sched):
     pick = {"Career passing yards": lambda c: c["passing_yards"], "Career passing touchdowns": lambda c: c["passing_tds"],
             "Career rushing touchdowns": lambda c: c["rushing_tds"],
             "Career total touchdowns": lambda c: c["passing_tds"] + c["rushing_tds"] + c["receiving_tds"]}
-    lists = {}
+    lists, act_names = {}, {}
     for title, spec in cfg["lists"].items():
         vals = list(spec["fixed"])
         for a in spec["active"]:
-            vals.append(int(a["base"] + pick[title](add[a["id"]])))
+            v = int(a["base"] + pick[title](add[a["id"]]))
+            vals.append(v)
+            act_names.setdefault(title, {}).setdefault(str(v), []).append(a["name"])  # so the records watch can name active players
         lists[title] = sorted(vals, reverse=True)
 
     # QB wins as the starter: retired QBs fixed, anyone who started since 2025 counted live from results.
@@ -508,7 +510,7 @@ def build_ranks(week26, sched):
                     and num(r, "passing_tds") >= 1 and num(r, "rushing_tds") >= 1)
     allen = {"wins": reg[ALLEN], "postWins": post[ALLEN], "both": both,
              "afcEast": wb["afcEast"]}
-    return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists, "allen": allen}
+    return {"updated": date.today().isoformat(), "asOf": short_date(date.today()), "lists": lists, "allen": allen, "names": act_names}
 
 
 # ---------- Late injury report additions (stats-data/injury-adds.json) ----------
@@ -663,6 +665,9 @@ def build_watch(allen, ranks, week26, m):
                    "done": f"Record extended to {both + 1} games (regular season). Next closest: {nx['name']}, {nx['v']}."}))
 
     # NFL all-time leader lists
+    def rank_name(title, v):  # retired players from watch_base.json, active players from the live leader lists; ties joined
+        n = [x for x in [W["names"].get(title, {}).get(str(v))] if x] + sorted(ranks.get("names", {}).get(title, {}).get(str(v), []))
+        return " and ".join(n) if n else None
     keymap = {"Career passing touchdowns": "passTD", "Career rushing touchdowns": "rushTD",
               "Career passing yards": "passYds", "Career total touchdowns": "totalTD"}
     for title, L in ranks["lists"].items():
@@ -676,7 +681,7 @@ def build_watch(allen, ranks, week26, m):
         if tie > hi[k]:
             continue
         spot = 1 + sum(1 for x in L if x > v)
-        who = W["names"].get(title, {}).get(str(v))
+        who = rank_name(title, v)
         tied = sum(1 for x in L if x == v)
         label = f"{who} ({v:,})" if who else f"{v:,}"
         detail = f"{needs(k, tie)} Ties {label} for No. {spot}"
@@ -684,7 +689,7 @@ def build_watch(allen, ranks, week26, m):
         live = {"k": k, "need": tie, "goal": f"to tie {label} for No. {spot}", "done": f"He tied {label} for No. {spot}."}
         nxt = []  # the next names up the list, for "Next up" once he passes this one
         for rv in above[1:4]:
-            rw = W["names"].get(title, {}).get(str(rv)); rs = 1 + sum(1 for x in L if x > rv)
+            rw = rank_name(title, rv); rs = 1 + sum(1 for x in L if x > rv)
             nxt.append({"who": f"{rw} ({rv:,})" if rw else f"the No. {rs} mark ({rv:,})", "spot": rs, "tie": rv - me, "pass": rv + 1 - me})
         live["next"] = nxt
         if tie + 1 <= hi[k]:
