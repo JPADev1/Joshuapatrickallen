@@ -349,5 +349,141 @@
    "billsRank": "#2 in Bills history",
    "note": "Jim Kelly won 6. Update after each season."
   }
+ },
+ "names": {
+  "Career passing yards": {
+   "68515": [
+    "Aaron Rodgers"
+   ],
+   "67139": [
+    "Matthew Stafford"
+   ],
+   "63984": [
+    "Philip Rivers"
+   ],
+   "48176": [
+    "Joe Flacco"
+   ],
+   "46966": [
+    "Russell Wilson"
+   ],
+   "47247": [
+    "Kirk Cousins"
+   ],
+   "42338": [
+    "Jared Goff"
+   ],
+   "39793": [
+    "Andy Dalton"
+   ],
+   "39038": [
+    "Dak Prescott"
+   ],
+   "38648": [
+    "Patrick Mahomes"
+   ],
+   "29634": [
+    "Baker Mayfield"
+   ],
+   "26671": [
+    "Justin Herbert"
+   ],
+   "25820": [
+    "Jameis Winston"
+   ],
+   "23983": [
+    "Carson Wentz"
+   ],
+   "23575": [
+    "Lamar Jackson"
+   ]
+  },
+  "Career passing touchdowns": {
+   "543": [
+    "Aaron Rodgers"
+   ],
+   "442": [
+    "Matthew Stafford"
+   ],
+   "425": [
+    "Philip Rivers"
+   ],
+   "353": [
+    "Russell Wilson"
+   ],
+   "320": [
+    "Kirk Cousins"
+   ],
+   "289": [
+    "Patrick Mahomes"
+   ],
+   "272": [
+    "Joe Flacco"
+   ],
+   "276": [
+    "Jared Goff"
+   ],
+   "254": [
+    "Andy Dalton"
+   ],
+   "268": [
+    "Dak Prescott"
+   ],
+   "202": [
+    "Baker Mayfield"
+   ],
+   "193": [
+    "Lamar Jackson"
+   ]
+  },
+  "Career rushing touchdowns": {
+   "133": [
+    "Derrick Henry"
+   ],
+   "77": [
+    "Jonathan Taylor"
+   ],
+   "75": [
+    "Josh Jacobs"
+   ],
+   "72": [
+    "Christian McCaffrey"
+   ],
+   "64": [
+    "Jalen Hurts"
+   ]
+  },
+  "Career total touchdowns": {
+   "579": [
+    "Aaron Rodgers"
+   ],
+   "457": [
+    "Matthew Stafford"
+   ],
+   "428": [
+    "Philip Rivers"
+   ],
+   "385": [
+    "Russell Wilson"
+   ],
+   "342": [
+    "Kirk Cousins"
+   ],
+   "309": [
+    "Patrick Mahomes"
+   ],
+   "289": [
+    "Joe Flacco"
+   ],
+   "302": [
+    "Dak Prescott"
+   ],
+   "290": [
+    "Jared Goff"
+   ],
+   "277": [
+    "Andy Dalton"
+   ]
+  }
  }
 }
