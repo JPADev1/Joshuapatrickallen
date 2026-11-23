@@ -370,26 +370,27 @@ else if(location.hash==='#nfl'||location.hash==='#bills'){SCOPE=location.hash.sl
 var RECAP = null;
 function renderRecap(){
   var el = document.getElementById('recap'); if(!el) return;
-  var R = RECAP, ok = R && R.date && R.items && R.items.length;
+  var R = RECAP, ok = R && R.date && ((R.items && R.items.length) || (R.wp && R.wp.pts && R.wp.pts.length)); // the win-chance chart shows even with no records
+  if(ok && !R.items) R.items = [];
   if(ok && (GAMES.some(function(g){ return g.date > R.date; }) || (LIVEG && LIVEG.date > R.date))) ok = false;
   if(!ok){ el.hidden = true; el.innerHTML = ''; return; }
   function esc(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   var M=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'], p=R.date.split('-');
   var when = M[+p[1]-1]+' '+(+p[2])+', '+p[0], game = R.game + (R.result ? ' (' + R.result + ')' : '');
   var foot = R.official ? 'Checked against the official stats' : 'Unofficial until the official stats are in';
-  var all = shareBtn({chip:'Record Recap', kicker:game + ' · ' + when, title:'Weekly Record Recap',
+  var all = !R.items.length ? '' : shareBtn({chip:'Record Recap', kicker:game + ' · ' + when, title:'Weekly Record Recap',
     items:R.items.slice(0,5).map(function(x){ return {t:x.title, d:x.text, done:true}; }),
     foot:R.items.length > 5 ? 'Plus ' + (R.items.length - 5) + ' more on the site' : foot, share:'Josh Allen record recap: ' + R.game, url:'#recap'}, 'Weekly Record Recap');
   el.innerHTML = '<div class="recap-top"><h2 class="sec" id="recap-h">Weekly Record Recap</h2>' + all + '</div>'
     + '<p class="note recap-sub"><b>' + esc(game) + '</b> &middot; ' + esc(when) + (R.allen ? '<br>Allen: ' + esc(R.allen) : '') + '</p>'
     + (R.wp ? '<div id="recap-wp"></div>' : '')
-    + '<ol class="firsts recap">' + R.items.map(function(x){
+    + (!R.items.length ? '' : '<ol class="firsts recap">' + R.items.map(function(x){
       var sc = x.scope === 'nfl' ? ' scope nfl' : x.scope === 'bills' ? ' scope bills' : '';
       return '<li><div class="fwhen"><span class="chip' + sc + '">' + esc(x.tag || 'Milestone') + '</span>'
         + shareBtn({chip:x.tag || 'Milestone', kicker:game + ' · ' + when, title:x.title, big:x.big || '', line:x.text || '', foot:foot, url:'#recap', bg:x.bg || ''}, x.title) + '</div>'
         + '<div class="fbody"><b>' + esc(x.title) + '</b>' + (x.text ? '<span class="fline">' + esc(x.text) + '</span>' : '')
-        + (x.line ? '<span class="fmeta">' + esc(x.line) + '</span>' : '') + '</div></li>'; }).join('') + '</ol>'
-    + '<p class="note">Only what he did in this game. ' + (R.official ? 'Checked against the official stats.' : 'Numbers are unofficial until the official stats are in.') + '</p>';
+        + (x.line ? '<span class="fmeta">' + esc(x.line) + '</span>' : '') + '</div></li>'; }).join('') + '</ol>')
+    + (!R.items.length ? '' : '<p class="note">Only what he did in this game. ' + (R.official ? 'Checked against the official stats.' : 'Numbers are unofficial until the official stats are in.') + '</p>');
   el.hidden = false;
   // The full game's win-chance chart (scripts/live.js draws it; its Share button makes the image or video)
   var wpEl = document.getElementById('recap-wp');
