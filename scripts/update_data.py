@@ -11,7 +11,7 @@ Runs on GitHub Actions, no API key. Standard library only.
 Safety: if a download fails or Allen's totals would go DOWN, the script stops and the old files stay.
 Hand-written extras (TV network, all-time series records) live in data/overrides.json.
 """
-import csv, gzip, io, json, os, sys, time, urllib.request
+import csv, gzip, io, json, os, re, sys, time, urllib.request
 from collections import Counter, defaultdict
 from datetime import date, datetime
 
@@ -798,6 +798,135 @@ def espn_final(game):
             "status": "Final", "s": s, "source": "ESPN box score (unofficial)"}
 
 
+# ---------- Weekly Record Recap (automatic) ----------
+# Written by the data job, no hand step: right after the final (the held records watch + ESPN's unofficial line)
+# it publishes the achievements Allen reached in that game, then rebuilds them from the official stats once they're in.
+# Only achievements he reached (records-watch items he hit), plus the full-game win-chance chart from the live Worker.
+# The watch it was built from is kept in recap.json ("_src"), since the Next game page moves on to the next opponent.
+WORKER = "https://jpa-live.sterryrochester.workers.dev/"
+RECAP_UNIT = {"passTD": ("passing TD", "passing TDs"), "rushTD": ("rushing TD", "rushing TDs"), "totalTD": ("total TD", "total TDs"),
+              "passYds": ("passing yard", "passing yards"), "rushYds": ("rushing yard", "rushing yards")}
+
+
+def recap_items(items, s, won, nick):
+    import re
+    fmt = lambda n: f"{n:,}"
+    unit = lambda k, n: RECAP_UNIT[k][0 if n == 1 else 1]
+    vals = {"passTD": s.get("td", 0), "rushTD": s.get("rushTD", 0), "passYds": s.get("yds", 0), "rushYds": s.get("rushYds", 0),
+            "totalTD": s.get("td", 0) + s.get("rushTD", 0) + s.get("recTD", 0)}
+    out = []
+    for x in items:
+        k, title = x.get("k"), x.get("title", "")
+        tag, scope = "Milestone", ""
+        if title.startswith("NFL first:"):
+            tag, scope, title = "NFL first", "nfl", title[len("NFL first:"):].strip()
+        elif title.startswith("NFL record:"):
+            tag, scope, title = "NFL record", "nfl", title[len("NFL record:"):].strip()
+        title = title[:1].upper() + title[1:]
+        if k == "both":
+            if s.get("td", 0) >= 1 and s.get("rushTD", 0) >= 1:
+                out.append({"tag": "NFL record extended" if tag == "NFL record" else tag, "scope": scope, "title": title,
+                            "text": x.get("done", ""), "line": f"{s['td']} passing and {s['rushTD']} rushing TD{'s' if s['rushTD'] != 1 else ''} vs the {nick}"})
+            continue
+        if k == "win":
+            if won:
+                nfl = "any QB" in (x.get("st") or "") or "league-leading" in (x.get("done") or "")
+                it = {"tag": "Record extended", "scope": "nfl" if nfl else "", "title": x.get("st") or title,
+                      "text": x.get("done", ""), "line": x.get("sk") or x.get("sl") or x.get("ctx") or ""}
+                if x.get("sb"): it["big"] = x["sb"]
+                if x.get("bg"): it["bg"] = x["bg"]
+                out.append(it)
+            continue
+        if k not in RECAP_UNIT or x.get("need") is None:
+            continue
+        v = vals[k]
+        need2 = x.get("need2")
+        reached2 = need2 is not None and v >= need2
+        if v < x["need"]:
+            continue
+        text = x.get("done2") if reached2 else x.get("done", "")
+        passed, spot, nxt = [], None, None
+        if (reached2 or need2 is None) and x.get("next"):
+            for r in x["next"]:
+                if v >= r["pass"]:
+                    passed.append(r["who"]); spot = r.get("spot") or spot
+                else:
+                    nxt = r; break
+            mm = re.match(r"^He passed (.+) and moved up to No\. \d+\.$", text or "")
+            if mm and passed and spot:
+                names = [mm.group(1)] + passed
+                text = "He passed " + (" and ".join(names) if len(names) == 2 else ", ".join(names[:-1]) + " and " + names[-1]) + f" and moved up to No. {spot}."
+            elif passed:
+                text += " Also passed " + ", ".join(passed) + "."
+        sp = re.search(r"No\. (\d+)", text or "")
+        if title.startswith("NFL career") and sp:
+            tag = "Moved up"
+            title = f"{title}: {'tied for' if ' tied ' in ' ' + text and not reached2 and not passed else 'up to'} No. {sp.group(1)}"
+        line = f"{fmt(v)} {unit(k, v)} vs the {nick}"
+        if nxt:
+            line += f" · Next up: {nxt['who']}, {fmt(nxt['tie'] - v)} {unit(k, nxt['tie'] - v)} to tie"
+        elif need2 is not None and not reached2:
+            line += f" · {fmt(need2 - v)} more {unit(k, need2 - v)} {x.get('goal2', '')}".rstrip()
+        out.append({"tag": tag, "scope": scope, "title": title, "text": text, "line": line})
+    return out
+
+
+def worker_wp(game_id):
+    """The full-game win-chance curve from the live Worker, if its saved game is this one and it's final."""
+    try:
+        req = urllib.request.Request(WORKER, headers={"User-Agent": "notjoshingaround.com stats job"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            rec = json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        print("recap: live Worker unavailable:", e); return None
+    if rec.get("nflGame") != game_id or not re.search(r"final|completed", str(rec.get("status", "")), re.I):
+        return None
+    wp = rec.get("wp") or {}
+    return {k: wp[k] for k in ("pts", "p0", "mu", "src") if k in wp} if wp.get("pts") else None
+
+
+def auto_recap(w, allen, mt):
+    """w: the records watch just built (held on the game just played, or the next game's); mt: the matchup it belongs to."""
+    old = load("recap.json") or {}
+    if old.get("manual"):  # a hand-written recap wins
+        return
+    src = None
+    if w and w.get("held") and w.get("final"):
+        src = {"gameId": w.get("gameId"), "gameday": w.get("gameday"), "items": w.get("items", []),
+               "week": mt.get("week"), "opp": mt["opp"]["abbr"], "oppNick": mt["opp"]["nick"],
+               "oppColor": (mt.get("colors") or {}).get("opp", ""), "home": mt.get("home")}
+    elif (old.get("_src") or {}).get("gameday") == old.get("date"):
+        src = old["_src"]
+    if not src or not src.get("gameday"):
+        return
+    g = next((x for x in allen.get("games", []) if x.get("date") == src["gameday"] and x.get("started")), None)
+    if g and g.get("result"):
+        res = g["result"]; parts = res.split()[1].split("-")
+        bills, them, s, official = int(parts[0]), int(parts[1]), g, True
+    elif w and w.get("held") and w.get("final") and w["final"].get("date") == src["gameday"]:
+        f = w["final"]; s, bills, them, official = f["s"], f["bills"], f["them"], False
+        res = ("W" if bills > them else "L" if bills < them else "T") + f" {bills}-{them}"
+    else:
+        return
+    if old.get("date") == src["gameday"] and old.get("official") and old.get("wp") and official:
+        return  # already final and complete
+    nick = src["oppNick"]
+    line = f"{s.get('cmp', 0)} of {s.get('att', 0)}, {s.get('yds', 0):,} yards, {s.get('td', 0)} TD, {s.get('int', 0)} INT"
+    if s.get("rushTD"):
+        line += f" · {s['rushTD']} rushing TD{'s' if s['rushTD'] != 1 else ''}"
+    wp = worker_wp(src["gameId"]) or (old.get("wp") if old.get("date") == src["gameday"] else None)
+    out = {"_how": "Weekly Record Recap, written automatically by scripts/update_data.py (auto_recap): only the achievements "
+                   "Allen reached in his most recent game, plus the full-game win-chance chart. Set \"manual\": true to hand-edit "
+                   "without the job overwriting it.",
+           "date": src["gameday"], "game": f"Week {src.get('week')} {'vs' if src.get('home') else 'at'} {nick}", "result": res,
+           "allen": line, "official": official, "items": recap_items(src["items"], s, bills > them, nick),
+           "opp": src["opp"], "oppNick": nick, "oppColor": src.get("oppColor", ""), "home": bool(src.get("home")),
+           "bills": bills, "them": them, "_src": src}
+    if wp:
+        out["wp"] = wp
+    save("recap.json", out)
+
+
 # ---------- 5. 90%+ props (Next game page) ----------
 # Alternate lines books commonly post. A prop shows when a player cleared a line in 90%+ of his games this season.
 MARKETS = [  # key, label, category, value(row), lines, who
@@ -1349,6 +1478,10 @@ def main():
             except Exception as e:
                 print("extra watch items skipped:", e)
             m["watch"] = w
+            try:  # Weekly Record Recap, published automatically after each game
+                auto_recap(w, allen, prev if held else m)
+            except Exception as e:
+                print("weekly record recap skipped:", e)
         except Exception as e:  # never let the watch list block the rest of the page
             print("records watch skipped:", e)
         try:
