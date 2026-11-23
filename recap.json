@@ -174,5 +174,1196 @@
   "oppNick": "Dolphins",
   "oppColor": "#008E97",
   "home": true
+ },
+ "wp": {
+  "pts": [
+   [
+    0,
+    0.93,
+    0,
+    0,
+    "",
+    "D.Carlson kicks 62 yards from MIA 35 to BUF 3. G.Dortch to BUF 39 for 36 yards (J.Wood; K."
+   ],
+   [
+    8,
+    0.934,
+    0,
+    0,
+    "",
+    "J.Allen pass short left to D.Moore pushed ob at BUF 48 for 9 yards (J.Brents)."
+   ],
+   [
+    36,
+    0.939,
+    0,
+    0,
+    "",
+    "J.Cook right tackle to BUF 48 for no gain (J.Brooks; W.Gay)."
+   ],
+   [
+    83,
+    0.935,
+    0,
+    0,
+    "",
+    "J.Allen pass incomplete deep right to K.Coleman."
+   ],
+   [
+    88,
+    0.924,
+    0,
+    0,
+    "",
+    "A.Corbett reported in as eligible. J.Cook up the middle to 50 for 2 yards (J.Rodriguez; W."
+   ],
+   [
+    119,
+    0.936,
+    0,
+    0,
+    "",
+    "J.Allen pass deep right to K.Shakir ran ob at MIA 18 for 32 yards (Z.Anderson)."
+   ],
+   [
+    150,
+    0.947,
+    0,
+    0,
+    "",
+    "(No Huddle) J.Allen pass incomplete short left."
+   ],
+   [
+    156,
+    0.944,
+    0,
+    0,
+    "",
+    "K.Shakir right tackle to MIA 16 for 2 yards (R.McGraw)."
+   ],
+   [
+    194,
+    0.94,
+    0,
+    0,
+    "",
+    "J.Allen sacked at MIA 25 for -9 yards (J.Brooks)."
+   ],
+   [
+    236,
+    0.935,
+    3,
+    0,
+    "fg",
+    "T.Bass 43 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
+   ],
+   [
+    241,
+    0.934,
+    3,
+    0,
+    "",
+    "K.McCord pass short left to D.Herman to MIA 34 for 7 yards (C.Bishop; T.Bernard)."
+   ],
+   [
+    286,
+    0.931,
+    3,
+    0,
+    "",
+    "K.McCord pass short middle to C.Douglas to MIA 48 for 14 yards (A.Hooker)."
+   ],
+   [
+    319,
+    0.925,
+    3,
+    0,
+    "",
+    "K.McCord pass incomplete short left to C.Douglas (D.Igbinosun)."
+   ],
+   [
+    327,
+    0.928,
+    3,
+    0,
+    "",
+    "J.Wright up the middle to BUF 48 for 4 yards (L.Jackson; C.Bishop)."
+   ],
+   [
+    367,
+    0.929,
+    3,
+    0,
+    "",
+    "K.McCord sacked at MIA 44 for -8 yards (G.Rousseau)."
+   ],
+   [
+    404,
+    0.94,
+    3,
+    0,
+    "",
+    "J.Browning punts 49 yards to BUF 7, Center-T.Addington. G.Dortch to BUF 17 for 10 yards (T"
+   ],
+   [
+    416,
+    0.944,
+    3,
+    0,
+    "",
+    "J.Cook left guard to BUF 34 for 2 yards (K.Grant)."
+   ],
+   [
+    450,
+    0.942,
+    3,
+    0,
+    "",
+    "J.Allen pass incomplete short right to K.Shakir (C.Johnson)."
+   ],
+   [
+    455,
+    0.937,
+    3,
+    0,
+    "",
+    "J.Allen pass incomplete deep right to K.Coleman (J.Brents)."
+   ],
+   [
+    461,
+    0.929,
+    3,
+    0,
+    "",
+    "(Punt formation) T.Doman pass deep middle to K.Latu to MIA 36 for 30 yards (M.Washington; "
+   ],
+   [
+    510,
+    0.952,
+    3,
+    0,
+    "",
+    "J.Allen pass incomplete deep middle to T.Shavers."
+   ],
+   [
+    518,
+    0.95,
+    3,
+    0,
+    "",
+    "J.Cook up the middle to MIA 36 for no gain (C.Robinson)."
+   ],
+   [
+    560,
+    0.945,
+    3,
+    0,
+    "",
+    "J.Allen pass incomplete deep right to K.Shakir (Z.Anderson)."
+   ],
+   [
+    573,
+    0.948,
+    6,
+    0,
+    "fg",
+    "T.Bass 54 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
+   ],
+   [
+    582,
+    0.947,
+    6,
+    0,
+    "",
+    "O.Gordon left guard to MIA 34 for 5 yards (B.Chubb)."
+   ],
+   [
+    620,
+    0.946,
+    6,
+    0,
+    "",
+    "K.McCord pass incomplete short right to C.Douglas (D.Igbinosun)."
+   ],
+   [
+    624,
+    0.949,
+    6,
+    0,
+    "",
+    "K.McCord pass incomplete deep left to C.Bell."
+   ],
+   [
+    631,
+    0.956,
+    6,
+    0,
+    "",
+    "J.Browning punts 35 yards to BUF 31, Center-T.Addington, out of bounds.PENALTY on BUF-J.So"
+   ],
+   [
+    639,
+    0.954,
+    6,
+    0,
+    "",
+    "J.Cook up the middle to BUF 27 for 6 yards (J.Uche)."
+   ],
+   [
+    674,
+    0.955,
+    6,
+    0,
+    "",
+    "J.Cook right tackle to BUF 30 for 3 yards (J.Rodriguez)."
+   ],
+   [
+    710,
+    0.955,
+    6,
+    0,
+    "",
+    "T.Grable reported in as eligible. J.Cook right guard to BUF 32 for 2 yards (J.Brooks; J.Ro"
+   ],
+   [
+    746,
+    0.956,
+    6,
+    0,
+    "",
+    "J.Allen pass short right to R.Davis to BUF 38 for 6 yards (C.Johnson; J.Brooks)."
+   ],
+   [
+    784,
+    0.956,
+    6,
+    0,
+    "",
+    "J.Allen pass short middle to D.Knox to MIA 39 for 23 yards (M.Taaffe; C.Johnson)."
+   ],
+   [
+    827,
+    0.962,
+    6,
+    0,
+    "",
+    "J.Cook right tackle to MIA 38 for 1 yard (C.Robinson)."
+   ],
+   [
+    867,
+    0.96,
+    6,
+    0,
+    "",
+    "J.Allen pass short left to D.Moore pushed ob at MIA 33 for 5 yards (J.Rodriguez)."
+   ],
+   [
+    900,
+    0.96,
+    6,
+    0,
+    "",
+    "J.Allen pass short left to D.Moore to MIA 24 for 9 yards (Z.Anderson)."
+   ],
+   [
+    927,
+    0.965,
+    6,
+    0,
+    "",
+    "J.Allen pass short left to T.Johnson pushed ob at MIA 7 for 17 yards (J.Rodriguez)."
+   ],
+   [
+    950,
+    0.969,
+    6,
+    0,
+    "",
+    "(No Huddle) J.Allen pass incomplete short right to D.Knox."
+   ],
+   [
+    953,
+    0.967,
+    6,
+    0,
+    "",
+    "J.Cook right guard to MIA 4 for 3 yards (J.Rodriguez)."
+   ],
+   [
+    997,
+    0.974,
+    13,
+    0,
+    "td",
+    "J.Allen pass short middle to D.Moore for 4 yards, TOUCHDOWN. T.Bass extra point is GOOD, C"
+   ],
+   [
+    1004,
+    0.972,
+    13,
+    0,
+    "",
+    "J.Kingston reported in as eligible. O.Gordon up the middle to MIA 36 for -3 yards (C.Bisho"
+   ],
+   [
+    1047,
+    0.974,
+    13,
+    0,
+    "",
+    "K.McCord pass short right to M.Washington to MIA 43 for 7 yards (T.White; K.Elarms-Orr).PE"
+   ],
+   [
+    1075,
+    0.972,
+    13,
+    0,
+    "",
+    "K.McCord pass short left to G.Dulcich to MIA 46 for 5 yards (K.Elarms-Orr)."
+   ],
+   [
+    1118,
+    0.972,
+    13,
+    0,
+    "",
+    "M.Washington right guard to BUF 39 for 15 yards (A.Hooker)."
+   ],
+   [
+    1159,
+    0.966,
+    13,
+    0,
+    "",
+    "K.McCord pass incomplete short left to C.Bell."
+   ],
+   [
+    1163,
+    0.968,
+    13,
+    0,
+    "",
+    "K.McCord pass incomplete deep right to M.Washington [L.Jackson]."
+   ],
+   [
+    1170,
+    0.971,
+    13,
+    0,
+    "",
+    "O.Gordon up the middle to BUF 33 for 6 yards (T.Bernard)."
+   ],
+   [
+    1216,
+    0.968,
+    13,
+    3,
+    "fg",
+    "D.Carlson 52 yard field goal is GOOD, Center-T.Addington, Holder-J.Browning."
+   ],
+   [
+    1222,
+    0.971,
+    13,
+    3,
+    "",
+    "T.Grable reported in as eligible. J.Cook up the middle to BUF 46 for 3 yards (M.Herring; J"
+   ],
+   [
+    1266,
+    0.971,
+    13,
+    3,
+    "",
+    "J.Allen pass short middle to K.Latu to MIA 49 for 5 yards (J.Brooks).PENALTY on BUF-A.Ande"
+   ],
+   [
+    1289,
+    0.967,
+    13,
+    3,
+    "",
+    "J.Allen pass short right to T.Johnson to BUF 40 for 4 yards (C.Johnson; J.Rodriguez)."
+   ],
+   [
+    1324,
+    0.966,
+    13,
+    3,
+    "",
+    "J.Allen pass short right to D.Moore pushed ob at MIA 46 for 14 yards (J.Marshall)."
+   ],
+   [
+    1356,
+    0.973,
+    13,
+    3,
+    "",
+    "J.Allen pass short right to K.Coleman to MIA 34 for 12 yards (J.Marshall; J.Brooks)."
+   ],
+   [
+    1395,
+    0.975,
+    13,
+    3,
+    "",
+    "J.Allen pass short right to K.Coleman to MIA 29 for 5 yards (C.Johnson)."
+   ],
+   [
+    1434,
+    0.975,
+    13,
+    3,
+    "",
+    "J.Cook left guard to MIA 18 for 11 yards (C.Johnson; Z.Anderson)."
+   ],
+   [
+    1471,
+    0.978,
+    13,
+    3,
+    "",
+    "J.Cook right tackle to MIA 16 for 2 yards (C.Johnson)."
+   ],
+   [
+    1507,
+    0.977,
+    13,
+    3,
+    "",
+    "J.Allen pass incomplete deep right to K.Latu (Z.Anderson)."
+   ],
+   [
+    1512,
+    0.975,
+    13,
+    3,
+    "",
+    "J.Allen pass short right to T.Johnson pushed ob at MIA 3 for 13 yards (J.Rodriguez)."
+   ],
+   [
+    1535,
+    0.981,
+    13,
+    3,
+    "",
+    "(No Huddle) T.Johnson left guard to MIA 1 for 2 yards (J.Brents)."
+   ],
+   [
+    1572,
+    0.983,
+    20,
+    3,
+    "td",
+    "A.Corbett reported in as eligible. J.Cook up the middle for 1 yard, TOUCHDOWN. T.Bass extr"
+   ],
+   [
+    1579,
+    0.983,
+    20,
+    3,
+    "",
+    "O.Gordon left tackle to MIA 26 for 2 yards (E.Oliver; D.Walker)."
+   ],
+   [
+    1616,
+    0.984,
+    20,
+    3,
+    "",
+    "K.McCord pass short right to O.Gordon to MIA 23 for -3 yards (E.Oliver)."
+   ],
+   [
+    1663,
+    0.986,
+    20,
+    3,
+    "",
+    "K.McCord scrambles right tackle to MIA 29 for 6 yards (K.Elarms-Orr)."
+   ],
+   [
+    1680,
+    0.987,
+    20,
+    3,
+    "",
+    "J.Browning punts 31 yards to BUF 40, Center-T.Addington, downed by MIA-G.Dulcich."
+   ],
+   [
+    1689,
+    0.988,
+    20,
+    3,
+    "",
+    "J.Allen pass incomplete short middle to K.Shakir [C.Robinson]."
+   ],
+   [
+    1695,
+    0.987,
+    20,
+    3,
+    "",
+    "J.Allen pass short middle intended for K.Latu INTERCEPTED by J.Rodriguez (C.Robinson) at B"
+   ],
+   [
+    1707,
+    0.975,
+    20,
+    3,
+    "to",
+    "M.Washington up the middle to BUF 26 for -4 yards (D.Carter). MIA-J.Savaiinaea was injured"
+   ],
+   [
+    1711,
+    0.978,
+    20,
+    3,
+    "",
+    "K.McCord sacked at BUF 34 for -8 yards (G.Rousseau)."
+   ],
+   [
+    1716,
+    0.981,
+    20,
+    3,
+    "",
+    "K.McCord pass incomplete short right to M.Washington (D.Walker)."
+   ],
+   [
+    1726,
+    0.981,
+    20,
+    6,
+    "fg",
+    "D.Carlson 52 yard field goal is GOOD, Center-T.Addington, Holder-J.Browning."
+   ],
+   [
+    1731,
+    0.98,
+    20,
+    6,
+    "",
+    "J.Allen pass short right to T.Johnson to BUF 37 for 2 yards (J.Marshall; J.Rodriguez)."
+   ],
+   [
+    1741,
+    0.979,
+    20,
+    6,
+    "",
+    "J.Allen pass deep middle to D.Moore to MIA 45 for 18 yards (J.Brents). ** Injury Update: B"
+   ],
+   [
+    1762,
+    0.984,
+    20,
+    6,
+    "",
+    "J.Allen pass incomplete short right to K.Latu."
+   ],
+   [
+    1766,
+    0.983,
+    20,
+    6,
+    "",
+    "J.Allen pass incomplete deep right to T.Shavers [K.Cooper]."
+   ],
+   [
+    1775,
+    0.981,
+    20,
+    6,
+    "",
+    "J.Allen pass short middle intended for K.Shakir INTERCEPTED by Z.Anderson at MIA 30. Z.And"
+   ],
+   [
+    1782,
+    0.973,
+    20,
+    6,
+    "to",
+    "K.McCord pass deep middle intended for C.Bell INTERCEPTED by D.Hamlin (M.Hoecht) at BUF 47"
+   ],
+   [
+    1787,
+    0.983,
+    20,
+    6,
+    "to",
+    "J.Allen pass deep right intended for K.Shakir INTERCEPTED by J.Wood at MIA 7. J.Wood to MI"
+   ],
+   [
+    1800,
+    0.975,
+    20,
+    6,
+    "",
+    "T.Doman kicks 62 yards from BUF 35 to MIA 3. J.Wright to MIA 30 for 27 yards (J.Andreessen"
+   ],
+   [
+    1808,
+    0.974,
+    20,
+    6,
+    "",
+    "K.McCord pass short left to C.Douglas to MIA 46 for 16 yards (M.Hairston). ** Injury Updat"
+   ],
+   [
+    1849,
+    0.971,
+    20,
+    6,
+    "",
+    "J.Wright right tackle to MIA 46 for no gain (D.Carter). ** Injury Update: MIA-C.Bell has r"
+   ],
+   [
+    1888,
+    0.973,
+    20,
+    6,
+    "",
+    "O.Gordon left end to BUF 30 for 24 yards (D.Igbinosun; C.Bishop)."
+   ],
+   [
+    1932,
+    0.965,
+    20,
+    6,
+    "",
+    "K.McCord pass deep left to M.Washington to BUF 9 for 21 yards (D.Igbinosun) [B.Chubb]."
+   ],
+   [
+    1978,
+    0.958,
+    20,
+    6,
+    "",
+    "K.McCord pass incomplete short left to C.Douglas."
+   ],
+   [
+    1981,
+    0.961,
+    20,
+    6,
+    "",
+    "J.Kingston reported in as eligible. K.McCord pass incomplete short left to C.Douglas."
+   ],
+   [
+    1985,
+    0.964,
+    20,
+    6,
+    "",
+    "K.McCord pass incomplete short left to C.Douglas (M.Hairston)."
+   ],
+   [
+    1998,
+    0.969,
+    20,
+    9,
+    "fg",
+    "D.Carlson 27 yard field goal is GOOD, Center-T.Addington, Holder-J.Browning."
+   ],
+   [
+    2005,
+    0.974,
+    20,
+    9,
+    "",
+    "J.Cook up the middle to BUF 48 for 3 yards (K.Grant; Z.Anderson)."
+   ],
+   [
+    2042,
+    0.973,
+    20,
+    9,
+    "",
+    "J.Allen pass short right to J.Cook to 50 for 2 yards (C.Johnson; M.Taaffe)."
+   ],
+   [
+    2086,
+    0.971,
+    20,
+    9,
+    "",
+    "J.Allen pass short right to T.Johnson to MIA 43 for 7 yards (K.Louis)."
+   ],
+   [
+    2127,
+    0.976,
+    20,
+    9,
+    "",
+    "J.Cook left end pushed ob at MIA 30 for 13 yards (J.Marshall)."
+   ],
+   [
+    2156,
+    0.978,
+    20,
+    9,
+    "",
+    "J.Allen pass short right to J.Cook pushed ob at MIA 29 for 1 yard (J.Rodriguez)."
+   ],
+   [
+    2188,
+    0.977,
+    20,
+    9,
+    "",
+    "J.Allen pass incomplete short left to R.Davis."
+   ],
+   [
+    2192,
+    0.975,
+    20,
+    9,
+    "",
+    "J.Allen sacked at MIA 36 for -7 yards (Z.Anderson)."
+   ],
+   [
+    2243,
+    0.968,
+    20,
+    9,
+    "",
+    "T.Bass 54 yard field goal is No Good, Wide Left, Center-R.Ferguson, Holder-T.Doman."
+   ],
+   [
+    2248,
+    0.955,
+    20,
+    9,
+    "",
+    "J.Kingston reported in as eligible. J.Wright left end to MIA 46 for 2 yards (D.Igbinosun)."
+   ],
+   [
+    2289,
+    0.957,
+    20,
+    9,
+    "",
+    "J.Wright left guard to 50 for 4 yards (K.Elarms-Orr; T.Parker)."
+   ],
+   [
+    2330,
+    0.957,
+    20,
+    9,
+    "",
+    "K.McCord pass incomplete short left to G.Dulcich (C.Bishop)."
+   ],
+   [
+    2333,
+    0.965,
+    20,
+    9,
+    "",
+    "J.Browning punts 50 yards to end zone, Center-T.Addington, Touchback."
+   ],
+   [
+    2342,
+    0.968,
+    20,
+    9,
+    "",
+    "J.Cook left tackle to BUF 20 for no gain (C.Robinson)."
+   ],
+   [
+    2379,
+    0.966,
+    20,
+    9,
+    "",
+    "J.Allen pass short left to D.Knox pushed ob at BUF 28 for 8 yards (Z.Anderson)."
+   ],
+   [
+    2417,
+    0.968,
+    20,
+    9,
+    "",
+    "J.Allen pass short middle to T.Johnson to BUF 31 for 3 yards (J.Rodriguez)."
+   ],
+   [
+    2454,
+    0.971,
+    20,
+    9,
+    "",
+    "J.Cook up the middle to BUF 32 for 1 yard (R.McGraw)."
+   ],
+   [
+    2498,
+    0.97,
+    20,
+    9,
+    "",
+    "J.Allen pass deep right to K.Shakir to MIA 30 for 38 yards (M.Taaffe)."
+   ],
+   [
+    2533,
+    0.98,
+    20,
+    9,
+    "",
+    "J.Allen pass short left to K.Shakir pushed ob at MIA 19 for 11 yards (C.Johnson)."
+   ],
+   [
+    2572,
+    0.982,
+    20,
+    9,
+    "",
+    "J.Allen sacked at MIA 27 for -8 yards (K.Cooper)."
+   ],
+   [
+    2617,
+    0.979,
+    20,
+    9,
+    "",
+    "J.Allen pass incomplete short left to T.Johnson (K.Grant).PENALTY on BUF-D.Dawkins, Offens"
+   ],
+   [
+    2621,
+    0.975,
+    20,
+    9,
+    "",
+    "J.Allen pass short middle to K.Shakir to MIA 34 for 8 yards (J.Rodriguez)."
+   ],
+   [
+    2661,
+    0.975,
+    20,
+    9,
+    "",
+    "J.Allen pass short right to K.Shakir to MIA 22 for 12 yards (D.Baker) [J.Brooks]."
+   ],
+   [
+    2704,
+    0.978,
+    23,
+    9,
+    "fg",
+    "T.Bass 40 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
+   ],
+   [
+    2711,
+    0.977,
+    23,
+    9,
+    "",
+    "O.Gordon up the middle to MIA 34 for 7 yards (C.Bishop)."
+   ],
+   [
+    2745,
+    0.976,
+    23,
+    9,
+    "",
+    "O.Gordon right guard to MIA 42 for 8 yards (S.Thompson; B.Chubb)."
+   ],
+   [
+    2790,
+    0.975,
+    23,
+    9,
+    "",
+    "J.Kingston reported in as eligible. K.McCord scrambles right end ran ob at MIA 45 for 3 ya"
+   ],
+   [
+    2829,
+    0.976,
+    23,
+    9,
+    "",
+    "O.Gordon up the middle to MIA 47 for 2 yards (J.Hancock; D.Carter)."
+   ],
+   [
+    2871,
+    0.979,
+    23,
+    9,
+    "",
+    "K.McCord pass incomplete deep middle to C.Douglas."
+   ],
+   [
+    2875,
+    0.983,
+    23,
+    9,
+    "",
+    "K.McCord pass incomplete short right to C.Douglas.PENALTY on BUF-D.Igbinosun, Defensive Pa"
+   ],
+   [
+    2879,
+    0.974,
+    23,
+    9,
+    "",
+    "J.Wright up the middle to 50 for no gain (L.Jackson)."
+   ],
+   [
+    2920,
+    0.977,
+    23,
+    9,
+    "",
+    "K.McCord pass short right to C.Bell to BUF 42 for 8 yards (D.Igbinosun)."
+   ],
+   [
+    2961,
+    0.976,
+    23,
+    9,
+    "",
+    "K.McCord pass incomplete short right to G.Dulcich (A.Hooker) [A.Hooker]."
+   ],
+   [
+    2967,
+    0.982,
+    23,
+    9,
+    "",
+    "K.McCord pass short left to M.Washington pushed ob at BUF 38 for 4 yards (D.Alford) [B.Chu"
+   ],
+   [
+    3008,
+    0.973,
+    23,
+    9,
+    "",
+    "K.McCord pass short right to M.Washington to BUF 33 for 5 yards (J.Hancock)."
+   ],
+   [
+    3056,
+    0.975,
+    23,
+    9,
+    "",
+    "K.McCord pass incomplete deep left to C.Douglas."
+   ],
+   [
+    3061,
+    0.978,
+    23,
+    9,
+    "",
+    "O.Gordon right guard to BUF 30 for 3 yards (G.Rousseau)."
+   ],
+   [
+    3100,
+    0.982,
+    23,
+    9,
+    "",
+    "K.McCord pass incomplete short left to M.Washington (D.Alford)."
+   ],
+   [
+    3104,
+    0.99,
+    23,
+    9,
+    "to",
+    "J.Cook right end pushed ob at BUF 31 for 1 yard (D.Baker)."
+   ],
+   [
+    3138,
+    0.99,
+    23,
+    9,
+    "",
+    "J.Allen pass short left to D.Moore pushed ob at BUF 43 for 12 yards (J.Marshall)."
+   ],
+   [
+    3174,
+    0.993,
+    23,
+    9,
+    "",
+    "J.Cook up the middle to MIA 48 for 9 yards (Z.Anderson)."
+   ],
+   [
+    3217,
+    0.995,
+    23,
+    9,
+    "",
+    "J.Cook right guard to MIA 37 for 11 yards (C.Johnson; Z.Anderson)."
+   ],
+   [
+    3258,
+    0.996,
+    23,
+    9,
+    "",
+    "J.Cook right guard to MIA 29 for 8 yards (Z.Anderson)."
+   ],
+   [
+    3301,
+    0.998,
+    23,
+    9,
+    "",
+    "R.Davis left guard to MIA 26 for 3 yards (J.Marshall; W.Gay)."
+   ],
+   [
+    3341,
+    0.998,
+    23,
+    9,
+    "",
+    "J.Allen pass incomplete short right."
+   ],
+   [
+    3347,
+    0.998,
+    23,
+    9,
+    "",
+    "J.Cook right guard to MIA 19 for 7 yards (J.Brooks; Z.Anderson)."
+   ],
+   [
+    3390,
+    0.999,
+    23,
+    9,
+    "",
+    "J.Allen pass short left to T.Johnson to MIA 10 for 9 yards (Z.Anderson)."
+   ],
+   [
+    3433,
+    0.999,
+    23,
+    9,
+    "",
+    "J.Allen pass incomplete short right to D.Moore."
+   ],
+   [
+    3434,
+    0.999,
+    23,
+    9,
+    "",
+    "J.Allen pass incomplete short left to D.Moore."
+   ],
+   [
+    3439,
+    0.999,
+    23,
+    9,
+    "",
+    "K.Shakir left tackle to MIA 10 for no gain (J.Brooks)."
+   ],
+   [
+    3483,
+    0.999,
+    26,
+    9,
+    "fg",
+    "T.Bass 28 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
+   ],
+   [
+    3507,
+    0.999,
+    26,
+    9,
+    "",
+    "K.McCord pass incomplete short right to G.Dulcich [J.Solomon]."
+   ],
+   [
+    3511,
+    1,
+    26,
+    9,
+    "",
+    "O.Gordon left guard to MIA 44 for 2 yards (S.Thompson; G.Gaines)."
+   ],
+   [
+    3537,
+    1,
+    26,
+    9,
+    "",
+    "O.Gordon left tackle pushed ob at BUF 43 for 13 yards (J.Kilgore)."
+   ],
+   [
+    3544,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass incomplete short right to G.Dulcich (J.Hancock)."
+   ],
+   [
+    3548,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass incomplete short right to O.Gordon."
+   ],
+   [
+    3553,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass short middle to J.Tolbert to BUF 26 for 17 yards (J.Kilgore)."
+   ],
+   [
+    3558,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass short right to O.Gordon to BUF 25 for 1 yard (J.Hancock)."
+   ],
+   [
+    3565,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass incomplete short right to G.Dulcich."
+   ],
+   [
+    3570,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass incomplete deep left to K.Coleman (T.White)."
+   ],
+   [
+    3575,
+    1,
+    26,
+    9,
+    "",
+    "K.McCord pass incomplete deep middle to C.Douglas."
+   ],
+   [
+    3580,
+    1,
+    26,
+    9,
+    "to",
+    "K.Allen kneels to BUF 24 for -1 yards."
+   ],
+   [
+    3600,
+    1,
+    26,
+    9,
+    "end",
+    "Final"
+   ]
+  ],
+  "p0": 0.924,
+  "mu": 16.5,
+  "src": "plays"
  }
 }

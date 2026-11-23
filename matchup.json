@@ -865,12 +865,12 @@
      {
       "line": 12,
       "hit": 10,
-      "stars": 4.0
+      "stars": 5.0
      },
      {
       "line": 15,
       "hit": 10,
-      "stars": 3.5
+      "stars": 4.5
      }
     ],
     "extra": [
@@ -883,14 +883,13 @@
      "line": 20,
      "hit": 7
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 15+ in all 10 games.",
      "Averages 22.6 completions a game (median 22.5).",
      "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Closest call: 15 vs DEN in Week 1."
     ],
     "status": ""
@@ -961,7 +960,7 @@
      {
       "line": 2,
       "hit": 10,
-      "stars": 3.5
+      "stars": 4.5
      }
     ],
     "extra": [],
@@ -969,7 +968,7 @@
      "line": 3,
      "hit": 7
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 2+ in all 10 games.",
      "Averages 4.1 receptions a game (median 4).",
@@ -977,9 +976,193 @@
      "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Closest call: 2 vs MIA in Week 3.",
      "Swingy: anywhere from 2 to 9 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "KC",
+    "nick": "Chiefs",
+    "player": "Noah Gray",
+    "pos": "TE",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "DEN"
+     },
+     {
+      "wk": 2,
+      "opp": "IND"
+     },
+     {
+      "wk": 3,
+      "opp": "@MIA"
+     },
+     {
+      "wk": 4,
+      "opp": "@LV"
+     },
+     {
+      "wk": 6,
+      "opp": "LAC"
+     },
+     {
+      "wk": 7,
+      "opp": "@SEA"
+     },
+     {
+      "wk": 8,
+      "opp": "@DEN"
+     },
+     {
+      "wk": 9,
+      "opp": "NYJ"
+     },
+     {
+      "wk": 10,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 11,
+      "opp": "ARI"
+     }
+    ],
+    "vals": [
+     1,
+     0,
+     3,
+     2,
+     3,
+     3,
+     2,
+     1,
+     1,
+     3
+    ],
+    "ladder": [
+     {
+      "line": 1,
+      "hit": 9,
+      "stars": 4.0
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 2,
+     "hit": 6
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 1+ in 9 of 10 games.",
+     "Averages 1.9 receptions a game (median 2).",
+     "Cleared it in each of his last 8 games.",
+     "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
+    ],
+    "cons": [
+     "Missed in Week 2 vs IND (0).",
+     "Swingy: anywhere from 0 to 3 this season."
+    ],
+    "status": ""
+   },
+   {
+    "team": "KC",
+    "nick": "Chiefs",
+    "player": "Travis Kelce",
+    "pos": "TE",
+    "cat": "Receiving",
+    "market": "Receiving yards",
+    "key": "recYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "DEN"
+     },
+     {
+      "wk": 2,
+      "opp": "IND"
+     },
+     {
+      "wk": 3,
+      "opp": "@MIA"
+     },
+     {
+      "wk": 4,
+      "opp": "@LV"
+     },
+     {
+      "wk": 6,
+      "opp": "LAC"
+     },
+     {
+      "wk": 7,
+      "opp": "@SEA"
+     },
+     {
+      "wk": 8,
+      "opp": "@DEN"
+     },
+     {
+      "wk": 9,
+      "opp": "NYJ"
+     },
+     {
+      "wk": 10,
+      "opp": "@ATL"
+     },
+     {
+      "wk": 11,
+      "opp": "ARI"
+     }
+    ],
+    "vals": [
+     71,
+     101,
+     59,
+     15,
+     53,
+     44,
+     67,
+     72,
+     30,
+     74
+    ],
+    "ladder": [
+     {
+      "line": 25,
+      "hit": 9,
+      "stars": 4.0
+     },
+     {
+      "line": 30,
+      "hit": 9,
+      "stars": 4.0
+     }
+    ],
+    "extra": [
+     {
+      "line": 40,
+      "hit": 8
+     }
+    ],
+    "next": {
+     "line": 50,
+     "hit": 7
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 30+ in 9 of 10 games.",
+     "Averages 58.6 receiving yards a game (median 63).",
+     "Cleared it in each of his last 6 games.",
+     "Steady volume: 5.7 targets a game.",
+     "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
+    ],
+    "cons": [
+     "Missed in Week 4 vs LV (15).",
+     "Swingy: anywhere from 15 to 101 this season."
     ],
     "status": ""
    },
@@ -1173,193 +1356,6 @@
     "status": ""
    },
    {
-    "team": "KC",
-    "nick": "Chiefs",
-    "player": "Noah Gray",
-    "pos": "TE",
-    "cat": "Receiving",
-    "market": "Receptions",
-    "key": "rec",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "DEN"
-     },
-     {
-      "wk": 2,
-      "opp": "IND"
-     },
-     {
-      "wk": 3,
-      "opp": "@MIA"
-     },
-     {
-      "wk": 4,
-      "opp": "@LV"
-     },
-     {
-      "wk": 6,
-      "opp": "LAC"
-     },
-     {
-      "wk": 7,
-      "opp": "@SEA"
-     },
-     {
-      "wk": 8,
-      "opp": "@DEN"
-     },
-     {
-      "wk": 9,
-      "opp": "NYJ"
-     },
-     {
-      "wk": 10,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 11,
-      "opp": "ARI"
-     }
-    ],
-    "vals": [
-     1,
-     0,
-     3,
-     2,
-     3,
-     3,
-     2,
-     1,
-     1,
-     3
-    ],
-    "ladder": [
-     {
-      "line": 1,
-      "hit": 9,
-      "stars": 3.0
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 2,
-     "hit": 6
-    },
-    "gameday": -1.0,
-    "pros": [
-     "Cleared 1+ in 9 of 10 games.",
-     "Averages 1.9 receptions a game (median 2).",
-     "Cleared it in each of his last 8 games.",
-     "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
-    ],
-    "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
-     "Missed in Week 2 vs IND (0).",
-     "Swingy: anywhere from 0 to 3 this season."
-    ],
-    "status": ""
-   },
-   {
-    "team": "KC",
-    "nick": "Chiefs",
-    "player": "Travis Kelce",
-    "pos": "TE",
-    "cat": "Receiving",
-    "market": "Receiving yards",
-    "key": "recYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "DEN"
-     },
-     {
-      "wk": 2,
-      "opp": "IND"
-     },
-     {
-      "wk": 3,
-      "opp": "@MIA"
-     },
-     {
-      "wk": 4,
-      "opp": "@LV"
-     },
-     {
-      "wk": 6,
-      "opp": "LAC"
-     },
-     {
-      "wk": 7,
-      "opp": "@SEA"
-     },
-     {
-      "wk": 8,
-      "opp": "@DEN"
-     },
-     {
-      "wk": 9,
-      "opp": "NYJ"
-     },
-     {
-      "wk": 10,
-      "opp": "@ATL"
-     },
-     {
-      "wk": 11,
-      "opp": "ARI"
-     }
-    ],
-    "vals": [
-     71,
-     101,
-     59,
-     15,
-     53,
-     44,
-     67,
-     72,
-     30,
-     74
-    ],
-    "ladder": [
-     {
-      "line": 25,
-      "hit": 9,
-      "stars": 3.0
-     },
-     {
-      "line": 30,
-      "hit": 9,
-      "stars": 3.0
-     }
-    ],
-    "extra": [
-     {
-      "line": 40,
-      "hit": 8
-     }
-    ],
-    "next": {
-     "line": 50,
-     "hit": 7
-    },
-    "gameday": -1.0,
-    "pros": [
-     "Cleared 30+ in 9 of 10 games.",
-     "Averages 58.6 receiving yards a game (median 63).",
-     "Cleared it in each of his last 6 games.",
-     "Steady volume: 5.7 targets a game.",
-     "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
-    ],
-    "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
-     "Missed in Week 4 vs LV (15).",
-     "Swingy: anywhere from 15 to 101 this season."
-    ],
-    "status": ""
-   },
-   {
     "team": "BUF",
     "nick": "Bills",
     "player": "Khalil Shakir",
@@ -1425,7 +1421,7 @@
      {
       "line": 2,
       "hit": 9,
-      "stars": 2.5
+      "stars": 3.5
      }
     ],
     "extra": [
@@ -1438,7 +1434,7 @@
      "line": 4,
      "hit": 6
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 2+ in 9 of 10 games.",
      "Averages 3.8 receptions a game (median 4).",
@@ -1446,7 +1442,6 @@
      "Steady volume: 5.4 targets a game."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Missed in Week 3 vs LAC (1).",
      "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game.",
      "Swingy: anywhere from 1 to 7 this season."
@@ -1519,7 +1514,7 @@
      {
       "line": 25,
       "hit": 9,
-      "stars": 2.5
+      "stars": 3.5
      }
     ],
     "extra": [
@@ -1532,7 +1527,7 @@
      "line": 40,
      "hit": 6
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 25+ in 9 of 10 games.",
      "Averages 53.9 receiving yards a game (median 54).",
@@ -1540,7 +1535,6 @@
      "Steady volume: 5.4 targets a game."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Missed in Week 3 vs LAC (6).",
      "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game.",
      "Swingy: anywhere from 6 to 101 this season."
@@ -1613,12 +1607,12 @@
      {
       "line": 150,
       "hit": 10,
-      "stars": 4.0
+      "stars": 5.0
      },
      {
       "line": 175,
       "hit": 9,
-      "stars": 2.5
+      "stars": 3.5
      }
     ],
     "extra": [
@@ -1635,7 +1629,7 @@
      "line": 250,
      "hit": 5
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 175+ in 9 of 10 games.",
      "Averages 270.9 passing yards a game (median 259).",
@@ -1643,7 +1637,6 @@
      "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Missed in Week 7 vs SEA (165)."
     ],
     "status": ""
@@ -1714,7 +1707,7 @@
      {
       "line": 2,
       "hit": 9,
-      "stars": 2.5
+      "stars": 3.5
      }
     ],
     "extra": [],
@@ -1722,7 +1715,7 @@
      "line": 3,
      "hit": 7
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 2+ in 9 of 10 games.",
      "Averages 3.5 receptions a game (median 3).",
@@ -1730,10 +1723,194 @@
      "The Bills rank 21st of 32 against the pass, allowing 241 passing yards a game."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Missed in Week 10 vs ATL (0).",
      "Swingy: anywhere from 0 to 7 this season.",
      "Trending down: 1.0 a game over his last two, below his 3.5 average."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Completions",
+    "key": "cmp",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
+     },
+     {
+      "wk": 9,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 11,
+      "opp": "MIA"
+     }
+    ],
+    "vals": [
+     20,
+     20,
+     16,
+     23,
+     12,
+     23,
+     21,
+     21,
+     11,
+     27
+    ],
+    "ladder": [
+     {
+      "line": 12,
+      "hit": 9,
+      "stars": 3.0
+     }
+    ],
+    "extra": [
+     {
+      "line": 15,
+      "hit": 8
+     }
+    ],
+    "next": {
+     "line": 18,
+     "hit": 7
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 12+ in 9 of 10 games.",
+     "Averages 19.4 completions a game (median 20.5)."
+    ],
+    "cons": [
+     "Missed in Week 10 vs NYJ (11).",
+     "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game."
+    ],
+    "status": ""
+   },
+   {
+    "team": "BUF",
+    "nick": "Bills",
+    "player": "Josh Allen",
+    "pos": "QB",
+    "cat": "Passing",
+    "market": "Passing yards",
+    "key": "passYds",
+    "games": [
+     {
+      "wk": 1,
+      "opp": "@HOU"
+     },
+     {
+      "wk": 2,
+      "opp": "DET"
+     },
+     {
+      "wk": 3,
+      "opp": "LAC"
+     },
+     {
+      "wk": 4,
+      "opp": "NE"
+     },
+     {
+      "wk": 5,
+      "opp": "@LA"
+     },
+     {
+      "wk": 6,
+      "opp": "@LV"
+     },
+     {
+      "wk": 8,
+      "opp": "BAL"
+     },
+     {
+      "wk": 9,
+      "opp": "@MIN"
+     },
+     {
+      "wk": 10,
+      "opp": "@NYJ"
+     },
+     {
+      "wk": 11,
+      "opp": "MIA"
+     }
+    ],
+    "vals": [
+     334,
+     248,
+     204,
+     253,
+     210,
+     255,
+     289,
+     234,
+     196,
+     304
+    ],
+    "ladder": [
+     {
+      "line": 150,
+      "hit": 10,
+      "stars": 4.5
+     },
+     {
+      "line": 175,
+      "hit": 10,
+      "stars": 4.0
+     },
+     {
+      "line": 200,
+      "hit": 9,
+      "stars": 2.5
+     }
+    ],
+    "extra": [],
+    "next": {
+     "line": 225,
+     "hit": 7
+    },
+    "gameday": 0.0,
+    "pros": [
+     "Cleared 200+ in 9 of 10 games.",
+     "Averages 252.7 passing yards a game (median 250.5)."
+    ],
+    "cons": [
+     "Missed in Week 10 vs NYJ (196).",
+     "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game."
     ],
     "status": ""
    },
@@ -1826,193 +2003,6 @@
     "player": "Josh Allen",
     "pos": "QB",
     "cat": "Passing",
-    "market": "Completions",
-    "key": "cmp",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     },
-     {
-      "wk": 10,
-      "opp": "@NYJ"
-     },
-     {
-      "wk": 11,
-      "opp": "MIA"
-     }
-    ],
-    "vals": [
-     20,
-     20,
-     16,
-     23,
-     12,
-     23,
-     21,
-     21,
-     11,
-     27
-    ],
-    "ladder": [
-     {
-      "line": 12,
-      "hit": 9,
-      "stars": 2.0
-     }
-    ],
-    "extra": [
-     {
-      "line": 15,
-      "hit": 8
-     }
-    ],
-    "next": {
-     "line": 18,
-     "hit": 7
-    },
-    "gameday": -1.0,
-    "pros": [
-     "Cleared 12+ in 9 of 10 games.",
-     "Averages 19.4 completions a game (median 20.5)."
-    ],
-    "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
-     "Missed in Week 10 vs NYJ (11).",
-     "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Passing yards",
-    "key": "passYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     },
-     {
-      "wk": 10,
-      "opp": "@NYJ"
-     },
-     {
-      "wk": 11,
-      "opp": "MIA"
-     }
-    ],
-    "vals": [
-     334,
-     248,
-     204,
-     253,
-     210,
-     255,
-     289,
-     234,
-     196,
-     304
-    ],
-    "ladder": [
-     {
-      "line": 150,
-      "hit": 10,
-      "stars": 3.5
-     },
-     {
-      "line": 175,
-      "hit": 10,
-      "stars": 3.0
-     },
-     {
-      "line": 200,
-      "hit": 9,
-      "stars": 1.5
-     }
-    ],
-    "extra": [],
-    "next": {
-     "line": 225,
-     "hit": 7
-    },
-    "gameday": -1.0,
-    "pros": [
-     "Cleared 200+ in 9 of 10 games.",
-     "Averages 252.7 passing yards a game (median 250.5)."
-    ],
-    "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
-     "Missed in Week 10 vs NYJ (196).",
-     "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
     "market": "Passing TDs",
     "key": "passTD",
     "games": [
@@ -2073,7 +2063,7 @@
      {
       "line": 1,
       "hit": 9,
-      "stars": 1.0
+      "stars": 1.5
      }
     ],
     "extra": [],
@@ -2081,33 +2071,25 @@
      "line": 2,
      "hit": 4
     },
-    "gameday": -1.0,
+    "gameday": 0.0,
     "pros": [
      "Cleared 1+ in 9 of 10 games.",
      "Averages 1.4 passing tds a game (median 1).",
      "Cleared it in each of his last 7 games."
     ],
     "cons": [
-     "Forecast wind 13 mph (gusts to 35) at kickoff: hard on passing and catching.",
      "Missed in Week 3 vs LAC (0).",
      "The Chiefs rank 7th of 32 against the pass, allowing 220 passing yards a game.",
      "Swingy: anywhere from 0 to 3 this season.",
-     "Trending down: 1.0 a game over his last two, below his 1.4 average."
+     "Trending down: 1.0 a game over his last two, below his 1.4 average.",
+     "The line sits close to his median (1), so there's little cushion."
     ],
     "status": ""
    }
   ],
-  "weather": {
-   "indoor": false,
-   "temp": 40,
-   "wind": 13,
-   "gust": 35,
-   "rain": 0.09,
-   "snow": 0,
-   "pop": 81
-  },
+  "weather": null,
   "conditions": [
-   "Game-day forecast at kickoff: 40°F, wind 13 mph (gusts 35), 81% chance of precipitation. Ratings are adjusted for it.",
+   "Game-day forecast: not available right now (it's checked every hour during game week for outdoor stadiums).",
    "Final injury report: not out yet (usually Friday); ratings will update with it."
   ],
   "note": "2026 regular season only. A game counts if the player was on the field for at least one offensive snap (from snap counts), so a game without a catch or carry counts as a zero. Lines shown are common alternate lines, not a sportsbook's posted line; check your book for the actual line and price. Players listed Out or Doubtful are left off. Confidence starts from the hit rate and moves with the cushion over the line, the opponent's defensive rank, recent games, the player's own injury status, and on game week the kickoff weather forecast (Open-Meteo) and starters ruled Out or Doubtful on either side (a starter played 60%+ of snaps)."
@@ -2218,12 +2200,12 @@
  },
  "lines": {
   "gameId": "2026_12_KC_BUF",
-  "book": "DraftKings",
+  "book": "Draft Kings",
   "cur": {
-   "spread": -3.0,
+   "spread": -2.5,
    "total": 50.5,
-   "ml": -156.0,
-   "oppMl": 132.0
+   "ml": -150.0,
+   "oppMl": 126.0
   },
   "open": {
    "spread": -2.5,
@@ -2250,6 +2232,12 @@
     "spread": -3.0,
     "total": 50.5,
     "ml": -156.0
+   },
+   {
+    "t": "2026-11-23T01:23Z",
+    "spread": -2.5,
+    "total": 50.5,
+    "ml": -150.0
    }
   ]
  },
@@ -2271,22 +2259,22 @@
     "loss": 99.3
    },
    "seed1": {
-    "now": 52.2,
-    "win": 68.5,
-    "loss": 28.3
+    "now": 51.8,
+    "win": 68.6,
+    "loss": 28.2
    },
    "conf": {
-    "now": 30.4,
+    "now": 30.3,
     "win": 33.7,
-    "loss": 25.4
+    "loss": 25.5
    },
    "sb": {
-    "now": 17.7,
-    "win": 19.7,
-    "loss": 14.7
+    "now": 17.4,
+    "win": 19.5,
+    "loss": 14.6
    }
   },
-  "winProb": 58.6,
+  "winProb": 57.6,
   "sims": 10000,
   "asOf": "through the games of Nov. 22, 2026"
  },
@@ -2300,6 +2288,6 @@
   },
   "seedWin": 1,
   "seedLoss": 2,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 68% of the time with a win and 28% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 69% of the time with a win and 28% with a loss."
  }
 }
