@@ -571,7 +571,21 @@
       if(!el || !g || !g.wp || !g.wp.pts || !g.wp.pts.length) return false;
       var L = {date: g.date, final: true, recap: true, opp: g.opp, oppNick: g.oppNick, oppColor: g.oppColor, home: !!g.home,
         bills: g.bills, them: g.them, game: g.game || '', wp: g.wp, s: {}};
-      el.innerHTML = wpHtml(L); wpWire(el); return true;
+      el.innerHTML = wpHtml(L); wpWire(el);
+      // The same chart builder as on gameday (reactions save per game date, so ones added during the game are still there)
+      if(window.JPAReact && window.JPAWinCard){
+        var mine = JPAReact.has(g.date), btn = document.createElement('button'), sub = document.createElement('p');
+        btn.type = 'button'; btn.className = 'rxgo';
+        btn.textContent = '\ud83c\udf7b ' + (mine ? 'Keep building your gameday chart' : 'Customize your gameday chart');
+        sub.className = 'rxsub'; sub.textContent = 'Add your beers, wings, thrown remotes and more right on the chart, then share it as an image or a 20-second video.';
+        btn.addEventListener('click', function(e){
+          e.preventDefault(); e.stopPropagation(); // not the gameday card's builder (that one may be on the next game by now)
+          JPAReact.open(function(){ var d = wpShare('r' + g.date); if(!d) return null;
+            return {D: d, date: g.date, kick: kickMin(match && gameDate(match) === g.date ? match : g), analyst: g.analyst || (match && gameDate(match) === g.date && match.analyst) || ''}; });
+        });
+        el.appendChild(btn); el.appendChild(sub);
+      }
+      return true;
     }
   };
 })();
