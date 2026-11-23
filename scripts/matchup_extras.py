@@ -290,7 +290,7 @@ def primetime(game, tv):
     md = game["gameday"][5:]
     if md == "12-25":
         return {"kind": "Christmas", "title": "Christmas Day", "sub": tv}
-    if day == "Thursday" and md[:2] == "11" and 22 <= int(md[3:]) <= 28 and h < 19:
+    if day == "Thursday" and md[:2] == "11" and 22 <= int(md[3:]) <= 28:  # all Thanksgiving games, night one included
         return {"kind": "Thanksgiving", "title": "Thanksgiving Day", "sub": tv}
     if h >= 19 or day in ("Monday", "Thursday", "Saturday", "Friday"):
         name = {"Monday": "Monday Night Football", "Thursday": "Thursday Night Football", "Sunday": "Sunday Night Football",
