@@ -218,6 +218,7 @@
       return {rank: t[0], name: t[1].replace(/\s*\(\d+\)$/, ''), v: t[2], num: parseFloat(t[2].replace(/,/g, '')), me: tr.classList.contains('me-row')};
     });
     var me = rows.filter(function(r){ return r.me; })[0]; if(!me) return null;
+    if(rows.length > 21) rows = rows.slice(0, 20).concat(rows.indexOf(me) >= 20 ? [me] : []); // the table now lists everyone ahead of Allen; the card's mountain stays at the top 20
     var hb = document.querySelector('#headline b'), title = hb ? hb.textContent.replace(/^Josh Allen is /, '') : me.rank;
     title = title.charAt(0).toUpperCase() + title.slice(1);
     var i = rows.indexOf(me), line;

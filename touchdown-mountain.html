@@ -65,7 +65,7 @@
 </main>
 <footer>Unofficial fan site; not affiliated with the Buffalo Bills, the NFL or Josh Allen.</footer>
 <script>window.JPALIVE_RELOAD=true;</script>
-<script src="scripts/share.js?v=7"></script>
+<script src="scripts/share.js?v=8"></script>
 <script src="scripts/live.js?v=7"></script>
 <script>
 (function(){
@@ -271,16 +271,18 @@ function headline(rows){
   el('sub').textContent=S.pos==='ALL'&&S.kind==='tot'&&!S.n?'Where Josh Allen stands among the NFL’s all-time touchdown leaders.':'Josh Allen vs '+(S.pos==='ALL'?'everyone':'all-time '+POS_WORD[S.pos])+': '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+'.';
 }
 function list(rows){
-  var show=rows.slice(0,K), me=rows.filter(function(x){return x.p.id===ALLEN;})[0];
-  if(me&&me.rank>K)show.push(me);
+  // The table lists everyone ahead of Allen (and anyone tied with him), at least the top 20; the mountain stays at 20.
+  var me=rows.filter(function(x){return x.p.id===ALLEN;})[0], show=me&&me.rank>K?rows.filter(function(x){return x.rank<=me.rank;}):rows.slice(0,K);
+  if(me&&show.indexOf(me)<0)show.push(me);
+  var TOP='The top '+(me&&me.rank>K?me.rank:20);
   if(S.mode==='season'){
-    el('listHead').textContent='The top 20: '+KIND_WORD[S.kind]+', '+CUR+' through Week '+S.w+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
+    el('listHead').textContent=TOP+': '+KIND_WORD[S.kind]+', '+CUR+' through Week '+S.w+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
     el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>GP</th><th>TD/G</th></tr></thead><tbody>'+show.map(function(x){
       return '<tr'+(x.p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(x.p.name)+'</td><td><b>'+x.v+'</b></td><td>'+esc(x.p.pos)+'</td><td>'+x.games+'</td><td>'+rate(x.v,x.games)+'</td></tr>';
     }).join('')+'</tbody>';
     return;
   }
-  el('listHead').textContent='The top 20: '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
+  el('listHead').textContent=TOP+': '+KIND_WORD[S.kind]+', '+(S.n?'first '+(S.n===1?'season':S.n+' seasons'):'career')+(S.pos==='ALL'?'':' ('+POS_WORD[S.pos]+')');
   el('list').innerHTML='<thead><tr><th>Rank</th><th>Player</th><th>TDs</th><th>Pos</th><th>Seasons</th><th>GP</th><th>TD/G</th></tr></thead><tbody>'+show.map(function(x){
     var p=x.p, endY=S.n?Math.min(p.first+S.n-1,p.last||CUR):(p.last||CUR);
     return '<tr'+(p.id===ALLEN?' class="me-row"':'')+'><td>'+(x.tie?'T-':'')+x.rank+'</td><td>'+esc(p.name)+(x.paren!=null?' ('+x.paren+')':'')+'</td><td><b>'+x.v+'</b></td><td>'+esc(p.pos)+'</td><td>'+p.first+'–'+endY+'</td><td>'+(x.gp||'–')+'</td><td>'+rate(x.v,x.gp)+'</td></tr>';
