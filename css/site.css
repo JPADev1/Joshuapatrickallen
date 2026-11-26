@@ -848,3 +848,16 @@ html.shr-open{overflow:hidden}
 .stfu-say{white-space:normal}
 @media (max-width:420px){.stfu-cw{width:118px}.stfu-say{font-size:.64rem;max-width:74px;right:calc(100% - 42px)}.stfu-go{gap:12px}.stfu{--d:70px}}
 @media (prefers-reduced-motion:reduce){.stfu-b{transition:none}.stfu-cw.hush,.stfu-pop,.stfu-say.cut{animation:none}}
+
+/* Holiday greeting button (scripts/holiday.js) */
+.holiday{display:flex;justify-content:center;margin:14px 0 4px}
+.holiday[hidden]{display:none}
+.tgsend{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:999px;cursor:pointer;
+  font:inherit;font-weight:800;font-size:1rem;color:#fff;letter-spacing:.01em;
+  background:linear-gradient(135deg,#c8791f 0%,#9a4a14 55%,#6e2b0c 100%);border:2px solid #e9c46a;
+  box-shadow:0 4px 0 #4a1c06,0 8px 16px rgba(0,0,0,.35);text-shadow:0 1px 2px rgba(0,0,0,.45);transition:transform .08s ease,box-shadow .08s ease}
+.tgsend span{font-size:1.25rem;line-height:1}
+.tgsend:hover{filter:brightness(1.08)}
+.tgsend:active{transform:translateY(3px);box-shadow:0 1px 0 #4a1c06,0 3px 8px rgba(0,0,0,.35)}
+.tgsend:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.tgsend{transition:none}}

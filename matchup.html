@@ -22,7 +22,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Josh Allen Stats &amp; Records Tracker">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="css/site.css?v=46">
+<link rel="stylesheet" href="css/site.css?v=47">
 </head>
 <body>
 <header class="hero slim"><div class="wrap">
@@ -30,6 +30,7 @@
   <h1 id="title">Next game</h1>
   <div class="ptw" id="pt" hidden></div>
   <div class="vs" id="vs"></div>
+  <div class="holiday" id="holiday" hidden></div>
   <div id="livebar-gameday" hidden></div>
   <p class="when" id="when"></p>
   <div class="divs" id="divs" hidden></div>
@@ -81,6 +82,7 @@
 <script src="scripts/reactions.js?v=2"></script>
 <script src="scripts/live.js?v=17"></script>
 <script src="scripts/shutup.js?v=2"></script>
+<script src="scripts/holiday.js?v=1"></script>
 <script>
 function fmt(n){return n.toLocaleString('en-US');}
 function td(v){return '<td>'+v+'</td>';}
