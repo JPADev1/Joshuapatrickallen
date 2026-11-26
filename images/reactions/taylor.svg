@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 140">
+  <defs><g id="w"><rect x="8" y="10" width="160" height="104" rx="10"/><path d="M72 114 L64 132 H112 L104 114 Z"/></g></defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#w"/></g>
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <path d="M72 114 L64 132 H112 L104 114 Z" fill="#3a4a7a"/>
+    <rect x="8" y="10" width="160" height="104" rx="10" fill="#1b2340"/>
+    <rect x="20" y="22" width="136" height="80" rx="4" fill="#4b2a6e"/>
+  </g>
+  <!-- suite box: glass windows, sparkles, a big heart -->
+  <rect x="20" y="62" width="136" height="40" fill="#2b1846"/>
+  <g fill="#8fd3ff" opacity=".55"><rect x="30" y="68" width="30" height="24" rx="2"/><rect x="66" y="68" width="30" height="24" rx="2"/><rect x="102" y="68" width="30" height="24" rx="2"/></g>
+  <path d="M88 60 C88 44 66 42 66 56 C66 66 78 74 88 82 C98 74 110 66 110 56 C110 42 88 44 88 60 Z" fill="#ff5fa2" stroke="#0b1b3a" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="#ffe27a"><path d="M40 32 L43 40 L51 43 L43 46 L40 54 L37 46 L29 43 L37 40 Z"/><path d="M134 30 L136 36 L142 38 L136 40 L134 46 L132 40 L126 38 L132 36 Z"/><path d="M128 52 L129.5 56 L133 57 L129.5 58.5 L128 62 L126.5 58.5 L123 57 L126.5 56 Z"/></g>
+  <rect x="122" y="26" width="28" height="12" rx="3" fill="#c60c30"/><text x="136" y="35.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9" fill="#fff">LIVE</text>
+</svg>

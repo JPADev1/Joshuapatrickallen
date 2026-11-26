@@ -29,6 +29,12 @@
     {id:'table', e:'', img:'table', t:function(){ return 'Smashed a table'; }, c:function(n){ return n + (n > 1 ? ' tables smashed' : ' table smashed'); }},
     {id:'squish', e:'', img:'squish', opp:'MIA', t:function(){ return 'Chanted "Squish the Fish!"'; }, c:function(n){ return 'chanted "Squish the Fish!"' + x(n); }},
     {id:'laces', e:'', img:'laces', opp:'MIA', t:function(){ return 'Said "Laces out, Dan!"'; }, c:function(n){ return 'said "Laces out, Dan!"' + x(n); }},
+    {id:'thirteen', e:'', img:'thirteen', opp:'KC', t:function(){ return 'Had 13-seconds flashbacks'; }, c:function(n){ return 'had 13-seconds flashbacks' + x(n); }},
+    {id:'payroll', e:'', img:'payroll', opp:'KC', t:function(){ return "Said the refs are on KC's payroll"; }, c:function(n){ return "said the refs are on KC's payroll" + x(n); }},
+    {id:'taylor', e:'', img:'taylor', opp:'KC', t:function(){ return 'Taylor Swift cutaway'; }, c:function(n){ return n + (n > 1 ? ' Taylor Swift cutaways' : ' Taylor Swift cutaway'); }},
+    {id:'pants', e:'', img:'pants', day:'tg', t:function(){ return 'Unbuttoned my pants'; }, c:function(n){ return 'unbuttoned my pants' + x(n); }},
+    {id:'seconds', e:'', img:'seconds', day:'tg', t:function(){ return 'Went back for seconds'; }, c:function(n){ return n > 1 ? n + ' plates' : 'went back for seconds'; }},
+    {id:'cook', e:'', img:'cook', t:function(){ return 'Yelled "Let James Cook!"'; }, c:function(n){ return 'yelled "Let James Cook!"' + x(n); }},
     {id:'butt', e:'', img:'butt', opp:'NYJ', t:function(){ return 'Mentioned the Butt Fumble'; }, c:function(n){ return 'brought up the Butt Fumble' + x(n); }},
     {id:'pass', e:'', img:'pass', t:function(){ return 'Told wife Josh Allen is my hall pass'; }, c:function(n){ return 'told wife Josh Allen is my hall pass' + x(n); }},
     {id:'same', e:'😩', t:function(){ return '"Same old Bills"'; }, c:function(n){ return 'said "same old Bills"' + x(n); }},
@@ -37,7 +43,13 @@
   ];
   var BY = {}; R.forEach(function(r){ BY[r.id] = r; });
   // Drawn icons (width/height ratio); the rest are emoji
-  var IMGS = {laces: .938, squish: .833, remote: 1.333, tv: 1.344, table: 1.556, pass: 1.25, butt: 1.333};
+  var IMGS = {laces: .938, squish: .833, remote: 1.333, tv: 1.344, table: 1.556, pass: 1.25, butt: 1.333,
+    thirteen: .933, payroll: 1.25, taylor: 1.257, pants: 1, seconds: 1.4, cook: .962};
+  // Opponent-only reactions (opp) show only against that team; day-only ones (day:'tg') only on Thanksgiving.
+  function tday(ymd){ var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(ymd || ''); if(!m || m[2] !== '11') return false;
+    var d = +m[3]; return d >= 22 && d <= 28 && new Date(+m[1], 10, d).getDay() === 4; }
+  function avail(r){ return !!r && (!r.opp || r.opp === D.oppAb) && (!r.day || (r.day === 'tg' && tday(st.date))); }
+  function tag(r){ return r.opp ? D.oppNick + ' only' : r.day === 'tg' ? 'Thanksgiving only' : ''; }
   Object.keys(IMGS).forEach(function(k){ var ar = IMGS[k]; IMGS[k] = {ar: ar, src: 'images/reactions/' + k + '.svg', im: new Image()};
     IMGS[k].im.onload = function(){ if(open_) render(); }; IMGS[k].im.src = IMGS[k].src; });
 
@@ -48,13 +60,13 @@
   function load(){ try{ var o = JSON.parse(localStorage.getItem(key)); if(o){ list = o.list || []; st.pre = o.pre == null ? null : o.pre; return; } }catch(e){} list = []; st.pre = null; }
   function refresh(){ // latest numbers from the page
     var g = get(); if(!g || !g.D) return false;
-    D = g.D; st.kick = g.kick != null ? g.kick : 13 * 60; st.tv = g.analyst || '';
+    D = g.D; st.kick = g.kick != null ? g.kick : 13 * 60; st.tv = g.analyst || ''; st.date = g.date || '';
     D.kickText = hm(st.kick);
     var nk = 'jpa-rx-' + (g.date || 'game'); if(nk !== key){ key = nk; load(); hist = []; }
     ALL = D.wp.pts.slice(); var k0 = [0, D.wp.p0 != null ? D.wp.p0 : (ALL[0] ? ALL[0][1] : .5), 0, 0, '', 'Kickoff'];
     if(!ALL.length || ALL[0][0] > 0) ALL.unshift(k0); else ALL[0] = [0, k0[1], ALL[0][2], ALL[0][3], ALL[0][4], ALL[0][5]];
     END = ALL[ALL.length - 1][0]; BOX0 = JPAWinCard.box(D);
-    list = list.filter(function(r){ return (!BY[r.id] || !BY[r.id].opp || BY[r.id].opp === D.oppAb) && BY[r.id] && r.t <= Math.max(END, 0); });
+    list = list.filter(function(r){ return avail(BY[r.id]) && r.t <= Math.max(END, 0); });
     return true;
   }
   function tS(){ return -Math.max(15, st.kick - st.pre) * 60; }   // pregame start, seconds before kickoff (negative)
@@ -198,9 +210,9 @@
   function idle(){ return END > 0 ? 'Pick a reaction, then tap the chart where it happened.'
     : st.pre != null ? 'Pick a reaction, then tap the gold pregame section.' : 'Before kickoff: turn on "We pregamed / tailgated" to start your chart now.'; }
   function tray(){
-    var show = R.filter(function(r){ return !r.opp || r.opp === D.oppAb; }).sort(function(a, b){ return (b.opp ? 1 : 0) - (a.opp ? 1 : 0); });
+    var show = R.filter(avail).sort(function(a, b){ return (tag(b) ? 1 : 0) - (tag(a) ? 1 : 0); });
     $('.rx-tray').innerHTML = show.map(function(r){
-      return '<button type="button" data-id="' + r.id + '" class="' + (sel === r.id ? 'on' : '') + (r.opp ? ' opp' : '') + '">' + (r.opp ? '<i class="rx-tag">' + esc(D.oppNick) + ' only</i>' : '')
+      return '<button type="button" data-id="' + r.id + '" class="' + (sel === r.id ? 'on' : '') + (r.opp ? ' opp' : r.day ? ' opp tg' : '') + '">' + (tag(r) ? '<i class="rx-tag">' + esc(tag(r)) + '</i>' : '')
         + '<b>' + (r.img ? '<img src="' + IMGS[r.img].src + '" alt="">' : r.e) + '</b>' + esc(r.t()) + '</button>'; }).join('');
   }
   var SW = [];

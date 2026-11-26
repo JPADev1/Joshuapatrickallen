@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 136">
+  <defs>
+    <g id="w"><path d="M20 58 C20 40 34 30 52 30 H128 V70 H92 C90 92 72 108 52 108 C34 108 20 92 20 70 Z"/><rect x="124" y="26" width="18" height="48" rx="4"/><path d="M96 70 L150 108 L136 128 L84 92 Z"/></g>
+  </defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#w"/></g>
+  <!-- cash sticking out of the whistle -->
+  <g stroke="#0b1b3a" stroke-width="4.5" stroke-linejoin="round">
+    <path d="M96 70 L150 108 L136 128 L84 92 Z" fill="#7ac27a"/>
+    <path d="M90 62 L146 100 L134 118 L80 82 Z" fill="#5aa85d"/>
+  </g>
+  <text x="117" y="98" font-family="Georgia,serif" font-weight="700" font-size="22" fill="#0b1b3a" transform="rotate(34 117 92)">$</text>
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <path d="M20 58 C20 40 34 30 52 30 H128 V70 H92 C90 92 72 108 52 108 C34 108 20 92 20 70 Z" fill="#c9d1e3"/>
+    <rect x="124" y="26" width="18" height="48" rx="4" fill="#9aa6c2"/>
+  </g>
+  <circle cx="52" cy="70" r="18" fill="#0b1b3a"/><circle cx="52" cy="70" r="8" fill="#e9c46a"/>
+  <path d="M36 42 C46 36 66 36 90 38" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"/>
+  <g stroke="#0b1b3a" stroke-width="4" fill="none"><path d="M20 64 C6 70 4 96 18 112"/></g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 156">
+  <defs><g id="w"><path d="M40 70 C18 70 14 40 34 34 C34 14 60 6 74 18 C86 4 114 10 114 32 C136 34 136 68 112 70 V92 H40 Z"/><path d="M75 92 C120 94 140 120 132 146 H18 C10 120 30 94 75 92 Z"/></g></defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#w"/></g>
+  <!-- flames under the hat: he's cooking -->
+  <path d="M18 146 C10 120 30 104 40 92 C40 110 52 108 54 96 C62 108 66 100 75 90 C84 100 88 108 96 96 C98 108 110 110 110 92 C120 104 140 120 132 146 Z" fill="#ff8a1f" stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M36 146 C32 130 44 122 50 114 C52 126 60 124 62 116 C68 124 72 122 75 112 C80 122 84 124 88 116 C90 124 98 126 100 114 C106 122 118 130 114 146 Z" fill="#ffd43a"/>
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <path d="M40 70 C18 70 14 40 34 34 C34 14 60 6 74 18 C86 4 114 10 114 32 C136 34 136 68 112 70 Z" fill="#fff"/>
+    <rect x="40" y="68" width="72" height="24" rx="3" fill="#eef1f8"/>
+  </g>
+  <g stroke="#c9d1e3" stroke-width="4" stroke-linecap="round"><path d="M56 74 V88 M76 74 V88 M96 74 V88"/></g>
+  <path d="M52 30 C58 22 68 22 72 28" stroke="#c9d1e3" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

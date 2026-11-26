@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs><g id="w"><path d="M22 30 H112 L120 140 H80 L68 74 L56 140 H16 Z"/><circle cx="128" cy="30" r="12"/></g></defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#w"/></g>
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <path d="M22 30 H112 L120 140 H80 L68 74 L56 140 H16 Z" fill="#c7a46a"/>
+    <path d="M22 30 H112 L113 46 H21 Z" fill="#b08d55"/>
+  </g>
+  <!-- popped open waistband: gap + the button flying off -->
+  <path d="M64 30 L70 46 L76 30" fill="#f4d9b8" stroke="#0b1b3a" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M68 50 V70" stroke="#8a6b3a" stroke-width="3"/>
+  <g stroke="#0b1b3a" stroke-width="3" fill="none"><path d="M36 46 V56 M98 46 V56"/></g>
+  <circle cx="128" cy="30" r="12" fill="#e9c46a" stroke="#0b1b3a" stroke-width="4.5"/>
+  <g fill="#0b1b3a"><circle cx="125" cy="27" r="2"/><circle cx="131" cy="27" r="2"/><circle cx="125" cy="33" r="2"/><circle cx="131" cy="33" r="2"/></g>
+  <g stroke="#e9c46a" stroke-width="5" stroke-linecap="round"><path d="M104 20 L94 14 M108 42 L96 46 M112 8 L106 2"/></g>
+</svg>

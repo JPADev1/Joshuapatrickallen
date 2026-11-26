@@ -780,6 +780,8 @@ html.shr-open{overflow:hidden}
 .rx-tray button b{display:block;font-size:24px;line-height:1.2;font-weight:400;min-height:30px}
 .rx-tray button img{height:26px;vertical-align:middle}
 .rx-tray button.opp{border-color:#2f8f52}
+.rx-tray button.tg{border-color:#b8742a}
+.rx-tray button.tg .rx-tag{background:#9a5a1c}
 .rx-tray button.on{border-color:#e9c46a;background:#1b2a66;box-shadow:0 0 0 2px rgba(233,196,106,.25)}
 .rx-tag{position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#1e7a3c;color:#fff;font-style:normal;font-size:9.5px;letter-spacing:.5px;padding:1px 6px;border-radius:8px;white-space:nowrap}
 .rx-swings{display:flex;flex-direction:column;gap:6px}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 140">
+  <defs><g id="w"><ellipse cx="98" cy="98" rx="88" ry="32"/><path d="M40 82 C30 50 60 30 92 40 C112 46 120 62 116 76 L150 60 C150 50 162 46 168 54 C178 52 180 66 170 68 C174 76 162 82 156 74 L120 92 C110 104 76 106 56 98 Z"/></g></defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#w"/></g>
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <ellipse cx="98" cy="98" rx="88" ry="32" fill="#eef1f8"/>
+    <ellipse cx="98" cy="96" rx="64" ry="20" fill="#dfe4f0"/>
+    <!-- mashed potatoes -->
+    <path d="M118 96 C116 80 132 74 142 80 C152 76 164 84 158 96 Z" fill="#fff6dc"/>
+    <!-- bone -->
+    <path d="M116 76 L150 60 C150 50 162 46 168 54 C178 52 180 66 170 68 C174 76 162 82 156 74 L120 92 Z" fill="#f3e6c8"/>
+    <!-- drumstick -->
+    <path d="M40 82 C30 50 60 30 92 40 C112 46 120 62 116 76 C112 92 98 100 78 100 C58 100 44 94 40 82 Z" fill="#b4612a"/>
+  </g>
+  <path d="M54 56 C62 44 80 42 92 48" stroke="#e39a55" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M146 84 C144 80 148 78 152 80" stroke="#e9b84a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <g fill="#c60c30" stroke="#0b1b3a" stroke-width="3"><circle cx="62" cy="108" r="5"/><circle cx="74" cy="112" r="5"/><circle cx="86" cy="110" r="5"/></g>
+  <g fill="#e9c46a" stroke="#0b1b3a" stroke-width="4" stroke-linejoin="round"><path d="M172 6 H186 V18 H198 V32 H186 V44 H172 V32 H160 V18 H172 Z" transform="translate(-10 0) scale(.95)"/></g>
+</svg>

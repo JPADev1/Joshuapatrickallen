@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 150">
+  <defs>
+    <g id="w"><rect x="58" y="6" width="24" height="14" rx="4"/><rect x="64" y="16" width="12" height="12"/><path d="M104 30 L116 18 L124 26 L112 38 Z"/><circle cx="70" cy="86" r="54"/></g>
+  </defs>
+  <g fill="#fff" stroke="#fff" stroke-width="14" stroke-linejoin="round"><use href="#w"/></g>
+  <g stroke="#0b1b3a" stroke-width="5" stroke-linejoin="round">
+    <rect x="58" y="6" width="24" height="14" rx="4" fill="#9aa6c2"/><rect x="64" y="16" width="12" height="12" fill="#9aa6c2"/>
+    <path d="M104 30 L116 18 L124 26 L112 38 Z" fill="#9aa6c2"/>
+    <circle cx="70" cy="86" r="54" fill="#c9d1e3"/><circle cx="70" cy="86" r="43" fill="#fff"/>
+  </g>
+  <path d="M70 43 A43 43 0 0 1 103 58 L70 86 Z" fill="#c60c30" opacity=".22"/>
+  <g stroke="#0b1b3a" stroke-width="3" stroke-linecap="round"><path d="M70 47 V53 M109 86 H103 M70 125 V119 M31 86 H37"/></g>
+  <rect x="38" y="92" width="64" height="26" rx="5" fill="#0b1b3a"/>
+  <text x="70" y="113" text-anchor="middle" font-family="Courier New,monospace" font-weight="700" font-size="24" fill="#ff3b4f">0:13</text>
+  <path d="M70 86 L98 62" stroke="#c60c30" stroke-width="5" stroke-linecap="round"/><circle cx="70" cy="86" r="5" fill="#0b1b3a"/>
+  <g stroke="#e9c46a" stroke-width="5" stroke-linecap="round"><path d="M10 52 L22 60 M4 78 H18 M128 70 L138 62"/></g>
+</svg>
