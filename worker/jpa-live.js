@@ -1,4 +1,5 @@
 // jpa-live v5: Josh Allen live stats from Tank01 for notjoshingaround.com
+// v5.1: the counter's "this game" total counts pregame presses on game day too.
 // v5: "Shut up, Collinsworth" counter at /?shutup (needs a D1 binding named SHUTUP to the jpa-shutup database;
 // without it the rest of the Worker runs exactly as v4 and the counter just reports "not connected").
 // Tank01 is called ONLY by the Worker's own timer, and ONLY from 10 minutes before a Bills kickoff until the game is
@@ -318,8 +319,8 @@ async function saved(env) { // busy games: serve the copy read in the last 15s
 // ---------------- "Shut up, Collinsworth" counter ----------------
 // GET  /?shutup            today's totals: {day, today, game, live, final, kickoff}
 // POST /?shutup  body "n=5" adds a fan's presses since their last send (1 to 30 per send; the page sends every 2 s).
-// "today" counts every press on the Eastern-time date; "game" only presses from kickoff to the final whistle of today's
-// Bills game. Stored in D1 (binding SHUTUP, table presses(day, scope, n)), so every visitor sees the same numbers.
+// "today" counts every press on the Eastern-time date; "game" counts every press on a Bills game day, pregame included,
+// until the final whistle. Stored in D1 (binding SHUTUP, table presses(day, scope, n)), so every visitor sees the same numbers.
 let SHUT = null; // last totals read, reused for 5 s so lots of fans checking the count don't each read D1
 async function shutup(request, env) {
   if (request.method === "OPTIONS") return new Response(null, { headers: { "Access-Control-Allow-Origin": "*",
@@ -333,7 +334,7 @@ async function shutup(request, env) {
     const rec = await saved(env);
     final = !!(rec && rec.gameID && String(rec.gameID).slice(0, 8) === day.replaceAll("-", "") && /final|completed/i.test(rec.status || ""));
   }
-  const live = !!kick && now >= kick && !final && now < kick + 6 * 3600e3;
+  const live = !!kick && !final && now < kick + 6 * 3600e3;          // game day: pregame presses count toward "this game" too
   const totals = rows => { const o = { day, today: 0, game: 0, live, final, kickoff: kick ? new Date(kick).toISOString() : null };
     (rows || []).forEach(r => { if (r.scope === "day") o.today = r.n; if (r.scope === "game") o.game = r.n; }); return o; };
   const read = env.SHUTUP.prepare("SELECT scope, n FROM presses WHERE day = ?1").bind(day);
