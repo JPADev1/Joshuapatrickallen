@@ -8,12 +8,15 @@
   // Rivalry theme (white rivalry jersey look): on for the dates listed in images/share/theme.json on the stats-data
   // branch, e.g. {"rivalry":["2026-11-22"]}, so it can be switched on for a game with no Netlify deploy.
   // Uses the recolored backgrounds share-bg-rivalry.webp and <key>-rivalry.webp; ?theme=rivalry previews it.
+  // Day backgrounds: theme.json {"bg": {"2026-11-26": "share-bg-thanksgiving"}} swaps the default Allen image for that date
+  // (cards that name their own d.bg keep it); ?bg=<key> previews one.
+  var DAYBG = null;
   var RIV = false, ROY = '#1446c8', NAVY = '#0c2a86', SLATE = '#2c3a5a';
   function theme(){
     if(/[?&]theme=rivalry\b/.test(location.search)) return Promise.resolve(true);
     var today = new Date().toLocaleDateString('en-CA', {timeZone:'America/New_York'});
     return fetch(LIB + 'theme.json', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : {}; })
-      .then(function(j){ return (j.rivalry || []).indexOf(today) >= 0; }).catch(function(){ return false; });
+      .then(function(j){ DAYBG = (j.bg || {})[today] || null; return (j.rivalry || []).indexOf(today) >= 0; }).catch(function(){ return false; });
   }
   function assets(){
     if(ready) return ready;
@@ -22,6 +25,9 @@
     function pic(src){ var img = new Image(); img.decoding = 'async';
       return new Promise(function(ok, no){ img.onload = function(){ ok(img); }; img.onerror = no; img.src = src; }); }
     var bg = theme().then(function(on){ RIV = on;
+      var day = (location.search.match(/[?&]bg=([a-z0-9-]+)/) || [])[1] || DAYBG; // holiday background for the day, e.g. share-bg-thanksgiving
+      if(!on && day && /^[a-z0-9-]+$/.test(day)) return new Promise(function(ok, no){ var img = new Image(); img.crossOrigin = 'anonymous';
+        img.onload = function(){ ok(img); }; img.onerror = no; img.src = LIB + day + '.webp'; }).catch(function(){ return pic('images/share-bg.webp'); });
       if(!on) return pic('images/share-bg.webp');
       return new Promise(function(ok, no){ var img = new Image(); img.crossOrigin = 'anonymous';
         img.onload = function(){ ok(img); }; img.onerror = no; img.src = LIB + 'share-bg-rivalry.webp'; })
