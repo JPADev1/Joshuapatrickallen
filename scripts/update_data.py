@@ -443,7 +443,7 @@ def build_matchup(sched, team_rows, week26, inj, T, overrides):
         "bills": {"name": T[BILLS]["name"], "record": record(reg26_for(reg26, BILLS), BILLS)},
         "opp": {"name": T[opp]["name"], "abbr": opp, "nick": nick, "record": record(reg26_for(reg26, opp), opp)},
         "home": home, "gameday": nxt["gameday"], "date": short_date(when, weekday=True), "time": kickoff(nxt["gametime"]),
-        "venue": stadium(nxt) + (f", {city}" if city else ""), "tv": ov.get("tv", ""),
+        "venue": stadium(nxt) + (f", {city}" if city else ""), "tv": ov.get("tv", ""), "analyst": ov.get("analyst", ""),
         "series": {"summary": summary, "last": last_txt},
         "injuries": {"week": wk, "bills": bi, "opp": oi,
                      "note": ("Game status (Out, Doubtful, Questionable) is from the final injury report. " if any_game else

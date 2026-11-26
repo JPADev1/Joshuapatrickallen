@@ -802,3 +802,39 @@ html.shr-open{overflow:hidden}
 .rx-out img[hidden],.rx-out video[hidden]{display:none}
 .rx-msg{margin:10px 0 0;color:#e9c46a;font-size:.88rem;text-align:center}
 .rx-go[hidden]{display:none}
+
+/* "Shut up, Collinsworth" button beside the Gameday live card (scripts/shutup.js) */
+.stfu{--d:78px;position:relative;display:flex;align-items:flex-end;gap:10px;margin:14px 0;padding:0 0 0 12px;border-radius:16px;background:linear-gradient(135deg,#0b1d5a,#13277a);border:1px solid #1f3480;overflow:hidden;color:#e1e6f8}
+.stfu[hidden]{display:none}
+.stfu-cw{order:2;width:150px;height:auto;margin-left:auto;align-self:flex-end;transform-origin:50% 100%;filter:drop-shadow(0 4px 10px rgba(0,0,0,.45))}
+.stfu-go{display:flex;align-items:center;gap:18px;padding:16px 0 14px 6px}
+.stfu-bw{position:relative;width:var(--d);height:var(--d);flex:none;margin:22px 8px}
+.stfu-bw .rays{position:absolute;left:50%;top:50%;width:calc(var(--d) + 32px);height:calc(var(--d) + 32px);transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;color:#fff;opacity:.7;
+  background:repeating-conic-gradient(from 7.5deg,currentColor 0 1.2deg,transparent 1.2deg 15deg);
+  -webkit-mask:radial-gradient(circle,transparent calc(var(--d)/2 + 4px),#000 calc(var(--d)/2 + 5px));mask:radial-gradient(circle,transparent calc(var(--d)/2 + 4px),#000 calc(var(--d)/2 + 5px))}
+.stfu-bw .pm{position:absolute;left:50%;transform:translateX(-50%);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.9;pointer-events:none;white-space:nowrap}
+.stfu-bw .pm.up{bottom:calc(100% + 19px)}.stfu-bw .pm.dn{top:calc(100% + 24px)}
+.stfu-b{--bl:#ff6b84;--bm:#d4153b;--bd:#7d0620;position:relative;z-index:1;width:var(--d);height:var(--d);border-radius:50%;padding:6px;cursor:pointer;
+  font:inherit;font-size:.6rem;font-weight:800;line-height:1.12;color:#fff;text-transform:uppercase;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(circle at 34% 26%,var(--bl) 0,var(--bm) 42%,var(--bd) 100%);border:2px solid rgba(255,255,255,.55);text-shadow:0 1px 2px rgba(0,0,0,.55);
+  box-shadow:inset 0 3px 5px rgba(255,255,255,.45),inset 0 -7px 10px rgba(0,0,0,.35),0 6px 0 var(--bd),0 9px 13px rgba(0,0,0,.45);
+  transition:transform .08s ease,box-shadow .08s ease,background .08s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.stfu-b:active,.stfu-b.down{transform:translateY(5px);background:radial-gradient(circle at 62% 78%,var(--bl) 0,var(--bm) 40%,var(--bd) 100%);
+  box-shadow:inset 0 6px 11px rgba(0,0,0,.6),inset 0 -2px 4px rgba(255,255,255,.3),0 1px 0 var(--bd),0 3px 6px rgba(0,0,0,.4)}
+.stfu-b:focus-visible{outline:3px solid #e9c46a;outline-offset:4px}
+.stfu-ct p{margin:0 0 6px;line-height:1.1}
+.stfu-ct b{display:block;font-size:1.55rem;color:#e9c46a;font-variant-numeric:tabular-nums}
+.stfu-ct span{font-size:.72rem;color:#a0afd7}
+.stfu-ct .stfu-me{font-size:.72rem;color:#a0afd7;margin-top:2px}
+.stfu-pop{position:absolute;bottom:100%;z-index:2;font-style:normal;font-weight:800;color:#e9c46a;text-shadow:0 1px 3px rgba(0,0,0,.6);pointer-events:none;animation:stfupop .9s ease-out forwards}
+@keyframes stfupop{from{transform:translateY(0);opacity:1}to{transform:translateY(-38px);opacity:0}}
+.stfu-cw.hush{animation:stfuhush .35s ease}
+@keyframes stfuhush{0%{transform:rotate(0)}30%{transform:rotate(-4deg) scale(.97)}60%{transform:rotate(3deg)}100%{transform:rotate(0)}}
+/* wide screens: its own column to the right of the live card */
+.stfu.side{position:absolute;z-index:5;width:196px;margin:0;padding:0;flex-direction:column;align-items:center;gap:0}
+.stfu.side .stfu-cw{order:0;width:196px;margin:0}
+.stfu.side .stfu-go{flex-direction:column;gap:6px;padding:0 10px 16px;margin-top:-34px;text-align:center}
+.stfu.side .stfu-ct{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.stfu.side .stfu-ct .stfu-me{width:100%}
+@media (max-width:420px){.stfu-cw{width:118px}.stfu-go{gap:12px}.stfu{--d:70px}}
+@media (prefers-reduced-motion:reduce){.stfu-b{transition:none}.stfu-cw.hush,.stfu-pop{animation:none}}

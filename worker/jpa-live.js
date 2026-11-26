@@ -1,4 +1,6 @@
-// jpa-live v4: Josh Allen live stats from Tank01 for notjoshingaround.com
+// jpa-live v5: Josh Allen live stats from Tank01 for notjoshingaround.com
+// v5: "Shut up, Collinsworth" counter at /?shutup (needs a D1 binding named SHUTUP to the jpa-shutup database;
+// without it the rest of the Worker runs exactly as v4 and the counter just reports "not connected").
 // Tank01 is called ONLY by the Worker's own timer, and ONLY from 10 minutes before a Bills kickoff until the game is
 // final. Visitors read the saved copy (KV), so page views never use Tank01 requests.
 // v4: the timer runs every minute (Cloudflare: Settings > Triggers > Cron "* * * * *"), and the Worker picks how often
@@ -302,12 +304,54 @@ export default {
         lastGame: rec ? { game: rec.nflGame, status: rec.status, minutesBetweenCalls: rec.every || null, updated: rec.fetched || null } : null,
         nextGames: next.map(x => ({ game: x.id, kickoffUTC: new Date(x.k).toISOString() })) });
     }
-    if (MEMO && Date.now() - MEMO.t < 15e3) return json(MEMO.rec);    // busy games: serve the copy read in the last 15s
-    const rec = await env.LIVE.get("game", { type: "json" });
-    MEMO = { t: Date.now(), rec: rec || { live: false, note: "No Bills game data yet" } };
-    return json(MEMO.rec);
+    if (url.searchParams.has("shutup")) return shutup(request, env);
+    return json(await saved(env));
   },
 };
+async function saved(env) { // busy games: serve the copy read in the last 15s
+  if (MEMO && Date.now() - MEMO.t < 15e3) return MEMO.rec;
+  const rec = await env.LIVE.get("game", { type: "json" });
+  MEMO = { t: Date.now(), rec: rec || { live: false, note: "No Bills game data yet" } };
+  return MEMO.rec;
+}
+
+// ---------------- "Shut up, Collinsworth" counter ----------------
+// GET  /?shutup            today's totals: {day, today, game, live, final, kickoff}
+// POST /?shutup  body "n=5" adds a fan's presses since their last send (1 to 30 per send; the page sends every 2 s).
+// "today" counts every press on the Eastern-time date; "game" only presses from kickoff to the final whistle of today's
+// Bills game. Stored in D1 (binding SHUTUP, table presses(day, scope, n)), so every visitor sees the same numbers.
+let SHUT = null; // last totals read, reused for 5 s so lots of fans checking the count don't each read D1
+async function shutup(request, env) {
+  if (request.method === "OPTIONS") return new Response(null, { headers: { "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST", "Access-Control-Allow-Headers": "Content-Type" } });
+  if (!env.SHUTUP) return json({ error: "counter not connected" });
+  const now = Date.now(), day = new Date(etWall(now)).toISOString().slice(0, 10);
+  const today = SCHEDULE.find(([, t]) => t.slice(0, 10) === day);
+  const kick = today ? etToUTC(+day.slice(0, 4), +day.slice(5, 7) - 1, +day.slice(8, 10), +today[1].slice(11, 13), +today[1].slice(14, 16)) : null;
+  let final = false;
+  if (kick && now >= kick) {
+    const rec = await saved(env);
+    final = !!(rec && rec.gameID && String(rec.gameID).slice(0, 8) === day.replaceAll("-", "") && /final|completed/i.test(rec.status || ""));
+  }
+  const live = !!kick && now >= kick && !final && now < kick + 6 * 3600e3;
+  const totals = rows => { const o = { day, today: 0, game: 0, live, final, kickoff: kick ? new Date(kick).toISOString() : null };
+    (rows || []).forEach(r => { if (r.scope === "day") o.today = r.n; if (r.scope === "game") o.game = r.n; }); return o; };
+  const read = env.SHUTUP.prepare("SELECT scope, n FROM presses WHERE day = ?1").bind(day);
+  if (request.method !== "POST") {
+    if (SHUT && SHUT.day === day && now - SHUT.t < 5e3) return json(Object.assign({}, SHUT.out, { live, final }));
+    const out = totals((await read.all()).results);
+    SHUT = { t: now, day, out };
+    return json(out);
+  }
+  const m = /(\d+)/.exec(await request.text()), n = m ? Math.min(30, +m[1]) : 0;
+  if (n < 1) return json({ error: "nothing to add" });
+  const add = scope => env.SHUTUP.prepare("INSERT INTO presses (day, scope, n) VALUES (?1, ?2, ?3) " +
+    "ON CONFLICT(day, scope) DO UPDATE SET n = n + excluded.n").bind(day, scope, n);
+  const res = await env.SHUTUP.batch(live ? [add("day"), add("game"), read] : [add("day"), read]);
+  const out = totals(res[res.length - 1].results);
+  SHUT = { t: now, day, out };
+  return json(out);
+}
 let MEMO = null; // last copy read from KV in this Worker instance (fewer KV reads when lots of fans are watching)
 function json(o) {
   return new Response(JSON.stringify(o, null, 2), {

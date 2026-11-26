@@ -384,7 +384,8 @@
     var html = L ? wpHtml(L) : pre && pg ? preWpHtml(pg) : '';
     if(!el || !html){ if(card) card.hidden = true; rxGet = null; return; }
     if(!card){ card = document.createElement('div'); card.id = 'wpcard'; card.className = 'wpcard'; }
-    if(card.previousSibling !== el) el.parentNode.insertBefore(card, el.nextSibling);
+    var after = el.nextSibling && el.nextSibling.classList && el.nextSibling.classList.contains('stfu') ? el.nextSibling : el; // the Collinsworth button stays right under the live card
+    if(card.previousSibling !== after) el.parentNode.insertBefore(card, after.nextSibling);
     var date = L ? L.date : gameDate(match), mine = window.JPAReact && JPAReact.has(date);
     card.innerHTML = html + (window.JPAReact && window.JPAWinCard ? '<button type="button" class="rxgo">🍻 ' + (mine ? 'Keep building your gameday chart' : 'Customize your gameday chart') + '</button>'
       + '<p class="rxsub">' + (L ? 'Add your beers, wings, thrown remotes and more right on the chart, then share it as an image or a 20-second video.'
