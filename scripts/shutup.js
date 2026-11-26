@@ -68,19 +68,20 @@
   function show(){
     if(!box) return;
     var g = box.querySelector('.stfu-g'), gl = box.querySelector('.stfu-gl');
-    box.querySelector('.stfu-t').textContent = srv ? fmt(srv.today + pending) : ok ? '…' : fmt(pending);
     var live = srv && srv.live;
+    box.querySelector('.stfu-t').textContent = srv ? fmt(srv.today + pending) : '…';
     g.textContent = srv ? fmt(srv.game + (live ? pending : 0)) : '…';
     gl.textContent = srv && srv.final ? 'this game (final)' : live || !srv ? 'this game' : 'this game, from kickoff';
     box.querySelector('.stfu-me span').textContent = fmt(mine);
   }
-  function take(j){ if(j && !j.error){ srv = j; ok = true; } else { ok = false; } show(); }
+  // Only a real counter answer has numeric totals (an older Worker without the counter answers with the game record)
+  function take(j){ if(j && typeof j.today === 'number' && typeof j.game === 'number'){ srv = j; ok = true; } else { ok = false; } show(); }
   function poll(){ fetch(API, {cache: 'no-store'}).then(function(r){ return r.json(); }).then(take).catch(function(){ ok = false; show(); }); }
   function flush(){
     if(!pending || sending) return;
     var n = Math.min(30, pending); pending -= n; sending = true;
     fetch(API, {method: 'POST', body: 'n=' + n, headers: {'Content-Type': 'text/plain'}}).then(function(r){ return r.json(); })
-      .then(function(j){ if(j && j.error && j.error !== 'nothing to add') pending += n; take(j); })
+      .then(function(j){ if(!(j && typeof j.today === 'number')) pending += n; take(j); })   // not counted: keep them for the next send
       .catch(function(){ pending += n; ok = false; show(); })   // try again on the next send
       .then(function(){ sending = false; });
   }

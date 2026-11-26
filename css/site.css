@@ -809,7 +809,7 @@ html.shr-open{overflow:hidden}
 .stfu-pic{order:2;position:relative;margin-left:auto;align-self:flex-end;line-height:0}
 .stfu-cw{display:block;width:150px;height:auto;transform-origin:50% 100%;filter:drop-shadow(0 4px 10px rgba(0,0,0,.45))}
 /* speech bubble: his catchphrase, tail pointing at his mouth */
-.stfu-say{position:absolute;z-index:2;top:6px;right:calc(100% - 52px);width:max-content;max-width:88px;padding:6px 9px;border-radius:14px;background:#fff;color:#0b1b3a;
+.stfu-say{position:absolute;z-index:2;top:6px;right:calc(100% - 26px);width:max-content;max-width:88px;padding:6px 9px;border-radius:14px;background:#fff;color:#0b1b3a;
   font:italic 700 .7rem/1.15 LoraShare,Georgia,serif;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.35);pointer-events:none;transform-origin:100% 100%}
 .stfu-say::after{content:"";position:absolute;right:8px;bottom:-9px;border:6px solid transparent;border-top:10px solid #fff;border-bottom:0;transform:skewX(-28deg)}
 .stfu-say.cut{animation:stfusay .35s ease}
@@ -840,13 +840,14 @@ html.shr-open{overflow:hidden}
 /* wide screens: its own column to the right of the live card */
 .stfu.side{position:absolute;z-index:5;width:196px;margin:0;padding:38px 0 0;flex-direction:column;align-items:center;gap:0}
 .stfu.side .stfu-pic{order:0;margin:0}.stfu.side .stfu-cw{width:196px}
-.stfu.side .stfu-say{top:-32px;right:auto;left:10px;max-width:150px;font-size:.78rem}
+.stfu.side .stfu-say{top:-32px;right:auto;left:2px;max-width:150px;font-size:.78rem}
 .stfu.side .stfu-say::after{right:auto;left:44px;transform:skewX(22deg)}
 .stfu.side .stfu-go{flex-direction:column;gap:6px;padding:0 10px 16px;margin-top:-34px;text-align:center}
 .stfu.side .stfu-ct{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 .stfu.side .stfu-ct .stfu-me{width:100%}
 .stfu-say{white-space:normal}
-@media (max-width:420px){.stfu-cw{width:118px}.stfu-say{font-size:.64rem;max-width:74px;right:calc(100% - 42px)}.stfu-go{gap:12px}.stfu{--d:70px}}
+@media (max-width:420px){.stfu-cw{width:118px}.stfu-say{font-size:.64rem;max-width:74px;right:calc(100% - 20px)}.stfu-go{gap:12px}.stfu{--d:70px}}
+@media (max-width:380px){.stfu-say{right:calc(100% - 40px);font-size:.6rem;max-width:66px}}
 @media (prefers-reduced-motion:reduce){.stfu-b{transition:none}.stfu-cw.hush,.stfu-pop,.stfu-say.cut{animation:none}}
 
 /* Holiday greeting button (scripts/holiday.js) */
