@@ -36,7 +36,7 @@
    {
     "name": "Dalton Kincaid",
     "pos": "TE",
-    "injury": "Thumb",
+    "injury": "Thumb, Ankle",
     "status": "Questionable",
     "game": true
    },
@@ -2441,5 +2441,6 @@
   "seedWin": 1,
   "seedLoss": 2,
   "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 75% of the time with a win and 37% with a loss."
- }
+ },
+ "analyst": "Cris Collinsworth"
 }

@@ -21,6 +21,13 @@
    "use": "Dolphins records on rivalry-theme days",
    "added": "2026-11-22",
    "notes": "Generated from mia-bottle-feed.webp; navy bottom strip whitened."
+  },
+  "share-bg-thanksgiving": {
+   "team": "KC",
+   "subject": "Allen gripping a roast turkey leg by the bone in his fist, \"Chiefs\" seared into the meat, steam rising",
+   "use": "Default background on Thanksgiving (Chiefs at Bills, 2026-11-26) via theme.json bg",
+   "added": "2026-11-26",
+   "notes": "User-supplied image (originals/ holds it as supplied, 1086x1448); scaled to 1080 wide, cropped 20px top / 70px bottom, steam added. No logos."
   }
  }
 }
