@@ -32,7 +32,8 @@
   }
   function build(){
     box = document.createElement('aside'); box.className = 'stfu'; box.hidden = true; box.setAttribute('aria-label', 'Shut up, Collinsworth counter');
-    box.innerHTML = '<img class="stfu-cw" src="images/collinsworth.webp" alt="Illustration of NBC analyst Cris Collinsworth holding a microphone" width="400" height="435">'
+    box.innerHTML = '<div class="stfu-pic"><img class="stfu-cw" src="images/collinsworth.webp" alt="Illustration of NBC analyst Cris Collinsworth holding a microphone" width="400" height="435">'
+      + '<span class="stfu-say">Now here&rsquo;s a&nbsp;guy&hellip;</span></div>'
       + '<div class="stfu-go"><div class="stfu-bw"><i class="rays" aria-hidden="true"></i><span class="pm up" aria-hidden="true">press</span>'
       + '<button type="button" class="stfu-b">Shut up, Collins&shy;worth</button><span class="pm dn" aria-hidden="true">me</span></div>'
       + '<div class="stfu-ct"><p><b class="stfu-g">0</b><span class="stfu-gl">this game</span></p><p><b class="stfu-t">0</b><span>today</span></p>'
@@ -44,6 +45,7 @@
       pending++; mine++; try{ localStorage.setItem(myKey, mine); }catch(err){}
       b.classList.add('down'); setTimeout(function(){ b.classList.remove('down'); }, 110);
       cw.classList.remove('hush'); void cw.offsetWidth; cw.classList.add('hush');
+      var say = box.querySelector('.stfu-say'); say.classList.remove('cut'); void say.offsetWidth; say.classList.add('cut');
       var p = document.createElement('i'); p.className = 'stfu-pop'; p.textContent = '+1'; p.setAttribute('aria-hidden', 'true');
       p.style.left = (40 + Math.random() * 20) + '%'; box.querySelector('.stfu-bw').appendChild(p); setTimeout(function(){ p.remove(); }, 900);
       show();

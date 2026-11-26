@@ -806,7 +806,14 @@ html.shr-open{overflow:hidden}
 /* "Shut up, Collinsworth" button beside the Gameday live card (scripts/shutup.js) */
 .stfu{--d:78px;position:relative;display:flex;align-items:flex-end;gap:10px;margin:14px 0;padding:0 0 0 12px;border-radius:16px;background:linear-gradient(135deg,#0b1d5a,#13277a);border:1px solid #1f3480;overflow:hidden;color:#e1e6f8}
 .stfu[hidden]{display:none}
-.stfu-cw{order:2;width:150px;height:auto;margin-left:auto;align-self:flex-end;transform-origin:50% 100%;filter:drop-shadow(0 4px 10px rgba(0,0,0,.45))}
+.stfu-pic{order:2;position:relative;margin-left:auto;align-self:flex-end;line-height:0}
+.stfu-cw{display:block;width:150px;height:auto;transform-origin:50% 100%;filter:drop-shadow(0 4px 10px rgba(0,0,0,.45))}
+/* speech bubble: his catchphrase, tail pointing at his mouth */
+.stfu-say{position:absolute;z-index:2;top:6px;right:calc(100% - 52px);width:max-content;max-width:88px;padding:6px 9px;border-radius:14px;background:#fff;color:#0b1b3a;
+  font:italic 700 .7rem/1.15 LoraShare,Georgia,serif;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.35);pointer-events:none;transform-origin:100% 100%}
+.stfu-say::after{content:"";position:absolute;right:8px;bottom:-9px;border:6px solid transparent;border-top:10px solid #fff;border-bottom:0;transform:skewX(-28deg)}
+.stfu-say.cut{animation:stfusay .35s ease}
+@keyframes stfusay{0%{transform:scale(1)}35%{transform:scale(.8) rotate(-4deg)}100%{transform:scale(1)}}
 .stfu-go{display:flex;align-items:center;gap:18px;padding:16px 0 14px 6px}
 .stfu-bw{position:relative;width:var(--d);height:var(--d);flex:none;margin:22px 8px}
 .stfu-bw .rays{position:absolute;left:50%;top:50%;width:calc(var(--d) + 32px);height:calc(var(--d) + 32px);transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;color:#fff;opacity:.7;
@@ -831,10 +838,13 @@ html.shr-open{overflow:hidden}
 .stfu-cw.hush{animation:stfuhush .35s ease}
 @keyframes stfuhush{0%{transform:rotate(0)}30%{transform:rotate(-4deg) scale(.97)}60%{transform:rotate(3deg)}100%{transform:rotate(0)}}
 /* wide screens: its own column to the right of the live card */
-.stfu.side{position:absolute;z-index:5;width:196px;margin:0;padding:0;flex-direction:column;align-items:center;gap:0}
-.stfu.side .stfu-cw{order:0;width:196px;margin:0}
+.stfu.side{position:absolute;z-index:5;width:196px;margin:0;padding:38px 0 0;flex-direction:column;align-items:center;gap:0}
+.stfu.side .stfu-pic{order:0;margin:0}.stfu.side .stfu-cw{width:196px}
+.stfu.side .stfu-say{top:-32px;right:auto;left:10px;max-width:150px;font-size:.78rem}
+.stfu.side .stfu-say::after{right:auto;left:44px;transform:skewX(22deg)}
 .stfu.side .stfu-go{flex-direction:column;gap:6px;padding:0 10px 16px;margin-top:-34px;text-align:center}
 .stfu.side .stfu-ct{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 .stfu.side .stfu-ct .stfu-me{width:100%}
-@media (max-width:420px){.stfu-cw{width:118px}.stfu-go{gap:12px}.stfu{--d:70px}}
-@media (prefers-reduced-motion:reduce){.stfu-b{transition:none}.stfu-cw.hush,.stfu-pop{animation:none}}
+.stfu-say{white-space:normal}
+@media (max-width:420px){.stfu-cw{width:118px}.stfu-say{font-size:.64rem;max-width:74px;right:calc(100% - 42px)}.stfu-go{gap:12px}.stfu{--d:70px}}
+@media (prefers-reduced-motion:reduce){.stfu-b{transition:none}.stfu-cw.hush,.stfu-pop,.stfu-say.cut{animation:none}}
