@@ -462,8 +462,8 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 33,
-     "rank": 2
+     "v": 30,
+     "rank": 4
     },
     "opp": {
      "v": 22,
@@ -475,8 +475,8 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 22,
-     "rank": 13
+     "v": 20,
+     "rank": 6
     },
     "opp": {
      "v": 24,
@@ -488,12 +488,12 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 256,
-     "rank": 11
+     "v": 240,
+     "rank": 15
     },
     "opp": {
      "v": 248,
-     "rank": 14
+     "rank": 13
     }
    },
    {
@@ -501,12 +501,12 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 241,
-     "rank": 19
+     "v": 235,
+     "rank": 15
     },
     "opp": {
      "v": 257,
-     "rank": 29
+     "rank": 28
     }
    },
    {
@@ -514,7 +514,7 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 147,
+     "v": 149,
      "rank": 2
     },
     "opp": {
@@ -527,8 +527,8 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 94,
-     "rank": 7
+     "v": 92,
+     "rank": 6
     },
     "opp": {
      "v": 106,
@@ -540,8 +540,8 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 21,
-     "rank": 13
+     "v": 23,
+     "rank": 12
     },
     "opp": {
      "v": 25,
@@ -553,7 +553,7 @@
     "better": "high",
     "dec": 0,
     "bills": {
-     "v": 23,
+     "v": 24,
      "rank": 15
     },
     "opp": {
@@ -566,8 +566,8 @@
     "better": "low",
     "dec": 0,
     "bills": {
-     "v": 9,
-     "rank": 24
+     "v": 11,
+     "rank": 27
     },
     "opp": {
      "v": 12,
@@ -580,11 +580,11 @@
     "dec": 0,
     "bills": {
      "v": 8,
-     "rank": 11
+     "rank": 15
     },
     "opp": {
      "v": 7,
-     "rank": 16
+     "rank": 17
     }
    }
   ]
@@ -664,10 +664,10 @@
    "rushTD": 3,
    "totalTD": 6
   },
-  "gameday": "2026-11-26",
-  "gameId": "2026_12_KC_BUF",
-  "opp": "Chiefs",
-  "home": true,
+  "gameday": "2026-12-06",
+  "gameId": "2026_13_BUF_NE",
+  "opp": "Patriots",
+  "home": false,
   "items": [
    {
     "title": "NFL first: 12+ rushing TDs in 4 straight seasons by a QB",
@@ -676,6 +676,37 @@
     "goal": "for his 12th rushing TD this season, making him the first QB with 12+ in 4 straight seasons",
     "done": "12th rushing TD of the season! He's the first QB ever with 12+ rushing TDs in 4 straight seasons (15, 12, 14 and 12), passing Jalen Hurts' 3 straight (2022-24).",
     "detail": "Needs 1 rushing TD for his 12th this season. He'd be the first QB with 12+ in 4 straight seasons (15 in 2023, 12 in 2024, 14 in 2025), passing Jalen Hurts, who had 3 straight (13, 15 and 14 in 2022-24)."
+   },
+   {
+    "title": "NFL career passing yards",
+    "detail": "Needs 128 passing yards (career high in a game: 424). Ties Ken Anderson (32,838) for No. 48; 129 passes him.",
+    "k": "passYds",
+    "need": 128,
+    "goal": "to tie Ken Anderson (32,838) for No. 48",
+    "done": "He tied Ken Anderson (32,838) for No. 48.",
+    "next": [
+     {
+      "who": "Troy Aikman (32,942)",
+      "spot": 47,
+      "tie": 232,
+      "pass": 233
+     },
+     {
+      "who": "Y.A. Tittle (33,070)",
+      "spot": 46,
+      "tie": 360,
+      "pass": 361
+     },
+     {
+      "who": "Steve Young (33,124)",
+      "spot": 45,
+      "tie": 414,
+      "pass": 415
+     }
+    ],
+    "need2": 129,
+    "goal2": "to pass him",
+    "done2": "He passed Ken Anderson (32,838) and moved up to No. 48."
    },
    {
     "title": "NFL career rushing touchdowns",
@@ -749,69 +780,14 @@
     "done2": "He passed George Blanda (236) and moved up to No. 37."
    },
    {
-    "title": "NFL career passing yards",
-    "detail": "Needs 209 passing yards (career high in a game: 424). Ties Ken Anderson (32,838) for No. 48; 210 passes him.",
-    "k": "passYds",
-    "need": 209,
-    "goal": "to tie Ken Anderson (32,838) for No. 48",
-    "done": "He tied Ken Anderson (32,838) for No. 48.",
-    "next": [
-     {
-      "who": "Troy Aikman (32,942)",
-      "spot": 47,
-      "tie": 313,
-      "pass": 314
-     },
-     {
-      "who": "Y.A. Tittle (33,070)",
-      "spot": 46,
-      "tie": 441,
-      "pass": 442
-     },
-     {
-      "who": "Steve Young (33,124)",
-      "spot": 45,
-      "tie": 495,
-      "pass": 496
-     }
-    ],
-    "need2": 210,
-    "goal2": "to pass him",
-    "done2": "He passed Ken Anderson (32,838) and moved up to No. 48."
-   },
-   {
-    "title": "Record against the Chiefs",
-    "detail": "A win makes him 6-1 as a starter against them in the regular season.",
+    "title": "Record against the Patriots",
+    "detail": "A win makes him 9-8 as a starter against them in the regular season.",
     "k": "win",
     "need": 1,
-    "goal": "to go 6-1 against them",
-    "done": "Win! He's 6-1 as a starter against the Chiefs in the regular season."
+    "goal": "to go 9-8 against them",
+    "done": "Win! He's 9-8 as a starter against the Patriots in the regular season."
    }
-  ],
-  "held": true,
-  "final": {
-   "date": "2026-11-26",
-   "final": true,
-   "opp": "KC",
-   "bills": 13,
-   "them": 10,
-   "status": "Final",
-   "s": {
-    "cmp": 10,
-    "att": 21,
-    "yds": 81,
-    "td": 0,
-    "int": 2,
-    "sk": 2,
-    "rushAtt": 7,
-    "rushYds": 43,
-    "rushTD": 0,
-    "recTD": 0,
-    "fum": 0,
-    "fumLost": 0
-   },
-   "source": "ESPN box score (unofficial)"
-  }
+  ]
  },
  "props": {
   "asOf": "Nov. 27, 2026",
@@ -864,6 +840,10 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
@@ -876,38 +856,39 @@
      21,
      31,
      18,
-     22
+     22,
+     32
     ],
     "ladder": [
      {
       "line": 10,
-      "hit": 10,
+      "hit": 11,
       "stars": 5.0
      },
      {
       "line": 12,
-      "hit": 10,
+      "hit": 11,
       "stars": 4.5
      }
     ],
     "extra": [
      {
       "line": 15,
-      "hit": 8
+      "hit": 9
      },
      {
       "line": 18,
-      "hit": 8
+      "hit": 9
      }
     ],
     "next": {
      "line": 20,
-     "hit": 7
+     "hit": 8
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 12+ in all 10 games.",
-     "Averages 20.9 rushing attempts a game (median 21.5)."
+     "Cleared 12+ in all 11 games.",
+     "Averages 21.9 rushing attempts a game (median 22)."
     ],
     "cons": [
      "Closest call: 12 vs NE in Week 4.",
@@ -978,11 +959,11 @@
     "pros": [
      "Cleared 2+ in all 6 games.",
      "Averages 3.8 receptions a game (median 3.5).",
-     "Steady volume: 5.3 targets a game.",
-     "The Bills rank 19th of 32 against the pass, allowing 241 passing yards a game."
+     "Steady volume: 5.3 targets a game."
     ],
     "cons": [
      "Closest call: 2 vs PIT in Week 2.",
+     "The Bills rank 15th of 32 against the pass, allowing 235 passing yards a game.",
      "Swingy: anywhere from 2 to 6 this season."
     ],
     "status": ""
@@ -1035,6 +1016,10 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
@@ -1047,19 +1032,20 @@
      5,
      4,
      2,
-     5
+     5,
+     3
     ],
     "ladder": [
      {
       "line": 2,
-      "hit": 9,
+      "hit": 10,
       "stars": 4.5
      }
     ],
     "extra": [
      {
       "line": 3,
-      "hit": 8
+      "hit": 9
      }
     ],
     "next": {
@@ -1068,11 +1054,11 @@
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 2+ in 9 of 10 games.",
-     "Averages 3.8 receptions a game (median 4).",
-     "Cleared it in each of his last 7 games.",
-     "Steady volume: 5.4 targets a game.",
-     "The Patriots rank 29th of 32 against the pass, allowing 257 passing yards a game."
+     "Cleared 2+ in 10 of 11 games.",
+     "Averages 3.7 receptions a game (median 4).",
+     "Cleared it in each of his last 8 games.",
+     "Steady volume: 5.5 targets a game.",
+     "The Patriots rank 28th of 32 against the pass, allowing 257 passing yards a game."
     ],
     "cons": [
      "Missed in Week 3 vs LAC (1).",
@@ -1128,6 +1114,10 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
@@ -1140,19 +1130,20 @@
      64,
      58,
      26,
-     101
+     101,
+     33
     ],
     "ladder": [
      {
       "line": 25,
-      "hit": 9,
+      "hit": 10,
       "stars": 4.5
      }
     ],
     "extra": [
      {
       "line": 30,
-      "hit": 8
+      "hit": 9
      }
     ],
     "next": {
@@ -1161,11 +1152,11 @@
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 25+ in 9 of 10 games.",
-     "Averages 53.9 receiving yards a game (median 54).",
-     "Cleared it in each of his last 7 games.",
-     "Steady volume: 5.4 targets a game.",
-     "The Patriots rank 29th of 32 against the pass, allowing 257 passing yards a game."
+     "Cleared 25+ in 10 of 11 games.",
+     "Averages 52.0 receiving yards a game (median 50).",
+     "Cleared it in each of his last 8 games.",
+     "Steady volume: 5.5 targets a game.",
+     "The Patriots rank 28th of 32 against the pass, allowing 257 passing yards a game."
     ],
     "cons": [
      "Missed in Week 3 vs LAC (6).",
@@ -1221,11 +1212,11 @@
     "pros": [
      "Cleared 2+ in all 4 games.",
      "Averages 2.8 receptions a game (median 3).",
-     "Steady volume: 6.5 targets a game.",
-     "The Bills rank 19th of 32 against the pass, allowing 241 passing yards a game."
+     "Steady volume: 6.5 targets a game."
     ],
     "cons": [
      "Closest call: 2 vs DET in Week 10.",
+     "The Bills rank 15th of 32 against the pass, allowing 235 passing yards a game.",
      "Small sample: 4 games."
     ],
     "status": ""
@@ -1233,11 +1224,11 @@
    {
     "team": "BUF",
     "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Completions",
-    "key": "cmp",
+    "player": "James Cook",
+    "pos": "RB",
+    "cat": "Rushing",
+    "market": "Rushing yards",
+    "key": "rushYds",
     "games": [
      {
       "wk": 1,
@@ -1278,45 +1269,62 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
-     20,
-     20,
-     16,
-     23,
-     12,
-     23,
-     21,
-     21,
-     11,
-     27
+     57,
+     135,
+     154,
+     75,
+     111,
+     95,
+     80,
+     107,
+     157,
+     89,
+     117
     ],
     "ladder": [
      {
-      "line": 12,
-      "hit": 9,
+      "line": 50,
+      "hit": 11,
+      "stars": 5.0
+     },
+     {
+      "line": 60,
+      "hit": 10,
+      "stars": 4.0
+     },
+     {
+      "line": 70,
+      "hit": 10,
       "stars": 4.0
      }
     ],
     "extra": [
      {
-      "line": 15,
-      "hit": 8
+      "line": 80,
+      "hit": 9
      }
     ],
     "next": {
-     "line": 18,
+     "line": 90,
      "hit": 7
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 12+ in 9 of 10 games.",
-     "Averages 19.4 completions a game (median 20.5).",
-     "The Patriots rank 29th of 32 against the pass, allowing 257 passing yards a game."
+     "Cleared 70+ in 10 of 11 games.",
+     "Averages 107.0 rushing yards a game (median 107).",
+     "Cleared it in each of his last 10 games.",
+     "Steady workload: 21.9 carries a game."
     ],
     "cons": [
-     "Missed in Week 10 vs NYJ (11)."
+     "Missed in Week 1 vs HOU (57).",
+     "The Patriots rank 12th of 32 against the run, allowing 106 rushing yards a game."
     ],
     "status": ""
    },
@@ -1401,111 +1409,9 @@
     ],
     "cons": [
      "Closest call: 6 vs PIT in Week 2.",
-     "The Bills rank 7th of 32 against the run, allowing 94 rushing yards a game.",
+     "The Bills rank 6th of 32 against the run, allowing 92 rushing yards a game.",
      "Swingy: anywhere from 6 to 19 this season.",
      "Trending down: 6.0 a game over his last two, below his 10.8 average."
-    ],
-    "status": ""
-   },
-   {
-    "team": "BUF",
-    "nick": "Bills",
-    "player": "James Cook",
-    "pos": "RB",
-    "cat": "Rushing",
-    "market": "Rushing yards",
-    "key": "rushYds",
-    "games": [
-     {
-      "wk": 1,
-      "opp": "@HOU"
-     },
-     {
-      "wk": 2,
-      "opp": "DET"
-     },
-     {
-      "wk": 3,
-      "opp": "LAC"
-     },
-     {
-      "wk": 4,
-      "opp": "NE"
-     },
-     {
-      "wk": 5,
-      "opp": "@LA"
-     },
-     {
-      "wk": 6,
-      "opp": "@LV"
-     },
-     {
-      "wk": 8,
-      "opp": "BAL"
-     },
-     {
-      "wk": 9,
-      "opp": "@MIN"
-     },
-     {
-      "wk": 10,
-      "opp": "@NYJ"
-     },
-     {
-      "wk": 11,
-      "opp": "MIA"
-     }
-    ],
-    "vals": [
-     57,
-     135,
-     154,
-     75,
-     111,
-     95,
-     80,
-     107,
-     157,
-     89
-    ],
-    "ladder": [
-     {
-      "line": 50,
-      "hit": 10,
-      "stars": 5.0
-     },
-     {
-      "line": 60,
-      "hit": 9,
-      "stars": 4.0
-     },
-     {
-      "line": 70,
-      "hit": 9,
-      "stars": 3.5
-     }
-    ],
-    "extra": [
-     {
-      "line": 80,
-      "hit": 8
-     }
-    ],
-    "next": {
-     "line": 90,
-     "hit": 6
-    },
-    "gameday": 0.0,
-    "pros": [
-     "Cleared 70+ in 9 of 10 games.",
-     "Averages 106.0 rushing yards a game (median 101).",
-     "Cleared it in each of his last 9 games.",
-     "Steady workload: 20.9 carries a game."
-    ],
-    "cons": [
-     "Missed in Week 1 vs HOU (57).",
-     "The Patriots rank 12th of 32 against the run, allowing 106 rushing yards a game."
     ],
     "status": ""
    },
@@ -1557,6 +1463,10 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
@@ -1569,38 +1479,40 @@
      289,
      234,
      196,
-     304
+     304,
+     81
     ],
     "ladder": [
      {
       "line": 150,
       "hit": 10,
-      "stars": 5.0
+      "stars": 4.0
      },
      {
       "line": 175,
       "hit": 10,
-      "stars": 5.0
-     },
-     {
-      "line": 200,
-      "hit": 9,
       "stars": 3.5
      }
     ],
-    "extra": [],
+    "extra": [
+     {
+      "line": 200,
+      "hit": 9
+     }
+    ],
     "next": {
      "line": 225,
      "hit": 7
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 200+ in 9 of 10 games.",
-     "Averages 252.7 passing yards a game (median 250.5).",
-     "The Patriots rank 29th of 32 against the pass, allowing 257 passing yards a game."
+     "Cleared 175+ in 10 of 11 games.",
+     "Averages 237.1 passing yards a game (median 248).",
+     "The Patriots rank 28th of 32 against the pass, allowing 257 passing yards a game."
     ],
     "cons": [
-     "Missed in Week 10 vs NYJ (196)."
+     "Missed in Week 12 vs KC (81).",
+     "Swingy: anywhere from 81 to 334 this season."
     ],
     "status": ""
    },
@@ -1652,6 +1564,10 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
@@ -1664,30 +1580,31 @@
      7,
      6,
      5,
-     0
+     0,
+     7
     ],
     "ladder": [
      {
       "line": 4,
-      "hit": 9,
+      "hit": 10,
       "stars": 3.5
      }
     ],
     "extra": [],
     "next": {
      "line": 6,
-     "hit": 6
+     "hit": 7
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 4+ in 9 of 10 games.",
+     "Cleared 4+ in 10 of 11 games.",
      "Averages 6.6 rushing attempts a game (median 6)."
     ],
     "cons": [
      "Missed in Week 11 vs MIA (0).",
      "The Patriots rank 12th of 32 against the run, allowing 106 rushing yards a game.",
      "Swingy: anywhere from 0 to 14 this season.",
-     "Trending down: 2.5 a game over his last two, below his 6.6 average."
+     "Trending down: 3.5 a game over his last two, below his 6.6 average."
     ],
     "status": ""
    },
@@ -1775,11 +1692,11 @@
      "Cleared 2+ in 9 of 10 games.",
      "Averages 3.4 receptions a game (median 3).",
      "Cleared it in each of his last 7 games.",
-     "Steady volume: 4.0 targets a game.",
-     "The Bills rank 19th of 32 against the pass, allowing 241 passing yards a game."
+     "Steady volume: 4.0 targets a game."
     ],
     "cons": [
      "Missed in Week 3 vs JAX (1).",
+     "The Bills rank 15th of 32 against the pass, allowing 235 passing yards a game.",
      "Swingy: anywhere from 1 to 7 this season.",
      "Trending down: 2.5 a game over his last two, below his 3.4 average."
     ],
@@ -1869,11 +1786,11 @@
      "Cleared 20+ in 9 of 10 games.",
      "Averages 38.3 receiving yards a game (median 37.5).",
      "Cleared it in each of his last 7 games.",
-     "Steady volume: 4.0 targets a game.",
-     "The Bills rank 19th of 32 against the pass, allowing 241 passing yards a game."
+     "Steady volume: 4.0 targets a game."
     ],
     "cons": [
      "Missed in Week 3 vs JAX (5).",
+     "The Bills rank 15th of 32 against the pass, allowing 235 passing yards a game.",
      "Swingy: anywhere from 5 to 71 this season.",
      "Trending down: 28.5 a game over his last two, below his 38.3 average."
     ],
@@ -1951,11 +1868,11 @@
     "gameday": 0.0,
     "pros": [
      "Cleared 1+ in all 9 games.",
-     "Averages 1.9 receptions a game (median 1).",
-     "The Bills rank 19th of 32 against the pass, allowing 241 passing yards a game."
+     "Averages 1.9 receptions a game (median 1)."
     ],
     "cons": [
      "Closest call: 1 vs SEA in Week 1.",
+     "The Bills rank 15th of 32 against the pass, allowing 235 passing yards a game.",
      "Swingy: anywhere from 1 to 5 this season.",
      "The line sits close to his median (1), so there's little cushion."
     ],
@@ -2043,7 +1960,7 @@
     ],
     "cons": [
      "Missed in Week 10 vs DET (4).",
-     "The Bills rank 7th of 32 against the run, allowing 94 rushing yards a game.",
+     "The Bills rank 6th of 32 against the run, allowing 92 rushing yards a game.",
      "Swingy: anywhere from 4 to 82 this season.",
      "Trending down: 18.0 a game over his last two, below his 40.3 average."
     ],
@@ -2107,11 +2024,11 @@
     "pros": [
      "Cleared 25+ in all 4 games.",
      "Averages 32.0 receiving yards a game (median 27).",
-     "Steady volume: 6.5 targets a game.",
-     "The Bills rank 19th of 32 against the pass, allowing 241 passing yards a game."
+     "Steady volume: 6.5 targets a game."
     ],
     "cons": [
      "Closest call: 26 vs SEA in Week 1.",
+     "The Bills rank 15th of 32 against the pass, allowing 235 passing yards a game.",
      "The line sits close to his median (27), so there's little cushion.",
      "Small sample: 4 games."
     ],
@@ -2165,6 +2082,10 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
@@ -2177,12 +2098,13 @@
      1,
      1,
      1,
+     1,
      1
     ],
     "ladder": [
      {
       "line": 1,
-      "hit": 9,
+      "hit": 10,
       "stars": 2.5
      }
     ],
@@ -2190,9 +2112,9 @@
     "next": null,
     "gameday": 0.0,
     "pros": [
-     "Cleared 1+ in 9 of 10 games.",
-     "10 touchdowns in 10 games.",
-     "Cleared it in each of his last 9 games.",
+     "Cleared 1+ in 10 of 11 games.",
+     "11 touchdowns in 11 games.",
+     "Cleared it in each of his last 10 games.",
      "The Patriots rank 18th of 32 in points allowed, allowing 24 points a game."
     ],
     "cons": [
@@ -2203,11 +2125,11 @@
    {
     "team": "BUF",
     "nick": "Bills",
-    "player": "Josh Allen",
-    "pos": "QB",
-    "cat": "Passing",
-    "market": "Passing TDs",
-    "key": "passTD",
+    "player": "Keon Coleman",
+    "pos": "WR",
+    "cat": "Receiving",
+    "market": "Receptions",
+    "key": "rec",
     "games": [
      {
       "wk": 1,
@@ -2248,43 +2170,47 @@
      {
       "wk": 11,
       "opp": "MIA"
+     },
+     {
+      "wk": 12,
+      "opp": "KC"
      }
     ],
     "vals": [
-     2,
+     1,
+     6,
+     1,
+     6,
+     1,
+     4,
+     1,
      3,
-     0,
-     1,
      1,
      2,
-     2,
-     1,
-     1,
-     1
+     0
     ],
     "ladder": [
      {
       "line": 1,
-      "hit": 9,
+      "hit": 10,
       "stars": 2.5
      }
     ],
     "extra": [],
     "next": {
      "line": 2,
-     "hit": 4
+     "hit": 5
     },
     "gameday": 0.0,
     "pros": [
-     "Cleared 1+ in 9 of 10 games.",
-     "Averages 1.4 passing tds a game (median 1).",
-     "Cleared it in each of his last 7 games.",
-     "The Patriots rank 29th of 32 against the pass, allowing 257 passing yards a game."
+     "Cleared 1+ in 10 of 11 games.",
+     "Averages 2.4 receptions a game (median 1).",
+     "The Patriots rank 28th of 32 against the pass, allowing 257 passing yards a game."
     ],
     "cons": [
-     "Missed in Week 3 vs LAC (0).",
-     "Swingy: anywhere from 0 to 3 this season.",
-     "Trending down: 1.0 a game over his last two, below his 1.4 average.",
+     "Missed in Week 12 vs KC (0).",
+     "Swingy: anywhere from 0 to 6 this season.",
+     "Trending down: 1.0 a game over his last two, below his 2.4 average.",
      "The line sits close to his median (1), so there's little cushion."
     ],
     "status": ""
@@ -2401,6 +2327,37 @@
   "billsPlace": "1st in the AFC East, 4.5 games ahead",
   "oppPlace": "2nd in the AFC East, 4.5 games back"
  },
+ "lines": {
+  "gameId": "2026_13_BUF_NE",
+  "book": "Draft Kings",
+  "cur": {
+   "spread": -12.5,
+   "total": 44.5,
+   "ml": -790.0,
+   "oppMl": 557.0
+  },
+  "open": {
+   "spread": 1.5,
+   "total": 48.5,
+   "ml": -105.0,
+   "oppMl": -115.0
+  },
+  "history": [
+   {
+    "t": null,
+    "spread": 1.5,
+    "total": 48.5,
+    "ml": -105.0,
+    "open": true
+   },
+   {
+    "t": "2026-11-27T15:24Z",
+    "spread": -12.5,
+    "total": 44.5,
+    "ml": -790.0
+   }
+  ]
+ },
  "playoffs": {
   "odds": {
    "playoffs": {
@@ -2409,27 +2366,27 @@
     "loss": 100.0
    },
    "division": {
-    "now": 99.8,
+    "now": 99.9,
     "win": 100.0,
-    "loss": 99.4
+    "loss": 99.2
    },
    "seed1": {
-    "now": 70.9,
-    "win": 77.9,
-    "loss": 57.3
+    "now": 75.3,
+    "win": 78.7,
+    "loss": 54.7
    },
    "conf": {
     "now": 33.9,
-    "win": 34.5,
-    "loss": 32.7
+    "win": 34.4,
+    "loss": 30.8
    },
    "sb": {
-    "now": 18.9,
-    "win": 19.3,
-    "loss": 18.1
+    "now": 19.4,
+    "win": 19.7,
+    "loss": 17.5
    }
   },
-  "winProb": 65.8,
+  "winProb": 85.4,
   "sims": 10000,
   "asOf": "through the games of Nov. 26, 2026"
  },
@@ -2443,6 +2400,6 @@
   },
   "seedWin": 1,
   "seedLoss": 1,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 78% of the time with a win and 57% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 79% of the time with a win and 55% with a loss."
  }
 }

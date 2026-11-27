@@ -4,7 +4,7 @@
  "game": "Week 12 vs Chiefs",
  "result": "W 13-10",
  "allen": "10 of 21, 81 yards, 0 TD, 2 INT",
- "official": false,
+ "official": true,
  "items": [
   {
    "tag": "Record extended",
