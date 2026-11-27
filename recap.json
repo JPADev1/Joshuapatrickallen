@@ -1,44 +1,28 @@
 {
  "_how": "Weekly Record Recap, written automatically by scripts/update_data.py (auto_recap): only the achievements Allen reached in his most recent game, plus the full-game win-chance chart. Set \"manual\": true to hand-edit without the job overwriting it.",
- "date": "2026-11-22",
- "game": "Week 11 vs Dolphins",
- "result": "W 26-9",
- "allen": "27 of 45, 304 yards, 1 TD, 2 INT",
- "official": true,
+ "date": "2026-11-26",
+ "game": "Week 12 vs Chiefs",
+ "result": "W 13-10",
+ "allen": "10 of 21, 81 yards, 0 TD, 2 INT",
+ "official": false,
  "items": [
   {
-   "tag": "Moved up",
-   "scope": "",
-   "title": "NFL career passing yards: up to No. 49",
-   "text": "He passed Kurt Warner (32,344) and Cam Newton (32,382) and moved up to No. 49.",
-   "line": "304 passing yards vs the Dolphins · Next up: the No. 48 mark (32,838), 209 passing yards to tie"
-  },
-  {
-   "tag": "Moved up",
-   "scope": "",
-   "title": "NFL career passing touchdowns: tied for No. 38",
-   "text": "He tied Donovan McNabb (234) for No. 38.",
-   "line": "1 passing TD vs the Dolphins · 1 more passing TD to pass him"
-  },
-  {
    "tag": "Record extended",
-   "scope": "nfl",
-   "title": "Best career win percentage against the Dolphins by any QB (min. 16 games)",
-   "text": "Win! He's 14-3 against the Dolphins, extending his league-leading career win percentage against them to 82.4% (min. 16 games). Tom Brady is 2nd: 24-12 (66.7%).",
-   "line": "14-3 career",
-   "big": "82.4%",
-   "bg": "mia-bottle-feed"
+   "scope": "",
+   "title": "Record against the Chiefs",
+   "text": "Win! He's 6-1 as a starter against the Chiefs in the regular season.",
+   "line": ""
   }
  ],
- "opp": "MIA",
- "oppNick": "Dolphins",
- "oppColor": "#008E97",
+ "opp": "KC",
+ "oppNick": "Chiefs",
+ "oppColor": "#E31837",
  "home": true,
- "bills": 26,
- "them": 9,
+ "bills": 13,
+ "them": 10,
  "_src": {
-  "gameId": "2026_11_MIA_BUF",
-  "gameday": "2026-11-22",
+  "gameId": "2026_12_KC_BUF",
+  "gameday": "2026-11-26",
   "items": [
    {
     "title": "NFL first: 12+ rushing TDs in 4 straight seasons by a QB",
@@ -49,68 +33,6 @@
     "detail": "Needs 1 rushing TD for his 12th this season. He'd be the first QB with 12+ in 4 straight seasons (15 in 2023, 12 in 2024, 14 in 2025), passing Jalen Hurts, who had 3 straight (13, 15 and 14 in 2022-24)."
    },
    {
-    "title": "NFL career passing yards",
-    "detail": "Needs 19 passing yards (career high in a game: 424). Ties Kurt Warner (32,344) for No. 50; 20 passes him.",
-    "k": "passYds",
-    "need": 19,
-    "goal": "to tie Kurt Warner (32,344) for No. 50",
-    "done": "He tied Kurt Warner (32,344) for No. 50.",
-    "next": [
-     {
-      "who": "Cam Newton (32,382)",
-      "spot": 49,
-      "tie": 57,
-      "pass": 58
-     },
-     {
-      "who": "the No. 48 mark (32,838)",
-      "spot": 48,
-      "tie": 513,
-      "pass": 514
-     },
-     {
-      "who": "the No. 47 mark (32,942)",
-      "spot": 47,
-      "tie": 617,
-      "pass": 618
-     }
-    ],
-    "need2": 20,
-    "goal2": "to pass him",
-    "done2": "He passed Kurt Warner (32,344) and moved up to No. 50."
-   },
-   {
-    "title": "NFL career passing touchdowns",
-    "detail": "Needs 1 passing TD (career high in a game: 5). Ties Donovan McNabb (234) for No. 38; 2 passes him.",
-    "k": "passTD",
-    "need": 1,
-    "goal": "to tie Donovan McNabb (234) for No. 38",
-    "done": "He tied Donovan McNabb (234) for No. 38.",
-    "next": [
-     {
-      "who": "the No. 37 mark (236)",
-      "spot": 37,
-      "tie": 3,
-      "pass": 4
-     },
-     {
-      "who": "Jim Kelly (237)",
-      "spot": 36,
-      "tie": 4,
-      "pass": 5
-     },
-     {
-      "who": "the No. 35 mark (239)",
-      "spot": 35,
-      "tie": 6,
-      "pass": 7
-     }
-    ],
-    "need2": 2,
-    "goal2": "to pass him",
-    "done2": "He passed Donovan McNabb (234) and moved up to No. 38."
-   },
-   {
     "title": "NFL career rushing touchdowns",
     "detail": "Needs 1 rushing TD (career high in a game: 3). Ties Franco Harris and Jerome Bettis (91) for No. 12; 2 passes them.",
     "k": "rushTD",
@@ -119,19 +41,19 @@
     "done": "He tied Franco Harris and Jerome Bettis (91) for No. 12.",
     "next": [
      {
-      "who": "the No. 11 mark (99)",
+      "who": "Barry Sanders (99)",
       "spot": 11,
       "tie": 9,
       "pass": 10
      },
      {
-      "who": "the No. 9 mark (100)",
+      "who": "Marshall Faulk and Shaun Alexander (100)",
       "spot": 9,
       "tie": 10,
       "pass": 11
      },
      {
-      "who": "the No. 8 mark (104)",
+      "who": "John Riggins (104)",
       "spot": 8,
       "tie": 14,
       "pass": 15
@@ -151,1219 +73,1223 @@
     "done": "Record extended to 57 games (regular season). Next closest: Cam Newton, 45."
    },
    {
-    "title": "Record against the Dolphins",
-    "detail": "A win moves him to 14-3 against the Dolphins, extending his league-leading career win percentage against the Dolphins to 82.4% (min. 16 games).",
+    "title": "NFL career passing touchdowns",
+    "detail": "Needs 2 passing TDs (career high in a game: 5). Ties George Blanda (236) for No. 37; 3 passes him.",
+    "k": "passTD",
+    "need": 2,
+    "goal": "to tie George Blanda (236) for No. 37",
+    "done": "He tied George Blanda (236) for No. 37.",
+    "next": [
+     {
+      "who": "Jim Kelly (237)",
+      "spot": 36,
+      "tie": 3,
+      "pass": 4
+     },
+     {
+      "who": "Len Dawson (239)",
+      "spot": 35,
+      "tie": 5,
+      "pass": 6
+     },
+     {
+      "who": "Y.A. Tittle (242)",
+      "spot": 34,
+      "tie": 8,
+      "pass": 9
+     }
+    ],
+    "need2": 3,
+    "goal2": "to pass him",
+    "done2": "He passed George Blanda (236) and moved up to No. 37."
+   },
+   {
+    "title": "NFL career passing yards",
+    "detail": "Needs 209 passing yards (career high in a game: 424). Ties Ken Anderson (32,838) for No. 48; 210 passes him.",
+    "k": "passYds",
+    "need": 209,
+    "goal": "to tie Ken Anderson (32,838) for No. 48",
+    "done": "He tied Ken Anderson (32,838) for No. 48.",
+    "next": [
+     {
+      "who": "Troy Aikman (32,942)",
+      "spot": 47,
+      "tie": 313,
+      "pass": 314
+     },
+     {
+      "who": "Y.A. Tittle (33,070)",
+      "spot": 46,
+      "tie": 441,
+      "pass": 442
+     },
+     {
+      "who": "Steve Young (33,124)",
+      "spot": 45,
+      "tie": 495,
+      "pass": 496
+     }
+    ],
+    "need2": 210,
+    "goal2": "to pass him",
+    "done2": "He passed Ken Anderson (32,838) and moved up to No. 48."
+   },
+   {
+    "title": "Record against the Chiefs",
+    "detail": "A win makes him 6-1 as a starter against them in the regular season.",
     "k": "win",
     "need": 1,
-    "goal": "moves him to 14-3 against the Dolphins, extending his league-leading career win percentage against the Dolphins to 82.4% (min. 16 games)",
-    "ctx": "Tom Brady is 2nd: 24-12 (66.7%).",
-    "bg": "mia-bottle-feed",
-    "st": "Best career win percentage against the Dolphins by any QB (min. 16 games)",
-    "sb": "82.4%",
-    "sk": "14-3 career",
-    "sl": "Tom Brady is 2nd: 24-12 (66.7%)",
-    "wst": "A win extends his league-leading win percentage against the Dolphins (min. 16 games)",
-    "wsb": "82.4%",
-    "wsk": "Josh Allen vs the Dolphins today",
-    "wsl": "Now 13-3 (81.3%), a win makes it 14-3 · Tom Brady is 2nd: 24-12",
-    "done": "Win! He's 14-3 against the Dolphins, extending his league-leading career win percentage against them to 82.4% (min. 16 games). Tom Brady is 2nd: 24-12 (66.7%)."
+    "goal": "to go 6-1 against them",
+    "done": "Win! He's 6-1 as a starter against the Chiefs in the regular season."
    }
   ],
-  "week": 11,
-  "opp": "MIA",
-  "oppNick": "Dolphins",
-  "oppColor": "#008E97",
+  "week": 12,
+  "opp": "KC",
+  "oppNick": "Chiefs",
+  "oppColor": "#E31837",
   "home": true
  },
  "wp": {
   "pts": [
    [
     0,
-    0.93,
+    0.631,
     0,
     0,
     "",
-    "D.Carlson kicks 62 yards from MIA 35 to BUF 3. G.Dortch to BUF 39 for 36 yards (J.Wood; K."
+    "H.Butker kicks 55 yards from KC 35 to BUF 10. R.Davis to BUF 29 for 19 yards (J.Cochrane; "
    ],
    [
-    8,
-    0.934,
+    7,
+    0.636,
     0,
     0,
     "",
-    "J.Allen pass short left to D.Moore pushed ob at BUF 48 for 9 yards (J.Brents)."
+    "J.Allen pass short left to J.Cook to BUF 37 for 8 yards (A.Gilman)."
    ],
    [
-    36,
-    0.939,
+    48,
+    0.648,
     0,
     0,
     "",
-    "J.Cook right tackle to BUF 48 for no gain (J.Brooks; W.Gay)."
+    "J.Cook right guard to BUF 38 for 1 yard (N.Bolton)."
    ],
    [
-    83,
-    0.935,
+    77,
+    0.641,
     0,
     0,
     "",
-    "J.Allen pass incomplete deep right to K.Coleman."
+    "J.Cook right guard to BUF 41 for 3 yards (D.Tranquill)."
    ],
    [
-    88,
-    0.924,
+    114,
+    0.65,
     0,
     0,
     "",
-    "A.Corbett reported in as eligible. J.Cook up the middle to 50 for 2 yards (J.Rodriguez; W."
-   ],
-   [
-    119,
-    0.936,
-    0,
-    0,
-    "",
-    "J.Allen pass deep right to K.Shakir ran ob at MIA 18 for 32 yards (Z.Anderson)."
+    "R.Davis left guard to BUF 45 for 4 yards (N.Bolton; K.Tonga)."
    ],
    [
     150,
-    0.947,
+    0.648,
     0,
     0,
     "",
-    "(No Huddle) J.Allen pass incomplete short left."
+    "J.Allen scrambles right tackle to KC 45 for 10 yards (A.Gilman)."
    ],
    [
-    156,
-    0.944,
+    193,
+    0.668,
     0,
     0,
     "",
-    "K.Shakir right tackle to MIA 16 for 2 yards (R.McGraw)."
+    "J.Cook left tackle to KC 42 for 3 yards (K.Tonga)."
    ],
    [
-    194,
-    0.94,
+    229,
+    0.663,
     0,
     0,
-    "",
-    "J.Allen sacked at MIA 25 for -9 yards (J.Brooks)."
-   ],
-   [
-    236,
-    0.935,
-    3,
-    0,
-    "fg",
-    "T.Bass 43 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
-   ],
-   [
-    241,
-    0.934,
-    3,
-    0,
-    "",
-    "K.McCord pass short left to D.Herman to MIA 34 for 7 yards (C.Bishop; T.Bernard)."
-   ],
-   [
-    286,
-    0.931,
-    3,
-    0,
-    "",
-    "K.McCord pass short middle to C.Douglas to MIA 48 for 14 yards (A.Hooker)."
-   ],
-   [
-    319,
-    0.925,
-    3,
-    0,
-    "",
-    "K.McCord pass incomplete short left to C.Douglas (D.Igbinosun)."
-   ],
-   [
-    327,
-    0.928,
-    3,
-    0,
-    "",
-    "J.Wright up the middle to BUF 48 for 4 yards (L.Jackson; C.Bishop)."
-   ],
-   [
-    367,
-    0.929,
-    3,
-    0,
-    "",
-    "K.McCord sacked at MIA 44 for -8 yards (G.Rousseau)."
-   ],
-   [
-    404,
-    0.94,
-    3,
-    0,
-    "",
-    "J.Browning punts 49 yards to BUF 7, Center-T.Addington. G.Dortch to BUF 17 for 10 yards (T"
-   ],
-   [
-    416,
-    0.944,
-    3,
-    0,
-    "",
-    "J.Cook left guard to BUF 34 for 2 yards (K.Grant)."
-   ],
-   [
-    450,
-    0.942,
-    3,
-    0,
-    "",
-    "J.Allen pass incomplete short right to K.Shakir (C.Johnson)."
-   ],
-   [
-    455,
-    0.937,
-    3,
-    0,
-    "",
-    "J.Allen pass incomplete deep right to K.Coleman (J.Brents)."
-   ],
-   [
-    461,
-    0.929,
-    3,
-    0,
-    "",
-    "(Punt formation) T.Doman pass deep middle to K.Latu to MIA 36 for 30 yards (M.Washington; "
-   ],
-   [
-    510,
-    0.952,
-    3,
-    0,
-    "",
-    "J.Allen pass incomplete deep middle to T.Shavers."
-   ],
-   [
-    518,
-    0.95,
-    3,
-    0,
-    "",
-    "J.Cook up the middle to MIA 36 for no gain (C.Robinson)."
-   ],
-   [
-    560,
-    0.945,
-    3,
-    0,
-    "",
-    "J.Allen pass incomplete deep right to K.Shakir (Z.Anderson)."
-   ],
-   [
-    573,
-    0.948,
-    6,
-    0,
-    "fg",
-    "T.Bass 54 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
-   ],
-   [
-    582,
-    0.947,
-    6,
-    0,
-    "",
-    "O.Gordon left guard to MIA 34 for 5 yards (B.Chubb)."
-   ],
-   [
-    620,
-    0.946,
-    6,
-    0,
-    "",
-    "K.McCord pass incomplete short right to C.Douglas (D.Igbinosun)."
-   ],
-   [
-    624,
-    0.949,
-    6,
-    0,
-    "",
-    "K.McCord pass incomplete deep left to C.Bell."
-   ],
-   [
-    631,
-    0.956,
-    6,
-    0,
-    "",
-    "J.Browning punts 35 yards to BUF 31, Center-T.Addington, out of bounds.PENALTY on BUF-J.So"
-   ],
-   [
-    639,
-    0.954,
-    6,
-    0,
-    "",
-    "J.Cook up the middle to BUF 27 for 6 yards (J.Uche)."
-   ],
-   [
-    674,
-    0.955,
-    6,
-    0,
-    "",
-    "J.Cook right tackle to BUF 30 for 3 yards (J.Rodriguez)."
-   ],
-   [
-    710,
-    0.955,
-    6,
-    0,
-    "",
-    "T.Grable reported in as eligible. J.Cook right guard to BUF 32 for 2 yards (J.Brooks; J.Ro"
-   ],
-   [
-    746,
-    0.956,
-    6,
-    0,
-    "",
-    "J.Allen pass short right to R.Davis to BUF 38 for 6 yards (C.Johnson; J.Brooks)."
-   ],
-   [
-    784,
-    0.956,
-    6,
-    0,
-    "",
-    "J.Allen pass short middle to D.Knox to MIA 39 for 23 yards (M.Taaffe; C.Johnson)."
-   ],
-   [
-    827,
-    0.962,
-    6,
-    0,
-    "",
-    "J.Cook right tackle to MIA 38 for 1 yard (C.Robinson)."
-   ],
-   [
-    867,
-    0.96,
-    6,
-    0,
-    "",
-    "J.Allen pass short left to D.Moore pushed ob at MIA 33 for 5 yards (J.Rodriguez)."
-   ],
-   [
-    900,
-    0.96,
-    6,
-    0,
-    "",
-    "J.Allen pass short left to D.Moore to MIA 24 for 9 yards (Z.Anderson)."
-   ],
-   [
-    927,
-    0.965,
-    6,
-    0,
-    "",
-    "J.Allen pass short left to T.Johnson pushed ob at MIA 7 for 17 yards (J.Rodriguez)."
-   ],
-   [
-    950,
-    0.969,
-    6,
-    0,
-    "",
-    "(No Huddle) J.Allen pass incomplete short right to D.Knox."
-   ],
-   [
-    953,
-    0.967,
-    6,
-    0,
-    "",
-    "J.Cook right guard to MIA 4 for 3 yards (J.Rodriguez)."
-   ],
-   [
-    997,
-    0.974,
-    13,
-    0,
-    "td",
-    "J.Allen pass short middle to D.Moore for 4 yards, TOUCHDOWN. T.Bass extra point is GOOD, C"
-   ],
-   [
-    1004,
-    0.972,
-    13,
-    0,
-    "",
-    "J.Kingston reported in as eligible. O.Gordon up the middle to MIA 36 for -3 yards (C.Bisho"
-   ],
-   [
-    1047,
-    0.974,
-    13,
-    0,
-    "",
-    "K.McCord pass short right to M.Washington to MIA 43 for 7 yards (T.White; K.Elarms-Orr).PE"
-   ],
-   [
-    1075,
-    0.972,
-    13,
-    0,
-    "",
-    "K.McCord pass short left to G.Dulcich to MIA 46 for 5 yards (K.Elarms-Orr)."
-   ],
-   [
-    1118,
-    0.972,
-    13,
-    0,
-    "",
-    "M.Washington right guard to BUF 39 for 15 yards (A.Hooker)."
-   ],
-   [
-    1159,
-    0.966,
-    13,
-    0,
-    "",
-    "K.McCord pass incomplete short left to C.Bell."
-   ],
-   [
-    1163,
-    0.968,
-    13,
-    0,
-    "",
-    "K.McCord pass incomplete deep right to M.Washington [L.Jackson]."
-   ],
-   [
-    1170,
-    0.971,
-    13,
-    0,
-    "",
-    "O.Gordon up the middle to BUF 33 for 6 yards (T.Bernard)."
-   ],
-   [
-    1216,
-    0.968,
-    13,
-    3,
-    "fg",
-    "D.Carlson 52 yard field goal is GOOD, Center-T.Addington, Holder-J.Browning."
-   ],
-   [
-    1222,
-    0.971,
-    13,
-    3,
-    "",
-    "T.Grable reported in as eligible. J.Cook up the middle to BUF 46 for 3 yards (M.Herring; J"
-   ],
-   [
-    1266,
-    0.971,
-    13,
-    3,
-    "",
-    "J.Allen pass short middle to K.Latu to MIA 49 for 5 yards (J.Brooks).PENALTY on BUF-A.Ande"
-   ],
-   [
-    1289,
-    0.967,
-    13,
-    3,
-    "",
-    "J.Allen pass short right to T.Johnson to BUF 40 for 4 yards (C.Johnson; J.Rodriguez)."
-   ],
-   [
-    1324,
-    0.966,
-    13,
-    3,
-    "",
-    "J.Allen pass short right to D.Moore pushed ob at MIA 46 for 14 yards (J.Marshall)."
-   ],
-   [
-    1356,
-    0.973,
-    13,
-    3,
-    "",
-    "J.Allen pass short right to K.Coleman to MIA 34 for 12 yards (J.Marshall; J.Brooks)."
-   ],
-   [
-    1395,
-    0.975,
-    13,
-    3,
-    "",
-    "J.Allen pass short right to K.Coleman to MIA 29 for 5 yards (C.Johnson)."
-   ],
-   [
-    1434,
-    0.975,
-    13,
-    3,
-    "",
-    "J.Cook left guard to MIA 18 for 11 yards (C.Johnson; Z.Anderson)."
-   ],
-   [
-    1471,
-    0.978,
-    13,
-    3,
-    "",
-    "J.Cook right tackle to MIA 16 for 2 yards (C.Johnson)."
-   ],
-   [
-    1507,
-    0.977,
-    13,
-    3,
-    "",
-    "J.Allen pass incomplete deep right to K.Latu (Z.Anderson)."
-   ],
-   [
-    1512,
-    0.975,
-    13,
-    3,
-    "",
-    "J.Allen pass short right to T.Johnson pushed ob at MIA 3 for 13 yards (J.Rodriguez)."
-   ],
-   [
-    1535,
-    0.981,
-    13,
-    3,
-    "",
-    "(No Huddle) T.Johnson left guard to MIA 1 for 2 yards (J.Brents)."
-   ],
-   [
-    1572,
-    0.983,
-    20,
-    3,
-    "td",
-    "A.Corbett reported in as eligible. J.Cook up the middle for 1 yard, TOUCHDOWN. T.Bass extr"
-   ],
-   [
-    1579,
-    0.983,
-    20,
-    3,
-    "",
-    "O.Gordon left tackle to MIA 26 for 2 yards (E.Oliver; D.Walker)."
-   ],
-   [
-    1616,
-    0.984,
-    20,
-    3,
-    "",
-    "K.McCord pass short right to O.Gordon to MIA 23 for -3 yards (E.Oliver)."
-   ],
-   [
-    1663,
-    0.986,
-    20,
-    3,
-    "",
-    "K.McCord scrambles right tackle to MIA 29 for 6 yards (K.Elarms-Orr)."
-   ],
-   [
-    1680,
-    0.987,
-    20,
-    3,
-    "",
-    "J.Browning punts 31 yards to BUF 40, Center-T.Addington, downed by MIA-G.Dulcich."
-   ],
-   [
-    1689,
-    0.988,
-    20,
-    3,
-    "",
-    "J.Allen pass incomplete short middle to K.Shakir [C.Robinson]."
-   ],
-   [
-    1695,
-    0.987,
-    20,
-    3,
-    "",
-    "J.Allen pass short middle intended for K.Latu INTERCEPTED by J.Rodriguez (C.Robinson) at B"
-   ],
-   [
-    1707,
-    0.975,
-    20,
-    3,
-    "to",
-    "M.Washington up the middle to BUF 26 for -4 yards (D.Carter). MIA-J.Savaiinaea was injured"
-   ],
-   [
-    1711,
-    0.978,
-    20,
-    3,
-    "",
-    "K.McCord sacked at BUF 34 for -8 yards (G.Rousseau)."
-   ],
-   [
-    1716,
-    0.981,
-    20,
-    3,
-    "",
-    "K.McCord pass incomplete short right to M.Washington (D.Walker)."
-   ],
-   [
-    1726,
-    0.981,
-    20,
-    6,
-    "fg",
-    "D.Carlson 52 yard field goal is GOOD, Center-T.Addington, Holder-J.Browning."
-   ],
-   [
-    1731,
-    0.98,
-    20,
-    6,
-    "",
-    "J.Allen pass short right to T.Johnson to BUF 37 for 2 yards (J.Marshall; J.Rodriguez)."
-   ],
-   [
-    1741,
-    0.979,
-    20,
-    6,
-    "",
-    "J.Allen pass deep middle to D.Moore to MIA 45 for 18 yards (J.Brents). ** Injury Update: B"
-   ],
-   [
-    1762,
-    0.984,
-    20,
-    6,
-    "",
-    "J.Allen pass incomplete short right to K.Latu."
-   ],
-   [
-    1766,
-    0.983,
-    20,
-    6,
-    "",
-    "J.Allen pass incomplete deep right to T.Shavers [K.Cooper]."
-   ],
-   [
-    1775,
-    0.981,
-    20,
-    6,
-    "",
-    "J.Allen pass short middle intended for K.Shakir INTERCEPTED by Z.Anderson at MIA 30. Z.And"
-   ],
-   [
-    1782,
-    0.973,
-    20,
-    6,
-    "to",
-    "K.McCord pass deep middle intended for C.Bell INTERCEPTED by D.Hamlin (M.Hoecht) at BUF 47"
-   ],
-   [
-    1787,
-    0.983,
-    20,
-    6,
-    "to",
-    "J.Allen pass deep right intended for K.Shakir INTERCEPTED by J.Wood at MIA 7. J.Wood to MI"
-   ],
-   [
-    1800,
-    0.975,
-    20,
-    6,
-    "",
-    "T.Doman kicks 62 yards from BUF 35 to MIA 3. J.Wright to MIA 30 for 27 yards (J.Andreessen"
-   ],
-   [
-    1808,
-    0.974,
-    20,
-    6,
-    "",
-    "K.McCord pass short left to C.Douglas to MIA 46 for 16 yards (M.Hairston). ** Injury Updat"
-   ],
-   [
-    1849,
-    0.971,
-    20,
-    6,
-    "",
-    "J.Wright right tackle to MIA 46 for no gain (D.Carter). ** Injury Update: MIA-C.Bell has r"
-   ],
-   [
-    1888,
-    0.973,
-    20,
-    6,
-    "",
-    "O.Gordon left end to BUF 30 for 24 yards (D.Igbinosun; C.Bishop)."
-   ],
-   [
-    1932,
-    0.965,
-    20,
-    6,
-    "",
-    "K.McCord pass deep left to M.Washington to BUF 9 for 21 yards (D.Igbinosun) [B.Chubb]."
-   ],
-   [
-    1978,
-    0.958,
-    20,
-    6,
-    "",
-    "K.McCord pass incomplete short left to C.Douglas."
-   ],
-   [
-    1981,
-    0.961,
-    20,
-    6,
-    "",
-    "J.Kingston reported in as eligible. K.McCord pass incomplete short left to C.Douglas."
-   ],
-   [
-    1985,
-    0.964,
-    20,
-    6,
-    "",
-    "K.McCord pass incomplete short left to C.Douglas (M.Hairston)."
-   ],
-   [
-    1998,
-    0.969,
-    20,
-    9,
-    "fg",
-    "D.Carlson 27 yard field goal is GOOD, Center-T.Addington, Holder-J.Browning."
-   ],
-   [
-    2005,
-    0.974,
-    20,
-    9,
-    "",
-    "J.Cook up the middle to BUF 48 for 3 yards (K.Grant; Z.Anderson)."
-   ],
-   [
-    2042,
-    0.973,
-    20,
-    9,
-    "",
-    "J.Allen pass short right to J.Cook to 50 for 2 yards (C.Johnson; M.Taaffe)."
-   ],
-   [
-    2086,
-    0.971,
-    20,
-    9,
-    "",
-    "J.Allen pass short right to T.Johnson to MIA 43 for 7 yards (K.Louis)."
-   ],
-   [
-    2127,
-    0.976,
-    20,
-    9,
-    "",
-    "J.Cook left end pushed ob at MIA 30 for 13 yards (J.Marshall)."
-   ],
-   [
-    2156,
-    0.978,
-    20,
-    9,
-    "",
-    "J.Allen pass short right to J.Cook pushed ob at MIA 29 for 1 yard (J.Rodriguez)."
-   ],
-   [
-    2188,
-    0.977,
-    20,
-    9,
     "",
     "J.Allen pass incomplete short left to R.Davis."
    ],
    [
-    2192,
-    0.975,
-    20,
-    9,
+    234,
+    0.647,
+    0,
+    0,
     "",
-    "J.Allen sacked at MIA 36 for -7 yards (Z.Anderson)."
+    "J.Allen pass incomplete short middle to K.Shakir."
    ],
    [
-    2243,
-    0.968,
-    20,
-    9,
+    238,
+    0.618,
+    0,
+    0,
     "",
-    "T.Bass 54 yard field goal is No Good, Wide Left, Center-R.Ferguson, Holder-T.Doman."
+    "T.Doman punts 42 yards to end zone, Center-R.Ferguson, Touchback."
    ],
    [
-    2248,
-    0.955,
-    20,
-    9,
+    244,
+    0.595,
+    0,
+    0,
     "",
-    "J.Kingston reported in as eligible. J.Wright left end to MIA 46 for 2 yards (D.Igbinosun)."
+    "E.Johnson up the middle to KC 26 for 6 yards (L.Jackson; B.Chubb)."
    ],
    [
-    2289,
-    0.957,
-    20,
-    9,
+    277,
+    0.591,
+    0,
+    0,
     "",
-    "J.Wright left guard to 50 for 4 yards (K.Elarms-Orr; T.Parker)."
+    "E.Johnson up the middle to KC 29 for 3 yards (D.Walker)."
    ],
    [
-    2330,
-    0.957,
-    20,
-    9,
+    318,
+    0.587,
+    0,
+    0,
     "",
-    "K.McCord pass incomplete short left to G.Dulcich (C.Bishop)."
+    "E.Johnson up the middle to KC 27 for -2 yards (B.Chubb)."
    ],
    [
-    2333,
-    0.965,
-    20,
-    9,
+    357,
+    0.636,
+    0,
+    0,
     "",
-    "J.Browning punts 50 yards to end zone, Center-T.Addington, Touchback."
+    "M.Araiza punts 44 yards to BUF 29, Center-J.Winchester. G.Dortch to BUF 31 for 2 yards (J."
    ],
    [
-    2342,
-    0.968,
-    20,
-    9,
+    366,
+    0.635,
+    0,
+    0,
     "",
-    "J.Cook left tackle to BUF 20 for no gain (C.Robinson)."
+    "J.Cook right tackle to BUF 35 for 4 yards (A.Gilman; A.Gillotte)."
    ],
    [
-    2379,
-    0.966,
-    20,
-    9,
+    404,
+    0.632,
+    0,
+    0,
     "",
-    "J.Allen pass short left to D.Knox pushed ob at BUF 28 for 8 yards (Z.Anderson)."
+    "J.Allen right end to BUF 35 for no gain (A.Gillotte; G.Karlaftis)."
    ],
    [
-    2417,
-    0.968,
-    20,
-    9,
+    445,
+    0.615,
+    0,
+    0,
     "",
-    "J.Allen pass short middle to T.Johnson to BUF 31 for 3 yards (J.Rodriguez)."
+    "J.Allen pass incomplete deep left to D.Moore."
    ],
    [
-    2454,
-    0.971,
-    20,
-    9,
+    451,
+    0.583,
+    0,
+    0,
     "",
-    "J.Cook up the middle to BUF 32 for 1 yard (R.McGraw)."
+    "T.Doman punts 61 yards to KC 4, Center-R.Ferguson, downed by BUF-T.Shavers."
    ],
    [
-    2498,
-    0.97,
-    20,
-    9,
+    462,
+    0.613,
+    0,
+    0,
     "",
-    "J.Allen pass deep right to K.Shakir to MIA 30 for 38 yards (M.Taaffe)."
+    "P.Mahomes pass short right to J.Royals to KC 9 for 5 yards (D.Alford)."
    ],
    [
-    2533,
-    0.98,
-    20,
-    9,
+    499,
+    0.613,
+    0,
+    0,
     "",
-    "J.Allen pass short left to K.Shakir pushed ob at MIA 19 for 11 yards (C.Johnson)."
+    "E.Johnson up the middle to KC 13 for 4 yards (D.Walker; D.Williams)."
    ],
    [
-    2572,
-    0.982,
-    20,
-    9,
+    538,
+    0.606,
+    0,
+    0,
     "",
-    "J.Allen sacked at MIA 27 for -8 yards (K.Cooper)."
+    "P.Mahomes pass short right to N.Gray pushed ob at KC 13 for no gain (T.Bernard)."
    ],
    [
-    2617,
-    0.979,
-    20,
-    9,
+    553,
+    0.647,
+    0,
+    0,
     "",
-    "J.Allen pass incomplete short left to T.Johnson (K.Grant).PENALTY on BUF-D.Dawkins, Offens"
+    "M.Araiza punts 36 yards to KC 49, Center-J.Winchester, out of bounds."
    ],
    [
-    2621,
-    0.975,
-    20,
-    9,
+    560,
+    0.66,
+    0,
+    0,
     "",
-    "J.Allen pass short middle to K.Shakir to MIA 34 for 8 yards (J.Rodriguez)."
+    "J.Cook right guard to KC 45 for 4 yards (A.Gillotte; N.Williams)."
    ],
    [
-    2661,
-    0.975,
-    20,
-    9,
+    599,
+    0.658,
+    0,
+    0,
     "",
-    "J.Allen pass short right to K.Shakir to MIA 22 for 12 yards (D.Baker) [J.Brooks]."
+    "J.Cook up the middle to KC 35 for 10 yards (D.Tranquill; C.Conner)."
    ],
    [
-    2704,
-    0.978,
-    23,
-    9,
-    "fg",
-    "T.Bass 40 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
-   ],
-   [
-    2711,
-    0.977,
-    23,
-    9,
+    636,
+    0.679,
+    0,
+    0,
     "",
-    "O.Gordon up the middle to MIA 34 for 7 yards (C.Bishop)."
+    "J.Cook right tackle to KC 30 for 5 yards (J.Hicks)."
    ],
    [
-    2745,
-    0.976,
-    23,
-    9,
+    678,
+    0.68,
+    0,
+    0,
     "",
-    "O.Gordon right guard to MIA 42 for 8 yards (S.Thompson; B.Chubb)."
+    "J.Cook up the middle to KC 30 for no gain (D.Tranquill)."
    ],
    [
-    2790,
-    0.975,
-    23,
-    9,
+    721,
+    0.664,
+    0,
+    0,
     "",
-    "J.Kingston reported in as eligible. K.McCord scrambles right end ran ob at MIA 45 for 3 ya"
+    "J.Allen pass short right to K.Shakir to KC 13 for 17 yards (D.Tranquill)."
    ],
    [
-    2829,
-    0.976,
-    23,
-    9,
+    768,
+    0.71,
+    0,
+    0,
     "",
-    "O.Gordon up the middle to MIA 47 for 2 yards (J.Hancock; D.Carter)."
+    "J.Cook left guard to KC 10 for 3 yards (K.Tonga; C.Roland-Wallace)."
    ],
    [
-    2871,
-    0.979,
-    23,
-    9,
+    810,
+    0.706,
+    0,
+    0,
     "",
-    "K.McCord pass incomplete deep middle to C.Douglas."
+    "J.Cook right guard to KC 9 for 1 yard (A.Gillotte)."
    ],
    [
-    2875,
-    0.983,
-    23,
-    9,
+    852,
+    0.693,
+    0,
+    0,
     "",
-    "K.McCord pass incomplete short right to C.Douglas.PENALTY on BUF-D.Igbinosun, Defensive Pa"
+    "J.Allen pass short right to T.Johnson pushed ob at KC 4 for 5 yards (N.Bolton)."
    ],
    [
-    2879,
-    0.974,
-    23,
-    9,
+    885,
+    0.684,
+    0,
+    0,
     "",
-    "J.Wright up the middle to 50 for no gain (L.Jackson)."
+    "A.Corbett reported in as eligible. J.Cook right tackle to KC 3 for 1 yard (G.Karlaftis; N."
    ],
    [
-    2920,
-    0.977,
-    23,
-    9,
+    900,
+    0.732,
+    0,
+    0,
     "",
-    "K.McCord pass short right to C.Bell to BUF 42 for 8 yards (D.Igbinosun)."
+    "J.Cook left guard for 3 yards, TOUCHDOWN.The Replay Official reviewed the runner broke the"
    ],
    [
-    2961,
-    0.976,
-    23,
-    9,
+    904,
+    0.732,
+    0,
+    0,
     "",
-    "K.McCord pass incomplete short right to G.Dulcich (A.Hooker) [A.Hooker]."
+    "PENALTY on BUF-D.Dawkins, False Start, 4 yards, enforced at KC 1 - No Play."
    ],
    [
-    2967,
-    0.982,
-    23,
-    9,
+    928,
+    0.756,
+    7,
+    0,
+    "td",
+    "J.Cook up the middle for 5 yards, TOUCHDOWN. T.Bass extra point is GOOD, Center-R.Ferguson"
+   ],
+   [
+    935,
+    0.771,
+    7,
+    0,
     "",
-    "K.McCord pass short left to M.Washington pushed ob at BUF 38 for 4 yards (D.Alford) [B.Chu"
+    "P.Mahomes pass short right to T.Kelce to KC 28 for 16 yards (J.Hancock)."
    ],
    [
-    3008,
-    0.973,
-    23,
-    9,
+    967,
+    0.753,
+    7,
+    0,
     "",
-    "K.McCord pass short right to M.Washington to BUF 33 for 5 yards (J.Hancock)."
+    "E.Johnson right tackle to KC 29 for 1 yard (D.Carter; L.Jackson)."
    ],
    [
-    3056,
-    0.975,
-    23,
-    9,
+    1008,
+    0.762,
+    7,
+    0,
     "",
-    "K.McCord pass incomplete deep left to C.Douglas."
+    "H.Nourzad reported in as eligible. P.Mahomes pass short left to E.Johnson to KC 31 for 2 y"
    ],
    [
-    3061,
-    0.978,
-    23,
-    9,
+    1051,
+    0.772,
+    7,
+    0,
     "",
-    "O.Gordon right guard to BUF 30 for 3 yards (G.Rousseau)."
+    "P.Mahomes pass incomplete short right to J.Downs. Penalty on KC-K.Suamataia, Offensive Hol"
    ],
    [
-    3100,
-    0.982,
-    23,
-    9,
+    1055,
+    0.796,
+    7,
+    0,
     "",
-    "K.McCord pass incomplete short left to M.Washington (D.Alford)."
+    "M.Araiza to KC 18 for -13 yards. FUMBLES, and recovers at KC 19. M.Araiza punts 13 yards t"
    ],
    [
-    3104,
-    0.99,
-    23,
-    9,
+    1063,
+    0.826,
+    7,
+    0,
+    "",
+    "J.Cook up the middle to KC 34 for 5 yards (N.Bolton)."
+   ],
+   [
+    1104,
+    0.828,
+    7,
+    0,
+    "",
+    "J.Cook left end pushed ob at KC 24 for 10 yards (M.Delane)."
+   ],
+   [
+    1141,
+    0.842,
+    7,
+    0,
+    "",
+    "R.Davis up the middle to KC 22 for 2 yards (K.Tonga; P.Woods)."
+   ],
+   [
+    1181,
+    0.838,
+    7,
+    0,
+    "",
+    "J.Allen pass short left to T.Johnson to KC 15 for 7 yards (D.Tranquill)."
+   ],
+   [
+    1222,
+    0.848,
+    7,
+    0,
+    "",
+    "T.Grable reported in as eligible. J.Cook right tackle to KC 11 for 4 yards (C.Conner; N.Bo"
+   ],
+   [
+    1265,
+    0.856,
+    7,
+    0,
+    "",
+    "J.Cook right end to KC 9 for 2 yards (A.Gilman).PENALTY on KC-C.Jones, Defensive Offside, "
+   ],
+   [
+    1291,
+    0.864,
+    7,
+    0,
+    "",
+    "J.Cook right tackle to KC 9 for -3 yards (N.Bolton)."
+   ],
+   [
+    1325,
+    0.853,
+    7,
+    0,
+    "",
+    "J.Allen pass short left intended for D.Knox INTERCEPTED by A.Gilman (G.Karlaftis) at KC -2"
+   ],
+   [
+    1334,
+    0.766,
+    7,
+    0,
     "to",
-    "J.Cook right end pushed ob at BUF 31 for 1 yard (D.Baker)."
+    "P.Mahomes pass short right to N.Gray pushed ob at KC 24 for 4 yards (K.Elarms-Orr)."
    ],
    [
-    3138,
-    0.99,
-    23,
-    9,
+    1361,
+    0.768,
+    7,
+    0,
     "",
-    "J.Allen pass short left to D.Moore pushed ob at BUF 43 for 12 yards (J.Marshall)."
+    "E.Johnson up the middle to KC 29 for 5 yards (A.Hooker)."
    ],
    [
-    3174,
-    0.993,
-    23,
-    9,
+    1399,
+    0.761,
+    7,
+    0,
     "",
-    "J.Cook up the middle to MIA 48 for 9 yards (Z.Anderson)."
+    "E.Johnson up the middle to KC 32 for 3 yards (K.Elarms-Orr)."
    ],
    [
-    3217,
-    0.995,
-    23,
-    9,
+    1433,
+    0.752,
+    7,
+    0,
     "",
-    "J.Cook right guard to MIA 37 for 11 yards (C.Johnson; Z.Anderson)."
+    "P.Mahomes FUMBLES (Aborted) at KC 31, and recovers at KC 30."
    ],
    [
-    3258,
-    0.996,
-    23,
-    9,
+    1475,
+    0.768,
+    7,
+    0,
     "",
-    "J.Cook right guard to MIA 29 for 8 yards (Z.Anderson)."
+    "P.Mahomes pass incomplete short middle to J.Downs."
    ],
    [
-    3301,
-    0.998,
-    23,
-    9,
+    1479,
+    0.783,
+    7,
+    0,
     "",
-    "R.Davis left guard to MIA 26 for 3 yards (J.Marshall; W.Gay)."
+    "P.Mahomes pass short left to E.Johnson to KC 36 for 6 yards (M.Hairston; G.Rousseau)."
    ],
    [
-    3341,
-    0.998,
-    23,
-    9,
+    1516,
+    0.797,
+    7,
+    0,
     "",
-    "J.Allen pass incomplete short right."
+    "M.Araiza punts 55 yards to BUF 9, Center-J.Winchester. G.Dortch to BUF 24 for 15 yards (X."
    ],
    [
-    3347,
-    0.998,
-    23,
-    9,
+    1528,
+    0.796,
+    7,
+    0,
     "",
-    "J.Cook right guard to MIA 19 for 7 yards (J.Brooks; Z.Anderson)."
+    "J.Cook left guard to BUF 28 for 4 yards (F.Anudike-Uzomah)."
    ],
    [
-    3390,
-    0.999,
-    23,
-    9,
+    1565,
+    0.795,
+    7,
+    0,
     "",
-    "J.Allen pass short left to T.Johnson to MIA 10 for 9 yards (Z.Anderson)."
+    "J.Cook right guard to BUF 37 for 9 yards (C.Conner; C.Roland-Wallace)."
    ],
    [
-    3433,
-    0.999,
-    23,
-    9,
+    1609,
+    0.812,
+    7,
+    0,
     "",
-    "J.Allen pass incomplete short right to D.Moore."
+    "R.Davis right tackle to BUF 37 for no gain (N.Bolton; F.Anudike-Uzomah)."
    ],
    [
-    3434,
-    0.999,
-    23,
-    9,
+    1655,
+    0.803,
+    7,
+    0,
+    "",
+    "J.Allen pass short right to D.Moore to BUF 41 for 4 yards (A.Gilman)."
+   ],
+   [
+    1680,
+    0.798,
+    7,
+    0,
+    "",
+    "J.Allen pass incomplete short left to K.Coleman."
+   ],
+   [
+    1684,
+    0.772,
+    7,
+    0,
+    "",
+    "T.Doman punts 23 yards to KC 36, Center-R.Ferguson, out of bounds."
+   ],
+   [
+    1690,
+    0.75,
+    7,
+    0,
+    "",
+    "P.Mahomes scrambles right tackle pushed ob at KC 39 for 3 yards (A.Hooker).PENALTY on KC-K"
+   ],
+   [
+    1699,
+    0.769,
+    7,
+    0,
+    "",
+    "P.Mahomes pass short left to T.Kelce to KC 36 for 10 yards (T.Bernard; D.Igbinosun) [B.Chu"
+   ],
+   [
+    1719,
+    0.763,
+    7,
+    0,
+    "",
+    "P.Mahomes pass deep left to T.Kelce to BUF 40 for 24 yards (C.Bishop) [D.Carter]."
+   ],
+   [
+    1743,
+    0.716,
+    7,
+    0,
+    "",
+    "P.Mahomes pass incomplete deep middle to T.Kelce (D.Walker)."
+   ],
+   [
+    1747,
+    0.73,
+    7,
+    0,
+    "",
+    "P.Mahomes pass short left to R.Rice to BUF 31 for 9 yards (D.Igbinosun)."
+   ],
+   [
+    1769,
+    0.709,
+    7,
+    0,
+    "",
+    "P.Mahomes pass incomplete short right to X.Worthy [G.Rousseau]."
+   ],
+   [
+    1775,
+    0.744,
+    7,
+    0,
+    "",
+    "H.Nourzad reported in as eligible. P.Mahomes scrambles right end to BUF 29 for 2 yards (D."
+   ],
+   [
+    1783,
+    0.699,
+    7,
+    0,
+    "",
+    "P.Mahomes pass deep middle to T.Kelce to BUF 8 for 21 yards (C.Bishop)."
+   ],
+   [
+    1791,
+    0.661,
+    7,
+    0,
+    "",
+    "P.Mahomes pass incomplete short left to R.Rice (D.Igbinosun)."
+   ],
+   [
+    1798,
+    0.73,
+    7,
+    3,
+    "fg",
+    "H.Butker 26 yard field goal is GOOD, Center-J.Winchester, Holder-M.Araiza."
+   ],
+   [
+    1800,
+    0.685,
+    7,
+    3,
+    "",
+    "T.Doman kicks 58 yards from BUF 35 to KC 7. J.Royals to KC 44 for 37 yards (D.Hamlin)."
+   ],
+   [
+    1809,
+    0.654,
+    7,
+    3,
+    "",
+    "E.Johnson right tackle to BUF 43 for 13 yards (C.Bishop)."
+   ],
+   [
+    1847,
+    0.631,
+    7,
+    3,
+    "",
+    "E.Johnson right guard to BUF 31 for 12 yards (T.Bernard)."
+   ],
+   [
+    1881,
+    0.609,
+    7,
+    3,
+    "",
+    "P.Mahomes pass short middle to R.Rice to BUF 21 for 10 yards (T.Bernard)."
+   ],
+   [
+    1925,
+    0.589,
+    7,
+    3,
+    "",
+    "E.Johnson left guard to BUF 14 for 7 yards (D.Williams)."
+   ],
+   [
+    1962,
+    0.576,
+    7,
+    3,
+    "",
+    "P.Mahomes pass short right to J.Downs to BUF 1 for 13 yards (D.Igbinosun)."
+   ],
+   [
+    2004,
+    0.52,
+    7,
+    3,
+    "",
+    "P.Mahomes pass incomplete short left to R.Rice."
+   ],
+   [
+    2012,
+    0.5,
+    7,
+    10,
+    "td",
+    "E.Johnson right guard for 1 yard, TOUCHDOWN. H.Butker extra point is GOOD, Center-J.Winche"
+   ],
+   [
+    2021,
+    0.517,
+    7,
+    10,
+    "",
+    "J.Allen pass incomplete deep right to D.Moore."
+   ],
+   [
+    2027,
+    0.499,
+    7,
+    10,
+    "",
+    "J.Allen pass incomplete short left to K.Shakir."
+   ],
+   [
+    2032,
+    0.475,
+    7,
+    10,
+    "",
+    "J.Allen scrambles right tackle pushed ob at KC 49 for 17 yards (C.Roland-Wallace)."
+   ],
+   [
+    2069,
+    0.548,
+    7,
+    10,
+    "",
+    "J.Cook up the middle to KC 46 for 3 yards (M.Delane; G.Karlaftis)."
+   ],
+   [
+    2109,
+    0.54,
+    7,
+    10,
     "",
     "J.Allen pass incomplete short left to D.Moore."
    ],
    [
-    3439,
-    0.999,
-    23,
-    9,
+    2112,
+    0.516,
+    7,
+    10,
     "",
-    "K.Shakir left tackle to MIA 10 for no gain (J.Brooks)."
+    "J.Allen pass short right to K.Shakir to KC 36 for 10 yards (X.Nwankpa)."
    ],
    [
-    3483,
-    0.999,
-    26,
-    9,
+    2152,
+    0.572,
+    7,
+    10,
+    "",
+    "J.Cook up the middle to KC 31 for 5 yards (D.Tranquill)."
+   ],
+   [
+    2189,
+    0.573,
+    7,
+    10,
+    "",
+    "J.Allen pass short left to D.Kincaid to KC 25 for 6 yards (A.Gilman)."
+   ],
+   [
+    2230,
+    0.594,
+    7,
+    10,
+    "",
+    "J.Allen scrambles right end to KC 16 for 9 yards (N.Bolton)."
+   ],
+   [
+    2274,
+    0.625,
+    7,
+    10,
+    "",
+    "J.Cook up the middle to KC 16 for no gain (K.Tonga)."
+   ],
+   [
+    2311,
+    0.604,
+    7,
+    10,
+    "",
+    "J.Allen left guard to KC 14 for 2 yards (N.Bolton)."
+   ],
+   [
+    2352,
+    0.617,
+    7,
+    10,
+    "",
+    "J.Allen pass short right intended for K.Shakir INTERCEPTED by N.Williams at KC 13. N.Willi"
+   ],
+   [
+    2360,
+    0.43,
+    7,
+    10,
+    "to",
+    "H.Nourzad reported in as eligible. E.Johnson up the middle to KC 27 for 7 yards (G.Roussea"
+   ],
+   [
+    2396,
+    0.415,
+    7,
+    10,
+    "",
+    "E.Johnson up the middle to KC 27 for no gain (D.Walker; T.Parker).PENALTY on KC-K.Suamatai"
+   ],
+   [
+    2420,
+    0.492,
+    7,
+    10,
+    "",
+    "P.Mahomes sacked at KC 7 for -7 yards (G.Rousseau)."
+   ],
+   [
+    2461,
+    0.548,
+    7,
+    10,
+    "",
+    "M.Araiza punts 60 yards to BUF 33, Center-J.Winchester, downed by KC-J.Winchester."
+   ],
+   [
+    2472,
+    0.496,
+    7,
+    10,
+    "",
+    "J.Cook right tackle to BUF 38 for 5 yards (D.Tranquill)."
+   ],
+   [
+    2518,
+    0.494,
+    7,
+    10,
+    "",
+    "J.Cook right tackle to BUF 42 for 4 yards (N.Williams; A.Gillotte)."
+   ],
+   [
+    2559,
+    0.502,
+    7,
+    10,
+    "",
+    "A.Corbett reported in as eligible. J.Allen left guard to BUF 45 for 3 yards (B.Eason)."
+   ],
+   [
+    2598,
+    0.517,
+    7,
+    10,
+    "",
+    "J.Cook left guard to BUF 48 for 3 yards (K.Fulton; F.Anudike-Uzomah)."
+   ],
+   [
+    2636,
+    0.506,
+    7,
+    10,
+    "",
+    "J.Allen pass short middle to K.Shakir to KC 46 for 6 yards (C.Conner)."
+   ],
+   [
+    2668,
+    0.525,
+    7,
+    10,
+    "",
+    "J.Cook up the middle to KC 45 for 1 yard (A.Gillotte). KC-K.Tonga was injured during the p"
+   ],
+   [
+    2700,
+    0.536,
+    7,
+    10,
+    "",
+    "J.Cook right tackle to KC 36 for 9 yards (C.Jones)."
+   ],
+   [
+    2746,
+    0.573,
+    7,
+    10,
+    "",
+    "J.Cook left guard to KC 33 for 3 yards (C.Conner)."
+   ],
+   [
+    2781,
+    0.564,
+    7,
+    10,
+    "",
+    "R.Davis right tackle to KC 33 for no gain (N.Bolton; P.Woods)."
+   ],
+   [
+    2819,
+    0.54,
+    7,
+    10,
+    "",
+    "J.Allen pass short middle to D.Kincaid to KC 26 for 7 yards (N.Bolton)."
+   ],
+   [
+    2856,
+    0.549,
+    7,
+    10,
+    "",
+    "J.Allen right tackle to KC 20 for 6 yards (A.Gillotte; C.Conner).PENALTY on BUF-D.Knox, Of"
+   ],
+   [
+    2873,
+    0.491,
+    7,
+    10,
+    "",
+    "J.Allen pass incomplete short middle to D.Moore."
+   ],
+   [
+    2882,
+    0.515,
+    10,
+    10,
     "fg",
-    "T.Bass 28 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
+    "T.Bass 54 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman. ** Injury Update: KC"
    ],
    [
-    3507,
-    0.999,
-    26,
-    9,
+    2889,
+    0.486,
+    10,
+    10,
     "",
-    "K.McCord pass incomplete short right to G.Dulcich [J.Solomon]."
+    "P.Mahomes pass incomplete short right to X.Worthy [D.Igbinosun]."
    ],
    [
-    3511,
-    1,
-    26,
-    9,
+    2894,
+    0.51,
+    10,
+    10,
     "",
-    "O.Gordon left guard to MIA 44 for 2 yards (S.Thompson; G.Gaines)."
+    "P.Mahomes pass short right to E.Johnson pushed ob at KC 48 for 12 yards (C.Bishop)."
    ],
    [
-    3537,
-    1,
-    26,
-    9,
+    2917,
+    0.451,
+    10,
+    10,
     "",
-    "O.Gordon left tackle pushed ob at BUF 43 for 13 yards (J.Kilgore)."
+    "E.Johnson right tackle to BUF 47 for 5 yards (T.Bernard)."
    ],
    [
-    3544,
-    1,
-    26,
-    9,
+    2956,
+    0.446,
+    10,
+    10,
     "",
-    "K.McCord pass incomplete short right to G.Dulcich (J.Hancock)."
+    "P.Mahomes pass short left to T.Kelce to BUF 31 for 16 yards (T.Bernard).PENALTY on KC-T.Ke"
    ],
    [
-    3548,
-    1,
-    26,
-    9,
+    2985,
+    0.492,
+    10,
+    10,
     "",
-    "K.McCord pass incomplete short right to O.Gordon."
+    "E.Johnson up the middle to KC 43 for no gain (E.Oliver)."
    ],
    [
-    3553,
-    1,
-    26,
-    9,
+    3029,
+    0.526,
+    10,
+    10,
     "",
-    "K.McCord pass short middle to J.Tolbert to BUF 26 for 17 yards (J.Kilgore)."
+    "P.Mahomes pass deep middle to C.Allen to BUF 38 for 19 yards (D.Igbinosun)."
    ],
    [
-    3558,
-    1,
-    26,
-    9,
+    3070,
+    0.391,
+    10,
+    10,
     "",
-    "K.McCord pass short right to O.Gordon to BUF 25 for 1 yard (J.Hancock)."
+    "E.Johnson left tackle to BUF 36 for 2 yards (L.Jackson; T.Bernard)."
    ],
    [
-    3565,
-    1,
-    26,
-    9,
+    3107,
+    0.402,
+    10,
+    10,
     "",
-    "K.McCord pass incomplete short right to G.Dulcich."
+    "P.Mahomes pass short right to N.Gray ran ob at BUF 17 for 19 yards (J.Hancock)."
    ],
    [
-    3570,
-    1,
-    26,
-    9,
+    3143,
+    0.313,
+    10,
+    10,
     "",
-    "K.McCord pass incomplete deep left to K.Coleman (T.White)."
+    "P.Mahomes pass incomplete deep middle to T.Kelce."
+   ],
+   [
+    3149,
+    0.337,
+    10,
+    10,
+    "",
+    "E.Johnson left tackle to BUF 7 for 10 yards (T.Parker).PENALTY on KC-H.Nourzad, Offensive "
+   ],
+   [
+    3185,
+    0.399,
+    10,
+    10,
+    "",
+    "P.Mahomes pass incomplete short right. Penalty on KC-C.Humphrey, Ineligible Downfield Pass"
+   ],
+   [
+    3192,
+    0.441,
+    10,
+    10,
+    "",
+    "P.Mahomes pass short left to E.Johnson to BUF 28 for 4 yards (C.Bishop)."
+   ],
+   [
+    3239,
+    0.456,
+    10,
+    10,
+    "",
+    "H.Butker 46 yard field goal is No Good, Wide Right, Center-J.Winchester, Holder-M.Araiza."
+   ],
+   [
+    3244,
+    0.637,
+    10,
+    10,
+    "",
+    "J.Cook left guard to BUF 39 for 3 yards (D.Tranquill)."
+   ],
+   [
+    3279,
+    0.627,
+    10,
+    10,
+    "",
+    "J.Cook right guard to BUF 44 for 5 yards (F.Anudike-Uzomah; A.Gilman)."
+   ],
+   [
+    3316,
+    0.638,
+    10,
+    10,
+    "",
+    "J.Cook left guard to BUF 47 for 3 yards (C.Roland-Wallace)."
+   ],
+   [
+    3354,
+    0.69,
+    10,
+    10,
+    "",
+    "J.Cook right guard to BUF 49 for 2 yards (F.Anudike-Uzomah)."
+   ],
+   [
+    3391,
+    0.676,
+    10,
+    10,
+    "",
+    "J.Allen up the middle to KC 49 for 2 yards (K.Tonga; N.Bolton)."
+   ],
+   [
+    3430,
+    0.64,
+    10,
+    10,
+    "",
+    "J.Allen sacked at BUF 41 for -10 yards (N.Bolton)."
+   ],
+   [
+    3469,
+    0.474,
+    10,
+    10,
+    "",
+    "T.Doman punts 57 yards to KC 2, Center-R.Ferguson. J.Downs pushed ob at KC 9 for 7 yards ("
+   ],
+   [
+    3480,
+    0.525,
+    10,
+    10,
+    "",
+    "P.Mahomes pass incomplete short right to X.Worthy [G.Rousseau]."
+   ],
+   [
+    3485,
+    0.573,
+    10,
+    10,
+    "",
+    "P.Mahomes pass incomplete short left to J.Downs."
+   ],
+   [
+    3489,
+    0.639,
+    10,
+    10,
+    "",
+    "P.Mahomes pass short middle to R.Rice to KC 20 for 11 yards (A.Hooker).The Replay Official"
+   ],
+   [
+    3493,
+    0.737,
+    10,
+    10,
+    "",
+    "M.Araiza punts 38 yards to KC 47, Center-J.Winchester, out of bounds."
+   ],
+   [
+    3500,
+    0.758,
+    10,
+    10,
+    "",
+    "J.Allen pass incomplete deep right."
+   ],
+   [
+    3508,
+    0.723,
+    10,
+    10,
+    "",
+    "J.Allen pass short left to K.Shakir pushed ob at KC 36 for 11 yards (C.Conner).PENALTY on "
+   ],
+   [
+    3515,
+    0.651,
+    10,
+    10,
+    "",
+    "J.Allen pass short left to D.Moore to KC 46 for 11 yards (M.Delane)."
+   ],
+   [
+    3554,
+    0.712,
+    10,
+    10,
+    "",
+    "J.Allen sacked at BUF 47 for -7 yards (sack split by M.Delane and X.Nwankpa)."
+   ],
+   [
+    3562,
+    0.479,
+    10,
+    10,
+    "",
+    "T.Doman punts 46 yards to KC 7, Center-R.Ferguson. J.Downs to KC 11 for 4 yards (S.Frankli"
+   ],
+   [
+    3574,
+    0.487,
+    10,
+    10,
+    "",
+    "P.Mahomes FUMBLES (Aborted) at KC 7, and recovers at KC 6."
    ],
    [
     3575,
-    1,
-    26,
-    9,
+    0.654,
+    10,
+    10,
     "",
-    "K.McCord pass incomplete deep middle to C.Douglas."
+    "E.Johnson right guard to KC 11 for 5 yards (B.Chubb; G.Rousseau)."
    ],
    [
     3580,
-    1,
-    26,
-    9,
-    "to",
-    "K.Allen kneels to BUF 24 for -1 yards."
+    0.711,
+    10,
+    10,
+    "",
+    "P.Mahomes pass incomplete short right to T.Kelce."
+   ],
+   [
+    3585,
+    0.879,
+    10,
+    10,
+    "",
+    "M.Araiza punts 45 yards to BUF 44, Center-J.Winchester. G.Dortch to KC 39 for 17 yards (J."
+   ],
+   [
+    3600,
+    0.98,
+    13,
+    10,
+    "fg",
+    "T.Bass 57 yard field goal is GOOD, Center-R.Ferguson, Holder-T.Doman."
    ],
    [
     3600,
     1,
-    26,
-    9,
+    13,
+    10,
     "end",
     "Final"
    ]
   ],
-  "p0": 0.924,
-  "mu": 16.5,
+  "p0": 0.612,
+  "mu": 3,
   "src": "plays"
  }
 }
