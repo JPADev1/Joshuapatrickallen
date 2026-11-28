@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "gameId": "2026_13_BUF_NE",
  "week": 13,
  "label": "Week 13",
@@ -454,7 +454,7 @@
  },
  "sources": "Schedule, results, team stats, player stats and injury reports: nflverse (free, open NFL data). Updated automatically.",
  "teamStats": {
-  "asOf": "Nov. 27, 2026",
+  "asOf": "Nov. 28, 2026",
   "note": "2026 regular season. Averages are per game, rounded to whole numbers; sacks and interceptions are season totals. Rank is out of 32 NFL teams (1 = best) and is based on the per-game rate, since some teams have played more games than others.",
   "cats": [
    {
@@ -467,7 +467,7 @@
     },
     "opp": {
      "v": 22,
-     "rank": 17
+     "rank": 18
     }
    },
    {
@@ -656,7 +656,7 @@
   }
  ],
  "watch": {
-  "asOf": "Nov. 27, 2026",
+  "asOf": "Nov. 28, 2026",
   "highs": {
    "passYds": 424,
    "passTD": 5,
@@ -790,7 +790,7 @@
   ]
  },
  "props": {
-  "asOf": "Nov. 27, 2026",
+  "asOf": "Nov. 28, 2026",
   "items": [
    {
     "team": "BUF",
@@ -2334,7 +2334,7 @@
    "spread": -12.5,
    "total": 44.5,
    "ml": -790.0,
-   "oppMl": 557.0
+   "oppMl": 556.0
   },
   "open": {
    "spread": 1.5,
@@ -2363,32 +2363,32 @@
    "playoffs": {
     "now": 100.0,
     "win": 100.0,
-    "loss": 100.0
+    "loss": 99.9
    },
    "division": {
-    "now": 99.9,
+    "now": 99.8,
     "win": 100.0,
-    "loss": 99.2
+    "loss": 99.0
    },
    "seed1": {
-    "now": 75.3,
-    "win": 78.7,
-    "loss": 54.7
+    "now": 84.2,
+    "win": 87.7,
+    "loss": 64.6
    },
    "conf": {
-    "now": 33.9,
-    "win": 34.4,
-    "loss": 30.8
+    "now": 36.1,
+    "win": 37.0,
+    "loss": 31.4
    },
    "sb": {
-    "now": 19.4,
-    "win": 19.7,
-    "loss": 17.5
+    "now": 20.1,
+    "win": 20.4,
+    "loss": 18.2
    }
   },
-  "winProb": 85.4,
+  "winProb": 85.3,
   "sims": 10000,
-  "asOf": "through the games of Nov. 26, 2026"
+  "asOf": "through the games of Nov. 27, 2026"
  },
  "significance": {
   "win": "A win would make the Bills 11-1, alone with the best record in the NFL, and keep them the AFC's No. 1 seed. Their AFC East lead would grow to 5.5 games over the Patriots.",
@@ -2400,6 +2400,6 @@
   },
   "seedWin": 1,
   "seedLoss": 1,
-  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 79% of the time with a win and 55% with a loss."
+  "odds": "In 10,000 simulations of the rest of the season, the Bills earn the No. 1 seed 88% of the time with a win and 65% with a loss."
  }
 }
